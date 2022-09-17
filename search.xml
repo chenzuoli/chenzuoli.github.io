@@ -12690,4 +12690,40 @@ API
         <tag>English</tag>
       </tags>
   </entry>
+  <entry>
+    <title>Unity中GameObject/Component/Transform的区别</title>
+    <url>/2022/09/13/Unity%E4%B8%ADGameObject:Component:Transform%E7%9A%84%E5%8C%BA%E5%88%AB/</url>
+    <content><![CDATA[<p>大家好我是Lee，今天下班回家，学习一下Unity中的各组件类直接的关系，今天看看GameObject Component Transform直接的关系和区别。</p>
+<span id="more"></span>
+
+<p>我是Unity初学者，面对3D编程，还是有些陌生，但是Unity开发使用的脚本语言是C#，刚好上半年在公司学过这个语言，这会用上了，所以大家不要觉得现在学的东西没有用，说不定哪天就用上了，珍惜当下的学习机会就行了。</p>
+<p>好了，说正题。</p>
+<p>我们在开发Unity游戏的时候，需要先创建scene，默认scene中有世界坐标系，摄像头，太阳这三个组件，剩下的就需要我们自己去创建了，比如地面，房屋，任务等组件。</p>
+<h1 id="组件的定义"><a href="#组件的定义" class="headerlink" title="组件的定义"></a>组件的定义</h1><p>组件 是在游戏对象（Game Object）中的实现某些功能的集合。<br>无论是模型、 GUI、灯光还是摄像机，所有游戏对象本质上都是一个空对象挂载了不同类别的组件，从而让该游戏对象拥有不同的功能。</p>
+<h1 id="游戏对象的定义"><a href="#游戏对象的定义" class="headerlink" title="游戏对象的定义"></a>游戏对象的定义</h1><p>游戏对象（GameObject）上可以包含多个组件（Component），拥有组件的组合特性，组件有什么特性，游戏对象就有什么特性。</p>
+<p>脚本在Unity中也是一种组件。 所以可以将脚本赋予游戏对象。</p>
+<h1 id="Transform的定义"><a href="#Transform的定义" class="headerlink" title="Transform的定义"></a>Transform的定义</h1><p>Transform是属性的集合，对于每个组件，有不同的属性（长宽高等等）和不同的方法（功能）。</p>
+<p>我们看下源代码怎么实现的吧：<br>1.Transform继承了Component</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">/// &lt;summary&gt;</span><br><span class="line">///   &lt;para&gt;Position, rotation and scale of an object.&lt;/para&gt;</span><br><span class="line">/// &lt;/summary&gt;</span><br><span class="line">[RequiredByNativeCode]</span><br><span class="line">[NativeHeader (&quot;Runtime/Transform/ScriptBindings/TransformScriptBindings.h&quot;)]</span><br><span class="line">[NativeHeader (&quot;Runtime/Transform/Transform.h&quot;)]</span><br><span class="line">[NativeHeader (&quot;Configuration/UnityConfigure.h&quot;)]</span><br><span class="line">public class Transform : Component, IEnumerable</span><br><span class="line">&#123;&#125;</span><br></pre></td></tr></table></figure>
+
+<p>2.GameObject继承了UnityEngine.Object</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">/// &lt;summary&gt;</span><br><span class="line">///   &lt;para&gt;Base class for all entities in Unity Scenes.&lt;/para&gt;</span><br><span class="line">/// &lt;/summary&gt;</span><br><span class="line">[ExcludeFromPreset]</span><br><span class="line">[UsedByNativeCode]</span><br><span class="line">[NativeHeader (&quot;Runtime/Export/Scripting/GameObject.bindings.h&quot;)]</span><br><span class="line">public sealed class GameObject : UnityEngine.Object</span><br><span class="line">&#123;&#125;</span><br></pre></td></tr></table></figure>
+
+<p>GameObject可以添加不同的Component：<br><img src="/2022/09/13/Unity%E4%B8%ADGameObject:Component:Transform%E7%9A%84%E5%8C%BA%E5%88%AB/11663081627_.pic.jpg" alt="gameobject"></p>
+<p>3.Component继承了UnityEngine.Object</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">/// &lt;summary&gt;</span><br><span class="line">///   &lt;para&gt;Base class for everything attached to GameObjects.&lt;/para&gt;</span><br><span class="line">/// &lt;/summary&gt;</span><br><span class="line">[NativeClass (&quot;Unity::Component&quot;)]</span><br><span class="line">[RequiredByNativeCode]</span><br><span class="line">[NativeHeader (&quot;Runtime/Export/Scripting/Component.bindings.h&quot;)]</span><br><span class="line">public class Component : UnityEngine.Object</span><br><span class="line">&#123;</span><br><span class="line">	/// &lt;summary&gt;</span><br><span class="line">	///   &lt;para&gt;The Transform attached to this GameObject.&lt;/para&gt;</span><br><span class="line">	/// &lt;/summary&gt;</span><br><span class="line">	public extern Transform transform &#123;</span><br><span class="line">		[MethodImpl (MethodImplOptions.InternalCall)]</span><br><span class="line">		[FreeFunction (&quot;GetTransform&quot;, HasExplicitThis = true, ThrowsException = true)]</span><br><span class="line">		get;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	/// &lt;summary&gt;</span><br><span class="line">	///   &lt;para&gt;The game object this component is attached to. A component is always attached to a game object.&lt;/para&gt;</span><br><span class="line">	/// &lt;/summary&gt;</span><br><span class="line">	public extern GameObject gameObject &#123;</span><br><span class="line">		[MethodImpl (MethodImplOptions.InternalCall)]</span><br><span class="line">		[FreeFunction (&quot;GetGameObject&quot;, HasExplicitThis = true)]</span><br><span class="line">		get;</span><br><span class="line">	&#125;</span><br></pre></td></tr></table></figure>
+<p>它有一个Transform和GameObject属性。</p>
+<p>好了，今天就看到这里，下期再见。</p>
+<p>我是chenzuoli，我爱学习。</p>
+]]></content>
+      <categories>
+        <category>Unity</category>
+      </categories>
+      <tags>
+        <tag>Unity</tag>
+        <tag>GameObject</tag>
+        <tag>Component</tag>
+        <tag>Transform</tag>
+      </tags>
+  </entry>
 </search>
