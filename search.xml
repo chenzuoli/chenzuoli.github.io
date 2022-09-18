@@ -12726,4 +12726,11 @@ API
         <tag>Transform</tag>
       </tags>
   </entry>
+  <entry>
+    <title>Unity学习之碰撞体</title>
+    <url>/2022/09/17/Unity%E5%AD%A6%E4%B9%A0%E4%B9%8B%E7%A2%B0%E6%92%9E%E4%BD%93/</url>
+    <content><![CDATA[<p>为fbx模型物体添加capsule collider组件之后再添加刚体组件，物体就不会穿过地面下沉了</p>
+<p>为fbx模型物体添加rigidbody组件后，碰到其他物体后，就不会直接穿过了</p>
+]]></content>
+  </entry>
 </search>
