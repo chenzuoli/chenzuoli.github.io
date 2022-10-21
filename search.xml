@@ -12730,7 +12730,39 @@ API
     <title>Unity学习之碰撞体</title>
     <url>/2022/09/17/Unity%E5%AD%A6%E4%B9%A0%E4%B9%8B%E7%A2%B0%E6%92%9E%E4%BD%93/</url>
     <content><![CDATA[<p>为fbx模型物体添加capsule collider组件之后再添加刚体组件，物体就不会穿过地面下沉了</p>
+<span id="more"></span>
+
 <p>为fbx模型物体添加rigidbody组件后，碰到其他物体后，就不会直接穿过了</p>
 ]]></content>
+      <categories>
+        <category>Unity</category>
+      </categories>
+      <tags>
+        <tag>unity</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>airflow部署问题</title>
+    <url>/2022/10/21/airflow%E9%83%A8%E7%BD%B2%E9%97%AE%E9%A2%98/</url>
+    <content><![CDATA[<p>问题集锦。</p>
+<span id="more"></span>
+
+<ol>
+<li><p>AttributeError: ‘NoneType’ object has no attribute ‘Redis’<br><code>pip install redis</code></p>
+</li>
+<li><p>ModuleNotFoundError: No module named ‘MySQLdb’</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">yum install -y mysql-devel gcc gcc-devel gcc-c++ python-devel libffi-devel openssl-devel libsasl2-dev</span><br><span class="line">pip3 install mysqlclient pymysql mysql -i  https://mirrors.aliyun.com/pypi/simple</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Invalid default value for ‘updated_at’<br>mysql添加参数  [mysqld]节点下添加</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">vim /etc/my.cnf </span><br><span class="line"></span><br><span class="line">[mysqld]</span><br><span class="line">explicit_defaults_for_timestamp = ON</span><br></pre></td></tr></table></figure></li>
+</ol>
+<p>好了，没事写写，记录一下曾经的工作。</p>
+]]></content>
+      <categories>
+        <category>调度系统</category>
+      </categories>
+      <tags>
+        <tag>airflow</tag>
+      </tags>
   </entry>
 </search>
