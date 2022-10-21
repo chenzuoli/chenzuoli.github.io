@@ -3765,9 +3765,12 @@
       </tags>
   </entry>
   <entry>
-    <title></title>
+    <title>postgresql存储过程基本操作</title>
     <url>/2022/09/10/Postgresql%E5%AD%98%E5%82%A8%E8%BF%87%E7%A8%8B%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/</url>
-    <content><![CDATA[<p>创建存储过程(真正的存储过程procedure)<br>存储过程和函数的区别：</p>
+    <content><![CDATA[<p>创建存储过程(真正的存储过程procedure)</p>
+<span id="more"></span>
+
+<p>存储过程和函数的区别：</p>
 <ol>
 <li>存储过程标识符：procedure<br>函数标识符：function</li>
 <li>存储过程无需return返回值，函数必须有return返回值，</li>
@@ -3785,6 +3788,13 @@
 <p>调用存储过程之后的数据：<br>id  name   account<br>1   Tom     8000<br>2   Jerry   10000</p>
 <p>好了，我是Lee，一枚数据开发，不定期更新一下博客，希望一直这样下去，有东西写。</p>
 ]]></content>
+      <categories>
+        <category>存储过程</category>
+      </categories>
+      <tags>
+        <tag>postgresql</tag>
+        <tag>procedure</tag>
+      </tags>
   </entry>
   <entry>
     <title>SSL证书操作</title>
