@@ -88,7 +88,7 @@
 <meta property="og:description" content="问题集锦。">
 <meta property="og:locale">
 <meta property="article:published_time" content="2022-10-21T14:58:30.000Z">
-<meta property="article:modified_time" content="2022-10-21T15:06:33.886Z">
+<meta property="article:modified_time" content="2022-10-23T09:21:43.324Z">
 <meta property="article:author" content="Lee">
 <meta property="article:tag" content="airflow">
 <meta name="twitter:card" content="summary">
@@ -367,8 +367,8 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2022-10-21T23:06:33+08:00">
-                2022-10-21
+              <time title="更新于" itemprop="dateModified" datetime="2022-10-23T17:21:43+08:00">
+                2022-10-23
               </time>
             
           </span>
@@ -449,7 +449,14 @@
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">yum install -y mysql-devel gcc gcc-devel gcc-c++ python-devel libffi-devel openssl-devel libsasl2-dev</span><br><span class="line">pip3 install mysqlclient pymysql mysql -i  https://mirrors.aliyun.com/pypi/simple</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>Invalid default value for ‘updated_at’<br>mysql添加参数  [mysqld]节点下添加</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">vim /etc/my.cnf </span><br><span class="line"></span><br><span class="line">[mysqld]</span><br><span class="line">explicit_defaults_for_timestamp = ON</span><br></pre></td></tr></table></figure></li>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">vim /etc/my.cnf </span><br><span class="line"></span><br><span class="line">[mysqld]</span><br><span class="line">explicit_defaults_for_timestamp = ON</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Failed to fetch log file from worker. [Errno -2] Name or service not known<br>三台机器的ip&#x2F;hostname映射都在&#x2F;etc&#x2F;hosts文件中加上</p>
+</li>
+<li><p>ERROR - Detected zombie job<br>估计是scheduler和worker之间的代码不一致，导致scheduler认为这个dag不存在或者这个task不存在。<br>目前我遇到的这个问题是这个原因，同步一致后，没有出现这个错误了。</p>
+</li>
+<li><p>webserver无法访问<br>修改airflow.cfg<br>[webserver]<br>base_url改为对应的ip地址<br>web_server_host改为对应的ip地址</p>
+</li>
 </ol>
 <p>好了，没事写写，记录一下曾经的工作。</p>
 
