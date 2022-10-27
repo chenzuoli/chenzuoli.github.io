@@ -12757,6 +12757,7 @@ API
     <content><![CDATA[<p>问题集锦。</p>
 <span id="more"></span>
 
+<p>环境：<br>airflow: 2.4.1<br>macOS<br>python: 3.9</p>
 <ol>
 <li><p>AttributeError: ‘NoneType’ object has no attribute ‘Redis’<br><code>pip install redis</code></p>
 </li>
@@ -12781,5 +12782,20 @@ API
       <tags>
         <tag>airflow</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>python使用MysqlDB连接mysql问题</title>
+    <url>/2022/10/27/python%E4%BD%BF%E7%94%A8MysqlDB%E8%BF%9E%E6%8E%A5mysql%E9%97%AE%E9%A2%98/</url>
+    <content><![CDATA[<p>安装mysqldb包，首先需要安装一下mysql-devel，问题报错如下：</p>
+<span id="more"></span>
+
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">[root@syncdb01 ~]# yum install -y mysql-devel</span><br><span class="line">Loaded plugins: fastestmirror</span><br><span class="line">base                                                                                                                                | 3.6 kB  00:00:00     </span><br><span class="line">extras                                                                                                                              | 2.9 kB  00:00:00     </span><br><span class="line">mysql-connectors-community                                                                                                          | 2.6 kB  00:00:00     </span><br><span class="line">mysql-tools-community                                                                                                               | 2.6 kB  00:00:00     </span><br><span class="line">mysql57-community-dmr                                                                                                               | 2.6 kB  00:00:00     </span><br><span class="line">updates                                                                                                                             | 2.9 kB  00:00:00     </span><br><span class="line">Loading mirror speeds from cached hostfile</span><br><span class="line"> * base: mirrors.tuna.tsinghua.edu.cn</span><br><span class="line"> * extras: mirrors.tuna.tsinghua.edu.cn</span><br><span class="line"> * updates: mirrors.tuna.tsinghua.edu.cn</span><br><span class="line">Resolving Dependencies</span><br><span class="line">--&gt; Running transaction check</span><br><span class="line">---&gt; Package mysql-community-devel.x86_64 0:5.7.40-1.el7 will be installed</span><br><span class="line">--&gt; Finished Dependency Resolution</span><br><span class="line"></span><br><span class="line">Dependencies Resolved</span><br><span class="line"></span><br><span class="line">===========================================================================================================================================================</span><br><span class="line"> Package                                    Arch                        Version                           Repository                                  Size</span><br><span class="line">===========================================================================================================================================================</span><br><span class="line">Installing:</span><br><span class="line"> mysql-community-devel                      x86_64                      5.7.40-1.el7                      mysql57-community-dmr                      4.2 M</span><br><span class="line"></span><br><span class="line">Transaction Summary</span><br><span class="line">===========================================================================================================================================================</span><br><span class="line">Install  1 Package</span><br><span class="line"></span><br><span class="line">Total size: 4.2 M</span><br><span class="line">Installed size: 24 M</span><br><span class="line">Downloading packages:</span><br><span class="line">warning: /var/cache/yum/x86_64/7/mysql57-community-dmr/packages/mysql-community-devel-5.7.40-1.el7.x86_64.rpm: Header V4 RSA/SHA256 Signature, key ID 3a79bd29: NOKEY</span><br><span class="line">Retrieving key from file:/etc/pki/rpm-gpg/RPM-GPG-KEY-mysql</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">The GPG keys listed for the &quot;MySQL 5.7 Community Server Development Milestone Release&quot; repository are already installed but they are not correct for this package.</span><br><span class="line">Check that the correct key URLs are configured for this repository.</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"> Failing package is: mysql-community-devel-5.7.40-1.el7.x86_64</span><br><span class="line"> GPG Keys are configured as: file:/etc/pki/rpm-gpg/RPM-GPG-KEY-mysql</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+<p>解决办法：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">rpm --import https://repo.mysql.com/RPM-GPG-KEY-mysql-2022</span><br></pre></td></tr></table></figure>
+
+<p>没事记录一下。</p>
+]]></content>
   </entry>
 </search>
