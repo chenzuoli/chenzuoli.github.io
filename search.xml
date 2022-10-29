@@ -12797,5 +12797,55 @@ API
 
 <p>没事记录一下。</p>
 ]]></content>
+      <categories>
+        <category>python</category>
+      </categories>
+      <tags>
+        <tag>python</tag>
+        <tag>mysqldb</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>flask使用的一些问题</title>
+    <url>/2022/10/29/flask%E4%BD%BF%E7%94%A8%E7%9A%84%E4%B8%80%E4%BA%9B%E9%97%AE%E9%A2%98/</url>
+    <content><![CDATA[<p>这里分享一下使用flask遇到的一些问题，记录一下。</p>
+<span id="more"></span>
+
+<ol>
+<li>flask: The CSRF token is missing.<br>说下CSRF token是什么？<br>程序使用了flask_wtf模块的CSRF Protect来保护表单免受CSRF威胁。默认情况下对所有视图启用了CSRF保护。但是部分模板中没有表单，所以没有添加csrf令牌，从而导致了错误。</li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">from flask_wtf import Form</span><br></pre></td></tr></table></figure>
+<p>使用这个会自动封装csrf token校验，所以要么我们换回非校验的代码：<code>from wtforms import Form</code><br>要么就加上csrf token：<br>非flask自创的form表单即前端的form表单使用csrf_token的方式</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;hidden&quot;</span> <span class="attr">name</span>=<span class="string">&quot;csrf_token&quot;</span> <span class="attr">value</span>=<span class="string">&quot;&#123;&#123; csrf_token() &#125;&#125;&quot;</span>/&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>flask的form表单，在form表单中加上这句<code>&#123;&#123; form.csrf_token &#125;&#125;</code>：</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">form</span> <span class="attr">method</span>=<span class="string">post</span>&gt;</span></span><br><span class="line">        &#123;&#123; form.csrf_token &#125;&#125;</span><br><span class="line">        <span class="tag">&lt;<span class="name">dl</span>&gt;</span></span><br><span class="line">            &#123;&#123; render_field(form.username) &#125;&#125;</span><br><span class="line">            &#123;&#123; render_field(form.email) &#125;&#125;</span><br><span class="line">            &#123;&#123; render_field(form.password) &#125;&#125;</span><br><span class="line">            &#123;&#123; render_field(form.confirm) &#125;&#125;</span><br><span class="line">            &#123;&#123; render_field(form.accept_tos) &#125;&#125;</span><br><span class="line">        <span class="tag">&lt;/<span class="name">dl</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">p</span>&gt;</span><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">submit</span> <span class="attr">value</span>=<span class="string">Register</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">form</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+
+
+<p>ok，下次有问题，继续记录下来。</p>
+]]></content>
+      <categories>
+        <category>flask</category>
+      </categories>
+      <tags>
+        <tag>flask</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>刘润2022年度演讲-进化的力量</title>
+    <url>/2022/10/29/%E5%88%98%E6%B6%A62022%E5%B9%B4%E5%BA%A6%E6%BC%94%E8%AE%B2-%E8%BF%9B%E5%8C%96%E7%9A%84%E5%8A%9B%E9%87%8F/</url>
+    <content><![CDATA[<p>说下今天刘润的年度演讲《进化的力量》里的技术革命。</p>
+<span id="more"></span>
+
+<p>第一次：蒸汽时代<br>第二次：电气时代<br>第三次：信息时代<br>第四次：数据（人工智能驾驭的数据）</p>
+]]></content>
+      <categories>
+        <category>商业</category>
+      </categories>
+      <tags>
+        <tag>商业</tag>
+        <tag>刘润</tag>
+      </tags>
   </entry>
 </search>
