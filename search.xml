@@ -12857,6 +12857,7 @@ API
 <p>nfs，网络文件系统，由SUN公司研制的UNIX表示层协议，大家可以放心使用。</p>
 <span id="more"></span>
 
+<p>看下这个流程图：<br><img src="/2022/11/05/nfs%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%B9%8B%E9%97%B4%E5%AE%9E%E7%8E%B0%E7%9B%AE%E5%BD%95%E5%85%B1%E4%BA%AB/nfs.jpg" alt="nfs"></p>
 <ol>
 <li><p>192.168.1.100服务端安装：<br> yum install -y nfs-utils rpcbind</p>
 <p> 编辑配置<br> vim &#x2F;etc&#x2F;exports<br> &#x2F;opt&#x2F;airflow&#x2F;dags *(rw,sync,insecure,no_subtree_check,no_root_squash)<br> &#x2F;opt&#x2F;airflow&#x2F;jobs *(rw,sync,insecure,no_subtree_check,no_root_squash)</p>
@@ -12876,6 +12877,25 @@ API
       </categories>
       <tags>
         <tag>nfs，文件共享</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>airflow使用问题集锦</title>
+    <url>/2022/11/06/airflow%E4%BD%BF%E7%94%A8%E9%97%AE%E9%A2%98%E9%9B%86%E9%94%A6/</url>
+    <content><![CDATA[<p>记录一下airflow使用过程中的一些问题和经验</p>
+<span id="more"></span>
+
+<ol>
+<li>ValueError: naive datetime is disallowed</li>
+</ol>
+<p>naive datetime是不带时区的时间，在airflow里面是不支持的，我们要将naive datetime转换为本地时区时间</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">from datetime import datetime</span><br><span class="line">import pytz    </span><br><span class="line"></span><br><span class="line">tz = pytz.timezone(&#x27;Asia/Shanghai&#x27;)</span><br><span class="line">naive_dt = datetime(2020, 10, 5, 15, 0, 0) </span><br><span class="line">utc_dt = tz.localize(naive_dt, is_dst=None)</span><br><span class="line"># -&gt; 2020-10-05 22:00:00+00:00</span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>airflow</category>
+      </categories>
+      <tags>
+        <tag>airflow</tag>
       </tags>
   </entry>
 </search>
