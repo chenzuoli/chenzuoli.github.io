@@ -88,7 +88,7 @@
 <meta property="og:description" content="记录一下airflow使用过程中的一些问题和经验">
 <meta property="og:locale">
 <meta property="article:published_time" content="2022-11-06T03:27:48.000Z">
-<meta property="article:modified_time" content="2022-11-06T03:50:43.125Z">
+<meta property="article:modified_time" content="2022-11-13T00:52:37.192Z">
 <meta property="article:author" content="Lee">
 <meta property="article:tag" content="airflow">
 <meta name="twitter:card" content="summary">
@@ -197,7 +197,7 @@
       
         
         <li class="menu-item menu-item-home">
-          <a href="/%20" rel="section">
+          <a href="/" rel="section">
             
               <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
             
@@ -207,7 +207,7 @@
       
         
         <li class="menu-item menu-item-about">
-          <a href="/about/%20" rel="section">
+          <a href="/about/" rel="section">
             
               <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
             
@@ -217,7 +217,7 @@
       
         
         <li class="menu-item menu-item-tags">
-          <a href="/tags/%20" rel="section">
+          <a href="/tags/" rel="section">
             
               <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
             
@@ -227,7 +227,7 @@
       
         
         <li class="menu-item menu-item-categories">
-          <a href="/categories/%20" rel="section">
+          <a href="/categories/" rel="section">
             
               <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
             
@@ -237,7 +237,7 @@
       
         
         <li class="menu-item menu-item-archives">
-          <a href="/archives/%20" rel="section">
+          <a href="/archives/" rel="section">
             
               <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
             
@@ -247,7 +247,7 @@
       
         
         <li class="menu-item menu-item-top">
-          <a href="/top/%20" rel="section">
+          <a href="/top/" rel="section">
             
               <i class="menu-item-icon fa fa-fw fa-signal"></i> <br />
             
@@ -367,8 +367,8 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2022-11-06T11:50:43+08:00">
-                2022-11-06
+              <time title="更新于" itemprop="dateModified" datetime="2022-11-13T08:52:37+08:00">
+                2022-11-13
               </time>
             
           </span>
@@ -447,6 +447,15 @@
 </ol>
 <p>naive datetime是不带时区的时间，在airflow里面是不支持的，我们要将naive datetime转换为本地时区时间</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">from datetime import datetime</span><br><span class="line">import pytz    </span><br><span class="line"></span><br><span class="line">tz = pytz.timezone(&#x27;Asia/Shanghai&#x27;)</span><br><span class="line">naive_dt = datetime(2020, 10, 5, 15, 0, 0) </span><br><span class="line">utc_dt = tz.localize(naive_dt, is_dst=None)</span><br><span class="line"># -&gt; 2020-10-05 22:00:00+00:00</span><br></pre></td></tr></table></figure>
+
+<p>–20221113<br>2. dag定义文件中的start_date，可以影响任务的调度时区<br>看源码airflow&#x2F;models&#x2F;dag.py：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"># set timezone from start_date</span><br><span class="line">tz = None</span><br><span class="line">if start_date and start_date.tzinfo:</span><br><span class="line">    tzinfo = None if start_date.tzinfo else settings.TIMEZONE</span><br><span class="line">    tz = pendulum.instance(start_date, tz=tzinfo).timezone</span><br><span class="line">elif &#x27;start_date&#x27; in self.default_args and self.default_args[&#x27;start_date&#x27;]:</span><br><span class="line">    date = self.default_args[&#x27;start_date&#x27;]</span><br><span class="line">    if not isinstance(date, datetime):</span><br><span class="line">        date = timezone.parse(date)</span><br><span class="line">        self.default_args[&#x27;start_date&#x27;] = date</span><br><span class="line">        start_date = date</span><br><span class="line"></span><br><span class="line">    tzinfo = None if date.tzinfo else settings.TIMEZONE</span><br><span class="line">    tz = pendulum.instance(date, tz=tzinfo).timezone</span><br><span class="line">self.timezone = tz or settings.TIMEZONE</span><br></pre></td></tr></table></figure>
+<p>所以有4个可以设置时区的地方：<br>a. airflow.cfg [core]下面的default_timezone<br>b. airflow.cfg [webserver]下面的default_timezone<br>c. airflow web UI右上角<br>d. airflow dag定义文件中的start_date</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">from datetime import datetime</span><br><span class="line">my_dag = DAG(&quot;test_start_date&quot;, start_date=datetime(2021, 1, 1), schedule=&quot;0 4 * * *&quot;, catchup=False)</span><br></pre></td></tr></table></figure>
+<p>如果start_date没有设置timezone，则使用utc</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">import pendulum</span><br><span class="line">my_dag = DAG(&quot;checkoperator_test&quot;, start_date=pendulum.datetime(2021, 1, 1, tz=&quot;Asia/Shanghai&quot;),</span><br></pre></td></tr></table></figure>
+<p>也可以指定时区</p>
+<p>ok，下次碰到问题了，继续记录下来。</p>
 
       
     </div>
@@ -614,7 +623,7 @@
             
               <div class="site-state-item site-state-posts">
               
-                <a href="/archives/%20%7C%7C%20archive">
+                <a href="/archives/%7C%7C%20archive">
               
                   <span class="site-state-item-count">298</span>
                   <span class="site-state-item-name">日志</span>
