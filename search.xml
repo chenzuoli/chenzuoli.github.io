@@ -12938,4 +12938,25 @@ API
         <tag>php</tag>
       </tags>
   </entry>
+  <entry>
+    <title>如何查看系统安装的php版本</title>
+    <url>/2022/12/25/%E5%A6%82%E4%BD%95%E6%9F%A5%E7%9C%8B%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85%E7%9A%84php%E7%89%88%E6%9C%AC/</url>
+    <content><![CDATA[<p>这个方法是通过浏览器查看的，方法如下：</p>
+<span id="more"></span>
+<p>方法1：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">php -v</span><br><span class="line"></span><br><span class="line">WARNING: PHP is not recommended</span><br><span class="line">PHP is included in macOS for compatibility with legacy software.</span><br><span class="line">Future versions of macOS will not include PHP.</span><br><span class="line">PHP 7.3.29-to-be-removed-in-future-macOS (cli) (built: Sep  6 2021 05:14:39) ( NTS )</span><br><span class="line">Copyright (c) 1997-2018 The PHP Group</span><br><span class="line">Zend Engine v3.3.29, Copyright (c) 1998-2018 Zend Technologies</span><br></pre></td></tr></table></figure>
+
+<p>方法2：<br>新建一个xxx.php文件，在该文件中写入：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;?php</span><br><span class="line">    echo phpinfo();</span><br><span class="line">?&gt;</span><br></pre></td></tr></table></figure>
+
+<p>然后用浏览器打开该文件即可了。</p>
+<p><img src="/2022/12/25/%E5%A6%82%E4%BD%95%E6%9F%A5%E7%9C%8B%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85%E7%9A%84php%E7%89%88%E6%9C%AC/1.png" alt="1"></p>
+]]></content>
+      <categories>
+        <category>php</category>
+      </categories>
+      <tags>
+        <tag>php</tag>
+      </tags>
+  </entry>
 </search>
