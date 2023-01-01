@@ -12929,6 +12929,11 @@ API
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">cd /Library/WebServer/Documents</span><br></pre></td></tr></table></figure>
 <p>随便在该目录下放什么文件，然后浏览器访问<a href="http://localhost/">http://localhost/</a></p>
 <p>即可。</p>
+<hr>
+<h2 id="We-smile-we-angry-we-disappoint-we-excited-we-love-we-hate-that’s-our-life"><a href="#We-smile-we-angry-we-disappoint-we-excited-we-love-we-hate-that’s-our-life" class="headerlink" title="We smile, we angry, we disappoint, we excited, we love, we hate, that’s our life."></a><b>We smile, we angry, we disappoint, we excited, we love, we hate, that’s our life.</b></h2><p><b>书山有路勤为径，学海无涯苦作舟。</b></p>
+<p>欢迎关注微信公众号：【程序员写书】<br><img src="/images/%E7%A8%8B%E5%BA%8F%E5%91%98%E5%86%99%E4%B9%A6%E5%85%AC%E4%BC%97%E5%8F%B7%E4%BA%8C%E7%BB%B4%E7%A0%81.jpg" alt="程序员写书"></p>
+<p>喜欢宠物的朋友可以关注：【电巴克宠物Pets】<br><img src="/images/%E7%94%B5%E5%B7%B4%E5%85%8B%E5%AE%A0%E7%89%A9Pets%E5%85%AC%E4%BC%97%E5%8F%B7%E4%BA%8C%E7%BB%B4%E7%A0%81.png" alt="电巴克宠物"></p>
+<p>一起学习，一起进步。<br></p>
 ]]></content>
       <categories>
         <category>php</category>
@@ -12951,6 +12956,11 @@ API
 
 <p>然后用浏览器打开该文件即可了。</p>
 <p><img src="/2022/12/25/%E5%A6%82%E4%BD%95%E6%9F%A5%E7%9C%8B%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85%E7%9A%84php%E7%89%88%E6%9C%AC/1.png" alt="1"></p>
+<hr>
+<h2 id="We-smile-we-angry-we-disappoint-we-excited-we-love-we-hate-that’s-our-life"><a href="#We-smile-we-angry-we-disappoint-we-excited-we-love-we-hate-that’s-our-life" class="headerlink" title="We smile, we angry, we disappoint, we excited, we love, we hate, that’s our life."></a><b>We smile, we angry, we disappoint, we excited, we love, we hate, that’s our life.</b></h2><p><b>书山有路勤为径，学海无涯苦作舟。</b></p>
+<p>欢迎关注微信公众号：【程序员写书】<br><img src="/images/%E7%A8%8B%E5%BA%8F%E5%91%98%E5%86%99%E4%B9%A6%E5%85%AC%E4%BC%97%E5%8F%B7%E4%BA%8C%E7%BB%B4%E7%A0%81.jpg" alt="程序员写书"></p>
+<p>喜欢宠物的朋友可以关注：【电巴克宠物Pets】<br><img src="/images/%E7%94%B5%E5%B7%B4%E5%85%8B%E5%AE%A0%E7%89%A9Pets%E5%85%AC%E4%BC%97%E5%8F%B7%E4%BA%8C%E7%BB%B4%E7%A0%81.png" alt="电巴克宠物"></p>
+<p>一起学习，一起进步。<br></p>
 ]]></content>
       <categories>
         <category>php</category>
@@ -12972,8 +12982,18 @@ API
 <p>安装最新版本：</p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">brew reinstall php@8.2</span><br></pre></td></tr></table></figure>
 
-<p>重新启动php服务：</p>
+<p>注意，想要下次使用本次安装的8.2版本php，则要将其添加到环境变量中：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">If you need to have php@8.0 first in your PATH, run:</span><br><span class="line">  echo &#x27;export PATH=&quot;/usr/local/opt/php@8.0/bin:$PATH&quot;&#x27; &gt;&gt; ~/.zshrc</span><br><span class="line">  echo &#x27;export PATH=&quot;/usr/local/opt/php@8.0/sbin:$PATH&quot;&#x27; &gt;&gt; ~/.zshrc</span><br><span class="line"></span><br><span class="line">For compilers to find php@8.0 you may need to set:</span><br><span class="line">  export LDFLAGS=&quot;-L/usr/local/opt/php@8.0/lib&quot;</span><br><span class="line">  export CPPFLAGS=&quot;-I/usr/local/opt/php@8.0/include&quot;</span><br></pre></td></tr></table></figure>
+
+<p>然后重新启动php服务：</p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">brew services restart php</span><br></pre></td></tr></table></figure>
+
+
+<hr>
+<h2 id="We-smile-we-angry-we-disappoint-we-excited-we-love-we-hate-that’s-our-life"><a href="#We-smile-we-angry-we-disappoint-we-excited-we-love-we-hate-that’s-our-life" class="headerlink" title="We smile, we angry, we disappoint, we excited, we love, we hate, that’s our life."></a><b>We smile, we angry, we disappoint, we excited, we love, we hate, that’s our life.</b></h2><p><b>书山有路勤为径，学海无涯苦作舟。</b></p>
+<p>欢迎关注微信公众号：【程序员写书】<br><img src="/images/%E7%A8%8B%E5%BA%8F%E5%91%98%E5%86%99%E4%B9%A6%E5%85%AC%E4%BC%97%E5%8F%B7%E4%BA%8C%E7%BB%B4%E7%A0%81.jpg" alt="程序员写书"></p>
+<p>喜欢宠物的朋友可以关注：【电巴克宠物Pets】<br><img src="/images/%E7%94%B5%E5%B7%B4%E5%85%8B%E5%AE%A0%E7%89%A9Pets%E5%85%AC%E4%BC%97%E5%8F%B7%E4%BA%8C%E7%BB%B4%E7%A0%81.png" alt="电巴克宠物"></p>
+<p>一起学习，一起进步。<br></p>
 ]]></content>
       <categories>
         <category>php</category>
@@ -13003,9 +13023,17 @@ API
 <p>重启php服务：</p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">brew services restart php</span><br></pre></td></tr></table></figure>
 </li>
+<li><p>启动商城</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">sudo apachectl stop</span><br><span class="line">sudo apachectl start</span><br></pre></td></tr></table></figure>
+</li>
 <li><p>{statusCode: 0, errMsg: ‘Call to undefined function yiovo\captcha\imagettftext()’, result: {…}}<br><a href="http://localhost/index.html">http://localhost/index.html</a><br>进入商城主页，登录时出现报错。<br>请求：<a href="http://localhost/index.php?s=/api/captcha/image">http://localhost/index.php?s=/api/captcha/image</a><br>响应：{“message”:”Call to undefined function yiovo\captcha\imagettftext()”,”status”:500,”data”:[]}</p>
 </li>
 </ol>
+<hr>
+<h2 id="We-smile-we-angry-we-disappoint-we-excited-we-love-we-hate-that’s-our-life"><a href="#We-smile-we-angry-we-disappoint-we-excited-we-love-we-hate-that’s-our-life" class="headerlink" title="We smile, we angry, we disappoint, we excited, we love, we hate, that’s our life."></a><b>We smile, we angry, we disappoint, we excited, we love, we hate, that’s our life.</b></h2><p><b>书山有路勤为径，学海无涯苦作舟。</b></p>
+<p>欢迎关注微信公众号：【程序员写书】<br><img src="/images/%E7%A8%8B%E5%BA%8F%E5%91%98%E5%86%99%E4%B9%A6%E5%85%AC%E4%BC%97%E5%8F%B7%E4%BA%8C%E7%BB%B4%E7%A0%81.jpg" alt="程序员写书"></p>
+<p>喜欢宠物的朋友可以关注：【电巴克宠物Pets】<br><img src="/images/%E7%94%B5%E5%B7%B4%E5%85%8B%E5%AE%A0%E7%89%A9Pets%E5%85%AC%E4%BC%97%E5%8F%B7%E4%BA%8C%E7%BB%B4%E7%A0%81.png" alt="电巴克宠物"></p>
+<p>一起学习，一起进步。<br></p>
 ]]></content>
       <categories>
         <category>php</category>
@@ -13039,6 +13067,107 @@ API
       <tags>
         <tag>scp</tag>
         <tag>ssh</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>mysql8新建用户及授权</title>
+    <url>/2023/01/01/mysql8%E6%96%B0%E5%BB%BA%E7%94%A8%E6%88%B7%E5%8F%8A%E6%8E%88%E6%9D%83/</url>
+    <content><![CDATA[<p>记录一下。</p>
+<span id="more"></span>
+
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># 新建用户</span><br><span class="line">create user snipe_user;</span><br><span class="line"></span><br><span class="line"># 重置密码</span><br><span class="line">alter user &#x27;snipe_user&#x27;@&#x27;%&#x27; IDENTIFIED WITH mysql_native_password BY &#x27;123456&#x27;;</span><br><span class="line"></span><br><span class="line"># 授权</span><br><span class="line">grant all privileges on snipeit.* to &#x27;snipe_user&#x27;@&#x27;%&#x27; with grant option;</span><br><span class="line"></span><br><span class="line"># 记得flush</span><br><span class="line">flush privileges;</span><br></pre></td></tr></table></figure>
+
+
+<hr>
+<h2 id="We-smile-we-angry-we-disappoint-we-excited-we-love-we-hate-that’s-our-life"><a href="#We-smile-we-angry-we-disappoint-we-excited-we-love-we-hate-that’s-our-life" class="headerlink" title="We smile, we angry, we disappoint, we excited, we love, we hate, that’s our life."></a><b>We smile, we angry, we disappoint, we excited, we love, we hate, that’s our life.</b></h2><p><b>书山有路勤为径，学海无涯苦作舟。</b></p>
+<p>欢迎关注微信公众号：【程序员写书】<br><img src="/images/%E7%A8%8B%E5%BA%8F%E5%91%98%E5%86%99%E4%B9%A6%E5%85%AC%E4%BC%97%E5%8F%B7%E4%BA%8C%E7%BB%B4%E7%A0%81.jpg" alt="程序员写书"></p>
+<p>喜欢宠物的朋友可以关注：【电巴克宠物Pets】<br><img src="/images/%E7%94%B5%E5%B7%B4%E5%85%8B%E5%AE%A0%E7%89%A9Pets%E5%85%AC%E4%BC%97%E5%8F%B7%E4%BA%8C%E7%BB%B4%E7%A0%81.png" alt="电巴克宠物"></p>
+<p>一起学习，一起进步。<br></p>
+]]></content>
+      <categories>
+        <category>mysql</category>
+      </categories>
+      <tags>
+        <tag>mysql</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>mac启动apache2服务</title>
+    <url>/2023/01/01/mac%E5%90%AF%E5%8A%A8apache2%E6%9C%8D%E5%8A%A1/</url>
+    <content><![CDATA[<p>mac如何启动自带的http服务.</p>
+<span id="more"></span>
+
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">sudo apachectl start</span><br><span class="line"></span><br><span class="line"># 配置文件位置</span><br><span class="line">vim /etc/apache2/httpd.conf</span><br><span class="line"></span><br><span class="line"># 指定主目录，修改这两个目录即可</span><br><span class="line">DocumentRoot &quot;/Users/zuolichen/opt/miniprogram/yoshop2.0/public&quot;</span><br><span class="line">&lt;Directory &quot;/Users/zuolichen/opt/miniprogram/yoshop2.0/public&quot;&gt;</span><br></pre></td></tr></table></figure>
+
+<hr>
+<p><b>书山有路勤为径，学海无涯苦作舟。</b></p>
+<p>欢迎关注微信公众号：【程序员写书】<br><img src="/images/%E7%A8%8B%E5%BA%8F%E5%91%98%E5%86%99%E4%B9%A6%E5%85%AC%E4%BC%97%E5%8F%B7%E4%BA%8C%E7%BB%B4%E7%A0%81.jpg" alt="程序员写书"></p>
+<p>喜欢宠物的朋友可以关注：【电巴克宠物Pets】<br><img src="/images/%E7%94%B5%E5%B7%B4%E5%85%8B%E5%AE%A0%E7%89%A9Pets%E5%85%AC%E4%BC%97%E5%8F%B7%E4%BA%8C%E7%BB%B4%E7%A0%81.png" alt="电巴克宠物"></p>
+<p>一起学习，一起进步。<br></p>
+]]></content>
+      <categories>
+        <category>apache</category>
+      </categories>
+      <tags>
+        <tag>mac</tag>
+        <tag>apache2</tag>
+        <tag>http</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>mac查看端口占用情况</title>
+    <url>/2023/01/01/mac%E6%9F%A5%E7%9C%8B%E7%AB%AF%E5%8F%A3%E5%8D%A0%E7%94%A8%E6%83%85%E5%86%B5/</url>
+    <content><![CDATA[<p>lsof -i:80</p>
+<span id="more"></span>
+
+
+<hr>
+<p><b>书山有路勤为径，学海无涯苦作舟。</b></p>
+<p>欢迎关注微信公众号：【程序员写书】<br><img src="/images/%E7%A8%8B%E5%BA%8F%E5%91%98%E5%86%99%E4%B9%A6%E5%85%AC%E4%BC%97%E5%8F%B7%E4%BA%8C%E7%BB%B4%E7%A0%81.jpg" alt="程序员写书"></p>
+<p>喜欢宠物的朋友可以关注：【电巴克宠物Pets】<br><img src="/images/%E7%94%B5%E5%B7%B4%E5%85%8B%E5%AE%A0%E7%89%A9Pets%E5%85%AC%E4%BC%97%E5%8F%B7%E4%BA%8C%E7%BB%B4%E7%A0%81.png" alt="电巴克宠物"></p>
+<p>一起学习，一起进步。<br></p>
+]]></content>
+      <categories>
+        <category>mac</category>
+      </categories>
+      <tags>
+        <tag>mac</tag>
+        <tag>port</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>可用的github开源项目</title>
+    <url>/2023/01/01/%E5%8F%AF%E7%94%A8%E7%9A%84github%E5%BC%80%E6%BA%90%E9%A1%B9%E7%9B%AE/</url>
+    <content><![CDATA[<p>基本简单搭建即可使用的github开源项目，中小公司可以用上了。</p>
+<!--- more -->
+
+<ol>
+<li><p>问答社区：<br><a href="https://github.com/answerdev/answer.git">https://github.com/answerdev/answer.git</a><br><img src="/2023/01/01/%E5%8F%AF%E7%94%A8%E7%9A%84github%E5%BC%80%E6%BA%90%E9%A1%B9%E7%9B%AE/answer.png" alt="answer"></p>
+</li>
+<li><p>元数据管理：<br><a href="https://github.com/datahub-project/datahub">https://github.com/datahub-project/datahub</a></p>
+</li>
+<li><p>IT资产管理系统<br><a href="https://github.com/snipe/snipe-it">https://github.com/snipe/snipe-it</a><br>文档：<a href="https://snipe-it.readme.io/docs/overview">https://snipe-it.readme.io/docs/overview</a><br><img src="/2023/01/01/%E5%8F%AF%E7%94%A8%E7%9A%84github%E5%BC%80%E6%BA%90%E9%A1%B9%E7%9B%AE/snipe.webp" alt="snipe"></p>
+</li>
+<li><p>bbs论坛<br><a href="https://github.com/ego008/goyoubbs.git">https://github.com/ego008/goyoubbs.git</a><br>示例：<a href="https://youbbs.org/">https://youbbs.org/</a></p>
+</li>
+<li><p>社区论坛<br><a href="https://github.com/ruby-china/homeland">https://github.com/ruby-china/homeland</a><br>示例：<a href="https://ruby-china.org/">https://ruby-china.org/</a></p>
+</li>
+<li><p>社区微信小程序<br><a href="https://github.com/kawaapp/wsq-xiaochengxu">https://github.com/kawaapp/wsq-xiaochengxu</a></p>
+</li>
+<li><p>web商城<br><a href="https://github.com/saleor/saleor">https://github.com/saleor/saleor</a><br><a href="https://github.com/solidusio/solidus">https://github.com/solidusio/solidus</a><br><a href="https://github.com/spree/spree">https://github.com/spree/spree</a></p>
+</li>
+</ol>
+<hr>
+<p><b>书山有路勤为径，学海无涯苦作舟。</b></p>
+<p>欢迎关注微信公众号：【程序员写书】<br><img src="/images/%E7%A8%8B%E5%BA%8F%E5%91%98%E5%86%99%E4%B9%A6%E5%85%AC%E4%BC%97%E5%8F%B7%E4%BA%8C%E7%BB%B4%E7%A0%81.jpg" alt="程序员写书"></p>
+<p>喜欢宠物的朋友可以关注：【电巴克宠物Pets】<br><img src="/images/%E7%94%B5%E5%B7%B4%E5%85%8B%E5%AE%A0%E7%89%A9Pets%E5%85%AC%E4%BC%97%E5%8F%B7%E4%BA%8C%E7%BB%B4%E7%A0%81.png" alt="电巴克宠物"></p>
+<p>一起学习，一起进步。<br></p>
+]]></content>
+      <categories>
+        <category>github</category>
+      </categories>
+      <tags>
+        <tag>github</tag>
       </tags>
   </entry>
 </search>
