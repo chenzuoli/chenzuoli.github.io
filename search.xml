@@ -12959,4 +12959,86 @@ API
         <tag>php</tag>
       </tags>
   </entry>
+  <entry>
+    <title>mac安装php</title>
+    <url>/2022/12/25/mac%E5%AE%89%E8%A3%85php/</url>
+    <content><![CDATA[<p>mac如何安装php呢？</p>
+<span id="more"></span>
+
+<p>mac是自带php的，但是新版本不自带。</p>
+<p>安装：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">brew install php</span><br></pre></td></tr></table></figure>
+
+<p>安装最新版本：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">brew reinstall php@8.2</span><br></pre></td></tr></table></figure>
+
+<p>重新启动php服务：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">brew services restart php</span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>php</category>
+      </categories>
+      <tags>
+        <tag>mac</tag>
+        <tag>php</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>yoshop本地搭建</title>
+    <url>/2022/12/26/yoshop%E6%9C%AC%E5%9C%B0%E6%90%AD%E5%BB%BA/</url>
+    <content><![CDATA[<p>从网上找到一个商城项目，本地搭建了一下，记录一下排错历程。</p>
+<span id="more"></span>
+<p>项目：<a href="https://gitee.com/xany/yoshop2.0.git">https://gitee.com/xany/yoshop2.0.git</a></p>
+<ol>
+<li><a href="http://localhost/admin">http://localhost/admin</a><br>登录，报token失败<br><img src="/2022/12/26/yoshop%E6%9C%AC%E5%9C%B0%E6%90%AD%E5%BB%BA/1.png" alt="1"></li>
+</ol>
+<p>浏览器查看network xhr，看api响应信息，可以看到报错是permission denied，于是就</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">chmod -R 777 yoshop2.0/runtime/</span><br></pre></td></tr></table></figure>
+<p>程序会在runtime目录下创建文件夹，没有权限，赋予权限就可以了。</p>
+<ol start="2">
+<li><p>php版本问题，php版本升级</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">brew reinstall php@8.2</span><br></pre></td></tr></table></figure>
+<p>查看brew启动的服务：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">brew services list</span><br></pre></td></tr></table></figure>
+<p>重启php服务：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">brew services restart php</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>{statusCode: 0, errMsg: ‘Call to undefined function yiovo\captcha\imagettftext()’, result: {…}}<br><a href="http://localhost/index.html">http://localhost/index.html</a><br>进入商城主页，登录时出现报错。<br>请求：<a href="http://localhost/index.php?s=/api/captcha/image">http://localhost/index.php?s=/api/captcha/image</a><br>响应：{“message”:”Call to undefined function yiovo\captcha\imagettftext()”,”status”:500,”data”:[]}</p>
+</li>
+</ol>
+]]></content>
+      <categories>
+        <category>php</category>
+      </categories>
+      <tags>
+        <tag>php</tag>
+        <tag>yoshop</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>ssh和scp的用法</title>
+    <url>/2022/12/31/ssh%E5%92%8Cscp%E7%9A%84%E7%94%A8%E6%B3%95/</url>
+    <content><![CDATA[<p>scp和ssh的用法，记录一下，下次免得找了.</p>
+<span id="more"></span>
+
+
+<ol>
+<li><p>scp拷贝文件到远程服务器，指定端口：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">scp -P 9762 -r public/ root@xxx.xxx.xxx.xxx:/opt/shop/</span><br></pre></td></tr></table></figure>
+<p>-P指定端口<br>-r指定目录</p>
+</li>
+<li><p>ssh远程登录服务器，指定端口：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">ssh -p 9762 root@39.100.118.8</span><br></pre></td></tr></table></figure>
+<p>-p指定端口</p>
+</li>
+</ol>
+]]></content>
+      <categories>
+        <category>linus</category>
+      </categories>
+      <tags>
+        <tag>scp</tag>
+        <tag>ssh</tag>
+      </tags>
+  </entry>
 </search>
