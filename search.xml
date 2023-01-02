@@ -13062,7 +13062,7 @@ API
 </ol>
 ]]></content>
       <categories>
-        <category>linus</category>
+        <category>linux</category>
       </categories>
       <tags>
         <tag>scp</tag>
@@ -13139,7 +13139,7 @@ API
     <title>可用的github开源项目</title>
     <url>/2023/01/01/%E5%8F%AF%E7%94%A8%E7%9A%84github%E5%BC%80%E6%BA%90%E9%A1%B9%E7%9B%AE/</url>
     <content><![CDATA[<p>基本简单搭建即可使用的github开源项目，中小公司可以用上了。</p>
-<!--- more -->
+<span id="more"></span>
 
 <ol>
 <li><p>问答社区：<br><a href="https://github.com/answerdev/answer.git">https://github.com/answerdev/answer.git</a><br><img src="/2023/01/01/%E5%8F%AF%E7%94%A8%E7%9A%84github%E5%BC%80%E6%BA%90%E9%A1%B9%E7%9B%AE/answer.png" alt="answer"></p>
