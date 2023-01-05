@@ -318,6 +318,522 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://chenzuoli.github.io/2019/10/12/Hive%E5%BC%80%E7%AA%97%E5%87%BD%E6%95%B0%E6%80%BB%E7%BB%93/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="chenzuoli's blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/10/12/Hive%E5%BC%80%E7%AA%97%E5%87%BD%E6%95%B0%E6%80%BB%E7%BB%93/" itemprop="url">Hive开窗函数总结</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-10-12T10:00:11+08:00">
+                2019-10-12
+              </time>
+            
+
+            
+              <span class="post-meta-divider">|</span>
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-check-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">更新于&#58;</span>
+              
+              <time title="更新于" itemprop="dateModified" datetime="2022-08-27T17:00:39+08:00">
+                2022-08-27
+              </time>
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Hive/" itemprop="url" rel="index">
+                    <span itemprop="name">Hive</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+          
+            
+          
+
+          
+          
+          
+             <span id="/2019/10/12/Hive%E5%BC%80%E7%AA%97%E5%87%BD%E6%95%B0%E6%80%BB%E7%BB%93/" class="leancloud_visitors" data-flag-title="Hive开窗函数总结">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <p><b>背景</b>：<br>&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;平常我们使用 <code>hive</code> 或者 <code>mysql</code> 时，一般聚合函数用的比较多。但对于某些偏分析的需求，group by可能很费力，子查询很多，这个时候就需要使用窗口分析函数了~<br>注：<code>hive</code>、<code>oracle</code>提供开窗函数，mysql8之前版本不提供，但Oracle发布的 MySQL 8.0版本支持窗口函数（over）和公用表表达式（with）这两个重要的功能！</p>
+<img src="/2019/10/12/Hive%E5%BC%80%E7%AA%97%E5%87%BD%E6%95%B0%E6%80%BB%E7%BB%93/hive_bee.jpeg" width="500" height="300">
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2019/10/12/Hive%E5%BC%80%E7%AA%97%E5%87%BD%E6%95%B0%E6%80%BB%E7%BB%93/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+    
+    
+    
+
+		
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://chenzuoli.github.io/2019/10/09/%E6%95%B0%E6%8D%AE%E4%BB%93%E5%BA%93%E7%9A%84%E7%8E%B0%E7%8A%B6%E5%8F%8A%E4%BC%98%E5%8C%96%E6%94%B9%E8%BF%9B%E6%84%8F%E8%A7%81/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="chenzuoli's blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/10/09/%E6%95%B0%E6%8D%AE%E4%BB%93%E5%BA%93%E7%9A%84%E7%8E%B0%E7%8A%B6%E5%8F%8A%E4%BC%98%E5%8C%96%E6%94%B9%E8%BF%9B%E6%84%8F%E8%A7%81/" itemprop="url">数据仓库的现状及优化改进意见</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-10-09T17:24:21+08:00">
+                2019-10-09
+              </time>
+            
+
+            
+              <span class="post-meta-divider">|</span>
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-check-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">更新于&#58;</span>
+              
+              <time title="更新于" itemprop="dateModified" datetime="2022-08-27T17:00:39+08:00">
+                2022-08-27
+              </time>
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E6%95%B0%E6%8D%AE%E4%BB%93%E5%BA%93/" itemprop="url" rel="index">
+                    <span itemprop="name">数据仓库</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+          
+            
+          
+
+          
+          
+          
+             <span id="/2019/10/09/%E6%95%B0%E6%8D%AE%E4%BB%93%E5%BA%93%E7%9A%84%E7%8E%B0%E7%8A%B6%E5%8F%8A%E4%BC%98%E5%8C%96%E6%94%B9%E8%BF%9B%E6%84%8F%E8%A7%81/" class="leancloud_visitors" data-flag-title="数据仓库的现状及优化改进意见">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <p>&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;刚离职的这家公司，数据仓库可以提供基本的功能：<b>基于时间的历史数据查询，多维展示报表，决策支持、数据质量监控</b>等，但是也有许多问题，下面来看看这些问题及解决方案，不知道同行们有没有遇到过。</p>
+<img src="/2019/10/09/%E6%95%B0%E6%8D%AE%E4%BB%93%E5%BA%93%E7%9A%84%E7%8E%B0%E7%8A%B6%E5%8F%8A%E4%BC%98%E5%8C%96%E6%94%B9%E8%BF%9B%E6%84%8F%E8%A7%81/data_warehouse.jpeg" width="500" height="300">
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2019/10/09/%E6%95%B0%E6%8D%AE%E4%BB%93%E5%BA%93%E7%9A%84%E7%8E%B0%E7%8A%B6%E5%8F%8A%E4%BC%98%E5%8C%96%E6%94%B9%E8%BF%9B%E6%84%8F%E8%A7%81/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+    
+    
+    
+
+		
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://chenzuoli.github.io/2019/10/09/%E5%BC%80%E6%BA%90OLAP%E7%B3%BB%E7%BB%9F%E5%AF%B9%E6%AF%94/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="chenzuoli's blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/10/09/%E5%BC%80%E6%BA%90OLAP%E7%B3%BB%E7%BB%9F%E5%AF%B9%E6%AF%94/" itemprop="url">开源OLAP系统对比</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-10-09T16:06:49+08:00">
+                2019-10-09
+              </time>
+            
+
+            
+              <span class="post-meta-divider">|</span>
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-check-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">更新于&#58;</span>
+              
+              <time title="更新于" itemprop="dateModified" datetime="2022-08-27T17:00:39+08:00">
+                2022-08-27
+              </time>
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E6%95%B0%E6%8D%AE%E4%BB%93%E5%BA%93/" itemprop="url" rel="index">
+                    <span itemprop="name">数据仓库</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+          
+            
+          
+
+          
+          
+          
+             <span id="/2019/10/09/%E5%BC%80%E6%BA%90OLAP%E7%B3%BB%E7%BB%9F%E5%AF%B9%E6%AF%94/" class="leancloud_visitors" data-flag-title="开源OLAP系统对比">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <p>&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;OLAP系统，基于数据仓库，为数据价值而生，提供复杂的数据分析操作，及直观易懂的查询结果，目前市场上有许多开源的OLAP框架，如Impala、Presto、Druid、Kylin、Spark SQL等，他们的关系又是怎样的呢，我们应该怎样选择框架？</p>
+<img src="/2019/10/09/%E5%BC%80%E6%BA%90OLAP%E7%B3%BB%E7%BB%9F%E5%AF%B9%E6%AF%94/olap_analysis.jpeg" width="500" height="300">
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2019/10/09/%E5%BC%80%E6%BA%90OLAP%E7%B3%BB%E7%BB%9F%E5%AF%B9%E6%AF%94/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+    
+    
+    
+
+		
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="https://chenzuoli.github.io/2019/10/09/%E6%95%B0%E6%8D%AE%E4%BB%93%E5%BA%93%E8%AE%BE%E8%AE%A1/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1509,522 +2025,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://chenzuoli.github.io/2019/09/29/%E4%BA%8B%E5%AE%9E%E8%A1%A8%E3%80%81%E7%BB%B4%E5%BA%A6%E3%80%81%E5%BA%A6%E9%87%8F%E3%80%81%E6%8C%87%E6%A0%87%E4%B9%8B%E9%97%B4%E7%9A%84%E5%85%B3%E7%B3%BB/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="chenzuoli's blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/09/29/%E4%BA%8B%E5%AE%9E%E8%A1%A8%E3%80%81%E7%BB%B4%E5%BA%A6%E3%80%81%E5%BA%A6%E9%87%8F%E3%80%81%E6%8C%87%E6%A0%87%E4%B9%8B%E9%97%B4%E7%9A%84%E5%85%B3%E7%B3%BB/" itemprop="url">事实表、维度、度量、指标之间的关系</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-09-29T11:20:03+08:00">
-                2019-09-29
-              </time>
-            
-
-            
-              <span class="post-meta-divider">|</span>
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-check-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">更新于&#58;</span>
-              
-              <time title="更新于" itemprop="dateModified" datetime="2022-08-27T17:00:39+08:00">
-                2022-08-27
-              </time>
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E6%95%B0%E6%8D%AE%E4%BB%93%E5%BA%93/" itemprop="url" rel="index">
-                    <span itemprop="name">数据仓库</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-          
-            
-          
-
-          
-          
-          
-             <span id="/2019/09/29/%E4%BA%8B%E5%AE%9E%E8%A1%A8%E3%80%81%E7%BB%B4%E5%BA%A6%E3%80%81%E5%BA%A6%E9%87%8F%E3%80%81%E6%8C%87%E6%A0%87%E4%B9%8B%E9%97%B4%E7%9A%84%E5%85%B3%E7%B3%BB/" class="leancloud_visitors" data-flag-title="事实表、维度、度量、指标之间的关系">
-               <span class="post-meta-divider">|</span>
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               
-                 <span class="post-meta-item-text">阅读次数&#58;</span>
-               
-                 <span class="leancloud-visitors-count"></span>
-             </span>
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <p>数据仓库中有许多概念，比如事实表、维度、度量、指标，下面来看看他们是什么意思，这几个概念之间有什么关系？</p>
-<p><img src="/2019/09/29/%E4%BA%8B%E5%AE%9E%E8%A1%A8%E3%80%81%E7%BB%B4%E5%BA%A6%E3%80%81%E5%BA%A6%E9%87%8F%E3%80%81%E6%8C%87%E6%A0%87%E4%B9%8B%E9%97%B4%E7%9A%84%E5%85%B3%E7%B3%BB/dimension.jpeg" alt="dimension"></p>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2019/09/29/%E4%BA%8B%E5%AE%9E%E8%A1%A8%E3%80%81%E7%BB%B4%E5%BA%A6%E3%80%81%E5%BA%A6%E9%87%8F%E3%80%81%E6%8C%87%E6%A0%87%E4%B9%8B%E9%97%B4%E7%9A%84%E5%85%B3%E7%B3%BB/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-		
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://chenzuoli.github.io/2019/09/28/%E5%88%86%E5%B8%83%E5%BC%8F%E4%B8%80%E8%87%B4%E6%80%A7%E7%AE%97%E6%B3%95Raft/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="chenzuoli's blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/09/28/%E5%88%86%E5%B8%83%E5%BC%8F%E4%B8%80%E8%87%B4%E6%80%A7%E7%AE%97%E6%B3%95Raft/" itemprop="url">分布式一致性算法Raft</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-09-28T08:13:54+08:00">
-                2019-09-28
-              </time>
-            
-
-            
-              <span class="post-meta-divider">|</span>
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-check-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">更新于&#58;</span>
-              
-              <time title="更新于" itemprop="dateModified" datetime="2022-08-27T17:00:39+08:00">
-                2022-08-27
-              </time>
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E5%85%B1%E8%AF%86%E7%AE%97%E6%B3%95/" itemprop="url" rel="index">
-                    <span itemprop="name">共识算法</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-          
-            
-          
-
-          
-          
-          
-             <span id="/2019/09/28/%E5%88%86%E5%B8%83%E5%BC%8F%E4%B8%80%E8%87%B4%E6%80%A7%E7%AE%97%E6%B3%95Raft/" class="leancloud_visitors" data-flag-title="分布式一致性算法Raft">
-               <span class="post-meta-divider">|</span>
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               
-                 <span class="post-meta-item-text">阅读次数&#58;</span>
-               
-                 <span class="leancloud-visitors-count"></span>
-             </span>
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <p>&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;熟悉或了解分布式系统的开发者都知道一致性算法的重要性，Paxos一致性算法提出至今已经有二十几年了，而Paxos流程太过于繁杂，实现起来比较复杂，因此Raft应运而生，它是比Paxos更简单而又能实现Paxos所解决的问题的一致性算法。</p>
-<p><img src="/2019/09/28/%E5%88%86%E5%B8%83%E5%BC%8F%E4%B8%80%E8%87%B4%E6%80%A7%E7%AE%97%E6%B3%95Raft/raft.jpeg" alt="raft"></p>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2019/09/28/%E5%88%86%E5%B8%83%E5%BC%8F%E4%B8%80%E8%87%B4%E6%80%A7%E7%AE%97%E6%B3%95Raft/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-		
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://chenzuoli.github.io/2019/09/27/%E5%88%86%E5%B8%83%E5%BC%8F%E4%B8%80%E8%87%B4%E6%80%A7%E5%8D%8F%E8%AE%AEPaxos/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="chenzuoli's blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/09/27/%E5%88%86%E5%B8%83%E5%BC%8F%E4%B8%80%E8%87%B4%E6%80%A7%E5%8D%8F%E8%AE%AEPaxos/" itemprop="url">分布式一致性协议Paxos</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-09-27T17:43:02+08:00">
-                2019-09-27
-              </time>
-            
-
-            
-              <span class="post-meta-divider">|</span>
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-check-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">更新于&#58;</span>
-              
-              <time title="更新于" itemprop="dateModified" datetime="2022-08-27T17:00:39+08:00">
-                2022-08-27
-              </time>
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E5%85%B1%E8%AF%86%E7%AE%97%E6%B3%95/" itemprop="url" rel="index">
-                    <span itemprop="name">共识算法</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-          
-            
-          
-
-          
-          
-          
-             <span id="/2019/09/27/%E5%88%86%E5%B8%83%E5%BC%8F%E4%B8%80%E8%87%B4%E6%80%A7%E5%8D%8F%E8%AE%AEPaxos/" class="leancloud_visitors" data-flag-title="分布式一致性协议Paxos">
-               <span class="post-meta-divider">|</span>
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               
-                 <span class="post-meta-item-text">阅读次数&#58;</span>
-               
-                 <span class="leancloud-visitors-count"></span>
-             </span>
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <p>&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;Basic-Paxos算法(可以先看后面的实际例子再看前面的具体介绍部分）<br>&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;多个节点并发操纵数据，如何保证在读写过程中数据的一致性，并且解决方案要能适应分布式环境下的不可靠性，由此，Paxos共识算法应运而生。</p>
-<p><img src="/2019/09/27/%E5%88%86%E5%B8%83%E5%BC%8F%E4%B8%80%E8%87%B4%E6%80%A7%E5%8D%8F%E8%AE%AEPaxos/consensus_algorithm_paxos.jpeg" alt="consensus_algorithm_paxos"></p>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2019/09/27/%E5%88%86%E5%B8%83%E5%BC%8F%E4%B8%80%E8%87%B4%E6%80%A7%E5%8D%8F%E8%AE%AEPaxos/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-		
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -2075,7 +2075,7 @@
               
                 <a href="/archives/%7C%7C%20archive">
               
-                  <span class="site-state-item-count">307</span>
+                  <span class="site-state-item-count">310</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -2086,7 +2086,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">111</span>
+                  <span class="site-state-item-count">113</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -2097,7 +2097,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">362</span>
+                  <span class="site-state-item-count">364</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>

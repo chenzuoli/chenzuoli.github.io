@@ -13170,4 +13170,74 @@ API
         <tag>github</tag>
       </tags>
   </entry>
+  <entry>
+    <title>mac安装go环境</title>
+    <url>/2023/01/02/mac%E5%AE%89%E8%A3%85go%E7%8E%AF%E5%A2%83/</url>
+    <content><![CDATA[<p>安装命令：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">brew install go</span><br></pre></td></tr></table></figure>
+
+<span id="more"></span>
+
+<p>检查安装版本，终端查看当前安装的golang版本信息</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">brew info go</span><br><span class="line">go env</span><br><span class="line">go version</span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>go</category>
+      </categories>
+      <tags>
+        <tag>mac</tag>
+        <tag>go</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>mac安装yarn</title>
+    <url>/2023/01/02/mac%E5%AE%89%E8%A3%85yarn/</url>
+    <content><![CDATA[<p>这个yarn是前端的包管理工具，不是hadoop生态的资源管理器哈。</p>
+<span id="more"></span>
+
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">npm install --global yarn</span><br><span class="line">yarn --version</span><br><span class="line"></span><br><span class="line"># yarn设置taobao源</span><br><span class="line">yarn config set registry https://registry.npm.taobao.org</span><br><span class="line"></span><br><span class="line"># npm设置taobao源</span><br><span class="line">npm config set registry https://registry.npm.taobao.org</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+<hr>
+<p><b>书山有路勤为径，学海无涯苦作舟。</b></p>
+<p>欢迎关注微信公众号：【程序员写书】<br><img src="/images/%E7%A8%8B%E5%BA%8F%E5%91%98%E5%86%99%E4%B9%A6%E5%85%AC%E4%BC%97%E5%8F%B7%E4%BA%8C%E7%BB%B4%E7%A0%81.jpg" alt="程序员写书"></p>
+<p>喜欢宠物的朋友可以关注：【电巴克宠物Pets】<br><img src="/images/%E7%94%B5%E5%B7%B4%E5%85%8B%E5%AE%A0%E7%89%A9Pets%E5%85%AC%E4%BC%97%E5%8F%B7%E4%BA%8C%E7%BB%B4%E7%A0%81.png" alt="电巴克宠物"></p>
+<p>一起学习，一起进步。<br></p>
+]]></content>
+      <categories>
+        <category>mac</category>
+      </categories>
+      <tags>
+        <tag>mac</tag>
+        <tag>yarn</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>npm升级旧项目中的依赖包</title>
+    <url>/2023/01/05/npm%E5%8D%87%E7%BA%A7%E6%97%A7%E9%A1%B9%E7%9B%AE%E4%B8%AD%E7%9A%84%E4%BE%9D%E8%B5%96%E5%8C%85/</url>
+    <content><![CDATA[<p>拿到一个js写的旧项目，依赖包都比较老了，如何升级依赖包。</p>
+<span id="more"></span>
+
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># 安装ncu</span><br><span class="line">npm install -g npm-check-updates</span><br><span class="line"></span><br><span class="line"># 来显示要升级的软件包</span><br><span class="line">ncu </span><br><span class="line"></span><br><span class="line"></span><br><span class="line"># 升级package.json</span><br><span class="line">ncu --upgrade</span><br><span class="line"></span><br><span class="line"># 升级</span><br><span class="line">npm install</span><br><span class="line"></span><br><span class="line"># 必要时使用sudo</span><br></pre></td></tr></table></figure>
+
+
+
+
+<hr>
+<p><b>书山有路勤为径，学海无涯苦作舟。</b></p>
+<p>欢迎关注微信公众号：【程序员写书】<br><img src="/images/%E7%A8%8B%E5%BA%8F%E5%91%98%E5%86%99%E4%B9%A6%E5%85%AC%E4%BC%97%E5%8F%B7%E4%BA%8C%E7%BB%B4%E7%A0%81.jpg" alt="程序员写书"></p>
+<p>喜欢宠物的朋友可以关注：【电巴克宠物Pets】<br><img src="/images/%E7%94%B5%E5%B7%B4%E5%85%8B%E5%AE%A0%E7%89%A9Pets%E5%85%AC%E4%BC%97%E5%8F%B7%E4%BA%8C%E7%BB%B4%E7%A0%81.png" alt="电巴克宠物"></p>
+<p>一起学习，一起进步。<br></p>
+]]></content>
+      <categories>
+        <category>npm</category>
+      </categories>
+      <tags>
+        <tag>npm</tag>
+      </tags>
+  </entry>
 </search>
