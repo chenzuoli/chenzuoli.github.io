@@ -13156,6 +13156,10 @@ API
 </li>
 <li><p>web商城<br><a href="https://github.com/saleor/saleor">https://github.com/saleor/saleor</a><br><a href="https://github.com/solidusio/solidus">https://github.com/solidusio/solidus</a><br><a href="https://github.com/spree/spree">https://github.com/spree/spree</a></p>
 </li>
+<li><p>erp crm<br><a href="https://github.com/Dolibarr/dolibarr.git">https://github.com/Dolibarr/dolibarr.git</a><br><img src="/2023/01/01/%E5%8F%AF%E7%94%A8%E7%9A%84github%E5%BC%80%E6%BA%90%E9%A1%B9%E7%9B%AE/dolibarr.png" alt="dolibarr"></p>
+</li>
+<li><p>erp<br><a href="https://github.com/frappe/erpnext">https://github.com/frappe/erpnext</a></p>
+</li>
 </ol>
 <hr>
 <p><b>书山有路勤为径，学海无涯苦作舟。</b></p>
@@ -13246,13 +13250,18 @@ API
     <content><![CDATA[<p>安装dolibarr的过程。</p>
 <span id="more"></span>
 
-<h1 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h1><ol>
+<ol>
 <li>mysqli::__construct(): (HY000&#x2F;2002): No such file or directory<br>Warning: mysqli: (HY000&#x2F;2002): No such file or directory in <directory path> on line <number> Failed to connect to MySQL: No such file or directory</number></directory></li>
 </ol>
 <p>提示：No such file or directory，但是其实不是文件找不到的意思。问题一般是数据库连不上，检查下连接数据库的配置信息，尤其是localhost，将它换成127.0.0.1试试。</p>
 <p>我将localhost换成127.0.0.1就可以了。</p>
 <ol start="2">
-<li>新建文件和文件夹<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">cd dolibarr/</span><br><span class="line"></span><br><span class="line">touch htdocs/conf/conf.php</span><br><span class="line"># 授权</span><br><span class="line">chmod -R 777 htdocs/conf</span><br><span class="line"></span><br><span class="line">mkdir documents</span><br><span class="line">chmod -R 777 documents</span><br></pre></td></tr></table></figure></li>
+<li><p>新建文件和文件夹</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">cd dolibarr/</span><br><span class="line"></span><br><span class="line">touch htdocs/conf/conf.php</span><br><span class="line"># 授权</span><br><span class="line">chmod -R 777 htdocs/conf</span><br><span class="line"></span><br><span class="line">mkdir documents</span><br><span class="line">chmod -R 777 documents</span><br></pre></td></tr></table></figure>
+
+</li>
+<li><p>访问</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># 检查apache2服务配置</span><br><span class="line">vim /etc/apache2/httpd.conf</span><br><span class="line"></span><br><span class="line"># DocumentRoot指定到dolibarr/htdocs目录下即可</span><br><span class="line">DocumentRoot &quot;/Users/zuolichen/opt/dolibarr/htdocs&quot;</span><br><span class="line"></span><br><span class="line"># 启动apache2</span><br><span class="line">sudo apachectl start</span><br><span class="line"></span><br><span class="line">http://localhost/</span><br></pre></td></tr></table></figure></li>
 </ol>
 <hr>
 <h2 id="We-smile-we-angry-we-disappoint-we-excited-we-love-we-hate-that’s-our-life"><a href="#We-smile-we-angry-we-disappoint-we-excited-we-love-we-hate-that’s-our-life" class="headerlink" title="We smile, we angry, we disappoint, we excited, we love, we hate, that’s our life."></a><b>We smile, we angry, we disappoint, we excited, we love, we hate, that’s our life.</b></h2><p><b>书山有路勤为径，学海无涯苦作舟。</b></p>
@@ -13268,5 +13277,74 @@ API
         <tag>erp</tag>
         <tag>crm</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>centos安装php</title>
+    <url>/2023/01/08/centos%E5%AE%89%E8%A3%85php/</url>
+    <content><![CDATA[<p>方法1：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">yum install php php-devel</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>方法2：</p>
+<ol>
+<li><p>依赖：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">yum install -y bzip2-devel libcurl-devel libxml2-devel sqlite-devel oniguruma oniguruma-devel libxml2 libxml2-devel bzip2 bzip2-devel libcurl libcurl-devel libjpeg libjpeg-devel zstd libzstd-devel curl libcurl-devel libpng libpng-devel</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>下载</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">wget https://www.php.net/distributions/php-8.1.9.tar.gz --no-check-certificate</span><br><span class="line">tar -xzxvf php-8.1.9.tar.gz</span><br></pre></td></tr></table></figure>
+
+</li>
+<li><p>编译</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">mkdir /usr/local/php-8.1.9_build</span><br><span class="line">cd php-8.1.9</span><br><span class="line">./configure --prefix=/usr/local/php-8.1.9_build --enable-fpm --with-mysqli --enable-mbstring --with-bz2 --with-curl --enable-gd --with-zip --with-zlib --with-openssl</span><br><span class="line">make -j2 # 双核服务器参数配置</span><br><span class="line">make install</span><br><span class="line">cd ..</span><br></pre></td></tr></table></figure></li>
+</ol>
+]]></content>
+      <categories>
+        <category>centos</category>
+      </categories>
+      <tags>
+        <tag>php</tag>
+        <tag>centos</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>微信小程序van_button组件的使用</title>
+    <url>/2023/01/09/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8Fvan-button%E7%BB%84%E4%BB%B6%E7%9A%84%E4%BD%BF%E7%94%A8/</url>
+    <content><![CDATA[<p>van-button</p>
+<span id="more"></span>
+
+<p>app.json</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&quot;usingComponents&quot;: &#123;</span><br><span class="line">  &quot;van-button&quot;: &quot;@vant/weapp/button/index&quot;</span><br><span class="line">&#125;,</span><br></pre></td></tr></table></figure>
+<p>问题：</p>
+<ol>
+<li><p>[ app.json file content error] app.json: [“usingComponents”][“van-button”]: “@vant&#x2F;weapp&#x2F;button&#x2F;index” not found(env: macOS,mp,1.06.2210310; lib: 2.24.0)</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">npm init</span><br><span class="line">npm i vant-weapp -S --production</span><br><span class="line">npm i @vant/weapp -S --production</span><br></pre></td></tr></table></figure>
+<p>回到小程序[构建npm]</p>
+</li>
+<li><p>[ WXML file compile error]<br>Error -1152: WXML file not found: .&#x2F;miniprogram_npm&#x2F;@vant&#x2F;weapp&#x2F;grid-item&#x2F;index.wxml<br>(env: macOS,mp,1.06.2210310; lib: 2.24.0)</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">npm i @vant/weapp -S --production</span><br></pre></td></tr></table></figure></li>
+</ol>
+]]></content>
+      <categories>
+        <category>微信小程序</category>
+      </categories>
+      <tags>
+        <tag>微信小程序</tag>
+        <tag>van-button</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title></title>
+    <url>/2023/01/11/%E7%A4%BE%E5%8C%BA%E5%B0%8F%E7%A8%8B%E5%BA%8F%E4%BF%AE%E6%94%B9/</url>
+    <content><![CDATA[]]></content>
+  </entry>
+  <entry>
+    <title>nginx新增访问路径location</title>
+    <url>/2023/01/11/nginx%E6%96%B0%E5%A2%9E%E8%AE%BF%E9%97%AE%E8%B7%AF%E5%BE%84location/</url>
+    <content><![CDATA[<p>nginx</p>
+<span id="more"></span>
+
+
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">location /demo &#123;</span><br><span class="line">    root /opt/test;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>实际访问路径：.&#x2F;opt&#x2F;test&#x2F;demo<br>绝对路径：nginx根目录&#x2F;opt&#x2F;test&#x2F;demo&#x2F;</p>
+]]></content>
   </entry>
 </search>

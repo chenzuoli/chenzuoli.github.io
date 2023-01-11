@@ -90,7 +90,7 @@
 <meta property="og:image" content="https://chenzuoli.github.io/images/%E7%A8%8B%E5%BA%8F%E5%91%98%E5%86%99%E4%B9%A6%E5%85%AC%E4%BC%97%E5%8F%B7%E4%BA%8C%E7%BB%B4%E7%A0%81.jpg">
 <meta property="og:image" content="https://chenzuoli.github.io/images/%E7%94%B5%E5%B7%B4%E5%85%8B%E5%AE%A0%E7%89%A9Pets%E5%85%AC%E4%BC%97%E5%8F%B7%E4%BA%8C%E7%BB%B4%E7%A0%81.png">
 <meta property="article:published_time" content="2023-01-07T14:53:49.000Z">
-<meta property="article:modified_time" content="2023-01-07T14:59:10.514Z">
+<meta property="article:modified_time" content="2023-01-07T15:28:27.150Z">
 <meta property="article:author" content="Lee">
 <meta property="article:tag" content="dolibarr">
 <meta property="article:tag" content="erp">
@@ -372,7 +372,7 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2023-01-07T22:59:10+08:00">
+              <time title="更新于" itemprop="dateModified" datetime="2023-01-07T23:28:27+08:00">
                 2023-01-07
               </time>
             
@@ -447,13 +447,18 @@
         <p>安装dolibarr的过程。</p>
 <span id="more"></span>
 
-<h1 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h1><ol>
+<ol>
 <li>mysqli::__construct(): (HY000&#x2F;2002): No such file or directory<br>Warning: mysqli: (HY000&#x2F;2002): No such file or directory in <directory path> on line <number> Failed to connect to MySQL: No such file or directory</number></directory></li>
 </ol>
 <p>提示：No such file or directory，但是其实不是文件找不到的意思。问题一般是数据库连不上，检查下连接数据库的配置信息，尤其是localhost，将它换成127.0.0.1试试。</p>
 <p>我将localhost换成127.0.0.1就可以了。</p>
 <ol start="2">
-<li>新建文件和文件夹<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">cd dolibarr/</span><br><span class="line"></span><br><span class="line">touch htdocs/conf/conf.php</span><br><span class="line"># 授权</span><br><span class="line">chmod -R 777 htdocs/conf</span><br><span class="line"></span><br><span class="line">mkdir documents</span><br><span class="line">chmod -R 777 documents</span><br></pre></td></tr></table></figure></li>
+<li><p>新建文件和文件夹</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">cd dolibarr/</span><br><span class="line"></span><br><span class="line">touch htdocs/conf/conf.php</span><br><span class="line"># 授权</span><br><span class="line">chmod -R 777 htdocs/conf</span><br><span class="line"></span><br><span class="line">mkdir documents</span><br><span class="line">chmod -R 777 documents</span><br></pre></td></tr></table></figure>
+
+</li>
+<li><p>访问</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"># 检查apache2服务配置</span><br><span class="line">vim /etc/apache2/httpd.conf</span><br><span class="line"></span><br><span class="line"># DocumentRoot指定到dolibarr/htdocs目录下即可</span><br><span class="line">DocumentRoot &quot;/Users/zuolichen/opt/dolibarr/htdocs&quot;</span><br><span class="line"></span><br><span class="line"># 启动apache2</span><br><span class="line">sudo apachectl start</span><br><span class="line"></span><br><span class="line">http://localhost/</span><br></pre></td></tr></table></figure></li>
 </ol>
 <hr>
 <h2 id="We-smile-we-angry-we-disappoint-we-excited-we-love-we-hate-that’s-our-life"><a href="#We-smile-we-angry-we-disappoint-we-excited-we-love-we-hate-that’s-our-life" class="headerlink" title="We smile, we angry, we disappoint, we excited, we love, we hate, that’s our life."></a><b>We smile, we angry, we disappoint, we excited, we love, we hate, that’s our life.</b></h2><p><b>书山有路勤为径，学海无涯苦作舟。</b></p>
@@ -523,6 +528,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2023/01/08/centos%E5%AE%89%E8%A3%85php/" rel="prev" title="centos安装php">
+                centos安装php <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -642,7 +651,7 @@
               
                 <a href="/archives/%7C%7C%20archive">
               
-                  <span class="site-state-item-count">311</span>
+                  <span class="site-state-item-count">315</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -653,7 +662,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">113</span>
+                  <span class="site-state-item-count">114</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -664,7 +673,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">367</span>
+                  <span class="site-state-item-count">369</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -749,7 +758,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E9%97%AE%E9%A2%98"><span class="nav-number">1.</span> <span class="nav-text">问题</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#We-smile-we-angry-we-disappoint-we-excited-we-love-we-hate-that%E2%80%99s-our-life"><span class="nav-number">1.1.</span> <span class="nav-text">We smile, we angry, we disappoint, we excited, we love, we hate, that’s our life.</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#We-smile-we-angry-we-disappoint-we-excited-we-love-we-hate-that%E2%80%99s-our-life"><span class="nav-number">1.</span> <span class="nav-text">We smile, we angry, we disappoint, we excited, we love, we hate, that’s our life.</span></a></li></ol></div>
             
 
           </div>
