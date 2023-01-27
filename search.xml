@@ -13097,7 +13097,7 @@ API
     <content><![CDATA[<p>mac如何启动自带的http服务.</p>
 <span id="more"></span>
 
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">sudo apachectl start</span><br><span class="line"></span><br><span class="line"># 配置文件位置</span><br><span class="line">vim /etc/apache2/httpd.conf</span><br><span class="line"></span><br><span class="line"># 指定主目录，修改这两个目录即可</span><br><span class="line">DocumentRoot &quot;/Users/zuolichen/opt/miniprogram/yoshop2.0/public&quot;</span><br><span class="line">&lt;Directory &quot;/Users/zuolichen/opt/miniprogram/yoshop2.0/public&quot;&gt;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># 启动命令：</span><br><span class="line">sudo apachectl start</span><br><span class="line"></span><br><span class="line"># 配置文件位置</span><br><span class="line">vim /etc/apache2/httpd.conf</span><br><span class="line"></span><br><span class="line"># 指定主目录，修改这两个目录即可</span><br><span class="line">DocumentRoot &quot;/Users/zuolichen/opt/miniprogram/yoshop2.0/public&quot;</span><br><span class="line">&lt;Directory &quot;/Users/zuolichen/opt/miniprogram/yoshop2.0/public&quot;&gt;</span><br><span class="line"></span><br><span class="line"># 重启</span><br><span class="line">sudo apachectl restart</span><br></pre></td></tr></table></figure>
 
 <hr>
 <p><b>书山有路勤为径，学海无涯苦作舟。</b></p>
@@ -13160,9 +13160,10 @@ API
 </li>
 <li><p>erp<br><a href="https://github.com/frappe/erpnext">https://github.com/frappe/erpnext</a></p>
 </li>
-<li><p>cms<br><a href="https://github.com/strapi/strapi">https://github.com/strapi/strapi</a><br>强大的内容管理系统，api是它的强项</p>
+<li><p>cms<br><a href="https://github.com/strapi/strapi">https://github.com/strapi/strapi</a><br>强大的内容管理系统，api是它的强项。</p>
 </li>
 </ol>
+<p><a href="https://github.com/django-cms/django-cms.git">https://github.com/django-cms/django-cms.git</a><br>多用于构建企业官网。</p>
 <hr>
 <p><b>书山有路勤为径，学海无涯苦作舟。</b></p>
 <p>欢迎关注微信公众号：【程序员写书】<br><img src="/images/%E7%A8%8B%E5%BA%8F%E5%91%98%E5%86%99%E4%B9%A6%E5%85%AC%E4%BC%97%E5%8F%B7%E4%BA%8C%E7%BB%B4%E7%A0%81.jpg" alt="程序员写书"></p>
@@ -13462,6 +13463,69 @@ API
       </categories>
       <tags>
         <tag>vue</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>debian系统安装vim问题</title>
+    <url>/2023/01/20/debian%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85vim%E9%97%AE%E9%A2%98/</url>
+    <content><![CDATA[<p>原来以为debian安装使用apt-get就行，今天使用的一个docker容器，就安装不上。</p>
+<span id="more"></span>
+
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">root@e2d14e4a709d:/app/backend/templates# apt-get install vim</span><br><span class="line">Reading package lists... Done</span><br><span class="line">Building dependency tree... Done</span><br><span class="line">Reading state information... Done</span><br><span class="line">E: Unable to locate package vim</span><br></pre></td></tr></table></figure>
+
+<p>先update以下，再安装就可以了</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">root@e2d14e4a709d:/app/backend/templates# apt-get update</span><br></pre></td></tr></table></figure>
+
+
+]]></content>
+      <categories>
+        <category>debian</category>
+      </categories>
+      <tags>
+        <tag>debian</tag>
+        <tag>vim</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>django-cms试用</title>
+    <url>/2023/01/15/django-cms%E8%AF%95%E7%94%A8/</url>
+    <content><![CDATA[<p>django-cms多适用于企业官网，我也来试试，下次直接用这个工具构建官网了。</p>
+<span id="more"></span>
+
+<ol>
+<li>docker安装<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">$ git clone git@github.com:django-cms/django-cms-quickstart.git</span><br><span class="line">$ cd django-cms-quickstart</span><br><span class="line">$ docker compose build web &amp;&amp; docker compose up -d database_default</span><br><span class="line">$ docker compose run web python manage.py migrate &amp;&amp; docker compose run web python manage.py createsuperuser</span><br><span class="line">$ docker compose up -d</span><br><span class="line">$ open http://127.0.0.1:8000</span><br></pre></td></tr></table></figure></li>
+</ol>
+<hr>
+<p><b>I have a wife, her name is Deng.</b></p>
+<p>欢迎关注微信公众号：【程序员写书】<br><img src="/images/%E7%A8%8B%E5%BA%8F%E5%91%98%E5%86%99%E4%B9%A6%E5%85%AC%E4%BC%97%E5%8F%B7%E4%BA%8C%E7%BB%B4%E7%A0%81.jpg" alt="程序员写书"></p>
+<p>喜欢宠物的朋友可以关注：【电巴克宠物Pets】<br><img src="/images/%E7%94%B5%E5%B7%B4%E5%85%8B%E5%AE%A0%E7%89%A9Pets%E5%85%AC%E4%BC%97%E5%8F%B7%E4%BA%8C%E7%BB%B4%E7%A0%81.png" alt="电巴克宠物"></p>
+<p>一起学习，一起进步。<br></p>
+]]></content>
+      <categories>
+        <category>cms</category>
+      </categories>
+      <tags>
+        <tag>cms</tag>
+        <tag>django-cms</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>django-cms</title>
+    <url>/2023/01/27/django-cms/</url>
+    <content><![CDATA[<p>来记录一下用django-cms自定义网站的一些方法。</p>
+<p><img src="/2023/01/27/django-cms/django-logo.svg" alt="django"></p>
+<span id="more"></span>
+
+
+<ol>
+<li>添加菜单<br><img src="/2023/01/27/django-cms/1.png" alt="1"><br><img src="/2023/01/27/django-cms/2.png" alt="2"></li>
+</ol>
+]]></content>
+      <categories>
+        <category>django-cms</category>
+      </categories>
+      <tags>
+        <tag>django-cms</tag>
       </tags>
   </entry>
 </search>
