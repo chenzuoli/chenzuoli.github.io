@@ -5208,7 +5208,8 @@
   <entry>
     <title>centos安装php</title>
     <url>/2023/01/08/centos%E5%AE%89%E8%A3%85php/</url>
-    <content><![CDATA[<span id="more"></span>
+    <content><![CDATA[<p>centos7如何安装php环境，且看这篇文章。</p>
+<span id="more"></span>
 
 <p>方法1：</p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">yum install php php-devel</span><br><span class="line"></span><br></pre></td></tr></table></figure>
@@ -7938,7 +7939,7 @@
       </tags>
   </entry>
   <entry>
-    <title>云原生包管理器Helm</title>
+    <title>云原生框架k8s基本操作</title>
     <url>/2023/01/30/%E4%BA%91%E5%8E%9F%E7%94%9F%E5%8C%85%E7%AE%A1%E7%90%86%E5%99%A8Helm/</url>
     <content><![CDATA[<p>学习一下，本地测试如何使用helm进行k8s的包管理。</p>
 <span id="more"></span>
@@ -7952,7 +7953,7 @@
 </ol>
 <h1 id="minikube"><a href="#minikube" class="headerlink" title="minikube"></a>minikube</h1><p>brew install minikube</p>
 <h1 id="kind"><a href="#kind" class="headerlink" title="kind"></a>kind</h1><ol>
-<li><p>go install sigs.k8s.io&#x2F;<a href="mailto:&#x6b;&#105;&#110;&#x64;&#x40;&#118;&#x30;&#46;&#x31;&#55;&#x2e;&#x30;">&#x6b;&#105;&#110;&#x64;&#x40;&#118;&#x30;&#46;&#x31;&#55;&#x2e;&#x30;</a> &amp;&amp; kind create cluster</p>
+<li><p>go install sigs.k8s.io&#x2F;<a href="mailto:&#107;&#105;&#x6e;&#100;&#x40;&#118;&#x30;&#46;&#49;&#x37;&#46;&#x30;">&#107;&#105;&#x6e;&#100;&#x40;&#118;&#x30;&#46;&#49;&#x37;&#46;&#x30;</a> &amp;&amp; kind create cluster</p>
 </li>
 <li><p>brew install kind &amp;&amp; kind create cluster<br> 安装成功：kubectl cluster-info –context kind-kind</p>
 <p> kind create cluster –name kind-2<br> kind get clusters</p>
@@ -7981,7 +7982,7 @@
 <p>一起学习，一起进步。<br></p>
 ]]></content>
       <categories>
-        <category>helm</category>
+        <category>k8s</category>
       </categories>
       <tags>
         <tag>helm</tag>
