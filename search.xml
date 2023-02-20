@@ -13631,4 +13631,32 @@ API
         <tag>零知识证明</tag>
       </tags>
   </entry>
+  <entry>
+    <title>Node框架Express学习</title>
+    <url>/2023/02/18/Node%E6%A1%86%E6%9E%B6Express%E5%AD%A6%E4%B9%A0/</url>
+    <content><![CDATA[<p>node框架express学习，记录一下。</p>
+<span id="more"></span>
+
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">mkdir express_quickstart</span><br><span class="line">cd express_quickstart</span><br><span class="line"></span><br><span class="line"># 安装</span><br><span class="line">node i express</span><br></pre></td></tr></table></figure>
+
+
+<h1 id="创建基本的web服务器"><a href="#创建基本的web服务器" class="headerlink" title="创建基本的web服务器"></a>创建基本的web服务器</h1><p>vim index.js</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">// 1. 导入 express</span><br><span class="line">const express = require(&#x27;express&#x27;)</span><br><span class="line"></span><br><span class="line">// 2. 创建web服务器</span><br><span class="line">const app = express()</span><br><span class="line"></span><br><span class="line">// 3. 调用app.listen(端口号，启动成功后的回调函数)，启动服务器</span><br><span class="line">app.listen(3000, ()=&gt;&#123;</span><br><span class="line">    console.log(&#x27;express server running at http://127.0.0.1:3000/&#x27;)</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">// 4. 监听get请求</span><br><span class="line">app.get(&#x27;/get&#x27;, (req, res) =&gt; &#123;</span><br><span class="line">    // req.query默认是一个空对象</span><br><span class="line">    // 客户端使用`?name=xxx&amp;age=20` 这种查询字符串方式，发送到服务器的参数</span><br><span class="line">    // 可以通过req.query的方式访问到：</span><br><span class="line">    // req.query.name   req.query.age</span><br><span class="line">    console.log(&#x27;请求参数：&#x27; + req.query)</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">// 5. 托管静态资源</span><br><span class="line">app.use(express.static(&#x27;public&#x27;))</span><br><span class="line">// 挂载路径前缀</span><br><span class="line">app.use(&#x27;/public&#x27;, express.static(&#x27;public&#x27;))</span><br><span class="line">// 这样你就可以通过/public的前缀地址访问文件了</span><br><span class="line">http://localhost:3000/public/css/style.css</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">// 6. 监听post请求，并获取参数</span><br><span class="line">const body_parser = require(&#x27;body-parser&#x27;)</span><br><span class="line">app.use(body_parser.urlencoded(&#123;extended: false&#125;)) // parse application/x-www-form-urlencoded</span><br><span class="line">app.use(body_parser.json()) //parse application/json</span><br><span class="line">app.post(&#x27;/post&#x27;, (req, res) =&gt; &#123;</span><br><span class="line">    console.log(&#x27;请求参数body：&#x27; + req.body)</span><br><span class="line">    console.log(&#x27;请求参数name：&#x27; + req.body.name)</span><br><span class="line">    const &#123; message &#125; = req.body</span><br><span class="line">    console.log(&quot;message: &quot; + message)</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line">// postman提交post请求</span><br><span class="line">![post request](Node框架Express学习/post.png)</span><br></pre></td></tr></table></figure>
+
+
+
+<hr>
+<p><b>书山有路勤为径，学海无涯苦作舟。</b></p>
+<p>欢迎关注微信公众号：【程序员写书】<br><img src="/images/%E7%A8%8B%E5%BA%8F%E5%91%98%E5%86%99%E4%B9%A6%E5%85%AC%E4%BC%97%E5%8F%B7%E4%BA%8C%E7%BB%B4%E7%A0%81.jpg" alt="程序员写书"></p>
+<p>喜欢宠物的朋友可以关注：【电巴克宠物Pets】<br><img src="/images/%E7%94%B5%E5%B7%B4%E5%85%8B%E5%AE%A0%E7%89%A9Pets%E5%85%AC%E4%BC%97%E5%8F%B7%E4%BA%8C%E7%BB%B4%E7%A0%81.png" alt="电巴克宠物"></p>
+<p>一起学习，一起进步。<br></p>
+]]></content>
+      <categories>
+        <category>node</category>
+      </categories>
+      <tags>
+        <tag>express</tag>
+        <tag>node</tag>
+      </tags>
+  </entry>
 </search>
