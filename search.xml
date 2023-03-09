@@ -13769,16 +13769,25 @@ API
       </tags>
   </entry>
   <entry>
-    <title>克隆chenzuoli</title>
+    <title>基于ChatGPT克隆你自己</title>
     <url>/2023/03/09/%E5%85%8B%E9%9A%86chenzuoli/</url>
-    <content><![CDATA[<p>大家好，我叫chenzuoli，今天分享一个克隆版的chenzuoli，他属于数字世界的。我将我的个人信息、个人博客、个人文章暴露给chatgpt，然后它基于我的信息，结合自己的语言模型特产，就产生了一个数字版的chenzuoli。</p>
+    <content><![CDATA[<p>大家好，我叫chenzuoli，今天分享一个克隆版的chenzuoli。</p>
+<p>他属于数字世界的。我将我的个人信息、个人博客、个人文章暴露给chatgpt，然后它基于我的信息，结合自己的语言模型特产，就产生了一个数字版的chenzuoli。</p>
+<p>当然，你可以把你的日记、生活片段、工作经历、同事、朋友这些信息都加进来，你提供的信息越多，那么越像你。</p>
+<p>使用技术：</p>
+<ol>
+<li>ChatGPT-3 text-davinci-003模型</li>
+<li>Operand 信息索引</li>
+<li>Vercel自动化部署及网站服务</li>
+</ol>
 <p>来体验下吧。</p>
 <span id="more"></span>
 
 <p>先来看看聊天记录：<br><img src="/2023/03/09/%E5%85%8B%E9%9A%86chenzuoli/chenzuoli.jpg" alt="chenzuoli"></p>
 <p>访问链接：<br><a href="https://chenzuoli-chatgpt.vercel.app/">https://chenzuoli-chatgpt.vercel.app/</a></p>
 <p>记得科学上网哦。</p>
-<p>如果你也有兴趣训练出一个克隆版的自己，欢迎联系我。</p>
+<p>所以你看到ChatGPT的颠覆性了吗？<br>它可以替代人工客服及大部分咨询服务类工作。现在公司的人工客服提供的售前、售中、售后服务，是基于对公司、产品、使用的详细了解情况下，解答客户的问题的，那么有了ChatGPT之后，基于公司、产品信息结合ChatGPT进行训练，那这些人工客服是不是就可以被替代了呢？</p>
+<p>如果你也有兴趣训练出一个克隆版的自己，或者想迎接这一波科技浪潮，欢迎联系我。</p>
 <hr>
 <p><b>一起学习吧。</b></p>
 <p>我的微信：PAIN_7771</p>
