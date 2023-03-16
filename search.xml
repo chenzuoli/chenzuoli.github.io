@@ -13803,4 +13803,46 @@ API
         <tag>chenzuoli</tag>
       </tags>
   </entry>
+  <entry>
+    <title>ubuntu安装轻量级的桌面版</title>
+    <url>/2023/03/16/ubuntu%E5%AE%89%E8%A3%85%E8%BD%BB%E9%87%8F%E7%BA%A7%E7%9A%84%E6%A1%8C%E9%9D%A2%E7%89%88/</url>
+    <content><![CDATA[<p>买了个腾讯云的ubuntu server服务器，2核2g，想装个桌面版，可以访问下openai去跟chatgpt聊天，也可以当服务器使用。<br>来吧，开始吧。</p>
+<span id="more"></span>
+
+<p>sudo apt update<br>sudo apt install lightdm </p>
+<p>会出现这样一个界面，通过TAB键选择<lightdm>，通过空格键进行ok确认。<br><img src="/2023/03/16/ubuntu%E5%AE%89%E8%A3%85%E8%BD%BB%E9%87%8F%E7%BA%A7%E7%9A%84%E6%A1%8C%E9%9D%A2%E7%89%88/lightdm.png" alt="lightdm"></lightdm></p>
+<p>看下lightdm状态：service lightdm status</p>
+<p>重启服务器：显示running状态了<br><img src="/2023/03/16/ubuntu%E5%AE%89%E8%A3%85%E8%BD%BB%E9%87%8F%E7%BA%A7%E7%9A%84%E6%A1%8C%E9%9D%A2%E7%89%88/status.png" alt="status"></p>
+<p>sudo apt-get install x11vnc<br>x11vnc -storepasswd<br>sudo vim &#x2F;lib&#x2F;systemd&#x2F;system&#x2F;x11vnc.service</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">[Unit]</span><br><span class="line">Description=Start x11vnc at startup.</span><br><span class="line">After=multi-user.target</span><br><span class="line"></span><br><span class="line">[Service]</span><br><span class="line">Type=simple</span><br><span class="line">ExecStart=/usr/bin/x11vnc -auth guess -forever -loop -noxdamage -repeat -rfbauth /home/&lt;USERNAME&gt;/.vnc/passwd -rfbport 5900 -shared</span><br><span class="line"></span><br><span class="line">[Install]</span><br><span class="line">WantedBy=multi-user.target</span><br></pre></td></tr></table></figure>
+<p>!!注意: <USERNAME>替换为您ubuntu用户名</USERNAME></p>
+<p>设置开启自启<br>sudo systemctl enable x11vnc.service<br>启动服务<br>sudo systemctl start x11vnc.service</p>
+<p>vnc登录工具<br><a href="https://www.realvnc.com/en/connect/download/viewer/">https://www.realvnc.com/en/connect/download/viewer/</a><br>输入ip:5900<br>密码<br>连接，ok</p>
+<p>进去啥也没有，需要自己安装一个chrome浏览器<br><img src="/2023/03/16/ubuntu%E5%AE%89%E8%A3%85%E8%BD%BB%E9%87%8F%E7%BA%A7%E7%9A%84%E6%A1%8C%E9%9D%A2%E7%89%88/vncviewer.png" alt="vnc"></p>
+<p>安装chrome，然后就可以访问chatgpt了：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">wget -q -O - https://dl.google.com/linux/linux_signing_key.pub | sudo apt-key add -</span><br><span class="line">sudo sh -c &#x27;echo &quot;deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main&quot; &gt;&gt; /etc/apt/sources.list.d/google-chrome.list&#x27;</span><br><span class="line">sudo apt-get update</span><br><span class="line">sudo apt-get install google-chrome-stable</span><br></pre></td></tr></table></figure>
+<p>可以通过命令行启动chrome，也可以进Application点击图标启动。<br>start:<br>   google-chrome-stable</p>
+<p>把自己日常尝试的东西记录下来，慢慢积累吧。</p>
+<p>我是陈作立，一个IT爱好者。一直在找自己的项目。</p>
+<p>个人wx：PAIN_7771，如果有AI相关项目，可以联系我。</p>
+]]></content>
+      <categories>
+        <category>linux</category>
+      </categories>
+      <tags>
+        <tag>ubuntu</tag>
+        <tag>desktop</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>wagtail体验</title>
+    <url>/2023/03/12/wagtail%E4%BD%93%E9%AA%8C/</url>
+    <content><![CDATA[<p>python -m venv mysite&#x2F;env<br>source mysite&#x2F;env&#x2F;bin&#x2F;activate<br>pip install wagtail&#x3D;&#x3D;4.2<br>wagtail start mysite mysite</p>
+<p>cd mysite<br>pip install -r requirements.txt</p>
+<p>python manage.py migrate</p>
+<p>python manage.py createsuperuser</p>
+<p>python manage.py runserver</p>
+<p>python3 manage.py makemigrations<br>python3 manage.py migrate</p>
+]]></content>
+  </entry>
 </search>
