@@ -13845,4 +13845,65 @@ API
 <p>python3 manage.py makemigrations<br>python3 manage.py migrate</p>
 ]]></content>
   </entry>
+  <entry>
+    <title>wagtail基本操作</title>
+    <url>/2023/03/18/wagtail%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/</url>
+    <content><![CDATA[<p>学习一下如何基于CMS制作网站。</p>
+<span id="more"></span>
+
+
+<p>官网：<a href="http://www.wagtail.org/">www.wagtail.org</a></p>
+<p>基本环境：<br>python 3.9<br>wagtail&#x3D;&#x3D;4.2</p>
+<ol>
+<li>展示图片<br>model.py<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">from wagtail.models import Page</span><br><span class="line">from wagtail.admin.panels import FieldPanel</span><br><span class="line"></span><br><span class="line">class ContactPage(Page):</span><br><span class="line">    # 联系我们页面有一个标题字段和一个图片字段</span><br><span class="line">    image = models.ForeignKey(</span><br><span class="line">        &#x27;wagtailimages.Image&#x27;,</span><br><span class="line">        on_delete=models.SET_NULL,</span><br><span class="line">        related_name=&#x27;+&#x27;,</span><br><span class="line">        null=True,</span><br><span class="line">        blank=True,</span><br><span class="line">    )</span><br><span class="line"></span><br><span class="line">    # 指定后台管理界面中可以编辑的字段</span><br><span class="line">    content_panels = Page.content_panels + [</span><br><span class="line">        FieldPanel(&#x27;image&#x27;)</span><br><span class="line">    ]</span><br></pre></td></tr></table></figure></li>
+</ol>
+<p>contact_page.html</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&#123;% load wagtailimages_tags %&#125;</span><br><span class="line"></span><br><span class="line">&#123;% block content %&#125;</span><br><span class="line">    &#123;% image page.image width-400 %&#125;</span><br><span class="line">    &lt;p&gt;&lt;/br&gt;I am chenzuoli, please contact us at 15313621879 or chenzuoli709@163.com&lt;/p&gt;</span><br><span class="line">&lt;/div&gt;</span><br><span class="line">&#123;% endblock %&#125;</span><br></pre></td></tr></table></figure>
+
+
+<hr>
+<p><b>学海无涯苦作舟</b></p>
+<p>by Chenzuoli.</p>
+]]></content>
+      <categories>
+        <category>cms</category>
+      </categories>
+      <tags>
+        <tag>cms</tag>
+        <tag>wagtail</tag>
+        <tag>django</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Bootstrap简单使用</title>
+    <url>/2023/03/18/Bootstrap%E7%AE%80%E5%8D%95%E4%BD%BF%E7%94%A8/</url>
+    <content><![CDATA[<p>现在前端工具挺多的，直接引用一段html代码，就可以达到展示效果，不错哦。</p>
+<p>来试试bootstrap。</p>
+<span id="more"></span>
+
+<ol>
+<li><p>添加js cdn引用</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;script src=&quot;https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js&quot; integrity=&quot;sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3&quot; crossorigin=&quot;anonymous&quot;&gt;&lt;/script&gt;</span><br><span class="line">&lt;script src=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js&quot; integrity=&quot;sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD&quot; crossorigin=&quot;anonymous&quot;&gt;&lt;/script&gt;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>添加css cdn引用</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;link href=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot; integrity=&quot;sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD&quot; crossorigin=&quot;anonymous&quot;&gt;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+</li>
+<li><p>再去找bootstrap模板<br>官网：<a href="https://getbootstrap.com/docs/5.3/getting-started/introduction/">https://getbootstrap.com/docs/5.3/getting-started/introduction/</a></p>
+</li>
+</ol>
+<p><img src="/2023/03/18/Bootstrap%E7%AE%80%E5%8D%95%E4%BD%BF%E7%94%A8/component.png" alt="bootstrap"></p>
+<p>复制下代码，粘贴到你的html文件中，就可以啦。</p>
+<p>我是chenzuoli，持续学习中，尽量不要被AI替代吧，最近chatgpt-4出来了，会写代码了，危机感满满。</p>
+<hr>
+<p><b>路漫漫其修远兮</b></p>
+]]></content>
+      <categories>
+        <category>cms</category>
+      </categories>
+      <tags>
+        <tag>wagtail</tag>
+        <tag>bootstrap</tag>
+      </tags>
+  </entry>
 </search>
