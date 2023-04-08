@@ -13988,7 +13988,7 @@ API
   <entry>
     <title>大家来体验一下我的AI社区吧</title>
     <url>/2023/03/22/%E5%A4%A7%E5%AE%B6%E6%9D%A5%E4%BD%93%E9%AA%8C%E4%B8%80%E4%B8%8B%E6%88%91%E7%9A%84AI%E7%A4%BE%E5%8C%BA%E5%90%A7/</url>
-    <content><![CDATA[<p><a href="http://43.153.35.39:8089/">http://43.153.35.39:8089/</a></p>
+    <content><![CDATA[<p><a href="http://biubiuai.com/">http://biubiuai.com/</a></p>
 ]]></content>
       <categories>
         <category>AI</category>
@@ -14043,12 +14043,13 @@ API
 <h2 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h2><p>硅谷服务器</p>
 <p>无法ping通 43.153.35.39</p>
 <p>telnet 43.153.35.39 80 也不行</p>
-<h2 id="查找原因"><a href="#查找原因" class="headerlink" title="查找原因"></a>查找原因</h2><p>测试了ping telnet ssh，都不行，说明是网络问题，有可能防火墙或者端口没有开放<br><img src="/2023/04/08/%E5%9B%BD%E5%86%85%E6%97%A0%E6%B3%95ping%E9%80%9A%E6%B5%B7%E5%A4%96%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%80%8E%E4%B9%88%E5%9B%9E%E4%BA%8B/1.png" alt="1"><br><img src="/2023/04/08/%E5%9B%BD%E5%86%85%E6%97%A0%E6%B3%95ping%E9%80%9A%E6%B5%B7%E5%A4%96%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%80%8E%E4%B9%88%E5%9B%9E%E4%BA%8B/2.png" alt="2"><br><img src="/2023/04/08/%E5%9B%BD%E5%86%85%E6%97%A0%E6%B3%95ping%E9%80%9A%E6%B5%B7%E5%A4%96%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%80%8E%E4%B9%88%E5%9B%9E%E4%BA%8B/3.png" alt="3"><br><img src="/2023/04/08/%E5%9B%BD%E5%86%85%E6%97%A0%E6%B3%95ping%E9%80%9A%E6%B5%B7%E5%A4%96%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%80%8E%E4%B9%88%E5%9B%9E%E4%BA%8B/4.png" alt="4"></p>
+<h2 id="查找原因"><a href="#查找原因" class="headerlink" title="查找原因"></a>查找原因</h2><p>测试了ping telnet ssh，都不行，说明是网络问题，有可能防火墙或者端口没有开放<br><img src="/2023/04/08/%E5%9B%BD%E5%86%85%E6%97%A0%E6%B3%95ping%E9%80%9A%E6%B5%B7%E5%A4%96%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%80%8E%E4%B9%88%E5%9B%9E%E4%BA%8B/1.png" alt="1"><br><img src="/2023/04/08/%E5%9B%BD%E5%86%85%E6%97%A0%E6%B3%95ping%E9%80%9A%E6%B5%B7%E5%A4%96%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%80%8E%E4%B9%88%E5%9B%9E%E4%BA%8B/2.png" alt="2"><br><img src="/2023/04/08/%E5%9B%BD%E5%86%85%E6%97%A0%E6%B3%95ping%E9%80%9A%E6%B5%B7%E5%A4%96%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%80%8E%E4%B9%88%E5%9B%9E%E4%BA%8B/3.jpeg" alt="3"><br><img src="/2023/04/08/%E5%9B%BD%E5%86%85%E6%97%A0%E6%B3%95ping%E9%80%9A%E6%B5%B7%E5%A4%96%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%80%8E%E4%B9%88%E5%9B%9E%E4%BA%8B/4.png" alt="4"></p>
 <p>防火墙已关闭，端口也开放了，但是还是不行。</p>
 <h2 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h2><p>最后求助于腾讯云技术支持，他们说是网络拥堵，建议更换IP，哈哈，我也是醉了。</p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">您好，这边测试您的服务器在国内地域无法访问，海外地域访问正常，初步判断因跨境链路拥堵导致，请您参考以下链接操作更换下服务器ip后测试。</span><br><span class="line">轻量服务器：</span><br><span class="line">https://cloud.tencent.com/document/product/1207/71733</span><br></pre></td></tr></table></figure>
 
-
+<p>换了个43.153.96.195，就可以了。</p>
+<p>这样我的网站就可以访问了：<a href="http://www.biubiuai.com/">http://www.biubiuai.com</a></p>
 <h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>无语了。</p>
 <p>我是zuoli。干就完了，不迷茫。</p>
 <p>[]: # (</p>
@@ -14110,6 +14111,35 @@ API
       <tags>
         <tag>chatgpt</tag>
         <tag>visual</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>解决服务跨域问题</title>
+    <url>/2023/04/08/%E8%A7%A3%E5%86%B3%E6%9C%8D%E5%8A%A1%E8%B7%A8%E5%9F%9F%E9%97%AE%E9%A2%98/</url>
+    <content><![CDATA[<p>解决服务跨域问题,来看看我怎么解决的。</p>
+<span id="more"></span>
+
+<h2 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h2><p>报错代码：</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> response = <span class="keyword">await</span> <span class="title function_">fetch</span>(<span class="string">&quot;http://43.153.96.195/chenzuoli/&quot;</span>, &#123;</span><br><span class="line">    <span class="comment">// mode: &#x27;no-cors&#x27;,</span></span><br><span class="line">    <span class="comment">//const response = await fetch(&quot;https://chatapi-chenzuoli.vercel.app/&quot;, &#123;</span></span><br><span class="line">    <span class="comment">//const response = await fetch(&quot;https://chatapi-new.vercel.app/&quot;, &#123;</span></span><br><span class="line">    <span class="attr">method</span>: <span class="string">&quot;POST&quot;</span>,</span><br><span class="line">    <span class="attr">headers</span>: &#123;</span><br><span class="line">    <span class="string">&quot;Content-Type&quot;</span>: <span class="string">&quot;application/json&quot;</span>,</span><br><span class="line">    <span class="string">&quot;Access-Control-Allow-Origin&quot;</span>: <span class="string">&quot;*&quot;</span>,</span><br><span class="line">    <span class="string">&quot;Access-Control-Allow-Methods&quot;</span>: <span class="string">&quot;GET, POST, OPTIONS, PUT, PATCH, DELETE&quot;</span>,</span><br><span class="line">    <span class="string">&quot;Access-Control-Allow-Headers&quot;</span>: <span class="string">&quot;Access-Control-Allow-Headers, Origin,Accept, X-Requested-With, Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers&quot;</span>,</span><br><span class="line">    <span class="string">&quot;Access-Control-Allow-Credentials&quot;</span>: <span class="literal">true</span>,</span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="attr">body</span>: <span class="title class_">JSON</span>.<span class="title function_">stringify</span>(&#123;</span><br><span class="line">    <span class="attr">message</span>: messages,</span><br><span class="line">    currentModel,</span><br><span class="line">    &#125;),</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<p>报错：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">Access to fetch at &#x27;http://43.153.96.195/chenzuoli/&#x27; from origin &#x27;http://localhost:3000&#x27; has been blocked by CORS policy: Request header field access-control-allow-origin is not allowed by Access-Control-Allow-Headers in preflight response.</span><br></pre></td></tr></table></figure>
+
+<h2 id="查找原因"><a href="#查找原因" class="headerlink" title="查找原因"></a>查找原因</h2><p>根据提示，没仔细看，直接在fetch里面加了个mode: ‘no-cors’，就可以了，但是这样就不是跨域了，所以还是要解决跨域问题。<br>这个方案pass。</p>
+<p>仔细看报错提示：access-control-allow-origin is not allowed by Access-Control-Allow-Headers in preflight response.<br>说明服务端没有设置Access-Control-Allow-Headers，所以要在服务端设置Access-Control-Allow-Headers。或者直接设置Access-Control-Allow-Origin为*。再或者客户端注释掉Access-Control-Allow-Headers。这三种方法都可以。</p>
+<h2 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h2><p>修复代码：</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> response = <span class="keyword">await</span> <span class="title function_">fetch</span>(<span class="string">&quot;http://43.153.96.195/chenzuoli/&quot;</span>, &#123;</span><br><span class="line">    <span class="comment">// mode: &#x27;no-cors&#x27;,</span></span><br><span class="line">    <span class="comment">//const response = await fetch(&quot;https://chatapi-chenzuoli.vercel.app/&quot;, &#123;</span></span><br><span class="line">    <span class="comment">//const response = await fetch(&quot;https://chatapi-new.vercel.app/&quot;, &#123;</span></span><br><span class="line">    <span class="attr">method</span>: <span class="string">&quot;POST&quot;</span>,</span><br><span class="line">    <span class="attr">headers</span>: &#123;</span><br><span class="line">    <span class="string">&quot;Content-Type&quot;</span>: <span class="string">&quot;application/json&quot;</span>,</span><br><span class="line">    <span class="comment">// &quot;Access-Control-Allow-Origin&quot;: &quot;*&quot;,</span></span><br><span class="line">    <span class="comment">// &quot;Access-Control-Allow-Methods&quot;: &quot;GET, POST, OPTIONS, PUT, PATCH, DELETE&quot;,</span></span><br><span class="line">    <span class="comment">// &quot;Access-Control-Allow-Headers&quot;: &quot;Access-Control-Allow-Headers, Origin,Accept, X-Requested-With, Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers&quot;,</span></span><br><span class="line">    <span class="comment">// &quot;Access-Control-Allow-Credentials&quot;: true,</span></span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="attr">body</span>: <span class="title class_">JSON</span>.<span class="title function_">stringify</span>(&#123;</span><br><span class="line">    <span class="attr">message</span>: messages,</span><br><span class="line">    currentModel,</span><br><span class="line">    &#125;),</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>客户端和服务端都要设置Access-Control-Allow-Headers，不然就会报错。<br>要么都设置，要么都不设置，不然就会报错。</p>
+<hr>
+<p>好了，我是zuoli，这就是我的全部分享，谢谢大家的观看，欢迎大家关注我的公众号：程序员写书，一起学习，一起进步。</p>
+]]></content>
+      <categories>
+        <category>django</category>
+      </categories>
+      <tags>
+        <tag>django</tag>
+        <tag>cors</tag>
       </tags>
   </entry>
 </search>
