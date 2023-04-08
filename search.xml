@@ -13998,4 +13998,118 @@ API
         <tag>ai</tag>
       </tags>
   </entry>
+  <entry>
+    <title>启动wagtail-cms服务</title>
+    <url>/2023/03/25/%E5%90%AF%E5%8A%A8wagtail-cms%E6%9C%8D%E5%8A%A1/</url>
+    <content><![CDATA[<p>python manage.py runserver 0.0.0.0:80</p>
+<span id="more"></span>
+
+<p>python manage.py runserver 方式启动服务，默认端口未8000</p>
+<ol>
+<li>git clone <a href="https://github.com/chenzuoli/biubiuai_cms.git">https://github.com/chenzuoli/biubiuai_cms.git</a></li>
+<li>cd biubiuai_cms</li>
+<li>sudo pip install -r requirements.txt</li>
+<li>sudo python3 manage.py  migrate</li>
+<li>sudo python3 manage.py  runserver 0.0.0.0:80</li>
+<li>后台启动：<br>nohup sudo -E python3 manage.py  runserver 0.0.0.0:80  &gt; &#x2F;home&#x2F;lighthouse&#x2F;biubiuai_cms&#x2F;client.log 2&gt;&amp;1 &amp;</li>
+</ol>
+<p>sudo 无法获取到当前用户的环境变量，所以需要加上-E参数，这样就可以获取到当前用户的环境变量了</p>
+<p>注意，pip install和sudo pip install的区别，前者是当前用户安装，后者是root用户安装，安装的site-package目录不同</p>
+<p>租的是硅谷的服务器，2c 2g，启动了3个程序</p>
+<ol>
+<li>chenzuoli chatgpt api</li>
+<li>chenzuoli chatgpt client</li>
+<li>biubiuai_cms</li>
+</ol>
+<p>还安装了一个google chrome，每次需要跟chatgpt聊天的时候，就vnc登录进入ubuntu界面，结果把其他的程序搞挂了，记住，chrome很吃内存，大概启动1个标签页就占了1g左右内存。</p>
+<hr>
+<p><b>好记性不如烂笔头</b></p>
+<p>我是作立，干就完了，不迷茫。</p>
+]]></content>
+      <categories>
+        <category>cms</category>
+      </categories>
+      <tags>
+        <tag>cms</tag>
+        <tag>wagtail</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>国内无法ping通海外服务器怎么回事</title>
+    <url>/2023/04/08/%E5%9B%BD%E5%86%85%E6%97%A0%E6%B3%95ping%E9%80%9A%E6%B5%B7%E5%A4%96%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%80%8E%E4%B9%88%E5%9B%9E%E4%BA%8B/</url>
+    <content><![CDATA[<p>国内无法ping通海外服务器怎么回事，来看看我怎么解决的。</p>
+<span id="more"></span>
+
+<h2 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h2><p>硅谷服务器</p>
+<p>无法ping通 43.153.35.39</p>
+<p>telnet 43.153.35.39 80 也不行</p>
+<h2 id="查找原因"><a href="#查找原因" class="headerlink" title="查找原因"></a>查找原因</h2><p>测试了ping telnet ssh，都不行，说明是网络问题，有可能防火墙或者端口没有开放<br><img src="/2023/04/08/%E5%9B%BD%E5%86%85%E6%97%A0%E6%B3%95ping%E9%80%9A%E6%B5%B7%E5%A4%96%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%80%8E%E4%B9%88%E5%9B%9E%E4%BA%8B/1.png" alt="1"><br><img src="/2023/04/08/%E5%9B%BD%E5%86%85%E6%97%A0%E6%B3%95ping%E9%80%9A%E6%B5%B7%E5%A4%96%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%80%8E%E4%B9%88%E5%9B%9E%E4%BA%8B/2.png" alt="2"><br><img src="/2023/04/08/%E5%9B%BD%E5%86%85%E6%97%A0%E6%B3%95ping%E9%80%9A%E6%B5%B7%E5%A4%96%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%80%8E%E4%B9%88%E5%9B%9E%E4%BA%8B/3.png" alt="3"><br><img src="/2023/04/08/%E5%9B%BD%E5%86%85%E6%97%A0%E6%B3%95ping%E9%80%9A%E6%B5%B7%E5%A4%96%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%80%8E%E4%B9%88%E5%9B%9E%E4%BA%8B/4.png" alt="4"></p>
+<p>防火墙已关闭，端口也开放了，但是还是不行。</p>
+<h2 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h2><p>最后求助于腾讯云技术支持，他们说是网络拥堵，建议更换IP，哈哈，我也是醉了。</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">您好，这边测试您的服务器在国内地域无法访问，海外地域访问正常，初步判断因跨境链路拥堵导致，请您参考以下链接操作更换下服务器ip后测试。</span><br><span class="line">轻量服务器：</span><br><span class="line">https://cloud.tencent.com/document/product/1207/71733</span><br></pre></td></tr></table></figure>
+
+
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>无语了。</p>
+<p>我是zuoli。干就完了，不迷茫。</p>
+<p>[]: # (</p>
+]]></content>
+      <categories>
+        <category>服务器</category>
+      </categories>
+      <tags>
+        <tag>海外服务器</tag>
+        <tag>ping</tag>
+        <tag>telnet</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>django迁移</title>
+    <url>/2023/03/28/django%E8%BF%81%E7%A7%BB/</url>
+    <content><![CDATA[<p>本地开发好的django程序，如何迁移到生产环境呢？</p>
+<span id="more"></span>
+
+<p>年轻人，不是简单的拷贝代码，拷贝数据那么简单的，且看下面的步骤：</p>
+<ol>
+<li><p>git clone <a href="https://github.com/chenzuoli/biubiuai_cms.git">https://github.com/chenzuoli/biubiuai_cms.git</a></p>
+</li>
+<li><p>cd biubiuai_cms</p>
+</li>
+<li><p>sudo pip install -r requirements.txt</p>
+</li>
+<li><p>迁移数据库结构<br>sudo python3 manage.py  migrate</p>
+</li>
+<li><p>迁移数据<br>从本地dump数据：<br>python manage.py dumpdata –natural-foreign –natural-primary -e contenttypes -e auth.Permission –indent 2 &gt; dump.json<br>上传到服务器后，load数据<br>python manage.py loaddata dump.json<br>如果你本地开发使用的sqlite数据库，此时会出现各种错误：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">django.db.utils.IntegrityError: Problem installing fixture &#x27;/home/lighthouse/biubiuai_cms/dump.json&#x27;: Could not load wagtailsearch.IndexEntry(pk=13): constraint failed</span><br></pre></td></tr></table></figure>
+<p>去dump.json文件中删除对应的pk&#x3D;13吧<br>再重新试试，一般情况下，需要删除的东西还不少呢。</p>
+</li>
+<li><p>启动：<br>sudo python3 manage.py  runserver 0.0.0.0:80<br>后台启动：<br>sudo python3 manage.py  runserver 0.0.0.0:80  &gt; &#x2F;home&#x2F;lighthouse&#x2F;biubiuai_cms&#x2F;client.log 2&gt;&amp;1 &amp;</p>
+</li>
+</ol>
+]]></content>
+      <categories>
+        <category>django</category>
+      </categories>
+      <tags>
+        <tag>cms</tag>
+        <tag>wagtail</tag>
+        <tag>django</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Visual_ChatGPT初识</title>
+    <url>/2023/04/01/Visual-ChatGPT%E5%88%9D%E8%AF%86/</url>
+    <content><![CDATA[<p>了解下微软开源的visual chatgpt，一个chatgpt连接一系列模型，来实现发送和接受图片的聊天对话。</p>
+<span id="more"></span>
+
+
+<p>这里是微软发布的白皮书：<br><a href="https://arxiv.org/abs/2303.04671">https://arxiv.org/abs/2303.04671</a></p>
+]]></content>
+      <categories>
+        <category>AI</category>
+      </categories>
+      <tags>
+        <tag>chatgpt</tag>
+        <tag>visual</tag>
+      </tags>
+  </entry>
 </search>
