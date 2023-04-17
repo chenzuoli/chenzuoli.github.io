@@ -13912,7 +13912,9 @@ API
   <entry>
     <title>ubuntu安装chatgpt_clone环境</title>
     <url>/2023/03/19/ubuntu%E5%AE%89%E8%A3%85chatgpt-clone%E7%8E%AF%E5%A2%83/</url>
-    <content><![CDATA[<ol>
+    <content><![CDATA[<span id="more"></span>
+
+<ol>
 <li><p>安装node环境</p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">sudo apt install nodejs</span><br><span class="line">sudo apt install npm</span><br></pre></td></tr></table></figure>
 </li>
@@ -14140,6 +14142,112 @@ API
       <tags>
         <tag>django</tag>
         <tag>cors</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>说说这几周玩AI的一些东西</title>
+    <url>/2023/04/16/%E8%AF%B4%E8%AF%B4%E8%BF%99%E5%87%A0%E5%91%A8%E7%8E%A9AI%E7%9A%84%E4%B8%80%E4%BA%9B%E4%B8%9C%E8%A5%BF/</url>
+    <content><![CDATA[<span id="more"></span>
+
+<h1 id="说说这几周玩的AI工具"><a href="#说说这几周玩的AI工具" class="headerlink" title="说说这几周玩的AI工具"></a>说说这几周玩的AI工具</h1><ol>
+<li>chatGPT<br>一个预训练大语言模型，可以用来生成对话，生成文章，生成代码等等，可以用来做聊天机器人，可以用来做代码生成器等等，还是挺强大的。</li>
+</ol>
+<p>我一直在用它进行搜索答案，工作中遇到的问题，都可以用它来搜索答案，然后再进行修改，这样就可以快速的解决问题。提高效率</p>
+<ol start="2">
+<li><p>用chatgpt做聊天机器人<br>体验网站：httt:&#x2F;&#x2F;<a href="http://www.biubiuai.com/">www.biubiuai.com</a></p>
+</li>
+<li><p>autoGPT<br>autoGPT是一个chatgpt功能的集合版，chatgpt可以干单件事，比如提问题，写文案等，但autoGPT可以干多件事，可以帮你想问题，自动提问题，然后获取答案，再将答案写入文件，整个过程你只需要告诉他你要干什么，他会记录下执行的任务命令，然后他就会自动帮你干，非常方便。</p>
+</li>
+</ol>
+<p>好了，我是zuoli。干就完了，不迷茫。</p>
+<p>[]: # (</p>
+<p>欢迎关注我的AI社区：<a href="http://www.biubiuai.com/">http://www.biubiuai.com</a></p>
+]]></content>
+      <categories>
+        <category>AI</category>
+      </categories>
+      <tags>
+        <tag>chatgpt</tag>
+        <tag>AI</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>试了试autogpt构建网站-出乎我的意料</title>
+    <url>/2023/04/16/%E8%AF%95%E4%BA%86%E8%AF%95autogpt%E6%9E%84%E5%BB%BA%E7%BD%91%E7%AB%99-%E5%87%BA%E4%B9%8E%E6%88%91%E7%9A%84%E6%84%8F%E6%96%99/</url>
+    <content><![CDATA[<p>它好像做了太多的事情，超出了我的预期。</p>
+<span id="more"></span>
+
+<p>这是我给它的任务列表：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">autogpt</span><br><span class="line">name: website build ai tools</span><br><span class="line">description: an AI tools for building website</span><br><span class="line">goal 1: 构建一个官网模版程序，所有项目源码保存到website文件夹中</span><br><span class="line">goal 2: 生成包含首页、产品介绍、关于等页面</span><br><span class="line">goal 3: 使用bootstrap编写前端html页面</span><br><span class="line">goal 4: 使用任意python框架作为后端框架，sqlite作为存储数据库</span><br><span class="line">goal 5: 写一个readme.md，介绍下这个项目，并包含启动运行方法</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>看看autogpt能不能给我们制作一个官网</p>
+<p>构建失败了</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">  File &quot;/Users/zuolichen/opt/chatgpt/projects/Auto-GPT/env/lib/python3.9/site-packages/openai/api_requestor.py&quot;, line 226, in request</span><br><span class="line">    resp, got_stream = self._interpret_response(result, stream)</span><br><span class="line">  File &quot;/Users/zuolichen/opt/chatgpt/projects/Auto-GPT/env/lib/python3.9/site-packages/openai/api_requestor.py&quot;, line 619, in _interpret_response</span><br><span class="line">    self._interpret_response_line(</span><br><span class="line">  File &quot;/Users/zuolichen/opt/chatgpt/projects/Auto-GPT/env/lib/python3.9/site-packages/openai/api_requestor.py&quot;, line 674, in _interpret_response_line</span><br><span class="line">    raise error.APIError(</span><br><span class="line">openai.error.APIError: HTTP code 502 from API (&lt;html&gt;</span><br><span class="line">&lt;head&gt;&lt;title&gt;502 Bad Gateway&lt;/title&gt;&lt;/head&gt;</span><br><span class="line">&lt;body&gt;</span><br><span class="line">&lt;center&gt;&lt;h1&gt;502 Bad Gateway&lt;/h1&gt;&lt;/center&gt;</span><br><span class="line">&lt;hr&gt;&lt;center&gt;cloudflare&lt;/center&gt;</span><br><span class="line">&lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br><span class="line">)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>这个错误看是请求openai报502了呀，可能是国内网就算翻墙也还是有些限制吧，去国外的服务器上运行试试</p>
+<p>构建出了许多问题，出了问题他会重新开始从头构建，这个过程很慢，我等了很久，最后还是我手动终止了。不然会消耗掉我api key的所有token。</p>
+<p>它多做了额外的很多事：</p>
+<ol>
+<li>WEBSITE BUILD AI TOOLS THOUGHTS:  We need to create a sign-in and sign-up page for our website.</li>
+<li>We should create an authentication system for our website.</li>
+<li>Choose a third-party email service provider (ESP) or set up an email server</li>
+<li>Add a search bar to the navigation bar of our website using Bootstrap</li>
+<li>Create a search results page that displays the products matching the user’s search terms</li>
+<li>Choose a search engine such as ElasticSearch or Whoosh.</li>
+<li>Choose a payment gateway provider such as Stripe or PayPal, and create an account.</li>
+<li>We should add a subscription feature to our website.</li>
+<li>Create a view for users to enter their email address to request a password reset link.</li>
+<li>We need to add a contact us page to our website</li>
+<li>Create a new web page to host the contact form</li>
+</ol>
+<p>导致构建网站时间很长，而且出现了许多错误。</p>
+<p>我觉得这个autogpt还是有点问题的，我觉得它应该只做一件事，就是根据任务列表生成一个网站，而不是做太多的事情，这样会导致构建时间很长，而且出现了许多错误。</p>
+<p>最后还是放弃了。</p>
+<p>大家有通过autogpt构建网站的经验吗？</p>
+<p>欢迎大家留言交流。</p>
+<hr>
+<p>我是zuoli，爱折腾的程序员。 </p>
+]]></content>
+      <categories>
+        <category>AI</category>
+      </categories>
+      <tags>
+        <tag>chatgpt</tag>
+        <tag>autogpt</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>autogpt执行任务流程</title>
+    <url>/2023/04/17/autogpt%E6%89%A7%E8%A1%8C%E4%BB%BB%E5%8A%A1%E6%B5%81%E7%A8%8B/</url>
+    <content><![CDATA[<p>最近玩了下autogpt，用它爬取网页数据（成功），用它构建网站（失败）了，下面说下他是怎么做的。</p>
+<span id="more"></span>
+
+<h2 id="任务流程"><a href="#任务流程" class="headerlink" title="任务流程"></a>任务流程</h2><ol>
+<li>给本次执行的任务取名字</li>
+<li>给autogpt取名字（它担任什么角色，是哪个方向的专家）</li>
+<li>给autogpt添加任务，分5个goal，这是我们给它需要执行的任务</li>
+<li>接下来就是它自己执行任务了：<br> a. 根据你给的目标描述，形成自己的想法（Thoughts），给出这个想法的原因（Reason），然后给出这个想法的执行计划（Plan），然后自己对以上内容进行评判（CRITICISM），形成下一条执行指令（Next Action） <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">(env) ubuntu@VM-0-2-ubuntu:~/Documents/Auto-GPT-0.2.0$ python -m autogpt --gpt3only</span><br><span class="line">Warning: The file &#x27;auto-gpt.json&#x27; does not exist. Local memory would not be saved to a file.</span><br><span class="line">GPT3.5 Only Mode:  ENABLED</span><br><span class="line">Welcome to Auto-GPT!  Enter the name of your AI and its role below. Entering nothing will load defaults.</span><br><span class="line">Name your AI:  For example, &#x27;Entrepreneur-GPT&#x27;</span><br><span class="line">AI Name: website build ai tools</span><br><span class="line">website build ai tools here!  I am at your service.</span><br><span class="line">Describe your AI&#x27;s role:  For example, &#x27;an AI designed to autonomously develop and run businesses with the sole goal of increasing your net worth.&#x27;</span><br><span class="line">website build ai tools is: an AI tools for building website</span><br><span class="line">Enter up to 5 goals for your AI:  For example: Increase net worth, Grow Twitter Account, Develop and manage multiple businesses autonomously&#x27;</span><br><span class="line">Enter nothing to load defaults, enter nothing when finished.</span><br><span class="line">Goal 1: 搜索一个官网模版程序，包含首页、产品介绍、关于等页面</span><br><span class="line">Goal 2: 使用flask api编写后台程序</span><br><span class="line">Goal 3: 使用bootstrap编写前端页面</span><br><span class="line">Goal 4: 所有项目源码保存到website文件夹中</span><br><span class="line">Goal 5: 并写一个readme.md，介绍下这个项目，并包含启动运行方法</span><br><span class="line">Using memory of type: LocalCache</span><br><span class="line">WEBSITE BUILD AI TOOLS THOUGHTS:  I think we should start by searching for an appropriate website template that we can use for the project</span><br><span class="line">REASONING:  As an AI tool for building websites, it&#x27;s important to start off on the right foot by finding a template that can be a good representation of what we want to achieve.</span><br><span class="line">PLAN:</span><br><span class="line">-  Search for a suitable website template</span><br><span class="line">CRITICISM:  I can&#x27;t think of any constructive criticism at the moment, but I will continue to reflect on my decisions</span><br><span class="line">Attempting to fix JSON by finding outermost brackets</span><br><span class="line">Apparently json was fixed.</span><br><span class="line">NEXT ACTION:  COMMAND = google ARGUMENTS = &#123;&#x27;input&#x27;: &#x27;website template for building AI tool website&#x27;&#125;</span><br><span class="line">Enter &#x27;y&#x27; to authorise command, &#x27;y -N&#x27; to run N continuous commands, &#x27;n&#x27; to exit program, or enter feedback for website build ai tools...</span><br></pre></td></tr></table></figure>
+ 请注意我给出5个goal之后，它开始执行的指令：THOUGHTS，REASONING，PLAN，CRITICISM，Next Action。<br> 当我输入y之后，它就会执行Next Action中的指令，然后再次给出THOUGHTS，REASONING，PLAN，CRITICISM，Next Action。<br> 当然你也可以输入y -N，让它连续执行N次Next Action中的指令。</li>
+<li>上面我给出了构建一个官网，包含首页、产品介绍、关于三个页面的任务，但是他写的很复杂，下面是我记录的他额外做的事情，而且功能很多： <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">1. WEBSITE BUILD AI TOOLS THOUGHTS:  We need to create a sign-in and sign-up page for our website.</span><br><span class="line">2. We should create an authentication system for our website.</span><br><span class="line">3. Choose a third-party email service provider (ESP) or set up an email server</span><br><span class="line">4. Add a search bar to the navigation bar of our website using Bootstrap</span><br><span class="line">5. Create a search results page that displays the products matching the user&#x27;s search terms</span><br><span class="line">6. Choose a search engine such as ElasticSearch or Whoosh.</span><br><span class="line">7. Choose a payment gateway provider such as Stripe or PayPal, and create an account.</span><br><span class="line">8. We should add a subscription feature to our website.</span><br><span class="line">9. Create a view for users to enter their email address to request a password reset link.</span><br><span class="line">10. We need to add a contact us page to our website</span><br><span class="line">11. Create a new web page to host the contact form</span><br></pre></td></tr></table></figure>
+ 导致这个网站项目越来越复杂，最后执行了1个半小时，耗费了我数以万计的token之后，我终结了它的执行。</li>
+</ol>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>autogpt是一个很有意思的项目，它可以帮助我们快速的构建一个项目，但是它的执行流程是怎么样的呢？我认为它是这样的：</p>
+<ol>
+<li>通过给出的目标描述，形成自己的想法（Thoughts），给出这个想法的原因（Reason），然后给出这个想法的执行计划（Plan），然后自己对以上内容进行评判（CRITICISM），形成下一条执行指令（Next Action）</li>
+<li>执行Next Action中的指令，然后再次给出THOUGHTS，REASONING，PLAN，CRITICISM，Next Action。</li>
+<li>重复2，直到任务完成。</li>
+</ol>
+<p>期间，用的是google search来获取信息，然后自己进行分析，形成下一条执行指令。</p>
+<p>OP: 有兴趣的可以去玩玩，不过要注意token的消耗，我玩了1个半小时，消耗了我数以万计的token，最后还是失败了，不过我还是学到了很多东西，了解了它的执行流程。</p>
+<hr>
+<p>好了，今天的内容就到这里，谢谢大家的阅读，如果你觉得这篇文章对你有帮助，欢迎点赞，转发，评论，谢谢！</p>
+<p>我是一名AI爱好者，欢迎关注我的公众号：BiuBiuAI社区，一起学习AI，一起成长！</p>
+]]></content>
+      <categories>
+        <category>AI</category>
+      </categories>
+      <tags>
+        <tag>chatgpt</tag>
+        <tag>autogpt</tag>
       </tags>
   </entry>
 </search>
