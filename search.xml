@@ -14238,6 +14238,7 @@ API
 </ol>
 <p>期间，用的是google search来获取信息，然后自己进行分析，形成下一条执行指令。</p>
 <p>OP: 有兴趣的可以去玩玩，不过要注意token的消耗，我玩了1个半小时，消耗了我数以万计的token，最后还是失败了，不过我还是学到了很多东西，了解了它的执行流程。</p>
+<p>开源地址：<a href="https://github.com/Significant-Gravitas/Auto-GPT.git">https://github.com/Significant-Gravitas/Auto-GPT.git</a></p>
 <hr>
 <p>好了，今天的内容就到这里，谢谢大家的阅读，如果你觉得这篇文章对你有帮助，欢迎点赞，转发，评论，谢谢！</p>
 <p>我是一名AI爱好者，欢迎关注我的公众号：BiuBiuAI社区，一起学习AI，一起成长！</p>
@@ -14249,5 +14250,56 @@ API
         <tag>chatgpt</tag>
         <tag>autogpt</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>mvn打包将所有依赖包拷贝到lib下</title>
+    <url>/2023/04/22/mvn%E6%89%93%E5%8C%85%E5%B0%86%E6%89%80%E6%9C%89%E4%BE%9D%E8%B5%96%E5%8C%85%E6%8B%B7%E8%B4%9D%E5%88%B0lib%E4%B8%8B/</url>
+    <content><![CDATA[<span id="more"></span>
+
+<p>mvn package打的jar包为什么不包含版本信息</p>
+<build>
+    <plugins>
+        <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-dependency-plugin</artifactId>
+            <version>3.2.0</version>
+            <executions>
+                <execution>
+                    <id>copy-dependencies</id>
+                    <phase>package</phase>
+                    <goals>
+                        <goal>copy-dependencies</goal>
+                    </goals>
+                    <configuration>
+                        <outputDirectory>${project.build.directory}/lib</outputDirectory>
+                        <includeScope>runtime</includeScope>
+                        <useBaseVersion>true</useBaseVersion>
+                    </configuration>
+                </execution>
+            </executions>
+        </plugin>
+    </plugins>
+</build>]]></content>
+      <categories>
+        <category>maven</category>
+      </categories>
+      <tags>
+        <tag>maven</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>获取bilibili嵌入到自定义html页面的视频地址</title>
+    <url>/2023/04/19/%E8%8E%B7%E5%8F%96bilibili%E5%B5%8C%E5%85%A5%E5%88%B0%E8%87%AA%E5%AE%9A%E4%B9%89html%E9%A1%B5%E9%9D%A2%E7%9A%84%E8%A7%86%E9%A2%91%E5%9C%B0%E5%9D%80/</url>
+    <content><![CDATA[<span id="more"></span>
+
+<p>查看页面源码：<br>搜索aid<br>搜索cid<br>aid:867647835<br>cid:1100643385</p>
+<p>将aid cid替换到下面的代码中</p>
+<iframe width="750" height="420" src="//player.bilibili.com/player.html?aid=867647835&cid=1100643385&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+
+
+<p>然后将代码复制到自定义html页面中即可。</p>
+<p>完成。</p>
+<p>再见。</p>
+]]></content>
   </entry>
 </search>
