@@ -14308,7 +14308,7 @@ API
     <content><![CDATA[<p>说下使用pip过程中遇到的问题。</p>
 <span id="more"></span>
 
-<h2 id="1-pip-install-r-requirements-txt"><a href="#1-pip-install-r-requirements-txt" class="headerlink" title="1. pip install -r requirements.txt"></a>1. pip install -r requirements.txt</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">require sha256 &#x27;xxx&#x27; </span><br><span class="line">got sha256 &#x27;xxx&#x27;</span><br></pre></td></tr></table></figure>
+<h2 id="1-pip-install-r-requirements-txt"><a href="#1-pip-install-r-requirements-txt" class="headerlink" title="1. pip install -r requirements.txt"></a>1. pip install -r requirements.txt</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">require sha256 &#x27;xxx&#x27;</span><br><span class="line">got sha256 &#x27;xxx&#x27;</span><br></pre></td></tr></table></figure>
 
 <p>pip install –no-cache-dir -r requirements.txt</p>
 ]]></content>
