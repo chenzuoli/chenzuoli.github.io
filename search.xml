@@ -14521,4 +14521,71 @@ API
         <tag>model</tag>
       </tags>
   </entry>
+  <entry>
+    <title>wagtail创建初始用户</title>
+    <url>/2023/06/15/wagtail%E5%88%9B%E5%BB%BA%E5%88%9D%E5%A7%8B%E7%94%A8%E6%88%B7/</url>
+    <content><![CDATA[<p>python manage.py createsuperuser</p>
+]]></content>
+      <categories>
+        <category>wagtail</category>
+      </categories>
+      <tags>
+        <tag>wagtail</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>模型加载参数device_map</title>
+    <url>/2023/06/22/%E6%A8%A1%E5%9E%8B%E5%8A%A0%E8%BD%BD%E5%8F%82%E6%95%B0device-map/</url>
+    <content><![CDATA[<p>model &#x3D; AutoModelForCausalLM.from_pretrained(“baichuan-inc&#x2F;baichuan-7B”, device_map&#x3D;”auto”, trust_remote_code&#x3D;True)</p>
+<span id="more"></span>
+
+<p>英文解释：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">By passing device_map=&quot;auto&quot;, we tell 🤗 Accelerate to determine automatically where to put each layer of the model depending on the available resources:</span><br><span class="line"></span><br><span class="line">first we use the maximum space available on the GPU(s)</span><br><span class="line">if we still need space, we store the remaining weights on the CPU</span><br><span class="line">if there is not enough RAM, we store the remaining weights on the hard drive as memory-mapped tensors</span><br></pre></td></tr></table></figure>
+
+<p>中文解释：<br>通过传递device_map&#x3D;”auto”，它告诉机器决定怎样加载模型，基于已有的资源将模型的每一层放在合适的位置：</p>
+<ul>
+<li>第一，会使用最大的gpu空间资源</li>
+<li>如果仍然需要空间，那么会存储一部分权重到cpu</li>
+<li>如果RAM内存不足，那么会存储一部分权重到硬盘上作为内存映射</li>
+</ul>
+<hr>
+<p>不会的记录下来。</p>
+]]></content>
+      <categories>
+        <category>AI</category>
+      </categories>
+      <tags>
+        <tag>预训练模型</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>分词算法</title>
+    <url>/2023/06/22/%E5%88%86%E8%AF%8D%E7%AE%97%E6%B3%95/</url>
+    <content><![CDATA[<p>列一下。</p>
+<span id="more"></span>
+
+<ul>
+<li>word-based: 使用空格，标点进行分割(英文就是空格，中文就是单个汉字)</li>
+<li>character-based: 使用abcde这样的字符（大小写字母，标点256个）来分割</li>
+<li>Subword-based:介于单个词和字母之间，使用算法寻找单元组合出现概率最大的作为一个分词结果（英文的基本单位组合就是字母，中文就是一个汉字）<ul>
+<li>BPE分词</li>
+<li>BPE分词的改进<ul>
+<li>WordPiece</li>
+<li>Byte-level BPE</li>
+<li>SentencePiece</li>
+<li>Unigram</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+]]></content>
+      <categories>
+        <category>AI</category>
+      </categories>
+      <tags>
+        <tag>算法</tag>
+        <tag>分词</tag>
+      </tags>
+  </entry>
 </search>
