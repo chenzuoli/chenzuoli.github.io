@@ -14345,6 +14345,8 @@ API
 
 <p>如果想继续隐藏“build with Gradio”，则使用以下代码：</p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">import gradio as gr</span><br><span class="line"></span><br><span class="line">def greet(name):</span><br><span class="line">    return &quot;Hello &quot; + name + &quot;!&quot;</span><br><span class="line"></span><br><span class="line">demo = gr.Interface(</span><br><span class="line">    fn=greet,</span><br><span class="line">    inputs=&quot;text&quot;,</span><br><span class="line">    outputs=&quot;text&quot;,</span><br><span class="line">    css=&quot;footer &#123;visibility: hidden&#125;&quot;</span><br><span class="line">)</span><br><span class="line">demo.launch()</span><br></pre></td></tr></table></figure>
+
+<hr>
 ]]></content>
       <categories>
         <category>AI大模型</category>
@@ -14387,7 +14389,7 @@ API
     <content><![CDATA[<p>Hello-world模型。</p>
 <span id="more"></span>
 
-<iframe src="https://course-demos-hello-world.hf.space" frameborder="0" height="250" width="750" title="Gradio app" class="container p-0 flex-grow space-iframe" allow="accelerometer; ambient-light-sensor; autoplay; battery; camera; document-domain; encrypted-media; fullscreen; geolocation; gyroscope; layout-animations; legacy-image-formats; magnetometer; microphone; midi; oversized-images; payment; picture-in-picture; publickey-credentials-get; sync-xhr; usb; vr ; wake-lock; xr-spatial-tracking" sandbox="allow-forms allow-modals allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-downloads"></iframe>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">&lt;iframe src=&quot;https://course-demos-hello-world.hf.space&quot; frameborder=&quot;0&quot; height=&quot;250&quot; width=&quot;750&quot; title=&quot;Gradio app&quot; class=&quot;container p-0 flex-grow space-iframe&quot; allow=&quot;accelerometer; ambient-light-sensor; autoplay; battery; camera; document-domain; encrypted-media; fullscreen; geolocation; gyroscope; layout-animations; legacy-image-formats; magnetometer; microphone; midi; oversized-images; payment; picture-in-picture; publickey-credentials-get; sync-xhr; usb; vr ; wake-lock; xr-spatial-tracking&quot; sandbox=&quot;allow-forms allow-modals allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-downloads&quot;&gt;&lt;/iframe&gt;</span><br></pre></td></tr></table></figure>
 
 <iframe src="https://course-demos-hello-world.hf.space" frameborder="0" height="250" width="750" title="Gradio app" class="container p-0 flex-grow space-iframe" sandbox="allow-forms allow-modals allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-downloads"></iframe>
 
@@ -14411,9 +14413,7 @@ API
     <content><![CDATA[<p>使用 GPT-2 模型生成文本。</p>
 <span id="more"></span>
 
-
-<iframe src="https://course-demos-gpt-2.hf.space" frameborder="0" height="300" width="750" title="Gradio app" class="container p-0 flex-grow space-iframe" allow="accelerometer; ambient-light-sensor; autoplay; battery; camera; document-domain; encrypted-media; fullscreen; geolocation; gyroscope; layout-animations; legacy-image-formats; magnetometer; microphone; midi; oversized-images; payment; picture-in-picture; publickey-credentials-get; sync-xhr; usb; vr ; wake-lock; xr-spatial-tracking" sandbox="allow-forms allow-modals allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-downloads"></iframe>
-
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;iframe src=&quot;https://course-demos-gpt-2.hf.space&quot; frameborder=&quot;0&quot; height=&quot;300&quot; width=&quot;750&quot; title=&quot;Gradio app&quot; class=&quot;container p-0 flex-grow space-iframe&quot; allow=&quot;accelerometer; ambient-light-sensor; autoplay; battery; camera; document-domain; encrypted-media; fullscreen; geolocation; gyroscope; layout-animations; legacy-image-formats; magnetometer; microphone; midi; oversized-images; payment; picture-in-picture; publickey-credentials-get; sync-xhr; usb; vr ; wake-lock; xr-spatial-tracking&quot; sandbox=&quot;allow-forms allow-modals allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-downloads&quot;&gt;&lt;/iframe&gt;</span><br></pre></td></tr></table></figure>
 
 <iframe src="https://course-demos-gpt-2.hf.space" frameborder="0" height="300" width="750" title="Gradio app" class="container p-0 flex-grow space-iframe" sandbox="allow-forms allow-modals allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-downloads"></iframe>
 
@@ -14435,7 +14435,7 @@ API
     <content><![CDATA[<p>一个<strong>草图识别</strong>模型，它接收草图并输出它认为正在绘制的标签。</p>
 <span id="more"></span>
 
-<iframe src="https://course-demos-draw2.hf.space" frameborder="0" height="450" width="750" title="Gradio app" class="container p-0 flex-grow space-iframe" allow="accelerometer; ambient-light-sensor; autoplay; battery; camera; document-domain; encrypted-media; fullscreen; geolocation; gyroscope; layout-animations; legacy-image-formats; magnetometer; microphone; midi; oversized-images; payment; picture-in-picture; publickey-credentials-get; sync-xhr; usb; vr ; wake-lock; xr-spatial-tracking" sandbox="allow-forms allow-modals allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-downloads"></iframe>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;iframe src=&quot;https://course-demos-draw2.hf.space&quot; frameborder=&quot;0&quot; height=&quot;450&quot; width=&quot;750&quot; title=&quot;Gradio app&quot; class=&quot;container p-0 flex-grow space-iframe&quot; allow=&quot;accelerometer; ambient-light-sensor; autoplay; battery; camera; document-domain; encrypted-media; fullscreen; geolocation; gyroscope; layout-animations; legacy-image-formats; magnetometer; microphone; midi; oversized-images; payment; picture-in-picture; publickey-credentials-get; sync-xhr; usb; vr ; wake-lock; xr-spatial-tracking&quot; sandbox=&quot;allow-forms allow-modals allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-downloads&quot;&gt;&lt;/iframe&gt;</span><br></pre></td></tr></table></figure>
 
 <iframe src="https://course-demos-draw2.hf.space" frameborder="0" height="450" width="750" title="Gradio app" class="container p-0 flex-grow space-iframe" sandbox="allow-forms allow-modals allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-downloads"></iframe>
 
@@ -14457,7 +14457,7 @@ API
     <content><![CDATA[<p>一个<strong>背景去除</strong>模型，它接收图像并输出去除背景的图像。</p>
 <span id="more"></span>
 
-<iframe src="https://course-demos-remove-bg-original.hf.space" frameborder="0" height="640" width="750" title="Gradio app" class="container p-0 flex-grow space-iframe" allow="accelerometer; ambient-light-sensor; autoplay; battery; camera; document-domain; encrypted-media; fullscreen; geolocation; gyroscope; layout-animations; legacy-image-formats; magnetometer; microphone; midi; oversized-images; payment; picture-in-picture; publickey-credentials-get; sync-xhr; usb; vr ; wake-lock; xr-spatial-tracking" sandbox="allow-forms allow-modals allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-downloads"></iframe>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;iframe src=&quot;https://course-demos-remove-bg-original.hf.space&quot; frameborder=&quot;0&quot; height=&quot;640&quot; width=&quot;750&quot; title=&quot;Gradio app&quot; class=&quot;container p-0 flex-grow space-iframe&quot; allow=&quot;accelerometer; ambient-light-sensor; autoplay; battery; camera; document-domain; encrypted-media; fullscreen; geolocation; gyroscope; layout-animations; legacy-image-formats; magnetometer; microphone; midi; oversized-images; payment; picture-in-picture; publickey-credentials-get; sync-xhr; usb; vr ; wake-lock; xr-spatial-tracking&quot; sandbox=&quot;allow-forms allow-modals allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-downloads&quot;&gt;&lt;/iframe&gt;</span><br></pre></td></tr></table></figure>
 
 <iframe src="https://course-demos-remove-bg-original.hf.space" frameborder="0" height="640" width="750" title="Gradio app" class="container p-0 flex-grow space-iframe" sandbox="allow-forms allow-modals allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-downloads"></iframe>
 
@@ -14478,7 +14478,7 @@ API
     <content><![CDATA[<p>一个抽取式<strong>问题回答</strong>模型，它接受上下文段落和一个任务并输出一个结果和一个概率分数。</p>
 <span id="more"></span>
 
-<iframe src="https://course-demos-question-answering-simple.hf.space" frameborder="0" height="640" width="750" title="Gradio app" class="container p-0 flex-grow space-iframe" allow="accelerometer; ambient-light-sensor; autoplay; battery; camera; document-domain; encrypted-media; fullscreen; geolocation; gyroscope; layout-animations; legacy-image-formats; magnetometer; microphone; midi; oversized-images; payment; picture-in-picture; publickey-credentials-get; sync-xhr; usb; vr ; wake-lock; xr-spatial-tracking" sandbox="allow-forms allow-modals allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-downloads"></iframe>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;iframe src=&quot;https://course-demos-question-answering-simple.hf.space&quot; frameborder=&quot;0&quot; height=&quot;640&quot; width=&quot;750&quot; title=&quot;Gradio app&quot; class=&quot;container p-0 flex-grow space-iframe&quot; allow=&quot;accelerometer; ambient-light-sensor; autoplay; battery; camera; document-domain; encrypted-media; fullscreen; geolocation; gyroscope; layout-animations; legacy-image-formats; magnetometer; microphone; midi; oversized-images; payment; picture-in-picture; publickey-credentials-get; sync-xhr; usb; vr ; wake-lock; xr-spatial-tracking&quot; sandbox=&quot;allow-forms allow-modals allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-downloads&quot;&gt;&lt;/iframe&gt;</span><br></pre></td></tr></table></figure>
 
 <iframe src="https://course-demos-question-answering-simple.hf.space" frameborder="0" height="640" width="750" title="Gradio app" class="container p-0 flex-grow space-iframe" sandbox="allow-forms allow-modals allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-downloads"></iframe>
 
@@ -14504,8 +14504,7 @@ API
     <content><![CDATA[<p>Hello-world自定义输入组件模型。</p>
 <span id="more"></span>
 
-<iframe src="https://course-demos-hello-world-custom.hf.space" frameborder="0" height="300" width="750" title="Gradio app" class="container p-0 flex-grow space-iframe" allow="accelerometer; ambient-light-sensor; autoplay; battery; camera; document-domain; encrypted-media; fullscreen; geolocation; gyroscope; layout-animations; legacy-image-formats; magnetometer; microphone; midi; oversized-images; payment; picture-in-picture; publickey-credentials-get; sync-xhr; usb; vr ; wake-lock; xr-spatial-tracking" sandbox="allow-forms allow-modals allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-downloads"></iframe>
-
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;iframe src=&quot;https://course-demos-hello-world-custom.hf.space&quot; frameborder=&quot;0&quot; height=&quot;300&quot;  width=&quot;750&quot; title=&quot;Gradio app&quot; class=&quot;container p-0 flex-grow space-iframe&quot; allow=&quot;accelerometer; ambient-light-sensor; autoplay; battery; camera; document-domain; encrypted-media; fullscreen; geolocation; gyroscope; layout-animations; legacy-image-formats; magnetometer; microphone; midi; oversized-images; payment; picture-in-picture; publickey-credentials-get; sync-xhr; usb; vr ; wake-lock; xr-spatial-tracking&quot; sandbox=&quot;allow-forms allow-modals allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-downloads&quot;&gt;&lt;/iframe&gt;</span><br></pre></td></tr></table></figure>
 
 <iframe src="https://course-demos-hello-world-custom.hf.space" frameborder="0" height="300" width="750" title="Gradio app" class="container p-0 flex-grow space-iframe" sandbox="allow-forms allow-modals allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-downloads"></iframe>
 
