@@ -14587,4 +14587,51 @@ API
         <tag>分词</tag>
       </tags>
   </entry>
+  <entry>
+    <title>LoRA模型是什么</title>
+    <url>/2023/08/23/LoRA%E6%A8%A1%E5%9E%8B%E6%98%AF%E4%BB%80%E4%B9%88/</url>
+    <content><![CDATA[<p>LoRA是一种技术，不是一个模型。</p>
+<span id="more"></span>
+
+<p>LoRA（Low-Rank Adaptation of Large Language Models，大型语言模型的低秩适应）是微软研究员提出的一种新颖技术，旨在解决微调大型语言模型的问题。</p>
+<p>具有数十亿参数的强大模型，如GPT-3，要对其进行微调以适应特定任务或领域的成本非常高。LoRA提议冻结预训练模型的权重，并在每个Transformer块中注入可训练层（称为秩分解矩阵）。这大大减少了可训练参数的数量和GPU内存需求，因为大部分模型权重不需要计算梯度。研究人员发现，通过专注于大型语言模型的Transformer注意力块，LoRA的微调质量与完整模型的微调相当，同时速度更快，计算需求更低。</p>
+<p>尽管LoRA最初是为大型语言模型提出的，但这种技术也可以应用在其他地方。在Stable Diffusion微调的情况下，LoRA可以应用于与描述它们的提示相关的图像表示之间的交叉注意力层。LoRA微调的优点包括：</p>
+<ul>
+<li>训练速度更快</li>
+<li>计算需求更低</li>
+<li>训练权重更小，因为原始模型被冻结，我们注入新的可训练层，可以将新层的权重保存为一个约3MB大小的文件，比UNet模型的原始大小小了近一千倍。<br>LoRA可以与其他技术结合使用，例如Dreambooth，使训练更快、只需少量图像即可实现目标学习，还可以调整文本编码器以获得更高的主题保真度。总之，LoRA为微调大型语言模型提供了一种快速、低成本的解决方案，使模型能够更容易地适应新的领域或数据集。</li>
+</ul>
+<p><b>好记性不如烂笔头。</b></p>
+]]></content>
+      <categories>
+        <category>AI大模型</category>
+      </categories>
+      <tags>
+        <tag>AI</tag>
+        <tag>lora</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Whisper-JAX音频模型</title>
+    <url>/2023/08/22/Whisper-JAX%E9%9F%B3%E9%A2%91%E6%A8%A1%E5%9E%8B/</url>
+    <content><![CDATA[<p>Whisper-JAX音频模型。</p>
+<span id="more"></span>
+
+
+<p>Whisper JAX是OpenAI的Whisper模型的优化实现。它运行在JAX上，后端使用TPU v4-8。与在A100 GPU上运行的PyTorch相比，它的速度快了70倍以上，使其成为最快的Whisper API。</p>
+<p>请注意，在高峰时段，您可能会发现自己在此演示的队列中。当您提交请求时，您的队列位置将显示在演示窗格的右上角。当您到达队列的前面时，您的音频文件将被转录，进度将通过进度条显示。</p>
+<p>如果您想跳过队列，您可能希望创建自己的推理端点，详情可以在Whisper JAX存储库中找到。</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;iframe</span><br><span class="line">	src=&quot;https://sanchit-gandhi-whisper-jax.hf.space&quot;</span><br><span class="line">	frameborder=&quot;0&quot;</span><br><span class="line">	width=&quot;850&quot;</span><br><span class="line">	height=&quot;450&quot;</span><br><span class="line">&gt;&lt;/iframe&gt;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+<p><b>好记性不如烂笔头.</b></p>
+]]></content>
+      <categories>
+        <category>AI大模型</category>
+      </categories>
+      <tags>
+        <tag>huggingface</tag>
+        <tag>wisper</tag>
+      </tags>
+  </entry>
 </search>
