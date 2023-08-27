@@ -14660,4 +14660,88 @@ API
         <tag>网络安全</tag>
       </tags>
   </entry>
+  <entry>
+    <title>cookie技术</title>
+    <url>/2023/08/27/cookie%E6%8A%80%E6%9C%AF/</url>
+    <content><![CDATA[<p>我们经常说的<code>cookie缓存数据</code>，<code>允许cookie</code>是什么意思?</p>
+<span id="more"></span>
+
+<p><b>Cookie也被称作Cookies，它是一种让网站的服务器端可以把少量数据存储在客户端的硬盘或内存中，而后续又可以从客户端中读取该数据的技术。</b></p>
+<h1 id="cookie的使用"><a href="#cookie的使用" class="headerlink" title="cookie的使用"></a>cookie的使用</h1><ol>
+<li>在网站中，http请求是呈无序状态的<ul>
+<li>无序状态是指协议对于事务处理没有记忆能力，同一个服务器上你新打开的网页和之前打开的网页之间没有任何联系，你的当前请求和上一次请求究竟是不是一个用户发出的，服务器也无从得知；</li>
+</ul>
+</li>
+<li>为了解决这一问题，就出现了Cookie技术<ul>
+<li>当用户访问服务器并登录成功后，服务器向客户端返回一些数据(Cookie)；</li>
+<li>客户端将服务器返回的Cookie数据保存在本地，当用户再次访问服务器时，浏览器自动携带Cookie数据给服务器，服务器便知道访问者的身份信息了；</li>
+<li>值得注意的是，浏览器发送的是当前本地保存的所有作用在当前域且在有效期内的cookie；</li>
+<li>也就是说由上一次访问当前网站某一板块时服务器发送的旧cookie如果未过期，在访问其他板块的新请求中也会被携带，一同发送出去。这就是为什么有些时候我们抓包获取到了cookie，但用它测试连接时却发现这个cookie可有可无；</li>
+<li>单个Cookie数据大小一般规定不超过3KB。</li>
+</ul>
+</li>
+</ol>
+<h1 id="设置cookie"><a href="#设置cookie" class="headerlink" title="设置cookie"></a>设置cookie</h1><p>Cookie一般通过Response对象的set_cookie()方法来设置，其基本语法如下：<br>前两个参数必须设置，后续参数则为可选参数：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">set_cookie(key,value[,max_age,expires,path,domain,secure,httponly,samesite])</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<ul>
+<li>set_cookie()的参数说明如下：</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>key(或name)</td>
+<td>必需项，规定cookie的名称，字符串</td>
+</tr>
+<tr>
+<td>value</td>
+<td>必需项，规定cookie的内容，字符串</td>
+</tr>
+<tr>
+<td>max_age</td>
+<td>可选项，规定cookie的失效时间（单位：秒），与expires同时设置时，其优先级更高</td>
+</tr>
+<tr>
+<td>expires</td>
+<td>可选项，规定cookie的有效期，使用具体日期</td>
+</tr>
+<tr>
+<td>path</td>
+<td>可选项，规定cookie在当前web下那些目录有效，默认情况下为所有目录”&#x2F;“有效</td>
+</tr>
+<tr>
+<td>domain</td>
+<td>可选项，规定cookie作用的有效域（如：127.0.0.1）或域名（如：baidu.com），默认情况下只作用于设置该cookie的域</td>
+</tr>
+<tr>
+<td>secure</td>
+<td>可选项，规定cookie是否只能通过安全的HTTPS连接传输，默认关闭</td>
+</tr>
+<tr>
+<td>httponly</td>
+<td>可选项，规定cookie是否只能被HTTP连接访问，默认关闭, 即是否拒绝JavaScript访问Cookie</td>
+</tr>
+<tr>
+<td>samesite</td>
+<td>可选项，规定cookie是否只能被附加在同一站点（客户端）的请求中。</td>
+</tr>
+</tbody></table>
+<p>不同的web框架设置cookie的方法不同，这里就不一一赘述了，大家可以自行网上soso。</p>
+<hr>
+<p><b>每日一记。</b></p>
+<p>我是chenzuoli，欢迎交流。</p>
+]]></content>
+      <categories>
+        <category>网络</category>
+      </categories>
+      <tags>
+        <tag>http</tag>
+        <tag>cookie</tag>
+        <tag>网络</tag>
+      </tags>
+  </entry>
 </search>
