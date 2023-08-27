@@ -82,7 +82,7 @@
 
 <meta property="og:type" content="website">
 <meta property="og:title" content="chenzuoli&#39;s blog">
-<meta property="og:url" content="https://chenzuoli.github.io/tags/solidity/index.html">
+<meta property="og:url" content="https://chenzuoli.github.io/tags/Solidity/index.html">
 <meta property="og:site_name" content="chenzuoli&#39;s blog">
 <meta property="og:locale">
 <meta property="article:author" content="Lee">
@@ -116,7 +116,7 @@
 
 
 
-  <link rel="canonical" href="https://chenzuoli.github.io/tags/solidity/"/>
+  <link rel="canonical" href="https://chenzuoli.github.io/tags/Solidity/"/>
 
 
 
@@ -131,7 +131,7 @@
 <script data-ad-client="ca-pub-6592717531467819" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 
 
-  <title>标签: solidity | chenzuoli's blog</title>
+  <title>标签: Solidity | chenzuoli's blog</title>
   
 
 
@@ -310,7 +310,7 @@
 
     <div id="posts" class="posts-collapse">
       <div class="collection-title">
-        <h1>solidity<small>标签</small>
+        <h1>Solidity<small>标签</small>
         </h1>
       </div>
 
@@ -322,9 +322,9 @@
 
       <h2 class="post-title">
         
-            <a class="post-title-link" href="/2019/10/30/Solidity%E4%B8%AD%E5%87%BD%E6%95%B0%E4%BF%AE%E6%94%B9%E5%99%A8modifier%E8%AF%A6%E8%A7%A3/" itemprop="url">
+            <a class="post-title-link" href="/2019/10/28/Solidity%E4%B8%ADnow%E5%92%8Cblock-timestamp%E7%9A%84%E5%8C%BA%E5%88%AB/" itemprop="url">
               
-                <span itemprop="name">Solidity中函数修改器modifier详解</span>
+                <span itemprop="name">Solidity中now和block.timestamp的区别</span>
               
             </a>
         
@@ -332,9 +332,9 @@
 
       <div class="post-meta">
         <time class="post-time" itemprop="dateCreated"
-              datetime="2019-10-30T21:08:32+08:00"
-              content="2019-10-30" >
-          10-30
+              datetime="2019-10-28T20:33:33+08:00"
+              content="2019-10-28" >
+          10-28
         </time>
       </div>
 
@@ -350,37 +350,9 @@
 
       <h2 class="post-title">
         
-            <a class="post-title-link" href="/2019/10/27/Solidity%E5%B8%B8%E7%94%A8%E5%85%B3%E9%94%AE%E5%AD%97%E8%AF%A6%E8%A7%A3/" itemprop="url">
+            <a class="post-title-link" href="/2019/10/28/Solidity%E4%B8%ADtransfer%E5%92%8Csend%E7%9A%84%E5%8C%BA%E5%88%AB/" itemprop="url">
               
-                <span itemprop="name">Solidity常用关键字详解</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2019-10-27T16:46:43+08:00"
-              content="2019-10-27" >
-          10-27
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-      
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2019/09/14/Solidity%E5%AD%A6%E4%B9%A0/" itemprop="url">
-              
-                <span itemprop="name">Solidity学习</span>
+                <span itemprop="name">Solidity中transfer和send的区别</span>
               
             </a>
         
@@ -388,9 +360,9 @@
 
       <div class="post-meta">
         <time class="post-time" itemprop="dateCreated"
-              datetime="2019-09-14T23:29:06+08:00"
-              content="2019-09-14" >
-          09-14
+              datetime="2019-10-28T20:32:43+08:00"
+              content="2019-10-28" >
+          10-28
         </time>
       </div>
 
@@ -450,7 +422,7 @@
               
                 <a href="/archives/%7C%7C%20archive">
               
-                  <span class="site-state-item-count">361</span>
+                  <span class="site-state-item-count">362</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -461,7 +433,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">126</span>
+                  <span class="site-state-item-count">127</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -472,7 +444,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">413</span>
+                  <span class="site-state-item-count">415</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -1348,6 +1320,22 @@ function addCount(Counter) {
 		},
 		error: function(error) {
 			console.log('Error:' + error.code + " " + error.message);
+		}
+	});
+}
+$(function() {
+	var Counter = AV.Object.extend("Counter");
+	if ($('.leancloud_visitors').length == 1) {
+		addCount(Counter);
+	} else if ($('.post-title-link').length > 1) {
+		showTime(Counter);
+	}
+}); 
+</script>
+	
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"log":false,"model":{"jsonPath":"/live2dw/assets/shizuku.model.json"},"display":{"position":"left","width":150,"height":300},"mobile":{"show":true},"react":{"opacity":0.7}});</script></body>
+</html>
+'Error:' + error.code + " " + error.message);
 		}
 	});
 }

