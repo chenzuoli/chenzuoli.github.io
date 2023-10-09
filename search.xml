@@ -14852,4 +14852,28 @@ API
         <tag>元数据管理</tag>
       </tags>
   </entry>
+  <entry>
+    <title>flask_login模块中login_user与current_user的区别</title>
+    <url>/2023/10/09/flask-login%E6%A8%A1%E5%9D%97%E4%B8%ADlogin-user%E4%B8%8Ecurrent-user%E7%9A%84%E5%8C%BA%E5%88%AB/</url>
+    <content><![CDATA[<p>login_user是一个方法，current_user是一个变量。</p>
+<span id="more"></span>
+
+<ol>
+<li><p>login_user(user, remember&#x3D;False, duration&#x3D;None, force&#x3D;False, fresh&#x3D;True, login_method&#x3D;None)：将指定用户标记为已登录状态，并将其存储在用户会话中。如果 remember 参数为 True，则用户会话将被永久保存（否则只在用户关闭浏览器时存储）。duration 参数可以指定会话的持续时间。如果 force 参数为 True，则即使用户已经处于登录状态，该用户也会被重新标记为已登录状态。fresh 参数表示用户是否要求重新验证身份。如果 login_method 参数指定了第三方登录方法，Flask-Login 将使用该方法进行登录。</p>
+</li>
+<li><p>current_user：一个全局变量，表示当前已登录的用户。如果没有任何用户登录，则 current_user 的值为AnonymousUserMixin 类的实例（该类模拟匿名用户）。</p>
+</li>
+</ol>
+<hr>
+<p>不积跬步无以至千里，不积小流无以成江海。</p>
+]]></content>
+      <categories>
+        <category>flask</category>
+      </categories>
+      <tags>
+        <tag>flask_login</tag>
+        <tag>login_user</tag>
+        <tag>current_user</tag>
+      </tags>
+  </entry>
 </search>
