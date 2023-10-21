@@ -14876,4 +14876,25 @@ API
         <tag>current_user</tag>
       </tags>
   </entry>
+  <entry>
+    <title>HTTP请求Flask后端接收参数方式</title>
+    <url>/2023/10/19/HTTP%E8%AF%B7%E6%B1%82Flask%E5%90%8E%E7%AB%AF%E6%8E%A5%E6%94%B6%E5%8F%82%E6%95%B0%E6%96%B9%E5%BC%8F/</url>
+    <content><![CDATA[<ol>
+<li><p>html页面表单submit请求，后端如何接收数据？</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">request.form[&#x27;key1&#x27;]</span><br><span class="line">request.form[&#x27;key2&#x27;]</span><br><span class="line">request.form[&#x27;key3&#x27;]</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>html页面get请求？</p>
+</li>
+<li><p>html页面post请求？</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">params = request.get_json()</span><br><span class="line">username = params.get(&quot;username&quot;)</span><br><span class="line">recipient_email = params.get(&#x27;recipient_email&#x27;)</span><br></pre></td></tr></table></figure></li>
+</ol>
+]]></content>
+      <categories>
+        <category>Flask</category>
+      </categories>
+      <tags>
+        <tag>Http</tag>
+        <tag>Flask</tag>
+      </tags>
+  </entry>
 </search>
