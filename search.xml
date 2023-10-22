@@ -14897,4 +14897,37 @@ API
         <tag>Flask</tag>
       </tags>
   </entry>
+  <entry>
+    <title>js发送请求</title>
+    <url>/2023/10/21/js%E5%8F%91%E9%80%81%E8%AF%B7%E6%B1%82/</url>
+    <content><![CDATA[<p>分js、ajax方式发送http请求。</p>
+<span id="more"></span>
+
+<ol>
+<li><p>js<br>在js方法内</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">function xxxx() &#123;</span><br><span class="line">    let xhr = new XMLHttpRequest();</span><br><span class="line">    xhr.open(&quot;POST&quot;, &quot;/admin/qrcode_add&quot;);</span><br><span class="line">    xhr.setRequestHeader(&quot;Accept&quot;, &quot;application/json&quot;);</span><br><span class="line">    xhr.setRequestHeader(&quot;Content-Type&quot;, &quot;application/json&quot;);</span><br><span class="line">    xhr.onreadystatechange = function () &#123;</span><br><span class="line">      if (xhr.readyState === 4) &#123;</span><br><span class="line">        console.log(xhr.status);</span><br><span class="line">        console.log(xhr.responseText);</span><br><span class="line">      &#125;&#125;;</span><br><span class="line"></span><br><span class="line">    xhr.send(JSON.stringify(post_params));</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>ajax</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">//填写后台给的参数</span><br><span class="line">var post_params = &#123;&quot;recipient_email&quot;: email, &quot;username&quot;: username&#125;;</span><br><span class="line">$.ajax(&#123;</span><br><span class="line">    type: &#x27;post&#x27;,</span><br><span class="line">    url: &#x27;/send_mail&#x27;,</span><br><span class="line">    data: JSON.stringify(post_params),</span><br><span class="line">    contentType: &#x27;application/json&#x27;,</span><br><span class="line">    success: function(res)&#123;</span><br><span class="line">        console.log(res);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></li>
+</ol>
+]]></content>
+  </entry>
+  <entry>
+    <title>flask数据库迁移及升级</title>
+    <url>/2023/10/22/flask%E6%95%B0%E6%8D%AE%E5%BA%93%E8%BF%81%E7%A7%BB%E5%8F%8A%E5%8D%87%E7%BA%A7/</url>
+    <content><![CDATA[<p>教大家一个最简便的方法，先直接看pipy官网教程，还有不同版本的教程。</p>
+<p><a href="https://pypi.org/project/Flask-Migrate/">https://pypi.org/project/Flask-Migrate/</a></p>
+<p>不要去百度 google csdn各大论坛上去搜索了，因为大家使用的版本也不一样，环境也不一样，所以你可能需要找寻好几篇文章才能找到自己想要的内容教程。</p>
+<span id="more"></span>
+
+
+
+<hr>
+<p>好记性不如烂笔头。</p>
+]]></content>
+      <tags>
+        <tag>flask</tag>
+        <tag>migrate</tag>
+      </tags>
+  </entry>
 </search>
