@@ -14955,4 +14955,31 @@ API
         <tag>modal</tag>
       </tags>
   </entry>
+  <entry>
+    <title>bootstrap+popper实现鼠标悬停显示图片鼠标离开图片消失</title>
+    <url>/2023/10/22/bootstrap-popper%E5%AE%9E%E7%8E%B0%E9%BC%A0%E6%A0%87%E6%82%AC%E5%81%9C%E6%98%BE%E7%A4%BA%E5%9B%BE%E7%89%87%E9%BC%A0%E6%A0%87%E7%A6%BB%E5%BC%80%E5%9B%BE%E7%89%87%E6%B6%88%E5%A4%B1/</url>
+    <content><![CDATA[<p>1.引入popper.js<br>2.编写js<br>3.编写html</p>
+<span id="more"></span>
+
+<ol>
+<li><p>引入popper.js</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;script src=&#123;&#123; url_for(&#x27;static&#x27;, filename=&#x27;js/popper.js&#x27;) &#125;&#125;&gt;&lt;/script&gt;</span><br><span class="line"></span><br></pre></td></tr></table></figure></li>
+<li><p>编写js</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;script&gt;</span><br><span class="line">$(function()&#123;</span><br><span class="line">    $(&quot;[rel=showPic]&quot;).popover(&#123;</span><br><span class="line">        trigger:&#x27;manual&#x27;,</span><br><span class="line">        placement : &#x27;right&#x27;, //placement of the popover. also can use top, bottom, left or right</span><br><span class="line">        title : &#x27;&lt;div style=&quot;text-align:center; color:red; text-decoration:underline; font-size:14px;&quot;&gt; Muah ha ha&lt;/div&gt;&#x27;, //this is the top title bar of the popover. add some basic css</span><br><span class="line">        html: true, //needed to show html of course</span><br><span class="line">        content : &#x27;&lt;div id=&quot;popOverBox&quot;&gt;&lt;img src=&quot;http://www.hd-report.com/wp-content/uploads/2008/08/mr-evil.jpg&quot; width=&quot;251&quot; height=&quot;201&quot; /&gt;&lt;/div&gt;&#x27;, //this is the content of the html box. add the image here or anything you want really.</span><br><span class="line">        animation: false</span><br><span class="line">    &#125;).on(&quot;mouseenter&quot;, function () &#123;</span><br><span class="line">        var _this = this;</span><br><span class="line">        $(this).popover(&quot;show&quot;);</span><br><span class="line">        $(this).siblings(&quot;.popover&quot;).on(&quot;mouseleave&quot;, function () &#123;</span><br><span class="line">            $(_this).popover(&#x27;hide&#x27;);</span><br><span class="line">        &#125;);</span><br><span class="line">    &#125;).on(&quot;mouseleave&quot;, function () &#123;</span><br><span class="line">        var _this = this;</span><br><span class="line">        setTimeout(function () &#123;</span><br><span class="line">            if (!$(&quot;.popover:hover&quot;).length) &#123;</span><br><span class="line">                $(_this).popover(&quot;hide&quot;)</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;, 100);</span><br><span class="line">    &#125;);</span><br><span class="line">&#125;);</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>编写html</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;a href=&quot;#&quot; rel=&quot;showPic&quot;&gt;</span><br><span class="line">&lt;span class=&quot;glyphicon glyphicon-shopping-cart&quot;&gt; &lt;/span&gt; 购物车</span><br><span class="line">&lt;/a&gt;</span><br></pre></td></tr></table></figure></li>
+</ol>
+<p>其中rel&#x3D;”showPic”很重要。</p>
+<hr>
+<p>好记性不如烂笔头。</p>
+]]></content>
+      <categories>
+        <category>html</category>
+      </categories>
+      <tags>
+        <tag>bootstrap</tag>
+        <tag>popper</tag>
+      </tags>
+  </entry>
 </search>
