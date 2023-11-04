@@ -14879,19 +14879,21 @@ API
   <entry>
     <title>HTTP请求Flask后端接收参数方式</title>
     <url>/2023/10/19/HTTP%E8%AF%B7%E6%B1%82Flask%E5%90%8E%E7%AB%AF%E6%8E%A5%E6%94%B6%E5%8F%82%E6%95%B0%E6%96%B9%E5%BC%8F/</url>
-    <content><![CDATA[<ol>
-<li>html页面表单submit请求，后端如何接收数据？</li>
-</ol>
+    <content><![CDATA[<p>表单、get、post请求到flask后端，如何接受参数呢？</p>
 <span id="more"></span>
 
+<ol>
+<li><p>表单数据表单submit请求，后端如何接收数据？</p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">request.form[&#x27;key1&#x27;]</span><br><span class="line">request.form[&#x27;key2&#x27;]</span><br><span class="line">request.form[&#x27;key3&#x27;]</span><br></pre></td></tr></table></figure>
-
-<ol start="2">
+</li>
 <li><p>html页面get请求？</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># http://localhost:5000/user_info?user_id=1</span><br><span class="line">flask后端</span><br><span class="line">user_id = request.args.get(&#x27;user_id&#x27;)</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>html页面post请求？</p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">params = request.get_json()</span><br><span class="line">username = params.get(&quot;username&quot;)</span><br><span class="line">recipient_email = params.get(&#x27;recipient_email&#x27;)</span><br></pre></td></tr></table></figure></li>
 </ol>
+<hr>
+<p>日积月累。</p>
 ]]></content>
       <categories>
         <category>Flask</category>
@@ -15035,6 +15037,41 @@ API
       </categories>
       <tags>
         <tag>js</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>无法访问腾讯云轻量服务器应用端口</title>
+    <url>/2023/10/30/%E6%97%A0%E6%B3%95%E8%AE%BF%E9%97%AE%E8%85%BE%E8%AE%AF%E4%BA%91%E8%BD%BB%E9%87%8F%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%BA%94%E7%94%A8%E7%AB%AF%E5%8F%A3/</url>
+    <content><![CDATA[<p>在腾讯云服务器上安装了一个flask demo应用，启动后，通过ip端口无法访问，来看看你这些都设置对了吗？</p>
+<span id="more"></span>
+
+<ol>
+<li><p>确认端口已启动</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">netstat -anp | grep &quot;:5000&quot;</span><br></pre></td></tr></table></figure>
+<p><img src="/2023/10/30/%E6%97%A0%E6%B3%95%E8%AE%BF%E9%97%AE%E8%85%BE%E8%AE%AF%E4%BA%91%E8%BD%BB%E9%87%8F%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%BA%94%E7%94%A8%E7%AB%AF%E5%8F%A3/image.png" alt="Alt text"></p>
+</li>
+<li><p>确认防火墙已关闭，或者防火墙放开端口</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">sudo systemctl status firewalld</span><br></pre></td></tr></table></figure>
+<p><img src="/2023/10/30/%E6%97%A0%E6%B3%95%E8%AE%BF%E9%97%AE%E8%85%BE%E8%AE%AF%E4%BA%91%E8%BD%BB%E9%87%8F%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%BA%94%E7%94%A8%E7%AB%AF%E5%8F%A3/image-1.png" alt="Alt text"></p>
+</li>
+<li><p>腾讯云页面防火墙规则端口放行<br><img src="/2023/10/30/%E6%97%A0%E6%B3%95%E8%AE%BF%E9%97%AE%E8%85%BE%E8%AE%AF%E4%BA%91%E8%BD%BB%E9%87%8F%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%BA%94%E7%94%A8%E7%AB%AF%E5%8F%A3/image-2.png" alt="Alt text"></p>
+</li>
+<li><p>最后问题的关键<br><img src="/2023/10/30/%E6%97%A0%E6%B3%95%E8%AE%BF%E9%97%AE%E8%85%BE%E8%AE%AF%E4%BA%91%E8%BD%BB%E9%87%8F%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%BA%94%E7%94%A8%E7%AB%AF%E5%8F%A3/image-3.png" alt="Alt text"><br>我的应用程序启动的是127.0.0.1，代表只能本地访问，即在服务器内部访问，服务器外部是访问不到的，需要改成0.0.0.0</p>
+</li>
+</ol>
+<p>对于flask程序来说，指定ip即可：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">app.run(host=&#x27;0.0.0.0&#x27;, port=5000, debug=True)</span><br></pre></td></tr></table></figure>
+
+
+<hr>
+<p>好记性不如烂笔头。</p>
+]]></content>
+      <categories>
+        <category>问题</category>
+      </categories>
+      <tags>
+        <tag>腾讯云</tag>
+        <tag>轻量服务器</tag>
       </tags>
   </entry>
 </search>

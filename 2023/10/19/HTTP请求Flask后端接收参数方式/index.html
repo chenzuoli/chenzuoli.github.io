@@ -80,15 +80,15 @@
 
 
 
-<meta name="description" content="html页面表单submit请求，后端如何接收数据？">
+<meta name="description" content="表单、get、post请求到flask后端，如何接受参数呢？">
 <meta property="og:type" content="article">
 <meta property="og:title" content="HTTP请求Flask后端接收参数方式">
 <meta property="og:url" content="https://chenzuoli.github.io/2023/10/19/HTTP%E8%AF%B7%E6%B1%82Flask%E5%90%8E%E7%AB%AF%E6%8E%A5%E6%94%B6%E5%8F%82%E6%95%B0%E6%96%B9%E5%BC%8F/index.html">
 <meta property="og:site_name" content="chenzuoli&#39;s blog">
-<meta property="og:description" content="html页面表单submit请求，后端如何接收数据？">
+<meta property="og:description" content="表单、get、post请求到flask后端，如何接受参数呢？">
 <meta property="og:locale">
 <meta property="article:published_time" content="2023-10-19T15:32:03.000Z">
-<meta property="article:modified_time" content="2023-10-25T09:17:35.950Z">
+<meta property="article:modified_time" content="2023-10-29T11:05:22.264Z">
 <meta property="article:author" content="Lee">
 <meta property="article:tag" content="Http">
 <meta property="article:tag" content="Flask">
@@ -368,8 +368,8 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2023-10-25T17:17:35+08:00">
-                2023-10-25
+              <time title="更新于" itemprop="dateModified" datetime="2023-10-29T19:05:22+08:00">
+                2023-10-29
               </time>
             
           </span>
@@ -440,19 +440,21 @@
       
 
       
-        <ol>
-<li>html页面表单submit请求，后端如何接收数据？</li>
-</ol>
+        <p>表单、get、post请求到flask后端，如何接受参数呢？</p>
 <span id="more"></span>
 
+<ol>
+<li><p>表单数据表单submit请求，后端如何接收数据？</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">request.form[&#x27;key1&#x27;]</span><br><span class="line">request.form[&#x27;key2&#x27;]</span><br><span class="line">request.form[&#x27;key3&#x27;]</span><br></pre></td></tr></table></figure>
-
-<ol start="2">
+</li>
 <li><p>html页面get请求？</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"># http://localhost:5000/user_info?user_id=1</span><br><span class="line">flask后端</span><br><span class="line">user_id = request.args.get(&#x27;user_id&#x27;)</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>html页面post请求？</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">params = request.get_json()</span><br><span class="line">username = params.get(&quot;username&quot;)</span><br><span class="line">recipient_email = params.get(&#x27;recipient_email&#x27;)</span><br></pre></td></tr></table></figure></li>
 </ol>
+<hr>
+<p>日积月累。</p>
 
       
     </div>
@@ -628,7 +630,7 @@
               
                 <a href="/archives/%7C%7C%20archive">
               
-                  <span class="site-state-item-count">376</span>
+                  <span class="site-state-item-count">377</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -639,7 +641,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">134</span>
+                  <span class="site-state-item-count">135</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -650,7 +652,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">427</span>
+                  <span class="site-state-item-count">429</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
