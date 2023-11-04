@@ -15074,4 +15074,24 @@ API
         <tag>轻量服务器</tag>
       </tags>
   </entry>
+  <entry>
+    <title>html网页自适应手机端</title>
+    <url>/2023/11/04/html%E7%BD%91%E9%A1%B5%E8%87%AA%E9%80%82%E5%BA%94%E6%89%8B%E6%9C%BA%E7%AB%AF/</url>
+    <content><![CDATA[<p>很简单，在html head标签中加入下面一段代码就行。</p>
+<span id="more"></span>
+
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;!doctype html&gt;</span><br><span class="line">&lt;html lang=&quot;en&quot;&gt;</span><br><span class="line">&lt;head&gt;</span><br><span class="line">  &lt;title&gt;Welcome&lt;/title&gt;</span><br><span class="line">  &lt;meta charset=&quot;utf-8&quot;&gt;</span><br><span class="line">  &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1, shrink-to-fit=no&quot;&gt;</span><br><span class="line">  &lt;link rel=&quot;stylesheet&quot; href=&#123;&#123; url_for(&#x27;static&#x27;, filename=&#x27;css/font-awesome.min.css&#x27;)&#125;&#125;&gt;</span><br><span class="line">  &lt;link rel=&quot;stylesheet&quot; href=&#123;&#123; url_for(&#x27;static&#x27;, filename=&#x27;css/bootstrap.min.css&#x27;) &#125;&#125;&gt;</span><br><span class="line">&lt;/head&gt;</span><br><span class="line">&lt;body&gt;</span><br><span class="line">&lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure>
+
+
+<hr>
+<p>日积月累。</p>
+]]></content>
+      <categories>
+        <category>html</category>
+      </categories>
+      <tags>
+        <tag>移动端</tag>
+        <tag>html</tag>
+      </tags>
+  </entry>
 </search>
