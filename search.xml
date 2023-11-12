@@ -15094,4 +15094,25 @@ API
         <tag>html</tag>
       </tags>
   </entry>
+  <entry>
+    <title>js获取ip本机ip地址</title>
+    <url>/2023/11/12/js%E8%8E%B7%E5%8F%96ip%E6%9C%AC%E6%9C%BAip%E5%9C%B0%E5%9D%80/</url>
+    <content><![CDATA[<p>请求一个公共接口即可，详情请看：</p>
+<span id="more"></span>
+
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">function getip() &#123;</span><br><span class="line">    var ip = &quot;&quot;;</span><br><span class="line">    var xhr = new XMLHttpRequest();</span><br><span class="line">    // false参数代表同步请求</span><br><span class="line">    xhr.open(&quot;GET&quot;, &quot;https://api.ipify.org&quot;, false);</span><br><span class="line">    xhr.onreadystatechange = function() &#123;</span><br><span class="line">        if(xhr.readyState === 4) &#123;</span><br><span class="line">            if(xhr.status === 200) &#123;</span><br><span class="line">                ip = xhr.responseText;</span><br><span class="line">                //买家ip</span><br><span class="line">                console.log(ip);</span><br><span class="line">            &#125;else&#123;</span><br><span class="line">                console.error(xhr.statusText);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;;</span><br><span class="line">    xhr.send(null);</span><br><span class="line">    return ip;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+<hr>
+<p>好记性不如烂笔头。</p>
+]]></content>
+      <categories>
+        <category>js</category>
+      </categories>
+      <tags>
+        <tag>http</tag>
+        <tag>html</tag>
+        <tag>js</tag>
+      </tags>
+  </entry>
 </search>
