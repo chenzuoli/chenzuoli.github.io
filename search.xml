@@ -15115,4 +15115,29 @@ API
         <tag>js</tag>
       </tags>
   </entry>
+  <entry>
+    <title>jquery获取标签的值</title>
+    <url>/2023/11/22/jquery%E8%8E%B7%E5%8F%96%E6%A0%87%E7%AD%BE%E7%9A%84%E5%80%BC/</url>
+    <content><![CDATA[<p>js获取标签的值有多种方法，不同标签获取值的方式也不同，下面来看看。</p>
+<span id="more"></span>
+
+<ol>
+<li><p>js获取input标签值</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">id</span>=<span class="string">&quot;content_id&quot;</span> <span class="attr">type</span>=<span class="string">&quot;hidden&quot;</span> <span class="attr">value</span>=<span class="string">&quot;abc&quot;</span> /&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="language-javascript"></span></span><br><span class="line"><span class="language-javascript">    content_id = $(<span class="string">&quot;#content_id&quot;</span>).<span class="title function_">val</span>();</span></span><br><span class="line"><span class="language-javascript"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+</li>
+<li><p>js获取span的标签值</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">span</span> <span class="attr">id</span>=<span class="string">&quot;contentHeader&quot;</span>&gt;</span>标题<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="language-javascript"></span></span><br><span class="line"><span class="language-javascript">    <span class="keyword">let</span> content_header = $(<span class="string">&quot;#contentHeader&quot;</span>).<span class="title function_">text</span>()</span></span><br><span class="line"><span class="language-javascript"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure></li>
+</ol>
+<hr>
+<p>好记性不如烂笔头。</p>
+]]></content>
+      <categories>
+        <category>html</category>
+      </categories>
+      <tags>
+        <tag>js</tag>
+        <tag>jquery</tag>
+      </tags>
+  </entry>
 </search>
