@@ -7517,7 +7517,8 @@
   <entry>
     <title>ubuntu安装chatgpt_clone环境</title>
     <url>/2023/03/19/ubuntu%E5%AE%89%E8%A3%85chatgpt-clone%E7%8E%AF%E5%A2%83/</url>
-    <content><![CDATA[<span id="more"></span>
+    <content><![CDATA[<p>进来看看吧。</p>
+<span id="more"></span>
 
 <ol>
 <li><p>安装node环境</p>
@@ -7552,6 +7553,7 @@
 <li><p>chenzuoliGPT-client port 3000</p>
 </li>
 </ol>
+<hr>
 ]]></content>
       <categories>
         <category>AI</category>
