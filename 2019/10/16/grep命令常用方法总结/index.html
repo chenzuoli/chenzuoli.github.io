@@ -91,7 +91,7 @@
 <meta property="og:image" content="https://chenzuoli.github.io/images/%E7%A8%8B%E5%BA%8F%E5%91%98%E5%86%99%E4%B9%A6%E5%85%AC%E4%BC%97%E5%8F%B7%E4%BA%8C%E7%BB%B4%E7%A0%81.jpg">
 <meta property="og:image" content="https://chenzuoli.github.io/images/%E7%94%B5%E5%B7%B4%E5%85%8B%E5%AE%A0%E7%89%A9Pets%E5%85%AC%E4%BC%97%E5%8F%B7%E4%BA%8C%E7%BB%B4%E7%A0%81.png">
 <meta property="article:published_time" content="2019-10-16T05:57:31.000Z">
-<meta property="article:modified_time" content="2022-08-27T09:00:39.556Z">
+<meta property="article:modified_time" content="2019-10-16T05:57:31.000Z">
 <meta property="article:author" content="Lee">
 <meta property="article:tag" content="linux">
 <meta property="article:tag" content="grep">
@@ -372,8 +372,8 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2022-08-27T17:00:39+08:00">
-                2022-08-27
+              <time title="更新于" itemprop="dateModified" datetime="2019-10-16T13:57:31+08:00">
+                2019-10-16
               </time>
             
           </span>
@@ -393,6 +393,28 @@
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
                   <a href="/categories/Linux/" itemprop="url" rel="index">
                     <span itemprop="name">Linux</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Linux/%E5%91%BD%E4%BB%A4/" itemprop="url" rel="index">
+                    <span itemprop="name">命令</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Linux/%E5%91%BD%E4%BB%A4/grep/" itemprop="url" rel="index">
+                    <span itemprop="name">grep</span>
                   </a>
                 </span>
 
@@ -453,7 +475,7 @@
 
 <h1 id="2-操作文件"><a href="#2-操作文件" class="headerlink" title="2.操作文件"></a>2.操作文件</h1><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">grep -xf a.txt b.txt  //查询a与b共同存在的行</span><br><span class="line">grep -vxf b.txt a.txt //查询a的行不在b文件中面的,就是a比b多出来的行</span><br></pre></td></tr></table></figure>
 
-<h1 id="3-简单查询"><a href="#3-简单查询" class="headerlink" title="3.简单查询"></a>3.简单查询</h1><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">grep -v &#x27;^h&#x27; test.txt //显示非以h开发的</span><br><span class="line">grep -r &quot;hello&quot; xx //在xx文件夹查找</span><br><span class="line">grep -c //统计匹配的行数</span><br><span class="line">grep -n //显示行号</span><br></pre></td></tr></table></figure>
+<h1 id="3-简单查询"><a href="#3-简单查询" class="headerlink" title="3.简单查询"></a>3.简单查询</h1><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">grep -v &#x27;^h&#x27; test.txt //显示非以h开头的</span><br><span class="line">grep -r &quot;hello&quot; xx //在xx文件夹查找hello字符串</span><br><span class="line">grep -c //统计匹配的行数</span><br><span class="line">grep -n //显示行号</span><br></pre></td></tr></table></figure>
 
 <h1 id="4-查询匹配到的上下文"><a href="#4-查询匹配到的上下文" class="headerlink" title="4.查询匹配到的上下文"></a>4.查询匹配到的上下文</h1><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">grep -A 1 &#x27;hello&#x27; test.txt  //除了显示匹配到的行也显示它之后的一行</span><br><span class="line">grep -B 1 &#x27;hello&#x27; test.txt  //除了显示匹配到的行也显示它之前的一行</span><br><span class="line">grep -C 1 &#x27;hello&#x27; test.txt  //除了显示匹配到的行也显示它之前和之后的一行</span><br></pre></td></tr></table></figure>
 
@@ -463,7 +485,8 @@
 <h1 id="7-pattern正則表達式主要參数"><a href="#7-pattern正則表達式主要參数" class="headerlink" title="7.pattern正則表達式主要參数"></a>7.pattern正則表達式主要參数</h1><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">\： 忽略正則表達式中特殊字符的原有含义;</span><br><span class="line">^：匹配正則表達式的開始行;</span><br><span class="line">$: 匹配正則表達式的结束行;</span><br><span class="line">&lt;：从匹配正则表达式的行開始;</span><br><span class="line">锚定单词的開始。如:/\&lt;love/匹配包括以love开头的单词的行;</span><br><span class="line">&gt;：到匹配正則表達式的行结束;</span><br><span class="line">[ ]：单个字符。如[A]即A符合要求;</span><br><span class="line">[ - ]：范围。如[A-Z]，即A、B、C一直到Z都符合要求;</span><br><span class="line">.：全部的单个字符;</span><br><span class="line">* ：有字符，长度能够为0</span><br><span class="line">[^]: 匹配一个不在指定范围内的字符。如：/[^A-RT-Z]ed/匹配不包括A-R和T-Z的一个字母开头。紧跟ed的行;</span><br><span class="line">+: 匹配前面的子表达式一次或多次。比如，&#x27;zo+&#x27; 能匹配 &quot;zo&quot; 以及 &quot;zoo&quot;，但不能匹配 &quot;z&quot;。+ 等价于 &#123;1,&#125;;</span><br><span class="line">?: 匹配前面的子表达式零次或一次。比如。&quot;do(es)?&quot; 能够匹配 &quot;do&quot; 或 &quot;does&quot; 中的&quot;do&quot; 。? 等价于 &#123;0,1&#125;;</span><br></pre></td></tr></table></figure>
 
 <hr>
-<h2 id="You-need-to-know-what-you-want"><a href="#You-need-to-know-what-you-want" class="headerlink" title="You need to know what you want."></a><b>You need to know what you want.</b></h2><p><b>书山有路勤为径，学海无涯苦作舟。</b></p>
+<p><b>You need to know what you want.</b></p>
+<p><b>书山有路勤为径，学海无涯苦作舟。</b></p>
 <p>欢迎关注微信公众号：【程序员写书】<br><img src="/images/%E7%A8%8B%E5%BA%8F%E5%91%98%E5%86%99%E4%B9%A6%E5%85%AC%E4%BC%97%E5%8F%B7%E4%BA%8C%E7%BB%B4%E7%A0%81.jpg" alt="程序员写书"></p>
 <p>喜欢宠物的朋友可以关注：【电巴克宠物Pets】<br><img src="/images/%E7%94%B5%E5%B7%B4%E5%85%8B%E5%AE%A0%E7%89%A9Pets%E5%85%AC%E4%BC%97%E5%8F%B7%E4%BA%8C%E7%BB%B4%E7%A0%81.png" alt="电巴克宠物"></p>
 <p>一起学习，一起进步。<br></p>
@@ -651,7 +674,7 @@
               
                 <a href="/archives/%7C%7C%20archive">
               
-                  <span class="site-state-item-count">379</span>
+                  <span class="site-state-item-count">380</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -662,7 +685,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">128</span>
+                  <span class="site-state-item-count">168</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -673,7 +696,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">429</span>
+                  <span class="site-state-item-count">430</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -758,7 +781,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#1-%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F"><span class="nav-number">1.</span> <span class="nav-text">1.正则表达式</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2-%E6%93%8D%E4%BD%9C%E6%96%87%E4%BB%B6"><span class="nav-number">2.</span> <span class="nav-text">2.操作文件</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#3-%E7%AE%80%E5%8D%95%E6%9F%A5%E8%AF%A2"><span class="nav-number">3.</span> <span class="nav-text">3.简单查询</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#4-%E6%9F%A5%E8%AF%A2%E5%8C%B9%E9%85%8D%E5%88%B0%E7%9A%84%E4%B8%8A%E4%B8%8B%E6%96%87"><span class="nav-number">4.</span> <span class="nav-text">4.查询匹配到的上下文</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#5-%E5%8F%82%E6%95%B0%E8%A7%A3%E9%87%8A"><span class="nav-number">5.</span> <span class="nav-text">5.参数解释</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#6-%E5%91%BD%E4%BB%A4%E6%AD%A3%E5%89%87%E8%A1%A8%E9%81%94%E5%BC%8F"><span class="nav-number">6.</span> <span class="nav-text">6.命令正則表達式</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#7-pattern%E6%AD%A3%E5%89%87%E8%A1%A8%E9%81%94%E5%BC%8F%E4%B8%BB%E8%A6%81%E5%8F%83%E6%95%B0"><span class="nav-number">7.</span> <span class="nav-text">7.pattern正則表達式主要參数</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#You-need-to-know-what-you-want"><span class="nav-number">7.1.</span> <span class="nav-text">You need to know what you want.</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#1-%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F"><span class="nav-number">1.</span> <span class="nav-text">1.正则表达式</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2-%E6%93%8D%E4%BD%9C%E6%96%87%E4%BB%B6"><span class="nav-number">2.</span> <span class="nav-text">2.操作文件</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#3-%E7%AE%80%E5%8D%95%E6%9F%A5%E8%AF%A2"><span class="nav-number">3.</span> <span class="nav-text">3.简单查询</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#4-%E6%9F%A5%E8%AF%A2%E5%8C%B9%E9%85%8D%E5%88%B0%E7%9A%84%E4%B8%8A%E4%B8%8B%E6%96%87"><span class="nav-number">4.</span> <span class="nav-text">4.查询匹配到的上下文</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#5-%E5%8F%82%E6%95%B0%E8%A7%A3%E9%87%8A"><span class="nav-number">5.</span> <span class="nav-text">5.参数解释</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#6-%E5%91%BD%E4%BB%A4%E6%AD%A3%E5%89%87%E8%A1%A8%E9%81%94%E5%BC%8F"><span class="nav-number">6.</span> <span class="nav-text">6.命令正則表達式</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#7-pattern%E6%AD%A3%E5%89%87%E8%A1%A8%E9%81%94%E5%BC%8F%E4%B8%BB%E8%A6%81%E5%8F%83%E6%95%B0"><span class="nav-number">7.</span> <span class="nav-text">7.pattern正則表達式主要參数</span></a></li></ol></div>
             
 
           </div>

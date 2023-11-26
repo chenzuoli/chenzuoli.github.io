@@ -82,7 +82,7 @@
 
 <meta name="description" content="今天说下我在数据接入过程中遇到的一个奇葩的数据一致性的问题，就是在flink删除hbase数据的时候，返回了上一版本的数据，而不是直接删除。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Flink实时数仓第二篇【数据接入2】">
+<meta property="og:title" content="Flink实时数仓第二篇">
 <meta property="og:url" content="https://chenzuoli.github.io/2021/07/17/Flink%E5%AE%9E%E6%97%B6%E6%95%B0%E4%BB%93%E7%AC%AC%E4%BA%8C%E7%AF%87/index.html">
 <meta property="og:site_name" content="chenzuoli&#39;s blog">
 <meta property="og:description" content="今天说下我在数据接入过程中遇到的一个奇葩的数据一致性的问题，就是在flink删除hbase数据的时候，返回了上一版本的数据，而不是直接删除。">
@@ -92,7 +92,7 @@
 <meta property="og:image" content="https://chenzuoli.github.io/images/%E7%A8%8B%E5%BA%8F%E5%91%98%E5%86%99%E4%B9%A6%E5%85%AC%E4%BC%97%E5%8F%B7%E4%BA%8C%E7%BB%B4%E7%A0%81.jpg">
 <meta property="og:image" content="https://chenzuoli.github.io/images/%E7%94%B5%E5%B7%B4%E5%85%8B%E5%AE%A0%E7%89%A9Pets%E5%85%AC%E4%BC%97%E5%8F%B7%E4%BA%8C%E7%BB%B4%E7%A0%81.png">
 <meta property="article:published_time" content="2021-07-17T01:49:49.000Z">
-<meta property="article:modified_time" content="2022-08-27T09:00:39.369Z">
+<meta property="article:modified_time" content="2021-07-17T01:49:49.000Z">
 <meta property="article:author" content="Lee">
 <meta property="article:tag" content="Flink">
 <meta property="article:tag" content="Hbase">
@@ -142,7 +142,7 @@
 <script data-ad-client="ca-pub-6592717531467819" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 
 
-  <title>Flink实时数仓第二篇【数据接入2】 | chenzuoli's blog</title>
+  <title>Flink实时数仓第二篇 | chenzuoli's blog</title>
   
 
 
@@ -345,7 +345,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Flink实时数仓第二篇【数据接入2】</h1>
+          <h1 class="post-title" itemprop="name headline">Flink实时数仓第二篇</h1>
         
 
         <div class="post-meta">
@@ -373,8 +373,8 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2022-08-27T17:00:39+08:00">
-                2022-08-27
+              <time title="更新于" itemprop="dateModified" datetime="2021-07-17T09:49:49+08:00">
+                2021-07-17
               </time>
             
           </span>
@@ -392,8 +392,30 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E5%AE%9E%E6%97%B6%E6%95%B0%E4%BB%93/" itemprop="url" rel="index">
-                    <span itemprop="name">实时数仓</span>
+                  <a href="/categories/%E5%A4%A7%E6%95%B0%E6%8D%AE/" itemprop="url" rel="index">
+                    <span itemprop="name">大数据</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E5%A4%A7%E6%95%B0%E6%8D%AE/%E6%95%B0%E6%8D%AE%E4%BB%93%E5%BA%93/" itemprop="url" rel="index">
+                    <span itemprop="name">数据仓库</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E5%A4%A7%E6%95%B0%E6%8D%AE/%E6%95%B0%E6%8D%AE%E4%BB%93%E5%BA%93/Flink/" itemprop="url" rel="index">
+                    <span itemprop="name">Flink</span>
                   </a>
                 </span>
 
@@ -409,7 +431,7 @@
           
           
           
-             <span id="/2021/07/17/Flink%E5%AE%9E%E6%97%B6%E6%95%B0%E4%BB%93%E7%AC%AC%E4%BA%8C%E7%AF%87/" class="leancloud_visitors" data-flag-title="Flink实时数仓第二篇【数据接入2】">
+             <span id="/2021/07/17/Flink%E5%AE%9E%E6%97%B6%E6%95%B0%E4%BB%93%E7%AC%AC%E4%BA%8C%E7%AF%87/" class="leancloud_visitors" data-flag-title="Flink实时数仓第二篇">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -495,7 +517,7 @@
 <p>于是加上了这几个参数，设置的是每来一条数据就刷一条，但是不管用，哭。。。</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">// create hbase table</span><br><span class="line">CREATE TABLE hTable (</span><br><span class="line"> rowkey INT,</span><br><span class="line"> column_family ROW&lt;</span><br><span class="line">  ID int,</span><br><span class="line">  PACKAGE_ID int,</span><br><span class="line">  GAME_ID int,</span><br><span class="line">  CHANNEL_ID int,</span><br><span class="line">  PLATFORM int,</span><br><span class="line">  POPULARIZE int,</span><br><span class="line">  COMPANY_ID int&gt;,</span><br><span class="line"> PRIMARY KEY (rowkey) NOT ENFORCED</span><br><span class="line">) WITH (</span><br><span class="line"> &#x27;connector&#x27; = &#x27;hbase-1.4&#x27;,</span><br><span class="line"> &#x27;table-name&#x27; = &#x27;mytable&#x27;,</span><br><span class="line"> &#x27;zookeeper.quorum&#x27; = &#x27;localhost:2181&#x27;,</span><br><span class="line"> &#x27;sink.buffer-flush.max-rows&#x27; = &#x27;1&#x27;,</span><br><span class="line"> &#x27;sink.buffer-flush.interval&#x27; = &#x27;1s&#x27;</span><br><span class="line">);</span><br></pre></td></tr></table></figure>
 
-<p>最后实在没办法，想到既然自己写的java api操作hbase增删改数据一致性没问题，那么是不是看看flink hbase connector如何操作的，改掉它不就高了，connector也是java写的。<br>于是走到了修改源码的道路，按照自己写的java api操作hbase 的方法修改了源码，重新打包，但是依然不见效果，绝了，无语了，放弃了。</p>
+<p>最后实在没办法，想到既然自己写的java api操作hbase增删改数据一致性没问题，那么是不是看看flink hbase connector如何操作的，改掉它不就行了，connector也是java写的。<br>于是走到了修改源码的道路，按照自己写的java api操作hbase 的方法修改了源码，重新打包，但是依然不见效果，绝了，无语了，放弃了。</p>
 <h1 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h1><p>上面的问题，一度困扰了我三天时间，都怀疑这条路是否能行得通了，最后终于放弃了，转向研究其他实时数仓路线，了解到Flink+iceberg能做到近实时，于是开始尝试了，iceberg目前还在发展中，没有稳定版本，我现在看的iceberg适配flink1.11.x，前面我用的是flink1.12.1，所以需要降低版本。<br><img src="/2021/07/17/Flink%E5%AE%9E%E6%97%B6%E6%95%B0%E4%BB%93%E7%AC%AC%E4%BA%8C%E7%AF%87/iceberg.png" alt="iceberg_flink"><br>于是下载了flink1.11.3，停掉了原来的flink，在同一台机器上，修改了FLINK_HOME，启动了1.11.3的flink，按照iceberg官档操作起来了。<br>晚上回去还是有些对Hbase路线不甘心，想去一探究竟到底是啥原因引起的，继续看源码，继续尝试，上次修改了源码，不知道有没有生效，这次打上日志，运行看看是不是真的走这里，进行的删除操作。但是还原回flink1.12.1版本出问题了。之前使用的1.11.3版本，导致zookeeper和hdfs存储的是低版本数据，无法升级了，想着删除zookeeper的元数据，但是进去后发现flink相关的数据，啥也没有，怎么会这么奇怪呢？</p>
 <p>迫不得已，新建了一个zookeeper，才让flink1.12.1启动起来了，然后修改了connector的源码打上日志信息，但是日志也没打印出来，啊啊啊啊啊啊啊啊啊啊，到底是走的哪里呢，但是奇迹出现了，之前的问题突然消失了，flink能正常删除hbase数据了，而且没有版本问题，神奇。<br>最后分析了一下，hbase的使用zookeeper，主要是来分配region和regionserver监控的，flink使用zookeeper，主要记录任务的运行状况和checkpoint信息，当checkpoint信息在zookeeper中存储出现问题的时候，删除自然会出问题了。<br>所以最后的解决方案是，为flink重新配了一个zookeeper。</p>
 <p>ok，完成。</p>
@@ -686,7 +708,7 @@
               
                 <a href="/archives/%7C%7C%20archive">
               
-                  <span class="site-state-item-count">379</span>
+                  <span class="site-state-item-count">380</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -697,7 +719,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">128</span>
+                  <span class="site-state-item-count">168</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -708,7 +730,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">429</span>
+                  <span class="site-state-item-count">430</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>

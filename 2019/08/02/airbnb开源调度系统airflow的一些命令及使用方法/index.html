@@ -90,7 +90,7 @@
 <meta property="og:image" content="https://chenzuoli.github.io/images/%E7%A8%8B%E5%BA%8F%E5%91%98%E5%86%99%E4%B9%A6%E5%85%AC%E4%BC%97%E5%8F%B7%E4%BA%8C%E7%BB%B4%E7%A0%81.jpg">
 <meta property="og:image" content="https://chenzuoli.github.io/images/%E7%94%B5%E5%B7%B4%E5%85%8B%E5%AE%A0%E7%89%A9Pets%E5%85%AC%E4%BC%97%E5%8F%B7%E4%BA%8C%E7%BB%B4%E7%A0%81.png">
 <meta property="article:published_time" content="2019-08-01T16:06:33.000Z">
-<meta property="article:modified_time" content="2022-08-27T09:00:39.496Z">
+<meta property="article:modified_time" content="2019-08-02T16:00:00.000Z">
 <meta property="article:author" content="Lee">
 <meta property="article:tag" content="airflow">
 <meta name="twitter:card" content="summary">
@@ -370,8 +370,8 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2022-08-27T17:00:39+08:00">
-                2022-08-27
+              <time title="更新于" itemprop="dateModified" datetime="2019-08-03T00:00:00+08:00">
+                2019-08-03
               </time>
             
           </span>
@@ -389,8 +389,30 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E8%B0%83%E5%BA%A6%E7%B3%BB%E7%BB%9F/" itemprop="url" rel="index">
+                  <a href="/categories/%E5%A4%A7%E6%95%B0%E6%8D%AE/" itemprop="url" rel="index">
+                    <span itemprop="name">大数据</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E5%A4%A7%E6%95%B0%E6%8D%AE/%E8%B0%83%E5%BA%A6%E7%B3%BB%E7%BB%9F/" itemprop="url" rel="index">
                     <span itemprop="name">调度系统</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E5%A4%A7%E6%95%B0%E6%8D%AE/%E8%B0%83%E5%BA%A6%E7%B3%BB%E7%BB%9F/Airflow/" itemprop="url" rel="index">
+                    <span itemprop="name">Airflow</span>
                   </a>
                 </span>
 
@@ -446,19 +468,25 @@
 <span id="more"></span>
 
 <h1 id="1-operator"><a href="#1-operator" class="headerlink" title="1.operator"></a>1.operator</h1><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">BashOperator</span><br><span class="line">PythonOperator</span><br><span class="line">EmailOperator</span><br><span class="line">HTTPOperator</span><br><span class="line">SqlOperator</span><br><span class="line">Sensor</span><br><span class="line">DockerOperator</span><br><span class="line">HiveOperator</span><br></pre></td></tr></table></figure>
+
 <h1 id="2-给DAG实例传递参数"><a href="#2-给DAG实例传递参数" class="headerlink" title="2.给DAG实例传递参数"></a>2.给DAG实例传递参数</h1><p>执行命令</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">airflow trigger_dag example_passing_params_via_test_command -c &#x27;&#123;&quot;foo&quot;:&quot;bar&quot;&#125;&#x27;</span><br></pre></td></tr></table></figure>
 <p>代码获取变量：</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">def my_py_command(ds, **kwargs):</span><br><span class="line">logging.info(kwargs)</span><br><span class="line">logging.info(kwargs.get(&#x27;dag_run&#x27;).conf.get(&#x27;foo&#x27;));</span><br></pre></td></tr></table></figure>
+
 <h1 id="3-填补数据"><a href="#3-填补数据" class="headerlink" title="3.填补数据"></a>3.填补数据</h1><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">#清除dag在这段时间内的状态，清除后airflow会自动启动这些任务，如果dag设置了catchup=True;dependency_on_past=True;那么dag会按照时间顺序一天一天跑任务，这对于修补数据很有用哦</span><br><span class="line">airflow clear db2src_usersdb_byshell -s 2018-12-01 -e 2018-12-04</span><br><span class="line">#回填数据，当新建一个dag，需要补跑以前的数据，回填命令是个不错的选择</span><br><span class="line">airflow backfill db2src_usersdb_byshell -s 2018-12-03 -e 2018-12-04</span><br></pre></td></tr></table></figure>
+
 <h1 id="4-根据depend-on-past"><a href="#4-根据depend-on-past" class="headerlink" title="4.根据depend_on_past"></a>4.根据depend_on_past</h1><p>True or False来判断是否需要依赖start_time前段时间跑的相同的任务情况来运行现在的任务。</p>
 <h1 id="5-airflow卡住的问题"><a href="#5-airflow卡住的问题" class="headerlink" title="5.airflow卡住的问题"></a>5.airflow卡住的问题</h1><p>连接元数据mysql库：select * from task_instance where state &#x3D; ‘running’;</p>
 <h1 id="6-airflow自带变量："><a href="#6-airflow自带变量：" class="headerlink" title="6.airflow自带变量："></a>6.airflow自带变量：</h1><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">| Variable                           | Description |</span><br><span class="line">| :------:                           | :---------: |</span><br><span class="line">|&#123;&#123; ds &#125;&#125;                            |the execution date as YYYY-MM-DD|</span><br><span class="line">|&#123;&#123; ds_nodash &#125;&#125;                     |the execution date as YYYYMMDD|</span><br><span class="line">|&#123;&#123; yesterday_ds &#125;&#125;                  |yesterday’s date as YYYY-MM-DD|</span><br><span class="line">|&#123;&#123; yesterday_ds_nodash &#125;&#125;           |yesterday’s date as YYYYMMDD|</span><br><span class="line">|&#123;&#123; tomorrow_ds &#125;&#125;                   |tomorrow’s date as YYYY-MM-DD|</span><br><span class="line">|&#123;&#123; tomorrow_ds_nodash &#125;&#125;            |tomorrow’s date as YYYYMMDD|</span><br><span class="line">|&#123;&#123; ts &#125;&#125;                            |same as execution_date.isoformat()|</span><br><span class="line">|&#123;&#123; ts_nodash &#125;&#125;                     |same as ts without - and :|</span><br><span class="line">|&#123;&#123; execution_date &#125;&#125;                |the execution_date, (datetime.datetime)|</span><br><span class="line">|&#123;&#123; prev_execution_date &#125;&#125;           |the previous execution date (if available) (datetime.datetime)|</span><br><span class="line">|&#123;&#123; next_execution_date &#125;&#125;           |the next execution date (datetime.datetime)|</span><br><span class="line">|&#123;&#123; dag &#125;&#125;                           |the DAG object|</span><br><span class="line">|&#123;&#123; task &#125;&#125;                          |the Task object|</span><br><span class="line">|&#123;&#123; macros &#125;&#125;                        |a reference to the macros package, described below|</span><br><span class="line">|&#123;&#123; task_instance &#125;&#125;                 |the task_instance object|</span><br><span class="line">|&#123;&#123; end_date &#125;&#125;                      |same as &#123;&#123; ds &#125;&#125;|</span><br><span class="line">|&#123;&#123; latest_date &#125;&#125;                   |same as &#123;&#123; ds &#125;&#125;|</span><br><span class="line">|&#123;&#123; ti &#125;&#125;                            |same as &#123;&#123; task_instance &#125;&#125;|</span><br><span class="line">|&#123;&#123; params &#125;&#125;                        |a reference to the user-defined params dictionary|</span><br><span class="line">|&#123;&#123; var.value.my_var &#125;&#125;              |global defined variables represented as a dictionary|</span><br><span class="line">|&#123;&#123; var.json.my_var.path &#125;&#125;          |global defined variables represented as a dictionary with deserialized JSON object, append the path to the key within the JSON object|</span><br><span class="line">|&#123;&#123; task_instance_key_str &#125;&#125;         |a unique, human-readable key to the task instance formatted &#123;dag_id&#125;_&#123;task_id&#125;_&#123;ds&#125;              |</span><br><span class="line">|conf                                |the full configuration object located at airflow.configuration.conf which represents the content of your airflow.cfg|</span><br><span class="line">|run_id                              |the run_id of the current DAG run|</span><br><span class="line">|dag_run                             | a reference to the DagRun object|</span><br><span class="line">|test_mode                           | whether the task instance was called using the CLI’s test subcommand|</span><br></pre></td></tr></table></figure>
 
-<h1 id="7-导入导出airflow变量"><a href="#7-导入导出airflow变量" class="headerlink" title="7.导入导出airflow变量"></a>7.导入导出airflow变量</h1><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">airflow variables --import variable.json</span><br><span class="line">airflow variables --export variable.txt</span><br></pre></td></tr></table></figure>
+<h1 id="7-导入导出airflow变量"><a href="#7-导入导出airflow变量" class="headerlink" title="7.导入导出airflow变量"></a>7.导入导出airflow变量</h1><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">airflow variables --import variable.json</span><br><span class="line">airflow variables --export variable.json</span><br></pre></td></tr></table></figure>
+
 <h1 id="8-Template-Not-Found"><a href="#8-Template-Not-Found" class="headerlink" title="8.Template Not Found"></a>8.Template Not Found</h1><p>TemplateNotFound: sh &#x2F;data&#x2F;airflow_dag&#x2F;dags_migration&#x2F;sh&#x2F;export-variables.sh<br>这是由于airflow使用了jinja2作为模板引擎导致的一个陷阱，当使用bash命令的时候，尾部必须加一个空格</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">t2 = BashOperator(</span><br><span class="line">task_id=‘sleep‘,</span><br><span class="line">bash_command=&quot;/home/batcher/test.sh&quot;, // This fails with `Jinja template not found` error</span><br><span class="line">#bash_command=&quot;/home/batcher/test.sh &quot;, // This works (has a space after)</span><br><span class="line">dag=dag)</span><br></pre></td></tr></table></figure>
+
 <h1 id="9-手动触发dag运行"><a href="#9-手动触发dag运行" class="headerlink" title="9. 手动触发dag运行"></a>9. 手动触发dag运行</h1><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">airflow trigger_dag dag_id -r RUN_ID -e EXEC_DATE</span><br></pre></td></tr></table></figure>
+
 <h1 id="10-手动触发task运行"><a href="#10-手动触发task运行" class="headerlink" title="10. 手动触发task运行"></a>10. 手动触发task运行</h1><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">airflow run dag_id task_id EXEC_DATE</span><br></pre></td></tr></table></figure>
 
 <h1 id="11-“Failed-to-fetch-log-file-from-worker”"><a href="#11-“Failed-to-fetch-log-file-from-worker”" class="headerlink" title="11. “Failed to fetch log file from worker”"></a>11. “Failed to fetch log file from worker”</h1><p>查看task_instance中hostname字段，存储的均为localhost；<br>分析：修改&#x2F;etc&#x2F;hosts文件，删除127.0.0.1  hostname映射；worker log服务获取到hostname后，映射到ip后得到127.0.0.1，故无法访问到log。</p>
@@ -650,7 +678,7 @@
               
                 <a href="/archives/%7C%7C%20archive">
               
-                  <span class="site-state-item-count">379</span>
+                  <span class="site-state-item-count">380</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -661,7 +689,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">128</span>
+                  <span class="site-state-item-count">168</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -672,7 +700,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">429</span>
+                  <span class="site-state-item-count">430</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>

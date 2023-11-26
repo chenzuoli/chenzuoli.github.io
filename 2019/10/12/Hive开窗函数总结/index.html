@@ -101,7 +101,7 @@
 <meta property="og:image" content="https://chenzuoli.github.io/images/%E7%A8%8B%E5%BA%8F%E5%91%98%E5%86%99%E4%B9%A6%E5%85%AC%E4%BC%97%E5%8F%B7%E4%BA%8C%E7%BB%B4%E7%A0%81.jpg">
 <meta property="og:image" content="https://chenzuoli.github.io/images/%E7%94%B5%E5%B7%B4%E5%85%8B%E5%AE%A0%E7%89%A9Pets%E5%85%AC%E4%BC%97%E5%8F%B7%E4%BA%8C%E7%BB%B4%E7%A0%81.png">
 <meta property="article:published_time" content="2019-10-12T02:00:11.000Z">
-<meta property="article:modified_time" content="2022-08-27T09:00:39.410Z">
+<meta property="article:modified_time" content="2019-10-12T02:00:11.000Z">
 <meta property="article:author" content="Lee">
 <meta property="article:tag" content="Hive">
 <meta property="article:tag" content="开窗函数">
@@ -382,8 +382,8 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2022-08-27T17:00:39+08:00">
-                2022-08-27
+              <time title="更新于" itemprop="dateModified" datetime="2019-10-12T10:00:11+08:00">
+                2019-10-12
               </time>
             
           </span>
@@ -401,7 +401,29 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Hive/" itemprop="url" rel="index">
+                  <a href="/categories/%E5%A4%A7%E6%95%B0%E6%8D%AE/" itemprop="url" rel="index">
+                    <span itemprop="name">大数据</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E5%A4%A7%E6%95%B0%E6%8D%AE/%E6%95%B0%E6%8D%AE%E4%BB%93%E5%BA%93/" itemprop="url" rel="index">
+                    <span itemprop="name">数据仓库</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E5%A4%A7%E6%95%B0%E6%8D%AE/%E6%95%B0%E6%8D%AE%E4%BB%93%E5%BA%93/Hive/" itemprop="url" rel="index">
                     <span itemprop="name">Hive</span>
                   </a>
                 </span>
@@ -633,7 +655,7 @@
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">SELECT cookieid,createtime,pv,</span><br><span class="line">    NTILE(3) OVER(PARTITION BY cookieid ORDER BY pv DESC) AS ntile </span><br><span class="line">FROM test1;</span><br></pre></td></tr></table></figure>
 <p>取 <code>ntile = 1</code> 的记录，就是我们想要的结果！</p>
 <hr>
-<h1 id="四、ROW-NUMBER-函数"><a href="#四、ROW-NUMBER-函数" class="headerlink" title="四、ROW_NUMBER 函数"></a>四、ROW_NUMBER 函数</h1><p>&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;<code>ROW_NUMBER()</code> 从1开始，按照顺序，生成分组内记录的序列</p>
+<h1 id="四、ROW-NUMBER-函数"><a href="#四、ROW-NUMBER-函数" class="headerlink" title="四、ROW_NUMBER 函数"></a>四、ROW_NUMBER 函数</h1><p>&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;<code>ROW_NUMBER()</code> 从1开始，按照顺序，生成分组内记录的序列，排序值相等也按顺序排</p>
 <p>&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;<code>ROW_NUMBER()</code> 的应用场景非常多，比如获取分组内排序第一的记录、获取一个session中的第一条refer等。</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">SELECT cookieid,createtime,pv,</span><br><span class="line">    ROW_NUMBER() OVER(PARTITION BY cookieid ORDER BY pv desc) AS rn  </span><br><span class="line">FROM test1;</span><br></pre></td></tr></table></figure>
 
@@ -668,7 +690,7 @@
 <p><img src="/2019/10/12/Hive%E5%BC%80%E7%AA%97%E5%87%BD%E6%95%B0%E6%80%BB%E7%BB%93/10.png" alt="10"><br><b><code>LAST_VALUE</code> 函数则相反</b>：<br><code>LAST_VALUE</code> 取分组内排序后，截止到当前行，最后一个值</p>
 <p>这两个函数还是经常用到的（往往和排序配合使用），比较实用！</p>
 <hr>
-<h2 id="It’s-never-too-late-to-learn"><a href="#It’s-never-too-late-to-learn" class="headerlink" title="It’s never too late to learn."></a><b>It’s never too late to learn.</b></h2><p><b>书山有路勤为径，学海无涯苦作舟。</b></p>
+<p><b>It’s never too late to learn.</b><br><b>书山有路勤为径，学海无涯苦作舟。</b></p>
 <p>欢迎关注微信公众号：【程序员写书】<br><img src="/images/%E7%A8%8B%E5%BA%8F%E5%91%98%E5%86%99%E4%B9%A6%E5%85%AC%E4%BC%97%E5%8F%B7%E4%BA%8C%E7%BB%B4%E7%A0%81.jpg" alt="程序员写书"></p>
 <p>喜欢宠物的朋友可以关注：【电巴克宠物Pets】<br><img src="/images/%E7%94%B5%E5%B7%B4%E5%85%8B%E5%AE%A0%E7%89%A9Pets%E5%85%AC%E4%BC%97%E5%8F%B7%E4%BA%8C%E7%BB%B4%E7%A0%81.png" alt="电巴克宠物"></p>
 <p>一起学习，一起进步。<br></p>
@@ -856,7 +878,7 @@
               
                 <a href="/archives/%7C%7C%20archive">
               
-                  <span class="site-state-item-count">379</span>
+                  <span class="site-state-item-count">380</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -867,7 +889,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">128</span>
+                  <span class="site-state-item-count">168</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -878,7 +900,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">429</span>
+                  <span class="site-state-item-count">430</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -963,7 +985,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%B8%80%E3%80%81%E4%BB%8B%E7%BB%8D"><span class="nav-number">1.</span> <span class="nav-text">一、介绍</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-%E5%9F%BA%E7%A1%80%E7%BB%93%E6%9E%84%EF%BC%9A"><span class="nav-number">1.1.</span> <span class="nav-text">1.基础结构：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-over%E5%87%BD%E6%95%B0%E5%86%99%E6%B3%95%EF%BC%9A"><span class="nav-number">1.2.</span> <span class="nav-text">2.over函数写法：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-%E6%B5%8B%E8%AF%95%E6%95%B0%E6%8D%AE%EF%BC%9A"><span class="nav-number">1.3.</span> <span class="nav-text">3.测试数据：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-%E7%AA%97%E5%8F%A3%E5%90%AB%E4%B9%89%EF%BC%9A"><span class="nav-number">1.4.</span> <span class="nav-text">4.窗口含义：</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%BA%8C%E3%80%81SUM-%E5%87%BD%E6%95%B0"><span class="nav-number">2.</span> <span class="nav-text">二、SUM 函数</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%B8%89%E3%80%81NTILE-%E5%87%BD%E6%95%B0"><span class="nav-number">3.</span> <span class="nav-text">三、NTILE 函数</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%9B%9B%E3%80%81ROW-NUMBER-%E5%87%BD%E6%95%B0"><span class="nav-number">4.</span> <span class="nav-text">四、ROW_NUMBER 函数</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%BA%94%E3%80%81RANK-%E5%92%8C-DENSE-RANK-%E5%87%BD%E6%95%B0"><span class="nav-number">5.</span> <span class="nav-text">五、RANK 和 DENSE_RANK 函数</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%85%AD%E3%80%81CUME-DIST-%E5%87%BD%E6%95%B0"><span class="nav-number">6.</span> <span class="nav-text">六、CUME_DIST 函数</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%B8%83%E3%80%81PERCENT-RANK-%E5%87%BD%E6%95%B0"><span class="nav-number">7.</span> <span class="nav-text">七、PERCENT_RANK 函数</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%85%AB%E3%80%81LAG-%E5%92%8C-LEAD-%E5%87%BD%E6%95%B0"><span class="nav-number">8.</span> <span class="nav-text">八、LAG 和 LEAD 函数</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%B9%9D%E3%80%81FIRST-VALUE-%E5%92%8C-LAST-VALUE-%E5%87%BD%E6%95%B0"><span class="nav-number">9.</span> <span class="nav-text">九、FIRST_VALUE 和 LAST_VALUE 函数</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#It%E2%80%99s-never-too-late-to-learn"><span class="nav-number">9.1.</span> <span class="nav-text">It’s never too late to learn.</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%B8%80%E3%80%81%E4%BB%8B%E7%BB%8D"><span class="nav-number">1.</span> <span class="nav-text">一、介绍</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-%E5%9F%BA%E7%A1%80%E7%BB%93%E6%9E%84%EF%BC%9A"><span class="nav-number">1.1.</span> <span class="nav-text">1.基础结构：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-over%E5%87%BD%E6%95%B0%E5%86%99%E6%B3%95%EF%BC%9A"><span class="nav-number">1.2.</span> <span class="nav-text">2.over函数写法：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-%E6%B5%8B%E8%AF%95%E6%95%B0%E6%8D%AE%EF%BC%9A"><span class="nav-number">1.3.</span> <span class="nav-text">3.测试数据：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-%E7%AA%97%E5%8F%A3%E5%90%AB%E4%B9%89%EF%BC%9A"><span class="nav-number">1.4.</span> <span class="nav-text">4.窗口含义：</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%BA%8C%E3%80%81SUM-%E5%87%BD%E6%95%B0"><span class="nav-number">2.</span> <span class="nav-text">二、SUM 函数</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%B8%89%E3%80%81NTILE-%E5%87%BD%E6%95%B0"><span class="nav-number">3.</span> <span class="nav-text">三、NTILE 函数</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%9B%9B%E3%80%81ROW-NUMBER-%E5%87%BD%E6%95%B0"><span class="nav-number">4.</span> <span class="nav-text">四、ROW_NUMBER 函数</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%BA%94%E3%80%81RANK-%E5%92%8C-DENSE-RANK-%E5%87%BD%E6%95%B0"><span class="nav-number">5.</span> <span class="nav-text">五、RANK 和 DENSE_RANK 函数</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%85%AD%E3%80%81CUME-DIST-%E5%87%BD%E6%95%B0"><span class="nav-number">6.</span> <span class="nav-text">六、CUME_DIST 函数</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%B8%83%E3%80%81PERCENT-RANK-%E5%87%BD%E6%95%B0"><span class="nav-number">7.</span> <span class="nav-text">七、PERCENT_RANK 函数</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%85%AB%E3%80%81LAG-%E5%92%8C-LEAD-%E5%87%BD%E6%95%B0"><span class="nav-number">8.</span> <span class="nav-text">八、LAG 和 LEAD 函数</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%B9%9D%E3%80%81FIRST-VALUE-%E5%92%8C-LAST-VALUE-%E5%87%BD%E6%95%B0"><span class="nav-number">9.</span> <span class="nav-text">九、FIRST_VALUE 和 LAST_VALUE 函数</span></a></li></ol></div>
             
 
           </div>

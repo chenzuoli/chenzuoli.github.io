@@ -99,7 +99,7 @@
 <meta property="og:image" content="https://chenzuoli.github.io/images/%E7%A8%8B%E5%BA%8F%E5%91%98%E5%86%99%E4%B9%A6%E5%85%AC%E4%BC%97%E5%8F%B7%E4%BA%8C%E7%BB%B4%E7%A0%81.jpg">
 <meta property="og:image" content="https://chenzuoli.github.io/images/%E7%94%B5%E5%B7%B4%E5%85%8B%E5%AE%A0%E7%89%A9Pets%E5%85%AC%E4%BC%97%E5%8F%B7%E4%BA%8C%E7%BB%B4%E7%A0%81.png">
 <meta property="article:published_time" content="2019-10-12T02:59:43.000Z">
-<meta property="article:modified_time" content="2022-08-27T09:00:39.393Z">
+<meta property="article:modified_time" content="2019-10-12T02:59:43.000Z">
 <meta property="article:author" content="Lee">
 <meta property="article:tag" content="Hive">
 <meta property="article:tag" content="文件格式">
@@ -380,8 +380,8 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2022-08-27T17:00:39+08:00">
-                2022-08-27
+              <time title="更新于" itemprop="dateModified" datetime="2019-10-12T10:59:43+08:00">
+                2019-10-12
               </time>
             
           </span>
@@ -399,7 +399,29 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Hive/" itemprop="url" rel="index">
+                  <a href="/categories/%E5%A4%A7%E6%95%B0%E6%8D%AE/" itemprop="url" rel="index">
+                    <span itemprop="name">大数据</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E5%A4%A7%E6%95%B0%E6%8D%AE/%E6%95%B0%E6%8D%AE%E4%BB%93%E5%BA%93/" itemprop="url" rel="index">
+                    <span itemprop="name">数据仓库</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E5%A4%A7%E6%95%B0%E6%8D%AE/%E6%95%B0%E6%8D%AE%E4%BB%93%E5%BA%93/Hive/" itemprop="url" rel="index">
                     <span itemprop="name">Hive</span>
                   </a>
                 </span>
@@ -466,8 +488,8 @@
 <li>PARQUET：列式存储，生产中最常用，更高效的压缩和编码；</li>
 <li>AVRO：生产中几乎不用，不用考虑</li>
 <li>JSONFILE：生产中几乎不用，不用考虑</li>
-<li>INPUTFORMAT：生产中几乎不用，不用考虑<br>注意hive默认的文件格式是TextFile，可通过 <code>set hive.default.fileformat</code> 进行配置</li>
 </ul>
+<p>注意hive默认的文件格式是TextFile，可通过 <code>set hive.default.fileformat</code> 进行配置</p>
 <p><img src="/2019/10/12/Hive%E4%B8%AD%E7%9A%84%E6%96%87%E4%BB%B6%E6%A0%BC%E5%BC%8F%E5%AF%B9%E6%AF%94/1.png" alt="1"></p>
 <h1 id="二、行式存储与列式存储"><a href="#二、行式存储与列式存储" class="headerlink" title="二、行式存储与列式存储"></a>二、行式存储与列式存储</h1><p>&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;行式存储与列式存储数据物理底层存储区别</p>
 <p><img src="/2019/10/12/Hive%E4%B8%AD%E7%9A%84%E6%96%87%E4%BB%B6%E6%A0%BC%E5%BC%8F%E5%AF%B9%E6%AF%94/2.png" alt="2"></p>
@@ -527,11 +549,12 @@
 <li>stage层：数据是从业务库直接拉取过来的，没有做任何改动，后续的ETL操作会读取该层的全部字段数据，而且适合更新、查看，与其他组件进行交互，所以，该层设置为行存储较为合适，常见为Text格式；</li>
 <li>ods层：从stage层获取数据，经过ETL清洗过程，得到格式统一（度量、维度等）的明细数据，后续事实表、中间表的建设会从这一层中获取某一部分数据，查询的是部分字段，因此，该层设置为列式存储比较合适，常见的文件格式为ORC、Parquet；</li>
 <li>dwd层：有些事实表、中间表字段非常地多，我们会把他们拆分为许多分组，然后汇总在一起，此时，各个分组可以设置为行存储，而汇总后的事实表、中间表设置为列存储会比较合适；</li>
-<li>report层&#x2F;dws层：这一层数据量非常地小，主要作为报表层，数据集市在这里产生，分发给不同的小组或者部门查看分析用，故他们会查看所有的数据，这层设置为行存储会比较合适；</li>
+<li>dws层&#x2F;report层：这一层数据量非常地小，主要作为汇总层、报表层，数据集市在这里产生，分发给不同的小组或者部门查看分析用，故他们会查看所有的数据，这层设置为行存储会比较合适；</li>
 </ol>
-<p>&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;上面是总结的一些经验，如果有异议，大家可以提出来一起讨论，数据仓库建设的路很漫长，我们一起一步一个脚印👣走起来。欢迎留言：<a href="mailto:&#99;&#104;&#x65;&#x6e;&#122;&#x75;&#x6f;&#x6c;&#105;&#55;&#x30;&#57;&#64;&#49;&#x36;&#51;&#46;&#99;&#x6f;&#x6d;">&#99;&#104;&#x65;&#x6e;&#122;&#x75;&#x6f;&#x6c;&#105;&#55;&#x30;&#57;&#64;&#49;&#x36;&#51;&#46;&#99;&#x6f;&#x6d;</a>.</p>
+<p>&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;上面是总结的一些经验，如果有异议，大家可以提出来一起讨论，数据仓库建设的路很漫长，我们一起一步一个脚印👣走起来。欢迎留言：<a href="mailto:&#x63;&#x68;&#101;&#x6e;&#x7a;&#x75;&#x6f;&#108;&#x69;&#55;&#48;&#57;&#64;&#49;&#54;&#51;&#x2e;&#x63;&#111;&#x6d;">&#x63;&#x68;&#101;&#x6e;&#x7a;&#x75;&#x6f;&#108;&#x69;&#55;&#48;&#57;&#64;&#49;&#54;&#51;&#x2e;&#x63;&#111;&#x6d;</a>.</p>
 <hr>
-<h2 id="Doing-the-things-you-want-to-do"><a href="#Doing-the-things-you-want-to-do" class="headerlink" title="Doing the things you want to do."></a>Doing the things you want to do.</h2><p><b>书山有路勤为径，学海无涯苦作舟。</b></p>
+<p><b>书山有路勤为径，学海无涯苦作舟。</b></p>
+<p>Doing the things you want to do.</p>
 <p>欢迎关注微信公众号：【程序员写书】<br><img src="/images/%E7%A8%8B%E5%BA%8F%E5%91%98%E5%86%99%E4%B9%A6%E5%85%AC%E4%BC%97%E5%8F%B7%E4%BA%8C%E7%BB%B4%E7%A0%81.jpg" alt="程序员写书"></p>
 <p>喜欢宠物的朋友可以关注：【电巴克宠物Pets】<br><img src="/images/%E7%94%B5%E5%B7%B4%E5%85%8B%E5%AE%A0%E7%89%A9Pets%E5%85%AC%E4%BC%97%E5%8F%B7%E4%BA%8C%E7%BB%B4%E7%A0%81.png" alt="电巴克宠物"></p>
 <p>一起学习，一起进步。<br></p>
@@ -719,7 +742,7 @@
               
                 <a href="/archives/%7C%7C%20archive">
               
-                  <span class="site-state-item-count">379</span>
+                  <span class="site-state-item-count">380</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -730,7 +753,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">128</span>
+                  <span class="site-state-item-count">168</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -741,7 +764,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">429</span>
+                  <span class="site-state-item-count">430</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -826,7 +849,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%B8%80%E3%80%81hive%E4%B8%AD%E7%9A%84file-format"><span class="nav-number">1.</span> <span class="nav-text">一、hive中的file_format</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%BA%8C%E3%80%81%E8%A1%8C%E5%BC%8F%E5%AD%98%E5%82%A8%E4%B8%8E%E5%88%97%E5%BC%8F%E5%AD%98%E5%82%A8"><span class="nav-number">2.</span> <span class="nav-text">二、行式存储与列式存储</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%BB%93%E8%AE%BA%EF%BC%9A%E7%94%B1%E4%B8%8A%E5%9B%BE%E5%8F%AF%E7%9F%A5"><span class="nav-number">3.</span> <span class="nav-text">结论：由上图可知</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%B8%89%E3%80%81%E4%BC%98%E7%BC%BA%E7%82%B9"><span class="nav-number">4.</span> <span class="nav-text">三、优缺点</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-%E5%88%97%E5%BC%8F%E5%AD%98%E5%82%A8"><span class="nav-number">4.1.</span> <span class="nav-text">1.列式存储</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-%E8%A1%8C%E5%BC%8F%E5%AD%98%E5%82%A8"><span class="nav-number">4.2.</span> <span class="nav-text">2.行式存储</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%9B%9B%E3%80%81hive%E6%96%87%E4%BB%B6%E6%A0%BC%E5%BC%8F%E9%85%8D%E7%BD%AE%E5%AE%9E%E7%8E%B0%E4%BB%A5%E5%8F%8A%E5%AF%B9%E6%AF%94"><span class="nav-number">5.</span> <span class="nav-text">四、hive文件格式配置实现以及对比</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-%E5%88%9B%E5%BB%BA%E5%8E%9F%E5%A7%8B%E8%A1%A8%E9%BB%98%E8%AE%A4TEXTFILE"><span class="nav-number">5.1.</span> <span class="nav-text">1.创建原始表默认TEXTFILE</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-%E5%88%9B%E5%BB%BA%E4%BB%A5-SEQUENCEFILE%E6%A0%BC%E5%BC%8F%E5%82%A8%E5%AD%98%E7%9A%84%E8%A1%A8g6-access-seq%EF%BC%8C%E5%B9%B6%E4%BD%BF%E7%94%A8g6-access%E4%B8%AD%E7%9A%84%E6%95%B0%E6%8D%AE"><span class="nav-number">5.2.</span> <span class="nav-text">2.创建以 SEQUENCEFILE格式储存的表g6_access_seq，并使用g6_access中的数据</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-%E5%88%9B%E5%BB%BARCFILE%E6%95%B0%E6%8D%AE%E5%AD%98%E5%82%A8%E6%A0%BC%E5%BC%8F%E8%A1%A8%EF%BC%8C%EF%BC%8C%E5%B9%B6%E4%BD%BF%E7%94%A8g6-access%E4%B8%AD%E7%9A%84%E6%95%B0%E6%8D%AE"><span class="nav-number">5.3.</span> <span class="nav-text">3.创建RCFILE数据存储格式表，，并使用g6_access中的数据</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-%E5%88%9B%E5%BB%BAORCFILE%E6%95%B0%E6%8D%AE%E5%AD%98%E5%82%A8%E6%A0%BC%E5%BC%8F%E8%A1%A8%EF%BC%8C%EF%BC%8C%E5%B9%B6%E4%BD%BF%E7%94%A8g6-access%E4%B8%AD%E7%9A%84%E6%95%B0%E6%8D%AE%EF%BC%8C%E9%BB%98%E8%AE%A4%E6%98%AF%E4%BD%BF%E7%94%A8zlib%E5%8E%8B%E7%BC%A9%EF%BC%8C%E6%94%AF%E6%8C%81zlib%E5%92%8Csnappy"><span class="nav-number">5.4.</span> <span class="nav-text">4.创建ORCFILE数据存储格式表，，并使用g6_access中的数据，默认是使用zlib压缩，支持zlib和snappy</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-%E5%88%9B%E5%BB%BAORCFILE%E6%95%B0%E6%8D%AE%E5%AD%98%E5%82%A8%E6%A0%BC%E5%BC%8F%E8%A1%A8%EF%BC%8C%E4%B8%8D%E4%BD%BF%E7%94%A8%E5%8E%8B%E7%BC%A9%EF%BC%8C%E5%B9%B6%E4%BD%BF%E7%94%A8g6-access%E4%B8%AD%E7%9A%84%E6%95%B0%E6%8D%AE"><span class="nav-number">5.5.</span> <span class="nav-text">5.创建ORCFILE数据存储格式表，不使用压缩，并使用g6_access中的数据</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-%E5%88%9B%E5%BB%BAPARQUET%E6%95%B0%E6%8D%AE%E5%AD%98%E5%82%A8%E6%A0%BC%E5%BC%8F%E8%A1%A8%EF%BC%8C%E4%B8%8D%E4%BD%BF%E7%94%A8%E5%8E%8B%E7%BC%A9%EF%BC%8C%E5%B9%B6%E4%BD%BF%E7%94%A8g6-access%E4%B8%AD%E7%9A%84%E6%95%B0%E6%8D%AE"><span class="nav-number">5.6.</span> <span class="nav-text">6.创建PARQUET数据存储格式表，不使用压缩，并使用g6_access中的数据</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#7-%E5%88%9B%E5%BB%BAPARQUET%E6%95%B0%E6%8D%AE%E5%AD%98%E5%82%A8%E6%A0%BC%E5%BC%8F%E8%A1%A8%EF%BC%8C%E8%AE%BE%E7%BD%AE%E4%BD%BF%E7%94%A8gzip%E5%8E%8B%E7%BC%A9%E6%A0%BC%E5%BC%8F%EF%BC%8C%E5%B9%B6%E4%BD%BF%E7%94%A8g6-access%E4%B8%AD%E7%9A%84%E6%95%B0%E6%8D%AE"><span class="nav-number">5.7.</span> <span class="nav-text">7.创建PARQUET数据存储格式表，设置使用gzip压缩格式，并使用g6_access中的数据</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#8-%E5%B0%8F%E7%BB%93"><span class="nav-number">5.8.</span> <span class="nav-text">8.小结</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%BA%94%E3%80%81%E8%AF%BB%E5%8F%96%E6%95%B0%E6%8D%AE%E9%87%8F%E5%AF%B9%E6%AF%94"><span class="nav-number">6.</span> <span class="nav-text">五、读取数据量对比</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%85%AD%E3%80%81%E6%80%BB%E7%BB%93"><span class="nav-number">7.</span> <span class="nav-text">六、总结</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Doing-the-things-you-want-to-do"><span class="nav-number">7.1.</span> <span class="nav-text">Doing the things you want to do.</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%B8%80%E3%80%81hive%E4%B8%AD%E7%9A%84file-format"><span class="nav-number">1.</span> <span class="nav-text">一、hive中的file_format</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%BA%8C%E3%80%81%E8%A1%8C%E5%BC%8F%E5%AD%98%E5%82%A8%E4%B8%8E%E5%88%97%E5%BC%8F%E5%AD%98%E5%82%A8"><span class="nav-number">2.</span> <span class="nav-text">二、行式存储与列式存储</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%BB%93%E8%AE%BA%EF%BC%9A%E7%94%B1%E4%B8%8A%E5%9B%BE%E5%8F%AF%E7%9F%A5"><span class="nav-number">3.</span> <span class="nav-text">结论：由上图可知</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%B8%89%E3%80%81%E4%BC%98%E7%BC%BA%E7%82%B9"><span class="nav-number">4.</span> <span class="nav-text">三、优缺点</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-%E5%88%97%E5%BC%8F%E5%AD%98%E5%82%A8"><span class="nav-number">4.1.</span> <span class="nav-text">1.列式存储</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-%E8%A1%8C%E5%BC%8F%E5%AD%98%E5%82%A8"><span class="nav-number">4.2.</span> <span class="nav-text">2.行式存储</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%9B%9B%E3%80%81hive%E6%96%87%E4%BB%B6%E6%A0%BC%E5%BC%8F%E9%85%8D%E7%BD%AE%E5%AE%9E%E7%8E%B0%E4%BB%A5%E5%8F%8A%E5%AF%B9%E6%AF%94"><span class="nav-number">5.</span> <span class="nav-text">四、hive文件格式配置实现以及对比</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-%E5%88%9B%E5%BB%BA%E5%8E%9F%E5%A7%8B%E8%A1%A8%E9%BB%98%E8%AE%A4TEXTFILE"><span class="nav-number">5.1.</span> <span class="nav-text">1.创建原始表默认TEXTFILE</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-%E5%88%9B%E5%BB%BA%E4%BB%A5-SEQUENCEFILE%E6%A0%BC%E5%BC%8F%E5%82%A8%E5%AD%98%E7%9A%84%E8%A1%A8g6-access-seq%EF%BC%8C%E5%B9%B6%E4%BD%BF%E7%94%A8g6-access%E4%B8%AD%E7%9A%84%E6%95%B0%E6%8D%AE"><span class="nav-number">5.2.</span> <span class="nav-text">2.创建以 SEQUENCEFILE格式储存的表g6_access_seq，并使用g6_access中的数据</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-%E5%88%9B%E5%BB%BARCFILE%E6%95%B0%E6%8D%AE%E5%AD%98%E5%82%A8%E6%A0%BC%E5%BC%8F%E8%A1%A8%EF%BC%8C%EF%BC%8C%E5%B9%B6%E4%BD%BF%E7%94%A8g6-access%E4%B8%AD%E7%9A%84%E6%95%B0%E6%8D%AE"><span class="nav-number">5.3.</span> <span class="nav-text">3.创建RCFILE数据存储格式表，，并使用g6_access中的数据</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-%E5%88%9B%E5%BB%BAORCFILE%E6%95%B0%E6%8D%AE%E5%AD%98%E5%82%A8%E6%A0%BC%E5%BC%8F%E8%A1%A8%EF%BC%8C%EF%BC%8C%E5%B9%B6%E4%BD%BF%E7%94%A8g6-access%E4%B8%AD%E7%9A%84%E6%95%B0%E6%8D%AE%EF%BC%8C%E9%BB%98%E8%AE%A4%E6%98%AF%E4%BD%BF%E7%94%A8zlib%E5%8E%8B%E7%BC%A9%EF%BC%8C%E6%94%AF%E6%8C%81zlib%E5%92%8Csnappy"><span class="nav-number">5.4.</span> <span class="nav-text">4.创建ORCFILE数据存储格式表，，并使用g6_access中的数据，默认是使用zlib压缩，支持zlib和snappy</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-%E5%88%9B%E5%BB%BAORCFILE%E6%95%B0%E6%8D%AE%E5%AD%98%E5%82%A8%E6%A0%BC%E5%BC%8F%E8%A1%A8%EF%BC%8C%E4%B8%8D%E4%BD%BF%E7%94%A8%E5%8E%8B%E7%BC%A9%EF%BC%8C%E5%B9%B6%E4%BD%BF%E7%94%A8g6-access%E4%B8%AD%E7%9A%84%E6%95%B0%E6%8D%AE"><span class="nav-number">5.5.</span> <span class="nav-text">5.创建ORCFILE数据存储格式表，不使用压缩，并使用g6_access中的数据</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-%E5%88%9B%E5%BB%BAPARQUET%E6%95%B0%E6%8D%AE%E5%AD%98%E5%82%A8%E6%A0%BC%E5%BC%8F%E8%A1%A8%EF%BC%8C%E4%B8%8D%E4%BD%BF%E7%94%A8%E5%8E%8B%E7%BC%A9%EF%BC%8C%E5%B9%B6%E4%BD%BF%E7%94%A8g6-access%E4%B8%AD%E7%9A%84%E6%95%B0%E6%8D%AE"><span class="nav-number">5.6.</span> <span class="nav-text">6.创建PARQUET数据存储格式表，不使用压缩，并使用g6_access中的数据</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#7-%E5%88%9B%E5%BB%BAPARQUET%E6%95%B0%E6%8D%AE%E5%AD%98%E5%82%A8%E6%A0%BC%E5%BC%8F%E8%A1%A8%EF%BC%8C%E8%AE%BE%E7%BD%AE%E4%BD%BF%E7%94%A8gzip%E5%8E%8B%E7%BC%A9%E6%A0%BC%E5%BC%8F%EF%BC%8C%E5%B9%B6%E4%BD%BF%E7%94%A8g6-access%E4%B8%AD%E7%9A%84%E6%95%B0%E6%8D%AE"><span class="nav-number">5.7.</span> <span class="nav-text">7.创建PARQUET数据存储格式表，设置使用gzip压缩格式，并使用g6_access中的数据</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#8-%E5%B0%8F%E7%BB%93"><span class="nav-number">5.8.</span> <span class="nav-text">8.小结</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%BA%94%E3%80%81%E8%AF%BB%E5%8F%96%E6%95%B0%E6%8D%AE%E9%87%8F%E5%AF%B9%E6%AF%94"><span class="nav-number">6.</span> <span class="nav-text">五、读取数据量对比</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%85%AD%E3%80%81%E6%80%BB%E7%BB%93"><span class="nav-number">7.</span> <span class="nav-text">六、总结</span></a></li></ol></div>
             
 
           </div>

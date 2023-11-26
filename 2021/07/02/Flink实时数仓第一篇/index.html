@@ -92,7 +92,7 @@
 <meta property="og:image" content="https://chenzuoli.github.io/images/%E7%A8%8B%E5%BA%8F%E5%91%98%E5%86%99%E4%B9%A6%E5%85%AC%E4%BC%97%E5%8F%B7%E4%BA%8C%E7%BB%B4%E7%A0%81.jpg">
 <meta property="og:image" content="https://chenzuoli.github.io/images/%E7%94%B5%E5%B7%B4%E5%85%8B%E5%AE%A0%E7%89%A9Pets%E5%85%AC%E4%BC%97%E5%8F%B7%E4%BA%8C%E7%BB%B4%E7%A0%81.png">
 <meta property="article:published_time" content="2021-07-02T15:56:08.000Z">
-<meta property="article:modified_time" content="2023-11-25T04:33:47.894Z">
+<meta property="article:modified_time" content="2021-07-02T15:56:08.000Z">
 <meta property="article:author" content="Lee">
 <meta property="article:tag" content="数据仓库">
 <meta property="article:tag" content="数据湖">
@@ -376,8 +376,8 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2023-11-25T12:33:47+08:00">
-                2023-11-25
+              <time title="更新于" itemprop="dateModified" datetime="2021-07-02T23:56:08+08:00">
+                2021-07-02
               </time>
             
           </span>
@@ -395,8 +395,30 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E5%AE%9E%E6%97%B6%E6%95%B0%E4%BB%93/" itemprop="url" rel="index">
-                    <span itemprop="name">实时数仓</span>
+                  <a href="/categories/%E5%A4%A7%E6%95%B0%E6%8D%AE/" itemprop="url" rel="index">
+                    <span itemprop="name">大数据</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E5%A4%A7%E6%95%B0%E6%8D%AE/%E6%95%B0%E6%8D%AE%E4%BB%93%E5%BA%93/" itemprop="url" rel="index">
+                    <span itemprop="name">数据仓库</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E5%A4%A7%E6%95%B0%E6%8D%AE/%E6%95%B0%E6%8D%AE%E4%BB%93%E5%BA%93/Flink/" itemprop="url" rel="index">
+                    <span itemprop="name">Flink</span>
                   </a>
                 </span>
 
@@ -451,24 +473,32 @@
         <p>最近在做实时数仓相关工作，了解到一些皮毛，但是大致方向还是对的，目前有一些眉目和进展，就跟大家讲讲。今天讲讲实时数据接入吧，怎么将数据实时接入到数据湖或者数据仓库。<br><img src="/2021/07/02/Flink%E5%AE%9E%E6%97%B6%E6%95%B0%E4%BB%93%E7%AC%AC%E4%B8%80%E7%AF%87/flink-header-logo.svg" alt="flink_logo"></p>
 <span id="more"></span>
 
-<p>来看看流程图：<br><img src="/2021/07/02/Flink%E5%AE%9E%E6%97%B6%E6%95%B0%E4%BB%93%E7%AC%AC%E4%B8%80%E7%AF%87/flink_pump_data.png" alt="flink数据接入"><br>1.为什么选择Hbase中转，而不是直接入Hive？<br>因为Hive不支持更新操作，Hbase可以，当然ES也可以作为中转组件<br>2.oracle接入为什么这么复杂？<br>因为flink对oracle cdc的支持还在测试中，flink cdc其实封装了debezium和kafka，对于debezium接入oracle数据，还在等debezium出稳定版的oracle接入。我们需要把kafka的数据转换成flink识别的change log，然后才能使用Hbase connector，在hbase中做更新删除操作。<br>3.不支持的cdc数据源怎么办？<br>自定义source，只要数据进入到了kafka，一切都好说。</p>
-<p>实时数据接入，目标就是将业务库（mysql oracle mongo postgresql等）数据库中的数据拉取到数据仓库中，供实时计算使用，那么如何接入呢，flink提供了许多方式，且看：</p>
+<p>来看看流程图：<br><img src="/2021/07/02/Flink%E5%AE%9E%E6%97%B6%E6%95%B0%E4%BB%93%E7%AC%AC%E4%B8%80%E7%AF%87/flink_pump_data.png" alt="flink数据接入"></p>
 <ol>
+<li><p>为什么选择Hbase中转，而不是直接入Hive？<br>因为Hive不支持更新操作，Hbase可以，当然ES也可以作为中转组件</p>
+</li>
+<li><p>oracle接入为什么这么复杂？<br>因为flink对oracle cdc的支持还在测试中，flink cdc其实封装了debezium和kafka，对于debezium接入oracle数据，还在等debezium出稳定版的oracle接入。我们需要把kafka的数据转换成flink识别的change log，然后才能使用Hbase connector，在hbase中做更新删除操作。</p>
+</li>
+<li><p>不支持的cdc数据源怎么办？<br>自定义source，只要数据进入到了kafka，一切都好说。</p>
+</li>
+</ol>
+<p>实时数据接入，目标就是将业务库（mysql oracle mongo postgresql等）数据库中的数据拉取到数据仓库中，供实时计算使用，那么如何接入呢，flink提供了许多方式，且看：</p>
+<ul>
 <li>cdc：sql方式，但是目前只支持mysql和pg，其他数据库正在开发测试中；</li>
 <li>Api：通过写代码方式接入数据，可以接入许多数据库、消息组件的数据，例如jdbc方式连接的数据库，kafka，rabbitmq等；</li>
 <li>自定义source：实现接口SourceFunction</li>
-</ol>
+</ul>
 <p>cdc方式全程sql，即可接入到StreamTable中。<br>一般大公司，为了降低开发成本，提高效率，都希望使用sql方式完成工作，但是flink sql支持不太完善，许多功能需要自己去实现，下面来看看其他数据源如何接入：</p>
-<ol>
+<ul>
 <li>比如我们的数据源是从oracle来的，flink暂不支持oracle方式的cdc，那么可以通过oracle ogg将update delete insert类型的change log，写入kafka，然后将kafka中的message，通过udf、udtf方式转化成flink识别的changelog，格式为{“data”: {}, “op”: “”}，op有4中类型：+I,-U,+U,-D</li>
 <li>kafka：kafka connector</li>
 <li>changelog：kafka changelog connector</li>
 <li>hbase：hbase connector，目前hbase只支持1.4和2.2版本</li>
 <li>hive：hive connector</li>
 <li>es：es connector，不支持source，只支持sink</li>
-</ol>
+</ul>
 <p>相关参考链接：<br><a target="_blank" rel="noopener" href="https://ci.apache.org/projects/flink/flink-docs-release-1.13/docs/connectors/table/overview/">flink_table_connector</a></p>
-<p>如有什么问题，欢迎联系我：<br>微信：PAIN_7771<br>qq: 2536888617<br>邮箱：<a href="mailto:&#99;&#x68;&#x65;&#x6e;&#x7a;&#x75;&#x6f;&#x6c;&#x69;&#55;&#48;&#57;&#x40;&#49;&#54;&#51;&#x2e;&#x63;&#x6f;&#109;">&#99;&#x68;&#x65;&#x6e;&#x7a;&#x75;&#x6f;&#x6c;&#x69;&#55;&#48;&#57;&#x40;&#49;&#54;&#51;&#x2e;&#x63;&#x6f;&#109;</a></p>
+<p>如有什么问题，欢迎联系我：<br>微信：PAIN_7771<br>qq: 2536888617<br>邮箱：<a href="mailto:&#x63;&#x68;&#x65;&#x6e;&#122;&#117;&#x6f;&#x6c;&#105;&#x37;&#48;&#57;&#64;&#x31;&#54;&#51;&#x2e;&#x63;&#111;&#109;">&#x63;&#x68;&#x65;&#x6e;&#122;&#117;&#x6f;&#x6c;&#105;&#x37;&#48;&#57;&#64;&#x31;&#54;&#51;&#x2e;&#x63;&#111;&#109;</a></p>
 <hr>
 <p><b>永远保持思考，居安思危。</b></p>
 <p>欢迎关注微信公众号：【程序员写书】<br><img src="/images/%E7%A8%8B%E5%BA%8F%E5%91%98%E5%86%99%E4%B9%A6%E5%85%AC%E4%BC%97%E5%8F%B7%E4%BA%8C%E7%BB%B4%E7%A0%81.jpg" alt="程序员写书"></p>
@@ -655,7 +685,7 @@
               
                 <a href="/archives/%7C%7C%20archive">
               
-                  <span class="site-state-item-count">379</span>
+                  <span class="site-state-item-count">380</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -666,7 +696,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">128</span>
+                  <span class="site-state-item-count">168</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -677,7 +707,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">429</span>
+                  <span class="site-state-item-count">430</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
