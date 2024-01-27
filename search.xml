@@ -15389,4 +15389,17 @@ API
         <tag>programming</tag>
       </tags>
   </entry>
+  <entry>
+    <title>flask_migrate失败</title>
+    <url>/2024/01/27/flask-migrate%E5%A4%B1%E8%B4%A5/</url>
+    <content><![CDATA[<p>ERROR [flask_migrate] Error: Can’t locate revision identified by ‘a29c5ff8b842’</p>
+<span id="more"></span>
+
+<p>解决办法：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">python app.py db revision --rev-id a29c5ff8b842  </span><br><span class="line">python app.py db migrate  </span><br><span class="line">python app.py db upgrade</span><br></pre></td></tr></table></figure>
+
+<hr>
+<p>好记性不如烂笔头。</p>
+]]></content>
+  </entry>
 </search>
