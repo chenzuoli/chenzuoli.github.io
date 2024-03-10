@@ -700,7 +700,8 @@
 <p><b>路漫漫其修远兮</b></p>
 ]]></content>
       <categories>
-        <category>cms</category>
+        <category>CMS</category>
+        <category>wagtail</category>
       </categories>
       <tags>
         <tag>bootstrap</tag>
@@ -3718,7 +3719,8 @@
 <p>一起学习，一起进步。<br></p>
 ]]></content>
       <categories>
-        <category>node</category>
+        <category>前端</category>
+        <category>Node</category>
       </categories>
       <tags>
         <tag>express</tag>
@@ -6139,7 +6141,8 @@
 <p>一起学习，一起进步。<br></p>
 ]]></content>
       <categories>
-        <category>django-cms</category>
+        <category>CMS</category>
+        <category>Django-CMS</category>
       </categories>
       <tags>
         <tag>django-cms</tag>
@@ -6161,7 +6164,8 @@
 <p>一起学习，一起进步。<br></p>
 ]]></content>
       <categories>
-        <category>cms</category>
+        <category>CMS</category>
+        <category>Django-CMS</category>
       </categories>
       <tags>
         <tag>django-cms</tag>
@@ -6918,7 +6922,8 @@
 <p>一起学习，一起进步。<br></p>
 ]]></content>
       <categories>
-        <category>vue</category>
+        <category>前端</category>
+        <category>VUE</category>
       </categories>
       <tags>
         <tag>mac</tag>
@@ -7206,7 +7211,8 @@
 <p>一起学习，一起进步。<br></p>
 ]]></content>
       <categories>
-        <category>npm</category>
+        <category>前端</category>
+        <category>NPM</category>
       </categories>
       <tags>
         <tag>npm</tag>
@@ -7597,7 +7603,8 @@
 </ol>
 ]]></content>
       <categories>
-        <category>vue</category>
+        <category>前端</category>
+        <category>VUE</category>
       </categories>
       <tags>
         <tag>vue3</tag>
@@ -7642,7 +7649,8 @@
 <p>一起学习，一起进步。<br></p>
 ]]></content>
       <categories>
-        <category>vue</category>
+        <category>前端</category>
+        <category>VUE</category>
       </categories>
       <tags>
         <tag>vue</tag>
@@ -7663,9 +7671,13 @@
     <title>wagtail创建初始用户</title>
     <url>/2023/06/15/wagtail%E5%88%9B%E5%BB%BA%E5%88%9D%E5%A7%8B%E7%94%A8%E6%88%B7/</url>
     <content><![CDATA[<p>python manage.py createsuperuser</p>
+<hr>
+<p><b>好记性不如烂笔头</b></p>
+<p>我是作立，干就完了，不迷茫。</p>
 ]]></content>
       <categories>
-        <category>wagtail</category>
+        <category>CMS</category>
+        <category>Wagtail</category>
       </categories>
       <tags>
         <tag>wagtail</tag>
@@ -7695,7 +7707,8 @@
 <p>by Chenzuoli.</p>
 ]]></content>
       <categories>
-        <category>cms</category>
+        <category>CMS</category>
+        <category>Wagtail</category>
       </categories>
       <tags>
         <tag>wagtail</tag>
@@ -10042,7 +10055,8 @@ API
 <p>我是作立，干就完了，不迷茫。</p>
 ]]></content>
       <categories>
-        <category>cms</category>
+        <category>CMS</category>
+        <category>Wagtail</category>
       </categories>
       <tags>
         <tag>wagtail</tag>
@@ -13746,6 +13760,7 @@ API
 <p>一起学习，一起进步。<br></p>
 ]]></content>
       <categories>
+        <category>世界排名</category>
         <category>世界国家</category>
       </categories>
       <tags>
@@ -14871,7 +14886,8 @@ API
 <p>解决办法：</p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;script&gt;</span><br><span class="line">$(&quot;#submitBtn&quot;).on(&quot;click&quot;, function () &#123;</span><br><span class="line">    $(&#x27;#myModal&#x27;).modal(&#x27;hide&#x27;);</span><br><span class="line">    $(&#x27;modal-body&#x27;).removeClass(&#x27;modal-open&#x27;);</span><br><span class="line">    $(&#x27;.modal-backdrop&#x27;).remove();</span><br><span class="line">&#125;);&lt;/script&gt;</span><br></pre></td></tr></table></figure>]]></content>
       <categories>
-        <category>http</category>
+        <category>前端</category>
+        <category>HTML</category>
       </categories>
       <tags>
         <tag>bootstrap</tag>
