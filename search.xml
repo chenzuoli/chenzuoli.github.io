@@ -14,7 +14,7 @@
 <p>一起学习，一起进步。<br></p>
 ]]></content>
       <categories>
-        <category>Other</category>
+        <category>其他</category>
         <category>世界排名</category>
       </categories>
       <tags>
@@ -127,7 +127,7 @@
 <p>一起学习，一起进步。<br></p>
 ]]></content>
       <categories>
-        <category>Other</category>
+        <category>其他</category>
         <category>世界排名</category>
       </categories>
       <tags>
@@ -150,7 +150,7 @@
 <p>一起学习，一起进步。<br></p>
 ]]></content>
       <categories>
-        <category>Other</category>
+        <category>其他</category>
         <category>世界排名</category>
       </categories>
       <tags>
@@ -239,7 +239,7 @@
 <p><strong>Keep Learning English</strong></p>
 ]]></content>
       <categories>
-        <category>Other</category>
+        <category>其他</category>
         <category>English</category>
       </categories>
       <tags>
@@ -318,7 +318,7 @@
 <p>一起学习，一起进步。<br></p>
 ]]></content>
       <categories>
-        <category>other</category>
+        <category>其他</category>
         <category>电影</category>
       </categories>
       <tags>
@@ -668,7 +668,7 @@
 <p>一起学习，一起进步。<br></p>
 ]]></content>
       <categories>
-        <category>Other</category>
+        <category>其他</category>
         <category>世界排名</category>
       </categories>
       <tags>
@@ -3074,6 +3074,8 @@
 <p>一起学习，一起进步。<br></p>
 ]]></content>
       <categories>
+        <category>大数据</category>
+        <category>数据仓库</category>
         <category>OLAP</category>
       </categories>
       <tags>
@@ -3084,19 +3086,24 @@
   <entry>
     <title>日本近几年的经济数据</title>
     <url>/2018/12/26/Japan%20Economy%20Data/</url>
-    <content><![CDATA[<p>Japan Economy Data</p>
+    <content><![CDATA[<p>Japan Economy Data 日本经济数据 2018</p>
 <span id="more"></span>
-<p>![日本近几年经济数据](Japan Economy Data&#x2F;japan_economy_data.jpg)</p>
-<h2 id="你看到了什么？"><a href="#你看到了什么？" class="headerlink" title="你看到了什么？"></a>你看到了什么？</h2><p><b>书山有路勤为径，学海无涯苦作舟。</b></p>
+
+<p>![日本近几年经济数据](Japan\ Economy\ Data&#x2F;japan_economy_data.jpg)</p>
+<p>你看到了什么？</p>
+<hr>
+<p><b>书山有路勤为径，学海无涯苦作舟。</b></p>
 <p>欢迎关注微信公众号：【程序员写书】<br><img src="/images/%E7%A8%8B%E5%BA%8F%E5%91%98%E5%86%99%E4%B9%A6%E5%85%AC%E4%BC%97%E5%8F%B7%E4%BA%8C%E7%BB%B4%E7%A0%81.jpg" alt="程序员写书"></p>
 <p>喜欢宠物的朋友可以关注：【电巴克宠物Pets】<br><img src="/images/%E7%94%B5%E5%B7%B4%E5%85%8B%E5%AE%A0%E7%89%A9Pets%E5%85%AC%E4%BC%97%E5%8F%B7%E4%BA%8C%E7%BB%B4%E7%A0%81.png" alt="电巴克宠物"></p>
 <p>一起学习，一起进步。<br></p>
 ]]></content>
       <categories>
+        <category>投资</category>
         <category>经济</category>
       </categories>
       <tags>
         <tag>日本</tag>
+        <tag>经济</tag>
       </tags>
   </entry>
   <entry>
@@ -4001,6 +4008,7 @@
 <p>好了，我是Lee，一枚数据开发，不定期更新一下博客，希望一直这样下去，有东西写。</p>
 ]]></content>
       <categories>
+        <category>数据库</category>
         <category>存储过程</category>
       </categories>
       <tags>
@@ -4423,7 +4431,9 @@
 <p>一起学习，一起进步。<br></p>
 ]]></content>
       <categories>
-        <category>Web</category>
+        <category>后端</category>
+        <category>JAVA</category>
+        <category>SpringBoot</category>
       </categories>
       <tags>
         <tag>Springboot</tag>
@@ -5549,6 +5559,7 @@
 ]]></content>
       <categories>
         <category>数据库</category>
+        <category>C3p0</category>
       </categories>
       <tags>
         <tag>数据库</tag>
@@ -5583,7 +5594,8 @@
 <p>一起学习，一起进步。<br></p>
 ]]></content>
       <categories>
-        <category>centos</category>
+        <category>Linux</category>
+        <category>Centos</category>
       </categories>
       <tags>
         <tag>php</tag>
@@ -5611,6 +5623,7 @@
 <p>我是chenzuoli，欢迎交流。</p>
 ]]></content>
       <categories>
+        <category>AI</category>
         <category>AI大模型</category>
       </categories>
       <tags>
@@ -6576,6 +6589,7 @@
 <p>好记性不如烂笔头。</p>
 ]]></content>
       <categories>
+        <category>AI</category>
         <category>huggingface</category>
       </categories>
       <tags>
@@ -6596,6 +6610,7 @@
 <p><b>好记性不如烂笔头。&lt;&#x2F;&gt;</b></p>
 ]]></content>
       <categories>
+        <category>前端</category>
         <category>HTML</category>
       </categories>
       <tags>
@@ -6636,13 +6651,15 @@
 <p>备注：本工具类使用的环境：hbase1.4.1	jdk1.8		hadoop3.0</p>
 <h1 id="maven项目添加依赖"><a href="#maven项目添加依赖" class="headerlink" title="maven项目添加依赖"></a>maven项目添加依赖</h1><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;!--hadoop/hbase都要依赖(RPC通信)，注意protobuf-java的版本，hbase1.4.1自带的protobuf-java版本是2.5.0的，所以如果你的程序是跑在服务器上的，需要跟服务器一致，不然会出现NoClsssFoundError--&gt;</span><br><span class="line">&lt;!--https://mvnrepository.com/artifact/com.google.protobuf/protobuf-java--&gt;</span><br><span class="line">&lt;dependency&gt;</span><br><span class="line">	&lt;groupId&gt;com.google.protobuf&lt;/groupId&gt;</span><br><span class="line">	&lt;artifactId&gt;protobuf-java&lt;/artifactId&gt;</span><br><span class="line">	&lt;version&gt;3.5.1&lt;/version&gt;</span><br><span class="line">&lt;/dependency&gt;</span><br><span class="line">&lt;!--hbase--&gt;</span><br><span class="line">&lt;dependency&gt;</span><br><span class="line">	&lt;groupId&gt;org.apache.zookeeper&lt;/groupId&gt;</span><br><span class="line">	&lt;artifactId&gt;zookeeper&lt;/artifactId&gt;</span><br><span class="line">	&lt;version&gt;$&#123;zookeeper.version&#125;&lt;/version&gt;</span><br><span class="line">&lt;/dependency&gt;</span><br><span class="line">&lt;dependency&gt;</span><br><span class="line">	&lt;groupId&gt;org.apache.hbase&lt;/groupId&gt;</span><br><span class="line">	&lt;artifactId&gt;hbase-client&lt;/artifactId&gt;</span><br><span class="line">	&lt;version&gt;$&#123;hbase.version&#125;&lt;/version&gt;</span><br><span class="line">&lt;/dependency&gt;</span><br><span class="line">&lt;dependency&gt;</span><br><span class="line">	&lt;groupId&gt;org.apache.hbase&lt;/groupId&gt;</span><br><span class="line">	&lt;artifactId&gt;hbase-common&lt;/artifactId&gt;</span><br><span class="line">	&lt;version&gt;$&#123;hbase.version&#125;&lt;/version&gt;</span><br><span class="line">&lt;/dependency&gt;</span><br><span class="line">&lt;!-- https://mvnrepository.com/artifact/org.apache.hbase/hbase --&gt;</span><br><span class="line">&lt;dependency&gt;</span><br><span class="line">	&lt;groupId&gt;org.apache.hbase&lt;/groupId&gt;</span><br><span class="line">	&lt;artifactId&gt;hbase&lt;/artifactId&gt;</span><br><span class="line">	&lt;version&gt;1.4.1&lt;/version&gt;</span><br><span class="line">	&lt;type&gt;pom&lt;/type&gt;</span><br><span class="line">&lt;/dependency&gt;</span><br><span class="line">&lt;!-- https://mvnrepository.com/artifact/org.apache.hbase/hbase-spark --&gt;</span><br><span class="line">&lt;dependency&gt;</span><br><span class="line">	&lt;groupId&gt;org.apache.hbase&lt;/groupId&gt;</span><br><span class="line">	&lt;artifactId&gt;hbase-spark&lt;/artifactId&gt;</span><br><span class="line">	&lt;version&gt;1.2.0-cdh5.14.0&lt;/version&gt;</span><br><span class="line">&lt;/dependency&gt;</span><br><span class="line">&lt;!-- https://mvnrepository.com/artifact/org.apache.hbase/hbase-server --&gt;</span><br><span class="line">&lt;dependency&gt;</span><br><span class="line">	&lt;groupId&gt;org.apache.hbase&lt;/groupId&gt;</span><br><span class="line">	&lt;artifactId&gt;hbase-server&lt;/artifactId&gt;</span><br><span class="line">	&lt;version&gt;1.4.1&lt;/version&gt;</span><br><span class="line">&lt;/dependency&gt;</span><br><span class="line">&lt;!-- https://mvnrepository.com/artifact/fastutil/fastutil 这里使用fastutil，对比javautil自带集合类，它的读写性能更优，尤其在大数据的情况下，所以当你写的mr或者spark程序，使用到fastutil，会提升一些性能--&gt;</span><br><span class="line">&lt;dependency&gt;</span><br><span class="line">	&lt;groupId&gt;fastutil&lt;/groupId&gt;</span><br><span class="line">	&lt;artifactId&gt;fastutil&lt;/artifactId&gt;</span><br><span class="line">	&lt;version&gt;5.0.5&lt;/version&gt;</span><br><span class="line">&lt;/dependency&gt;</span><br></pre></td></tr></table></figure>
 <h1 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h1><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">package com.pipilong.czl.util;</span><br><span class="line"></span><br><span class="line">import it.unimi.dsi.fastutil.objects.ObjectArrayList;</span><br><span class="line">import net.sf.json.JSONObject;</span><br><span class="line">import org.apache.hadoop.conf.Configuration;</span><br><span class="line">import org.apache.hadoop.hbase.HBaseConfiguration;</span><br><span class="line">import org.apache.hadoop.hbase.HColumnDescriptor;</span><br><span class="line">import org.apache.hadoop.hbase.HTableDescriptor;</span><br><span class="line">import org.apache.hadoop.hbase.TableName;</span><br><span class="line">import org.apache.hadoop.hbase.client.*;</span><br><span class="line">import org.apache.hadoop.hbase.filter.*;</span><br><span class="line">import org.apache.hadoop.hbase.io.compress.Compression;</span><br><span class="line">import org.apache.hadoop.hbase.util.Bytes;</span><br><span class="line">import org.apache.log4j.Logger;</span><br><span class="line"></span><br><span class="line">import java.io.BufferedReader;</span><br><span class="line">import java.io.FileInputStream;</span><br><span class="line">import java.io.IOException;</span><br><span class="line">import java.io.InputStreamReader;</span><br><span class="line">import java.util.*;</span><br><span class="line"></span><br><span class="line">/**</span><br><span class="line"> * User: chenzuoli</span><br><span class="line"> * Date: 2018/3/29</span><br><span class="line"> * Time: 9:20</span><br><span class="line"> * Description: Java操作HBase工具类</span><br><span class="line"> * Ps: Java HBase</span><br><span class="line"> */</span><br><span class="line"></span><br><span class="line">public class HBaseUtil &#123;</span><br><span class="line">    public static Configuration conf;</span><br><span class="line">    public static Connection connection;</span><br><span class="line">    public static Admin admin;</span><br><span class="line">    public static Table table;</span><br><span class="line">    private static Logger logger = Logger.getLogger(HBaseUtil.class);</span><br><span class="line"></span><br><span class="line">    static &#123;</span><br><span class="line">        try &#123;</span><br><span class="line">            conf = HBaseConfiguration.create();</span><br><span class="line">            conf.set(&quot;hbase.zookeeper.property.clientPort&quot;, &quot;2181&quot;);</span><br><span class="line">            conf.set(&quot;hbase.zookeeper.quorum&quot;, &quot;dev11,dev13,dev14&quot;);</span><br><span class="line">            connection = ConnectionFactory.createConnection(conf);</span><br><span class="line">            admin = connection.getAdmin();</span><br><span class="line">            logger.info(&quot;初始化hbase连接成功！&quot;);</span><br><span class="line">        &#125; catch (IOException e) &#123;</span><br><span class="line">            logger.error(&quot;初始化hbase连接异常！&quot;);</span><br><span class="line">            e.printStackTrace();</span><br><span class="line">        &#125; catch (Exception e) &#123;</span><br><span class="line">            logger.error(&quot;初始化hbase连接异常！&quot;);</span><br><span class="line">            e.printStackTrace();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    /**</span><br><span class="line">     * @Description: 建表，如果表存在，那么不创建。如果未指定列族名称，默认定义一个cf1</span><br><span class="line">     * @Param: [tableName, familyName]</span><br><span class="line">     * @return: boolean</span><br><span class="line">     * @Author: CHEN ZUOLI</span><br><span class="line">     * @Date: 2018/3/29</span><br><span class="line">     * @Time: 9:24</span><br><span class="line">     */</span><br><span class="line">    public static boolean createTable(String tableName, String familyName) &#123;</span><br><span class="line">        boolean flag = false;</span><br><span class="line">        if (familyName == null || familyName.length() == 0) &#123;</span><br><span class="line">            familyName = &quot;cf1&quot;;</span><br><span class="line">        &#125;</span><br><span class="line">        TableName tbl = TableName.valueOf(tableName);</span><br><span class="line">        Admin admin = null;</span><br><span class="line">        try &#123;</span><br><span class="line">            admin = connection.getAdmin();</span><br><span class="line">            if (admin.tableExists(tbl)) &#123;</span><br><span class="line">                logger.info(&quot;Table &quot; + tbl.getNameAsString() + &quot; is already exists!&quot;);</span><br><span class="line">                return flag;</span><br><span class="line">            &#125;</span><br><span class="line">            HTableDescriptor tableDescriptor = new HTableDescriptor(tbl);</span><br><span class="line">            tableDescriptor.addFamily(new HColumnDescriptor(familyName).setCompressionType(Compression.Algorithm.SNAPPY));</span><br><span class="line">            admin.createTable(tableDescriptor);</span><br><span class="line">            logger.info(&quot;Create table &quot; + tbl.getNameAsString() + &quot; success!&quot;);</span><br><span class="line">            flag = true;</span><br><span class="line">        &#125; catch (IOException e) &#123;</span><br><span class="line">            logger.error(&quot;Create table failed!&quot;);</span><br><span class="line">            e.printStackTrace();</span><br><span class="line">        &#125; catch (Exception e) &#123;</span><br><span class="line">            logger.error(&quot;Create table failed!&quot;);</span><br><span class="line">            e.printStackTrace();</span><br><span class="line">        &#125;</span><br><span class="line">        return flag;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    /**</span><br><span class="line">     * @Description: 插入一条数据到hbase</span><br><span class="line">     * @Param: [connection, tableName, rowkey, columnFamily, key, value]</span><br><span class="line">     * @return: void</span><br><span class="line">     * @Author: CHEN ZUOLI</span><br><span class="line">     * @Date: 2018/3/28</span><br><span class="line">     * @Time: 14:06</span><br><span class="line">     */</span><br><span class="line">    public static void insertOne(String tableName, String rowkey, String columnFamily, String key, String value) &#123;</span><br><span class="line">        Table table = null;</span><br><span class="line">        try &#123;</span><br><span class="line">            table = connection.getTable(TableName.valueOf(tableName));</span><br><span class="line">            Put put = new Put(Bytes.toBytes(rowkey));</span><br><span class="line">            put.addColumn(Bytes.toBytes(columnFamily), Bytes.toBytes(key), Bytes.toBytes(value));</span><br><span class="line">            table.put(put);</span><br><span class="line">        &#125; catch (IOException e) &#123;</span><br><span class="line">            logger.error(&quot;insert hbase failed: &quot; + rowkey + &quot;,&quot; + columnFamily + &quot;,&quot; + key + &quot;,&quot; + value);</span><br><span class="line">            e.printStackTrace();</span><br><span class="line">        &#125; catch (Exception e) &#123;</span><br><span class="line">            logger.error(&quot;insert hbase failed: &quot; + rowkey + &quot;,&quot; + columnFamily + &quot;,&quot; + key + &quot;,&quot; + value);</span><br><span class="line">            e.printStackTrace();</span><br><span class="line">        &#125; finally &#123;</span><br><span class="line">            closeTableAndResult(table, null);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    /**</span><br><span class="line">     * @Description: 批量插入数据到hbase</span><br><span class="line">     * @Param: [filePath, tableName, familyName]</span><br><span class="line">     * @return: void</span><br><span class="line">     * @Author: CHEN ZUOLI</span><br><span class="line">     * @Date: 2018/3/30</span><br><span class="line">     * @Time: 13:31</span><br><span class="line">     */</span><br><span class="line">    public static void insertBatch(String filePath, String tableName, String familyName) &#123;</span><br><span class="line">        ObjectArrayList&lt;Put&gt; puts = new ObjectArrayList&lt;&gt;();</span><br><span class="line">        Table table = null;</span><br><span class="line">        FileInputStream fis = null;</span><br><span class="line">        BufferedReader br = null;</span><br><span class="line">        try &#123;</span><br><span class="line">            table = connection.getTable(TableName.valueOf(tableName));</span><br><span class="line">            fis = new FileInputStream(filePath);</span><br><span class="line">            br = new BufferedReader(new InputStreamReader(fis));</span><br><span class="line">            String line = br.readLine();</span><br><span class="line">            while (line != null) &#123;</span><br><span class="line">                JSONObject lineJsonObject = JSONObject.fromObject(line);</span><br><span class="line">                String rowkey = MD5Utils.strToMd5_16(UUID.randomUUID().toString());</span><br><span class="line">                Set&lt;String&gt; keys = lineJsonObject.keySet();</span><br><span class="line">                Put put = new Put(Bytes.toBytes(rowkey));</span><br><span class="line">                for (String key : keys) &#123;</span><br><span class="line">                    put.addColumn(Bytes.toBytes(familyName), Bytes.toBytes(key), Bytes.toBytes(lineJsonObject.optString(key)));</span><br><span class="line">                    puts.add(put);</span><br><span class="line">                &#125;</span><br><span class="line">                line = br.readLine();</span><br><span class="line">            &#125;</span><br><span class="line">            table.put(puts);</span><br><span class="line">        &#125; catch (IOException e) &#123;</span><br><span class="line">            logger.error(&quot;insert batch data to hbase failed!&quot;);</span><br><span class="line">            e.printStackTrace();</span><br><span class="line">        &#125; catch (Exception e) &#123;</span><br><span class="line">            logger.error(&quot;insert batch data to hbase failed!&quot;);</span><br><span class="line">            e.printStackTrace();</span><br><span class="line">        &#125; finally &#123;</span><br><span class="line">            try &#123;</span><br><span class="line">                if (table != null) table.close();</span><br><span class="line">                if (fis != null) fis.close();</span><br><span class="line">                if (br != null) br.close();</span><br><span class="line">            &#125; catch (IOException e) &#123;</span><br><span class="line">                logger.error(&quot;close table or stream failed!&quot;);</span><br><span class="line">                e.printStackTrace();</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    /**</span><br><span class="line">     * @Description: 批量插入数据到hbase</span><br><span class="line">     * @Param: [rows, tableName, familyName]</span><br><span class="line">     * @return: void</span><br><span class="line">     * @Author: CHEN ZUOLI</span><br><span class="line">     * @Date: 2018/4/2</span><br><span class="line">     * @Time: 10:19</span><br><span class="line">     */</span><br><span class="line">    public static void insertBatch(List&lt;Map&lt;String, Object&gt;&gt; rows, String tableName, String familyName) &#123;</span><br><span class="line">        ObjectArrayList&lt;Put&gt; puts = new ObjectArrayList&lt;&gt;();</span><br><span class="line">        Table table = null;</span><br><span class="line">        try &#123;</span><br><span class="line">            table = connection.getTable(TableName.valueOf(tableName));</span><br><span class="line">            for (Map&lt;String, Object&gt; row : rows) &#123;</span><br><span class="line">                String rowkey = MD5Utils.strToMd5_16(UUID.randomUUID().toString());</span><br><span class="line">                Put put = new Put(Bytes.toBytes(rowkey));</span><br><span class="line">                for (Map.Entry&lt;String, Object&gt; kv : row.entrySet()) &#123;</span><br><span class="line">                    String key = kv.getKey();</span><br><span class="line">                    Object value = kv.getValue();</span><br><span class="line">                    if (value == null) &#123;</span><br><span class="line">                        put.addColumn(Bytes.toBytes(familyName), Bytes.toBytes(key), null);</span><br><span class="line">                    &#125; else &#123;</span><br><span class="line">                        put.addColumn(Bytes.toBytes(familyName), Bytes.toBytes(key), Bytes.toBytes(value.toString()));</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;</span><br><span class="line">                puts.add(put);</span><br><span class="line">            &#125;</span><br><span class="line">            table.put(puts);</span><br><span class="line">        &#125; catch (IOException e) &#123;</span><br><span class="line">            logger.error(&quot;insert batch data to hbase failed!&quot;);</span><br><span class="line">            e.printStackTrace();</span><br><span class="line">        &#125; catch (Exception e) &#123;</span><br><span class="line">            logger.error(&quot;insert batch data to hbase failed!&quot;);</span><br><span class="line">            e.printStackTrace();</span><br><span class="line">        &#125; finally &#123;</span><br><span class="line">            closeTableAndResult(table, null);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    /**</span><br><span class="line">     * @Description: 删除一张表</span><br><span class="line">     * @Param: [tableName]</span><br><span class="line">     * @return: boolean</span><br><span class="line">     * @Author: CHEN ZUOLI</span><br><span class="line">     * @Date: 2018/3/29</span><br><span class="line">     * @Time: 9:40</span><br><span class="line">     */</span><br><span class="line">    public static boolean dropTable(String tableName) &#123;</span><br><span class="line">        boolean flag = false;</span><br><span class="line">        try &#123;</span><br><span class="line">            admin.disableTable(TableName.valueOf(tableName));</span><br><span class="line">            admin.deleteTable(TableName.valueOf(tableName));</span><br><span class="line">            flag = true;</span><br><span class="line">        &#125; catch (IOException e) &#123;</span><br><span class="line">            logger.error(&quot;delete &quot; + tableName + &quot; table failed!&quot;);</span><br><span class="line">            e.printStackTrace();</span><br><span class="line">        &#125; catch (Exception e) &#123;</span><br><span class="line">            logger.error(&quot;delete &quot; + tableName + &quot; table failed!&quot;);</span><br><span class="line">            e.printStackTrace();</span><br><span class="line">        &#125;</span><br><span class="line">        return flag;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    /**</span><br><span class="line">     * @Description: 根据rowkey删除一条记录</span><br><span class="line">     * @Param: [tablename, rowkey]</span><br><span class="line">     * @return: boolean</span><br><span class="line">     * @Author: CHEN ZUOLI</span><br><span class="line">     * @Date: 2018/3/29</span><br><span class="line">     * @Time: 9:40</span><br><span class="line">     */</span><br><span class="line">    public static boolean deleteOneRowByRowkey(String tablename, String rowkey) &#123;</span><br><span class="line">        boolean flag = false;</span><br><span class="line">        try &#123;</span><br><span class="line">            Delete d = new Delete(rowkey.getBytes());</span><br><span class="line">            table.delete(d);</span><br><span class="line">            logger.info(&quot;delete row &quot; + rowkey + &quot; success!&quot;);</span><br><span class="line">            flag = true;</span><br><span class="line">        &#125; catch (IOException e) &#123;</span><br><span class="line">            logger.error(&quot;delete row &quot; + rowkey + &quot; failed!&quot;);</span><br><span class="line">            e.printStackTrace();</span><br><span class="line">        &#125; catch (Exception e) &#123;</span><br><span class="line">            logger.error(&quot;delete row &quot; + rowkey + &quot; failed!&quot;);</span><br><span class="line">            e.printStackTrace();</span><br><span class="line">        &#125;</span><br><span class="line">        return flag;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    /**</span><br><span class="line">     * @Description: 批量删除rowkey</span><br><span class="line">     * @Param: [tablename, rowkeyList]</span><br><span class="line">     * @return: boolean</span><br><span class="line">     * @Author: CHEN ZUOLI</span><br><span class="line">     * @Date: 2018/3/29</span><br><span class="line">     * @Time: 9:47</span><br><span class="line">     */</span><br><span class="line">    public static boolean deleteBatchRowByRowkey(String tablename, List&lt;String&gt; rowkeyList) &#123;</span><br><span class="line">        boolean flag = false;</span><br><span class="line">        ObjectArrayList&lt;Delete&gt; listDelete = new ObjectArrayList&lt;&gt;();</span><br><span class="line">        try &#123;</span><br><span class="line">            for (int i = 0; i &lt; rowkeyList.size(); i++) &#123;</span><br><span class="line">                Delete delete = new Delete(rowkeyList.get(i).getBytes());</span><br><span class="line">                listDelete.add(delete);</span><br><span class="line">            &#125;</span><br><span class="line">            table.delete(listDelete);</span><br><span class="line">            logger.info(&quot;delete row list &quot; + rowkeyList + &quot; success!&quot;);</span><br><span class="line">            flag = true;</span><br><span class="line">        &#125; catch (IOException e) &#123;</span><br><span class="line">            logger.error(&quot;delete row &quot; + rowkeyList + &quot; failed!&quot;);</span><br><span class="line">            e.printStackTrace();</span><br><span class="line">        &#125; catch (Exception e) &#123;</span><br><span class="line">            logger.error(&quot;delete row &quot; + rowkeyList + &quot; failed!&quot;);</span><br><span class="line">            e.printStackTrace();</span><br><span class="line">        &#125;</span><br><span class="line">        return flag;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    /**</span><br><span class="line">     * @Description: 查询表中所有数据</span><br><span class="line">     * @Param: [tableName]</span><br><span class="line">     * @return: List&lt;HashMap&lt;String,HashMap&lt;String,String&gt;&gt;&gt;</span><br><span class="line">     * @Author: CHEN ZUOLI</span><br><span class="line">     * @Date: 2018/3/29</span><br><span class="line">     * @Time: 9:51</span><br><span class="line">     */</span><br><span class="line">    public static List&lt;HashMap&lt;String, HashMap&lt;String, String&gt;&gt;&gt; queryAll(String tableName) &#123;</span><br><span class="line">        ObjectArrayList&lt;HashMap&lt;String, HashMap&lt;String, String&gt;&gt;&gt; rowMapList = new ObjectArrayList&lt;&gt;(); // &lt;familyName, &lt;columnName, columnValue&gt;&gt;</span><br><span class="line">        Table table = null;</span><br><span class="line">        ResultScanner rs = null;</span><br><span class="line">        try &#123;</span><br><span class="line">            table = connection.getTable(TableName.valueOf(tableName));</span><br><span class="line">//            ResultScanner rs = table.getScanner(new Scan().setMaxVersions()); // 获取所有版本数据</span><br><span class="line">            rs = table.getScanner(new Scan());</span><br><span class="line">            for (Result r : rs) &#123;</span><br><span class="line">                rowMapList.add(resolveResult(r));</span><br><span class="line">            &#125;</span><br><span class="line">        &#125; catch (IOException e) &#123;</span><br><span class="line">            logger.error(&quot;Get all table data failed!&quot;);</span><br><span class="line">            e.printStackTrace();</span><br><span class="line">        &#125; finally &#123;</span><br><span class="line">            closeTableAndResult(table, rs);</span><br><span class="line">        &#125;</span><br><span class="line">        return rowMapList;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    /**</span><br><span class="line">     * @Description: 单条件查询, 根据rowkey查询唯一一条记录</span><br><span class="line">     * @Param: [tableName, rowKey]</span><br><span class="line">     * @return: List&lt;HashMap&lt;String,HashMap&lt;String,String&gt;&gt;&gt;</span><br><span class="line">     * @Author: CHEN ZUOLI</span><br><span class="line">     * @Date: 2018/3/29</span><br><span class="line">     * @Time: 10:47</span><br><span class="line">     */</span><br><span class="line">    public static List&lt;HashMap&lt;String, HashMap&lt;String, String&gt;&gt;&gt; queryByCondition(String tableName, String rowKey) &#123;</span><br><span class="line">        ObjectArrayList&lt;HashMap&lt;String, HashMap&lt;String, String&gt;&gt;&gt; rowMapList = new ObjectArrayList&lt;&gt;(); // &lt;familyName, &lt;columnName, columnValue&gt;&gt;</span><br><span class="line">        Table table = null;</span><br><span class="line">        try &#123;</span><br><span class="line">            Get get = new Get(rowKey.getBytes());</span><br><span class="line">//            get.setMaxVersions(); // 获取所有版本数据</span><br><span class="line">            table = connection.getTable(TableName.valueOf(tableName));</span><br><span class="line">            Result r = table.get(get);</span><br><span class="line">            rowMapList.add(resolveResult(r));</span><br><span class="line">            logger.info(&quot;获得到rowkey: &quot; + new String(r.getRow()));</span><br><span class="line">        &#125; catch (IOException e) &#123;</span><br><span class="line">            logger.error(&quot;Get table one data failed!&quot;);</span><br><span class="line">            e.printStackTrace();</span><br><span class="line">        &#125; finally &#123;</span><br><span class="line">            closeTableAndResult(table, null);</span><br><span class="line">        &#125;</span><br><span class="line">        return rowMapList;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    /**</span><br><span class="line">     * @Description: 单条件按查询，查询多条记录</span><br><span class="line">     * @Param: [tableName]</span><br><span class="line">     * @return: List&lt;HashMap&lt;String,HashMap&lt;String,String&gt;&gt;&gt;</span><br><span class="line">     * @Author: CHEN ZUOLI</span><br><span class="line">     * @Date: 2018/3/29</span><br><span class="line">     * @Time: 13:16</span><br><span class="line">     */</span><br><span class="line">    public static List&lt;HashMap&lt;String, HashMap&lt;String, String&gt;&gt;&gt; queryByCondition(String tableName, String familyName, String columnName, String columnValue) &#123;</span><br><span class="line">        ObjectArrayList&lt;HashMap&lt;String, HashMap&lt;String, String&gt;&gt;&gt; rowMapList = new ObjectArrayList&lt;&gt;(); // &lt;familyName, &lt;columnName, columnValue&gt;&gt;</span><br><span class="line">        Table table = null;</span><br><span class="line">        ResultScanner rs = null;</span><br><span class="line">        try &#123;</span><br><span class="line">            table = connection.getTable(TableName.valueOf(tableName));</span><br><span class="line">            Filter filter = new SingleColumnValueFilter(Bytes.toBytes(familyName), Bytes.toBytes(columnName), CompareFilter.CompareOp.EQUAL, Bytes.toBytes(columnValue)); // 当列columnName的值为columnValue时进行查询</span><br><span class="line">            Scan s = new Scan();</span><br><span class="line">            s.setFilter(filter);</span><br><span class="line">            rs = table.getScanner(s);</span><br><span class="line">            for (Result r : rs) &#123;</span><br><span class="line">                rowMapList.add(resolveResult(r));</span><br><span class="line">            &#125;</span><br><span class="line">        &#125; catch (Exception e) &#123;</span><br><span class="line">            logger.error(&quot;query with one filter failed!&quot;);</span><br><span class="line">            e.printStackTrace();</span><br><span class="line">        &#125; finally &#123;</span><br><span class="line">            closeTableAndResult(table, rs);</span><br><span class="line">        &#125;</span><br><span class="line">        return rowMapList;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    /**</span><br><span class="line">     * @Description: 组合条件查询</span><br><span class="line">     * @Param: [tableName]</span><br><span class="line">     * @return: List&lt;HashMap&lt;String,HashMap&lt;String,String&gt;&gt;&gt;</span><br><span class="line">     * @Author: CHEN ZUOLI</span><br><span class="line">     * @Date: 2018/3/29</span><br><span class="line">     * @Time: 13:26</span><br><span class="line">     */</span><br><span class="line">    public static List&lt;HashMap&lt;String, HashMap&lt;String, String&gt;&gt;&gt; queryByCondition(String tableName, String familyName, HashMap&lt;String, String&gt; paramMap) &#123;</span><br><span class="line">        ObjectArrayList&lt;HashMap&lt;String, HashMap&lt;String, String&gt;&gt;&gt; rowMapList = new ObjectArrayList&lt;&gt;(); // &lt;familyName, &lt;columnName, columnValue&gt;&gt;</span><br><span class="line">        Table table = null;</span><br><span class="line">        ResultScanner rs = null;</span><br><span class="line">        try &#123;</span><br><span class="line">            table = connection.getTable(TableName.valueOf(tableName));</span><br><span class="line">            FilterList filterList = new FilterList();</span><br><span class="line">            for (Map.Entry&lt;String, String&gt; entry : paramMap.entrySet()) &#123;</span><br><span class="line">                Filter filter = new SingleColumnValueFilter(Bytes.toBytes(familyName), Bytes.toBytes(entry.getKey()), CompareFilter.CompareOp.EQUAL, Bytes.toBytes(entry.getValue()));</span><br><span class="line">                filterList.addFilter(filter);</span><br><span class="line">            &#125;</span><br><span class="line">            Scan scan = new Scan();</span><br><span class="line">            scan.setFilter(filterList);</span><br><span class="line">            rs = table.getScanner(scan);</span><br><span class="line">            for (Result r : rs) &#123;</span><br><span class="line">                rowMapList.add(resolveResult(r));</span><br><span class="line">            &#125;</span><br><span class="line">            rs.close();</span><br><span class="line">        &#125; catch (Exception e) &#123;</span><br><span class="line">            logger.error(&quot;query with more filter failed!&quot;);</span><br><span class="line">            e.printStackTrace();</span><br><span class="line">        &#125; finally &#123;</span><br><span class="line">            closeTableAndResult(table, rs);</span><br><span class="line">        &#125;</span><br><span class="line">        return rowMapList;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    /**</span><br><span class="line">    * @Description: 查询hbase，匹配rowkey前缀为dianRong的行</span><br><span class="line">    * @Param: [tableName]</span><br><span class="line">    * @return: java.util.List&lt;java.util.HashMap&lt;java.lang.String,java.util.HashMap&lt;java.lang.String,java.lang.String&gt;&gt;&gt;</span><br><span class="line">    * @Author: CHEN ZUOLI</span><br><span class="line">    * @Date: 2018/4/3</span><br><span class="line">    * @Time: 20:21</span><br><span class="line">    */</span><br><span class="line">    public static List&lt;HashMap&lt;String, HashMap&lt;String, String&gt;&gt;&gt; rowkeyFuzzyQuery(String tableName)&#123;</span><br><span class="line">        ObjectArrayList&lt;HashMap&lt;String, HashMap&lt;String, String&gt;&gt;&gt; rowMapList = new ObjectArrayList&lt;&gt;();</span><br><span class="line">        Table table = null;</span><br><span class="line">        ResultScanner rs = null;</span><br><span class="line">        try &#123;</span><br><span class="line">            table = connection.getTable(TableName.valueOf(tableName));</span><br><span class="line">            Scan scan = new Scan();</span><br><span class="line">            Filter filter = new RowFilter(CompareFilter.CompareOp.EQUAL, new RegexStringComparator(&quot;dianRong.*&quot;));</span><br><span class="line">            scan.setFilter(filter);</span><br><span class="line">            rs = table.getScanner(scan);</span><br><span class="line">            for (Result r : rs) &#123;</span><br><span class="line">                rowMapList.add(resolveResult(r));</span><br><span class="line">            &#125;</span><br><span class="line">        &#125; catch (Exception e) &#123;</span><br><span class="line">            logger.error(&quot;query with more filter failed!&quot;);</span><br><span class="line">            e.printStackTrace();</span><br><span class="line">        &#125; finally &#123;</span><br><span class="line">            closeTableAndResult(table, rs);</span><br><span class="line">        &#125;</span><br><span class="line">        return rowMapList;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    /**</span><br><span class="line">     * @Description: 解析查询hbase得到的结果，放入到HashMap中</span><br><span class="line">     * @Param: [result]</span><br><span class="line">     * @return: java.util.HashMap&lt;String,HashMap&lt;String,String&gt;&gt;</span><br><span class="line">     * @Author: CHEN ZUOLI</span><br><span class="line">     * @Date: 2018/3/29</span><br><span class="line">     * @Time: 13:52</span><br><span class="line">     */</span><br><span class="line">    public static HashMap&lt;String, HashMap&lt;String, String&gt;&gt; resolveResult(Result result) &#123;</span><br><span class="line">        HashMap&lt;String, HashMap&lt;String, String&gt;&gt; rowMap = new HashMap&lt;&gt;(); // &lt;familyName, &lt;columnName, columnValue&gt;&gt;</span><br><span class="line">        HashMap&lt;String, String&gt; kvMap = new HashMap&lt;&gt;();</span><br><span class="line">        NavigableMap&lt;byte[], NavigableMap&lt;byte[], NavigableMap&lt;Long, byte[]&gt;&gt;&gt; map = result.getMap();</span><br><span class="line">        for (Map.Entry&lt;byte[], NavigableMap&lt;byte[], NavigableMap&lt;Long, byte[]&gt;&gt;&gt; entry : map.entrySet()) &#123;</span><br><span class="line">            String familyName = new String(entry.getKey());</span><br><span class="line">            NavigableMap&lt;byte[], NavigableMap&lt;Long, byte[]&gt;&gt; valueInfoMap = entry.getValue();</span><br><span class="line">            for (Map.Entry&lt;byte[], NavigableMap&lt;Long, byte[]&gt;&gt; valueInfo : valueInfoMap.entrySet()) &#123;</span><br><span class="line">                String key = new String(valueInfo.getKey());</span><br><span class="line">                NavigableMap&lt;Long, byte[]&gt; values = valueInfo.getValue();</span><br><span class="line">                Map.Entry&lt;Long, byte[]&gt; firstEntry = values.firstEntry();</span><br><span class="line">                Long timestampLastest = firstEntry.getKey();</span><br><span class="line">                String valueLastest = new String(firstEntry.getValue());</span><br><span class="line">                logger.info(&quot;familyName: &quot; + familyName + &quot;, key: &quot; + key + &quot;, value: &quot; + valueLastest + &quot;, timestamp: &quot; + timestampLastest);</span><br><span class="line">//                for (Map.Entry&lt;Long, byte[]&gt; vals : values.entrySet()) &#123;</span><br><span class="line">//                    Long timestamp = vals.getKey();</span><br><span class="line">//                    String value = new String(vals.getValue());</span><br><span class="line">//                &#125;</span><br><span class="line">                kvMap.put(key, valueLastest);</span><br><span class="line">                rowMap.put(familyName, kvMap);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        return rowMap;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public static void closeTableAndResult(Table table, ResultScanner rs)&#123;</span><br><span class="line">        try &#123;</span><br><span class="line">            if (rs != null) rs.close();</span><br><span class="line">            if (table != null) table.close();</span><br><span class="line">        &#125; catch (IOException e) &#123;</span><br><span class="line">            logger.error(&quot;close table failed!&quot;);</span><br><span class="line">            e.printStackTrace();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="好了，文章到这里就结束了，如果大家在使用过程中，遇到什么问题，请联系我-99-x68-101-x6e-x7a-117-111-x6c-x69-x37-48-57-64-103-x6d-97-105-108-x2e-x63-111-109-。"><a href="#好了，文章到这里就结束了，如果大家在使用过程中，遇到什么问题，请联系我-99-x68-101-x6e-x7a-117-111-x6c-x69-x37-48-57-64-103-x6d-97-105-108-x2e-x63-111-109-。" class="headerlink" title="好了，文章到这里就结束了，如果大家在使用过程中，遇到什么问题，请联系我&#99;&#x68;&#101;&#x6e;&#x7a;&#117;&#111;&#x6c;&#x69;&#x37;&#48;&#57;&#64;&#103;&#x6d;&#97;&#105;&#108;&#x2e;&#x63;&#111;&#109;。"></a>好了，文章到这里就结束了，如果大家在使用过程中，遇到什么问题，请联系我<a href="mailto:&#99;&#x68;&#101;&#x6e;&#x7a;&#117;&#111;&#x6c;&#x69;&#x37;&#48;&#57;&#64;&#103;&#x6d;&#97;&#105;&#108;&#x2e;&#x63;&#111;&#109;">&#99;&#x68;&#101;&#x6e;&#x7a;&#117;&#111;&#x6c;&#x69;&#x37;&#48;&#57;&#64;&#103;&#x6d;&#97;&#105;&#108;&#x2e;&#x63;&#111;&#109;</a>。</h2><p><b>书山有路勤为径，学海无涯苦作舟。</b></p>
+<h2 id="好了，文章到这里就结束了，如果大家在使用过程中，遇到什么问题，请联系我-x63-104-101-x6e-122-x75-111-108-x69-x37-48-57-64-103-109-x61-x69-x6c-46-x63-x6f-109-。"><a href="#好了，文章到这里就结束了，如果大家在使用过程中，遇到什么问题，请联系我-x63-104-101-x6e-122-x75-111-108-x69-x37-48-57-64-103-109-x61-x69-x6c-46-x63-x6f-109-。" class="headerlink" title="好了，文章到这里就结束了，如果大家在使用过程中，遇到什么问题，请联系我&#x63;&#104;&#101;&#x6e;&#122;&#x75;&#111;&#108;&#x69;&#x37;&#48;&#57;&#64;&#103;&#109;&#x61;&#x69;&#x6c;&#46;&#x63;&#x6f;&#109;。"></a>好了，文章到这里就结束了，如果大家在使用过程中，遇到什么问题，请联系我<a href="mailto:&#x63;&#104;&#101;&#x6e;&#122;&#x75;&#111;&#108;&#x69;&#x37;&#48;&#57;&#64;&#103;&#109;&#x61;&#x69;&#x6c;&#46;&#x63;&#x6f;&#109;">&#x63;&#104;&#101;&#x6e;&#122;&#x75;&#111;&#108;&#x69;&#x37;&#48;&#57;&#64;&#103;&#109;&#x61;&#x69;&#x6c;&#46;&#x63;&#x6f;&#109;</a>。</h2><p><b>书山有路勤为径，学海无涯苦作舟。</b></p>
 <p>欢迎关注微信公众号：【程序员写书】<br><img src="/images/%E7%A8%8B%E5%BA%8F%E5%91%98%E5%86%99%E4%B9%A6%E5%85%AC%E4%BC%97%E5%8F%B7%E4%BA%8C%E7%BB%B4%E7%A0%81.jpg" alt="程序员写书"></p>
 <p>喜欢宠物的朋友可以关注：【电巴克宠物Pets】<br><img src="/images/%E7%94%B5%E5%B7%B4%E5%85%8B%E5%AE%A0%E7%89%A9Pets%E5%85%AC%E4%BC%97%E5%8F%B7%E4%BA%8C%E7%BB%B4%E7%A0%81.png" alt="电巴克宠物"></p>
 <p>一起学习，一起进步。<br></p>
 ]]></content>
       <categories>
-        <category>HBase</category>
+        <category>大数据</category>
+        <category>数据仓库</category>
+        <category>Hbase</category>
       </categories>
       <tags>
         <tag>HBase</tag>
@@ -6847,7 +6864,8 @@
 <p>一起学习，一起进步。<br></p>
 ]]></content>
       <categories>
-        <category>mysql</category>
+        <category>数据库</category>
+        <category>Mysql</category>
       </categories>
       <tags>
         <tag>mysql</tag>
@@ -7093,7 +7111,8 @@
 <p>一起学习，一起进步。<br></p>
 ]]></content>
       <categories>
-        <category>mysql</category>
+        <category>数据库</category>
+        <category>Mysql</category>
       </categories>
       <tags>
         <tag>mysql</tag>
@@ -7134,7 +7153,8 @@
 <p>ok,今天就记录到这里吧，没事记录一下日常工作内容。</p>
 ]]></content>
       <categories>
-        <category>linux</category>
+        <category>Linux</category>
+        <category>NFS</category>
       </categories>
       <tags>
         <tag>nfs，文件共享</tag>
@@ -7392,7 +7412,8 @@
 </ol>
 ]]></content>
       <categories>
-        <category>linux</category>
+        <category>Linux</category>
+        <category>命令</category>
       </categories>
       <tags>
         <tag>scp</tag>
@@ -7750,6 +7771,7 @@
 ]]></content>
       <categories>
         <category>Linux</category>
+        <category>命令</category>
       </categories>
       <tags>
         <tag>zip</tag>
@@ -8062,7 +8084,8 @@
 
 ]]></content>
       <categories>
-        <category>go</category>
+        <category>后端</category>
+        <category>GO</category>
       </categories>
       <tags>
         <tag>mac</tag>
@@ -8388,7 +8411,9 @@
 <p>一起学习，一起进步。<br></p>
 ]]></content>
       <categories>
+        <category>区块链</category>
         <category>数字货币</category>
+        <category>BTC</category>
       </categories>
       <tags>
         <tag>数字货币</tag>
@@ -8568,7 +8593,8 @@
 ]]></content>
       <categories>
         <category>区块链</category>
-        <category>以太坊</category>
+        <category>数字货币</category>
+        <category>ETH</category>
       </categories>
       <tags>
         <tag>以太坊</tag>
@@ -8633,7 +8659,9 @@
 <p>一起学习，一起进步。<br></p>
 ]]></content>
       <categories>
+        <category>区块链</category>
         <category>数字货币</category>
+        <category>ETH</category>
       </categories>
       <tags>
         <tag>以太坊</tag>
@@ -8696,6 +8724,7 @@
 <p>一起学习，一起进步。<br></p>
 ]]></content>
       <categories>
+        <category>个人总结</category>
         <category>个人感悟</category>
       </categories>
       <tags>
@@ -8723,6 +8752,7 @@
 <p>一起学习，一起进步。<br></p>
 ]]></content>
       <categories>
+        <category>其他</category>
         <category>读书</category>
       </categories>
       <tags>
@@ -8847,6 +8877,7 @@
 <p>一起学习，一起进步。<br></p>
 ]]></content>
       <categories>
+        <category>投资</category>
         <category>经济</category>
       </categories>
       <tags>
@@ -9163,6 +9194,7 @@
 <p>一起学习，一起进步。<br></p>
 ]]></content>
       <categories>
+        <category>其他</category>
         <category>写作</category>
       </categories>
       <tags>
@@ -9594,6 +9626,7 @@
 <p>一起学习，一起进步。<br></p>
 ]]></content>
       <categories>
+        <category>其他</category>
         <category>个人黑名单</category>
       </categories>
       <tags>
@@ -10396,6 +10429,7 @@ API
 <p>一起学习，一起进步。<br></p>
 ]]></content>
       <categories>
+        <category>其他</category>
         <category>人物</category>
       </categories>
       <tags>
@@ -10845,6 +10879,7 @@ API
 <p>一起学习，一起进步。<br></p>
 ]]></content>
       <categories>
+        <category>其他</category>
         <category>英语</category>
       </categories>
       <tags>
@@ -12779,6 +12814,8 @@ API
 <p>一起学习，一起进步。<br></p>
 ]]></content>
       <categories>
+        <category>大数据</category>
+        <category>数据仓库</category>
         <category>实时数仓</category>
       </categories>
       <tags>
@@ -13035,7 +13072,9 @@ API
 <p>一起学习，一起进步。<br></p>
 ]]></content>
       <categories>
+        <category>区块链</category>
         <category>数字货币</category>
+        <category>XRP</category>
       </categories>
       <tags>
         <tag>XRP</tag>
@@ -13222,6 +13261,7 @@ API
 <p>一起学习，一起进步。<br></p>
 ]]></content>
       <categories>
+        <category>其他</category>
         <category>娱乐</category>
       </categories>
       <tags>
@@ -13251,7 +13291,8 @@ API
 <p>加油。</p>
 ]]></content>
       <categories>
-        <category>投资理财</category>
+        <category>投资</category>
+        <category>理财</category>
       </categories>
       <tags>
         <tag>投资</tag>
@@ -13750,6 +13791,7 @@ API
 <p>一起学习，一起进步。<br></p>
 ]]></content>
       <categories>
+        <category>其他</category>
         <category>English</category>
       </categories>
       <tags>
@@ -13783,6 +13825,7 @@ API
 <p>一起学习，一起进步。<br></p>
 ]]></content>
       <categories>
+        <category>其他</category>
         <category>English</category>
       </categories>
       <tags>
@@ -13827,7 +13870,8 @@ API
 <p>再见。</p>
 ]]></content>
       <categories>
-        <category>video</category>
+        <category>前端</category>
+        <category>HTML</category>
       </categories>
       <tags>
         <tag>html</tag>
@@ -13897,6 +13941,8 @@ API
 <p>一起学习，一起进步。<br></p>
 ]]></content>
       <categories>
+        <category>大数据</category>
+        <category>数据仓库</category>
         <category>Hive</category>
       </categories>
       <tags>
@@ -13954,7 +14000,8 @@ API
 <p>一起学习，一起进步。<br></p>
 ]]></content>
       <categories>
-        <category>linux</category>
+        <category>Linux</category>
+        <category>命令</category>
       </categories>
       <tags>
         <tag>linux</tag>
@@ -14143,6 +14190,7 @@ API
 <p>一起学习，一起进步。<br></p>
 ]]></content>
       <categories>
+        <category>其他</category>
         <category>大城市</category>
       </categories>
       <tags>
@@ -14171,6 +14219,7 @@ API
 <p>一起学习，一起进步。<br></p>
 ]]></content>
       <categories>
+        <category>其他</category>
         <category>写作</category>
       </categories>
       <tags>
@@ -14473,7 +14522,7 @@ API
 <li>&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;这一整个过程，只有在提现的时候，才需要把张三和李四的余额结果录入到区块链当中，既减少了柜台的业务量，还减免了每一次在柜台办理业务的手续费。<br>&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;需要注意的是，任何一笔交易的分配结果都需要经过双方的签名确认才算是合法的，而在提现时，需要提供最后一笔交易，也就是时间戳最新的一笔交易的双方签名。<br>&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;这样的设置，是为了防止其中一方拿着已经作废的交易结果去提现。比如说，张三和李四，明明进行了第三笔交易（张三支付了10元给李四），但是张三为了多提现10元，把第二笔交易的交易结果拿去柜台要求提现。<br>&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;这时，比特币银行会先将李四的钱打到李四的个人账户上，并发送短信提示到账金额为130元，然后李四就会知道张三在提现时动了手脚。于是，李四拿着第三笔交易（张三余额60元，李四余额140元）的双方签名提交给比特币银行，比特币银行就会判定张三作恶，将归张三所有的60元余额罚归李四所有。这就是闪电网络“先提现后到账”以及“作恶罚没”的设计。</li>
 </ul>
 <h2 id="2-HTLC：Hashed-Timelock-Contract，哈希时间锁定合约"><a href="#2-HTLC：Hashed-Timelock-Contract，哈希时间锁定合约" class="headerlink" title="2.HTLC：Hashed Timelock Contract，哈希时间锁定合约"></a>2.HTLC：Hashed Timelock Contract，哈希时间锁定合约</h2><p>&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;RSMC解决了两个人或者说是两个点之间的交易往来，那么，如果是10个人，100个人需要进行交易，那不可能每一个人都要准备100个与另一个人共有的存折吧。于是，HTLC出现了。<br>&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;HTLC是一个限时转账的机制，就是转账方先把转出的钱进行冻结，再提供给收款方一个哈希值，在一定时间之内，收款方通过能提供出与这个哈希值相匹配的值，从而获得这笔钱。怎么用呢？<br>&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;在比特币银行里，张三和李四有一个共有的存折，李四和王五也有一个共有的存折，这时，张三需要给王五转账，可以由张三先转给李四，再由李四转给王五，那么张三和王五就不用再开一个共有存折了。<br>&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;张三通过智能合约将要转给王五的1000元进行冻结，并发送一个哈希值给王五，然后张三在朋友圈发布公告，“如果谁能给我一个暗语（与哈希值相匹配的值）”，我就给谁一笔钱。<br>&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;李四收到了张三的公告，也在朋友圈公告，“如果谁能给我一个暗语（与哈希值相匹配的值）”，我就给谁一笔钱。<br>&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;这时，王五把暗语提供给李四后，李四就需要转1000元给王五，然后王五再拿着这个暗语去找张三拿钱。从而实现张三和王五的转账。<br>&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;这个过程当中，李四充当了一个中转站的作用。当然在这个过程当中，充当了中转站的李四需要得到一定的激励，这个过程才能得以实现。</p>
-<p>&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;现在清楚了吧，如果有什么不懂的地方，欢迎邮件我：<b><font color="#0099ff"><a href="mailto:&#x63;&#104;&#101;&#110;&#122;&#x75;&#x6f;&#108;&#x69;&#55;&#48;&#57;&#64;&#49;&#54;&#x33;&#46;&#99;&#x6f;&#x6d;">&#x63;&#104;&#101;&#110;&#122;&#x75;&#x6f;&#108;&#x69;&#55;&#48;&#57;&#64;&#49;&#54;&#x33;&#46;&#99;&#x6f;&#x6d;</a></font></b></p>
+<p>&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;现在清楚了吧，如果有什么不懂的地方，欢迎邮件我：<b><font color="#0099ff"><a href="mailto:&#x63;&#x68;&#x65;&#x6e;&#x7a;&#117;&#111;&#108;&#105;&#55;&#48;&#57;&#x40;&#49;&#x36;&#x33;&#x2e;&#x63;&#x6f;&#109;">&#x63;&#x68;&#x65;&#x6e;&#x7a;&#117;&#111;&#108;&#105;&#55;&#48;&#57;&#x40;&#49;&#x36;&#x33;&#x2e;&#x63;&#x6f;&#109;</a></font></b></p>
 <hr>
 <h2 id="Happy-Halloween-Festival"><a href="#Happy-Halloween-Festival" class="headerlink" title="Happy Halloween Festival."></a><b>Happy Halloween Festival.</b></h2><p><b>书山有路勤为径，学海无涯苦作舟。</b></p>
 <p>欢迎关注微信公众号：【程序员写书】<br><img src="/images/%E7%A8%8B%E5%BA%8F%E5%91%98%E5%86%99%E4%B9%A6%E5%85%AC%E4%BC%97%E5%8F%B7%E4%BA%8C%E7%BB%B4%E7%A0%81.jpg" alt="程序员写书"></p>
@@ -14481,6 +14530,8 @@ API
 <p>一起学习，一起进步。<br></p>
 ]]></content>
       <categories>
+        <category>区块链</category>
+        <category>数字货币</category>
         <category>比特币</category>
       </categories>
       <tags>
@@ -14513,6 +14564,7 @@ API
 <p>一起学习，一起进步。<br></p></b><p></p>
 ]]></content>
       <categories>
+        <category>其他</category>
         <category>视频剪辑</category>
       </categories>
       <tags>
@@ -14758,6 +14810,7 @@ API
 <p>日积月累。</p>
 ]]></content>
       <categories>
+        <category>Python</category>
         <category>Flask</category>
       </categories>
       <tags>
@@ -14845,7 +14898,8 @@ API
 <p>好记性不如烂笔头。</p>
 ]]></content>
       <categories>
-        <category>html</category>
+        <category>前端</category>
+        <category>HTML</category>
       </categories>
       <tags>
         <tag>bootstrap</tag>
@@ -14870,7 +14924,8 @@ API
 <p>不积跬步无以至千里，不积小流无以成江河。</p>
 ]]></content>
       <categories>
-        <category>html</category>
+        <category>前端</category>
+        <category>HTML</category>
       </categories>
       <tags>
         <tag>bootstrap</tag>
@@ -14895,7 +14950,8 @@ API
 </ol>
 <figure class="highlight js"><table><tr><td class="code"><pre><span class="line">$(<span class="keyword">function</span>(<span class="params"></span>)&#123;</span><br><span class="line">    <span class="keyword">var</span> x = <span class="variable language_">document</span>.<span class="title function_">querySelectorAll</span>(<span class="string">&quot;[aria-label=&#x27;qrcode&#x27;]&quot;</span>);</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">var</span> i=<span class="number">0</span>; i &lt; x.<span class="property">length</span>; i++)&#123;</span><br><span class="line">        <span class="keyword">let</span> row = x[i]</span><br><span class="line">        <span class="keyword">let</span> row_id = row.<span class="property">id</span></span><br><span class="line">        <span class="keyword">let</span> qrcode_img_base64 = row.<span class="title function_">getAttribute</span>(<span class="string">&quot;content_qrcode_base64&quot;</span>);</span><br><span class="line">        <span class="keyword">let</span> qrcode_path = row.<span class="title function_">getAttribute</span>(<span class="string">&quot;qrcode_path&quot;</span>)</span><br><span class="line">        <span class="keyword">let</span> amount = row.<span class="title function_">getAttribute</span>(<span class="string">&quot;amount&quot;</span>)</span><br><span class="line">        <span class="variable language_">console</span>.<span class="title function_">log</span>(row_id)</span><br><span class="line">        <span class="variable language_">console</span>.<span class="title function_">log</span>(qrcode_img_base64)</span><br><span class="line">        <span class="variable language_">console</span>.<span class="title function_">log</span>(qrcode_path)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>]]></content>
       <categories>
-        <category>html</category>
+        <category>前端</category>
+        <category>HTML</category>
       </categories>
       <tags>
         <tag>js</tag>
@@ -14949,7 +15005,8 @@ API
 <p>日积月累。</p>
 ]]></content>
       <categories>
-        <category>html</category>
+        <category>前端</category>
+        <category>HTML</category>
       </categories>
       <tags>
         <tag>移动端</tag>
@@ -14969,7 +15026,8 @@ API
 <p>好记性不如烂笔头。</p>
 ]]></content>
       <categories>
-        <category>js</category>
+        <category>前端</category>
+        <category>JS</category>
       </categories>
       <tags>
         <tag>http</tag>
@@ -14995,7 +15053,8 @@ API
 <p>好记性不如烂笔头。</p>
 ]]></content>
       <categories>
-        <category>html</category>
+        <category>前端</category>
+        <category>HTML</category>
       </categories>
       <tags>
         <tag>js</tag>
@@ -15411,7 +15470,8 @@ API
 <p>好记性不如烂笔头。</p>
 ]]></content>
       <categories>
-        <category>flask</category>
+        <category>Python</category>
+        <category>Flask</category>
       </categories>
       <tags>
         <tag>flask</tag>
@@ -15436,7 +15496,8 @@ API
 <p>好记性不如烂笔头，没事记一记。</p>
 ]]></content>
       <categories>
-        <category>flask</category>
+        <category>Python</category>
+        <category>Flask</category>
       </categories>
       <tags>
         <tag>flask</tag>
