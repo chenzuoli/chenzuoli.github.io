@@ -15433,4 +15433,160 @@ API
         <tag>flask</tag>
       </tags>
   </entry>
+  <entry>
+    <title>最近做了个新的网站</title>
+    <url>/2024/03/10/%E6%9C%80%E8%BF%91%E5%81%9A%E4%BA%86%E4%B8%AA%E6%96%B0%E7%9A%84%E7%BD%91%E7%AB%99/</url>
+    <content><![CDATA[<p>最近做了个新的网站，乐知付加密平台，一个专为知识付费服务的加密平台。<br>官网链接：<a href="http://lezhifu.cc/">http://lezhifu.cc/</a></p>
+<span id="more"></span>
+
+
+<p>简单描述一下网站的主要业务，就是将你手里的资源加密打包后上传到网盘（百度网盘、夸克网盘等），然后将密码录入平台，平台会生成一个二维码链接，用户通过支付宝扫码支付后，会展示此密码，获取到资源包的解压密码，完成资源分享、知识付费。</p>
+<p>欢迎大家体验，首次注册，平台会赠送0.5元体验金，方便用户发布内容使用。</p>
+<hr>
+<p>欢迎关注微信公众号：【乐知付加密平台】<br><img src="/images/%E4%B9%90%E7%9F%A5%E4%BB%98%E5%8A%A0%E5%AF%86%E5%B9%B3%E5%8F%B0.png" alt="乐知付加密平台"></p>
+<p>一起学习，一起进步。<br></p>
+]]></content>
+      <categories>
+        <category>网站</category>
+        <category>乐知付</category>
+      </categories>
+      <tags>
+        <tag>乐知付</tag>
+        <tag>网站</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>乐知付-如何使用个人收款码收款</title>
+    <url>/2024/03/10/%E4%B9%90%E7%9F%A5%E4%BB%98-%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8%E4%B8%AA%E4%BA%BA%E6%94%B6%E6%AC%BE%E7%A0%81%E6%94%B6%E6%AC%BE/</url>
+    <content><![CDATA[<p>最近新做的网站，专为知识付费服务的个人平台，这篇说下如何使用个人收款码收款？</p>
+<p>官网链接：<a href="http://lezhifu.cc/">http://lezhifu.cc/</a></p>
+<span id="more"></span>
+
+
+<p>这里列一下基本操作流程：</p>
+<h1 id="如何使用个人收款码收款？"><a href="#如何使用个人收款码收款？" class="headerlink" title="如何使用个人收款码收款？"></a>如何使用个人收款码收款？</h1><p>地址链接：<a href="http://lezhifu.cc/admin/qrcode_list">http://lezhifu.cc/admin/qrcode_list</a></p>
+<h2 id="个人收款码收款"><a href="#个人收款码收款" class="headerlink" title="个人收款码收款:"></a>个人收款码收款:</h2><p>乐知付加密平台仅用个人的支付宝收款码进行收款（注意：收款码设置金额与页面付费金额金额填写保持一致）。</p>
+<h2 id="操作步骤一"><a href="#操作步骤一" class="headerlink" title="操作步骤一:"></a>操作步骤一:</h2><p>注册登录后，进入管理后台，依次点击【支付管理】<del>【个人收款码收款】</del>【+ 个人收款码收款】；</p>
+<p>参考如下截图：</p>
+<p><img src="/2024/03/10/%E4%B9%90%E7%9F%A5%E4%BB%98-%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8%E4%B8%AA%E4%BA%BA%E6%94%B6%E6%AC%BE%E7%A0%81%E6%94%B6%E6%AC%BE/image.png" alt="个人收款码收款1"></p>
+<h2 id="操作步骤二"><a href="#操作步骤二" class="headerlink" title="操作步骤二:"></a>操作步骤二:</h2><p>新增付费内容中，依次填写 【标题】<del>【密码】</del>【金额】~ 【上传支付宝个人收款码】，并保存！</p>
+<p>即可获得，收款链接和收款二维码，买家通过 这种收款方式付款后，付款金额直达卖家支付宝账户；同时，解密密码显示给买家。</p>
+<p>参考如下截图:<br><img src="/2024/03/10/%E4%B9%90%E7%9F%A5%E4%BB%98-%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8%E4%B8%AA%E4%BA%BA%E6%94%B6%E6%AC%BE%E7%A0%81%E6%94%B6%E6%AC%BE/image-1.png" alt="新增付费内容"><br><img src="/2024/03/10/%E4%B9%90%E7%9F%A5%E4%BB%98-%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8%E4%B8%AA%E4%BA%BA%E6%94%B6%E6%AC%BE%E7%A0%81%E6%94%B6%E6%AC%BE/image-2.png" alt="展示"></p>
+<h2 id="操作步骤三"><a href="#操作步骤三" class="headerlink" title="操作步骤三 :"></a>操作步骤三 :</h2><p>将《操作步骤二》得到的链接，放入网盘（存储资源的地方）中的txt文档，提供给 (买家支付，获取压缩包密码 ; 同时，卖家支付宝会收到款）</p>
+<p>参考如下截图:<br><img src="/2024/03/10/%E4%B9%90%E7%9F%A5%E4%BB%98-%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8%E4%B8%AA%E4%BA%BA%E6%94%B6%E6%AC%BE%E7%A0%81%E6%94%B6%E6%AC%BE/image-3.png" alt="资源加密打包"><br>另外附上 ， 资源添加为压缩包 并 为其 设置密码 说明 ！（下图使用压缩工具：WinRAR 压缩文件）</p>
+<p><img src="/2024/03/10/%E4%B9%90%E7%9F%A5%E4%BB%98-%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8%E4%B8%AA%E4%BA%BA%E6%94%B6%E6%AC%BE%E7%A0%81%E6%94%B6%E6%AC%BE/image-4.png" alt="alt text"></p>
+<h2 id="拟定收费标准，如下"><a href="#拟定收费标准，如下" class="headerlink" title="拟定收费标准，如下:"></a>拟定收费标准，如下:</h2><p>1、第一阶梯：0.1元&lt;&#x3D;设置金额&lt;&#x3D;15元 ，固定收取服务费0.15元；</p>
+<p>2、第二阶梯：15元&lt;&#x3D;设置金额&lt;&#x3D;300元 , 按设置金额比例1%收费；</p>
+<h2 id="注意事项："><a href="#注意事项：" class="headerlink" title="注意事项："></a>注意事项：</h2><p>设置金额最低0.1元，最高300元；服务费最低0.15元，最高3元。</p>
+<p>使用支付宝个人收款码收费，必须设置好固定金额且内容清晰。</p>
+<p>下一篇介绍如何发布资源链接。</p>
+<hr>
+<p>欢迎关注微信公众号：【乐知付加密平台】<br><img src="/images/%E4%B9%90%E7%9F%A5%E4%BB%98%E5%8A%A0%E5%AF%86%E5%B9%B3%E5%8F%B0.png" alt="乐知付加密平台"></p>
+<p>一起学习，一起进步。<br></p>
+]]></content>
+      <categories>
+        <category>网站</category>
+        <category>乐知付</category>
+        <category>个人收款码收款</category>
+      </categories>
+      <tags>
+        <tag>乐知付</tag>
+        <tag>收款</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>乐知付-如何发布资源链接</title>
+    <url>/2024/03/10/%E4%B9%90%E7%9F%A5%E4%BB%98-%E5%A6%82%E4%BD%95%E5%8F%91%E5%B8%83%E8%B5%84%E6%BA%90%E9%93%BE%E6%8E%A5/</url>
+    <content><![CDATA[<p>最近新做的网站，专为知识付费服务的个人平台，这篇说下如何在各大自媒体平台发布资源链接？</p>
+<p>官网链接：<a href="http://lezhifu.cc/">http://lezhifu.cc/</a></p>
+<span id="more"></span>
+
+
+<p>这里列一下基本操作流程：</p>
+<p>链接：<a href="http://lezhifu.cc/admin/qrcode_list">http://lezhifu.cc/admin/qrcode_list</a></p>
+<h2 id="操作步骤一"><a href="#操作步骤一" class="headerlink" title="操作步骤一 :"></a>操作步骤一 :</h2><p>（1）电脑本地桌面 新建一个文件夹；命名： 自定义</p>
+<p>（2）将付费资源（音视频类，软件类，文件资料等）放入文件夹中 ； 命名： 自定义</p>
+<p>如下截图：举例用txt文档作为 知识资源。<br><img src="/2024/03/10/%E4%B9%90%E7%9F%A5%E4%BB%98-%E5%A6%82%E4%BD%95%E5%8F%91%E5%B8%83%E8%B5%84%E6%BA%90%E9%93%BE%E6%8E%A5/release1.png" alt="release1"></p>
+<h2 id="操作步骤二"><a href="#操作步骤二" class="headerlink" title="操作步骤二 :"></a>操作步骤二 :</h2><p>（1）将付费资源文件夹，添加到压缩包，并设置密码，点击确定！<br><img src="/2024/03/10/%E4%B9%90%E7%9F%A5%E4%BB%98-%E5%A6%82%E4%BD%95%E5%8F%91%E5%B8%83%E8%B5%84%E6%BA%90%E9%93%BE%E6%8E%A5/release2.png" alt="release2"></p>
+<h2 id="操作步骤三"><a href="#操作步骤三" class="headerlink" title="操作步骤三 :"></a>操作步骤三 :</h2><p>（1）网盘中新建可分享的文件夹，并将已经加密的压缩包，上传至该该文件夹中！ 命名： 自定义</p>
+<p>（2） 新建一个文件夹（命名：资源预览说明），并在该文件夹中放入3个文件；</p>
+<pre><code> a.压缩包中的资源 截图信息（方便买家了解所购买的资源，真实存在）；图片格式
+
+ b.商家的联系方式：扣扣、vx 等联系方式！ （方便买家遇到问题联系卖家）；文本文档：
+
+ c. 压缩包解密密码：将平台个人收款码链接，放入txt文档中，提供给 (买家支付，获取压缩包密码 ; 同时，卖家支付宝会收到款）；文本文档格式
+</code></pre>
+<p><img src="/2024/03/10/%E4%B9%90%E7%9F%A5%E4%BB%98-%E5%A6%82%E4%BD%95%E5%8F%91%E5%B8%83%E8%B5%84%E6%BA%90%E9%93%BE%E6%8E%A5/release3.png" alt="release3"></p>
+<h2 id="操作步骤四"><a href="#操作步骤四" class="headerlink" title="操作步骤四 :"></a>操作步骤四 :</h2><p>分享网盘中最外层的文件夹链接信息，到各大自媒体平台，并发布；</p>
+<p><img src="/2024/03/10/%E4%B9%90%E7%9F%A5%E4%BB%98-%E5%A6%82%E4%BD%95%E5%8F%91%E5%B8%83%E8%B5%84%E6%BA%90%E9%93%BE%E6%8E%A5/release4.png" alt="release4"></p>
+<hr>
+<p>欢迎关注微信公众号：【乐知付加密平台】<br><img src="/images/%E4%B9%90%E7%9F%A5%E4%BB%98%E5%8A%A0%E5%AF%86%E5%B9%B3%E5%8F%B0.png" alt="乐知付加密平台"></p>
+<p>一起学习，一起进步。<br></p>
+]]></content>
+      <categories>
+        <category>网站</category>
+        <category>乐知付</category>
+        <category>资源发布</category>
+      </categories>
+      <tags>
+        <tag>乐知付</tag>
+        <tag>资源发布</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>乐知付-如何充值</title>
+    <url>/2024/03/10/%E4%B9%90%E7%9F%A5%E4%BB%98-%E5%A6%82%E4%BD%95%E5%85%85%E5%80%BC/</url>
+    <content><![CDATA[<p>最近新做的网站，专为知识付费服务的个人平台，如果你的付费内容受欢迎，付费用户越多，你的收入越高，平台从你的账户余额中每单抽取0.15佣金，所以需要保证你的余额足够，这篇说下如何进行充值？</p>
+<p>官网链接：<a href="http://lezhifu.cc/">http://lezhifu.cc/</a></p>
+<span id="more"></span>
+
+<p>这里列一下基本操作流程：</p>
+<p>链接：<a href="http://lezhifu.cc/admin/recharge_list">http://lezhifu.cc/admin/recharge_list</a></p>
+<h2 id="操作步骤一："><a href="#操作步骤一：" class="headerlink" title="操作步骤一："></a>操作步骤一：</h2><p>注册登录后，进入管理后台，依次点击 【支付管理】<del>【充值中心】</del>【+ 充值】；<br><img src="/2024/03/10/%E4%B9%90%E7%9F%A5%E4%BB%98-%E5%A6%82%E4%BD%95%E5%85%85%E5%80%BC/recharge1.png" alt="recharge1"></p>
+<h2 id="操作步骤二："><a href="#操作步骤二：" class="headerlink" title="操作步骤二："></a>操作步骤二：</h2><p>新增充值中，依次填写 【充值金额】~【支付宝账号】，并点击充值完成按钮，等待平台审核完成！<br><img src="/2024/03/10/%E4%B9%90%E7%9F%A5%E4%BB%98-%E5%A6%82%E4%BD%95%E5%85%85%E5%80%BC/recharge2.png" alt="recharge2"></p>
+<h2 id="注意事项："><a href="#注意事项：" class="headerlink" title="注意事项："></a>注意事项：</h2><p>充值页面的【支付宝账号】，需事先在【个人中心】~【个人信息】编辑保存。</p>
+<hr>
+<p>欢迎关注微信公众号：【乐知付加密平台】<br><img src="/images/%E4%B9%90%E7%9F%A5%E4%BB%98%E5%8A%A0%E5%AF%86%E5%B9%B3%E5%8F%B0.png" alt="乐知付加密平台"></p>
+<p>一起学习，一起进步。<br></p>
+]]></content>
+      <categories>
+        <category>网站</category>
+        <category>乐知付</category>
+        <category>充值</category>
+      </categories>
+      <tags>
+        <tag>乐知付</tag>
+        <tag>充值</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>乐知付-如何提现</title>
+    <url>/2024/03/10/%E4%B9%90%E7%9F%A5%E4%BB%98-%E5%A6%82%E4%BD%95%E6%8F%90%E7%8E%B0/</url>
+    <content><![CDATA[<p>最近新做的网站，专为知识付费服务的个人平台，如果你的付费内容受欢迎，付费用户越多，你的收入越高，这篇说下如何进行余额提现？</p>
+<p>官网链接：<a href="http://lezhifu.cc/">http://lezhifu.cc/</a></p>
+<span id="more"></span>
+
+<p>这里列一下基本操作流程：</p>
+<p>链接：<a href="http://lezhifu.cc/admin/withdraw_list">http://lezhifu.cc/admin/withdraw_list</a></p>
+<h2 id="操作步骤一："><a href="#操作步骤一：" class="headerlink" title="操作步骤一："></a>操作步骤一：</h2><p>注册登录后，进入管理后台，依次点击 【支付管理】【提现中心】【+ 申请提现】；</p>
+<p><img src="/2024/03/10/%E4%B9%90%E7%9F%A5%E4%BB%98-%E5%A6%82%E4%BD%95%E6%8F%90%E7%8E%B0/withdraw1.png" alt="withdraw1"></p>
+<h2 id="操作步骤二："><a href="#操作步骤二：" class="headerlink" title="操作步骤二："></a>操作步骤二：</h2><p>申请提现中，依次填写 【提现金额】~【支付宝账号】，并点击提现按钮，等待平台审核完成！<br><img src="/2024/03/10/%E4%B9%90%E7%9F%A5%E4%BB%98-%E5%A6%82%E4%BD%95%E6%8F%90%E7%8E%B0/withdraw2.png" alt="withdraw2"></p>
+<h2 id="提现条件："><a href="#提现条件：" class="headerlink" title="提现条件："></a>提现条件：</h2><p>用户账户余额，至少达到20元（包含20元），方可申请提现成功。</p>
+<h2 id="提现方式："><a href="#提现方式：" class="headerlink" title="提现方式："></a>提现方式：</h2><p>用户可选择的提现方式，目前仅限支付宝。请事先在【个人中心】【个人信息】【支付宝账号】编辑保存。</p>
+<h2 id="提现手续费："><a href="#提现手续费：" class="headerlink" title="提现手续费："></a>提现手续费：</h2><p>提现手续费标准：申请提现总金额的8%。</p>
+<h2 id="提现时间："><a href="#提现时间：" class="headerlink" title="提现时间："></a>提现时间：</h2><p>每周的工作日（除周六、周日）申请提现； 下周一，统一有序进行结算处理！</p>
+<hr>
+<p>欢迎关注微信公众号：【乐知付加密平台】<br><img src="/images/%E4%B9%90%E7%9F%A5%E4%BB%98%E5%8A%A0%E5%AF%86%E5%B9%B3%E5%8F%B0.png" alt="乐知付加密平台"></p>
+<p>一起学习，一起进步。<br></p>
+]]></content>
+      <categories>
+        <category>网站</category>
+        <category>乐知付</category>
+        <category>提现</category>
+      </categories>
+      <tags>
+        <tag>乐知付</tag>
+        <tag>提现</tag>
+      </tags>
+  </entry>
 </search>
