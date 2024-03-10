@@ -15401,5 +15401,36 @@ API
 <hr>
 <p>好记性不如烂笔头。</p>
 ]]></content>
+      <categories>
+        <category>flask</category>
+      </categories>
+      <tags>
+        <tag>flask</tag>
+        <tag>db</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>跨域问题</title>
+    <url>/2024/01/27/%E8%B7%A8%E5%9F%9F%E9%97%AE%E9%A2%98/</url>
+    <content><![CDATA[<p>问题：<br>Access to XMLHttpRequest at ‘<a href="http://xxx.xxx.xxx.xxx/admin/feedback&#39;">http://xxx.xxx.xxx.xxx/admin/feedback&#39;</a> from origin ‘<a href="http://localhost:63342&#39;">http://localhost:63342&#39;</a> has been blocked by CORS policy: No ‘Access-Control-Allow-Origin’ header is present on the requested resource.</p>
+<span id="more"></span>
+
+<h1 id="分析："><a href="#分析：" class="headerlink" title="分析："></a>分析：</h1><p>静态html页面与后端服务不在同一个域下面，后端flask服务此接口没有放开外部访问，如何放开接口外部访问呢？</p>
+<h1 id="解决："><a href="#解决：" class="headerlink" title="解决："></a>解决：</h1><ol>
+<li><p>安装flask cors</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">flask-cors==4.0.0</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>接口添加cross_origin装饰器</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">from flask_cors import cross_origin</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">@app.route(f&quot;&#123;url_prefix&#125;/feedback&quot;, methods=[&#x27;POST&#x27;])</span><br><span class="line">@cross_origin()</span><br><span class="line">def feedback():</span><br><span class="line">    pass</span><br></pre></td></tr></table></figure></li>
+</ol>
+<hr>
+<p>好记性不如烂笔头，没事记一记。</p>
+]]></content>
+      <categories>
+        <category>flask</category>
+      </categories>
+      <tags>
+        <tag>flask</tag>
+      </tags>
   </entry>
 </search>
