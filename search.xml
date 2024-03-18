@@ -701,7 +701,7 @@
 ]]></content>
       <categories>
         <category>CMS</category>
-        <category>wagtail</category>
+        <category>Wagtail</category>
       </categories>
       <tags>
         <tag>bootstrap</tag>
@@ -15673,6 +15673,75 @@ API
       <tags>
         <tag>乐知付</tag>
         <tag>提现</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>网站seo优化</title>
+    <url>/2024/03/18/%E7%BD%91%E7%AB%99seo%E4%BC%98%E5%8C%96/</url>
+    <content><![CDATA[<p>说下网站seo优化可以做的一些关键点。</p>
+<span id="more"></span>
+
+<ol>
+<li><p>网站关键词、标题、描述<br>head之间：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;title&gt;密码加密服务-数字或字母加密技术-数据安全-乐知付加密平台&lt;/title&gt;</span><br><span class="line">&lt;meta name=&quot;description&quot; content=&quot;通过乐知付加密平台，可以将字母或数字密码加密后生成浏览器链接，用户扫描链接中的二维码，支付后展示明文密码，保护您的隐私和数据不被泄露，是个人运营的好帮手。&quot;&gt;</span><br><span class="line">&lt;meta name=&quot;keywords&quot; content=&quot;信息安全，数据安全，数字加密技术，数字加密应用，隐私保护，乐知付加密&quot; /&gt;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>图片的alt属性，添加图片的描述和关键字</p>
+</li>
+<li><p>开启网站压缩，访问速度更快点。<br> a. nginx:  一般配置文件位置&#x2F;usr&#x2F;local&#x2F;nginx&#x2F;conf&#x2F;nginx.conf</p>
+ <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># nginx.conf</span><br><span class="line"># 开启Gzip压缩</span><br><span class="line">gzip on;</span><br><span class="line">#低于5k的资源不压缩，这个大小可通过自己项目架构来限制</span><br><span class="line">gzip_min_length 5k;</span><br><span class="line">#压缩级别1-9，越大压缩率越高，同时消耗cpu资源也越多，建议设置在4左右。 </span><br><span class="line">gzip_comp_level 4; </span><br><span class="line">#需要压缩哪些响应类型的资源，多个空格隔开。不建议压缩图片.</span><br><span class="line">gzip_types text/html text/plain text/xml text/css application/javascript application/json;</span><br></pre></td></tr></table></figure>
+<p> b. apache服务器,打开Apache的配置文件（通常是httpd.conf或apache2.conf），然后添加以下代码：</p>
+ <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># httpd.conf</span><br><span class="line"># 开启Gzip压缩</span><br><span class="line">&lt;IfModule mod_deflate.c&gt;</span><br><span class="line">    SetOutputFilter DEFLATE</span><br><span class="line">    AddOutputFilterByType DEFLATE text/html text/plain text/xml text/css application/javascript application/json</span><br><span class="line">&lt;/IfModule&gt;</span><br></pre></td></tr></table></figure></li>
+<li><p>各大搜索引擎去收录你的网站和网页</p>
+</li>
+</ol>
+<hr>
+<p>一起学习。</p>
+]]></content>
+      <categories>
+        <category>网站</category>
+        <category>SEO</category>
+      </categories>
+      <tags>
+        <tag>seo</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>mac自带录屏快捷键</title>
+    <url>/2024/03/17/mac%E8%87%AA%E5%B8%A6%E5%BD%95%E5%B1%8F%E5%BF%AB%E6%8D%B7%E9%94%AE/</url>
+    <content><![CDATA[<p>command + shift + 5</p>
+<p>记录一下。</p>
+]]></content>
+      <categories>
+        <category>Mac</category>
+      </categories>
+      <tags>
+        <tag>mac</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>html中table如何实现手机端左右滚动查看表格数据</title>
+    <url>/2024/03/16/html%E4%B8%ADtable%E5%A6%82%E4%BD%95%E5%AE%9E%E7%8E%B0%E6%89%8B%E6%9C%BA%E7%AB%AF%E5%B7%A6%E5%8F%B3%E6%BB%9A%E5%8A%A8%E6%9F%A5%E7%9C%8B%E8%A1%A8%E6%A0%BC%E6%95%B0%E6%8D%AE/</url>
+    <content><![CDATA[<p>如何实现手机端表格宽度不够时，自动实现可手动左右滑动查看表格内容？</p>
+<span id="more"></span>
+
+
+<p>自定义css文件：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">@media (max-width: 600px) &#123;</span><br><span class="line">    table &#123;</span><br><span class="line">      display: block;</span><br><span class="line">      margin: 0 auto;</span><br><span class="line">      overflow-x: auto;</span><br><span class="line">      white-space: nowrap;</span><br><span class="line">      text-overflow: ellipsis;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>这里的@media(max-width: 600px)表示，程序自动判断显示屏幕的宽度，如果小于600px则table的css格式生效，<br>overflow-x: auto;即代表x轴横向滑动展示。</p>
+<p>如果你也使用了bootstrap css，那么自定义css文件必须在bootstrap.css文件之后进行加载，如下：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;link rel=&quot;stylesheet&quot; href=&#123;&#123; url_for(&#x27;static&#x27;, filename=&#x27;css/bootstrap.min.css&#x27;)&#125;&#125;&gt;</span><br><span class="line">&lt;link rel=&quot;stylesheet&quot; href=&#123;&#123; url_for(&#x27;static&#x27;, filename=&#x27;css/style-index.css&#x27;) &#125;&#125;&gt;</span><br></pre></td></tr></table></figure>
+
+
+<hr>
+<p>记录一下，一起学习。</p>
+]]></content>
+      <categories>
+        <category>前端</category>
+        <category>html</category>
+      </categories>
+      <tags>
+        <tag>html</tag>
+        <tag>table</tag>
       </tags>
   </entry>
 </search>

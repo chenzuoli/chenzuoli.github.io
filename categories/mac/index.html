@@ -82,7 +82,7 @@
 
 <meta property="og:type" content="website">
 <meta property="og:title" content="chenzuoli&#39;s blog">
-<meta property="og:url" content="https://chenzuoli.github.io/categories/mac/index.html">
+<meta property="og:url" content="https://chenzuoli.github.io/categories/Mac/index.html">
 <meta property="og:site_name" content="chenzuoli&#39;s blog">
 <meta property="og:locale">
 <meta property="article:author" content="Lee">
@@ -116,7 +116,7 @@
 
 
 
-  <link rel="canonical" href="https://chenzuoli.github.io/categories/mac/"/>
+  <link rel="canonical" href="https://chenzuoli.github.io/categories/Mac/"/>
 
 
 
@@ -131,7 +131,37 @@
 <script data-ad-client="ca-pub-6592717531467819" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 
 
-  <title>分类: mac | chenzuoli's blog</title>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.5.2/animate.min.css">
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.2/dist/jquery.min.js"></script>
+<style>
+  .floating-card-right {
+    position: fixed;
+    bottom: 50%;
+    right: 10px;
+    width: 200px;
+    z-index: 9999;
+  }
+</style>
+
+<div class="floating-card-right animate__animated animate__fadeInRight">
+  <a href="https://lezhifu.cc" target="_blank">
+    <div class="card">
+      <div class="card-content">
+        <span class="card-title">乐知付加密服务平台</span>
+        <p>如果你有资源，
+        平台可以帮你实现内容变现，
+        无需搭建知识付费服务平台。</p>
+      </div>
+      <div class="card-action">
+        <a href="https://lezhifu.cc" target="_blank">点击访问</a>
+      </div>
+    </div>
+  </a>
+</div>
+
+
+  <title>分类: Mac | chenzuoli's blog</title>
   
 
 
@@ -310,7 +340,7 @@
 
     <div id="posts" class="posts-collapse">
       <div class="collection-title">
-        <h1>mac<small>分类</small>
+        <h1>Mac<small>分类</small>
         </h1>
       </div>
 
@@ -322,37 +352,9 @@
 
       <h2 class="post-title">
         
-            <a class="post-title-link" href="/2023/01/02/mac%E5%AE%89%E8%A3%85yarn/" itemprop="url">
+            <a class="post-title-link" href="/2024/03/17/mac%E8%87%AA%E5%B8%A6%E5%BD%95%E5%B1%8F%E5%BF%AB%E6%8D%B7%E9%94%AE/" itemprop="url">
               
-                <span itemprop="name">mac安装yarn</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2023-01-02T14:41:15+08:00"
-              content="2023-01-02" >
-          01-02
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-      
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2023/01/01/mac%E6%9F%A5%E7%9C%8B%E7%AB%AF%E5%8F%A3%E5%8D%A0%E7%94%A8%E6%83%85%E5%86%B5/" itemprop="url">
-              
-                <span itemprop="name">mac查看端口占用情况</span>
+                <span itemprop="name">mac自带录屏快捷键</span>
               
             </a>
         
@@ -360,9 +362,9 @@
 
       <div class="post-meta">
         <time class="post-time" itemprop="dateCreated"
-              datetime="2023-01-01T16:18:29+08:00"
-              content="2023-01-01" >
-          01-01
+              datetime="2024-03-17T10:01:08+08:00"
+              content="2024-03-17" >
+          03-17
         </time>
       </div>
 
@@ -423,7 +425,7 @@
               
                 <a href="/archives/%7C%7C%20archive">
               
-                  <span class="site-state-item-count">387</span>
+                  <span class="site-state-item-count">390</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -434,7 +436,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">172</span>
+                  <span class="site-state-item-count">174</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -445,7 +447,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">437</span>
+                  <span class="site-state-item-count">439</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -1322,6 +1324,22 @@ function addCount(Counter) {
 		},
 		error: function(error) {
 			console.log('Error:' + error.code + " " + error.message);
+		}
+	});
+}
+$(function() {
+	var Counter = AV.Object.extend("Counter");
+	if ($('.leancloud_visitors').length == 1) {
+		addCount(Counter);
+	} else if ($('.post-title-link').length > 1) {
+		showTime(Counter);
+	}
+}); 
+</script>
+	
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"log":false,"model":{"jsonPath":"/live2dw/assets/shizuku.model.json"},"display":{"position":"left","width":150,"height":300},"mobile":{"show":true},"react":{"opacity":0.7}});</script></body>
+</html>
+:' + error.code + " " + error.message);
 		}
 	});
 }
