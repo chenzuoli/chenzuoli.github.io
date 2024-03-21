@@ -15744,4 +15744,88 @@ API
         <tag>table</tag>
       </tags>
   </entry>
+  <entry>
+    <title>说下域名恶意解析</title>
+    <url>/2024/03/21/%E8%AF%B4%E4%B8%8B%E5%9F%9F%E5%90%8D%E6%81%B6%E6%84%8F%E8%A7%A3%E6%9E%90/</url>
+    <content><![CDATA[<p>最近做了个网站，<a href="www.lezhifu.cc">www.lezhifu.cc</a>，刚开始没有做任何防范，导致别人恶意解析，<br>下面来看看别人具体是怎么做的。</p>
+<span id="more"></span>
+
+<h2 id="环境："><a href="#环境：" class="headerlink" title="环境："></a>环境：</h2><p>nginx + 静态html网站</p>
+<p>服务器：阿里云<br>域名：<a href="http://www.lezhifu.cc/">www.lezhifu.cc</a><br>ip: 47.103.53.229</p>
+<p>阿里云域名管理已经配置了域名映射到ip地址，即将该域名映射到此ip：47.103.53.229，<br>访问<a href="http://www.lezhifu.cc即访问47.103.53.229:80端口">www.lezhifu.cc即访问47.103.53.229:80端口</a></p>
+<h2 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h2><p>在看看nginx的配置，访问80端口时，映射到服务器的根目录<code>/usr/lezhifu_website</code>，找对应目录下的index.htm或index.html</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">server &#123;</span><br><span class="line">        listen       80;</span><br><span class="line">        server_name  lezhifu.cc;</span><br><span class="line"></span><br><span class="line">        #access_log  logs/host.access.log  main;</span><br><span class="line"></span><br><span class="line">        #location / &#123;</span><br><span class="line">        #    root   html;</span><br><span class="line">        #    index  index.html index.htm;</span><br><span class="line">        #&#125;</span><br><span class="line">        # website frontend</span><br><span class="line">        location / &#123;</span><br><span class="line">            root   /usr/lezhifu_website;</span><br><span class="line">            index  index.html index.htm;</span><br><span class="line">        &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>nginx有了这样的配置，当你访问<a href="http://www.lezhifu.cc时,就会解析到/usr/lezhifu_websit/index.html%E6%96%87%E4%BB%B6%E4%BA%86%EF%BC%8C%E7%84%B6%E5%90%8E%E8%BF%94%E5%9B%9E%E5%88%B0%E6%B5%8F%E8%A7%88%E5%99%A8%E3%80%82">www.lezhifu.cc时，就会解析到/usr/lezhifu_websit/index.html文件了，然后返回到浏览器。</a></p>
+<h2 id="域名恶意解析"><a href="#域名恶意解析" class="headerlink" title="域名恶意解析"></a>域名恶意解析</h2><p>当时我的网站代码添加了百度统计功能，在统计页面上看到别人的域名，我在纳闷儿为什么访问别人的域名也统计到我的数据中呢？<br><img src="/2024/03/21/%E8%AF%B4%E4%B8%8B%E5%9F%9F%E5%90%8D%E6%81%B6%E6%84%8F%E8%A7%A3%E6%9E%90/image.png" alt="恶意解析"></p>
+<p>于是我咨询了阿里云，给的解释是域名恶意解析，第一次听说这个名词，也第一次碰到别人恶意攻击我的网站，<br>估计后面还会有更麻烦的Dos DDos攻击吧，希望不要被我碰到。<br><img src="/2024/03/21/%E8%AF%B4%E4%B8%8B%E5%9F%9F%E5%90%8D%E6%81%B6%E6%84%8F%E8%A7%A3%E6%9E%90/question.png" alt="咨询问题回答"></p>
+<p>由于nginx这里没有做任何限制，导致别人的域名也可以这样配置，解析到我的ip下，如下阿里云的【域名控制台】 【解析】：</p>
+<p><img src="/2024/03/21/%E8%AF%B4%E4%B8%8B%E5%9F%9F%E5%90%8D%E6%81%B6%E6%84%8F%E8%A7%A3%E6%9E%90/jiexi.png" alt="域名解析"></p>
+<p><img src="/2024/03/21/%E8%AF%B4%E4%B8%8B%E5%9F%9F%E5%90%8D%E6%81%B6%E6%84%8F%E8%A7%A3%E6%9E%90/ip.png" alt="ip"></p>
+<p>他的域名映射到我的ip即可完成域名恶意解析。</p>
+<h2 id="解决办法"><a href="#解决办法" class="headerlink" title="解决办法"></a>解决办法</h2><p>这里贴下阿里云给出的方法：<br>参考如下文档，修改自己的Web服务器（例如Nginx、Apache）配置，禁止以IP的形式访问域名，只允许您自己的域名访问。<br>IIS设置禁止通过IP访问：<a href="https://help.aliyun.com/document_detail/40946.html">https://help.aliyun.com/document_detail/40946.html</a><br>Apache禁止未经许可的域名访问网站：<a href="https://help.aliyun.com/document_detail/41091.html">https://help.aliyun.com/document_detail/41091.html</a><br>Nginx禁止未经许可的域名访问网站：<a href="https://developer.aliyun.com/article/7735">https://developer.aliyun.com/article/7735</a></p>
+<p>我的方法是这样的，修改nginx配置：<br>vim &#x2F;usr&#x2F;local&#x2F;nginx&#x2F;conf&#x2F;nginx.conf</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">server &#123;</span><br><span class="line">    if ($host !~* ^(lezhifu\.cc|\w+\.lezhifu\.cc)$) &#123;</span><br><span class="line">        return 403;  # 拒绝访问</span><br><span class="line">    &#125;</span><br><span class="line">    listen       80;</span><br><span class="line">    server_name  lezhifu.cc;</span><br></pre></td></tr></table></figure>
+<p>添加了if判断：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">if ($host !~* ^(lezhifu\.cc|\w+\.lezhifu\.cc)$) &#123;</span><br><span class="line">            return 403;  # 拒绝访问</span><br><span class="line">        &#125;</span><br></pre></td></tr></table></figure>
+<p>如果域名不是从lezhifu.cc或者其子域名访问的，一律返回403 Request Forbidden。</p>
+<p>ok，大功告成。</p>
+<p>希望这个网络世界里，少一点恶意，多一点善意，共同维护这个美好的网络世界。</p>
+<p>我是乐知付加密平台，一个专为知识付费服务的加密平台。</p>
+<hr>
+<p>欢迎关注微信公众号：【乐知付加密平台】<br><img src="/images/%E4%B9%90%E7%9F%A5%E4%BB%98%E5%8A%A0%E5%AF%86%E5%B9%B3%E5%8F%B0.png" alt="乐知付加密平台"></p>
+<p>一起学习，一起进步。<br></p>
+]]></content>
+      <categories>
+        <category>Http</category>
+        <category>域名恶意解析</category>
+      </categories>
+      <tags>
+        <tag>http</tag>
+        <tag>域名恶意解析</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>vision_pro开发入门一</title>
+    <url>/2024/03/21/vision-pro%E5%BC%80%E5%8F%91%E5%85%A5%E9%97%A8%E4%B8%80/</url>
+    <content><![CDATA[<p>先了解下开发步骤。</p>
+<span id="more"></span>
+
+<h1 id="一、环境准备"><a href="#一、环境准备" class="headerlink" title="一、环境准备"></a>一、环境准备</h1><p>xcode开发工具<br>vision pro模拟器</p>
+<h1 id="二、项目开发"><a href="#二、项目开发" class="headerlink" title="二、项目开发"></a>二、项目开发</h1><p>新建项目<br>选择vision os</p>
+<p>项目的主要文件：</p>
+<ol>
+<li>HelloVisionProWorldApp.swift<br>入口，尽管它是个最重要的文件，但是只定义了入口，所以没必要看了。核心在我看来只有一句话：“WindowGroup{ContentView()}” 与”let renderer &#x3D; Renderer(layerRenderer)” 定义好了 窗口与 Render<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">import SwiftUI</span><br><span class="line">import CompositorServices</span><br><span class="line"></span><br><span class="line">struct ContentStageConfiguration: CompositorLayerConfiguration &#123;</span><br><span class="line">    func makeConfiguration(capabilities: LayerRenderer.Capabilities, configuration: inout LayerRenderer.Configuration) &#123;</span><br><span class="line">        configuration.depthFormat = .depth32Float</span><br><span class="line">        configuration.colorFormat = .bgra8Unorm_srgb</span><br><span class="line">    </span><br><span class="line">        let foveationEnabled = capabilities.supportsFoveation</span><br><span class="line">        configuration.isFoveationEnabled = foveationEnabled</span><br><span class="line">        </span><br><span class="line">        let options: LayerRenderer.Capabilities.SupportedLayoutsOptions = foveationEnabled ? [.foveationEnabled] : []</span><br><span class="line">        let supportedLayouts = capabilities.supportedLayouts(options: options)</span><br><span class="line">        </span><br><span class="line">        configuration.layout = supportedLayouts.contains(.layered) ? .layered : .dedicated</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">@main</span><br><span class="line">struct TestingApp: App &#123;</span><br><span class="line">    var body: some Scene &#123;</span><br><span class="line">        WindowGroup &#123;</span><br><span class="line">            ContentView()</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        ImmersiveSpace(id: &quot;ImmersiveSpace&quot;) &#123;</span><br><span class="line">            CompositorLayer(configuration: ContentStageConfiguration()) &#123; layerRenderer in</span><br><span class="line">                let renderer = Renderer(layerRenderer)</span><br><span class="line">                renderer.startRenderLoop()</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;.immersionStyle(selection: .constant(.full), in: .full)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+<li>ContentView.swift<br>核心文件<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">import SwiftUI</span><br><span class="line">import RealityKit</span><br><span class="line">import RealityKitContent</span><br><span class="line"></span><br><span class="line">struct ContentView: View &#123;</span><br><span class="line"></span><br><span class="line">    @State private var showImmersiveSpace = false</span><br><span class="line">    @State private var immersiveSpaceIsShown = false</span><br><span class="line"></span><br><span class="line">    @Environment(\.openImmersiveSpace) var openImmersiveSpace</span><br><span class="line">    @Environment(\.dismissImmersiveSpace) var dismissImmersiveSpace</span><br><span class="line"></span><br><span class="line">    var body: some View &#123;</span><br><span class="line">        VStack &#123;</span><br><span class="line">            Model3D(named: &quot;Scene&quot;, bundle: realityKitContentBundle)</span><br><span class="line">                .padding(.bottom, 50)</span><br><span class="line"></span><br><span class="line">            Text(&quot;Hello, world!&quot;)</span><br><span class="line"></span><br><span class="line">            Toggle(&quot;Show Immersive Space&quot;, isOn: $showImmersiveSpace)</span><br><span class="line">                .toggleStyle(.button)</span><br><span class="line">                .padding(.top, 50)</span><br><span class="line">        &#125;</span><br><span class="line">        .padding()</span><br><span class="line">        .onChange(of: showImmersiveSpace) &#123; _, newValue in</span><br><span class="line">            Task &#123;</span><br><span class="line">                if newValue &#123;</span><br><span class="line">                    switch await openImmersiveSpace(id: &quot;ImmersiveSpace&quot;) &#123;</span><br><span class="line">                    case .opened:</span><br><span class="line">                        immersiveSpaceIsShown = true</span><br><span class="line">                    case .error, .userCancelled:</span><br><span class="line">                        fallthrough</span><br><span class="line">                    @unknown default:</span><br><span class="line">                        immersiveSpaceIsShown = false</span><br><span class="line">                        showImmersiveSpace = false</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125; else if immersiveSpaceIsShown &#123;</span><br><span class="line">                    await dismissImmersiveSpace()</span><br><span class="line">                    immersiveSpaceIsShown = false</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">#Preview(windowStyle: .automatic) &#123;</span><br><span class="line">    ContentView()</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+这个文件差不多是整个 VisionPro 应用的核心所在，你只用了简单的一点定义就把一个 3D 世界呈现在你面前了。<br>核心代码只有三行，定义了 Model3D， 设置显示的 Text 为“Hello, world!”，另一个 Toggle 控件”Show Inmersive Space” ，就能看到下面这个完整的 3D 世界。</li>
+</ol>
+<p>再来分析一下代码：</p>
+<p>VStack 定义了 3D 的布局，其实它是一个标准的 Swift 开发 App 的方式，可以说广大 iOS 的开发者基本上可以无缝迁移到 VisionPro 的开发上，这个生态能力真的相当不错。</p>
+<p>然后开发语言也是 Swift，没有任何差异。</p>
+<ol start="3">
+<li>Renderer.swift</li>
+<li>Shaders.metal</li>
+<li>ShaderTypes.h</li>
+</ol>
+<p>Renders 导入了 Metal， 而 Shaders 与 SHaderTypes 共同定义 Shader 的内容。这里的东西是你实际开发的内容。</p>
+<ul>
+<li>Renderer：负责设置和管理渲染流程。<br>成员变量<br>定义了一系列变量，如Metal设备、命令队列、uniform缓冲区、渲染管线状态、深度状态、纹理等。<br>初始化<br>init 方法初始化Renderer类，设置Metal相关配置，加载网格(mesh)和纹理等。<br>方法<br>startRenderLoop：开始渲染循环，用于不断渲染新的帧。<br>buildMetalVertexDescriptor：设置Metal的顶点描述符，用于定义顶点数据的组织方式。<br>buildRenderPipelineWithDevice：创建渲染管线，这是渲染过程的一个重要部分，定义了如何处理顶点和片段。<br>buildMesh：创建并配置网格，用于渲染。<br>loadTexture：加载纹理，用于渲染中的表面细节。<br>updateDynamicBufferState, updateGameState：更新渲染状态，例如处理uniform缓冲区的数据和计算模型的变换。<br>renderFrame：渲染单个帧的逻辑，包括准备命令缓冲区、配置渲染编码器、绘制网格等。<br>renderLoop：持续渲染的循环，负责调用renderFrame来渲染每一帧。</li>
+</ul>
+<p>所以，未来你大概率要读懂这里的每一行代码，可能对于应用开发者，这是一件难的事。</p>
+<h1 id="三、模拟运行"><a href="#三、模拟运行" class="headerlink" title="三、模拟运行"></a>三、模拟运行</h1><p>可以看到，在模拟器中运行的结果跟在开发中运行的结果是一样的。</p>
+<p>这是个开始，以后我会慢慢增加更多的 VisionPro 开发介绍的，简单的感受。</p>
+<p>iOS 熟悉 swift 开发的人可以无缝迁移到VisionPro开发上来，接下来你可能需要懂的就是一些 3D 相关的知识，相信 3D 这事慢慢会成为一个热点的。毕竟 Apple 的生态能力的强大是大家所共知的。</p>
+<p>加油，真的期望看到 IT 世界的新变化。</p>
+<p>建议有机会学学 swift, blender, 这样你对于 VisionPro 的开发会有足够的认知的。</p>
+<hr>
+<p>学无止境。</p>
+]]></content>
+      <categories>
+        <category>VisionOS</category>
+        <category>入门一</category>
+      </categories>
+      <tags>
+        <tag>visionOS</tag>
+      </tags>
+  </entry>
 </search>
