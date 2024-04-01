@@ -15846,7 +15846,7 @@ API
 </ol>
 <p>顺便打一波广告，最近开发的网站：乐知付加密平台，如果你手里有资源，可以通过平台变现。</p>
 <hr>
-<p>欢迎关注微信公众号：【乐知付加密平台】<br><img src="/images/%E4%B9%90%E7%9F%A5%E4%BB%98%E5%8A%A0%E5%AF%86%E5%B9%B3%E5%8F%B0.png" alt="乐知付加密平台"></p>
+<p>欢迎关注微信公众号，你的资源可变现：【乐知付加密平台】<br><img src="/images/%E4%B9%90%E7%9F%A5%E4%BB%98%E5%8A%A0%E5%AF%86%E5%B9%B3%E5%8F%B0.png" alt="乐知付加密平台"></p>
 <p>一起学习，一起进步。<br></p>
 ]]></content>
       <categories>
@@ -15856,6 +15856,33 @@ API
       <tags>
         <tag>mac</tag>
         <tag>电脑</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>VisionOS应用开发需要哪些条件</title>
+    <url>/2024/04/01/VisionOS%E5%BA%94%E7%94%A8%E5%BC%80%E5%8F%91%E9%9C%80%E8%A6%81%E5%93%AA%E4%BA%9B%E6%9D%A1%E4%BB%B6/</url>
+    <content><![CDATA[<p>说下开发visionOS空间应用需要哪些准备，这里我找了下，列出来给大家。<br><img src="/2024/04/01/VisionOS%E5%BA%94%E7%94%A8%E5%BC%80%E5%8F%91%E9%9C%80%E8%A6%81%E5%93%AA%E4%BA%9B%E6%9D%A1%E4%BB%B6/vision.avif" alt="require"></p>
+<span id="more"></span>
+
+
+<ol>
+<li>xcode 15.2</li>
+<li>2d: SwiftUI</li>
+<li>3d: RealityKit&#x2F;Unity 3D</li>
+<li>实体空间: ARKit</li>
+<li>Intel Mac上可以运行Xcode15.2，但如果想要运行visionOS sdk（即开发visionOS应用），则需要搭载m1  m2  m3芯片的mac<br><img src="/2024/04/01/VisionOS%E5%BA%94%E7%94%A8%E5%BC%80%E5%8F%91%E9%9C%80%E8%A6%81%E5%93%AA%E4%BA%9B%E6%9D%A1%E4%BB%B6/require.webp" alt="require"></li>
+</ol>
+<hr>
+<p>欢迎关注微信公众号，让你的资源变现：【乐知付加密平台】<br><img src="/images/%E4%B9%90%E7%9F%A5%E4%BB%98%E5%8A%A0%E5%AF%86%E5%B9%B3%E5%8F%B0.png" alt="乐知付加密平台"></p>
+<p>一起学习，一起进步。<br></p>
+]]></content>
+      <categories>
+        <category>VisionOS</category>
+        <category>开发工具</category>
+      </categories>
+      <tags>
+        <tag>VisionOS</tag>
+        <tag>空间计算</tag>
       </tags>
   </entry>
 </search>

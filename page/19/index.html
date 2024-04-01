@@ -348,6 +348,202 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://chenzuoli.github.io/2021/10/24/airflow%E6%9E%B6%E6%9E%84%E8%AF%A6%E8%A7%A3/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="chenzuoli's blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2021/10/24/airflow%E6%9E%B6%E6%9E%84%E8%AF%A6%E8%A7%A3/" itemprop="url">airflow架构详解</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2021-10-24T09:26:43+08:00">
+                2021-10-24
+              </time>
+            
+
+            
+              <span class="post-meta-divider">|</span>
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-check-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">更新于&#58;</span>
+              
+              <time title="更新于" itemprop="dateModified" datetime="2021-10-24T09:26:43+08:00">
+                2021-10-24
+              </time>
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E5%A4%A7%E6%95%B0%E6%8D%AE/" itemprop="url" rel="index">
+                    <span itemprop="name">大数据</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E5%A4%A7%E6%95%B0%E6%8D%AE/%E8%B0%83%E5%BA%A6%E7%B3%BB%E7%BB%9F/" itemprop="url" rel="index">
+                    <span itemprop="name">调度系统</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E5%A4%A7%E6%95%B0%E6%8D%AE/%E8%B0%83%E5%BA%A6%E7%B3%BB%E7%BB%9F/Airflow/" itemprop="url" rel="index">
+                    <span itemprop="name">Airflow</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+          
+            
+          
+
+          
+          
+          
+             <span id="/2021/10/24/airflow%E6%9E%B6%E6%9E%84%E8%AF%A6%E8%A7%A3/" class="leancloud_visitors" data-flag-title="airflow架构详解">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <p>关于airflow，大家应该很清楚它是干嘛的，怎么使用，那么它底层的调度原理到底是啥样的呢？<br>我大概从2018年下半年，开始使用airflow，第一次使用时，是团队一起调研的，所以，从搭建，到基本使用，再到参数优化，都是经历过的。</p>
+<p>后面进入到另一家公司，也是由于我使用过airflow调度系统才找我进去的，所以会使用airflow调度系统，也算一个优势吧。<br>在这家公司的话，对airflow的使用，就详细到了每一个功能，包括血缘，与atlas结合、升级、参数化等。于是对airflow有了更深入的了解。</p>
+<p>今天就为大家介绍airflow的架构，下面来看看。</p>
+<p><img src="/2021/10/24/airflow%E6%9E%B6%E6%9E%84%E8%AF%A6%E8%A7%A3/airflow-logo.jpeg" alt="airflow_logo"></p>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2021/10/24/airflow%E6%9E%B6%E6%9E%84%E8%AF%A6%E8%A7%A3/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+    
+    
+    
+
+		
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="https://chenzuoli.github.io/2021/10/23/%E5%85%B3%E4%BA%8Ehbase-cdc-connector-%E9%87%8D%E8%A6%81%E7%9A%84%E4%BA%8B%E6%83%85%E8%AF%B4%E4%B8%89%E9%81%8D/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -2022,189 +2218,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://chenzuoli.github.io/2021/09/23/%E8%AF%B4%E8%AF%B4%E4%B8%80%E4%B8%AA%E4%BA%BA%E5%8E%BB%E5%A4%A7%E5%9F%8E%E5%B8%82%E7%9A%84%E4%BD%93%E9%AA%8C/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="chenzuoli's blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2021/09/23/%E8%AF%B4%E8%AF%B4%E4%B8%80%E4%B8%AA%E4%BA%BA%E5%8E%BB%E5%A4%A7%E5%9F%8E%E5%B8%82%E7%9A%84%E4%BD%93%E9%AA%8C/" itemprop="url">说说一个人去大城市的体验</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2021-09-23T23:30:31+08:00">
-                2021-09-23
-              </time>
-            
-
-            
-              <span class="post-meta-divider">|</span>
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-check-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">更新于&#58;</span>
-              
-              <time title="更新于" itemprop="dateModified" datetime="2024-03-10T11:11:58+08:00">
-                2024-03-10
-              </time>
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E5%85%B6%E4%BB%96/" itemprop="url" rel="index">
-                    <span itemprop="name">其他</span>
-                  </a>
-                </span>
-
-                
-                
-                  ， 
-                
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E5%85%B6%E4%BB%96/%E5%A4%A7%E5%9F%8E%E5%B8%82/" itemprop="url" rel="index">
-                    <span itemprop="name">大城市</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-          
-            
-          
-
-          
-          
-          
-             <span id="/2021/09/23/%E8%AF%B4%E8%AF%B4%E4%B8%80%E4%B8%AA%E4%BA%BA%E5%8E%BB%E5%A4%A7%E5%9F%8E%E5%B8%82%E7%9A%84%E4%BD%93%E9%AA%8C/" class="leancloud_visitors" data-flag-title="说说一个人去大城市的体验">
-               <span class="post-meta-divider">|</span>
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               
-                 <span class="post-meta-item-text">阅读次数&#58;</span>
-               
-                 <span class="leancloud-visitors-count"></span>
-             </span>
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>体验就是，赞赞赞。</p>
-<p>我是在北京呆了4年，然后疫情后，一个人来到上海，自己找工作，自己租房子，来到上海后，租了一个房子，住在一个6平米的房间里，找工作找了半个月，然后每天除了上下班，周末、节假日也是一个人在家，虽然孤独，但是你有足够的时间，做自己喜欢做的事情，完成自己想学习的东西，想完成的梦，时间充足，那段时间学到了很多知识、完成了许多自己要完成的事情，而且也组建了自己的创业团队，去做自己喜欢做的事，实现自己的梦想。</p>
-<p>虽说现在还未成功，但是很庆幸自己能够好好利用了那段单身时光，减少了不必要的社交，完成了许多事情。</p>
-<p>所以一个人在大城市，没有什么好怕的，大家都是这样度过来的，没有什么难不难的，大家都难，所以坚持下去吧，少年，今后的你，会感谢今天努力的自己。</p>
-<p><b>每天进步一点点，我迟早会秃头。</b></p>
-<p>一起学习，一起进步。<br></p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-		
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -2255,7 +2268,7 @@
               
                 <a href="/archives/%7C%7C%20archive">
               
-                  <span class="site-state-item-count">393</span>
+                  <span class="site-state-item-count">394</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -2266,7 +2279,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">179</span>
+                  <span class="site-state-item-count">180</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -2277,7 +2290,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">442</span>
+                  <span class="site-state-item-count">444</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
