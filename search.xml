@@ -15885,4 +15885,75 @@ API
         <tag>空间计算</tag>
       </tags>
   </entry>
+  <entry>
+    <title>乐知付-如何制作html文件可双击跳转到支付页面？</title>
+    <url>/2024/04/05/%E4%B9%90%E7%9F%A5%E4%BB%98%E5%8A%A0%E5%AF%86%E5%B9%B3%E5%8F%B0-%E5%8F%8C%E5%87%BBhtml%E6%96%87%E4%BB%B6%E8%B7%B3%E8%BD%AC%E5%88%B0%E6%94%AF%E4%BB%98%E9%A1%B5%E9%9D%A2/</url>
+    <content><![CDATA[<p><img src="/2024/04/05/%E4%B9%90%E7%9F%A5%E4%BB%98%E5%8A%A0%E5%AF%86%E5%B9%B3%E5%8F%B0-%E5%8F%8C%E5%87%BBhtml%E6%96%87%E4%BB%B6%E8%B7%B3%E8%BD%AC%E5%88%B0%E6%94%AF%E4%BB%98%E9%A1%B5%E9%9D%A2/flower.png" alt="花"><br>为了便于买家理解使用链接进行付费获取密码；现开发个小工具，将支付链接转为浏览器可识别的文件，双击打开即可跳转到浏览器支付页面。</p>
+<span id="more"></span>
+
+
+<p>文件命名：<strong>解压密码-双击查看.html</strong><br>内容如下：</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">&lt;html&gt;</span><br><span class="line">&lt;head&gt;</span><br><span class="line">&lt;meta http-equiv=&quot;refresh&quot;content=&quot;0;url=http://lezhifu.cc/static/html/qrcode.html?p=34&quot;&gt;</span><br><span class="line">&lt;/head&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure>
+
+<p>这段内容是一个简单的浏览器页面，它包含了一个自动刷新的元标记（meta tag）来实现页面的重定向。<br>商家使用时，<strong>必须将上述链接替换成您本身的链接</strong>，上述链接 <a href="http://lezhifu.cc/static/html/qrcode.html?p=34%22%3E">http://lezhifu.cc/static/html/qrcode.html?p=34</a> <strong>为演示所用。</strong></p>
+<p><img src="/2024/04/05/%E4%B9%90%E7%9F%A5%E4%BB%98%E5%8A%A0%E5%AF%86%E5%B9%B3%E5%8F%B0-%E5%8F%8C%E5%87%BBhtml%E6%96%87%E4%BB%B6%E8%B7%B3%E8%BD%AC%E5%88%B0%E6%94%AF%E4%BB%98%E9%A1%B5%E9%9D%A2/link.png" alt="演示"></p>
+<p><strong>具体解释如下：</strong></p>
+<blockquote>
+<ul>
+<li><html>：这是HTML页面的根元素。</html></li>
+<li><head>：这是文档头部的元素，其中包含了页面的元数据和其他引用信息。</head></li>
+<li><meta>：这是一个元标记，用于在HTML文档中提供元数据。</li>
+<li>http-equiv&#x3D;”refresh”：这是<meta>元素的一个属性，指定了HTTP头部的一个等价字段。</li>
+<li>content&#x3D;”0;url&#x3D;<a href="http://lezhifu.cc/static/html/qrcode.html?p=34%22%60">http://lezhifu.cc/static/html/qrcode.html?p=34"</a>：这是<meta>元素的另一个属性，它指定了页面的刷新时间和重定向的目标URL。<ul>
+<li>0：表示页面在加载后立即刷新。</li>
+<li>url&#x3D;<a href="http://lezhifu.cc/static/html/qrcode.html?p=34%60">http://lezhifu.cc/static/html/qrcode.html?p=34</a>：是重定向的目标URL，即在刷新后将页面导航到该URL。</li>
+</ul>
+</li>
+<li>：表示头部元素的结束标签。</li>
+<li>：表示HTML页面的结束标签。</li>
+</ul>
+</blockquote>
+<p>因此，这段内容的含义是：当买家双击页面时，即打开了支付页面 <a href="http://lezhifu.cc/static/html/qrcode.html?p=34%60">http://lezhifu.cc/static/html/qrcode.html?p=34</a> 这个链接。<br>扫描此链接里的二维码，完成付款，即可看到您的资源密码了。</p>
+<p><img src="/2024/04/05/%E4%B9%90%E7%9F%A5%E4%BB%98%E5%8A%A0%E5%AF%86%E5%B9%B3%E5%8F%B0-%E5%8F%8C%E5%87%BBhtml%E6%96%87%E4%BB%B6%E8%B7%B3%E8%BD%AC%E5%88%B0%E6%94%AF%E4%BB%98%E9%A1%B5%E9%9D%A2/pay.png" alt="扫码支付"></p>
+<p>示例文件，点击下载查看：<a href="https://lezhifu.cc/help/%E8%A7%A3%E5%8E%8B%E5%AF%86%E7%A0%81_%E6%A8%A1%E6%9D%BF.html">解压密码_模板.html</a></p>
+<hr>
+<p>欢迎关注微信公众号，你的资源可变现：【乐知付加密平台】<br><img src="/images/%E4%B9%90%E7%9F%A5%E4%BB%98%E5%8A%A0%E5%AF%86%E5%B9%B3%E5%8F%B0.png" alt="乐知付加密平台"></p>
+<p>一起学习，一起进步。<br></p>
+]]></content>
+      <categories>
+        <category>网站</category>
+        <category>乐知付</category>
+      </categories>
+      <tags>
+        <tag>乐知付</tag>
+        <tag>乐知付加密</tag>
+        <tag>密码管理</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>vision-pro开发入门二</title>
+    <url>/2024/04/02/vision-pro%E5%BC%80%E5%8F%91%E5%85%A5%E9%97%A8%E4%BA%8C/</url>
+    <content><![CDATA[<p>这里列一下学习visionos应用开发的学习路径。</p>
+<span id="more"></span>
+
+<ol>
+<li>学习swift语言: <a href="https://www.codecademy.com/learn/learn-swift">https://www.codecademy.com/learn/learn-swift</a></li>
+<li>unity基础</li>
+<li>realitykit基础</li>
+<li>arkit基础</li>
+<li>内容创作基础：reality compose pro</li>
+<li>应用开发，学习几个实例</li>
+</ol>
+<hr>
+<p>欢迎关注微信公众号，你的资源可变现：【乐知付加密平台】<br><img src="/images/%E4%B9%90%E7%9F%A5%E4%BB%98%E5%8A%A0%E5%AF%86%E5%B9%B3%E5%8F%B0.png" alt="乐知付加密平台"></p>
+<p>一起学习，一起进步。<br></p>
+]]></content>
+      <categories>
+        <category>VisionOS</category>
+        <category>入门二</category>
+      </categories>
+      <tags>
+        <tag>visionOS</tag>
+      </tags>
+  </entry>
 </search>
