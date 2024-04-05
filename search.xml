@@ -15786,7 +15786,7 @@ API
       </tags>
   </entry>
   <entry>
-    <title>vision_pro开发入门一</title>
+    <title>vision_pro开发入门一-了解基本情况</title>
     <url>/2024/03/21/vision-pro%E5%BC%80%E5%8F%91%E5%85%A5%E9%97%A8%E4%B8%80/</url>
     <content><![CDATA[<p>先了解下开发步骤。</p>
 <span id="more"></span>
@@ -15822,10 +15822,9 @@ API
 ]]></content>
       <categories>
         <category>VisionOS</category>
-        <category>入门一</category>
       </categories>
       <tags>
-        <tag>visionOS</tag>
+        <tag>VisionOS</tag>
       </tags>
   </entry>
   <entry>
@@ -15931,7 +15930,7 @@ API
       </tags>
   </entry>
   <entry>
-    <title>vision-pro开发入门二</title>
+    <title>vision-pro开发入门二-学习规划</title>
     <url>/2024/04/02/vision-pro%E5%BC%80%E5%8F%91%E5%85%A5%E9%97%A8%E4%BA%8C/</url>
     <content><![CDATA[<p>这里列一下学习visionos应用开发的学习路径。</p>
 <span id="more"></span>
@@ -15950,10 +15949,30 @@ API
 ]]></content>
       <categories>
         <category>VisionOS</category>
-        <category>入门二</category>
+        <category>Swift</category>
       </categories>
       <tags>
-        <tag>visionOS</tag>
+        <tag>VisionOS</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>vision-pro开发入门三-swift语言学习</title>
+    <url>/2024/04/05/vision-pro%E5%BC%80%E5%8F%91%E5%85%A5%E9%97%A8%E4%B8%89-swift%E8%AF%AD%E8%A8%80%E5%AD%A6%E4%B9%A0/</url>
+    <content><![CDATA[<p>学习了swift语言的基本语法，可供大家参考。<br>了解部分特性即可，不必深究，因为你已经学会了其他语言java、python、c#等语言的基本使用，swift也类似。</p>
+<span id="more"></span>
+
+<p>这里是我学习swift语言的一些源代码：<br><a href="https://github.com/chenzuoli/swift-learning.git">https://github.com/chenzuoli/swift-learning.git</a></p>
+<p>总的看下来，swift也是个面向对象的语言，跟java类似，基本类型、逻辑计算、控制语句、继承、扩展等特性。</p>
+<hr>
+<p>欢迎关注微信公众号，你的资源可变现：【乐知付加密平台】<br><img src="/images/%E4%B9%90%E7%9F%A5%E4%BB%98%E5%8A%A0%E5%AF%86%E5%B9%B3%E5%8F%B0.png" alt="乐知付加密平台"></p>
+<p>一起学习，一起进步。<br></p>
+]]></content>
+      <categories>
+        <category>VisionOS</category>
+        <category>Swift</category>
+      </categories>
+      <tags>
+        <tag>VisionOS</tag>
       </tags>
   </entry>
 </search>
