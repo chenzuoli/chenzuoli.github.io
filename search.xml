@@ -1665,7 +1665,7 @@
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&#x27;use strict&#x27;;</span><br><span class="line">var pagination = require(&#x27;hexo-pagination&#x27;);</span><br><span class="line">module.exports = function(locals)&#123;</span><br><span class="line">  var config = this.config;</span><br><span class="line">  var posts = locals.posts;</span><br><span class="line">    posts.data = posts.data.sort(function(a, b) &#123;</span><br><span class="line">        if(a.top &amp;&amp; b.top) &#123; // 两篇文章top都有定义</span><br><span class="line">            if(a.top == b.top) return b.date - a.date; // 若top值一样则按照文章日期降序排</span><br><span class="line">            else return b.top - a.top; // 否则按照top值降序排</span><br><span class="line">        &#125;</span><br><span class="line">        else if(a.top &amp;&amp; !b.top) &#123; // 以下是只有一篇文章top有定义，那么将有top的排在前面（这里用异或操作居然不行233）</span><br><span class="line">            return -1;</span><br><span class="line">        &#125;</span><br><span class="line">        else if(!a.top &amp;&amp; b.top) &#123;</span><br><span class="line">            return 1;</span><br><span class="line">        &#125;</span><br><span class="line">        else return b.date - a.date; // 都没定义按照文章日期降序排</span><br><span class="line">    &#125;);</span><br><span class="line">  var paginationDir = config.pagination_dir || &#x27;page&#x27;;</span><br><span class="line">  return pagination(&#x27;&#x27;, posts, &#123;</span><br><span class="line">    perPage: config.index_generator.per_page,</span><br><span class="line">    layout: [&#x27;index&#x27;, &#x27;archive&#x27;],</span><br><span class="line">    format: paginationDir + &#x27;/%d/&#x27;,</span><br><span class="line">    data: &#123;</span><br><span class="line">      __index: true</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;);</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>设置文章置顶<br>&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;在文章Front-matter中添加top值，数值越大文章越靠前，如：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">---</span><br><span class="line">title: Hexo+nexT主题配置备忘</span><br><span class="line">date: 2019-12-08 11:49:33</span><br><span class="line">tags: [Hexo,next-theme,Seo]</span><br><span class="line">categories: Hexo</span><br><span class="line">top: 10</span><br><span class="line">---</span><br></pre></td></tr></table></figure></li>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">---</span><br><span class="line">title: Hexo+nexT主题配置备忘</span><br><span class="line">date: 2019-12-08 11:49:33</span><br><span class="line">tags: [Hexo,next-theme,Seo]</span><br><span class="line">categories: [CMS, Hexo]</span><br><span class="line">top: 10</span><br><span class="line">---</span><br></pre></td></tr></table></figure></li>
 </ol>
 <hr>
 <h2 id="When-you-are-talking-about-something-in-front-of-so-many-people-don’t-forget-to-smile"><a href="#When-you-are-talking-about-something-in-front-of-so-many-people-don’t-forget-to-smile" class="headerlink" title="When you are talking about something in front of so many people, don’t forget to smile."></a><b>When you are talking about something in front of so many people, don’t forget to smile.</b></h2><p><b>书山有路勤为径，学海无涯苦作舟。</b></p>
@@ -1674,6 +1674,7 @@
 <p>一起学习，一起进步。<br></p>
 ]]></content>
       <categories>
+        <category>CMS</category>
         <category>Hexo</category>
       </categories>
       <tags>
@@ -1708,6 +1709,7 @@
 <p>一起学习，一起进步。<br></p>
 ]]></content>
       <categories>
+        <category>CMS</category>
         <category>Hexo</category>
       </categories>
       <tags>
@@ -6507,10 +6509,11 @@
 <p>好记性不如烂笔头。</p>
 ]]></content>
       <categories>
-        <category>hexo</category>
+        <category>CMS</category>
+        <category>Hexo</category>
       </categories>
       <tags>
-        <tag>hexo</tag>
+        <tag>Hexo</tag>
       </tags>
   </entry>
   <entry>
@@ -15984,7 +15987,7 @@ API
 
 <h1 id="说明"><a href="#说明" class="headerlink" title="说明"></a>说明</h1><p>推广功能的上线，旨在散播平台的服务能力，让更多人参与进来，让更多有资源、找资源的朋友看到，分享资源，同时能够获得丰厚的奖励回报。</p>
 <h1 id="操作流程"><a href="#操作流程" class="headerlink" title="操作流程"></a>操作流程</h1><ol>
-<li>登录后台：<a href="https://lezhifu.cc/admin/">https://lezhifu.cc/admin/</a>，进入个人中心-&gt;我的邀请，</li>
+<li>登录后台：<a href="https://lezhifu.cc/admin/user_ref">https://lezhifu.cc/admin/user_ref</a>，进入个人中心-&gt;我的邀请，</li>
 <li>生成邀请码<br><img src="/2024/04/06/%E4%B9%90%E7%9F%A5%E4%BB%98%E5%8A%A0%E5%AF%86%E5%B9%B3%E5%8F%B0-%E6%8E%A8%E5%B9%BF%E5%8A%9F%E8%83%BD%E4%B8%8A%E7%BA%BF/add_ref_code.png" alt="生成邀请码"></li>
 <li>复制链接，将链接分享到自媒体平台（微信、抖音、百度、头条、微博、知乎等）<br><img src="/2024/04/06/%E4%B9%90%E7%9F%A5%E4%BB%98%E5%8A%A0%E5%AF%86%E5%B9%B3%E5%8F%B0-%E6%8E%A8%E5%B9%BF%E5%8A%9F%E8%83%BD%E4%B8%8A%E7%BA%BF/share.png" alt="复制分享"></li>
 </ol>
