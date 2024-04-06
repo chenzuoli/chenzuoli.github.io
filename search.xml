@@ -3584,7 +3584,9 @@
 <p>一起学习，一起进步。<br></p>
 ]]></content>
       <categories>
+        <category>其他</category>
         <category>电脑</category>
+        <category>mac</category>
       </categories>
       <tags>
         <tag>mac</tag>
@@ -6971,7 +6973,9 @@
 <p>一起学习，一起进步。<br></p>
 ]]></content>
       <categories>
-        <category>macbook</category>
+        <category>其他</category>
+        <category>电脑</category>
+        <category>mac</category>
       </categories>
       <tags>
         <tag>macbook</tag>
@@ -7031,6 +7035,8 @@
 <p>一起学习，一起进步。<br></p>
 ]]></content>
       <categories>
+        <category>其他</category>
+        <category>电脑</category>
         <category>mac</category>
       </categories>
       <tags>
@@ -7052,6 +7058,8 @@
 <p>一起学习，一起进步。<br></p>
 ]]></content>
       <categories>
+        <category>其他</category>
+        <category>电脑</category>
         <category>mac</category>
       </categories>
       <tags>
@@ -15715,7 +15723,9 @@ API
 <p>记录一下。</p>
 ]]></content>
       <categories>
-        <category>Mac</category>
+        <category>其他</category>
+        <category>电脑</category>
+        <category>mac</category>
       </categories>
       <tags>
         <tag>mac</tag>
@@ -15854,6 +15864,7 @@ API
       <categories>
         <category>其他</category>
         <category>电脑</category>
+        <category>mac</category>
       </categories>
       <tags>
         <tag>mac</tag>
