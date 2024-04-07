@@ -16027,4 +16027,55 @@ API
         <tag>密码管理</tag>
       </tags>
   </entry>
+  <entry>
+    <title>html图片居中</title>
+    <url>/2024/04/07/html%E5%9B%BE%E7%89%87%E5%B1%85%E4%B8%AD/</url>
+    <content><![CDATA[<p>记录一下。</p>
+<span id="more"></span>
+
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">.img-center &#123;</span><br><span class="line">  display: block;</span><br><span class="line">  margin-left: auto;</span><br><span class="line">  margin-right: auto;</span><br><span class="line">  width: 50%;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+<hr>
+<p>好记性不如烂笔头。</p>
+]]></content>
+      <categories>
+        <category>前端</category>
+        <category>HTML</category>
+        <category>CSS</category>
+      </categories>
+      <tags>
+        <tag>html</tag>
+        <tag>css</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>html加载后端数据较慢问题</title>
+    <url>/2024/04/06/html%E5%8A%A0%E8%BD%BD%E5%90%8E%E7%AB%AF%E6%95%B0%E6%8D%AE%E8%BE%83%E6%85%A2%E9%97%AE%E9%A2%98/</url>
+    <content><![CDATA[<p>网站页面最近加载很慢，不知道为什么，这里记录一下，一步一步查问题的思路。</p>
+<span id="more"></span>
+
+<h1 id="说下环境"><a href="#说下环境" class="headerlink" title="说下环境"></a>说下环境</h1><p>python3.8<br>flask2.3.3<br>mysql5.7</p>
+<h1 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h1><p>刷新网页<a href="https://lezhifu.cc/admin/qrcode_list_op">https://lezhifu.cc/admin/qrcode_list_op</a>时，需要7s多的时间</p>
+<h1 id="F12查哪里慢"><a href="#F12查哪里慢" class="headerlink" title="F12查哪里慢"></a>F12查哪里慢</h1><p>F12查看了浏览器的Network，看看到底加载什么内容时很慢：<br><img src="/2024/04/06/html%E5%8A%A0%E8%BD%BD%E5%90%8E%E7%AB%AF%E6%95%B0%E6%8D%AE%E8%BE%83%E6%85%A2%E9%97%AE%E9%A2%98/slow.png" alt="timing"><br>点进去，看到<code>waiting for server response</code>这里花了7s多，为啥呢？<br><img src="/2024/04/06/html%E5%8A%A0%E8%BD%BD%E5%90%8E%E7%AB%AF%E6%95%B0%E6%8D%AE%E8%BE%83%E6%85%A2%E9%97%AE%E9%A2%98/timeline.png" alt="timeline"></p>
+<h1 id="查接口为什么慢"><a href="#查接口为什么慢" class="headerlink" title="查接口为什么慢"></a>查接口为什么慢</h1><p><img src="/2024/04/06/html%E5%8A%A0%E8%BD%BD%E5%90%8E%E7%AB%AF%E6%95%B0%E6%8D%AE%E8%BE%83%E6%85%A2%E9%97%AE%E9%A2%98/flask_interface.png" alt="interface"><br>第1步分页查询，每次查10条，这里应该不慢</p>
+<p>第2步根据分页查询结果进行循环，然后根据id查询payment表，这里可能比较慢，是不是可以改成两表关联形式呢，直接一次性查出来。</p>
+<p>那改吧，改成join，这里的需求是join、查询指定字段、分页，如下是flask的查询语句：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># 使用join方法根据payment_id连接QRCode和Payment表</span><br><span class="line">joined_query_pagination = db.session.query(</span><br><span class="line">    QRCode.user_id,</span><br><span class="line">    QRCode.content_id,</span><br><span class="line">    QRCode.header,</span><br><span class="line">    QRCode.payment_id,</span><br><span class="line">    QRCode.create_time,</span><br><span class="line">    Payment.payment_amount,</span><br><span class="line">    QRCode.status</span><br><span class="line">).join(Payment, QRCode.payment_id == Payment.payment_id) \</span><br><span class="line">    .paginate(page=page, per_page=per_page, error_out=False)</span><br></pre></td></tr></table></figure>
+
+<p>ok，性能提高了好多，116ms就查出来了。<br><img src="/2024/04/06/html%E5%8A%A0%E8%BD%BD%E5%90%8E%E7%AB%AF%E6%95%B0%E6%8D%AE%E8%BE%83%E6%85%A2%E9%97%AE%E9%A2%98/after.png" alt="优化后"></p>
+<p>完美。</p>
+<hr>
+<p>欢迎关注微信公众号，您的资源可变现：【乐知付加密平台】<br><img src="/images/%E4%B9%90%E7%9F%A5%E4%BB%98%E5%8A%A0%E5%AF%86%E5%B9%B3%E5%8F%B0.png" alt="乐知付加密平台"></p>
+<p>一起学习，一起进步。<br></p>
+]]></content>
+      <categories>
+        <category>Python</category>
+        <category>Flask</category>
+      </categories>
+      <tags>
+        <tag>flask</tag>
+        <tag>html</tag>
+      </tags>
+  </entry>
 </search>
