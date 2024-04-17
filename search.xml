@@ -16163,17 +16163,68 @@ API
     <content><![CDATA[<p>记录一下几个开源的文档知识库管理系统源代码，方便以后需要写文档、知识库管理、视频媒体文件管理时，可以用起来。</p>
 <span id="more"></span>
 
-<p>文档管理，文档ppt pdf doc excel txt 文件管理:</p>
+<p>文档管理，文档ppt pdf doc excel txt 文件管理:<br>这些内容管理系统各有其特点和用途，我将根据您提供的链接和描述，对每个系统进行简要介绍：</p>
 <ol>
-<li>document-sharing-site<br>后端地址： <a href="https://github.com/Jarrettluo/document-sharing-site">https://github.com/Jarrettluo/document-sharing-site</a><br>前端地址： <a href="https://github.com/Jarrettluo/all-documents-vue">https://github.com/Jarrettluo/all-documents-vue</a></li>
-<li>mrDoc： <a href="https://github.com/zmister2016/MrDoc">https://github.com/zmister2016/MrDoc</a>    <a href="https://mrdoc.pro/">https://mrdoc.pro/</a></li>
-<li>GitBook： <a href="https://www.gitbook.com/">https://www.gitbook.com/</a></li>
-<li>readthddocs主要是文字类技术问答：<a href="https://about.readthedocs.com/">https://about.readthedocs.com/</a></li>
-<li>kkFileView： <a href="https://github.com/kekingcn/kkFileView">https://github.com/kekingcn/kkFileView</a></li>
-<li>视频资源管理：<a href="https://github.com/Hunlongyu/ZY-Player">https://github.com/Hunlongyu/ZY-Player</a></li>
-<li>接口文档管理：<a href="https://github.com/thc75/torna">https://github.com/thc75/torna</a></li>
-<li>pdf管理：<a href="https://github.com/apache/pdfbox">https://github.com/apache/pdfbox</a></li>
+<li><p><strong>document-sharing-site</strong></p>
+<ul>
+<li>一个支持全文搜索的文档共享和存储系统，专为小型团队设计，解决云存储、SVN等软件中文档内容快速检索的问题。</li>
+<li>支持私有部署和检索，可以存储PPT、Word、PNG等格式的文档。</li>
+<li>后端使用SpringBoot + MongoDB + Elasticsearch (ES)，前端使用Vue + axios。</li>
+<li>提供了快速开始指南，包括在Ubuntu 18.04上的测试、项目克隆、用户切换、权限修改、脚本启动等步骤。</li>
+<li>项目还包括一个预览部分，展示了主页、文档列表、搜索页面、上传页面和用户信息页面。<br> 地址：<br> 后端地址：<br> <a href="https://github.com/Jarrettluo/document-sharing-site">https://github.com/Jarrettluo/document-sharing-site</a><br> 前端地址：<br> <a href="https://github.com/Jarrettluo/all-documents-vue">https://github.com/Jarrettluo/all-documents-vue</a></li>
+</ul>
+</li>
+<li><p><strong>mrDoc</strong></p>
+<ul>
+<li>一个私有化部署的在线文档系统和知识库系统，具有书写便捷、沉浸阅读、权限管控、导入导出、全平台覆盖等特点。</li>
+<li>支持创建在线文本文档、在线表格文档、在线Office文档，提供双栏式阅读体验。</li>
+<li>允许对文集、文档的浏览权限、协作权限和用户创作权限进行控制。</li>
+<li>提供了多种平台的客户端，包括桌面客户端、浏览器扩展、手机APP、Obsidian插件等。<br>地址：<br> <a href="https://github.com/zmister2016/MrDoc">https://github.com/zmister2016/MrDoc</a><br> <a href="https://mrdoc.pro/">https://mrdoc.pro/</a></li>
+</ul>
+</li>
+<li><p><strong>GitBook</strong></p>
+<ul>
+<li>一个为技术团队设计的文档管理系统，可以集中团队知识、与代码库同步，并创建美观的文档。</li>
+<li>支持访问保护文档，允许选择谁可以访问文档，保护敏感信息。</li>
+<li>提供基于分支的工作流程，类似于GitHub或GitLab。</li>
+<li>集成了AI功能，可以修正语法和拼写错误、解释技术术语、编辑语气、翻译文档或甚至为您撰写初稿。</li>
+<li>支持与GitHub和GitLab的集成，实现双向同步。<br> 地址：<br> <a href="https://www.gitbook.com/">https://www.gitbook.com/</a></li>
+</ul>
+</li>
+<li><p><strong>Read the Docs</strong></p>
+<ul>
+<li>提供了一个简化的文档构建、托管和共享平台。</li>
+<li>支持在每次提交时预览变更，并在每次合并时发布文档。</li>
+<li>允许使用文档即代码的方法编写文档，无需改变工作流程或工具。</li>
+<li>提供了私有或公开工作的选项，可以自行管理权限或通过GitHub自动管理。</li>
+<li>支持任何文档工具，如Sphinx、MkDocs、Jupyter Book，并提供集成搜索。<br> 地址：<br> <a href="https://about.readthedocs.com/">https://about.readthedocs.com/</a></li>
+</ul>
+</li>
+<li><p><strong>kkFileView</strong></p>
+<ul>
+<li>一个用于在线预览文档的系统，支持多种文件格式，如Word、PDF、PPT、Excel、TXT等。<br> 地址：<a href="https://github.com/kekingcn/kkFileView">https://github.com/kekingcn/kkFileView</a></li>
+</ul>
+</li>
+<li><p><strong>ZY-Player</strong></p>
+<ul>
+<li>一个视频资源管理工具，允许用户管理和播放视频资源。<br>地址：<a href="https://github.com/Hunlongyu/ZY-Player">https://github.com/Hunlongyu/ZY-Player</a></li>
+</ul>
+</li>
+<li><p><strong>Torna</strong></p>
+<ul>
+<li>一个企业级API文档解决方案，旨在使文档管理更加方便和快速。</li>
+<li>采用协作方式管理项目API文档，将不同形式的文档整合到统一的维护方法中。</li>
+<li>支持下载、数据库导入、配置修改、启动和升级。</li>
+<li>支持Docker部署，并提供了与smart-doc的推荐组合，用于Java源代码和注解提取，自动推送文档到Torna企业级接口文档管理平台。<br>地址：<a href="https://github.com/thc75/torna">https://github.com/thc75/torna</a></li>
+</ul>
+</li>
+<li><p><strong>Apache PDFBox</strong></p>
+<ul>
+<li>一个用于创建、修改、显示和操作PDF文档的开源库。<br>地址：<a href="https://github.com/apache/pdfbox">https://github.com/apache/pdfbox</a></li>
+</ul>
+</li>
 </ol>
+<p>每个系统都有其特定的使用场景和优势，团队或个人可以根据自己的需求选择合适的文档管理系统。</p>
 <hr>
 <p>欢迎关注微信公众号，您的资源可变现：【乐知付加密平台】<br><br><br><img src="/images/wechat_account.png" alt="乐知付加密平台"></p>
 <p>一起学习，一起进步。<br></p>

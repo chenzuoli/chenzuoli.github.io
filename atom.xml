@@ -1,0 +1,544 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>chenzuoli&#39;s blog</title>
+  
+  <subtitle>Focus on truth. welcome to correct.</subtitle>
+  <link href="https://chenzuoli.github.io/atom.xml" rel="self"/>
+  
+  <link href="https://chenzuoli.github.io/"/>
+  <updated>2024-04-17T15:03:16.486Z</updated>
+  <id>https://chenzuoli.github.io/</id>
+  
+  <author>
+    <name>Lee</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>分享几个开源的文档知识库管理系统软件</title>
+    <link href="https://chenzuoli.github.io/2024/04/17/%E5%88%86%E4%BA%AB%E5%87%A0%E4%B8%AA%E5%BC%80%E6%BA%90%E7%9A%84%E6%96%87%E6%A1%A3%E7%9F%A5%E8%AF%86%E5%BA%93%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F%E8%BD%AF%E4%BB%B6/"/>
+    <id>https://chenzuoli.github.io/2024/04/17/%E5%88%86%E4%BA%AB%E5%87%A0%E4%B8%AA%E5%BC%80%E6%BA%90%E7%9A%84%E6%96%87%E6%A1%A3%E7%9F%A5%E8%AF%86%E5%BA%93%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F%E8%BD%AF%E4%BB%B6/</id>
+    <published>2024-04-17T14:36:56.000Z</published>
+    <updated>2024-04-17T15:03:16.486Z</updated>
+    
+    <content type="html"><![CDATA[<p>记录一下几个开源的文档知识库管理系统源代码，方便以后需要写文档、知识库管理、视频媒体文件管理时，可以用起来。</p><span id="more"></span><p>文档管理，文档ppt pdf doc excel txt 文件管理:<br>这些内容管理系统各有其特点和用途，我将根据您提供的链接和描述，对每个系统进行简要介绍：</p><ol><li><p><strong>document-sharing-site</strong></p><ul><li>一个支持全文搜索的文档共享和存储系统，专为小型团队设计，解决云存储、SVN等软件中文档内容快速检索的问题。</li><li>支持私有部署和检索，可以存储PPT、Word、PNG等格式的文档。</li><li>后端使用SpringBoot + MongoDB + Elasticsearch (ES)，前端使用Vue + axios。</li><li>提供了快速开始指南，包括在Ubuntu 18.04上的测试、项目克隆、用户切换、权限修改、脚本启动等步骤。</li><li>项目还包括一个预览部分，展示了主页、文档列表、搜索页面、上传页面和用户信息页面。<br> 地址：<br> 后端地址：<br> <a href="https://github.com/Jarrettluo/document-sharing-site">https://github.com/Jarrettluo/document-sharing-site</a><br> 前端地址：<br> <a href="https://github.com/Jarrettluo/all-documents-vue">https://github.com/Jarrettluo/all-documents-vue</a></li></ul></li><li><p><strong>mrDoc</strong></p><ul><li>一个私有化部署的在线文档系统和知识库系统，具有书写便捷、沉浸阅读、权限管控、导入导出、全平台覆盖等特点。</li><li>支持创建在线文本文档、在线表格文档、在线Office文档，提供双栏式阅读体验。</li><li>允许对文集、文档的浏览权限、协作权限和用户创作权限进行控制。</li><li>提供了多种平台的客户端，包括桌面客户端、浏览器扩展、手机APP、Obsidian插件等。<br>地址：<br> <a href="https://github.com/zmister2016/MrDoc">https://github.com/zmister2016/MrDoc</a><br> <a href="https://mrdoc.pro/">https://mrdoc.pro/</a></li></ul></li><li><p><strong>GitBook</strong></p><ul><li>一个为技术团队设计的文档管理系统，可以集中团队知识、与代码库同步，并创建美观的文档。</li><li>支持访问保护文档，允许选择谁可以访问文档，保护敏感信息。</li><li>提供基于分支的工作流程，类似于GitHub或GitLab。</li><li>集成了AI功能，可以修正语法和拼写错误、解释技术术语、编辑语气、翻译文档或甚至为您撰写初稿。</li><li>支持与GitHub和GitLab的集成，实现双向同步。<br> 地址：<br> <a href="https://www.gitbook.com/">https://www.gitbook.com/</a></li></ul></li><li><p><strong>Read the Docs</strong></p><ul><li>提供了一个简化的文档构建、托管和共享平台。</li><li>支持在每次提交时预览变更，并在每次合并时发布文档。</li><li>允许使用文档即代码的方法编写文档，无需改变工作流程或工具。</li><li>提供了私有或公开工作的选项，可以自行管理权限或通过GitHub自动管理。</li><li>支持任何文档工具，如Sphinx、MkDocs、Jupyter Book，并提供集成搜索。<br> 地址：<br> <a href="https://about.readthedocs.com/">https://about.readthedocs.com/</a></li></ul></li><li><p><strong>kkFileView</strong></p><ul><li>一个用于在线预览文档的系统，支持多种文件格式，如Word、PDF、PPT、Excel、TXT等。<br> 地址：<a href="https://github.com/kekingcn/kkFileView">https://github.com/kekingcn/kkFileView</a></li></ul></li><li><p><strong>ZY-Player</strong></p><ul><li>一个视频资源管理工具，允许用户管理和播放视频资源。<br>地址：<a href="https://github.com/Hunlongyu/ZY-Player">https://github.com/Hunlongyu/ZY-Player</a></li></ul></li><li><p><strong>Torna</strong></p><ul><li>一个企业级API文档解决方案，旨在使文档管理更加方便和快速。</li><li>采用协作方式管理项目API文档，将不同形式的文档整合到统一的维护方法中。</li><li>支持下载、数据库导入、配置修改、启动和升级。</li><li>支持Docker部署，并提供了与smart-doc的推荐组合，用于Java源代码和注解提取，自动推送文档到Torna企业级接口文档管理平台。<br>地址：<a href="https://github.com/thc75/torna">https://github.com/thc75/torna</a></li></ul></li><li><p><strong>Apache PDFBox</strong></p><ul><li>一个用于创建、修改、显示和操作PDF文档的开源库。<br>地址：<a href="https://github.com/apache/pdfbox">https://github.com/apache/pdfbox</a></li></ul></li></ol><p>每个系统都有其特定的使用场景和优势，团队或个人可以根据自己的需求选择合适的文档管理系统。</p><hr><p>欢迎关注微信公众号，您的资源可变现：【乐知付加密平台】<br><br><br><img src="/images/wechat_account.png" alt="乐知付加密平台"></p><p>一起学习，一起进步。<br></p>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;记录一下几个开源的文档知识库管理系统源代码，方便以后需要写文档、知识库管理、视频媒体文件管理时，可以用起来。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="网站" scheme="https://chenzuoli.github.io/categories/%E7%BD%91%E7%AB%99/"/>
+    
+    <category term="CMS" scheme="https://chenzuoli.github.io/categories/%E7%BD%91%E7%AB%99/CMS/"/>
+    
+    <category term="建站" scheme="https://chenzuoli.github.io/categories/%E7%BD%91%E7%AB%99/CMS/%E5%BB%BA%E7%AB%99/"/>
+    
+    
+    <category term="cms" scheme="https://chenzuoli.github.io/tags/cms/"/>
+    
+    <category term="建站" scheme="https://chenzuoli.github.io/tags/%E5%BB%BA%E7%AB%99/"/>
+    
+    <category term="内容管理" scheme="https://chenzuoli.github.io/tags/%E5%86%85%E5%AE%B9%E7%AE%A1%E7%90%86/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>建站可以通用的内容管理系统推荐</title>
+    <link href="https://chenzuoli.github.io/2024/04/14/%E5%BB%BA%E7%AB%99%E5%8F%AF%E4%BB%A5%E9%80%9A%E7%94%A8%E7%9A%84%E5%86%85%E5%AE%B9%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F%E6%8E%A8%E8%8D%90/"/>
+    <id>https://chenzuoli.github.io/2024/04/14/%E5%BB%BA%E7%AB%99%E5%8F%AF%E4%BB%A5%E9%80%9A%E7%94%A8%E7%9A%84%E5%86%85%E5%AE%B9%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F%E6%8E%A8%E8%8D%90/</id>
+    <published>2024-04-14T02:37:05.000Z</published>
+    <updated>2024-04-14T03:19:41.588Z</updated>
+    
+    <content type="html"><![CDATA[<p>如果我们不是专业的全栈软件工程师，那么你可能只会前端、或后端、或UI、或测试，对于建立网站需要这些综合技能时，怎么办呢？</p><p>这里推荐一些开源的CMS内容管理系统，你只需要关注内容即可，其他的交给软件系统。</p><span id="more"></span><h1 id="一、传统-CMS"><a href="#一、传统-CMS" class="headerlink" title="一、传统 CMS"></a>一、传统 CMS</h1><p>CMS 是内容管理系统的英文简称，它是用来管理和发布包括文章、图片、商品等内容的系统。最常见的 CMS 就是博客系统，作者登录管理后台写文章，点击发布后读者就可以访问指定网址，看到作者发布的内容啦。</p><p>不管你是不是程序员，如果你想快速构建一个网站，那么下面这些开源 CMS 一定能助你一臂之力。</p><h2 id="1-1-halo"><a href="#1-1-halo" class="headerlink" title="1.1 halo"></a>1.1 halo</h2><p>Star 数：24.4k｜编程语言：Java（99.5%）<br>一款由国人开发的现代化开源 CMS，采用 Spring Boot+Vue.js 编写而成，代码开源完全免费，截止到本文发表时已经迭代了 80 多个版本。国人开发的好处是可轻松接入国内的云存储服务，而且文档、社区和操作界面全部是中文的。</p><p>安装步骤，如下：</p><h3 id="本地有-Java"><a href="#本地有-Java" class="headerlink" title="本地有 Java"></a>本地有 Java</h3><ol><li>下载最新的 jar 包：<a href="https://dl.halo.run/release/halo-1.5.4.jar">https://dl.halo.run/release/halo-1.5.4.jar</a></li><li>运行：java -jar halo-1.5.4.jar</li></ol><h3 id="Docker-运行"><a href="#Docker-运行" class="headerlink" title="Docker 运行"></a>Docker 运行</h3><p>docker run -it -d –name halo-next -p 8090:8090 -v ~&#x2F;halo-next:&#x2F;root&#x2F;halo-next –restart&#x3D;unless-stopped halohub&#x2F;halo-dev:2.0.0-beta.1<br>地址：<a href="https://github.com/halo-dev/halo">https://github.com/halo-dev/halo</a></p><h2 id="1-2-django-cms"><a href="#1-2-django-cms" class="headerlink" title="1.2 django-cms"></a>1.2 django-cms</h2><p>Star 数：9k｜编程语言：Python（59.7%）<br>由 Django 编写的企业级 CMS，它功能实用、安全可靠，支持拖拽上传图片、轮播图、Docker 部署等功能，可轻松进行二次开发，多用于构建企业官网，比如：国家地理等网站就是基于它开发而成。</p><p>安装步骤，如下：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">$ git clone git@github.com:django-cms/django-cms-quickstart.git</span><br><span class="line">$ cd django-cms-quickstart</span><br><span class="line">$ docker compose build web &amp;&amp; docker compose up -d database_default</span><br><span class="line">$ docker compose run web python manage.py migrate &amp;&amp; docker compose run web python manage.py createsuperuser</span><br><span class="line">$ docker compose up -d</span><br><span class="line">$ open http://127.0.0.1:8000</span><br></pre></td></tr></table></figure><p>地址：<a href="https://github.com/django-cms/django-cms">https://github.com/django-cms/django-cms</a></p><h2 id="1-3-WordPress"><a href="#1-3-WordPress" class="headerlink" title="1.3 WordPress"></a>1.3 WordPress</h2><p>Star 数：16.8k｜编程语言：PHP（62.5%）<br>作为全球最流行的 CMS，它的市场占有率一直处于独占鳌头那一档(64.2%)。我认为这些得益于它：傻瓜式的安装方式、丰富的主题和插件、十年如一日的更新迭代，以及优秀的商业模式。<br>有多少人的第一个博客是用它搞起来的？算我一个</p><p>地址：<a href="https://github.com/WordPress/WordPress">https://github.com/WordPress/WordPress</a></p><h2 id="1-4-joomla-cms"><a href="#1-4-joomla-cms" class="headerlink" title="1.4 joomla-cms"></a>1.4 joomla-cms</h2><p>Star 数：4.3k｜编程语言：PHP（92.2%）<br>它是和 WordPress 同时期开源的 PHP CMS 项目，与 WordPress 不同的是Joomla! 更加灵活，但学习曲线也更陡峭。它具有较强的通用性，再加上丰富多元的扩展，可用来搭建商业网站、个人博客、信息管理系统、Web 服务等。作为开源至今已有 18 年历史的 CMS，肯定还是有点东西的。<br>地址：<a href="https://github.com/joomla/joomla-cms">https://github.com/joomla/joomla-cms</a></p><p>这里顺带提一嘴：Drupal 也同样是 PHP 写的以复杂著称的 CMS，如果你需要一个处理大量请求、高度自定义的网站，可以考虑它。</p><h1 id="二、现代CMS"><a href="#二、现代CMS" class="headerlink" title="二、现代CMS"></a>二、现代CMS</h1><p>无头 CMS 就是指：仅包含内容管理的后台，没有现成的前台展示，前台需要自己实现。</p><p>好处是内容和展示完全分离，不依赖或不需要特定的前端框架，可以根据自己喜好选择前端框架、接入静态站点生成器或 APP，创建丰富的展示体验。<br>缺点是需要懂技术的开发人员，开发周期大概需要一周左右。</p><h2 id="2-1-wagtail"><a href="#2-1-wagtail" class="headerlink" title="2.1 wagtail"></a>2.1 wagtail</h2><p>Star 数：13.4k｜编程语言：Python（79.3%）<br>基于 Python 知名 Web 框架 Django 实现的无头内容管理系统，拥有清爽的 UI 和简洁易用的编辑器。独特的 StreamField 技术，可以让内容排版灵活又不失结构，再加上强大的多语言系统，让它在众多开源 CMS 中脱颖而出。</p><p>安装步骤，如下：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">pip install wagtail</span><br><span class="line">wagtail start mysite</span><br><span class="line">cd mysite</span><br><span class="line">pip install -r requirements.txt</span><br><span class="line">python manage.py migrate</span><br><span class="line">python manage.py createsuperuser</span><br><span class="line">python manage.py runserver</span><br></pre></td></tr></table></figure><p>地址：<a href="https://github.com/wagtail/wagtail">https://github.com/wagtail/wagtail</a></p><h2 id="2-2-ghost"><a href="#2-2-ghost" class="headerlink" title="2.2 ghost"></a>2.2 ghost</h2><p>Star 数：41.7k｜编程语言：JavaScript（79.4%）<br>一款用 Node.js 编写，功能强大的无头 CMS。它的强大之处在于提供了丰富、免费、可自定义的主题，用户可以自由搭配轻松建站。专业的会员订阅和数据可视化功能，让内容创作者可以围绕内容，尝试发展商业化业务。除此之外，它还拥有先进的所见即所得编辑器。</p><p>安装步骤，如下：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm install ghost-cli -g</span><br><span class="line">ghost install local</span><br></pre></td></tr></table></figure><p>地址：<a href="https://github.com/TryGhost/Ghost">https://github.com/TryGhost/Ghost</a></p><h2 id="2-3-strapi"><a href="#2-3-strapi" class="headerlink" title="2.3 strapi"></a>2.3 strapi</h2><p>Star 数：49.5k｜编程语言：JavaScript（99.6%）<br>一款完全免费、基于 JavaScript 构建的无头内容管理系统，它拥有开箱即用的 API 和友好的管理面板，自带权限管理、默认安全、SEO 友好等特点。该项目做为 GitHub 上 Star 数最多的开源内容管理系统，目前已成为多家世界 500 公司的首选 CMS。</p><p>安装步骤，如下：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">yarn create strapi-app my-project --quickstart</span><br><span class="line">或者</span><br><span class="line">npx create-strapi-app my-project --quickstart</span><br></pre></td></tr></table></figure><p>地址：<a href="https://github.com/strapi/strapi">https://github.com/strapi/strapi</a></p><h2 id="2-4-Fortressa"><a href="#2-4-Fortressa" class="headerlink" title="2.4 Fortressa"></a>2.4 Fortressa</h2><p>Fortressa 网站是一个旨在为开源软件提供一个应用商店的平台。它的核心理念是为团队提供最佳的工具，而不采用许多软件公司常用的按用户计费模式。这种模式可能会很快变得昂贵，特别是对于大型团队或未来可能扩展的组织。<br><a href="https://fortressa.com/">https://fortressa.com/</a></p><h2 id="2-5-CodeIgniter"><a href="#2-5-CodeIgniter" class="headerlink" title="2.5 CodeIgniter"></a>2.5 CodeIgniter</h2><p>Star 数：5.1k｜编程语言：Php（99.6%）<br>CodeIgniter 4 是一个开源的 PHP 全栈 Web 框架，由一个志愿者社区维护和开发。这个框架以其轻量级、快速、灵活和安全性而闻名。它最初由 EllisLab 公司开发，但现在已经成为社区驱动的项目。</p><p>CodeIgniter4： <a href="https://github.com/codeigniter4/CodeIgniter4">https://github.com/codeigniter4/CodeIgniter4</a></p><h1 id="三、最后"><a href="#三、最后" class="headerlink" title="三、最后"></a>三、最后</h1><p>如果，你要挑一个开源 CMS：<br>• 不会编程：首选 WordPress 因为它成熟简单，编程相关的东西都被藏在了背后。<br>• 会 Python：django-cms 容易接受，wagtail 则更新、势头更猛。<br>• 会前端：推荐 strapi 它背后有商业化公司支持，吃透了可以谋个远程全职。<br>• 不会前端，但懂后端：推荐 Ghost，它玩法多、社区活跃、有免费主题。</p><hr><p>欢迎关注微信公众号，你的资源可变现：【乐知付加密平台】<br><img src="/images/wechat_account.png" alt="乐知付加密平台"></p><p>一起学习，一起进步。<br></p>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;如果我们不是专业的全栈软件工程师，那么你可能只会前端、或后端、或UI、或测试，对于建立网站需要这些综合技能时，怎么办呢？&lt;/p&gt;
+&lt;p&gt;这里推荐一些开源的CMS内容管理系统，你只需要关注内容即可，其他的交给软件系统。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="网站" scheme="https://chenzuoli.github.io/categories/%E7%BD%91%E7%AB%99/"/>
+    
+    <category term="CMS" scheme="https://chenzuoli.github.io/categories/%E7%BD%91%E7%AB%99/CMS/"/>
+    
+    <category term="建站" scheme="https://chenzuoli.github.io/categories/%E7%BD%91%E7%AB%99/CMS/%E5%BB%BA%E7%AB%99/"/>
+    
+    
+    <category term="cms" scheme="https://chenzuoli.github.io/tags/cms/"/>
+    
+    <category term="建站" scheme="https://chenzuoli.github.io/tags/%E5%BB%BA%E7%AB%99/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>html图片居中</title>
+    <link href="https://chenzuoli.github.io/2024/04/07/html%E5%9B%BE%E7%89%87%E5%B1%85%E4%B8%AD/"/>
+    <id>https://chenzuoli.github.io/2024/04/07/html%E5%9B%BE%E7%89%87%E5%B1%85%E4%B8%AD/</id>
+    <published>2024-04-07T05:00:52.000Z</published>
+    <updated>2024-04-07T10:03:10.706Z</updated>
+    
+    <content type="html"><![CDATA[<p>记录一下。</p><span id="more"></span><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">.img-center &#123;</span><br><span class="line">  display: block;</span><br><span class="line">  margin-left: auto;</span><br><span class="line">  margin-right: auto;</span><br><span class="line">  width: 50%;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><hr><p>好记性不如烂笔头。</p>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;记录一下。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="前端" scheme="https://chenzuoli.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
+    
+    <category term="HTML" scheme="https://chenzuoli.github.io/categories/%E5%89%8D%E7%AB%AF/HTML/"/>
+    
+    <category term="CSS" scheme="https://chenzuoli.github.io/categories/%E5%89%8D%E7%AB%AF/HTML/CSS/"/>
+    
+    
+    <category term="html" scheme="https://chenzuoli.github.io/tags/html/"/>
+    
+    <category term="css" scheme="https://chenzuoli.github.io/tags/css/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>html加载后端数据较慢问题</title>
+    <link href="https://chenzuoli.github.io/2024/04/06/html%E5%8A%A0%E8%BD%BD%E5%90%8E%E7%AB%AF%E6%95%B0%E6%8D%AE%E8%BE%83%E6%85%A2%E9%97%AE%E9%A2%98/"/>
+    <id>https://chenzuoli.github.io/2024/04/06/html%E5%8A%A0%E8%BD%BD%E5%90%8E%E7%AB%AF%E6%95%B0%E6%8D%AE%E8%BE%83%E6%85%A2%E9%97%AE%E9%A2%98/</id>
+    <published>2024-04-06T14:29:00.000Z</published>
+    <updated>2024-04-14T03:16:50.228Z</updated>
+    
+    <content type="html"><![CDATA[<p>网站页面最近加载很慢，不知道为什么，这里记录一下，一步一步查问题的思路。</p><span id="more"></span><h1 id="说下环境"><a href="#说下环境" class="headerlink" title="说下环境"></a>说下环境</h1><p>python3.8<br>flask2.3.3<br>mysql5.7</p><h1 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h1><p>刷新网页<a href="https://lezhifu.cc/admin/qrcode_list_op">https://lezhifu.cc/admin/qrcode_list_op</a>时，需要7s多的时间</p><h1 id="F12查哪里慢"><a href="#F12查哪里慢" class="headerlink" title="F12查哪里慢"></a>F12查哪里慢</h1><p>F12查看了浏览器的Network，看看到底加载什么内容时很慢：<br><img src="/2024/04/06/html%E5%8A%A0%E8%BD%BD%E5%90%8E%E7%AB%AF%E6%95%B0%E6%8D%AE%E8%BE%83%E6%85%A2%E9%97%AE%E9%A2%98/slow.png" alt="timing"><br>点进去，看到<code>waiting for server response</code>这里花了7s多，为啥呢？<br><img src="/2024/04/06/html%E5%8A%A0%E8%BD%BD%E5%90%8E%E7%AB%AF%E6%95%B0%E6%8D%AE%E8%BE%83%E6%85%A2%E9%97%AE%E9%A2%98/timeline.png" alt="timeline"></p><h1 id="查接口为什么慢"><a href="#查接口为什么慢" class="headerlink" title="查接口为什么慢"></a>查接口为什么慢</h1><p><img src="/2024/04/06/html%E5%8A%A0%E8%BD%BD%E5%90%8E%E7%AB%AF%E6%95%B0%E6%8D%AE%E8%BE%83%E6%85%A2%E9%97%AE%E9%A2%98/flask_interface.png" alt="interface"><br>第1步分页查询，每次查10条，这里应该不慢</p><p>第2步根据分页查询结果进行循环，然后根据id查询payment表，这里可能比较慢，是不是可以改成两表关联形式呢，直接一次性查出来。</p><p>那改吧，改成join，这里的需求是join、查询指定字段、分页，如下是flask的查询语句：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"># 使用join方法根据payment_id连接QRCode和Payment表</span><br><span class="line">joined_query_pagination = db.session.query(</span><br><span class="line">    QRCode.user_id,</span><br><span class="line">    QRCode.content_id,</span><br><span class="line">    QRCode.header,</span><br><span class="line">    QRCode.payment_id,</span><br><span class="line">    QRCode.create_time,</span><br><span class="line">    Payment.payment_amount,</span><br><span class="line">    QRCode.status</span><br><span class="line">).join(Payment, QRCode.payment_id == Payment.payment_id) \</span><br><span class="line">    .paginate(page=page, per_page=per_page, error_out=False)</span><br></pre></td></tr></table></figure><p>ok，性能提高了好多，116ms就查出来了。<br><img src="/2024/04/06/html%E5%8A%A0%E8%BD%BD%E5%90%8E%E7%AB%AF%E6%95%B0%E6%8D%AE%E8%BE%83%E6%85%A2%E9%97%AE%E9%A2%98/after.png" alt="优化后"></p><p>完美。</p><hr><p>欢迎关注微信公众号，您的资源可变现：【乐知付加密平台】<br><img src="/images/wechat_account.png" alt="乐知付加密平台"></p><p>一起学习，一起进步。<br></p>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;网站页面最近加载很慢，不知道为什么，这里记录一下，一步一步查问题的思路。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="Python" scheme="https://chenzuoli.github.io/categories/Python/"/>
+    
+    <category term="Flask" scheme="https://chenzuoli.github.io/categories/Python/Flask/"/>
+    
+    
+    <category term="html" scheme="https://chenzuoli.github.io/tags/html/"/>
+    
+    <category term="flask" scheme="https://chenzuoli.github.io/tags/flask/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>乐知付加密平台-推广功能上线</title>
+    <link href="https://chenzuoli.github.io/2024/04/06/%E4%B9%90%E7%9F%A5%E4%BB%98%E5%8A%A0%E5%AF%86%E5%B9%B3%E5%8F%B0-%E6%8E%A8%E5%B9%BF%E5%8A%9F%E8%83%BD%E4%B8%8A%E7%BA%BF/"/>
+    <id>https://chenzuoli.github.io/2024/04/06/%E4%B9%90%E7%9F%A5%E4%BB%98%E5%8A%A0%E5%AF%86%E5%B9%B3%E5%8F%B0-%E6%8E%A8%E5%B9%BF%E5%8A%9F%E8%83%BD%E4%B8%8A%E7%BA%BF/</id>
+    <published>2024-04-06T05:11:14.000Z</published>
+    <updated>2024-04-14T03:18:27.111Z</updated>
+    
+    <content type="html"><![CDATA[<p>乐知付加密平台的推广赚取佣金功能上线啦。</p><p><img src="/2024/04/06/%E4%B9%90%E7%9F%A5%E4%BB%98%E5%8A%A0%E5%AF%86%E5%B9%B3%E5%8F%B0-%E6%8E%A8%E5%B9%BF%E5%8A%9F%E8%83%BD%E4%B8%8A%E7%BA%BF/%E4%B9%90%E7%9F%A5%E4%BB%98-%E6%8E%A8%E5%B9%BF%E8%AE%A1%E5%88%92.jpg" alt="复制分享"></p><span id="more"></span><h1 id="说明"><a href="#说明" class="headerlink" title="说明"></a>说明</h1><p>推广功能的上线，旨在散播平台的服务能力，让更多人参与进来，让更多有资源、找资源的朋友看到，分享资源，同时能够获得丰厚的奖励回报。</p><h1 id="操作流程"><a href="#操作流程" class="headerlink" title="操作流程"></a>操作流程</h1><ol><li>登录后台：<a href="https://lezhifu.cc/admin/user_ref">https://lezhifu.cc/admin/user_ref</a>，进入个人中心-&gt;我的邀请，</li><li>生成邀请码<br><img src="/2024/04/06/%E4%B9%90%E7%9F%A5%E4%BB%98%E5%8A%A0%E5%AF%86%E5%B9%B3%E5%8F%B0-%E6%8E%A8%E5%B9%BF%E5%8A%9F%E8%83%BD%E4%B8%8A%E7%BA%BF/add_ref_code.png" alt="生成邀请码"></li><li>复制链接，将链接分享到自媒体平台（微信、抖音、百度、头条、微博、知乎等）<br><img src="/2024/04/06/%E4%B9%90%E7%9F%A5%E4%BB%98%E5%8A%A0%E5%AF%86%E5%B9%B3%E5%8F%B0-%E6%8E%A8%E5%B9%BF%E5%8A%9F%E8%83%BD%E4%B8%8A%E7%BA%BF/share.png" alt="复制分享"></li></ol><h1 id="奖励规则"><a href="#奖励规则" class="headerlink" title="奖励规则"></a>奖励规则</h1><ol><li>新用户通过您的链接进行注册，就会将此新用户关联为您的下线；</li><li>当您的下线进行资源交易时，您将获取订单金额服务费对应比例的奖励；</li><li>奖励比例高达40%。</li></ol><h1 id="平台介绍"><a href="#平台介绍" class="headerlink" title="平台介绍"></a>平台介绍</h1><p>乐知付加密平台，是一个以用户为中心的内容变现平台，无论是专业创作者还是个人爱好者，都可以通过将您的资源变现。</p><p>如果您手里有资源，那么不需要自己搭建一个网站去卖资源，也不需要费周折去自媒体上宣传推广，引流到社群或者知识星球后，然后卖课。</p><p>通过平台卖家将支付链接分享出去，买家可方便快捷地购买您的资源，您不需要过多的时间去管理和维护您的客户。</p><p>如果您是买家，资源会比其他平台类知识付费平台优惠划算，您既能获取知识，也能将知识散播出去获取收入。</p><p>新增的推广功能，可以无限地扩大您的收入，一旦成为您的下线，后续下线的所有交易您都会获得奖励佣金。</p><hr><p>欢迎关注微信公众号，您的资源可变现：【乐知付加密平台】<br><img src="/images/wechat_account.png" alt="乐知付加密平台"></p><p>一起学习，一起进步。<br></p>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;乐知付加密平台的推广赚取佣金功能上线啦。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/2024/04/06/%E4%B9%90%E7%9F%A5%E4%BB%98%E5%8A%A0%E5%AF%86%E5%B9%B3%E5%8F%B0-%E6%8E%A8%E5%B9%BF%E5%8A%9F%E8%83%BD%E4%B8%8A%E7%BA%BF/%E4%B9%90%E7%9F%A5%E4%BB%98-%E6%8E%A8%E5%B9%BF%E8%AE%A1%E5%88%92.jpg&quot; alt=&quot;复制分享&quot;&gt;&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="网站" scheme="https://chenzuoli.github.io/categories/%E7%BD%91%E7%AB%99/"/>
+    
+    <category term="乐知付" scheme="https://chenzuoli.github.io/categories/%E7%BD%91%E7%AB%99/%E4%B9%90%E7%9F%A5%E4%BB%98/"/>
+    
+    <category term="推广" scheme="https://chenzuoli.github.io/categories/%E7%BD%91%E7%AB%99/%E4%B9%90%E7%9F%A5%E4%BB%98/%E6%8E%A8%E5%B9%BF/"/>
+    
+    
+    <category term="乐知付" scheme="https://chenzuoli.github.io/tags/%E4%B9%90%E7%9F%A5%E4%BB%98/"/>
+    
+    <category term="乐知付加密" scheme="https://chenzuoli.github.io/tags/%E4%B9%90%E7%9F%A5%E4%BB%98%E5%8A%A0%E5%AF%86/"/>
+    
+    <category term="密码管理" scheme="https://chenzuoli.github.io/tags/%E5%AF%86%E7%A0%81%E7%AE%A1%E7%90%86/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>vision-pro开发入门三-swift语言学习</title>
+    <link href="https://chenzuoli.github.io/2024/04/05/vision-pro%E5%BC%80%E5%8F%91%E5%85%A5%E9%97%A8%E4%B8%89-swift%E8%AF%AD%E8%A8%80%E5%AD%A6%E4%B9%A0/"/>
+    <id>https://chenzuoli.github.io/2024/04/05/vision-pro%E5%BC%80%E5%8F%91%E5%85%A5%E9%97%A8%E4%B8%89-swift%E8%AF%AD%E8%A8%80%E5%AD%A6%E4%B9%A0/</id>
+    <published>2024-04-05T07:25:30.000Z</published>
+    <updated>2024-04-14T03:16:56.131Z</updated>
+    
+    <content type="html"><![CDATA[<p>学习了swift语言的基本语法，可供大家参考。<br>了解部分特性即可，不必深究，因为你已经学会了其他语言java、python、c#等语言的基本使用，swift也类似。</p><span id="more"></span><p>这里是我学习swift语言的一些源代码：<br><a href="https://github.com/chenzuoli/swift-learning.git">https://github.com/chenzuoli/swift-learning.git</a></p><p>总的看下来，swift也是个面向对象的语言，跟java类似，基本类型、逻辑计算、控制语句、继承、扩展等特性。</p><hr><p>欢迎关注微信公众号，你的资源可变现：【乐知付加密平台】<br><img src="/images/wechat_account.png" alt="乐知付加密平台"></p><p>一起学习，一起进步。<br></p>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;学习了swift语言的基本语法，可供大家参考。&lt;br&gt;了解部分特性即可，不必深究，因为你已经学会了其他语言java、python、c#等语言的基本使用，swift也类似。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="VisionOS" scheme="https://chenzuoli.github.io/categories/VisionOS/"/>
+    
+    <category term="Swift" scheme="https://chenzuoli.github.io/categories/VisionOS/Swift/"/>
+    
+    
+    <category term="VisionOS" scheme="https://chenzuoli.github.io/tags/VisionOS/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>乐知付-如何制作html文件可双击跳转到支付页面？</title>
+    <link href="https://chenzuoli.github.io/2024/04/05/%E4%B9%90%E7%9F%A5%E4%BB%98%E5%8A%A0%E5%AF%86%E5%B9%B3%E5%8F%B0-%E5%8F%8C%E5%87%BBhtml%E6%96%87%E4%BB%B6%E8%B7%B3%E8%BD%AC%E5%88%B0%E6%94%AF%E4%BB%98%E9%A1%B5%E9%9D%A2/"/>
+    <id>https://chenzuoli.github.io/2024/04/05/%E4%B9%90%E7%9F%A5%E4%BB%98%E5%8A%A0%E5%AF%86%E5%B9%B3%E5%8F%B0-%E5%8F%8C%E5%87%BBhtml%E6%96%87%E4%BB%B6%E8%B7%B3%E8%BD%AC%E5%88%B0%E6%94%AF%E4%BB%98%E9%A1%B5%E9%9D%A2/</id>
+    <published>2024-04-05T02:13:17.000Z</published>
+    <updated>2024-04-14T03:18:20.540Z</updated>
+    
+    <content type="html"><![CDATA[<p><img src="/2024/04/05/%E4%B9%90%E7%9F%A5%E4%BB%98%E5%8A%A0%E5%AF%86%E5%B9%B3%E5%8F%B0-%E5%8F%8C%E5%87%BBhtml%E6%96%87%E4%BB%B6%E8%B7%B3%E8%BD%AC%E5%88%B0%E6%94%AF%E4%BB%98%E9%A1%B5%E9%9D%A2/flower.png" alt="花"><br>为了便于买家理解使用链接进行付费获取密码；现开发个小工具，将支付链接转为浏览器可识别的文件，双击打开即可跳转到浏览器支付页面。</p><span id="more"></span><p>文件命名：<strong>解压密码-双击查看.html</strong><br>内容如下：</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;html&gt;</span><br><span class="line">&lt;head&gt;</span><br><span class="line">&lt;meta http-equiv=&quot;refresh&quot;content=&quot;0;url=http://lezhifu.cc/static/html/qrcode.html?p=34&quot;&gt;</span><br><span class="line">&lt;/head&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure><p>这段内容是一个简单的浏览器页面，它包含了一个自动刷新的元标记（meta tag）来实现页面的重定向。<br>商家使用时，<strong>必须将上述链接替换成您本身的链接</strong>，上述链接 <a href="http://lezhifu.cc/static/html/qrcode.html?p=34%22%3E">http://lezhifu.cc/static/html/qrcode.html?p=34</a> <strong>为演示所用。</strong></p><p><img src="/2024/04/05/%E4%B9%90%E7%9F%A5%E4%BB%98%E5%8A%A0%E5%AF%86%E5%B9%B3%E5%8F%B0-%E5%8F%8C%E5%87%BBhtml%E6%96%87%E4%BB%B6%E8%B7%B3%E8%BD%AC%E5%88%B0%E6%94%AF%E4%BB%98%E9%A1%B5%E9%9D%A2/link.png" alt="演示"></p><p><strong>具体解释如下：</strong></p><blockquote><ul><li><html>：这是HTML页面的根元素。</html></li><li><head>：这是文档头部的元素，其中包含了页面的元数据和其他引用信息。</head></li><li><meta>：这是一个元标记，用于在HTML文档中提供元数据。</li><li>http-equiv&#x3D;”refresh”：这是<meta>元素的一个属性，指定了HTTP头部的一个等价字段。</li><li>content&#x3D;”0;url&#x3D;<a href="http://lezhifu.cc/static/html/qrcode.html?p=34%22%60">http://lezhifu.cc/static/html/qrcode.html?p=34"</a>：这是<meta>元素的另一个属性，它指定了页面的刷新时间和重定向的目标URL。<ul><li>0：表示页面在加载后立即刷新。</li><li>url&#x3D;<a href="http://lezhifu.cc/static/html/qrcode.html?p=34%60">http://lezhifu.cc/static/html/qrcode.html?p=34</a>：是重定向的目标URL，即在刷新后将页面导航到该URL。</li></ul></li><li>：表示头部元素的结束标签。</li><li>：表示HTML页面的结束标签。</li></ul></blockquote><p>因此，这段内容的含义是：当买家双击页面时，即打开了支付页面 <a href="http://lezhifu.cc/static/html/qrcode.html?p=34%60">http://lezhifu.cc/static/html/qrcode.html?p=34</a> 这个链接。<br>扫描此链接里的二维码，完成付款，即可看到您的资源密码了。</p><p><img src="/2024/04/05/%E4%B9%90%E7%9F%A5%E4%BB%98%E5%8A%A0%E5%AF%86%E5%B9%B3%E5%8F%B0-%E5%8F%8C%E5%87%BBhtml%E6%96%87%E4%BB%B6%E8%B7%B3%E8%BD%AC%E5%88%B0%E6%94%AF%E4%BB%98%E9%A1%B5%E9%9D%A2/pay.png" alt="扫码支付"></p><p>示例文件，点击下载查看：<a href="https://lezhifu.cc/help/%E8%A7%A3%E5%8E%8B%E5%AF%86%E7%A0%81_%E6%A8%A1%E6%9D%BF.html">解压密码_模板.html</a></p><hr><p>欢迎关注微信公众号，你的资源可变现：【乐知付加密平台】<br><img src="/images/wechat_account.png" alt="乐知付加密平台"></p><p>一起学习，一起进步。<br></p>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;&lt;img src=&quot;/2024/04/05/%E4%B9%90%E7%9F%A5%E4%BB%98%E5%8A%A0%E5%AF%86%E5%B9%B3%E5%8F%B0-%E5%8F%8C%E5%87%BBhtml%E6%96%87%E4%BB%B6%E8%B7%B3%E8%BD%AC%E5%88%B0%E6%94%AF%E4%BB%98%E9%A1%B5%E9%9D%A2/flower.png&quot; alt=&quot;花&quot;&gt;&lt;br&gt;为了便于买家理解使用链接进行付费获取密码；现开发个小工具，将支付链接转为浏览器可识别的文件，双击打开即可跳转到浏览器支付页面。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="网站" scheme="https://chenzuoli.github.io/categories/%E7%BD%91%E7%AB%99/"/>
+    
+    <category term="乐知付" scheme="https://chenzuoli.github.io/categories/%E7%BD%91%E7%AB%99/%E4%B9%90%E7%9F%A5%E4%BB%98/"/>
+    
+    
+    <category term="乐知付" scheme="https://chenzuoli.github.io/tags/%E4%B9%90%E7%9F%A5%E4%BB%98/"/>
+    
+    <category term="乐知付加密" scheme="https://chenzuoli.github.io/tags/%E4%B9%90%E7%9F%A5%E4%BB%98%E5%8A%A0%E5%AF%86/"/>
+    
+    <category term="密码管理" scheme="https://chenzuoli.github.io/tags/%E5%AF%86%E7%A0%81%E7%AE%A1%E7%90%86/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>vision-pro开发入门二-学习规划</title>
+    <link href="https://chenzuoli.github.io/2024/04/02/vision-pro%E5%BC%80%E5%8F%91%E5%85%A5%E9%97%A8%E4%BA%8C/"/>
+    <id>https://chenzuoli.github.io/2024/04/02/vision-pro%E5%BC%80%E5%8F%91%E5%85%A5%E9%97%A8%E4%BA%8C/</id>
+    <published>2024-04-02T14:31:01.000Z</published>
+    <updated>2024-04-14T03:17:06.947Z</updated>
+    
+    <content type="html"><![CDATA[<p>这里列一下学习visionos应用开发的学习路径。</p><span id="more"></span><ol><li>学习swift语言: <a href="https://www.codecademy.com/learn/learn-swift">https://www.codecademy.com/learn/learn-swift</a></li><li>unity基础</li><li>realitykit基础</li><li>arkit基础</li><li>内容创作基础：reality compose pro</li><li>应用开发，学习几个实例</li></ol><hr><p>欢迎关注微信公众号，你的资源可变现：【乐知付加密平台】<br><img src="/images/wechat_account.png" alt="乐知付加密平台"></p><p>一起学习，一起进步。<br></p>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;这里列一下学习visionos应用开发的学习路径。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="VisionOS" scheme="https://chenzuoli.github.io/categories/VisionOS/"/>
+    
+    <category term="Swift" scheme="https://chenzuoli.github.io/categories/VisionOS/Swift/"/>
+    
+    
+    <category term="VisionOS" scheme="https://chenzuoli.github.io/tags/VisionOS/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>VisionOS应用开发需要哪些条件</title>
+    <link href="https://chenzuoli.github.io/2024/04/01/VisionOS%E5%BA%94%E7%94%A8%E5%BC%80%E5%8F%91%E9%9C%80%E8%A6%81%E5%93%AA%E4%BA%9B%E6%9D%A1%E4%BB%B6/"/>
+    <id>https://chenzuoli.github.io/2024/04/01/VisionOS%E5%BA%94%E7%94%A8%E5%BC%80%E5%8F%91%E9%9C%80%E8%A6%81%E5%93%AA%E4%BA%9B%E6%9D%A1%E4%BB%B6/</id>
+    <published>2024-04-01T13:43:23.000Z</published>
+    <updated>2024-04-14T03:17:12.543Z</updated>
+    
+    <content type="html"><![CDATA[<p>说下开发visionOS空间应用需要哪些准备，这里我找了下，列出来给大家。<br><img src="/2024/04/01/VisionOS%E5%BA%94%E7%94%A8%E5%BC%80%E5%8F%91%E9%9C%80%E8%A6%81%E5%93%AA%E4%BA%9B%E6%9D%A1%E4%BB%B6/vision.avif" alt="require"></p><span id="more"></span><ol><li>xcode 15.2</li><li>2d: SwiftUI</li><li>3d: RealityKit&#x2F;Unity 3D</li><li>实体空间: ARKit</li><li>Intel Mac上可以运行Xcode15.2，但如果想要运行visionOS sdk（即开发visionOS应用），则需要搭载m1  m2  m3芯片的mac<br><img src="/2024/04/01/VisionOS%E5%BA%94%E7%94%A8%E5%BC%80%E5%8F%91%E9%9C%80%E8%A6%81%E5%93%AA%E4%BA%9B%E6%9D%A1%E4%BB%B6/require.webp" alt="require"></li></ol><hr><p>欢迎关注微信公众号，让你的资源变现：【乐知付加密平台】<br><img src="/images/wechat_account.png" alt="乐知付加密平台"></p><p>一起学习，一起进步。<br></p>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;说下开发visionOS空间应用需要哪些准备，这里我找了下，列出来给大家。&lt;br&gt;&lt;img src=&quot;/2024/04/01/VisionOS%E5%BA%94%E7%94%A8%E5%BC%80%E5%8F%91%E9%9C%80%E8%A6%81%E5%93%AA%E4%BA%9B%E6%9D%A1%E4%BB%B6/vision.avif&quot; alt=&quot;require&quot;&gt;&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="VisionOS" scheme="https://chenzuoli.github.io/categories/VisionOS/"/>
+    
+    <category term="开发工具" scheme="https://chenzuoli.github.io/categories/VisionOS/%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/"/>
+    
+    
+    <category term="VisionOS" scheme="https://chenzuoli.github.io/tags/VisionOS/"/>
+    
+    <category term="空间计算" scheme="https://chenzuoli.github.io/tags/%E7%A9%BA%E9%97%B4%E8%AE%A1%E7%AE%97/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>说下程序员的mac电脑用哪些工具事半功倍</title>
+    <link href="https://chenzuoli.github.io/2024/03/23/%E8%AF%B4%E4%B8%8B%E7%A8%8B%E5%BA%8F%E5%91%98%E7%9A%84mac%E7%94%B5%E8%84%91%E7%94%A8%E5%93%AA%E4%BA%9B%E5%B7%A5%E5%85%B7%E4%BA%8B%E5%8D%8A%E5%8A%9F%E5%80%8D/"/>
+    <id>https://chenzuoli.github.io/2024/03/23/%E8%AF%B4%E4%B8%8B%E7%A8%8B%E5%BA%8F%E5%91%98%E7%9A%84mac%E7%94%B5%E8%84%91%E7%94%A8%E5%93%AA%E4%BA%9B%E5%B7%A5%E5%85%B7%E4%BA%8B%E5%8D%8A%E5%8A%9F%E5%80%8D/</id>
+    <published>2024-03-23T01:37:21.000Z</published>
+    <updated>2024-04-14T03:18:47.705Z</updated>
+    
+    <content type="html"><![CDATA[<p>说下程序员的mac电脑用哪些工具，可以让开发、写文章、学习、投资事半功倍。</p><span id="more"></span><ol><li>写文章：<br> subline<br> vscode<br> 记笔记: OneNote  印象笔记<br> 写文档、ppt: Office<br> 知识库: 语雀</li><li>开发：<br> python开发: PyCharm<br> python环境管理: Aanconda<br> java开发: Idea<br> c#开发: Visual Studio<br> 微信小程序开发: Wechat DevTools<br> git代码管理: SourceTree<br> 命令行工具: iTerm<br> 数据库连接工具: Dbeaver<br> linux远程连接工具: Royal TSX<br> 接口测试: Postman</li><li>翻译 欧路词典</li><li>电脑清理 Tecent Lemon Lite</li><li>投资<br> 看盘: 东方财富<br> 基金: 支付宝<br> 股票: 光大证券<br> 数字货币: Binance<br> 期货: 申银万国期货<br> 外汇: FXCM</li><li>会议 腾讯会议</li><li>科学上网<br> 一元机场(推广有奖): <a href="https://一元机场.ink/#/register?code=tq5fWajz">https://xn--4gq62f52gdss.ink/#/register?code=tq5fWajz</a></li><li>视频剪辑 剪映</li></ol><p>顺便打一波广告，最近开发的网站：乐知付加密平台，如果你手里有资源，可以通过平台变现。</p><hr><p>欢迎关注微信公众号，你的资源可变现：【乐知付加密平台】<br><img src="/images/wechat_account.png" alt="乐知付加密平台"></p><p>一起学习，一起进步。<br></p>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;说下程序员的mac电脑用哪些工具，可以让开发、写文章、学习、投资事半功倍。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="其他" scheme="https://chenzuoli.github.io/categories/%E5%85%B6%E4%BB%96/"/>
+    
+    <category term="电脑" scheme="https://chenzuoli.github.io/categories/%E5%85%B6%E4%BB%96/%E7%94%B5%E8%84%91/"/>
+    
+    <category term="mac" scheme="https://chenzuoli.github.io/categories/%E5%85%B6%E4%BB%96/%E7%94%B5%E8%84%91/mac/"/>
+    
+    
+    <category term="mac" scheme="https://chenzuoli.github.io/tags/mac/"/>
+    
+    <category term="电脑" scheme="https://chenzuoli.github.io/tags/%E7%94%B5%E8%84%91/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>说下域名恶意解析</title>
+    <link href="https://chenzuoli.github.io/2024/03/21/%E8%AF%B4%E4%B8%8B%E5%9F%9F%E5%90%8D%E6%81%B6%E6%84%8F%E8%A7%A3%E6%9E%90/"/>
+    <id>https://chenzuoli.github.io/2024/03/21/%E8%AF%B4%E4%B8%8B%E5%9F%9F%E5%90%8D%E6%81%B6%E6%84%8F%E8%A7%A3%E6%9E%90/</id>
+    <published>2024-03-21T15:15:06.000Z</published>
+    <updated>2024-04-14T03:18:53.823Z</updated>
+    
+    <content type="html"><![CDATA[<p>最近做了个网站，<a href="www.lezhifu.cc">www.lezhifu.cc</a>，刚开始没有做任何防范，导致别人恶意解析，<br>下面来看看别人具体是怎么做的。</p><span id="more"></span><h2 id="环境："><a href="#环境：" class="headerlink" title="环境："></a>环境：</h2><p>nginx + 静态html网站</p><p>服务器：阿里云<br>域名：<a href="http://www.lezhifu.cc/">www.lezhifu.cc</a><br>ip: 47.103.53.229</p><p>阿里云域名管理已经配置了域名映射到ip地址，即将该域名映射到此ip：47.103.53.229，<br>访问<a href="http://www.lezhifu.cc即访问47.103.53.229:80端口">www.lezhifu.cc即访问47.103.53.229:80端口</a></p><h2 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h2><p>在看看nginx的配置，访问80端口时，映射到服务器的根目录<code>/usr/lezhifu_website</code>，找对应目录下的index.htm或index.html</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">server &#123;</span><br><span class="line">        listen       80;</span><br><span class="line">        server_name  lezhifu.cc;</span><br><span class="line"></span><br><span class="line">        #access_log  logs/host.access.log  main;</span><br><span class="line"></span><br><span class="line">        #location / &#123;</span><br><span class="line">        #    root   html;</span><br><span class="line">        #    index  index.html index.htm;</span><br><span class="line">        #&#125;</span><br><span class="line">        # website frontend</span><br><span class="line">        location / &#123;</span><br><span class="line">            root   /usr/lezhifu_website;</span><br><span class="line">            index  index.html index.htm;</span><br><span class="line">        &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>nginx有了这样的配置，当你访问<a href="http://www.lezhifu.cc时,就会解析到/usr/lezhifu_websit/index.html%E6%96%87%E4%BB%B6%E4%BA%86%EF%BC%8C%E7%84%B6%E5%90%8E%E8%BF%94%E5%9B%9E%E5%88%B0%E6%B5%8F%E8%A7%88%E5%99%A8%E3%80%82">www.lezhifu.cc时，就会解析到/usr/lezhifu_websit/index.html文件了，然后返回到浏览器。</a></p><h2 id="域名恶意解析"><a href="#域名恶意解析" class="headerlink" title="域名恶意解析"></a>域名恶意解析</h2><p>当时我的网站代码添加了百度统计功能，在统计页面上看到别人的域名，我在纳闷儿为什么访问别人的域名也统计到我的数据中呢？<br><img src="/2024/03/21/%E8%AF%B4%E4%B8%8B%E5%9F%9F%E5%90%8D%E6%81%B6%E6%84%8F%E8%A7%A3%E6%9E%90/image.png" alt="恶意解析"></p><p>于是我咨询了阿里云，给的解释是域名恶意解析，第一次听说这个名词，也第一次碰到别人恶意攻击我的网站，<br>估计后面还会有更麻烦的Dos DDos攻击吧，希望不要被我碰到。<br><img src="/2024/03/21/%E8%AF%B4%E4%B8%8B%E5%9F%9F%E5%90%8D%E6%81%B6%E6%84%8F%E8%A7%A3%E6%9E%90/question.png" alt="咨询问题回答"></p><p>由于nginx这里没有做任何限制，导致别人的域名也可以这样配置，解析到我的ip下，如下阿里云的【域名控制台】 【解析】：</p><p><img src="/2024/03/21/%E8%AF%B4%E4%B8%8B%E5%9F%9F%E5%90%8D%E6%81%B6%E6%84%8F%E8%A7%A3%E6%9E%90/jiexi.png" alt="域名解析"></p><p><img src="/2024/03/21/%E8%AF%B4%E4%B8%8B%E5%9F%9F%E5%90%8D%E6%81%B6%E6%84%8F%E8%A7%A3%E6%9E%90/ip.png" alt="ip"></p><p>他的域名映射到我的ip即可完成域名恶意解析。</p><h2 id="解决办法"><a href="#解决办法" class="headerlink" title="解决办法"></a>解决办法</h2><p>这里贴下阿里云给出的方法：<br>参考如下文档，修改自己的Web服务器（例如Nginx、Apache）配置，禁止以IP的形式访问域名，只允许您自己的域名访问。<br>IIS设置禁止通过IP访问：<a href="https://help.aliyun.com/document_detail/40946.html">https://help.aliyun.com/document_detail/40946.html</a><br>Apache禁止未经许可的域名访问网站：<a href="https://help.aliyun.com/document_detail/41091.html">https://help.aliyun.com/document_detail/41091.html</a><br>Nginx禁止未经许可的域名访问网站：<a href="https://developer.aliyun.com/article/7735">https://developer.aliyun.com/article/7735</a></p><p>我的方法是这样的，修改nginx配置：<br>vim &#x2F;usr&#x2F;local&#x2F;nginx&#x2F;conf&#x2F;nginx.conf</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">server &#123;</span><br><span class="line">    if ($host !~* ^(lezhifu\.cc|\w+\.lezhifu\.cc)$) &#123;</span><br><span class="line">        return 403;  # 拒绝访问</span><br><span class="line">    &#125;</span><br><span class="line">    listen       80;</span><br><span class="line">    server_name  lezhifu.cc;</span><br></pre></td></tr></table></figure><p>添加了if判断：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">if ($host !~* ^(lezhifu\.cc|\w+\.lezhifu\.cc)$) &#123;</span><br><span class="line">            return 403;  # 拒绝访问</span><br><span class="line">        &#125;</span><br></pre></td></tr></table></figure><p>如果域名不是从lezhifu.cc或者其子域名访问的，一律返回403 Request Forbidden。</p><p>ok，大功告成。</p><p>希望这个网络世界里，少一点恶意，多一点善意，共同维护这个美好的网络世界。</p><p>我是乐知付加密平台，一个专为知识付费服务的加密平台。</p><hr><p>欢迎关注微信公众号：【乐知付加密平台】<br><img src="/images/wechat_account.png" alt="乐知付加密平台"></p><p>一起学习，一起进步。<br></p>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;最近做了个网站，&lt;a href=&quot;www.lezhifu.cc&quot;&gt;www.lezhifu.cc&lt;/a&gt;，刚开始没有做任何防范，导致别人恶意解析，&lt;br&gt;下面来看看别人具体是怎么做的。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="Http" scheme="https://chenzuoli.github.io/categories/Http/"/>
+    
+    <category term="域名恶意解析" scheme="https://chenzuoli.github.io/categories/Http/%E5%9F%9F%E5%90%8D%E6%81%B6%E6%84%8F%E8%A7%A3%E6%9E%90/"/>
+    
+    
+    <category term="http" scheme="https://chenzuoli.github.io/tags/http/"/>
+    
+    <category term="域名恶意解析" scheme="https://chenzuoli.github.io/tags/%E5%9F%9F%E5%90%8D%E6%81%B6%E6%84%8F%E8%A7%A3%E6%9E%90/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>vision_pro开发入门一-了解基本情况</title>
+    <link href="https://chenzuoli.github.io/2024/03/21/vision-pro%E5%BC%80%E5%8F%91%E5%85%A5%E9%97%A8%E4%B8%80/"/>
+    <id>https://chenzuoli.github.io/2024/03/21/vision-pro%E5%BC%80%E5%8F%91%E5%85%A5%E9%97%A8%E4%B8%80/</id>
+    <published>2024-03-21T14:51:50.000Z</published>
+    <updated>2024-04-05T07:27:45.801Z</updated>
+    
+    <content type="html"><![CDATA[<p>先了解下开发步骤。</p><span id="more"></span><h1 id="一、环境准备"><a href="#一、环境准备" class="headerlink" title="一、环境准备"></a>一、环境准备</h1><p>xcode开发工具<br>vision pro模拟器</p><h1 id="二、项目开发"><a href="#二、项目开发" class="headerlink" title="二、项目开发"></a>二、项目开发</h1><p>新建项目<br>选择vision os</p><p>项目的主要文件：</p><ol><li>HelloVisionProWorldApp.swift<br>入口，尽管它是个最重要的文件，但是只定义了入口，所以没必要看了。核心在我看来只有一句话：“WindowGroup{ContentView()}” 与”let renderer &#x3D; Renderer(layerRenderer)” 定义好了 窗口与 Render<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line">import SwiftUI</span><br><span class="line">import CompositorServices</span><br><span class="line"></span><br><span class="line">struct ContentStageConfiguration: CompositorLayerConfiguration &#123;</span><br><span class="line">    func makeConfiguration(capabilities: LayerRenderer.Capabilities, configuration: inout LayerRenderer.Configuration) &#123;</span><br><span class="line">        configuration.depthFormat = .depth32Float</span><br><span class="line">        configuration.colorFormat = .bgra8Unorm_srgb</span><br><span class="line">    </span><br><span class="line">        let foveationEnabled = capabilities.supportsFoveation</span><br><span class="line">        configuration.isFoveationEnabled = foveationEnabled</span><br><span class="line">        </span><br><span class="line">        let options: LayerRenderer.Capabilities.SupportedLayoutsOptions = foveationEnabled ? [.foveationEnabled] : []</span><br><span class="line">        let supportedLayouts = capabilities.supportedLayouts(options: options)</span><br><span class="line">        </span><br><span class="line">        configuration.layout = supportedLayouts.contains(.layered) ? .layered : .dedicated</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">@main</span><br><span class="line">struct TestingApp: App &#123;</span><br><span class="line">    var body: some Scene &#123;</span><br><span class="line">        WindowGroup &#123;</span><br><span class="line">            ContentView()</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        ImmersiveSpace(id: &quot;ImmersiveSpace&quot;) &#123;</span><br><span class="line">            CompositorLayer(configuration: ContentStageConfiguration()) &#123; layerRenderer in</span><br><span class="line">                let renderer = Renderer(layerRenderer)</span><br><span class="line">                renderer.startRenderLoop()</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;.immersionStyle(selection: .constant(.full), in: .full)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li><li>ContentView.swift<br>核心文件<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br></pre></td><td class="code"><pre><span class="line">import SwiftUI</span><br><span class="line">import RealityKit</span><br><span class="line">import RealityKitContent</span><br><span class="line"></span><br><span class="line">struct ContentView: View &#123;</span><br><span class="line"></span><br><span class="line">    @State private var showImmersiveSpace = false</span><br><span class="line">    @State private var immersiveSpaceIsShown = false</span><br><span class="line"></span><br><span class="line">    @Environment(\.openImmersiveSpace) var openImmersiveSpace</span><br><span class="line">    @Environment(\.dismissImmersiveSpace) var dismissImmersiveSpace</span><br><span class="line"></span><br><span class="line">    var body: some View &#123;</span><br><span class="line">        VStack &#123;</span><br><span class="line">            Model3D(named: &quot;Scene&quot;, bundle: realityKitContentBundle)</span><br><span class="line">                .padding(.bottom, 50)</span><br><span class="line"></span><br><span class="line">            Text(&quot;Hello, world!&quot;)</span><br><span class="line"></span><br><span class="line">            Toggle(&quot;Show Immersive Space&quot;, isOn: $showImmersiveSpace)</span><br><span class="line">                .toggleStyle(.button)</span><br><span class="line">                .padding(.top, 50)</span><br><span class="line">        &#125;</span><br><span class="line">        .padding()</span><br><span class="line">        .onChange(of: showImmersiveSpace) &#123; _, newValue in</span><br><span class="line">            Task &#123;</span><br><span class="line">                if newValue &#123;</span><br><span class="line">                    switch await openImmersiveSpace(id: &quot;ImmersiveSpace&quot;) &#123;</span><br><span class="line">                    case .opened:</span><br><span class="line">                        immersiveSpaceIsShown = true</span><br><span class="line">                    case .error, .userCancelled:</span><br><span class="line">                        fallthrough</span><br><span class="line">                    @unknown default:</span><br><span class="line">                        immersiveSpaceIsShown = false</span><br><span class="line">                        showImmersiveSpace = false</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125; else if immersiveSpaceIsShown &#123;</span><br><span class="line">                    await dismissImmersiveSpace()</span><br><span class="line">                    immersiveSpaceIsShown = false</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">#Preview(windowStyle: .automatic) &#123;</span><br><span class="line">    ContentView()</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>这个文件差不多是整个 VisionPro 应用的核心所在，你只用了简单的一点定义就把一个 3D 世界呈现在你面前了。<br>核心代码只有三行，定义了 Model3D， 设置显示的 Text 为“Hello, world!”，另一个 Toggle 控件”Show Inmersive Space” ，就能看到下面这个完整的 3D 世界。</li></ol><p>再来分析一下代码：</p><p>VStack 定义了 3D 的布局，其实它是一个标准的 Swift 开发 App 的方式，可以说广大 iOS 的开发者基本上可以无缝迁移到 VisionPro 的开发上，这个生态能力真的相当不错。</p><p>然后开发语言也是 Swift，没有任何差异。</p><ol start="3"><li>Renderer.swift</li><li>Shaders.metal</li><li>ShaderTypes.h</li></ol><p>Renders 导入了 Metal， 而 Shaders 与 SHaderTypes 共同定义 Shader 的内容。这里的东西是你实际开发的内容。</p><ul><li>Renderer：负责设置和管理渲染流程。<br>成员变量<br>定义了一系列变量，如Metal设备、命令队列、uniform缓冲区、渲染管线状态、深度状态、纹理等。<br>初始化<br>init 方法初始化Renderer类，设置Metal相关配置，加载网格(mesh)和纹理等。<br>方法<br>startRenderLoop：开始渲染循环，用于不断渲染新的帧。<br>buildMetalVertexDescriptor：设置Metal的顶点描述符，用于定义顶点数据的组织方式。<br>buildRenderPipelineWithDevice：创建渲染管线，这是渲染过程的一个重要部分，定义了如何处理顶点和片段。<br>buildMesh：创建并配置网格，用于渲染。<br>loadTexture：加载纹理，用于渲染中的表面细节。<br>updateDynamicBufferState, updateGameState：更新渲染状态，例如处理uniform缓冲区的数据和计算模型的变换。<br>renderFrame：渲染单个帧的逻辑，包括准备命令缓冲区、配置渲染编码器、绘制网格等。<br>renderLoop：持续渲染的循环，负责调用renderFrame来渲染每一帧。</li></ul><p>所以，未来你大概率要读懂这里的每一行代码，可能对于应用开发者，这是一件难的事。</p><h1 id="三、模拟运行"><a href="#三、模拟运行" class="headerlink" title="三、模拟运行"></a>三、模拟运行</h1><p>可以看到，在模拟器中运行的结果跟在开发中运行的结果是一样的。</p><p>这是个开始，以后我会慢慢增加更多的 VisionPro 开发介绍的，简单的感受。</p><p>iOS 熟悉 swift 开发的人可以无缝迁移到VisionPro开发上来，接下来你可能需要懂的就是一些 3D 相关的知识，相信 3D 这事慢慢会成为一个热点的。毕竟 Apple 的生态能力的强大是大家所共知的。</p><p>加油，真的期望看到 IT 世界的新变化。</p><p>建议有机会学学 swift, blender, 这样你对于 VisionPro 的开发会有足够的认知的。</p><hr><p>学无止境。</p>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;先了解下开发步骤。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="VisionOS" scheme="https://chenzuoli.github.io/categories/VisionOS/"/>
+    
+    
+    <category term="VisionOS" scheme="https://chenzuoli.github.io/tags/VisionOS/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>网站seo优化</title>
+    <link href="https://chenzuoli.github.io/2024/03/18/%E7%BD%91%E7%AB%99seo%E4%BC%98%E5%8C%96/"/>
+    <id>https://chenzuoli.github.io/2024/03/18/%E7%BD%91%E7%AB%99seo%E4%BC%98%E5%8C%96/</id>
+    <published>2024-03-18T13:44:26.000Z</published>
+    <updated>2024-03-18T14:04:21.079Z</updated>
+    
+    <content type="html"><![CDATA[<p>说下网站seo优化可以做的一些关键点。</p><span id="more"></span><ol><li><p>网站关键词、标题、描述<br>head之间：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;title&gt;密码加密服务-数字或字母加密技术-数据安全-乐知付加密平台&lt;/title&gt;</span><br><span class="line">&lt;meta name=&quot;description&quot; content=&quot;通过乐知付加密平台，可以将字母或数字密码加密后生成浏览器链接，用户扫描链接中的二维码，支付后展示明文密码，保护您的隐私和数据不被泄露，是个人运营的好帮手。&quot;&gt;</span><br><span class="line">&lt;meta name=&quot;keywords&quot; content=&quot;信息安全，数据安全，数字加密技术，数字加密应用，隐私保护，乐知付加密&quot; /&gt;</span><br></pre></td></tr></table></figure></li><li><p>图片的alt属性，添加图片的描述和关键字</p></li><li><p>开启网站压缩，访问速度更快点。<br> a. nginx:  一般配置文件位置&#x2F;usr&#x2F;local&#x2F;nginx&#x2F;conf&#x2F;nginx.conf</p> <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"># nginx.conf</span><br><span class="line"># 开启Gzip压缩</span><br><span class="line">gzip on;</span><br><span class="line">#低于5k的资源不压缩，这个大小可通过自己项目架构来限制</span><br><span class="line">gzip_min_length 5k;</span><br><span class="line">#压缩级别1-9，越大压缩率越高，同时消耗cpu资源也越多，建议设置在4左右。 </span><br><span class="line">gzip_comp_level 4; </span><br><span class="line">#需要压缩哪些响应类型的资源，多个空格隔开。不建议压缩图片.</span><br><span class="line">gzip_types text/html text/plain text/xml text/css application/javascript application/json;</span><br></pre></td></tr></table></figure><p> b. apache服务器,打开Apache的配置文件（通常是httpd.conf或apache2.conf），然后添加以下代码：</p> <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"># httpd.conf</span><br><span class="line"># 开启Gzip压缩</span><br><span class="line">&lt;IfModule mod_deflate.c&gt;</span><br><span class="line">    SetOutputFilter DEFLATE</span><br><span class="line">    AddOutputFilterByType DEFLATE text/html text/plain text/xml text/css application/javascript application/json</span><br><span class="line">&lt;/IfModule&gt;</span><br></pre></td></tr></table></figure></li><li><p>各大搜索引擎去收录你的网站和网页</p></li></ol><hr><p>一起学习。</p>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;说下网站seo优化可以做的一些关键点。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="网站" scheme="https://chenzuoli.github.io/categories/%E7%BD%91%E7%AB%99/"/>
+    
+    <category term="SEO" scheme="https://chenzuoli.github.io/categories/%E7%BD%91%E7%AB%99/SEO/"/>
+    
+    
+    <category term="seo" scheme="https://chenzuoli.github.io/tags/seo/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>mac自带录屏快捷键</title>
+    <link href="https://chenzuoli.github.io/2024/03/17/mac%E8%87%AA%E5%B8%A6%E5%BD%95%E5%B1%8F%E5%BF%AB%E6%8D%B7%E9%94%AE/"/>
+    <id>https://chenzuoli.github.io/2024/03/17/mac%E8%87%AA%E5%B8%A6%E5%BD%95%E5%B1%8F%E5%BF%AB%E6%8D%B7%E9%94%AE/</id>
+    <published>2024-03-17T02:01:08.000Z</published>
+    <updated>2024-04-06T11:40:26.480Z</updated>
+    
+    <content type="html"><![CDATA[<p>command + shift + 5</p><p>记录一下。</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;command + shift + 5&lt;/p&gt;
+&lt;p&gt;记录一下。&lt;/p&gt;
+</summary>
+      
+    
+    
+    
+    <category term="其他" scheme="https://chenzuoli.github.io/categories/%E5%85%B6%E4%BB%96/"/>
+    
+    <category term="电脑" scheme="https://chenzuoli.github.io/categories/%E5%85%B6%E4%BB%96/%E7%94%B5%E8%84%91/"/>
+    
+    <category term="mac" scheme="https://chenzuoli.github.io/categories/%E5%85%B6%E4%BB%96/%E7%94%B5%E8%84%91/mac/"/>
+    
+    
+    <category term="mac" scheme="https://chenzuoli.github.io/tags/mac/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>html中table如何实现手机端左右滚动查看表格数据</title>
+    <link href="https://chenzuoli.github.io/2024/03/16/html%E4%B8%ADtable%E5%A6%82%E4%BD%95%E5%AE%9E%E7%8E%B0%E6%89%8B%E6%9C%BA%E7%AB%AF%E5%B7%A6%E5%8F%B3%E6%BB%9A%E5%8A%A8%E6%9F%A5%E7%9C%8B%E8%A1%A8%E6%A0%BC%E6%95%B0%E6%8D%AE/"/>
+    <id>https://chenzuoli.github.io/2024/03/16/html%E4%B8%ADtable%E5%A6%82%E4%BD%95%E5%AE%9E%E7%8E%B0%E6%89%8B%E6%9C%BA%E7%AB%AF%E5%B7%A6%E5%8F%B3%E6%BB%9A%E5%8A%A8%E6%9F%A5%E7%9C%8B%E8%A1%A8%E6%A0%BC%E6%95%B0%E6%8D%AE/</id>
+    <published>2024-03-16T10:06:53.000Z</published>
+    <updated>2024-03-18T13:57:42.445Z</updated>
+    
+    <content type="html"><![CDATA[<p>如何实现手机端表格宽度不够时，自动实现可手动左右滑动查看表格内容？</p><span id="more"></span><p>自定义css文件：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">@media (max-width: 600px) &#123;</span><br><span class="line">    table &#123;</span><br><span class="line">      display: block;</span><br><span class="line">      margin: 0 auto;</span><br><span class="line">      overflow-x: auto;</span><br><span class="line">      white-space: nowrap;</span><br><span class="line">      text-overflow: ellipsis;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>这里的@media(max-width: 600px)表示，程序自动判断显示屏幕的宽度，如果小于600px则table的css格式生效，<br>overflow-x: auto;即代表x轴横向滑动展示。</p><p>如果你也使用了bootstrap css，那么自定义css文件必须在bootstrap.css文件之后进行加载，如下：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;link rel=&quot;stylesheet&quot; href=&#123;&#123; url_for(&#x27;static&#x27;, filename=&#x27;css/bootstrap.min.css&#x27;)&#125;&#125;&gt;</span><br><span class="line">&lt;link rel=&quot;stylesheet&quot; href=&#123;&#123; url_for(&#x27;static&#x27;, filename=&#x27;css/style-index.css&#x27;) &#125;&#125;&gt;</span><br></pre></td></tr></table></figure><hr><p>记录一下，一起学习。</p>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;如何实现手机端表格宽度不够时，自动实现可手动左右滑动查看表格内容？&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="前端" scheme="https://chenzuoli.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
+    
+    <category term="html" scheme="https://chenzuoli.github.io/categories/%E5%89%8D%E7%AB%AF/html/"/>
+    
+    
+    <category term="html" scheme="https://chenzuoli.github.io/tags/html/"/>
+    
+    <category term="table" scheme="https://chenzuoli.github.io/tags/table/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>乐知付-如何提现</title>
+    <link href="https://chenzuoli.github.io/2024/03/10/%E4%B9%90%E7%9F%A5%E4%BB%98-%E5%A6%82%E4%BD%95%E6%8F%90%E7%8E%B0/"/>
+    <id>https://chenzuoli.github.io/2024/03/10/%E4%B9%90%E7%9F%A5%E4%BB%98-%E5%A6%82%E4%BD%95%E6%8F%90%E7%8E%B0/</id>
+    <published>2024-03-10T02:32:56.000Z</published>
+    <updated>2024-04-14T03:18:14.289Z</updated>
+    
+    <content type="html"><![CDATA[<p>最近新做的网站，专为知识付费服务的个人平台，如果你的付费内容受欢迎，付费用户越多，你的收入越高，这篇说下如何进行余额提现？</p><p>官网链接：<a href="http://lezhifu.cc/">http://lezhifu.cc/</a></p><span id="more"></span><p>这里列一下基本操作流程：</p><p>链接：<a href="http://lezhifu.cc/admin/withdraw_list">http://lezhifu.cc/admin/withdraw_list</a></p><h2 id="操作步骤一："><a href="#操作步骤一：" class="headerlink" title="操作步骤一："></a>操作步骤一：</h2><p>注册登录后，进入管理后台，依次点击 【支付管理】【提现中心】【+ 申请提现】；</p><p><img src="/2024/03/10/%E4%B9%90%E7%9F%A5%E4%BB%98-%E5%A6%82%E4%BD%95%E6%8F%90%E7%8E%B0/withdraw1.png" alt="withdraw1"></p><h2 id="操作步骤二："><a href="#操作步骤二：" class="headerlink" title="操作步骤二："></a>操作步骤二：</h2><p>申请提现中，依次填写 【提现金额】~【支付宝账号】，并点击提现按钮，等待平台审核完成！<br><img src="/2024/03/10/%E4%B9%90%E7%9F%A5%E4%BB%98-%E5%A6%82%E4%BD%95%E6%8F%90%E7%8E%B0/withdraw2.png" alt="withdraw2"></p><h2 id="提现条件："><a href="#提现条件：" class="headerlink" title="提现条件："></a>提现条件：</h2><p>用户账户余额，至少达到20元（包含20元），方可申请提现成功。</p><h2 id="提现方式："><a href="#提现方式：" class="headerlink" title="提现方式："></a>提现方式：</h2><p>用户可选择的提现方式，目前仅限支付宝。请事先在【个人中心】【个人信息】【支付宝账号】编辑保存。</p><h2 id="提现手续费："><a href="#提现手续费：" class="headerlink" title="提现手续费："></a>提现手续费：</h2><p>提现手续费标准：申请提现总金额的8%。</p><h2 id="提现时间："><a href="#提现时间：" class="headerlink" title="提现时间："></a>提现时间：</h2><p>每周的工作日（除周六、周日）申请提现； 下周一，统一有序进行结算处理！</p><hr><p>欢迎关注微信公众号：【乐知付加密平台】<br><img src="/images/wechat_account.png" alt="乐知付加密平台"></p><p>一起学习，一起进步。<br></p>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;最近新做的网站，专为知识付费服务的个人平台，如果你的付费内容受欢迎，付费用户越多，你的收入越高，这篇说下如何进行余额提现？&lt;/p&gt;
+&lt;p&gt;官网链接：&lt;a href=&quot;http://lezhifu.cc/&quot;&gt;http://lezhifu.cc/&lt;/a&gt;&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="网站" scheme="https://chenzuoli.github.io/categories/%E7%BD%91%E7%AB%99/"/>
+    
+    <category term="乐知付" scheme="https://chenzuoli.github.io/categories/%E7%BD%91%E7%AB%99/%E4%B9%90%E7%9F%A5%E4%BB%98/"/>
+    
+    <category term="提现" scheme="https://chenzuoli.github.io/categories/%E7%BD%91%E7%AB%99/%E4%B9%90%E7%9F%A5%E4%BB%98/%E6%8F%90%E7%8E%B0/"/>
+    
+    
+    <category term="乐知付" scheme="https://chenzuoli.github.io/tags/%E4%B9%90%E7%9F%A5%E4%BB%98/"/>
+    
+    <category term="提现" scheme="https://chenzuoli.github.io/tags/%E6%8F%90%E7%8E%B0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>乐知付-如何充值</title>
+    <link href="https://chenzuoli.github.io/2024/03/10/%E4%B9%90%E7%9F%A5%E4%BB%98-%E5%A6%82%E4%BD%95%E5%85%85%E5%80%BC/"/>
+    <id>https://chenzuoli.github.io/2024/03/10/%E4%B9%90%E7%9F%A5%E4%BB%98-%E5%A6%82%E4%BD%95%E5%85%85%E5%80%BC/</id>
+    <published>2024-03-10T02:28:01.000Z</published>
+    <updated>2024-04-14T03:17:21.557Z</updated>
+    
+    <content type="html"><![CDATA[<p>最近新做的网站，专为知识付费服务的个人平台，如果你的付费内容受欢迎，付费用户越多，你的收入越高，平台从你的账户余额中每单抽取0.15佣金，所以需要保证你的余额足够，这篇说下如何进行充值？</p><p>官网链接：<a href="http://lezhifu.cc/">http://lezhifu.cc/</a></p><span id="more"></span><p>这里列一下基本操作流程：</p><p>链接：<a href="http://lezhifu.cc/admin/recharge_list">http://lezhifu.cc/admin/recharge_list</a></p><h2 id="操作步骤一："><a href="#操作步骤一：" class="headerlink" title="操作步骤一："></a>操作步骤一：</h2><p>注册登录后，进入管理后台，依次点击 【支付管理】<del>【充值中心】</del>【+ 充值】；<br><img src="/2024/03/10/%E4%B9%90%E7%9F%A5%E4%BB%98-%E5%A6%82%E4%BD%95%E5%85%85%E5%80%BC/recharge1.png" alt="recharge1"></p><h2 id="操作步骤二："><a href="#操作步骤二：" class="headerlink" title="操作步骤二："></a>操作步骤二：</h2><p>新增充值中，依次填写 【充值金额】~【支付宝账号】，并点击充值完成按钮，等待平台审核完成！<br><img src="/2024/03/10/%E4%B9%90%E7%9F%A5%E4%BB%98-%E5%A6%82%E4%BD%95%E5%85%85%E5%80%BC/recharge2.png" alt="recharge2"></p><h2 id="注意事项："><a href="#注意事项：" class="headerlink" title="注意事项："></a>注意事项：</h2><p>充值页面的【支付宝账号】，需事先在【个人中心】~【个人信息】编辑保存。</p><hr><p>欢迎关注微信公众号：【乐知付加密平台】<br><img src="/images/wechat_account.png" alt="乐知付加密平台"></p><p>一起学习，一起进步。<br></p>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;最近新做的网站，专为知识付费服务的个人平台，如果你的付费内容受欢迎，付费用户越多，你的收入越高，平台从你的账户余额中每单抽取0.15佣金，所以需要保证你的余额足够，这篇说下如何进行充值？&lt;/p&gt;
+&lt;p&gt;官网链接：&lt;a href=&quot;http://lezhifu.cc/&quot;&gt;http://lezhifu.cc/&lt;/a&gt;&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="网站" scheme="https://chenzuoli.github.io/categories/%E7%BD%91%E7%AB%99/"/>
+    
+    <category term="乐知付" scheme="https://chenzuoli.github.io/categories/%E7%BD%91%E7%AB%99/%E4%B9%90%E7%9F%A5%E4%BB%98/"/>
+    
+    <category term="充值" scheme="https://chenzuoli.github.io/categories/%E7%BD%91%E7%AB%99/%E4%B9%90%E7%9F%A5%E4%BB%98/%E5%85%85%E5%80%BC/"/>
+    
+    
+    <category term="乐知付" scheme="https://chenzuoli.github.io/tags/%E4%B9%90%E7%9F%A5%E4%BB%98/"/>
+    
+    <category term="充值" scheme="https://chenzuoli.github.io/tags/%E5%85%85%E5%80%BC/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>乐知付-如何发布资源链接</title>
+    <link href="https://chenzuoli.github.io/2024/03/10/%E4%B9%90%E7%9F%A5%E4%BB%98-%E5%A6%82%E4%BD%95%E5%8F%91%E5%B8%83%E8%B5%84%E6%BA%90%E9%93%BE%E6%8E%A5/"/>
+    <id>https://chenzuoli.github.io/2024/03/10/%E4%B9%90%E7%9F%A5%E4%BB%98-%E5%A6%82%E4%BD%95%E5%8F%91%E5%B8%83%E8%B5%84%E6%BA%90%E9%93%BE%E6%8E%A5/</id>
+    <published>2024-03-10T02:20:19.000Z</published>
+    <updated>2024-04-14T03:19:13.592Z</updated>
+    
+    <content type="html"><![CDATA[<p>最近新做的网站，专为知识付费服务的个人平台，这篇说下如何在各大自媒体平台发布资源链接？</p><p>官网链接：<a href="http://lezhifu.cc/">http://lezhifu.cc/</a></p><span id="more"></span><p>这里列一下基本操作流程：</p><p>链接：<a href="http://lezhifu.cc/admin/qrcode_list">http://lezhifu.cc/admin/qrcode_list</a></p><h2 id="操作步骤一"><a href="#操作步骤一" class="headerlink" title="操作步骤一 :"></a>操作步骤一 :</h2><p>（1）电脑本地桌面 新建一个文件夹；命名： 自定义</p><p>（2）将付费资源（音视频类，软件类，文件资料等）放入文件夹中 ； 命名： 自定义</p><p>如下截图：举例用txt文档作为 知识资源。<br><img src="/2024/03/10/%E4%B9%90%E7%9F%A5%E4%BB%98-%E5%A6%82%E4%BD%95%E5%8F%91%E5%B8%83%E8%B5%84%E6%BA%90%E9%93%BE%E6%8E%A5/release1.png" alt="release1"></p><h2 id="操作步骤二"><a href="#操作步骤二" class="headerlink" title="操作步骤二 :"></a>操作步骤二 :</h2><p>（1）将付费资源文件夹，添加到压缩包，并设置密码，点击确定！<br><img src="/2024/03/10/%E4%B9%90%E7%9F%A5%E4%BB%98-%E5%A6%82%E4%BD%95%E5%8F%91%E5%B8%83%E8%B5%84%E6%BA%90%E9%93%BE%E6%8E%A5/release2.png" alt="release2"></p><h2 id="操作步骤三"><a href="#操作步骤三" class="headerlink" title="操作步骤三 :"></a>操作步骤三 :</h2><p>（1）网盘中新建可分享的文件夹，并将已经加密的压缩包，上传至该该文件夹中！ 命名： 自定义</p><p>（2） 新建一个文件夹（命名：资源预览说明），并在该文件夹中放入3个文件；</p><pre><code> a.压缩包中的资源 截图信息（方便买家了解所购买的资源，真实存在）；图片格式 b.商家的联系方式：扣扣、vx 等联系方式！ （方便买家遇到问题联系卖家）；文本文档： c. 压缩包解密密码：将平台个人收款码链接，放入txt文档中，提供给 (买家支付，获取压缩包密码 ; 同时，卖家支付宝会收到款）；文本文档格式</code></pre><p><img src="/2024/03/10/%E4%B9%90%E7%9F%A5%E4%BB%98-%E5%A6%82%E4%BD%95%E5%8F%91%E5%B8%83%E8%B5%84%E6%BA%90%E9%93%BE%E6%8E%A5/release3.png" alt="release3"></p><h2 id="操作步骤四"><a href="#操作步骤四" class="headerlink" title="操作步骤四 :"></a>操作步骤四 :</h2><p>分享网盘中最外层的文件夹链接信息，到各大自媒体平台，并发布；</p><p><img src="/2024/03/10/%E4%B9%90%E7%9F%A5%E4%BB%98-%E5%A6%82%E4%BD%95%E5%8F%91%E5%B8%83%E8%B5%84%E6%BA%90%E9%93%BE%E6%8E%A5/release4.png" alt="release4"></p><hr><p>欢迎关注微信公众号：【乐知付加密平台】<br><img src="/images/wechat_account.png" alt="乐知付加密平台"></p><p>一起学习，一起进步。<br></p>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;最近新做的网站，专为知识付费服务的个人平台，这篇说下如何在各大自媒体平台发布资源链接？&lt;/p&gt;
+&lt;p&gt;官网链接：&lt;a href=&quot;http://lezhifu.cc/&quot;&gt;http://lezhifu.cc/&lt;/a&gt;&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="网站" scheme="https://chenzuoli.github.io/categories/%E7%BD%91%E7%AB%99/"/>
+    
+    <category term="乐知付" scheme="https://chenzuoli.github.io/categories/%E7%BD%91%E7%AB%99/%E4%B9%90%E7%9F%A5%E4%BB%98/"/>
+    
+    <category term="资源发布" scheme="https://chenzuoli.github.io/categories/%E7%BD%91%E7%AB%99/%E4%B9%90%E7%9F%A5%E4%BB%98/%E8%B5%84%E6%BA%90%E5%8F%91%E5%B8%83/"/>
+    
+    
+    <category term="乐知付" scheme="https://chenzuoli.github.io/tags/%E4%B9%90%E7%9F%A5%E4%BB%98/"/>
+    
+    <category term="资源发布" scheme="https://chenzuoli.github.io/tags/%E8%B5%84%E6%BA%90%E5%8F%91%E5%B8%83/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>乐知付-如何使用个人收款码收款</title>
+    <link href="https://chenzuoli.github.io/2024/03/10/%E4%B9%90%E7%9F%A5%E4%BB%98-%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8%E4%B8%AA%E4%BA%BA%E6%94%B6%E6%AC%BE%E7%A0%81%E6%94%B6%E6%AC%BE/"/>
+    <id>https://chenzuoli.github.io/2024/03/10/%E4%B9%90%E7%9F%A5%E4%BB%98-%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8%E4%B8%AA%E4%BA%BA%E6%94%B6%E6%AC%BE%E7%A0%81%E6%94%B6%E6%AC%BE/</id>
+    <published>2024-03-10T01:48:05.000Z</published>
+    <updated>2024-04-14T03:17:16.302Z</updated>
+    
+    <content type="html"><![CDATA[<p>最近新做的网站，专为知识付费服务的个人平台，这篇说下如何使用个人收款码收款？</p><p>官网链接：<a href="http://lezhifu.cc/">http://lezhifu.cc/</a></p><span id="more"></span><p>这里列一下基本操作流程：</p><h1 id="如何使用个人收款码收款？"><a href="#如何使用个人收款码收款？" class="headerlink" title="如何使用个人收款码收款？"></a>如何使用个人收款码收款？</h1><p>地址链接：<a href="http://lezhifu.cc/admin/qrcode_list">http://lezhifu.cc/admin/qrcode_list</a></p><h2 id="个人收款码收款"><a href="#个人收款码收款" class="headerlink" title="个人收款码收款:"></a>个人收款码收款:</h2><p>乐知付加密平台仅用个人的支付宝收款码进行收款（注意：收款码设置金额与页面付费金额金额填写保持一致）。</p><h2 id="操作步骤一"><a href="#操作步骤一" class="headerlink" title="操作步骤一:"></a>操作步骤一:</h2><p>注册登录后，进入管理后台，依次点击【支付管理】<del>【个人收款码收款】</del>【+ 个人收款码收款】；</p><p>参考如下截图：</p><p><img src="/2024/03/10/%E4%B9%90%E7%9F%A5%E4%BB%98-%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8%E4%B8%AA%E4%BA%BA%E6%94%B6%E6%AC%BE%E7%A0%81%E6%94%B6%E6%AC%BE/image.png" alt="个人收款码收款1"></p><h2 id="操作步骤二"><a href="#操作步骤二" class="headerlink" title="操作步骤二:"></a>操作步骤二:</h2><p>新增付费内容中，依次填写 【标题】<del>【密码】</del>【金额】~ 【上传支付宝个人收款码】，并保存！</p><p>即可获得，收款链接和收款二维码，买家通过 这种收款方式付款后，付款金额直达卖家支付宝账户；同时，解密密码显示给买家。</p><p>参考如下截图:<br><img src="/2024/03/10/%E4%B9%90%E7%9F%A5%E4%BB%98-%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8%E4%B8%AA%E4%BA%BA%E6%94%B6%E6%AC%BE%E7%A0%81%E6%94%B6%E6%AC%BE/image-1.png" alt="新增付费内容"><br><img src="/2024/03/10/%E4%B9%90%E7%9F%A5%E4%BB%98-%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8%E4%B8%AA%E4%BA%BA%E6%94%B6%E6%AC%BE%E7%A0%81%E6%94%B6%E6%AC%BE/image-2.png" alt="展示"></p><h2 id="操作步骤三"><a href="#操作步骤三" class="headerlink" title="操作步骤三 :"></a>操作步骤三 :</h2><p>将《操作步骤二》得到的链接，放入网盘（存储资源的地方）中的txt文档，提供给 (买家支付，获取压缩包密码 ; 同时，卖家支付宝会收到款）</p><p>参考如下截图:<br><img src="/2024/03/10/%E4%B9%90%E7%9F%A5%E4%BB%98-%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8%E4%B8%AA%E4%BA%BA%E6%94%B6%E6%AC%BE%E7%A0%81%E6%94%B6%E6%AC%BE/image-3.png" alt="资源加密打包"><br>另外附上 ， 资源添加为压缩包 并 为其 设置密码 说明 ！（下图使用压缩工具：WinRAR 压缩文件）</p><p><img src="/2024/03/10/%E4%B9%90%E7%9F%A5%E4%BB%98-%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8%E4%B8%AA%E4%BA%BA%E6%94%B6%E6%AC%BE%E7%A0%81%E6%94%B6%E6%AC%BE/image-4.png" alt="alt text"></p><h2 id="拟定收费标准，如下"><a href="#拟定收费标准，如下" class="headerlink" title="拟定收费标准，如下:"></a>拟定收费标准，如下:</h2><p>1、第一阶梯：0.1元&lt;&#x3D;设置金额&lt;&#x3D;15元 ，固定收取服务费0.15元；</p><p>2、第二阶梯：15元&lt;&#x3D;设置金额&lt;&#x3D;300元 , 按设置金额比例1%收费；</p><h2 id="注意事项："><a href="#注意事项：" class="headerlink" title="注意事项："></a>注意事项：</h2><p>设置金额最低0.1元，最高300元；服务费最低0.15元，最高3元。</p><p>使用支付宝个人收款码收费，必须设置好固定金额且内容清晰。</p><p>下一篇介绍如何发布资源链接。</p><hr><p>欢迎关注微信公众号：【乐知付加密平台】<br><img src="/images/wechat_account.png" alt="乐知付加密平台"></p><p>一起学习，一起进步。<br></p>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;最近新做的网站，专为知识付费服务的个人平台，这篇说下如何使用个人收款码收款？&lt;/p&gt;
+&lt;p&gt;官网链接：&lt;a href=&quot;http://lezhifu.cc/&quot;&gt;http://lezhifu.cc/&lt;/a&gt;&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="网站" scheme="https://chenzuoli.github.io/categories/%E7%BD%91%E7%AB%99/"/>
+    
+    <category term="乐知付" scheme="https://chenzuoli.github.io/categories/%E7%BD%91%E7%AB%99/%E4%B9%90%E7%9F%A5%E4%BB%98/"/>
+    
+    <category term="个人收款码收款" scheme="https://chenzuoli.github.io/categories/%E7%BD%91%E7%AB%99/%E4%B9%90%E7%9F%A5%E4%BB%98/%E4%B8%AA%E4%BA%BA%E6%94%B6%E6%AC%BE%E7%A0%81%E6%94%B6%E6%AC%BE/"/>
+    
+    
+    <category term="乐知付" scheme="https://chenzuoli.github.io/tags/%E4%B9%90%E7%9F%A5%E4%BB%98/"/>
+    
+    <category term="收款" scheme="https://chenzuoli.github.io/tags/%E6%94%B6%E6%AC%BE/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>最近做了个新的网站</title>
+    <link href="https://chenzuoli.github.io/2024/03/10/%E6%9C%80%E8%BF%91%E5%81%9A%E4%BA%86%E4%B8%AA%E6%96%B0%E7%9A%84%E7%BD%91%E7%AB%99/"/>
+    <id>https://chenzuoli.github.io/2024/03/10/%E6%9C%80%E8%BF%91%E5%81%9A%E4%BA%86%E4%B8%AA%E6%96%B0%E7%9A%84%E7%BD%91%E7%AB%99/</id>
+    <published>2024-03-10T01:22:02.000Z</published>
+    <updated>2024-04-14T03:18:43.845Z</updated>
+    
+    <content type="html"><![CDATA[<p>最近做了个新的网站，乐知付加密平台，一个专为知识付费服务的加密平台。<br>官网链接：<a href="http://lezhifu.cc/">http://lezhifu.cc/</a></p><span id="more"></span><p>简单描述一下网站的主要业务，就是将你手里的资源加密打包后上传到网盘（百度网盘、夸克网盘等），然后将密码录入平台，平台会生成一个二维码链接，用户通过支付宝扫码支付后，会展示此密码，获取到资源包的解压密码，完成资源分享、知识付费。</p><p>欢迎大家体验，首次注册，平台会赠送0.5元体验金，方便用户发布内容使用。</p><hr><p>欢迎关注微信公众号：【乐知付加密平台】<br><img src="/images/wechat_account.png" alt="乐知付加密平台"></p><p>一起学习，一起进步。<br></p>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;最近做了个新的网站，乐知付加密平台，一个专为知识付费服务的加密平台。&lt;br&gt;官网链接：&lt;a href=&quot;http://lezhifu.cc/&quot;&gt;http://lezhifu.cc/&lt;/a&gt;&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="网站" scheme="https://chenzuoli.github.io/categories/%E7%BD%91%E7%AB%99/"/>
+    
+    <category term="乐知付" scheme="https://chenzuoli.github.io/categories/%E7%BD%91%E7%AB%99/%E4%B9%90%E7%9F%A5%E4%BB%98/"/>
+    
+    
+    <category term="乐知付" scheme="https://chenzuoli.github.io/tags/%E4%B9%90%E7%9F%A5%E4%BB%98/"/>
+    
+    <category term="网站" scheme="https://chenzuoli.github.io/tags/%E7%BD%91%E7%AB%99/"/>
+    
+  </entry>
+  
+</feed>
