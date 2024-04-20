@@ -16262,10 +16262,16 @@ API
 <li><p>安装image magick<br>下载tar安装包：<a href="http://www.imagemagick.org/script/index.php">http://www.imagemagick.org/script/index.php</a></p>
 </li>
 </ol>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">tar zxvf ImageMagick-x86_64-apple-darwin20.1.0.tar.gz</span><br><span class="line">cd ImageMagick-7.0.10</span><br><span class="line">export MAGICK_HOME=/Users/zuolichen/opt/software/ImageMagick-7.0.10</span><br><span class="line">export DYLD_LIBRARY_PATH=/opt/X11/lib</span><br><span class="line">export PATH=&quot;$MAGICK_HOME/bin:$PATH&quot;</span><br><span class="line">export DYLD_LIBRARY_PATH=$DYLD_LIBRARY_PATH:&quot;$MAGICK_HOME/lib/&quot;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">tar zxvf ImageMagick-x86_64-apple-darwin20.1.0.tar.gz</span><br><span class="line">cd ImageMagick-7.0.10</span><br><span class="line">vim ~/.zprofile</span><br><span class="line">export MAGICK_HOME=/Users/zuolichen/opt/software/ImageMagick-7.0.10</span><br><span class="line">export DYLD_LIBRARY_PATH=/opt/X11/lib</span><br><span class="line">export PATH=&quot;$MAGICK_HOME/bin:$PATH&quot;</span><br><span class="line">export DYLD_LIBRARY_PATH=$DYLD_LIBRARY_PATH:&quot;$MAGICK_HOME/lib/&quot;</span><br><span class="line"></span><br><span class="line"># 环境变量生效</span><br><span class="line">source ~/.zprofile</span><br></pre></td></tr></table></figure>
 
 <p>查看是否安装成功：</p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">magick --version</span><br></pre></td></tr></table></figure>
+
+<ol start="3">
+<li>安装ffmpeg：<br>地址：<a href="https://ffmpeg.org/download.html">https://ffmpeg.org/download.html</a><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">tar zxvf ffmpeg-7.0.tar.gz</span><br><span class="line">cd ffmpeg-7.0</span><br><span class="line">./configure --disable-x86asm</span><br><span class="line">make &amp;&amp; make install</span><br></pre></td></tr></table></figure></li>
+</ol>
+<p>环境变量：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">export IMAGEIO_FFMPEG_EXE=/Users/zuolichen/opt/software/ffmpeg-7.0</span><br><span class="line">vim ~/.zprofile</span><br><span class="line">export PATH=/Users/zuolichen/opt/software/ffmpeg-7.0/bin:$PATH</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
 <h1 id="编辑图片"><a href="#编辑图片" class="headerlink" title="编辑图片"></a>编辑图片</h1><ol>
 <li><p>转换格式</p>
@@ -16348,6 +16354,28 @@ API
         <tag>magick</tag>
         <tag>图片</tag>
         <tag>工具</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>macos的homebrew更换国内清华源</title>
+    <url>/2024/04/21/macos%E7%9A%84homebrew%E6%9B%B4%E6%8D%A2%E5%9B%BD%E5%86%85%E6%B8%85%E5%8D%8E%E6%BA%90/</url>
+    <content><![CDATA[<p>更新下这部分环境变量就行。</p>
+<span id="more"></span>
+
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">export HOMEBREW_API_DOMAIN=&quot;https://mirrors.tuna.tsinghua.edu.cn/homebrew-bottles/api&quot;</span><br><span class="line">export HOMEBREW_BOTTLE_DOMAIN=&quot;https://mirrors.tuna.tsinghua.edu.cn/homebrew-bottles&quot;</span><br><span class="line">export HOMEBREW_BREW_GIT_REMOTE=&quot;https://mirrors.tuna.tsinghua.edu.cn/git/homebrew/brew.git&quot;</span><br><span class="line">export HOMEBREW_CORE_GIT_REMOTE=&quot;https://mirrors.tuna.tsinghua.edu.cn/git/homebrew/homebrew-core.git&quot;</span><br><span class="line">export HOMEBREW_PIP_INDEX_URL=&quot;https://pypi.tuna.tsinghua.edu.cn/simple&quot;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+<hr>
+<p>欢迎关注微信公众号，您的资源可变现：【乐知付加密平台】<br><br><br><img src="/images/wechat_account.png" alt="乐知付加密平台"></p>
+<p>一起学习，一起进步。<br></p>
+]]></content>
+      <categories>
+        <category>其他</category>
+        <category>电脑</category>
+        <category>mac</category>
+      </categories>
+      <tags>
+        <tag>mac</tag>
       </tags>
   </entry>
 </search>
