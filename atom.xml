@@ -6,7 +6,7 @@
   <link href="https://chenzuoli.github.io/atom.xml" rel="self"/>
   
   <link href="https://chenzuoli.github.io/"/>
-  <updated>2024-04-20T16:16:22.349Z</updated>
+  <updated>2024-04-21T01:46:28.812Z</updated>
   <id>https://chenzuoli.github.io/</id>
   
   <author>
@@ -15,6 +15,35 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>自动解决github加载慢的问题</title>
+    <link href="https://chenzuoli.github.io/2024/04/21/%E8%87%AA%E5%8A%A8%E8%A7%A3%E5%86%B3github%E5%8A%A0%E8%BD%BD%E6%85%A2%E7%9A%84%E9%97%AE%E9%A2%98/"/>
+    <id>https://chenzuoli.github.io/2024/04/21/%E8%87%AA%E5%8A%A8%E8%A7%A3%E5%86%B3github%E5%8A%A0%E8%BD%BD%E6%85%A2%E7%9A%84%E9%97%AE%E9%A2%98/</id>
+    <published>2024-04-21T01:45:11.000Z</published>
+    <updated>2024-04-21T01:46:28.812Z</updated>
+    
+    <content type="html"><![CDATA[<p>适用于linux和类unix操作系统（macos）等。</p><p>sed -i “” “&#x2F;# GitHub520 Host Start&#x2F;,&#x2F;# Github520 Host End&#x2F;d” &#x2F;etc&#x2F;hosts &amp;&amp; curl <a href="https://raw.hellogithub.com/hosts">https://raw.hellogithub.com/hosts</a> | sudo tee -a &#x2F;etc&#x2F;hosts</p><hr><p>欢迎关注微信公众号，您的资源可变现：【乐知付加密平台】<br><br><br><img src="/images/wechat_account.png" alt="乐知付加密平台"></p><p>一起学习，一起进步。<br></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;适用于linux和类unix操作系统（macos）等。&lt;/p&gt;
+&lt;p&gt;sed -i “” “&amp;#x2F;# GitHub520 Host Start&amp;#x2F;,&amp;#x2F;# Github520 Host End&amp;#x2F;d” &amp;#x2F;etc&amp;#x2F;hosts </summary>
+      
+    
+    
+    
+    <category term="其他" scheme="https://chenzuoli.github.io/categories/%E5%85%B6%E4%BB%96/"/>
+    
+    <category term="Github" scheme="https://chenzuoli.github.io/categories/%E5%85%B6%E4%BB%96/Github/"/>
+    
+    
+    <category term="macos" scheme="https://chenzuoli.github.io/tags/macos/"/>
+    
+    <category term="github" scheme="https://chenzuoli.github.io/tags/github/"/>
+    
+  </entry>
   
   <entry>
     <title>macos的homebrew更换国内清华源</title>
@@ -511,34 +540,6 @@
     <category term="乐知付" scheme="https://chenzuoli.github.io/tags/%E4%B9%90%E7%9F%A5%E4%BB%98/"/>
     
     <category term="充值" scheme="https://chenzuoli.github.io/tags/%E5%85%85%E5%80%BC/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>乐知付-如何发布资源链接</title>
-    <link href="https://chenzuoli.github.io/2024/03/10/%E4%B9%90%E7%9F%A5%E4%BB%98-%E5%A6%82%E4%BD%95%E5%8F%91%E5%B8%83%E8%B5%84%E6%BA%90%E9%93%BE%E6%8E%A5/"/>
-    <id>https://chenzuoli.github.io/2024/03/10/%E4%B9%90%E7%9F%A5%E4%BB%98-%E5%A6%82%E4%BD%95%E5%8F%91%E5%B8%83%E8%B5%84%E6%BA%90%E9%93%BE%E6%8E%A5/</id>
-    <published>2024-03-10T02:20:19.000Z</published>
-    <updated>2024-04-14T03:19:13.592Z</updated>
-    
-    <content type="html"><![CDATA[<p>最近新做的网站，专为知识付费服务的个人平台，这篇说下如何在各大自媒体平台发布资源链接？</p><p>官网链接：<a href="http://lezhifu.cc/">http://lezhifu.cc/</a></p><span id="more"></span><p>这里列一下基本操作流程：</p><p>链接：<a href="http://lezhifu.cc/admin/qrcode_list">http://lezhifu.cc/admin/qrcode_list</a></p><h2 id="操作步骤一"><a href="#操作步骤一" class="headerlink" title="操作步骤一 :"></a>操作步骤一 :</h2><p>（1）电脑本地桌面 新建一个文件夹；命名： 自定义</p><p>（2）将付费资源（音视频类，软件类，文件资料等）放入文件夹中 ； 命名： 自定义</p><p>如下截图：举例用txt文档作为 知识资源。<br><img src="/2024/03/10/%E4%B9%90%E7%9F%A5%E4%BB%98-%E5%A6%82%E4%BD%95%E5%8F%91%E5%B8%83%E8%B5%84%E6%BA%90%E9%93%BE%E6%8E%A5/release1.png" alt="release1"></p><h2 id="操作步骤二"><a href="#操作步骤二" class="headerlink" title="操作步骤二 :"></a>操作步骤二 :</h2><p>（1）将付费资源文件夹，添加到压缩包，并设置密码，点击确定！<br><img src="/2024/03/10/%E4%B9%90%E7%9F%A5%E4%BB%98-%E5%A6%82%E4%BD%95%E5%8F%91%E5%B8%83%E8%B5%84%E6%BA%90%E9%93%BE%E6%8E%A5/release2.png" alt="release2"></p><h2 id="操作步骤三"><a href="#操作步骤三" class="headerlink" title="操作步骤三 :"></a>操作步骤三 :</h2><p>（1）网盘中新建可分享的文件夹，并将已经加密的压缩包，上传至该该文件夹中！ 命名： 自定义</p><p>（2） 新建一个文件夹（命名：资源预览说明），并在该文件夹中放入3个文件；</p><pre><code> a.压缩包中的资源 截图信息（方便买家了解所购买的资源，真实存在）；图片格式 b.商家的联系方式：扣扣、vx 等联系方式！ （方便买家遇到问题联系卖家）；文本文档： c. 压缩包解密密码：将平台个人收款码链接，放入txt文档中，提供给 (买家支付，获取压缩包密码 ; 同时，卖家支付宝会收到款）；文本文档格式</code></pre><p><img src="/2024/03/10/%E4%B9%90%E7%9F%A5%E4%BB%98-%E5%A6%82%E4%BD%95%E5%8F%91%E5%B8%83%E8%B5%84%E6%BA%90%E9%93%BE%E6%8E%A5/release3.png" alt="release3"></p><h2 id="操作步骤四"><a href="#操作步骤四" class="headerlink" title="操作步骤四 :"></a>操作步骤四 :</h2><p>分享网盘中最外层的文件夹链接信息，到各大自媒体平台，并发布；</p><p><img src="/2024/03/10/%E4%B9%90%E7%9F%A5%E4%BB%98-%E5%A6%82%E4%BD%95%E5%8F%91%E5%B8%83%E8%B5%84%E6%BA%90%E9%93%BE%E6%8E%A5/release4.png" alt="release4"></p><hr><p>欢迎关注微信公众号：【乐知付加密平台】<br><img src="/images/wechat_account.png" alt="乐知付加密平台"></p><p>一起学习，一起进步。<br></p>]]></content>
-    
-    
-    <summary type="html">&lt;p&gt;最近新做的网站，专为知识付费服务的个人平台，这篇说下如何在各大自媒体平台发布资源链接？&lt;/p&gt;
-&lt;p&gt;官网链接：&lt;a href=&quot;http://lezhifu.cc/&quot;&gt;http://lezhifu.cc/&lt;/a&gt;&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="网站" scheme="https://chenzuoli.github.io/categories/%E7%BD%91%E7%AB%99/"/>
-    
-    <category term="乐知付" scheme="https://chenzuoli.github.io/categories/%E7%BD%91%E7%AB%99/%E4%B9%90%E7%9F%A5%E4%BB%98/"/>
-    
-    <category term="资源发布" scheme="https://chenzuoli.github.io/categories/%E7%BD%91%E7%AB%99/%E4%B9%90%E7%9F%A5%E4%BB%98/%E8%B5%84%E6%BA%90%E5%8F%91%E5%B8%83/"/>
-    
-    
-    <category term="乐知付" scheme="https://chenzuoli.github.io/tags/%E4%B9%90%E7%9F%A5%E4%BB%98/"/>
-    
-    <category term="资源发布" scheme="https://chenzuoli.github.io/tags/%E8%B5%84%E6%BA%90%E5%8F%91%E5%B8%83/"/>
     
   </entry>
   

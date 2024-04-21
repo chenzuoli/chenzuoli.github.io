@@ -11000,7 +11000,8 @@ API
 <p>一起学习，一起进步。<br></p>
 ]]></content>
       <categories>
-        <category>github</category>
+        <category>其他</category>
+        <category>Github</category>
       </categories>
       <tags>
         <tag>github</tag>
@@ -16376,6 +16377,24 @@ API
       </categories>
       <tags>
         <tag>mac</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>自动解决github加载慢的问题</title>
+    <url>/2024/04/21/%E8%87%AA%E5%8A%A8%E8%A7%A3%E5%86%B3github%E5%8A%A0%E8%BD%BD%E6%85%A2%E7%9A%84%E9%97%AE%E9%A2%98/</url>
+    <content><![CDATA[<p>适用于linux和类unix操作系统（macos）等。</p>
+<p>sed -i “” “&#x2F;# GitHub520 Host Start&#x2F;,&#x2F;# Github520 Host End&#x2F;d” &#x2F;etc&#x2F;hosts &amp;&amp; curl <a href="https://raw.hellogithub.com/hosts">https://raw.hellogithub.com/hosts</a> | sudo tee -a &#x2F;etc&#x2F;hosts</p>
+<hr>
+<p>欢迎关注微信公众号，您的资源可变现：【乐知付加密平台】<br><br><br><img src="/images/wechat_account.png" alt="乐知付加密平台"></p>
+<p>一起学习，一起进步。<br></p>
+]]></content>
+      <categories>
+        <category>其他</category>
+        <category>Github</category>
+      </categories>
+      <tags>
+        <tag>macos</tag>
+        <tag>github</tag>
       </tags>
   </entry>
 </search>
