@@ -6,7 +6,7 @@
   <link href="https://chenzuoli.github.io/atom.xml" rel="self"/>
   
   <link href="https://chenzuoli.github.io/"/>
-  <updated>2024-04-21T01:46:28.812Z</updated>
+  <updated>2024-04-21T01:49:31.030Z</updated>
   <id>https://chenzuoli.github.io/</id>
   
   <author>
@@ -21,16 +21,12 @@
     <link href="https://chenzuoli.github.io/2024/04/21/%E8%87%AA%E5%8A%A8%E8%A7%A3%E5%86%B3github%E5%8A%A0%E8%BD%BD%E6%85%A2%E7%9A%84%E9%97%AE%E9%A2%98/"/>
     <id>https://chenzuoli.github.io/2024/04/21/%E8%87%AA%E5%8A%A8%E8%A7%A3%E5%86%B3github%E5%8A%A0%E8%BD%BD%E6%85%A2%E7%9A%84%E9%97%AE%E9%A2%98/</id>
     <published>2024-04-21T01:45:11.000Z</published>
-    <updated>2024-04-21T01:46:28.812Z</updated>
+    <updated>2024-04-21T01:49:31.030Z</updated>
     
-    <content type="html"><![CDATA[<p>适用于linux和类unix操作系统（macos）等。</p><p>sed -i “” “&#x2F;# GitHub520 Host Start&#x2F;,&#x2F;# Github520 Host End&#x2F;d” &#x2F;etc&#x2F;hosts &amp;&amp; curl <a href="https://raw.hellogithub.com/hosts">https://raw.hellogithub.com/hosts</a> | sudo tee -a &#x2F;etc&#x2F;hosts</p><hr><p>欢迎关注微信公众号，您的资源可变现：【乐知付加密平台】<br><br><br><img src="/images/wechat_account.png" alt="乐知付加密平台"></p><p>一起学习，一起进步。<br></p>]]></content>
+    <content type="html"><![CDATA[<p>适用于linux和类unix操作系统（macos）等。</p><span id="more"></span><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sed -i &quot;&quot; &quot;/# GitHub520 Host Start/,/# Github520 Host End/d&quot; /etc/hosts &amp;&amp; curl https://raw.hellogithub.com/hosts | sudo tee -a /etc/hosts</span><br></pre></td></tr></table></figure><p>大部分情况下是直接生效，如未生效可尝试下面的办法，刷新 DNS：</p><p>Windows：在 CMD 窗口输入：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ipconfig /flushdns</span><br></pre></td></tr></table></figure><p>Linux 命令：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo nscd restart</span><br></pre></td></tr></table></figure><p>如报错则须安装：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt install nscd 或 sudo /etc/init.d/nscd restart</span><br></pre></td></tr></table></figure><p>Mac 命令：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo killall -HUP mDNSResponder</span><br></pre></td></tr></table></figure><p>ok. </p><hr><p>欢迎关注微信公众号，您的资源可变现：【乐知付加密平台】<br><br><br><img src="/images/wechat_account.png" alt="乐知付加密平台"></p><p>一起学习，一起进步。<br></p>]]></content>
     
     
-      
-      
-    <summary type="html">&lt;p&gt;适用于linux和类unix操作系统（macos）等。&lt;/p&gt;
-&lt;p&gt;sed -i “” “&amp;#x2F;# GitHub520 Host Start&amp;#x2F;,&amp;#x2F;# Github520 Host End&amp;#x2F;d” &amp;#x2F;etc&amp;#x2F;hosts </summary>
-      
+    <summary type="html">&lt;p&gt;适用于linux和类unix操作系统（macos）等。&lt;/p&gt;</summary>
     
     
     

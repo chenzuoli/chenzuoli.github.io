@@ -10970,29 +10970,96 @@ API
     <content><![CDATA[<p>基本简单搭建即可使用的github开源项目，中小公司可以用上了。</p>
 <span id="more"></span>
 
+<p><img src="/2023/01/01/%E5%8F%AF%E7%94%A8%E7%9A%84github%E5%BC%80%E6%BA%90%E9%A1%B9%E7%9B%AE/image.png" alt="1"></p>
+<p>这些开源项目覆盖了从问答社区、元数据管理、IT资产管理、论坛、微信小程序、电子商务商城、ERP&#x2F;CRM系统到内容管理系统等多个领域。</p>
+<p>基本简单搭建即可使用的github开源项目，中小公司可以用上了。<br>以下是对每个项目的简单介绍：</p>
 <ol>
-<li><p>问答社区：<br><a href="https://github.com/answerdev/answer.git">https://github.com/answerdev/answer.git</a><br><img src="/2023/01/01/%E5%8F%AF%E7%94%A8%E7%9A%84github%E5%BC%80%E6%BA%90%E9%A1%B9%E7%9B%AE/answer.png" alt="answer"></p>
-</li>
-<li><p>元数据管理：<br><a href="https://github.com/datahub-project/datahub">https://github.com/datahub-project/datahub</a></p>
-</li>
-<li><p>IT资产管理系统<br><a href="https://github.com/snipe/snipe-it">https://github.com/snipe/snipe-it</a><br>文档：<a href="https://snipe-it.readme.io/docs/overview">https://snipe-it.readme.io/docs/overview</a><br><img src="/2023/01/01/%E5%8F%AF%E7%94%A8%E7%9A%84github%E5%BC%80%E6%BA%90%E9%A1%B9%E7%9B%AE/snipe.webp" alt="snipe"></p>
-</li>
-<li><p>bbs论坛<br><a href="https://github.com/ego008/goyoubbs.git">https://github.com/ego008/goyoubbs.git</a><br>示例：<a href="https://youbbs.org/">https://youbbs.org/</a></p>
-</li>
-<li><p>社区论坛<br><a href="https://github.com/ruby-china/homeland">https://github.com/ruby-china/homeland</a><br>示例：<a href="https://ruby-china.org/">https://ruby-china.org/</a></p>
-</li>
-<li><p>社区微信小程序<br><a href="https://github.com/kawaapp/wsq-xiaochengxu">https://github.com/kawaapp/wsq-xiaochengxu</a></p>
-</li>
-<li><p>web商城<br><a href="https://github.com/saleor/saleor">https://github.com/saleor/saleor</a><br><a href="https://github.com/solidusio/solidus">https://github.com/solidusio/solidus</a><br><a href="https://github.com/spree/spree">https://github.com/spree/spree</a></p>
-</li>
-<li><p>erp crm<br><a href="https://github.com/Dolibarr/dolibarr.git">https://github.com/Dolibarr/dolibarr.git</a><br><img src="/2023/01/01/%E5%8F%AF%E7%94%A8%E7%9A%84github%E5%BC%80%E6%BA%90%E9%A1%B9%E7%9B%AE/dolibarr.png" alt="dolibarr"></p>
-</li>
-<li><p>erp<br><a href="https://github.com/frappe/erpnext">https://github.com/frappe/erpnext</a></p>
-</li>
-<li><p>cms<br><a href="https://github.com/strapi/strapi">https://github.com/strapi/strapi</a><br>强大的内容管理系统，api是它的强项。</p>
-</li>
+<li><strong>问答社区 Apache Answer</strong></li>
 </ol>
-<p><a href="https://github.com/django-cms/django-cms.git">https://github.com/django-cms/django-cms.git</a><br>多用于构建企业官网。</p>
+<ul>
+<li>网址: <a href="https://github.com/answerdev/answer.git">Apache Answer</a></li>
+<li>描述：Apache Answer 是一个适用于任何规模团队的问答平台软件。它可以作为一个社区论坛、帮助中心或知识管理平台。它提供了插件系统供开发者创建自定义插件，以扩展平台的功能。</li>
+</ul>
+<p><img src="/2023/01/01/%E5%8F%AF%E7%94%A8%E7%9A%84github%E5%BC%80%E6%BA%90%E9%A1%B9%E7%9B%AE/answer.png" alt="2"></p>
+<ol start="2">
+<li><strong>元数据管理 DataHub</strong></li>
+</ol>
+<ul>
+<li>网址: <a href="https://github.com/datahub-project/datahub">DataHub</a></li>
+<li>描述：DataHub 是一个现代数据栈的开源元数据平台。它由 Acryl Data 和 LinkedIn 构建，旨在管理和索引数据，支持快速的数据发现和理解。</li>
+</ul>
+<p><img src="/2023/01/01/%E5%8F%AF%E7%94%A8%E7%9A%84github%E5%BC%80%E6%BA%90%E9%A1%B9%E7%9B%AE/image-2.png" alt="3"></p>
+<ol start="3">
+<li><strong>IT资产管理系统 Snipe-IT</strong></li>
+</ol>
+<ul>
+<li>网址: <a href="https://github.com/snipe/snipe-it">Snipe-IT</a></li>
+<li>文档: <a href="https://snipe-it.readme.io/docs/overview">Snipe-IT Documentation</a></li>
+<li>描述：Snipe-IT 是一个开源的IT资产管理和许可证管理系统，用于追踪IT设备和软件许可证。</li>
+</ul>
+<p><img src="/2023/01/01/%E5%8F%AF%E7%94%A8%E7%9A%84github%E5%BC%80%E6%BA%90%E9%A1%B9%E7%9B%AE/image-3.png" alt="4"></p>
+<ol start="4">
+<li><strong>BBS论坛 Goyoubbs</strong></li>
+</ol>
+<ul>
+<li>网址: <a href="https://github.com/ego008/goyoubbs.git">Goyoubbs</a></li>
+<li>示例: <a href="https://youbbs.org/">Goyoubbs Demo</a></li>
+<li>描述：Goyoubbs 是一个用Golang、fasthttp和leveldb构建的开源网络论坛。</li>
+</ul>
+<p><img src="/2023/01/01/%E5%8F%AF%E7%94%A8%E7%9A%84github%E5%BC%80%E6%BA%90%E9%A1%B9%E7%9B%AE/image-4.png" alt="5"></p>
+<ol start="5">
+<li><strong>社区论坛 Ruby China Homeland</strong></li>
+</ol>
+<ul>
+<li>网址: <a href="https://github.com/ruby-china/homeland">Homeland</a></li>
+<li>示例: <a href="https://ruby-china.org/">Ruby China</a></li>
+<li>描述：Homeland 是一个基于Rails的开源论坛&#x2F;社区系统，由Ruby China开发。</li>
+</ul>
+<p><img src="/2023/01/01/%E5%8F%AF%E7%94%A8%E7%9A%84github%E5%BC%80%E6%BA%90%E9%A1%B9%E7%9B%AE/image-5.png" alt="6"></p>
+<ol start="6">
+<li><strong>社区微信小程序 Kawaapp Wsq-Xiaochengxu</strong></li>
+</ol>
+<ul>
+<li>网址: <a href="https://github.com/kawaapp/wsq-xiaochengxu">Wsq-Xiaochengxu</a></li>
+<li>描述：这是一个提供完整社区功能的微信小程序，由卡哇微社区提供，可以帮助用户快速在微信内搭建自己的小程序社区。</li>
+</ul>
+<ol start="7">
+<li><strong>Web商城 Saleor</strong></li>
+</ol>
+<ul>
+<li>网址: <a href="https://github.com/saleor/saleor">Saleor</a></li>
+<li>描述：Saleor 是一个高性能、可组合的无头商务API，使用GraphQL构建，适用于构建可扩展的电子商务平台。</li>
+</ul>
+<ol start="8">
+<li><strong>ERP CRM Dolibarr</strong></li>
+</ol>
+<ul>
+<li>网址: <a href="https://github.com/Dolibarr/dolibarr.git">Dolibarr</a></li>
+<li>描述：Dolibarr 是一个开源ERP-CRM系统，适用于小型到中型企业，提供多种管理功能，包括财务管理、产品管理、项目管理等。</li>
+</ul>
+<ol start="9">
+<li><strong>ERP Frappe ERPNext</strong></li>
+</ol>
+<ul>
+<li>网址: <a href="https://github.com/frappe/erpnext">ERPNext</a></li>
+<li>描述：ERPNext 是一个开源的ERP系统，由Frappe Technologies开发，提供企业资源规划、客户关系管理、库存管理等功能。</li>
+</ul>
+<ol start="10">
+<li><strong>内容管理系统 Strapi</strong></li>
+</ol>
+<ul>
+<li>网址: <a href="https://github.com/strapi/strapi">Strapi</a></li>
+<li>描述：Strapi 是一个强大的开源内容管理系统，它以API为特色，允许开发者轻松构建可定制的后台管理系统。</li>
+</ul>
+<ol start="11">
+<li><strong>内容管理系统 Django CMS</strong></li>
+</ol>
+<ul>
+<li>网址: <a href="https://github.com/django-cms/django-cms.git">Django CMS</a></li>
+<li>描述：Django CMS 是一个开源的内容管理系统，基于Python的Django框架构建，适合用来构建企业官网和复杂的网站。</li>
+</ul>
+<p>这些项目都是开源的，意味着你可以自由使用、修改和分发它们，但是也要遵守各自的许可证。每个项目都有其特定的用途和优势，可以根据你的需求进行选择和使用。</p>
+<p>​</p>
 <hr>
 <p><b>书山有路勤为径，学海无涯苦作舟。</b></p>
 <p>欢迎关注微信公众号：【程序员写书】<br><img src="/images/%E7%A8%8B%E5%BA%8F%E5%91%98%E5%86%99%E4%B9%A6%E5%85%AC%E4%BC%97%E5%8F%B7%E4%BA%8C%E7%BB%B4%E7%A0%81.jpg" alt="程序员写书"></p>
@@ -16383,7 +16450,21 @@ API
     <title>自动解决github加载慢的问题</title>
     <url>/2024/04/21/%E8%87%AA%E5%8A%A8%E8%A7%A3%E5%86%B3github%E5%8A%A0%E8%BD%BD%E6%85%A2%E7%9A%84%E9%97%AE%E9%A2%98/</url>
     <content><![CDATA[<p>适用于linux和类unix操作系统（macos）等。</p>
-<p>sed -i “” “&#x2F;# GitHub520 Host Start&#x2F;,&#x2F;# Github520 Host End&#x2F;d” &#x2F;etc&#x2F;hosts &amp;&amp; curl <a href="https://raw.hellogithub.com/hosts">https://raw.hellogithub.com/hosts</a> | sudo tee -a &#x2F;etc&#x2F;hosts</p>
+<span id="more"></span>
+
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">sed -i &quot;&quot; &quot;/# GitHub520 Host Start/,/# Github520 Host End/d&quot; /etc/hosts &amp;&amp; curl https://raw.hellogithub.com/hosts | sudo tee -a /etc/hosts</span><br></pre></td></tr></table></figure>
+
+<p>大部分情况下是直接生效，如未生效可尝试下面的办法，刷新 DNS：</p>
+<p>Windows：在 CMD 窗口输入：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">ipconfig /flushdns</span><br></pre></td></tr></table></figure>
+<p>Linux 命令：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">sudo nscd restart</span><br></pre></td></tr></table></figure>
+<p>如报错则须安装：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">sudo apt install nscd 或 sudo /etc/init.d/nscd restart</span><br></pre></td></tr></table></figure>
+<p>Mac 命令：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">sudo killall -HUP mDNSResponder</span><br></pre></td></tr></table></figure>
+
+<p>ok. </p>
 <hr>
 <p>欢迎关注微信公众号，您的资源可变现：【乐知付加密平台】<br><br><br><img src="/images/wechat_account.png" alt="乐知付加密平台"></p>
 <p>一起学习，一起进步。<br></p>
