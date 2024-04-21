@@ -11197,7 +11197,7 @@ API
 <p>于是就可以进行下一步骤了，该喂饲料喂饲料，该换水换水，该调节温度调节温度（有大棚的情况下）等等。</p>
 <h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><p>基围虾不喜欢冷天气，所以一年才能培养2次左右，年初三月份开始，5个月左右即可成熟售卖，等到8月，又可以培养一波。</p>
 <p>想要做这个生意的朋友，还是需要有一定的水产养殖经验，不然很容易虾苗死亡，闹得血本无归。</p>
-<p>当然，你有经验，那就开干吧，我老婆真的是爱死这基围虾了，好做好吃。</p>
+<p>当然，你有经验，那就开干吧，我老婆真的是爱死这基围虾了，好做又好吃，可水煮、可剪、可蘸。</p>
 <p>但是春冬季偏贵，我想主要是产量少的缘故吧。</p>
 <p>内地城市更缺资源，何不试试呢？</p>
 <p>好了，有什么好的项目，推荐一下，一起赚钱。</p>
@@ -16475,6 +16475,52 @@ API
       </categories>
       <tags>
         <tag>macos</tag>
+        <tag>github</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>docker安装mysql8数据库</title>
+    <url>/2024/04/21/docker%E5%AE%89%E8%A3%85mysql8%E6%95%B0%E6%8D%AE%E5%BA%93/</url>
+    <content><![CDATA[<p>mac有点老，2013款的，现在的macos是macos11 big sur版本，brew安装软件的时候经常失败，mysql也是。</p>
+<p>于是准备用docker启动mysql容器方式，搭建mysql本地环境，方便调试。</p>
+<span id="more"></span>
+
+<p>记录一下，方便以后查询使用。</p>
+<p>步骤：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">docker pull mysql:8.0</span><br><span class="line"></span><br><span class="line">docker run --name mysql8 -e MYSQL_ROOT_PASSWORD=my-secret-pw -d mysql:8.0</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>这里–name后面是你给容器设定的名字，-e MYSQL_ROOT_PASSWORD&#x3D;my-secret-pw是设置MySQL的root用户的密码，-d表示以后台模式运行容器，mysql:8.0是指定使用的镜像版本。</p>
+<p>以上步骤会启动一个MySQL 8的容器，你可以通过Docker命令与其交互。例如，使用以下命令进入容器：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">docker exec -it mysql8 bash</span><br></pre></td></tr></table></figure>
+
+<p>进入mysql命令行：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">mysql -u root -p</span><br></pre></td></tr></table></figure>
+
+<p>ok了。</p>
+<hr>
+<p>好记性不如烂笔头。</p>
+<p>欢迎关注微信公众号，您的资源可变现：【乐知付加密平台】<br><br><br><img src="/images/wechat_account.png" alt="乐知付加密平台"></p>
+<p>一起学习，一起进步。<br></p>
+]]></content>
+  </entry>
+  <entry>
+    <title>github本地仓库更换远程仓库</title>
+    <url>/2024/04/21/github%E6%9C%AC%E5%9C%B0%E4%BB%93%E5%BA%93%E6%9B%B4%E6%8D%A2%E8%BF%9C%E7%A8%8B%E4%BB%93%E5%BA%93/</url>
+    <content><![CDATA[<p>一般我们从github上clone下来的项目，想更换成自己的github项目地址时，有个简单的方法。</p>
+<span id="more"></span>
+
+<p>不需要删除.git，然后重新git remote add了，直接set-url即可。</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git remote set-url origin https://mirrors.ustc.edu.cn/brew.git</span><br></pre></td></tr></table></figure>
+
+
+<hr>
+<p>欢迎关注微信公众号，您的资源可变现：【乐知付加密平台】<br><br><br><img src="/images/wechat_account.png" alt="乐知付加密平台"></p>
+<p>一起学习，一起进步。<br></p>
+]]></content>
+      <categories>
+        <category>其他</category>
+        <category>Github</category>
+      </categories>
+      <tags>
         <tag>github</tag>
       </tags>
   </entry>

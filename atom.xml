@@ -6,7 +6,7 @@
   <link href="https://chenzuoli.github.io/atom.xml" rel="self"/>
   
   <link href="https://chenzuoli.github.io/"/>
-  <updated>2024-04-21T01:49:31.030Z</updated>
+  <updated>2024-04-21T05:40:05.075Z</updated>
   <id>https://chenzuoli.github.io/</id>
   
   <author>
@@ -15,6 +15,47 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>docker安装mysql8数据库</title>
+    <link href="https://chenzuoli.github.io/2024/04/21/docker%E5%AE%89%E8%A3%85mysql8%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
+    <id>https://chenzuoli.github.io/2024/04/21/docker%E5%AE%89%E8%A3%85mysql8%E6%95%B0%E6%8D%AE%E5%BA%93/</id>
+    <published>2024-04-21T03:50:45.000Z</published>
+    <updated>2024-04-21T05:40:05.075Z</updated>
+    
+    <content type="html"><![CDATA[<p>mac有点老，2013款的，现在的macos是macos11 big sur版本，brew安装软件的时候经常失败，mysql也是。</p><p>于是准备用docker启动mysql容器方式，搭建mysql本地环境，方便调试。</p><span id="more"></span><p>记录一下，方便以后查询使用。</p><p>步骤：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">docker pull mysql:8.0</span><br><span class="line"></span><br><span class="line">docker run --name mysql8 -e MYSQL_ROOT_PASSWORD=my-secret-pw -d mysql:8.0</span><br><span class="line"></span><br></pre></td></tr></table></figure><p>这里–name后面是你给容器设定的名字，-e MYSQL_ROOT_PASSWORD&#x3D;my-secret-pw是设置MySQL的root用户的密码，-d表示以后台模式运行容器，mysql:8.0是指定使用的镜像版本。</p><p>以上步骤会启动一个MySQL 8的容器，你可以通过Docker命令与其交互。例如，使用以下命令进入容器：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker exec -it mysql8 bash</span><br></pre></td></tr></table></figure><p>进入mysql命令行：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mysql -u root -p</span><br></pre></td></tr></table></figure><p>ok了。</p><hr><p>好记性不如烂笔头。</p><p>欢迎关注微信公众号，您的资源可变现：【乐知付加密平台】<br><br><br><img src="/images/wechat_account.png" alt="乐知付加密平台"></p><p>一起学习，一起进步。<br></p>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;mac有点老，2013款的，现在的macos是macos11 big sur版本，brew安装软件的时候经常失败，mysql也是。&lt;/p&gt;
+&lt;p&gt;于是准备用docker启动mysql容器方式，搭建mysql本地环境，方便调试。&lt;/p&gt;</summary>
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>github本地仓库更换远程仓库</title>
+    <link href="https://chenzuoli.github.io/2024/04/21/github%E6%9C%AC%E5%9C%B0%E4%BB%93%E5%BA%93%E6%9B%B4%E6%8D%A2%E8%BF%9C%E7%A8%8B%E4%BB%93%E5%BA%93/"/>
+    <id>https://chenzuoli.github.io/2024/04/21/github%E6%9C%AC%E5%9C%B0%E4%BB%93%E5%BA%93%E6%9B%B4%E6%8D%A2%E8%BF%9C%E7%A8%8B%E4%BB%93%E5%BA%93/</id>
+    <published>2024-04-21T03:10:36.000Z</published>
+    <updated>2024-04-21T03:13:08.294Z</updated>
+    
+    <content type="html"><![CDATA[<p>一般我们从github上clone下来的项目，想更换成自己的github项目地址时，有个简单的方法。</p><span id="more"></span><p>不需要删除.git，然后重新git remote add了，直接set-url即可。</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git remote set-url origin https://mirrors.ustc.edu.cn/brew.git</span><br></pre></td></tr></table></figure><hr><p>欢迎关注微信公众号，您的资源可变现：【乐知付加密平台】<br><br><br><img src="/images/wechat_account.png" alt="乐知付加密平台"></p><p>一起学习，一起进步。<br></p>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;一般我们从github上clone下来的项目，想更换成自己的github项目地址时，有个简单的方法。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="其他" scheme="https://chenzuoli.github.io/categories/%E5%85%B6%E4%BB%96/"/>
+    
+    <category term="Github" scheme="https://chenzuoli.github.io/categories/%E5%85%B6%E4%BB%96/Github/"/>
+    
+    
+    <category term="github" scheme="https://chenzuoli.github.io/tags/github/"/>
+    
+  </entry>
   
   <entry>
     <title>自动解决github加载慢的问题</title>
@@ -480,62 +521,6 @@
     <category term="html" scheme="https://chenzuoli.github.io/tags/html/"/>
     
     <category term="table" scheme="https://chenzuoli.github.io/tags/table/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>乐知付-如何提现</title>
-    <link href="https://chenzuoli.github.io/2024/03/10/%E4%B9%90%E7%9F%A5%E4%BB%98-%E5%A6%82%E4%BD%95%E6%8F%90%E7%8E%B0/"/>
-    <id>https://chenzuoli.github.io/2024/03/10/%E4%B9%90%E7%9F%A5%E4%BB%98-%E5%A6%82%E4%BD%95%E6%8F%90%E7%8E%B0/</id>
-    <published>2024-03-10T02:32:56.000Z</published>
-    <updated>2024-04-14T03:18:14.289Z</updated>
-    
-    <content type="html"><![CDATA[<p>最近新做的网站，专为知识付费服务的个人平台，如果你的付费内容受欢迎，付费用户越多，你的收入越高，这篇说下如何进行余额提现？</p><p>官网链接：<a href="http://lezhifu.cc/">http://lezhifu.cc/</a></p><span id="more"></span><p>这里列一下基本操作流程：</p><p>链接：<a href="http://lezhifu.cc/admin/withdraw_list">http://lezhifu.cc/admin/withdraw_list</a></p><h2 id="操作步骤一："><a href="#操作步骤一：" class="headerlink" title="操作步骤一："></a>操作步骤一：</h2><p>注册登录后，进入管理后台，依次点击 【支付管理】【提现中心】【+ 申请提现】；</p><p><img src="/2024/03/10/%E4%B9%90%E7%9F%A5%E4%BB%98-%E5%A6%82%E4%BD%95%E6%8F%90%E7%8E%B0/withdraw1.png" alt="withdraw1"></p><h2 id="操作步骤二："><a href="#操作步骤二：" class="headerlink" title="操作步骤二："></a>操作步骤二：</h2><p>申请提现中，依次填写 【提现金额】~【支付宝账号】，并点击提现按钮，等待平台审核完成！<br><img src="/2024/03/10/%E4%B9%90%E7%9F%A5%E4%BB%98-%E5%A6%82%E4%BD%95%E6%8F%90%E7%8E%B0/withdraw2.png" alt="withdraw2"></p><h2 id="提现条件："><a href="#提现条件：" class="headerlink" title="提现条件："></a>提现条件：</h2><p>用户账户余额，至少达到20元（包含20元），方可申请提现成功。</p><h2 id="提现方式："><a href="#提现方式：" class="headerlink" title="提现方式："></a>提现方式：</h2><p>用户可选择的提现方式，目前仅限支付宝。请事先在【个人中心】【个人信息】【支付宝账号】编辑保存。</p><h2 id="提现手续费："><a href="#提现手续费：" class="headerlink" title="提现手续费："></a>提现手续费：</h2><p>提现手续费标准：申请提现总金额的8%。</p><h2 id="提现时间："><a href="#提现时间：" class="headerlink" title="提现时间："></a>提现时间：</h2><p>每周的工作日（除周六、周日）申请提现； 下周一，统一有序进行结算处理！</p><hr><p>欢迎关注微信公众号：【乐知付加密平台】<br><img src="/images/wechat_account.png" alt="乐知付加密平台"></p><p>一起学习，一起进步。<br></p>]]></content>
-    
-    
-    <summary type="html">&lt;p&gt;最近新做的网站，专为知识付费服务的个人平台，如果你的付费内容受欢迎，付费用户越多，你的收入越高，这篇说下如何进行余额提现？&lt;/p&gt;
-&lt;p&gt;官网链接：&lt;a href=&quot;http://lezhifu.cc/&quot;&gt;http://lezhifu.cc/&lt;/a&gt;&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="网站" scheme="https://chenzuoli.github.io/categories/%E7%BD%91%E7%AB%99/"/>
-    
-    <category term="乐知付" scheme="https://chenzuoli.github.io/categories/%E7%BD%91%E7%AB%99/%E4%B9%90%E7%9F%A5%E4%BB%98/"/>
-    
-    <category term="提现" scheme="https://chenzuoli.github.io/categories/%E7%BD%91%E7%AB%99/%E4%B9%90%E7%9F%A5%E4%BB%98/%E6%8F%90%E7%8E%B0/"/>
-    
-    
-    <category term="乐知付" scheme="https://chenzuoli.github.io/tags/%E4%B9%90%E7%9F%A5%E4%BB%98/"/>
-    
-    <category term="提现" scheme="https://chenzuoli.github.io/tags/%E6%8F%90%E7%8E%B0/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>乐知付-如何充值</title>
-    <link href="https://chenzuoli.github.io/2024/03/10/%E4%B9%90%E7%9F%A5%E4%BB%98-%E5%A6%82%E4%BD%95%E5%85%85%E5%80%BC/"/>
-    <id>https://chenzuoli.github.io/2024/03/10/%E4%B9%90%E7%9F%A5%E4%BB%98-%E5%A6%82%E4%BD%95%E5%85%85%E5%80%BC/</id>
-    <published>2024-03-10T02:28:01.000Z</published>
-    <updated>2024-04-14T03:17:21.557Z</updated>
-    
-    <content type="html"><![CDATA[<p>最近新做的网站，专为知识付费服务的个人平台，如果你的付费内容受欢迎，付费用户越多，你的收入越高，平台从你的账户余额中每单抽取0.15佣金，所以需要保证你的余额足够，这篇说下如何进行充值？</p><p>官网链接：<a href="http://lezhifu.cc/">http://lezhifu.cc/</a></p><span id="more"></span><p>这里列一下基本操作流程：</p><p>链接：<a href="http://lezhifu.cc/admin/recharge_list">http://lezhifu.cc/admin/recharge_list</a></p><h2 id="操作步骤一："><a href="#操作步骤一：" class="headerlink" title="操作步骤一："></a>操作步骤一：</h2><p>注册登录后，进入管理后台，依次点击 【支付管理】<del>【充值中心】</del>【+ 充值】；<br><img src="/2024/03/10/%E4%B9%90%E7%9F%A5%E4%BB%98-%E5%A6%82%E4%BD%95%E5%85%85%E5%80%BC/recharge1.png" alt="recharge1"></p><h2 id="操作步骤二："><a href="#操作步骤二：" class="headerlink" title="操作步骤二："></a>操作步骤二：</h2><p>新增充值中，依次填写 【充值金额】~【支付宝账号】，并点击充值完成按钮，等待平台审核完成！<br><img src="/2024/03/10/%E4%B9%90%E7%9F%A5%E4%BB%98-%E5%A6%82%E4%BD%95%E5%85%85%E5%80%BC/recharge2.png" alt="recharge2"></p><h2 id="注意事项："><a href="#注意事项：" class="headerlink" title="注意事项："></a>注意事项：</h2><p>充值页面的【支付宝账号】，需事先在【个人中心】~【个人信息】编辑保存。</p><hr><p>欢迎关注微信公众号：【乐知付加密平台】<br><img src="/images/wechat_account.png" alt="乐知付加密平台"></p><p>一起学习，一起进步。<br></p>]]></content>
-    
-    
-    <summary type="html">&lt;p&gt;最近新做的网站，专为知识付费服务的个人平台，如果你的付费内容受欢迎，付费用户越多，你的收入越高，平台从你的账户余额中每单抽取0.15佣金，所以需要保证你的余额足够，这篇说下如何进行充值？&lt;/p&gt;
-&lt;p&gt;官网链接：&lt;a href=&quot;http://lezhifu.cc/&quot;&gt;http://lezhifu.cc/&lt;/a&gt;&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="网站" scheme="https://chenzuoli.github.io/categories/%E7%BD%91%E7%AB%99/"/>
-    
-    <category term="乐知付" scheme="https://chenzuoli.github.io/categories/%E7%BD%91%E7%AB%99/%E4%B9%90%E7%9F%A5%E4%BB%98/"/>
-    
-    <category term="充值" scheme="https://chenzuoli.github.io/categories/%E7%BD%91%E7%AB%99/%E4%B9%90%E7%9F%A5%E4%BB%98/%E5%85%85%E5%80%BC/"/>
-    
-    
-    <category term="乐知付" scheme="https://chenzuoli.github.io/tags/%E4%B9%90%E7%9F%A5%E4%BB%98/"/>
-    
-    <category term="充值" scheme="https://chenzuoli.github.io/tags/%E5%85%85%E5%80%BC/"/>
     
   </entry>
   
