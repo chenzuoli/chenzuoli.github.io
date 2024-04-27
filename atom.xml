@@ -6,7 +6,7 @@
   <link href="https://chenzuoli.github.io/atom.xml" rel="self"/>
   
   <link href="https://chenzuoli.github.io/"/>
-  <updated>2024-04-21T05:40:05.075Z</updated>
+  <updated>2024-04-27T04:08:58.797Z</updated>
   <id>https://chenzuoli.github.io/</id>
   
   <author>
@@ -15,6 +15,52 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>爬虫相关问题</title>
+    <link href="https://chenzuoli.github.io/2024/04/25/%E7%88%AC%E8%99%AB%E7%9B%B8%E5%85%B3%E9%97%AE%E9%A2%98/"/>
+    <id>https://chenzuoli.github.io/2024/04/25/%E7%88%AC%E8%99%AB%E7%9B%B8%E5%85%B3%E9%97%AE%E9%A2%98/</id>
+    <published>2024-04-25T12:57:16.000Z</published>
+    <updated>2024-04-27T04:08:58.797Z</updated>
+    
+    <content type="html"><![CDATA[<p>记录一下爬虫网站的时候的一些问题。</p><span id="more"></span><ol><li><p>scrapy shell报错：twisted.python.failure.Failure twisted.internet.error.ConnectionLost: Connection to the other side was lost in a non-clean fashion: Connection lost</p><p> scrapy shell  <a href="https://www.xxx.com/">https://www.xxx.com/</a></p><p> 把www去掉就可以了</p></li><li><p>输出爬取结果时，中文乱码，显示的是unicode码</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">scrapy crawl kanping99 -O kanping99.jsonl</span><br></pre></td></tr></table></figure><p><img src="/2024/04/25/%E7%88%AC%E8%99%AB%E7%9B%B8%E5%85%B3%E9%97%AE%E9%A2%98/image_unicode.png" alt="unicode"><br>-s设置输出的编码：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">scrapy crawl kanping99 -O kanping99.jsonl -s FEED_EXPORT_ENCODING=utf-8</span><br></pre></td></tr></table></figure></li></ol><hr><p>欢迎关注微信公众号，你的资源可变现：【乐知付加密平台】<br><img src="/images/wechat_account.png" alt="乐知付加密平台"></p><p>一起学习，一起进步。<br></p>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;记录一下爬虫网站的时候的一些问题。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="Python" scheme="https://chenzuoli.github.io/categories/Python/"/>
+    
+    <category term="Scrapy" scheme="https://chenzuoli.github.io/categories/Python/Scrapy/"/>
+    
+    
+    <category term="scrapy" scheme="https://chenzuoli.github.io/tags/scrapy/"/>
+    
+    <category term="爬虫" scheme="https://chenzuoli.github.io/tags/%E7%88%AC%E8%99%AB/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>linux安装magick</title>
+    <link href="https://chenzuoli.github.io/2024/04/21/linux%E5%AE%89%E8%A3%85magick/"/>
+    <id>https://chenzuoli.github.io/2024/04/21/linux%E5%AE%89%E8%A3%85magick/</id>
+    <published>2024-04-21T08:16:24.000Z</published>
+    <updated>2024-04-21T12:21:23.096Z</updated>
+    
+    <content type="html"><![CDATA[<p>docker pull centos:7<br>docker run –name python3_test -it centos:7 bash</p><h1 id="安装python"><a href="#安装python" class="headerlink" title="安装python"></a>安装python</h1><p>yum install python3</p><h1 id="安装magick"><a href="#安装magick" class="headerlink" title="安装magick"></a>安装magick</h1><p>yum install ImageMagick -y</p><p>convert -version</p><p>identify -version</p><h1 id="安装pip"><a href="#安装pip" class="headerlink" title="安装pip"></a>安装pip</h1><h1 id="安装ffmpeg："><a href="#安装ffmpeg：" class="headerlink" title="安装ffmpeg："></a>安装ffmpeg：</h1><p>下载：<a href="https://download1.rpmfusion.org/free/el/rpmfusion-free-release-7.noarch.rpm">https://download1.rpmfusion.org/free/el/rpmfusion-free-release-7.noarch.rpm</a><br>yum localinstall –nogpgcheck rpmfusion-free-release-7.noarch.rpm<br>yum install ffmpeg ffmpeg-devel -y</p><h1 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h1><ol><li>The headers or library files could not be found for zlib,<br>yum install zlib-devel -y</li><li><pre><code>The headers or library files could not be found for jpeg,</code></pre></li></ol><p>yum install libjpeg* zlib libtiff -y</p><ol start="3"><li><pre><code>unable to execute &#39;gcc&#39;: No such file or directory</code></pre><p>yum -y install gcc</p></li><li><pre><code>src/_imagingmath.c:16:20: fatal error: Python.h: No such file or directory</code></pre><p>yum install python3-devel -y</p></li><li><p>ModuleNotFoundError: No module named ‘numpy.typing’</p></li><li><p>ModuleNotFoundError: No module named ‘ffmpy’<br>pip3 install ffmpy</p></li><li><p>Could not import runpy module</p></li></ol>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;docker pull centos:7&lt;br&gt;docker run –name python3_test -it centos:7 bash&lt;/p&gt;
+&lt;h1 id=&quot;安装python&quot;&gt;&lt;a href=&quot;#安装python&quot; class=&quot;headerlink&quot; titl</summary>
+      
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>docker安装mysql8数据库</title>
@@ -466,61 +512,6 @@
     
     
     <category term="seo" scheme="https://chenzuoli.github.io/tags/seo/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>mac自带录屏快捷键</title>
-    <link href="https://chenzuoli.github.io/2024/03/17/mac%E8%87%AA%E5%B8%A6%E5%BD%95%E5%B1%8F%E5%BF%AB%E6%8D%B7%E9%94%AE/"/>
-    <id>https://chenzuoli.github.io/2024/03/17/mac%E8%87%AA%E5%B8%A6%E5%BD%95%E5%B1%8F%E5%BF%AB%E6%8D%B7%E9%94%AE/</id>
-    <published>2024-03-17T02:01:08.000Z</published>
-    <updated>2024-04-06T11:40:26.480Z</updated>
-    
-    <content type="html"><![CDATA[<p>command + shift + 5</p><p>记录一下。</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;command + shift + 5&lt;/p&gt;
-&lt;p&gt;记录一下。&lt;/p&gt;
-</summary>
-      
-    
-    
-    
-    <category term="其他" scheme="https://chenzuoli.github.io/categories/%E5%85%B6%E4%BB%96/"/>
-    
-    <category term="电脑" scheme="https://chenzuoli.github.io/categories/%E5%85%B6%E4%BB%96/%E7%94%B5%E8%84%91/"/>
-    
-    <category term="mac" scheme="https://chenzuoli.github.io/categories/%E5%85%B6%E4%BB%96/%E7%94%B5%E8%84%91/mac/"/>
-    
-    
-    <category term="mac" scheme="https://chenzuoli.github.io/tags/mac/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>html中table如何实现手机端左右滚动查看表格数据</title>
-    <link href="https://chenzuoli.github.io/2024/03/16/html%E4%B8%ADtable%E5%A6%82%E4%BD%95%E5%AE%9E%E7%8E%B0%E6%89%8B%E6%9C%BA%E7%AB%AF%E5%B7%A6%E5%8F%B3%E6%BB%9A%E5%8A%A8%E6%9F%A5%E7%9C%8B%E8%A1%A8%E6%A0%BC%E6%95%B0%E6%8D%AE/"/>
-    <id>https://chenzuoli.github.io/2024/03/16/html%E4%B8%ADtable%E5%A6%82%E4%BD%95%E5%AE%9E%E7%8E%B0%E6%89%8B%E6%9C%BA%E7%AB%AF%E5%B7%A6%E5%8F%B3%E6%BB%9A%E5%8A%A8%E6%9F%A5%E7%9C%8B%E8%A1%A8%E6%A0%BC%E6%95%B0%E6%8D%AE/</id>
-    <published>2024-03-16T10:06:53.000Z</published>
-    <updated>2024-03-18T13:57:42.445Z</updated>
-    
-    <content type="html"><![CDATA[<p>如何实现手机端表格宽度不够时，自动实现可手动左右滑动查看表格内容？</p><span id="more"></span><p>自定义css文件：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">@media (max-width: 600px) &#123;</span><br><span class="line">    table &#123;</span><br><span class="line">      display: block;</span><br><span class="line">      margin: 0 auto;</span><br><span class="line">      overflow-x: auto;</span><br><span class="line">      white-space: nowrap;</span><br><span class="line">      text-overflow: ellipsis;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>这里的@media(max-width: 600px)表示，程序自动判断显示屏幕的宽度，如果小于600px则table的css格式生效，<br>overflow-x: auto;即代表x轴横向滑动展示。</p><p>如果你也使用了bootstrap css，那么自定义css文件必须在bootstrap.css文件之后进行加载，如下：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;link rel=&quot;stylesheet&quot; href=&#123;&#123; url_for(&#x27;static&#x27;, filename=&#x27;css/bootstrap.min.css&#x27;)&#125;&#125;&gt;</span><br><span class="line">&lt;link rel=&quot;stylesheet&quot; href=&#123;&#123; url_for(&#x27;static&#x27;, filename=&#x27;css/style-index.css&#x27;) &#125;&#125;&gt;</span><br></pre></td></tr></table></figure><hr><p>记录一下，一起学习。</p>]]></content>
-    
-    
-    <summary type="html">&lt;p&gt;如何实现手机端表格宽度不够时，自动实现可手动左右滑动查看表格内容？&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="前端" scheme="https://chenzuoli.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
-    
-    <category term="html" scheme="https://chenzuoli.github.io/categories/%E5%89%8D%E7%AB%AF/html/"/>
-    
-    
-    <category term="html" scheme="https://chenzuoli.github.io/tags/html/"/>
-    
-    <category term="table" scheme="https://chenzuoli.github.io/tags/table/"/>
     
   </entry>
   

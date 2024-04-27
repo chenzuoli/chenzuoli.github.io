@@ -3572,7 +3572,8 @@
 <p>进步一点点，都是好的。</p>
 ]]></content>
       <categories>
-        <category>python</category>
+        <category>Python</category>
+        <category>Jupyter</category>
       </categories>
       <tags>
         <tag>notebook</tag>
@@ -8008,7 +8009,8 @@
 <p>pip install –no-cache-dir -r requirements.txt</p>
 ]]></content>
       <categories>
-        <category>python</category>
+        <category>Python</category>
+        <category>Pip</category>
       </categories>
       <tags>
         <tag>python</tag>
@@ -8030,7 +8032,8 @@
 <p>没事记录一下。</p>
 ]]></content>
       <categories>
-        <category>python</category>
+        <category>Python</category>
+        <category>mysql</category>
       </categories>
       <tags>
         <tag>python</tag>
@@ -8074,6 +8077,7 @@
 ]]></content>
       <categories>
         <category>Python</category>
+        <category>Jpype</category>
       </categories>
       <tags>
         <tag>python</tag>
@@ -8969,6 +8973,7 @@
 ]]></content>
       <categories>
         <category>Python</category>
+        <category>Gil</category>
       </categories>
       <tags>
         <tag>python</tag>
@@ -13736,6 +13741,7 @@ API
     <content><![CDATA[<ol>
 <li>vercel</li>
 <li>netlify</li>
+<li>github pages</li>
 </ol>
 <span id="more"></span>
 
@@ -13746,6 +13752,18 @@ API
 </li>
 </ol>
 <p>妹的，netlify不支持跨域访问</p>
+<ol start="3">
+<li>github pages</li>
+</ol>
+<ul>
+<li>注册github</li>
+<li>新建仓库：你的账号名.github.io</li>
+<li>上传你的html文件到根目录即可</li>
+</ul>
+<hr>
+<p><b>你我皆是凡人，少点欲望，好自为之。</b></p>
+<p>欢迎关注我的微信公众号，比较喜欢分享知识，也喜欢宠物，所以做了这2个公众号：<br><img src="/images/%E7%A8%8B%E5%BA%8F%E5%91%98%E5%86%99%E4%B9%A6%E5%85%AC%E4%BC%97%E5%8F%B7%E4%BA%8C%E7%BB%B4%E7%A0%81.jpg" alt="程序员写书"></p>
+<p>一起学习，一起进步。<br></p>
 ]]></content>
       <categories>
         <category>其他</category>
@@ -16522,6 +16540,69 @@ API
       </categories>
       <tags>
         <tag>github</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>linux安装magick</title>
+    <url>/2024/04/21/linux%E5%AE%89%E8%A3%85magick/</url>
+    <content><![CDATA[<p>docker pull centos:7<br>docker run –name python3_test -it centos:7 bash</p>
+<h1 id="安装python"><a href="#安装python" class="headerlink" title="安装python"></a>安装python</h1><p>yum install python3</p>
+<h1 id="安装magick"><a href="#安装magick" class="headerlink" title="安装magick"></a>安装magick</h1><p>yum install ImageMagick -y</p>
+<p>convert -version</p>
+<p>identify -version</p>
+<h1 id="安装pip"><a href="#安装pip" class="headerlink" title="安装pip"></a>安装pip</h1><h1 id="安装ffmpeg："><a href="#安装ffmpeg：" class="headerlink" title="安装ffmpeg："></a>安装ffmpeg：</h1><p>下载：<a href="https://download1.rpmfusion.org/free/el/rpmfusion-free-release-7.noarch.rpm">https://download1.rpmfusion.org/free/el/rpmfusion-free-release-7.noarch.rpm</a><br>yum localinstall –nogpgcheck rpmfusion-free-release-7.noarch.rpm<br>yum install ffmpeg ffmpeg-devel -y</p>
+<h1 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h1><ol>
+<li>The headers or library files could not be found for zlib,<br>yum install zlib-devel -y</li>
+<li><pre><code>The headers or library files could not be found for jpeg,
+</code></pre>
+</li>
+</ol>
+<p>yum install libjpeg* zlib libtiff -y</p>
+<ol start="3">
+<li><pre><code>unable to execute &#39;gcc&#39;: No such file or directory
+</code></pre>
+<p>yum -y install gcc</p>
+</li>
+<li><pre><code>src/_imagingmath.c:16:20: fatal error: Python.h: No such file or directory
+</code></pre>
+<p>yum install python3-devel -y</p>
+</li>
+<li><p>ModuleNotFoundError: No module named ‘numpy.typing’</p>
+</li>
+<li><p>ModuleNotFoundError: No module named ‘ffmpy’<br>pip3 install ffmpy</p>
+</li>
+<li><p>Could not import runpy module</p>
+</li>
+</ol>
+]]></content>
+  </entry>
+  <entry>
+    <title>爬虫相关问题</title>
+    <url>/2024/04/25/%E7%88%AC%E8%99%AB%E7%9B%B8%E5%85%B3%E9%97%AE%E9%A2%98/</url>
+    <content><![CDATA[<p>记录一下爬虫网站的时候的一些问题。</p>
+<span id="more"></span>
+
+<ol>
+<li><p>scrapy shell报错：twisted.python.failure.Failure twisted.internet.error.ConnectionLost: Connection to the other side was lost in a non-clean fashion: Connection lost</p>
+<p> scrapy shell  <a href="https://www.xxx.com/">https://www.xxx.com/</a></p>
+<p> 把www去掉就可以了</p>
+</li>
+<li><p>输出爬取结果时，中文乱码，显示的是unicode码</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">scrapy crawl kanping99 -O kanping99.jsonl</span><br></pre></td></tr></table></figure>
+<p><img src="/2024/04/25/%E7%88%AC%E8%99%AB%E7%9B%B8%E5%85%B3%E9%97%AE%E9%A2%98/image_unicode.png" alt="unicode"><br>-s设置输出的编码：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">scrapy crawl kanping99 -O kanping99.jsonl -s FEED_EXPORT_ENCODING=utf-8</span><br></pre></td></tr></table></figure></li>
+</ol>
+<hr>
+<p>欢迎关注微信公众号，你的资源可变现：【乐知付加密平台】<br><img src="/images/wechat_account.png" alt="乐知付加密平台"></p>
+<p>一起学习，一起进步。<br></p>
+]]></content>
+      <categories>
+        <category>Python</category>
+        <category>Scrapy</category>
+      </categories>
+      <tags>
+        <tag>scrapy</tag>
+        <tag>爬虫</tag>
       </tags>
   </entry>
 </search>
