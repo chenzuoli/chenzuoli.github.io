@@ -16583,14 +16583,16 @@ API
 <span id="more"></span>
 
 <ol>
-<li><p>scrapy shell报错：twisted.python.failure.Failure twisted.internet.error.ConnectionLost: Connection to the other side was lost in a non-clean fashion: Connection lost</p>
-<p> scrapy shell  <a href="https://www.xxx.com/">https://www.xxx.com/</a></p>
-<p> 把www去掉就可以了</p>
-</li>
-<li><p>输出爬取结果时，中文乱码，显示的是unicode码</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">scrapy crawl kanping99 -O kanping99.jsonl</span><br></pre></td></tr></table></figure>
-<p><img src="/2024/04/25/%E7%88%AC%E8%99%AB%E7%9B%B8%E5%85%B3%E9%97%AE%E9%A2%98/image_unicode.png" alt="unicode"><br>-s设置输出的编码：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">scrapy crawl kanping99 -O kanping99.jsonl -s FEED_EXPORT_ENCODING=utf-8</span><br></pre></td></tr></table></figure></li>
+<li>scrapy shell报错：twisted.python.failure.Failure twisted.internet.error.ConnectionLost: Connection to the other side was lost in a non-clean fashion: Connection lost</li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">scrapy shell  https://www.xxx.com/</span><br></pre></td></tr></table></figure>
+<pre><code>解决方法一：尝试把www去掉就可以了
+解决方法二：尝试模仿浏览器访问，修改请求的user-agent，编辑settings.py
+    <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">DEFAULT_REQUEST_HEADERS = &#123;</span><br><span class="line">    &#x27;Accept&#x27;: &#x27;text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8&#x27;,</span><br><span class="line">    &#x27;Accept-Language&#x27;: &#x27;en&#x27;,</span><br><span class="line">    &#x27;User-Agent&#x27;: &#x27;Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.77 Safari/537.36&#x27;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</code></pre>
+<ol start="2">
+<li>输出爬取结果时，中文乱码，显示的是unicode码<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">scrapy crawl kanping99 -O kanping99.jsonl</span><br></pre></td></tr></table></figure>
+<img src="/2024/04/25/%E7%88%AC%E8%99%AB%E7%9B%B8%E5%85%B3%E9%97%AE%E9%A2%98/image_unicode.png" alt="unicode"><br>-s设置输出的编码：<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">scrapy crawl kanping99 -O kanping99.jsonl -s FEED_EXPORT_ENCODING=utf-8</span><br></pre></td></tr></table></figure></li>
 </ol>
 <hr>
 <p>欢迎关注微信公众号，你的资源可变现：【乐知付加密平台】<br><img src="/images/wechat_account.png" alt="乐知付加密平台"></p>
