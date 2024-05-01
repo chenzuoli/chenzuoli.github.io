@@ -16591,9 +16591,16 @@ API
     <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">DEFAULT_REQUEST_HEADERS = &#123;</span><br><span class="line">    &#x27;Accept&#x27;: &#x27;text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8&#x27;,</span><br><span class="line">    &#x27;Accept-Language&#x27;: &#x27;en&#x27;,</span><br><span class="line">    &#x27;User-Agent&#x27;: &#x27;Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.77 Safari/537.36&#x27;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 </code></pre>
 <ol start="2">
-<li>输出爬取结果时，中文乱码，显示的是unicode码<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">scrapy crawl kanping99 -O kanping99.jsonl</span><br></pre></td></tr></table></figure>
-<img src="/2024/04/25/%E7%88%AC%E8%99%AB%E7%9B%B8%E5%85%B3%E9%97%AE%E9%A2%98/image_unicode.png" alt="unicode"><br>-s设置输出的编码：<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">scrapy crawl kanping99 -O kanping99.jsonl -s FEED_EXPORT_ENCODING=utf-8</span><br></pre></td></tr></table></figure></li>
+<li><p>输出爬取结果时，中文乱码，显示的是unicode码</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">scrapy crawl kanping99 -O kanping99.jsonl</span><br></pre></td></tr></table></figure>
+<p><img src="/2024/04/25/%E7%88%AC%E8%99%AB%E7%9B%B8%E5%85%B3%E9%97%AE%E9%A2%98/image_unicode.png" alt="unicode"><br>-s设置输出的编码：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">scrapy crawl kanping99 -O kanping99.jsonl -s FEED_EXPORT_ENCODING=utf-8</span><br></pre></td></tr></table></figure>
+
+</li>
+<li><p>connection refused</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">2024-04-28 14:07:36 [scrapy.extensions.telnet] INFO: Telnet console listening on 127.0.0.1:6023</span><br><span class="line">2024-04-28 14:07:36 [scrapy.core.engine] INFO: Spider opened</span><br><span class="line">2024-04-28 14:07:36 [scrapy.downloadermiddlewares.retry] DEBUG: Retrying &lt;GET https://www.xxx.com/3-1.html&gt; (failed 1 times): Connection was refused by other side: 61: Connection refused.</span><br><span class="line">2024-04-28 14:07:37 [scrapy.downloadermiddlewares.retry] DEBUG: Retrying &lt;GET https://www.xxx.com/3-1.html&gt; (failed 2 times): Connection was refused by other side: 61: Connection refused.</span><br><span class="line">2024-04-28 14:07:37 [scrapy.downloadermiddlewares.retry] ERROR: Gave up retrying &lt;GET https://www.xxx.com/3-1.html&gt; (failed 3 times): Connection was refused by other side: 61: Connection refused.</span><br><span class="line"></span><br></pre></td></tr></table></figure></li>
 </ol>
+<p>https换成http，www去掉试试。<br>我把https换成http后ok了。</p>
 <hr>
 <p>欢迎关注微信公众号，你的资源可变现：【乐知付加密平台】<br><img src="/images/wechat_account.png" alt="乐知付加密平台"></p>
 <p>一起学习，一起进步。<br></p>
@@ -16605,6 +16612,104 @@ API
       <tags>
         <tag>scrapy</tag>
         <tag>爬虫</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>常用工具站分享</title>
+    <url>/2024/05/01/%E5%B8%B8%E7%94%A8%E5%B7%A5%E5%85%B7%E7%AB%99%E5%88%86%E4%BA%AB/</url>
+    <content><![CDATA[<p><img src="/2024/05/01/%E5%B8%B8%E7%94%A8%E5%B7%A5%E5%85%B7%E7%AB%99%E5%88%86%E4%BA%AB/image.png" alt="main"><br>介绍下平时使用的比较多的、好用的工具，画图的、图片编辑、图标、图片、财经、电子书、等等。</p>
+<span id="more"></span>
+
+
+<p>以下是对您提供的网站的简单介绍：</p>
+<ol>
+<li><p><strong>移除图片背景</strong>: <a href="https://www.remove.bg/">remove.bg</a></p>
+<ul>
+<li>这是一个自动移除图片背景的服务，使用人工智能技术在几秒钟内将图片中的背景去除，支持透明背景或添加白色背景。<br><img src="/2024/05/01/%E5%B8%B8%E7%94%A8%E5%B7%A5%E5%85%B7%E7%AB%99%E5%88%86%E4%BA%AB/image-1.png" alt="remove-bg"></li>
+</ul>
+</li>
+<li><p><strong>海报、图片设计</strong>: <a href="https://www.canva.cn/">Canva</a></p>
+<ul>
+<li>Canva是一个在线图形设计平台，提供了丰富的模板和设计元素，用户可以轻松创建社交媒体图形、海报、邀请函等。<br><img src="/2024/05/01/%E5%B8%B8%E7%94%A8%E5%B7%A5%E5%85%B7%E7%AB%99%E5%88%86%E4%BA%AB/image-2.png" alt="conva"></li>
+</ul>
+</li>
+<li><p><strong>图片编辑</strong>: <a href="https://www.x-design.com/editor/">x-design</a></p>
+<ul>
+<li>虽然提供的链接是图片编辑相关的，但具体网站内容未在描述中提及。通常这类服务允许用户在线编辑和修饰图片。<br><img src="/2024/05/01/%E5%B8%B8%E7%94%A8%E5%B7%A5%E5%85%B7%E7%AB%99%E5%88%86%E4%BA%AB/image-3.png" alt="design"></li>
+</ul>
+</li>
+<li><p><strong>全球财经数据</strong>: <a href="https://tradingeconomics.com/">Trading Economics</a></p>
+<ul>
+<li>提供全球宏观经济数据，包括各国的经济指标、预测、新闻等，适合金融分析师和投资者。<br><img src="/2024/05/01/%E5%B8%B8%E7%94%A8%E5%B7%A5%E5%85%B7%E7%AB%99%E5%88%86%E4%BA%AB/image-4.png" alt="trade"></li>
+</ul>
+</li>
+<li><p><strong>免费电子书</strong>: <a href="https://z-library.se/">Z-Library</a></p>
+<ul>
+<li>一个电子书存储网站，提供大量免费电子书籍的下载服务。</li>
+</ul>
+</li>
+<li><p><strong>图标logo</strong>:</p>
+<ul>
+<li><a href="https://fontawesome.com/search">Font Awesome</a><ul>
+<li>提供大量可商用的图标集，适用于网页设计和开发。</li>
+</ul>
+</li>
+<li><a href="https://www.iconfont.cn/">iconfont</a><ul>
+<li>阿里巴巴推出的矢量图标库，允许用户自定义图标并下载不同格式。<br><img src="/2024/05/01/%E5%B8%B8%E7%94%A8%E5%B7%A5%E5%85%B7%E7%AB%99%E5%88%86%E4%BA%AB/image-5.png" alt="logo"></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><strong>免费高清图片</strong>: <a href="https://www.pexels.com/">Pexels</a></p>
+<ul>
+<li>一个提供免费高清图片素材的网站，图片可免费用于商业用途，无需署名。<br><img src="/2024/05/01/%E5%B8%B8%E7%94%A8%E5%B7%A5%E5%85%B7%E7%AB%99%E5%88%86%E4%BA%AB/image-6.png" alt="pexel"></li>
+</ul>
+</li>
+<li><p><strong>二维码生成器</strong>: <a href="https://cli.im/">草料二维码</a></p>
+<ul>
+<li>允许用户生成各种类型的二维码，支持文本、网址、图片等内容的编码。<br><img src="/2024/05/01/%E5%B8%B8%E7%94%A8%E5%B7%A5%E5%85%B7%E7%AB%99%E5%88%86%E4%BA%AB/image-7.png" alt="qrcode"></li>
+</ul>
+</li>
+<li><p><strong>资源变现</strong>: <a href="https://lezhifu.cc/">乐知付</a></p>
+<ul>
+<li>一个资源变现平台，旨在帮助内容创作者和知识分享者实现知识付费和资源变现。<br><img src="/2024/05/01/%E5%B8%B8%E7%94%A8%E5%B7%A5%E5%85%B7%E7%AB%99%E5%88%86%E4%BA%AB/image-8.png" alt="lezhifu"></li>
+</ul>
+</li>
+<li><p><strong>音效</strong>: <a href="https://www.aigei.com/sound">爱给音效</a></p>
+<ul>
+<li>提供各种音效素材，适合视频制作、游戏开发、音频编辑等场景。<br><img src="/2024/05/01/%E5%B8%B8%E7%94%A8%E5%B7%A5%E5%85%B7%E7%AB%99%E5%88%86%E4%BA%AB/image-9.png" alt="sound"></li>
+</ul>
+</li>
+<li><p><strong>在线流程图</strong>:</p>
+<ul>
+<li><a href="https://www.processon.com/">ProcessOn</a><ul>
+<li>一个在线作图工具，支持流程图、思维导图、原型图等多种图形的制作。</li>
+</ul>
+</li>
+<li><a href="https://online.visual-paradigm.com/cn/">Visual Paradigm</a><ul>
+<li>提供在线流程图和UML图绘制工具，适合项目管理和系统设计。<br><img src="/2024/05/01/%E5%B8%B8%E7%94%A8%E5%B7%A5%E5%85%B7%E7%AB%99%E5%88%86%E4%BA%AB/image-10.png" alt="draw"></li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<p>好了，还有更多好用的工具，后面继续分享。</p>
+<p>下次见。</p>
+<hr>
+<p>欢迎关注微信公众号，你的资源可变现：【乐知付加密平台】<br><img src="/images/wechat_account.png" alt="乐知付加密平台"></p>
+<p>一起学习，一起进步。<br></p>
+]]></content>
+      <categories>
+        <category>工具</category>
+        <category>常用</category>
+        <category>网站</category>
+      </categories>
+      <tags>
+        <tag>图片编辑</tag>
+        <tag>画图</tag>
+        <tag>财经</tag>
+        <tag>logo</tag>
+        <tag>音效</tag>
       </tags>
   </entry>
 </search>
