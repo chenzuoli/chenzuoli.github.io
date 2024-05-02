@@ -6,7 +6,7 @@
   <link href="https://chenzuoli.github.io/atom.xml" rel="self"/>
   
   <link href="https://chenzuoli.github.io/"/>
-  <updated>2024-05-01T14:44:33.053Z</updated>
+  <updated>2024-05-02T16:07:37.766Z</updated>
   <id>https://chenzuoli.github.io/</id>
   
   <author>
@@ -15,6 +15,35 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>html视频流媒体m3u8文件解析</title>
+    <link href="https://chenzuoli.github.io/2024/05/02/html%E8%A7%86%E9%A2%91%E6%B5%81%E5%AA%92%E4%BD%93m3u8%E6%96%87%E4%BB%B6%E8%A7%A3%E6%9E%90/"/>
+    <id>https://chenzuoli.github.io/2024/05/02/html%E8%A7%86%E9%A2%91%E6%B5%81%E5%AA%92%E4%BD%93m3u8%E6%96%87%E4%BB%B6%E8%A7%A3%E6%9E%90/</id>
+    <published>2024-05-02T05:18:53.000Z</published>
+    <updated>2024-05-02T16:07:37.766Z</updated>
+    
+    <content type="html"><![CDATA[<p>最近下载解析某视频网站上的视频，想下载下来，一顿操作猛如虎，发现获取到的视频文件不是mp4，不是flv，不是mav，而是m3u8格式的，只有几十B大小。<br>那这个m3u8格式的视频文件是怎么加载到视频的呢？<br>且看下文。</p><span id="more"></span><h1 id="流媒体文件格式"><a href="#流媒体文件格式" class="headerlink" title="流媒体文件格式"></a>流媒体文件格式</h1><p>M3U8视频是一种流媒体文件格式。</p><p>M3U8文件是UTF-8编码格式的M3U文件，主要用于描述多段音频和视频数据的URL地址。它不是传统的下载后播放格式，而是直接在浏览器或移动设备上播放。M3U8文件通常用于存储和管理多个视频、音频和字幕流的播放列表。它基于HTTP Live Streaming（HLS）协议，支持直播和点播，并且可以实现多码率视频的适配，根据用户的网络带宽情况自动匹配合适的码率文件进行播放，从而保证视频的流畅度。</p><p>M3U8是一种常见的流媒体格式，主要以文件列表的形式存在，既支持直播又支持点播，尤其在Android、iOS等平台最为常用。</p><h1 id="M3U8的优点"><a href="#M3U8的优点" class="headerlink" title="M3U8的优点"></a>M3U8的优点</h1><p>1、可以做多码率的适配。根据网络带宽，客户端会自动选择一个适合自己码率的文件进行播放，保证视频流的流畅，代表是苹果的HLS(HTTP Live Streaming)。HLS有一个特点：自适应码率流播(adaptive streaming)，客户端可以根据网络状况自动选择不同码率的视频流，条件允许的情况下使用高码率，网络繁忙的时候使用低码率，并且自动在二者间随意切换。这对移动设备网络状况不稳定的情况下保障流畅播放非常有帮助。</p><p>2、降低源服务器的负载压力。M3U的特点是将流媒体切分为若干 TS 片段，然后通过一个扩展的 m3u 列表文件将这些 TS 片段集中起来供客户端播放器接收。这样做相比使用 RTSP 协议的好处在于，一旦切分完成，之后的分发过程完全不需要额外使用任何专门软件，普通的网络服务器即可，大大降低了 CDN 边缘服务器的配置要求，可以使用任何现成的CDN。分发使用的协议是最常见 HTTP，代理服务器对这个协议的缓存优化相当成熟，而很少有代理服务器对 RTSP 的进行缓存优化。</p><p>3、对于非实时视频，好处同样存在：播放使用HTTP协议的单个 MP4 格式的视频文件时，需要代理服务器支持 HTTP range request 以获取大文件中的一部分，但不是所有的代理服务器都对此有良好的支持。而 M3U 则只需要根据列表文件中的时间轴找出对应的 TS 片段下载即可，不需要 range request，对代理服务器的要求小很多。所有代理服务器都支持小文件的高效缓存。</p><p>4、为什么要用 TS 而不是 MP4，这是因为两个 TS 片段可以无缝拼接，播放器能连续播放，而 MP4 文件由于编码方式的原因，两段 MP4 不能无缝拼接，播放器连续播放两个 MP4 文件会出现破音和画面间断，影响用户体验。</p><p>后面再记录下如何下载此类文件对应的视频吧。</p><p>一起学习，一起进步。</p><hr><p>欢迎关注微信公众号，你的资源可变现：【乐知付加密平台】<br><img src="/images/wechat_account.png" alt="乐知付加密平台"></p><p>一起学习，一起进步。<br></p>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;最近下载解析某视频网站上的视频，想下载下来，一顿操作猛如虎，发现获取到的视频文件不是mp4，不是flv，不是mav，而是m3u8格式的，只有几十B大小。&lt;br&gt;那这个m3u8格式的视频文件是怎么加载到视频的呢？&lt;br&gt;且看下文。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="前端" scheme="https://chenzuoli.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
+    
+    <category term="HTML" scheme="https://chenzuoli.github.io/categories/%E5%89%8D%E7%AB%AF/HTML/"/>
+    
+    <category term="视频" scheme="https://chenzuoli.github.io/categories/%E5%89%8D%E7%AB%AF/HTML/%E8%A7%86%E9%A2%91/"/>
+    
+    
+    <category term="m4u8" scheme="https://chenzuoli.github.io/tags/m4u8/"/>
+    
+    <category term="视频格式" scheme="https://chenzuoli.github.io/tags/%E8%A7%86%E9%A2%91%E6%A0%BC%E5%BC%8F/"/>
+    
+    <category term="流媒体" scheme="https://chenzuoli.github.io/tags/%E6%B5%81%E5%AA%92%E4%BD%93/"/>
+    
+  </entry>
   
   <entry>
     <title>常用工具站分享</title>
@@ -501,27 +530,6 @@
     <category term="http" scheme="https://chenzuoli.github.io/tags/http/"/>
     
     <category term="域名恶意解析" scheme="https://chenzuoli.github.io/tags/%E5%9F%9F%E5%90%8D%E6%81%B6%E6%84%8F%E8%A7%A3%E6%9E%90/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>vision_pro开发入门一-了解基本情况</title>
-    <link href="https://chenzuoli.github.io/2024/03/21/vision-pro%E5%BC%80%E5%8F%91%E5%85%A5%E9%97%A8%E4%B8%80/"/>
-    <id>https://chenzuoli.github.io/2024/03/21/vision-pro%E5%BC%80%E5%8F%91%E5%85%A5%E9%97%A8%E4%B8%80/</id>
-    <published>2024-03-21T14:51:50.000Z</published>
-    <updated>2024-04-05T07:27:45.801Z</updated>
-    
-    <content type="html"><![CDATA[<p>先了解下开发步骤。</p><span id="more"></span><h1 id="一、环境准备"><a href="#一、环境准备" class="headerlink" title="一、环境准备"></a>一、环境准备</h1><p>xcode开发工具<br>vision pro模拟器</p><h1 id="二、项目开发"><a href="#二、项目开发" class="headerlink" title="二、项目开发"></a>二、项目开发</h1><p>新建项目<br>选择vision os</p><p>项目的主要文件：</p><ol><li>HelloVisionProWorldApp.swift<br>入口，尽管它是个最重要的文件，但是只定义了入口，所以没必要看了。核心在我看来只有一句话：“WindowGroup{ContentView()}” 与”let renderer &#x3D; Renderer(layerRenderer)” 定义好了 窗口与 Render<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line">import SwiftUI</span><br><span class="line">import CompositorServices</span><br><span class="line"></span><br><span class="line">struct ContentStageConfiguration: CompositorLayerConfiguration &#123;</span><br><span class="line">    func makeConfiguration(capabilities: LayerRenderer.Capabilities, configuration: inout LayerRenderer.Configuration) &#123;</span><br><span class="line">        configuration.depthFormat = .depth32Float</span><br><span class="line">        configuration.colorFormat = .bgra8Unorm_srgb</span><br><span class="line">    </span><br><span class="line">        let foveationEnabled = capabilities.supportsFoveation</span><br><span class="line">        configuration.isFoveationEnabled = foveationEnabled</span><br><span class="line">        </span><br><span class="line">        let options: LayerRenderer.Capabilities.SupportedLayoutsOptions = foveationEnabled ? [.foveationEnabled] : []</span><br><span class="line">        let supportedLayouts = capabilities.supportedLayouts(options: options)</span><br><span class="line">        </span><br><span class="line">        configuration.layout = supportedLayouts.contains(.layered) ? .layered : .dedicated</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">@main</span><br><span class="line">struct TestingApp: App &#123;</span><br><span class="line">    var body: some Scene &#123;</span><br><span class="line">        WindowGroup &#123;</span><br><span class="line">            ContentView()</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        ImmersiveSpace(id: &quot;ImmersiveSpace&quot;) &#123;</span><br><span class="line">            CompositorLayer(configuration: ContentStageConfiguration()) &#123; layerRenderer in</span><br><span class="line">                let renderer = Renderer(layerRenderer)</span><br><span class="line">                renderer.startRenderLoop()</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;.immersionStyle(selection: .constant(.full), in: .full)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li><li>ContentView.swift<br>核心文件<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br></pre></td><td class="code"><pre><span class="line">import SwiftUI</span><br><span class="line">import RealityKit</span><br><span class="line">import RealityKitContent</span><br><span class="line"></span><br><span class="line">struct ContentView: View &#123;</span><br><span class="line"></span><br><span class="line">    @State private var showImmersiveSpace = false</span><br><span class="line">    @State private var immersiveSpaceIsShown = false</span><br><span class="line"></span><br><span class="line">    @Environment(\.openImmersiveSpace) var openImmersiveSpace</span><br><span class="line">    @Environment(\.dismissImmersiveSpace) var dismissImmersiveSpace</span><br><span class="line"></span><br><span class="line">    var body: some View &#123;</span><br><span class="line">        VStack &#123;</span><br><span class="line">            Model3D(named: &quot;Scene&quot;, bundle: realityKitContentBundle)</span><br><span class="line">                .padding(.bottom, 50)</span><br><span class="line"></span><br><span class="line">            Text(&quot;Hello, world!&quot;)</span><br><span class="line"></span><br><span class="line">            Toggle(&quot;Show Immersive Space&quot;, isOn: $showImmersiveSpace)</span><br><span class="line">                .toggleStyle(.button)</span><br><span class="line">                .padding(.top, 50)</span><br><span class="line">        &#125;</span><br><span class="line">        .padding()</span><br><span class="line">        .onChange(of: showImmersiveSpace) &#123; _, newValue in</span><br><span class="line">            Task &#123;</span><br><span class="line">                if newValue &#123;</span><br><span class="line">                    switch await openImmersiveSpace(id: &quot;ImmersiveSpace&quot;) &#123;</span><br><span class="line">                    case .opened:</span><br><span class="line">                        immersiveSpaceIsShown = true</span><br><span class="line">                    case .error, .userCancelled:</span><br><span class="line">                        fallthrough</span><br><span class="line">                    @unknown default:</span><br><span class="line">                        immersiveSpaceIsShown = false</span><br><span class="line">                        showImmersiveSpace = false</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125; else if immersiveSpaceIsShown &#123;</span><br><span class="line">                    await dismissImmersiveSpace()</span><br><span class="line">                    immersiveSpaceIsShown = false</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">#Preview(windowStyle: .automatic) &#123;</span><br><span class="line">    ContentView()</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>这个文件差不多是整个 VisionPro 应用的核心所在，你只用了简单的一点定义就把一个 3D 世界呈现在你面前了。<br>核心代码只有三行，定义了 Model3D， 设置显示的 Text 为“Hello, world!”，另一个 Toggle 控件”Show Inmersive Space” ，就能看到下面这个完整的 3D 世界。</li></ol><p>再来分析一下代码：</p><p>VStack 定义了 3D 的布局，其实它是一个标准的 Swift 开发 App 的方式，可以说广大 iOS 的开发者基本上可以无缝迁移到 VisionPro 的开发上，这个生态能力真的相当不错。</p><p>然后开发语言也是 Swift，没有任何差异。</p><ol start="3"><li>Renderer.swift</li><li>Shaders.metal</li><li>ShaderTypes.h</li></ol><p>Renders 导入了 Metal， 而 Shaders 与 SHaderTypes 共同定义 Shader 的内容。这里的东西是你实际开发的内容。</p><ul><li>Renderer：负责设置和管理渲染流程。<br>成员变量<br>定义了一系列变量，如Metal设备、命令队列、uniform缓冲区、渲染管线状态、深度状态、纹理等。<br>初始化<br>init 方法初始化Renderer类，设置Metal相关配置，加载网格(mesh)和纹理等。<br>方法<br>startRenderLoop：开始渲染循环，用于不断渲染新的帧。<br>buildMetalVertexDescriptor：设置Metal的顶点描述符，用于定义顶点数据的组织方式。<br>buildRenderPipelineWithDevice：创建渲染管线，这是渲染过程的一个重要部分，定义了如何处理顶点和片段。<br>buildMesh：创建并配置网格，用于渲染。<br>loadTexture：加载纹理，用于渲染中的表面细节。<br>updateDynamicBufferState, updateGameState：更新渲染状态，例如处理uniform缓冲区的数据和计算模型的变换。<br>renderFrame：渲染单个帧的逻辑，包括准备命令缓冲区、配置渲染编码器、绘制网格等。<br>renderLoop：持续渲染的循环，负责调用renderFrame来渲染每一帧。</li></ul><p>所以，未来你大概率要读懂这里的每一行代码，可能对于应用开发者，这是一件难的事。</p><h1 id="三、模拟运行"><a href="#三、模拟运行" class="headerlink" title="三、模拟运行"></a>三、模拟运行</h1><p>可以看到，在模拟器中运行的结果跟在开发中运行的结果是一样的。</p><p>这是个开始，以后我会慢慢增加更多的 VisionPro 开发介绍的，简单的感受。</p><p>iOS 熟悉 swift 开发的人可以无缝迁移到VisionPro开发上来，接下来你可能需要懂的就是一些 3D 相关的知识，相信 3D 这事慢慢会成为一个热点的。毕竟 Apple 的生态能力的强大是大家所共知的。</p><p>加油，真的期望看到 IT 世界的新变化。</p><p>建议有机会学学 swift, blender, 这样你对于 VisionPro 的开发会有足够的认知的。</p><hr><p>学无止境。</p>]]></content>
-    
-    
-    <summary type="html">&lt;p&gt;先了解下开发步骤。&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="VisionOS" scheme="https://chenzuoli.github.io/categories/VisionOS/"/>
-    
-    
-    <category term="VisionOS" scheme="https://chenzuoli.github.io/tags/VisionOS/"/>
     
   </entry>
   
