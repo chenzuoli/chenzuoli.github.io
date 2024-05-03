@@ -16725,7 +16725,10 @@ API
 <p>2、降低源服务器的负载压力。M3U的特点是将流媒体切分为若干 TS 片段，然后通过一个扩展的 m3u 列表文件将这些 TS 片段集中起来供客户端播放器接收。这样做相比使用 RTSP 协议的好处在于，一旦切分完成，之后的分发过程完全不需要额外使用任何专门软件，普通的网络服务器即可，大大降低了 CDN 边缘服务器的配置要求，可以使用任何现成的CDN。分发使用的协议是最常见 HTTP，代理服务器对这个协议的缓存优化相当成熟，而很少有代理服务器对 RTSP 的进行缓存优化。</p>
 <p>3、对于非实时视频，好处同样存在：播放使用HTTP协议的单个 MP4 格式的视频文件时，需要代理服务器支持 HTTP range request 以获取大文件中的一部分，但不是所有的代理服务器都对此有良好的支持。而 M3U 则只需要根据列表文件中的时间轴找出对应的 TS 片段下载即可，不需要 range request，对代理服务器的要求小很多。所有代理服务器都支持小文件的高效缓存。</p>
 <p>4、为什么要用 TS 而不是 MP4，这是因为两个 TS 片段可以无缝拼接，播放器能连续播放，而 MP4 文件由于编码方式的原因，两段 MP4 不能无缝拼接，播放器连续播放两个 MP4 文件会出现破音和画面间断，影响用户体验。</p>
-<p>后面再记录下如何下载此类文件对应的视频吧。</p>
+<h1 id="下载"><a href="#下载" class="headerlink" title="下载"></a>下载</h1><p>这里是python的代码演示：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&quot;&quot;&quot;</span><br><span class="line">pip install m3u8-To-MP4==0.1.11</span><br><span class="line">&quot;&quot;&quot;</span><br><span class="line"></span><br><span class="line">import m3u8_To_MP4</span><br><span class="line"></span><br><span class="line">if __name__ == &#x27;__main__&#x27;:</span><br><span class="line">    # 1. Download videos from uri.</span><br><span class="line">    m3u8_To_MP4.multithread_download(&#x27;https://svipsvip.ffzyread1.com/20240424/26411_4538b0e5/index.m3u8&#x27;)</span><br><span class="line"></span><br><span class="line">    # 2. Download videos from existing m3u8 files.</span><br><span class="line">    # m3u8_file_path = &#x27;/Users/zuolichen/Downloads/index.m3u8&#x27;</span><br><span class="line">    # m3u8_To_MP4.multithread_file_download(&#x27;https://svipsvip.ffzyread1.com/20240424/26411_4538b0e5/index.m3u8&#x27;, m3u8_file_path)</span><br><span class="line"></span><br><span class="line">    # For compatibility, i reserve this api, but i do not recommend to you again.</span><br><span class="line">    # m3u8_To_MP4.download(&#x27;http://videoserver.com/playlist.m3u8&#x27;)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>后面再记录下如何分段下载这类视频流媒体文件吧。</p>
 <p>一起学习，一起进步。</p>
 <hr>
 <p>欢迎关注微信公众号，你的资源可变现：【乐知付加密平台】<br><img src="/images/wechat_account.png" alt="乐知付加密平台"></p>
