@@ -6,7 +6,7 @@
   <link href="https://chenzuoli.github.io/atom.xml" rel="self"/>
   
   <link href="https://chenzuoli.github.io/"/>
-  <updated>2024-05-05T06:39:22.519Z</updated>
+  <updated>2024-05-05T12:26:16.153Z</updated>
   <id>https://chenzuoli.github.io/</id>
   
   <author>
@@ -15,6 +15,40 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>ffmpeg的安装与使用</title>
+    <link href="https://chenzuoli.github.io/2024/05/05/ffmpeg%E7%9A%84%E5%AE%89%E8%A3%85%E4%B8%8E%E4%BD%BF%E7%94%A8/"/>
+    <id>https://chenzuoli.github.io/2024/05/05/ffmpeg%E7%9A%84%E5%AE%89%E8%A3%85%E4%B8%8E%E4%BD%BF%E7%94%A8/</id>
+    <published>2024-05-05T12:15:56.000Z</published>
+    <updated>2024-05-05T12:26:16.153Z</updated>
+    
+    <content type="html"><![CDATA[<p>FFmpeg是一个开源的命令行工具，广泛用于处理视频和音频文件，包括转换格式、剪辑、混流、解码、编码等。以下是一些基本的FFmpeg使用示例和它们的含义：</p><p>linux与类unix系统中的ffmepg安装教程。</p><span id="more"></span><h1 id="安装ffmpeg："><a href="#安装ffmpeg：" class="headerlink" title="安装ffmpeg："></a>安装ffmpeg：</h1><h2 id="直接安装"><a href="#直接安装" class="headerlink" title="直接安装"></a>直接安装</h2><p>在大多数Linux发行版中，可以使用包管理器安装FFmpeg：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install ffmpeg   <span class="comment"># Debian/Ubuntu</span></span><br><span class="line">sudo yum install ffmpeg      <span class="comment"># CentOS/RedHat</span></span><br><span class="line">sudo pacman -S ffmpeg        <span class="comment"># Arch Linux</span></span><br></pre></td></tr></table></figure><h2 id="源码安装"><a href="#源码安装" class="headerlink" title="源码安装"></a>源码安装</h2><p>地址：<a href="https://ffmpeg.org/download.html">https://ffmpeg.org/download.html</a></p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">tar zxvf ffmpeg-7.0.tar.gz</span><br><span class="line">cd ffmpeg-7.0</span><br><span class="line">./configure --disable-x86asm</span><br><span class="line">make &amp;&amp; make install</span><br></pre></td></tr></table></figure><h2 id="环境变量："><a href="#环境变量：" class="headerlink" title="环境变量："></a>环境变量：</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">export IMAGEIO_FFMPEG_EXE=/Users/zuolichen/opt/software/ffmpeg-7.0</span><br><span class="line">vim ~/.zprofile</span><br><span class="line">export PATH=/Users/zuolichen/opt/software/ffmpeg-7.0/bin:$PATH</span><br><span class="line"></span><br></pre></td></tr></table></figure><h1 id="ffmpeg基本使用"><a href="#ffmpeg基本使用" class="headerlink" title="ffmpeg基本使用"></a>ffmpeg基本使用</h1><h2 id="转换视频格式"><a href="#转换视频格式" class="headerlink" title="转换视频格式"></a>转换视频格式</h2><p>将一个视频文件从一种格式转换到另一种格式，例如将<code>.mp4</code>转换为<code>.avi</code>：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ffmpeg -i input.mp4 -c:v libxvid -q:v 2 -c:a libmp3lame -q:a 2 output.avi</span><br></pre></td></tr></table></figure><h2 id="视频裁剪"><a href="#视频裁剪" class="headerlink" title="视频裁剪"></a>视频裁剪</h2><p>裁剪视频的指定部分：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ffmpeg -i input.mp4 -ss 00:00:10 -t 00:01:00 -c copy output.mp4</span><br></pre></td></tr></table></figure><h2 id="提取音频"><a href="#提取音频" class="headerlink" title="提取音频"></a>提取音频</h2><p>从视频文件中提取音频到单独的文件：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ffmpeg -i video.mp4 -q:a 0 -map a audio.mp3</span><br></pre></td></tr></table></figure><h2 id="视频转GIF"><a href="#视频转GIF" class="headerlink" title="视频转GIF"></a>视频转GIF</h2><p>将视频的一部分转换成GIF动图：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ffmpeg -i video.mp4 -ss 00:00:10 -t 10 -s 320x240 -r 15 -f image2pipe -vcodec ppm - | gifsicle --optimize=3 --delay=2 &gt; output.gif</span><br></pre></td></tr></table></figure><h2 id="视频直播"><a href="#视频直播" class="headerlink" title="视频直播"></a>视频直播</h2><p>使用RTMP协议进行视频直播：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ffmpeg -re -i input.mp4 -c:v libx264 -preset veryfast -maxrate 2000k -bufsize 4000k -pix_fmt yuv420p -g 50 -c:a aac -b:a 128k -ac 2 -ar 44100 -f flv rtmp://live.twitch.tv/app/stream_key</span><br></pre></td></tr></table></figure><h2 id="视频编码"><a href="#视频编码" class="headerlink" title="视频编码"></a>视频编码</h2><p>使用H.264编码器对视频进行编码：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ffmpeg -i input.avi -c:v libx264 -crf 23 -c:a aac -b:a 128k output.mp4</span><br></pre></td></tr></table></figure><h2 id="调整视频分辨率"><a href="#调整视频分辨率" class="headerlink" title="调整视频分辨率"></a>调整视频分辨率</h2><p>改变视频的分辨率：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ffmpeg -i input.mp4 -s 1280x720 output.mp4</span><br></pre></td></tr></table></figure><h2 id="视频合并"><a href="#视频合并" class="headerlink" title="视频合并"></a>视频合并</h2><p>将多个视频文件合并为一个文件：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ffmpeg -i <span class="string">&quot;concat:part1.mp4|part2.mp4|part3.mp4&quot;</span> -c copy -map 0 output.mp4</span><br></pre></td></tr></table></figure><h2 id="视频帧提取"><a href="#视频帧提取" class="headerlink" title="视频帧提取"></a>视频帧提取</h2><p>从视频中提取单独的帧作为图片：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ffmpeg -i input.mp4 -r 1 -f image2 output_%03d.png</span><br></pre></td></tr></table></figure><h2 id="音频视频同步"><a href="#音频视频同步" class="headerlink" title="音频视频同步"></a>音频视频同步</h2><p>如果视频和音频不同步，尝试重新同步：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ffmpeg -i out_of_sync.mp4 -af <span class="string">&quot;arealtime,asetnsamples=1000&quot;</span> sync.mp4</span><br></pre></td></tr></table></figure><h2 id="查看文件信息"><a href="#查看文件信息" class="headerlink" title="查看文件信息"></a>查看文件信息</h2><p>查看视频文件的信息，包括格式、持续时间、码率、编解码器等：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ffmpeg -i input.mp4</span><br></pre></td></tr></table></figure><p>FFmpeg的选项非常多，以上只是一些基本的用法。FFmpeg的强大之处在于其灵活性和模块化，可以用于各种复杂的音视频处理任务。在实际使用中，你可能需要根据具体需求调整命令和参数。</p><hr><p>欢迎关注微信公众号，您的资源可变现：【乐知付加密平台】<br><br><br><img src="/images/wechat_account.png" alt="乐知付加密平台"></p><p>一起学习，一起进步。<br></p>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;FFmpeg是一个开源的命令行工具，广泛用于处理视频和音频文件，包括转换格式、剪辑、混流、解码、编码等。以下是一些基本的FFmpeg使用示例和它们的含义：&lt;/p&gt;
+&lt;p&gt;linux与类unix系统中的ffmepg安装教程。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="工具" scheme="https://chenzuoli.github.io/categories/%E5%B7%A5%E5%85%B7/"/>
+    
+    <category term="ffmpeg" scheme="https://chenzuoli.github.io/categories/%E5%B7%A5%E5%85%B7/ffmpeg/"/>
+    
+    
+    <category term="图片" scheme="https://chenzuoli.github.io/tags/%E5%9B%BE%E7%89%87/"/>
+    
+    <category term="工具" scheme="https://chenzuoli.github.io/tags/%E5%B7%A5%E5%85%B7/"/>
+    
+    <category term="流媒体" scheme="https://chenzuoli.github.io/tags/%E6%B5%81%E5%AA%92%E4%BD%93/"/>
+    
+    <category term="ffmpeg" scheme="https://chenzuoli.github.io/tags/ffmpeg/"/>
+    
+    <category term="音频" scheme="https://chenzuoli.github.io/tags/%E9%9F%B3%E9%A2%91/"/>
+    
+    <category term="视频" scheme="https://chenzuoli.github.io/tags/%E8%A7%86%E9%A2%91/"/>
+    
+  </entry>
   
   <entry>
     <title>资源分享-轮滑教程</title>
@@ -145,21 +179,31 @@
     <link href="https://chenzuoli.github.io/2024/05/03/%E5%A6%82%E4%BD%95%E5%88%B6%E4%BD%9Cm3u8%E8%A7%86%E9%A2%91%E6%B5%81%E5%AA%92%E4%BD%93%E6%96%87%E4%BB%B6/"/>
     <id>https://chenzuoli.github.io/2024/05/03/%E5%A6%82%E4%BD%95%E5%88%B6%E4%BD%9Cm3u8%E8%A7%86%E9%A2%91%E6%B5%81%E5%AA%92%E4%BD%93%E6%96%87%E4%BB%B6/</id>
     <published>2024-05-03T04:08:32.000Z</published>
-    <updated>2024-05-05T06:14:35.857Z</updated>
+    <updated>2024-05-05T12:26:39.962Z</updated>
     
-    <content type="html"><![CDATA[<hr><p>欢迎关注微信公众号，你的资源可变现：【乐知付加密平台】<br><img src="/images/wechat_account.png" alt="乐知付加密平台"></p><p>一起学习，一起进步。<br></p>]]></content>
+    <content type="html"><![CDATA[<p>利用ffmpeg生成m3u8流媒体文件。</p><span id="more"></span><p>ffmpeg的安装和基本介绍，可移步这篇文章：</p><p>命令：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ffmpeg -i video_subclip.mp4 -vcodec copy -acodec copy -bsf:v h264_mp4toannexb -hls_time 10 -hls_list_size 0 -f hls m3u8/video.m3u8</span><br></pre></td></tr></table></figure><p>输出的结果文件：<br><img src="/2024/05/03/%E5%A6%82%E4%BD%95%E5%88%B6%E4%BD%9Cm3u8%E8%A7%86%E9%A2%91%E6%B5%81%E5%AA%92%E4%BD%93%E6%96%87%E4%BB%B6/image.png" alt="ts"></p><p>参数释义：<br>ffmpeg命令是用来将一个名为video_subclip.mp4的MP4视频文件转换成HLS（HTTP Live Streaming）流媒体格式的。下面是命令中每个参数的含义：</p><ol><li>-i video_subclip.mp4：指定输入文件是video_subclip.mp4。</li><li>-vcodec copy：指定视频编解码器使用复制模式，即不转换视频，直接使用原始视频流。</li><li>-acodec copy：指定音频编解码器使用复制模式，即不转换音频，直接使用原始音频流。</li><li>-bsf:v h264_mp4toannexb：使用比特流过滤器（bitstream filter）将H.264视频码流从MP4格式转换为AnnexB格式。这是因为HLS通常使用AnnexB格式的H.264码流。</li><li>-hls_time 10：设置每个HLS视频分块（segment）的时间长度为10秒。</li><li>-hls_list_size 0：设置HLS播放列表（m3u8文件）中包含的分块数量。如果设置为0，表示不限制列表中的分块数量，将包含所有生成的分块。</li><li>-f hls：指定输出格式为HLS。</li><li>m3u8&#x2F;video.m3u8：指定输出文件的基本路径和文件名。video.m3u8是播放列表文件，它将包含指向实际媒体数据分块的引用。</li></ol><p>总结来说，这个命令会创建一个HLS流，其中视频和音频码流不做任何转换，直接复制原始MP4文件中的流，并将H.264视频码流转换为AnnexB格式以兼容HLS标准。生成的HLS流将由一个播放列表文件（video.m3u8）和多个媒体数据分块组成，每个分块时长为10秒。</p><hr><p>欢迎关注微信公众号，你的资源可变现：【乐知付加密平台】<br><img src="/images/wechat_account.png" alt="乐知付加密平台"></p><p>一起学习，一起进步。<br></p>]]></content>
     
     
-      
-      
-    <summary type="html">&lt;hr&gt;
-&lt;p&gt;欢迎关注微信公众号，你的资源可变现：【乐知付加密平台】&lt;br&gt;&lt;img src=&quot;/images/wechat_account.png&quot; alt=&quot;乐知付加密平台&quot;&gt;&lt;/p&gt;
-&lt;p&gt;一起学习，一起进步。&lt;br&gt;&lt;/p&gt;
-</summary>
-      
+    <summary type="html">&lt;p&gt;利用ffmpeg生成m3u8流媒体文件。&lt;/p&gt;</summary>
     
     
     
+    <category term="工具" scheme="https://chenzuoli.github.io/categories/%E5%B7%A5%E5%85%B7/"/>
+    
+    <category term="ffmpeg" scheme="https://chenzuoli.github.io/categories/%E5%B7%A5%E5%85%B7/ffmpeg/"/>
+    
+    
+    <category term="图片" scheme="https://chenzuoli.github.io/tags/%E5%9B%BE%E7%89%87/"/>
+    
+    <category term="工具" scheme="https://chenzuoli.github.io/tags/%E5%B7%A5%E5%85%B7/"/>
+    
+    <category term="流媒体" scheme="https://chenzuoli.github.io/tags/%E6%B5%81%E5%AA%92%E4%BD%93/"/>
+    
+    <category term="ffmpeg" scheme="https://chenzuoli.github.io/tags/ffmpeg/"/>
+    
+    <category term="音频" scheme="https://chenzuoli.github.io/tags/%E9%9F%B3%E9%A2%91/"/>
+    
+    <category term="视频" scheme="https://chenzuoli.github.io/tags/%E8%A7%86%E9%A2%91/"/>
     
   </entry>
   
@@ -497,36 +541,6 @@
     <category term="html" scheme="https://chenzuoli.github.io/tags/html/"/>
     
     <category term="flask" scheme="https://chenzuoli.github.io/tags/flask/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>乐知付加密平台-推广功能上线</title>
-    <link href="https://chenzuoli.github.io/2024/04/06/%E4%B9%90%E7%9F%A5%E4%BB%98%E5%8A%A0%E5%AF%86%E5%B9%B3%E5%8F%B0-%E6%8E%A8%E5%B9%BF%E5%8A%9F%E8%83%BD%E4%B8%8A%E7%BA%BF/"/>
-    <id>https://chenzuoli.github.io/2024/04/06/%E4%B9%90%E7%9F%A5%E4%BB%98%E5%8A%A0%E5%AF%86%E5%B9%B3%E5%8F%B0-%E6%8E%A8%E5%B9%BF%E5%8A%9F%E8%83%BD%E4%B8%8A%E7%BA%BF/</id>
-    <published>2024-04-06T05:11:14.000Z</published>
-    <updated>2024-04-14T03:18:27.111Z</updated>
-    
-    <content type="html"><![CDATA[<p>乐知付加密平台的推广赚取佣金功能上线啦。</p><p><img src="/2024/04/06/%E4%B9%90%E7%9F%A5%E4%BB%98%E5%8A%A0%E5%AF%86%E5%B9%B3%E5%8F%B0-%E6%8E%A8%E5%B9%BF%E5%8A%9F%E8%83%BD%E4%B8%8A%E7%BA%BF/%E4%B9%90%E7%9F%A5%E4%BB%98-%E6%8E%A8%E5%B9%BF%E8%AE%A1%E5%88%92.jpg" alt="复制分享"></p><span id="more"></span><h1 id="说明"><a href="#说明" class="headerlink" title="说明"></a>说明</h1><p>推广功能的上线，旨在散播平台的服务能力，让更多人参与进来，让更多有资源、找资源的朋友看到，分享资源，同时能够获得丰厚的奖励回报。</p><h1 id="操作流程"><a href="#操作流程" class="headerlink" title="操作流程"></a>操作流程</h1><ol><li>登录后台：<a href="https://lezhifu.cc/admin/user_ref">https://lezhifu.cc/admin/user_ref</a>，进入个人中心-&gt;我的邀请，</li><li>生成邀请码<br><img src="/2024/04/06/%E4%B9%90%E7%9F%A5%E4%BB%98%E5%8A%A0%E5%AF%86%E5%B9%B3%E5%8F%B0-%E6%8E%A8%E5%B9%BF%E5%8A%9F%E8%83%BD%E4%B8%8A%E7%BA%BF/add_ref_code.png" alt="生成邀请码"></li><li>复制链接，将链接分享到自媒体平台（微信、抖音、百度、头条、微博、知乎等）<br><img src="/2024/04/06/%E4%B9%90%E7%9F%A5%E4%BB%98%E5%8A%A0%E5%AF%86%E5%B9%B3%E5%8F%B0-%E6%8E%A8%E5%B9%BF%E5%8A%9F%E8%83%BD%E4%B8%8A%E7%BA%BF/share.png" alt="复制分享"></li></ol><h1 id="奖励规则"><a href="#奖励规则" class="headerlink" title="奖励规则"></a>奖励规则</h1><ol><li>新用户通过您的链接进行注册，就会将此新用户关联为您的下线；</li><li>当您的下线进行资源交易时，您将获取订单金额服务费对应比例的奖励；</li><li>奖励比例高达40%。</li></ol><h1 id="平台介绍"><a href="#平台介绍" class="headerlink" title="平台介绍"></a>平台介绍</h1><p>乐知付加密平台，是一个以用户为中心的内容变现平台，无论是专业创作者还是个人爱好者，都可以通过将您的资源变现。</p><p>如果您手里有资源，那么不需要自己搭建一个网站去卖资源，也不需要费周折去自媒体上宣传推广，引流到社群或者知识星球后，然后卖课。</p><p>通过平台卖家将支付链接分享出去，买家可方便快捷地购买您的资源，您不需要过多的时间去管理和维护您的客户。</p><p>如果您是买家，资源会比其他平台类知识付费平台优惠划算，您既能获取知识，也能将知识散播出去获取收入。</p><p>新增的推广功能，可以无限地扩大您的收入，一旦成为您的下线，后续下线的所有交易您都会获得奖励佣金。</p><hr><p>欢迎关注微信公众号，您的资源可变现：【乐知付加密平台】<br><img src="/images/wechat_account.png" alt="乐知付加密平台"></p><p>一起学习，一起进步。<br></p>]]></content>
-    
-    
-    <summary type="html">&lt;p&gt;乐知付加密平台的推广赚取佣金功能上线啦。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;/2024/04/06/%E4%B9%90%E7%9F%A5%E4%BB%98%E5%8A%A0%E5%AF%86%E5%B9%B3%E5%8F%B0-%E6%8E%A8%E5%B9%BF%E5%8A%9F%E8%83%BD%E4%B8%8A%E7%BA%BF/%E4%B9%90%E7%9F%A5%E4%BB%98-%E6%8E%A8%E5%B9%BF%E8%AE%A1%E5%88%92.jpg&quot; alt=&quot;复制分享&quot;&gt;&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="网站" scheme="https://chenzuoli.github.io/categories/%E7%BD%91%E7%AB%99/"/>
-    
-    <category term="乐知付" scheme="https://chenzuoli.github.io/categories/%E7%BD%91%E7%AB%99/%E4%B9%90%E7%9F%A5%E4%BB%98/"/>
-    
-    <category term="推广" scheme="https://chenzuoli.github.io/categories/%E7%BD%91%E7%AB%99/%E4%B9%90%E7%9F%A5%E4%BB%98/%E6%8E%A8%E5%B9%BF/"/>
-    
-    
-    <category term="乐知付" scheme="https://chenzuoli.github.io/tags/%E4%B9%90%E7%9F%A5%E4%BB%98/"/>
-    
-    <category term="乐知付加密" scheme="https://chenzuoli.github.io/tags/%E4%B9%90%E7%9F%A5%E4%BB%98%E5%8A%A0%E5%AF%86/"/>
-    
-    <category term="密码管理" scheme="https://chenzuoli.github.io/tags/%E5%AF%86%E7%A0%81%E7%AE%A1%E7%90%86/"/>
     
   </entry>
   
