@@ -6,7 +6,7 @@
   <link href="https://chenzuoli.github.io/atom.xml" rel="self"/>
   
   <link href="https://chenzuoli.github.io/"/>
-  <updated>2024-05-03T02:29:58.877Z</updated>
+  <updated>2024-05-05T06:39:22.519Z</updated>
   <id>https://chenzuoli.github.io/</id>
   
   <author>
@@ -15,6 +15,153 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>资源分享-轮滑教程</title>
+    <link href="https://chenzuoli.github.io/2024/05/05/%E8%B5%84%E6%BA%90%E5%88%86%E4%BA%AB-%E8%BD%AE%E6%BB%91%E6%95%99%E7%A8%8B/"/>
+    <id>https://chenzuoli.github.io/2024/05/05/%E8%B5%84%E6%BA%90%E5%88%86%E4%BA%AB-%E8%BD%AE%E6%BB%91%E6%95%99%E7%A8%8B/</id>
+    <published>2024-05-05T06:34:32.000Z</published>
+    <updated>2024-05-05T06:39:22.519Z</updated>
+    
+    <content type="html"><![CDATA[<p>这次分享轮滑教程，感兴趣的同学拿走。</p><span id="more"></span><p>关注公众号【乐知付加密平台】，回复关键字：轮滑</p><p><img src="/2024/05/05/%E8%B5%84%E6%BA%90%E5%88%86%E4%BA%AB-%E8%BD%AE%E6%BB%91%E6%95%99%E7%A8%8B/image.png" alt="tiance"></p><hr><p>欢迎关注微信公众号，你的资源可变现：【乐知付加密平台】<br><img src="/images/wechat_account.png" alt="乐知付加密平台"></p><p>一起学习，一起进步。<br></p>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;这次分享轮滑教程，感兴趣的同学拿走。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="网站" scheme="https://chenzuoli.github.io/categories/%E7%BD%91%E7%AB%99/"/>
+    
+    <category term="乐知付" scheme="https://chenzuoli.github.io/categories/%E7%BD%91%E7%AB%99/%E4%B9%90%E7%9F%A5%E4%BB%98/"/>
+    
+    <category term="资源分享" scheme="https://chenzuoli.github.io/categories/%E7%BD%91%E7%AB%99/%E4%B9%90%E7%9F%A5%E4%BB%98/%E8%B5%84%E6%BA%90%E5%88%86%E4%BA%AB/"/>
+    
+    
+    <category term="乐知付" scheme="https://chenzuoli.github.io/tags/%E4%B9%90%E7%9F%A5%E4%BB%98/"/>
+    
+    <category term="资源分享" scheme="https://chenzuoli.github.io/tags/%E8%B5%84%E6%BA%90%E5%88%86%E4%BA%AB/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>python转换视频格式</title>
+    <link href="https://chenzuoli.github.io/2024/05/05/python%E8%BD%AC%E6%8D%A2%E8%A7%86%E9%A2%91%E6%A0%BC%E5%BC%8F/"/>
+    <id>https://chenzuoli.github.io/2024/05/05/python%E8%BD%AC%E6%8D%A2%E8%A7%86%E9%A2%91%E6%A0%BC%E5%BC%8F/</id>
+    <published>2024-05-05T06:19:19.000Z</published>
+    <updated>2024-05-05T06:25:05.692Z</updated>
+    
+    <content type="html"><![CDATA[<p>展示wmv转avi视频代码示例。</p><span id="more"></span><p>python代码示例：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">&quot;&quot;&quot;</span><br><span class="line">pip install moviepy</span><br><span class="line">&quot;&quot;&quot;</span><br><span class="line"></span><br><span class="line">from moviepy.editor import VideoFileClip</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">def convert_video_format(input_video_path, output_video_path):</span><br><span class="line">    video_clip = VideoFileClip(input_video_path)</span><br><span class="line">    video_clip.write_videofile(output_video_path, codec=&#x27;libx264&#x27;, audio_codec=&#x27;aac&#x27;)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"># 使用函数转换视频格式</span><br><span class="line">convert_video_format(&#x27;Italian.wmv&#x27;, &#x27;Italian.avi&#x27;)</span><br></pre></td></tr></table></figure><p>运行示例：<br><img src="/2024/05/05/python%E8%BD%AC%E6%8D%A2%E8%A7%86%E9%A2%91%E6%A0%BC%E5%BC%8F/image-3.png" alt="example"></p><hr><p>欢迎关注微信公众号，你的资源可变现：【乐知付加密平台】<br><img src="/images/wechat_account.png" alt="乐知付加密平台"></p><p>一起学习，一起进步。<br></p>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;展示wmv转avi视频代码示例。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="Python" scheme="https://chenzuoli.github.io/categories/Python/"/>
+    
+    <category term="视频" scheme="https://chenzuoli.github.io/categories/Python/%E8%A7%86%E9%A2%91/"/>
+    
+    
+    <category term="python" scheme="https://chenzuoli.github.io/tags/python/"/>
+    
+    <category term="视频转换" scheme="https://chenzuoli.github.io/tags/%E8%A7%86%E9%A2%91%E8%BD%AC%E6%8D%A2/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>mac文件系统中为啥出现了@符号导致了权限问题</title>
+    <link href="https://chenzuoli.github.io/2024/05/05/mac%E6%96%87%E4%BB%B6%E7%B3%BB%E7%BB%9F%E4%B8%AD%E4%B8%BA%E5%95%A5%E5%87%BA%E7%8E%B0%E4%BA%86-%E7%AC%A6%E5%8F%B7%E5%AF%BC%E8%87%B4%E4%BA%86%E6%9D%83%E9%99%90%E9%97%AE%E9%A2%98/"/>
+    <id>https://chenzuoli.github.io/2024/05/05/mac%E6%96%87%E4%BB%B6%E7%B3%BB%E7%BB%9F%E4%B8%AD%E4%B8%BA%E5%95%A5%E5%87%BA%E7%8E%B0%E4%BA%86-%E7%AC%A6%E5%8F%B7%E5%AF%BC%E8%87%B4%E4%BA%86%E6%9D%83%E9%99%90%E9%97%AE%E9%A2%98/</id>
+    <published>2024-05-05T06:12:11.000Z</published>
+    <updated>2024-05-05T06:14:34.158Z</updated>
+    
+    <content type="html"><![CDATA[<p><img src="/2024/05/05/mac%E6%96%87%E4%BB%B6%E7%B3%BB%E7%BB%9F%E4%B8%AD%E4%B8%BA%E5%95%A5%E5%87%BA%E7%8E%B0%E4%BA%86-%E7%AC%A6%E5%8F%B7%E5%AF%BC%E8%87%B4%E4%BA%86%E6%9D%83%E9%99%90%E9%97%AE%E9%A2%98/image-1.png" alt="error"></p><p><img src="/2024/05/05/mac%E6%96%87%E4%BB%B6%E7%B3%BB%E7%BB%9F%E4%B8%AD%E4%B8%BA%E5%95%A5%E5%87%BA%E7%8E%B0%E4%BA%86-%E7%AC%A6%E5%8F%B7%E5%AF%BC%E8%87%B4%E4%BA%86%E6%9D%83%E9%99%90%E9%97%AE%E9%A2%98/image-2.png" alt="@"></p><hr><p>欢迎关注微信公众号，你的资源可变现：【乐知付加密平台】<br><img src="/images/wechat_account.png" alt="乐知付加密平台"></p><p>一起学习，一起进步。<br></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;img src=&quot;/2024/05/05/mac%E6%96%87%E4%BB%B6%E7%B3%BB%E7%BB%9F%E4%B8%AD%E4%B8%BA%E5%95%A5%E5%87%BA%E7%8E%B0%E4%BA%86-%E7%AC%A6%E5%8F%B7%E5</summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>python转换音频格式</title>
+    <link href="https://chenzuoli.github.io/2024/05/05/python%E8%BD%AC%E6%8D%A2%E9%9F%B3%E9%A2%91%E6%A0%BC%E5%BC%8F/"/>
+    <id>https://chenzuoli.github.io/2024/05/05/python%E8%BD%AC%E6%8D%A2%E9%9F%B3%E9%A2%91%E6%A0%BC%E5%BC%8F/</id>
+    <published>2024-05-05T05:21:37.000Z</published>
+    <updated>2024-05-05T06:20:17.054Z</updated>
+    
+    <content type="html"><![CDATA[<p>展示mp3转wav音频代码示例。</p><span id="more"></span><p>这里是python示例：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">pip install pydub </span><br><span class="line"></span><br><span class="line">def trans_audio_type():</span><br><span class="line">    from pydub import AudioSegment</span><br><span class="line">    audio_file = &quot;音频.mp3&quot;</span><br><span class="line">    sound = AudioSegment.from_mp3(audio_file)</span><br><span class="line">    sound.export(&quot;音频.wav&quot;, format=&quot;wav&quot;)</span><br></pre></td></tr></table></figure><hr><p>欢迎关注微信公众号，你的资源可变现：【乐知付加密平台】<br><img src="/images/wechat_account.png" alt="乐知付加密平台"></p><p>一起学习，一起进步。<br></p>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;展示mp3转wav音频代码示例。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="Python" scheme="https://chenzuoli.github.io/categories/Python/"/>
+    
+    <category term="音频" scheme="https://chenzuoli.github.io/categories/Python/%E9%9F%B3%E9%A2%91/"/>
+    
+    
+    <category term="python" scheme="https://chenzuoli.github.io/tags/python/"/>
+    
+    <category term="音频转换" scheme="https://chenzuoli.github.io/tags/%E9%9F%B3%E9%A2%91%E8%BD%AC%E6%8D%A2/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>资源分享-训狗教程</title>
+    <link href="https://chenzuoli.github.io/2024/05/05/%E8%B5%84%E6%BA%90%E5%88%86%E4%BA%AB-%E8%AE%AD%E7%8B%97%E6%95%99%E7%A8%8B/"/>
+    <id>https://chenzuoli.github.io/2024/05/05/%E8%B5%84%E6%BA%90%E5%88%86%E4%BA%AB-%E8%AE%AD%E7%8B%97%E6%95%99%E7%A8%8B/</id>
+    <published>2024-05-05T05:09:22.000Z</published>
+    <updated>2024-05-05T05:38:51.067Z</updated>
+    
+    <content type="html"><![CDATA[<p>关注公众号【乐知付加密平台】，回复关键字：训狗</p><span id="more"></span><p>主题：如何训练小狗（德国专业驯犬师的因材施教培养计划，8周时间训练出陪伴你一生的伙伴！）</p><p>获取网盘链接，永久有效。</p><p><img src="/2024/05/05/%E8%B5%84%E6%BA%90%E5%88%86%E4%BA%AB-%E8%AE%AD%E7%8B%97%E6%95%99%E7%A8%8B/image.png" alt="dog"></p><hr><p>欢迎关注微信公众号，你的资源可变现：【乐知付加密平台】<br><img src="/images/wechat_account.png" alt="乐知付加密平台"></p><p>一起学习，一起进步。<br></p>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;关注公众号【乐知付加密平台】，回复关键字：训狗&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="网站" scheme="https://chenzuoli.github.io/categories/%E7%BD%91%E7%AB%99/"/>
+    
+    <category term="乐知付" scheme="https://chenzuoli.github.io/categories/%E7%BD%91%E7%AB%99/%E4%B9%90%E7%9F%A5%E4%BB%98/"/>
+    
+    <category term="资源分享" scheme="https://chenzuoli.github.io/categories/%E7%BD%91%E7%AB%99/%E4%B9%90%E7%9F%A5%E4%BB%98/%E8%B5%84%E6%BA%90%E5%88%86%E4%BA%AB/"/>
+    
+    
+    <category term="乐知付" scheme="https://chenzuoli.github.io/tags/%E4%B9%90%E7%9F%A5%E4%BB%98/"/>
+    
+    <category term="资源分享" scheme="https://chenzuoli.github.io/tags/%E8%B5%84%E6%BA%90%E5%88%86%E4%BA%AB/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>如何制作m3u8视频流媒体文件</title>
+    <link href="https://chenzuoli.github.io/2024/05/03/%E5%A6%82%E4%BD%95%E5%88%B6%E4%BD%9Cm3u8%E8%A7%86%E9%A2%91%E6%B5%81%E5%AA%92%E4%BD%93%E6%96%87%E4%BB%B6/"/>
+    <id>https://chenzuoli.github.io/2024/05/03/%E5%A6%82%E4%BD%95%E5%88%B6%E4%BD%9Cm3u8%E8%A7%86%E9%A2%91%E6%B5%81%E5%AA%92%E4%BD%93%E6%96%87%E4%BB%B6/</id>
+    <published>2024-05-03T04:08:32.000Z</published>
+    <updated>2024-05-05T06:14:35.857Z</updated>
+    
+    <content type="html"><![CDATA[<hr><p>欢迎关注微信公众号，你的资源可变现：【乐知付加密平台】<br><img src="/images/wechat_account.png" alt="乐知付加密平台"></p><p>一起学习，一起进步。<br></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;hr&gt;
+&lt;p&gt;欢迎关注微信公众号，你的资源可变现：【乐知付加密平台】&lt;br&gt;&lt;img src=&quot;/images/wechat_account.png&quot; alt=&quot;乐知付加密平台&quot;&gt;&lt;/p&gt;
+&lt;p&gt;一起学习，一起进步。&lt;br&gt;&lt;/p&gt;
+</summary>
+      
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>html视频流媒体m3u8文件解析</title>
@@ -380,156 +527,6 @@
     <category term="乐知付加密" scheme="https://chenzuoli.github.io/tags/%E4%B9%90%E7%9F%A5%E4%BB%98%E5%8A%A0%E5%AF%86/"/>
     
     <category term="密码管理" scheme="https://chenzuoli.github.io/tags/%E5%AF%86%E7%A0%81%E7%AE%A1%E7%90%86/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>vision-pro开发入门三-swift语言学习</title>
-    <link href="https://chenzuoli.github.io/2024/04/05/vision-pro%E5%BC%80%E5%8F%91%E5%85%A5%E9%97%A8%E4%B8%89-swift%E8%AF%AD%E8%A8%80%E5%AD%A6%E4%B9%A0/"/>
-    <id>https://chenzuoli.github.io/2024/04/05/vision-pro%E5%BC%80%E5%8F%91%E5%85%A5%E9%97%A8%E4%B8%89-swift%E8%AF%AD%E8%A8%80%E5%AD%A6%E4%B9%A0/</id>
-    <published>2024-04-05T07:25:30.000Z</published>
-    <updated>2024-04-14T03:16:56.131Z</updated>
-    
-    <content type="html"><![CDATA[<p>学习了swift语言的基本语法，可供大家参考。<br>了解部分特性即可，不必深究，因为你已经学会了其他语言java、python、c#等语言的基本使用，swift也类似。</p><span id="more"></span><p>这里是我学习swift语言的一些源代码：<br><a href="https://github.com/chenzuoli/swift-learning.git">https://github.com/chenzuoli/swift-learning.git</a></p><p>总的看下来，swift也是个面向对象的语言，跟java类似，基本类型、逻辑计算、控制语句、继承、扩展等特性。</p><hr><p>欢迎关注微信公众号，你的资源可变现：【乐知付加密平台】<br><img src="/images/wechat_account.png" alt="乐知付加密平台"></p><p>一起学习，一起进步。<br></p>]]></content>
-    
-    
-    <summary type="html">&lt;p&gt;学习了swift语言的基本语法，可供大家参考。&lt;br&gt;了解部分特性即可，不必深究，因为你已经学会了其他语言java、python、c#等语言的基本使用，swift也类似。&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="VisionOS" scheme="https://chenzuoli.github.io/categories/VisionOS/"/>
-    
-    <category term="Swift" scheme="https://chenzuoli.github.io/categories/VisionOS/Swift/"/>
-    
-    
-    <category term="VisionOS" scheme="https://chenzuoli.github.io/tags/VisionOS/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>乐知付-如何制作html文件可双击跳转到支付页面？</title>
-    <link href="https://chenzuoli.github.io/2024/04/05/%E4%B9%90%E7%9F%A5%E4%BB%98%E5%8A%A0%E5%AF%86%E5%B9%B3%E5%8F%B0-%E5%8F%8C%E5%87%BBhtml%E6%96%87%E4%BB%B6%E8%B7%B3%E8%BD%AC%E5%88%B0%E6%94%AF%E4%BB%98%E9%A1%B5%E9%9D%A2/"/>
-    <id>https://chenzuoli.github.io/2024/04/05/%E4%B9%90%E7%9F%A5%E4%BB%98%E5%8A%A0%E5%AF%86%E5%B9%B3%E5%8F%B0-%E5%8F%8C%E5%87%BBhtml%E6%96%87%E4%BB%B6%E8%B7%B3%E8%BD%AC%E5%88%B0%E6%94%AF%E4%BB%98%E9%A1%B5%E9%9D%A2/</id>
-    <published>2024-04-05T02:13:17.000Z</published>
-    <updated>2024-04-14T03:18:20.540Z</updated>
-    
-    <content type="html"><![CDATA[<p><img src="/2024/04/05/%E4%B9%90%E7%9F%A5%E4%BB%98%E5%8A%A0%E5%AF%86%E5%B9%B3%E5%8F%B0-%E5%8F%8C%E5%87%BBhtml%E6%96%87%E4%BB%B6%E8%B7%B3%E8%BD%AC%E5%88%B0%E6%94%AF%E4%BB%98%E9%A1%B5%E9%9D%A2/flower.png" alt="花"><br>为了便于买家理解使用链接进行付费获取密码；现开发个小工具，将支付链接转为浏览器可识别的文件，双击打开即可跳转到浏览器支付页面。</p><span id="more"></span><p>文件命名：<strong>解压密码-双击查看.html</strong><br>内容如下：</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;html&gt;</span><br><span class="line">&lt;head&gt;</span><br><span class="line">&lt;meta http-equiv=&quot;refresh&quot;content=&quot;0;url=http://lezhifu.cc/static/html/qrcode.html?p=34&quot;&gt;</span><br><span class="line">&lt;/head&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure><p>这段内容是一个简单的浏览器页面，它包含了一个自动刷新的元标记（meta tag）来实现页面的重定向。<br>商家使用时，<strong>必须将上述链接替换成您本身的链接</strong>，上述链接 <a href="http://lezhifu.cc/static/html/qrcode.html?p=34%22%3E">http://lezhifu.cc/static/html/qrcode.html?p=34</a> <strong>为演示所用。</strong></p><p><img src="/2024/04/05/%E4%B9%90%E7%9F%A5%E4%BB%98%E5%8A%A0%E5%AF%86%E5%B9%B3%E5%8F%B0-%E5%8F%8C%E5%87%BBhtml%E6%96%87%E4%BB%B6%E8%B7%B3%E8%BD%AC%E5%88%B0%E6%94%AF%E4%BB%98%E9%A1%B5%E9%9D%A2/link.png" alt="演示"></p><p><strong>具体解释如下：</strong></p><blockquote><ul><li><html>：这是HTML页面的根元素。</html></li><li><head>：这是文档头部的元素，其中包含了页面的元数据和其他引用信息。</head></li><li><meta>：这是一个元标记，用于在HTML文档中提供元数据。</li><li>http-equiv&#x3D;”refresh”：这是<meta>元素的一个属性，指定了HTTP头部的一个等价字段。</li><li>content&#x3D;”0;url&#x3D;<a href="http://lezhifu.cc/static/html/qrcode.html?p=34%22%60">http://lezhifu.cc/static/html/qrcode.html?p=34"</a>：这是<meta>元素的另一个属性，它指定了页面的刷新时间和重定向的目标URL。<ul><li>0：表示页面在加载后立即刷新。</li><li>url&#x3D;<a href="http://lezhifu.cc/static/html/qrcode.html?p=34%60">http://lezhifu.cc/static/html/qrcode.html?p=34</a>：是重定向的目标URL，即在刷新后将页面导航到该URL。</li></ul></li><li>：表示头部元素的结束标签。</li><li>：表示HTML页面的结束标签。</li></ul></blockquote><p>因此，这段内容的含义是：当买家双击页面时，即打开了支付页面 <a href="http://lezhifu.cc/static/html/qrcode.html?p=34%60">http://lezhifu.cc/static/html/qrcode.html?p=34</a> 这个链接。<br>扫描此链接里的二维码，完成付款，即可看到您的资源密码了。</p><p><img src="/2024/04/05/%E4%B9%90%E7%9F%A5%E4%BB%98%E5%8A%A0%E5%AF%86%E5%B9%B3%E5%8F%B0-%E5%8F%8C%E5%87%BBhtml%E6%96%87%E4%BB%B6%E8%B7%B3%E8%BD%AC%E5%88%B0%E6%94%AF%E4%BB%98%E9%A1%B5%E9%9D%A2/pay.png" alt="扫码支付"></p><p>示例文件，点击下载查看：<a href="https://lezhifu.cc/help/%E8%A7%A3%E5%8E%8B%E5%AF%86%E7%A0%81_%E6%A8%A1%E6%9D%BF.html">解压密码_模板.html</a></p><hr><p>欢迎关注微信公众号，你的资源可变现：【乐知付加密平台】<br><img src="/images/wechat_account.png" alt="乐知付加密平台"></p><p>一起学习，一起进步。<br></p>]]></content>
-    
-    
-    <summary type="html">&lt;p&gt;&lt;img src=&quot;/2024/04/05/%E4%B9%90%E7%9F%A5%E4%BB%98%E5%8A%A0%E5%AF%86%E5%B9%B3%E5%8F%B0-%E5%8F%8C%E5%87%BBhtml%E6%96%87%E4%BB%B6%E8%B7%B3%E8%BD%AC%E5%88%B0%E6%94%AF%E4%BB%98%E9%A1%B5%E9%9D%A2/flower.png&quot; alt=&quot;花&quot;&gt;&lt;br&gt;为了便于买家理解使用链接进行付费获取密码；现开发个小工具，将支付链接转为浏览器可识别的文件，双击打开即可跳转到浏览器支付页面。&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="网站" scheme="https://chenzuoli.github.io/categories/%E7%BD%91%E7%AB%99/"/>
-    
-    <category term="乐知付" scheme="https://chenzuoli.github.io/categories/%E7%BD%91%E7%AB%99/%E4%B9%90%E7%9F%A5%E4%BB%98/"/>
-    
-    
-    <category term="乐知付" scheme="https://chenzuoli.github.io/tags/%E4%B9%90%E7%9F%A5%E4%BB%98/"/>
-    
-    <category term="乐知付加密" scheme="https://chenzuoli.github.io/tags/%E4%B9%90%E7%9F%A5%E4%BB%98%E5%8A%A0%E5%AF%86/"/>
-    
-    <category term="密码管理" scheme="https://chenzuoli.github.io/tags/%E5%AF%86%E7%A0%81%E7%AE%A1%E7%90%86/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>vision-pro开发入门二-学习规划</title>
-    <link href="https://chenzuoli.github.io/2024/04/02/vision-pro%E5%BC%80%E5%8F%91%E5%85%A5%E9%97%A8%E4%BA%8C/"/>
-    <id>https://chenzuoli.github.io/2024/04/02/vision-pro%E5%BC%80%E5%8F%91%E5%85%A5%E9%97%A8%E4%BA%8C/</id>
-    <published>2024-04-02T14:31:01.000Z</published>
-    <updated>2024-04-14T03:17:06.947Z</updated>
-    
-    <content type="html"><![CDATA[<p>这里列一下学习visionos应用开发的学习路径。</p><span id="more"></span><ol><li>学习swift语言: <a href="https://www.codecademy.com/learn/learn-swift">https://www.codecademy.com/learn/learn-swift</a></li><li>unity基础</li><li>realitykit基础</li><li>arkit基础</li><li>内容创作基础：reality compose pro</li><li>应用开发，学习几个实例</li></ol><hr><p>欢迎关注微信公众号，你的资源可变现：【乐知付加密平台】<br><img src="/images/wechat_account.png" alt="乐知付加密平台"></p><p>一起学习，一起进步。<br></p>]]></content>
-    
-    
-    <summary type="html">&lt;p&gt;这里列一下学习visionos应用开发的学习路径。&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="VisionOS" scheme="https://chenzuoli.github.io/categories/VisionOS/"/>
-    
-    <category term="Swift" scheme="https://chenzuoli.github.io/categories/VisionOS/Swift/"/>
-    
-    
-    <category term="VisionOS" scheme="https://chenzuoli.github.io/tags/VisionOS/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>VisionOS应用开发需要哪些条件</title>
-    <link href="https://chenzuoli.github.io/2024/04/01/VisionOS%E5%BA%94%E7%94%A8%E5%BC%80%E5%8F%91%E9%9C%80%E8%A6%81%E5%93%AA%E4%BA%9B%E6%9D%A1%E4%BB%B6/"/>
-    <id>https://chenzuoli.github.io/2024/04/01/VisionOS%E5%BA%94%E7%94%A8%E5%BC%80%E5%8F%91%E9%9C%80%E8%A6%81%E5%93%AA%E4%BA%9B%E6%9D%A1%E4%BB%B6/</id>
-    <published>2024-04-01T13:43:23.000Z</published>
-    <updated>2024-04-14T03:17:12.543Z</updated>
-    
-    <content type="html"><![CDATA[<p>说下开发visionOS空间应用需要哪些准备，这里我找了下，列出来给大家。<br><img src="/2024/04/01/VisionOS%E5%BA%94%E7%94%A8%E5%BC%80%E5%8F%91%E9%9C%80%E8%A6%81%E5%93%AA%E4%BA%9B%E6%9D%A1%E4%BB%B6/vision.avif" alt="require"></p><span id="more"></span><ol><li>xcode 15.2</li><li>2d: SwiftUI</li><li>3d: RealityKit&#x2F;Unity 3D</li><li>实体空间: ARKit</li><li>Intel Mac上可以运行Xcode15.2，但如果想要运行visionOS sdk（即开发visionOS应用），则需要搭载m1  m2  m3芯片的mac<br><img src="/2024/04/01/VisionOS%E5%BA%94%E7%94%A8%E5%BC%80%E5%8F%91%E9%9C%80%E8%A6%81%E5%93%AA%E4%BA%9B%E6%9D%A1%E4%BB%B6/require.webp" alt="require"></li></ol><hr><p>欢迎关注微信公众号，让你的资源变现：【乐知付加密平台】<br><img src="/images/wechat_account.png" alt="乐知付加密平台"></p><p>一起学习，一起进步。<br></p>]]></content>
-    
-    
-    <summary type="html">&lt;p&gt;说下开发visionOS空间应用需要哪些准备，这里我找了下，列出来给大家。&lt;br&gt;&lt;img src=&quot;/2024/04/01/VisionOS%E5%BA%94%E7%94%A8%E5%BC%80%E5%8F%91%E9%9C%80%E8%A6%81%E5%93%AA%E4%BA%9B%E6%9D%A1%E4%BB%B6/vision.avif&quot; alt=&quot;require&quot;&gt;&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="VisionOS" scheme="https://chenzuoli.github.io/categories/VisionOS/"/>
-    
-    <category term="开发工具" scheme="https://chenzuoli.github.io/categories/VisionOS/%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/"/>
-    
-    
-    <category term="VisionOS" scheme="https://chenzuoli.github.io/tags/VisionOS/"/>
-    
-    <category term="空间计算" scheme="https://chenzuoli.github.io/tags/%E7%A9%BA%E9%97%B4%E8%AE%A1%E7%AE%97/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>说下程序员的mac电脑用哪些工具事半功倍</title>
-    <link href="https://chenzuoli.github.io/2024/03/23/%E8%AF%B4%E4%B8%8B%E7%A8%8B%E5%BA%8F%E5%91%98%E7%9A%84mac%E7%94%B5%E8%84%91%E7%94%A8%E5%93%AA%E4%BA%9B%E5%B7%A5%E5%85%B7%E4%BA%8B%E5%8D%8A%E5%8A%9F%E5%80%8D/"/>
-    <id>https://chenzuoli.github.io/2024/03/23/%E8%AF%B4%E4%B8%8B%E7%A8%8B%E5%BA%8F%E5%91%98%E7%9A%84mac%E7%94%B5%E8%84%91%E7%94%A8%E5%93%AA%E4%BA%9B%E5%B7%A5%E5%85%B7%E4%BA%8B%E5%8D%8A%E5%8A%9F%E5%80%8D/</id>
-    <published>2024-03-23T01:37:21.000Z</published>
-    <updated>2024-04-14T03:18:47.705Z</updated>
-    
-    <content type="html"><![CDATA[<p>说下程序员的mac电脑用哪些工具，可以让开发、写文章、学习、投资事半功倍。</p><span id="more"></span><ol><li>写文章：<br> subline<br> vscode<br> 记笔记: OneNote  印象笔记<br> 写文档、ppt: Office<br> 知识库: 语雀</li><li>开发：<br> python开发: PyCharm<br> python环境管理: Aanconda<br> java开发: Idea<br> c#开发: Visual Studio<br> 微信小程序开发: Wechat DevTools<br> git代码管理: SourceTree<br> 命令行工具: iTerm<br> 数据库连接工具: Dbeaver<br> linux远程连接工具: Royal TSX<br> 接口测试: Postman</li><li>翻译 欧路词典</li><li>电脑清理 Tecent Lemon Lite</li><li>投资<br> 看盘: 东方财富<br> 基金: 支付宝<br> 股票: 光大证券<br> 数字货币: Binance<br> 期货: 申银万国期货<br> 外汇: FXCM</li><li>会议 腾讯会议</li><li>科学上网<br> 一元机场(推广有奖): <a href="https://一元机场.ink/#/register?code=tq5fWajz">https://xn--4gq62f52gdss.ink/#/register?code=tq5fWajz</a></li><li>视频剪辑 剪映</li></ol><p>顺便打一波广告，最近开发的网站：乐知付加密平台，如果你手里有资源，可以通过平台变现。</p><hr><p>欢迎关注微信公众号，你的资源可变现：【乐知付加密平台】<br><img src="/images/wechat_account.png" alt="乐知付加密平台"></p><p>一起学习，一起进步。<br></p>]]></content>
-    
-    
-    <summary type="html">&lt;p&gt;说下程序员的mac电脑用哪些工具，可以让开发、写文章、学习、投资事半功倍。&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="其他" scheme="https://chenzuoli.github.io/categories/%E5%85%B6%E4%BB%96/"/>
-    
-    <category term="电脑" scheme="https://chenzuoli.github.io/categories/%E5%85%B6%E4%BB%96/%E7%94%B5%E8%84%91/"/>
-    
-    <category term="mac" scheme="https://chenzuoli.github.io/categories/%E5%85%B6%E4%BB%96/%E7%94%B5%E8%84%91/mac/"/>
-    
-    
-    <category term="mac" scheme="https://chenzuoli.github.io/tags/mac/"/>
-    
-    <category term="电脑" scheme="https://chenzuoli.github.io/tags/%E7%94%B5%E8%84%91/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>说下域名恶意解析</title>
-    <link href="https://chenzuoli.github.io/2024/03/21/%E8%AF%B4%E4%B8%8B%E5%9F%9F%E5%90%8D%E6%81%B6%E6%84%8F%E8%A7%A3%E6%9E%90/"/>
-    <id>https://chenzuoli.github.io/2024/03/21/%E8%AF%B4%E4%B8%8B%E5%9F%9F%E5%90%8D%E6%81%B6%E6%84%8F%E8%A7%A3%E6%9E%90/</id>
-    <published>2024-03-21T15:15:06.000Z</published>
-    <updated>2024-04-14T03:18:53.823Z</updated>
-    
-    <content type="html"><![CDATA[<p>最近做了个网站，<a href="www.lezhifu.cc">www.lezhifu.cc</a>，刚开始没有做任何防范，导致别人恶意解析，<br>下面来看看别人具体是怎么做的。</p><span id="more"></span><h2 id="环境："><a href="#环境：" class="headerlink" title="环境："></a>环境：</h2><p>nginx + 静态html网站</p><p>服务器：阿里云<br>域名：<a href="http://www.lezhifu.cc/">www.lezhifu.cc</a><br>ip: 47.103.53.229</p><p>阿里云域名管理已经配置了域名映射到ip地址，即将该域名映射到此ip：47.103.53.229，<br>访问<a href="http://www.lezhifu.cc即访问47.103.53.229:80端口">www.lezhifu.cc即访问47.103.53.229:80端口</a></p><h2 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h2><p>在看看nginx的配置，访问80端口时，映射到服务器的根目录<code>/usr/lezhifu_website</code>，找对应目录下的index.htm或index.html</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">server &#123;</span><br><span class="line">        listen       80;</span><br><span class="line">        server_name  lezhifu.cc;</span><br><span class="line"></span><br><span class="line">        #access_log  logs/host.access.log  main;</span><br><span class="line"></span><br><span class="line">        #location / &#123;</span><br><span class="line">        #    root   html;</span><br><span class="line">        #    index  index.html index.htm;</span><br><span class="line">        #&#125;</span><br><span class="line">        # website frontend</span><br><span class="line">        location / &#123;</span><br><span class="line">            root   /usr/lezhifu_website;</span><br><span class="line">            index  index.html index.htm;</span><br><span class="line">        &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>nginx有了这样的配置，当你访问<a href="http://www.lezhifu.cc时,就会解析到/usr/lezhifu_websit/index.html%E6%96%87%E4%BB%B6%E4%BA%86%EF%BC%8C%E7%84%B6%E5%90%8E%E8%BF%94%E5%9B%9E%E5%88%B0%E6%B5%8F%E8%A7%88%E5%99%A8%E3%80%82">www.lezhifu.cc时，就会解析到/usr/lezhifu_websit/index.html文件了，然后返回到浏览器。</a></p><h2 id="域名恶意解析"><a href="#域名恶意解析" class="headerlink" title="域名恶意解析"></a>域名恶意解析</h2><p>当时我的网站代码添加了百度统计功能，在统计页面上看到别人的域名，我在纳闷儿为什么访问别人的域名也统计到我的数据中呢？<br><img src="/2024/03/21/%E8%AF%B4%E4%B8%8B%E5%9F%9F%E5%90%8D%E6%81%B6%E6%84%8F%E8%A7%A3%E6%9E%90/image.png" alt="恶意解析"></p><p>于是我咨询了阿里云，给的解释是域名恶意解析，第一次听说这个名词，也第一次碰到别人恶意攻击我的网站，<br>估计后面还会有更麻烦的Dos DDos攻击吧，希望不要被我碰到。<br><img src="/2024/03/21/%E8%AF%B4%E4%B8%8B%E5%9F%9F%E5%90%8D%E6%81%B6%E6%84%8F%E8%A7%A3%E6%9E%90/question.png" alt="咨询问题回答"></p><p>由于nginx这里没有做任何限制，导致别人的域名也可以这样配置，解析到我的ip下，如下阿里云的【域名控制台】 【解析】：</p><p><img src="/2024/03/21/%E8%AF%B4%E4%B8%8B%E5%9F%9F%E5%90%8D%E6%81%B6%E6%84%8F%E8%A7%A3%E6%9E%90/jiexi.png" alt="域名解析"></p><p><img src="/2024/03/21/%E8%AF%B4%E4%B8%8B%E5%9F%9F%E5%90%8D%E6%81%B6%E6%84%8F%E8%A7%A3%E6%9E%90/ip.png" alt="ip"></p><p>他的域名映射到我的ip即可完成域名恶意解析。</p><h2 id="解决办法"><a href="#解决办法" class="headerlink" title="解决办法"></a>解决办法</h2><p>这里贴下阿里云给出的方法：<br>参考如下文档，修改自己的Web服务器（例如Nginx、Apache）配置，禁止以IP的形式访问域名，只允许您自己的域名访问。<br>IIS设置禁止通过IP访问：<a href="https://help.aliyun.com/document_detail/40946.html">https://help.aliyun.com/document_detail/40946.html</a><br>Apache禁止未经许可的域名访问网站：<a href="https://help.aliyun.com/document_detail/41091.html">https://help.aliyun.com/document_detail/41091.html</a><br>Nginx禁止未经许可的域名访问网站：<a href="https://developer.aliyun.com/article/7735">https://developer.aliyun.com/article/7735</a></p><p>我的方法是这样的，修改nginx配置：<br>vim &#x2F;usr&#x2F;local&#x2F;nginx&#x2F;conf&#x2F;nginx.conf</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">server &#123;</span><br><span class="line">    if ($host !~* ^(lezhifu\.cc|\w+\.lezhifu\.cc)$) &#123;</span><br><span class="line">        return 403;  # 拒绝访问</span><br><span class="line">    &#125;</span><br><span class="line">    listen       80;</span><br><span class="line">    server_name  lezhifu.cc;</span><br></pre></td></tr></table></figure><p>添加了if判断：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">if ($host !~* ^(lezhifu\.cc|\w+\.lezhifu\.cc)$) &#123;</span><br><span class="line">            return 403;  # 拒绝访问</span><br><span class="line">        &#125;</span><br></pre></td></tr></table></figure><p>如果域名不是从lezhifu.cc或者其子域名访问的，一律返回403 Request Forbidden。</p><p>ok，大功告成。</p><p>希望这个网络世界里，少一点恶意，多一点善意，共同维护这个美好的网络世界。</p><p>我是乐知付加密平台，一个专为知识付费服务的加密平台。</p><hr><p>欢迎关注微信公众号：【乐知付加密平台】<br><img src="/images/wechat_account.png" alt="乐知付加密平台"></p><p>一起学习，一起进步。<br></p>]]></content>
-    
-    
-    <summary type="html">&lt;p&gt;最近做了个网站，&lt;a href=&quot;www.lezhifu.cc&quot;&gt;www.lezhifu.cc&lt;/a&gt;，刚开始没有做任何防范，导致别人恶意解析，&lt;br&gt;下面来看看别人具体是怎么做的。&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="Http" scheme="https://chenzuoli.github.io/categories/Http/"/>
-    
-    <category term="域名恶意解析" scheme="https://chenzuoli.github.io/categories/Http/%E5%9F%9F%E5%90%8D%E6%81%B6%E6%84%8F%E8%A7%A3%E6%9E%90/"/>
-    
-    
-    <category term="http" scheme="https://chenzuoli.github.io/tags/http/"/>
-    
-    <category term="域名恶意解析" scheme="https://chenzuoli.github.io/tags/%E5%9F%9F%E5%90%8D%E6%81%B6%E6%84%8F%E8%A7%A3%E6%9E%90/"/>
     
   </entry>
   

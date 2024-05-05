@@ -9382,11 +9382,11 @@
       <categories>
         <category>网站</category>
         <category>乐知付</category>
-        <category>资源发布</category>
+        <category>资源分享</category>
       </categories>
       <tags>
         <tag>乐知付</tag>
-        <tag>资源发布</tag>
+        <tag>资源分享</tag>
       </tags>
   </entry>
   <entry>
@@ -16743,6 +16743,117 @@ API
         <tag>m4u8</tag>
         <tag>视频格式</tag>
         <tag>流媒体</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>python转换视频格式</title>
+    <url>/2024/05/05/python%E8%BD%AC%E6%8D%A2%E8%A7%86%E9%A2%91%E6%A0%BC%E5%BC%8F/</url>
+    <content><![CDATA[<p>展示wmv转avi视频代码示例。</p>
+<span id="more"></span>
+
+
+<p>python代码示例：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&quot;&quot;&quot;</span><br><span class="line">pip install moviepy</span><br><span class="line">&quot;&quot;&quot;</span><br><span class="line"></span><br><span class="line">from moviepy.editor import VideoFileClip</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">def convert_video_format(input_video_path, output_video_path):</span><br><span class="line">    video_clip = VideoFileClip(input_video_path)</span><br><span class="line">    video_clip.write_videofile(output_video_path, codec=&#x27;libx264&#x27;, audio_codec=&#x27;aac&#x27;)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"># 使用函数转换视频格式</span><br><span class="line">convert_video_format(&#x27;Italian.wmv&#x27;, &#x27;Italian.avi&#x27;)</span><br></pre></td></tr></table></figure>
+
+<p>运行示例：<br><img src="/2024/05/05/python%E8%BD%AC%E6%8D%A2%E8%A7%86%E9%A2%91%E6%A0%BC%E5%BC%8F/image-3.png" alt="example"></p>
+<hr>
+<p>欢迎关注微信公众号，你的资源可变现：【乐知付加密平台】<br><img src="/images/wechat_account.png" alt="乐知付加密平台"></p>
+<p>一起学习，一起进步。<br></p>
+]]></content>
+      <categories>
+        <category>Python</category>
+        <category>视频</category>
+      </categories>
+      <tags>
+        <tag>python</tag>
+        <tag>视频转换</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>python转换音频格式</title>
+    <url>/2024/05/05/python%E8%BD%AC%E6%8D%A2%E9%9F%B3%E9%A2%91%E6%A0%BC%E5%BC%8F/</url>
+    <content><![CDATA[<p>展示mp3转wav音频代码示例。</p>
+<span id="more"></span>
+
+<p>这里是python示例：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">pip install pydub </span><br><span class="line"></span><br><span class="line">def trans_audio_type():</span><br><span class="line">    from pydub import AudioSegment</span><br><span class="line">    audio_file = &quot;音频.mp3&quot;</span><br><span class="line">    sound = AudioSegment.from_mp3(audio_file)</span><br><span class="line">    sound.export(&quot;音频.wav&quot;, format=&quot;wav&quot;)</span><br></pre></td></tr></table></figure>
+
+
+
+<hr>
+<p>欢迎关注微信公众号，你的资源可变现：【乐知付加密平台】<br><img src="/images/wechat_account.png" alt="乐知付加密平台"></p>
+<p>一起学习，一起进步。<br></p>
+]]></content>
+      <categories>
+        <category>Python</category>
+        <category>音频</category>
+      </categories>
+      <tags>
+        <tag>python</tag>
+        <tag>音频转换</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>mac文件系统中为啥出现了@符号导致了权限问题</title>
+    <url>/2024/05/05/mac%E6%96%87%E4%BB%B6%E7%B3%BB%E7%BB%9F%E4%B8%AD%E4%B8%BA%E5%95%A5%E5%87%BA%E7%8E%B0%E4%BA%86-%E7%AC%A6%E5%8F%B7%E5%AF%BC%E8%87%B4%E4%BA%86%E6%9D%83%E9%99%90%E9%97%AE%E9%A2%98/</url>
+    <content><![CDATA[<p><img src="/2024/05/05/mac%E6%96%87%E4%BB%B6%E7%B3%BB%E7%BB%9F%E4%B8%AD%E4%B8%BA%E5%95%A5%E5%87%BA%E7%8E%B0%E4%BA%86-%E7%AC%A6%E5%8F%B7%E5%AF%BC%E8%87%B4%E4%BA%86%E6%9D%83%E9%99%90%E9%97%AE%E9%A2%98/image-1.png" alt="error"></p>
+<p><img src="/2024/05/05/mac%E6%96%87%E4%BB%B6%E7%B3%BB%E7%BB%9F%E4%B8%AD%E4%B8%BA%E5%95%A5%E5%87%BA%E7%8E%B0%E4%BA%86-%E7%AC%A6%E5%8F%B7%E5%AF%BC%E8%87%B4%E4%BA%86%E6%9D%83%E9%99%90%E9%97%AE%E9%A2%98/image-2.png" alt="@"></p>
+<hr>
+<p>欢迎关注微信公众号，你的资源可变现：【乐知付加密平台】<br><img src="/images/wechat_account.png" alt="乐知付加密平台"></p>
+<p>一起学习，一起进步。<br></p>
+]]></content>
+  </entry>
+  <entry>
+    <title>如何制作m3u8视频流媒体文件</title>
+    <url>/2024/05/03/%E5%A6%82%E4%BD%95%E5%88%B6%E4%BD%9Cm3u8%E8%A7%86%E9%A2%91%E6%B5%81%E5%AA%92%E4%BD%93%E6%96%87%E4%BB%B6/</url>
+    <content><![CDATA[<hr>
+<p>欢迎关注微信公众号，你的资源可变现：【乐知付加密平台】<br><img src="/images/wechat_account.png" alt="乐知付加密平台"></p>
+<p>一起学习，一起进步。<br></p>
+]]></content>
+  </entry>
+  <entry>
+    <title>资源分享-训狗教程</title>
+    <url>/2024/05/05/%E8%B5%84%E6%BA%90%E5%88%86%E4%BA%AB-%E8%AE%AD%E7%8B%97%E6%95%99%E7%A8%8B/</url>
+    <content><![CDATA[<p>关注公众号【乐知付加密平台】，回复关键字：训狗</p>
+<span id="more"></span>
+
+<p>主题：如何训练小狗（德国专业驯犬师的因材施教培养计划，8周时间训练出陪伴你一生的伙伴！）</p>
+<p>获取网盘链接，永久有效。</p>
+<p><img src="/2024/05/05/%E8%B5%84%E6%BA%90%E5%88%86%E4%BA%AB-%E8%AE%AD%E7%8B%97%E6%95%99%E7%A8%8B/image.png" alt="dog"></p>
+<hr>
+<p>欢迎关注微信公众号，你的资源可变现：【乐知付加密平台】<br><img src="/images/wechat_account.png" alt="乐知付加密平台"></p>
+<p>一起学习，一起进步。<br></p>
+]]></content>
+      <categories>
+        <category>网站</category>
+        <category>乐知付</category>
+        <category>资源分享</category>
+      </categories>
+      <tags>
+        <tag>乐知付</tag>
+        <tag>资源分享</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>资源分享-轮滑教程</title>
+    <url>/2024/05/05/%E8%B5%84%E6%BA%90%E5%88%86%E4%BA%AB-%E8%BD%AE%E6%BB%91%E6%95%99%E7%A8%8B/</url>
+    <content><![CDATA[<p>这次分享轮滑教程，感兴趣的同学拿走。</p>
+<span id="more"></span>
+
+<p>关注公众号【乐知付加密平台】，回复关键字：轮滑</p>
+<p><img src="/2024/05/05/%E8%B5%84%E6%BA%90%E5%88%86%E4%BA%AB-%E8%BD%AE%E6%BB%91%E6%95%99%E7%A8%8B/image.png" alt="tiance"></p>
+<hr>
+<p>欢迎关注微信公众号，你的资源可变现：【乐知付加密平台】<br><img src="/images/wechat_account.png" alt="乐知付加密平台"></p>
+<p>一起学习，一起进步。<br></p>
+]]></content>
+      <categories>
+        <category>网站</category>
+        <category>乐知付</category>
+        <category>资源分享</category>
+      </categories>
+      <tags>
+        <tag>乐知付</tag>
+        <tag>资源分享</tag>
       </tags>
   </entry>
 </search>
