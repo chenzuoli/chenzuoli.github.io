@@ -16545,7 +16545,10 @@ API
   <entry>
     <title>linux安装magick</title>
     <url>/2024/04/21/linux%E5%AE%89%E8%A3%85magick/</url>
-    <content><![CDATA[<p>docker pull centos:7<br>docker run –name python3_test -it centos:7 bash</p>
+    <content><![CDATA[<p>linux安装magick。</p>
+<span id="more"></span>
+
+<p>docker pull centos:7<br>docker run –name python3_test -it centos:7 bash</p>
 <h1 id="安装python"><a href="#安装python" class="headerlink" title="安装python"></a>安装python</h1><p>yum install python3</p>
 <h1 id="安装magick"><a href="#安装magick" class="headerlink" title="安装magick"></a>安装magick</h1><p>yum install ImageMagick -y</p>
 <p>convert -version</p>
@@ -16574,7 +16577,19 @@ API
 <li><p>Could not import runpy module</p>
 </li>
 </ol>
+<hr>
+<p>欢迎关注微信公众号，您的资源可变现：【乐知付加密平台】<br><br><br><img src="/images/wechat_account.png" alt="乐知付加密平台"></p>
+<p>一起学习，一起进步。<br></p>
 ]]></content>
+      <categories>
+        <category>工具</category>
+        <category>图片处理</category>
+      </categories>
+      <tags>
+        <tag>linux</tag>
+        <tag>magick</tag>
+        <tag>图片</tag>
+      </tags>
   </entry>
   <entry>
     <title>爬虫相关问题</title>
@@ -16796,12 +16811,23 @@ API
   <entry>
     <title>mac文件系统中为啥出现了@符号导致了权限问题</title>
     <url>/2024/05/05/mac%E6%96%87%E4%BB%B6%E7%B3%BB%E7%BB%9F%E4%B8%AD%E4%B8%BA%E5%95%A5%E5%87%BA%E7%8E%B0%E4%BA%86-%E7%AC%A6%E5%8F%B7%E5%AF%BC%E8%87%B4%E4%BA%86%E6%9D%83%E9%99%90%E9%97%AE%E9%A2%98/</url>
-    <content><![CDATA[<p><img src="/2024/05/05/mac%E6%96%87%E4%BB%B6%E7%B3%BB%E7%BB%9F%E4%B8%AD%E4%B8%BA%E5%95%A5%E5%87%BA%E7%8E%B0%E4%BA%86-%E7%AC%A6%E5%8F%B7%E5%AF%BC%E8%87%B4%E4%BA%86%E6%9D%83%E9%99%90%E9%97%AE%E9%A2%98/image-1.png" alt="error"></p>
-<p><img src="/2024/05/05/mac%E6%96%87%E4%BB%B6%E7%B3%BB%E7%BB%9F%E4%B8%AD%E4%B8%BA%E5%95%A5%E5%87%BA%E7%8E%B0%E4%BA%86-%E7%AC%A6%E5%8F%B7%E5%AF%BC%E8%87%B4%E4%BA%86%E6%9D%83%E9%99%90%E9%97%AE%E9%A2%98/image-2.png" alt="@"></p>
+    <content><![CDATA[<span id="more"></span>
+
+<p><img src="/2024/05/05/mac%E6%96%87%E4%BB%B6%E7%B3%BB%E7%BB%9F%E4%B8%AD%E4%B8%BA%E5%95%A5%E5%87%BA%E7%8E%B0%E4%BA%86-%E7%AC%A6%E5%8F%B7%E5%AF%BC%E8%87%B4%E4%BA%86%E6%9D%83%E9%99%90%E9%97%AE%E9%A2%98/image-1.png" alt="error"><br><img src="/2024/05/05/mac%E6%96%87%E4%BB%B6%E7%B3%BB%E7%BB%9F%E4%B8%AD%E4%B8%BA%E5%95%A5%E5%87%BA%E7%8E%B0%E4%BA%86-%E7%AC%A6%E5%8F%B7%E5%AF%BC%E8%87%B4%E4%BA%86%E6%9D%83%E9%99%90%E9%97%AE%E9%A2%98/image-2.png" alt="@"></p>
+<p>大家知道如何解决吗？</p>
 <hr>
 <p>欢迎关注微信公众号，你的资源可变现：【乐知付加密平台】<br><img src="/images/wechat_account.png" alt="乐知付加密平台"></p>
 <p>一起学习，一起进步。<br></p>
 ]]></content>
+      <categories>
+        <category>其他</category>
+        <category>电脑</category>
+        <category>mac</category>
+      </categories>
+      <tags>
+        <tag>macos</tag>
+        <tag>文件系统</tag>
+      </tags>
   </entry>
   <entry>
     <title>如何制作m3u8视频流媒体文件</title>
@@ -16809,7 +16835,7 @@ API
     <content><![CDATA[<p>利用ffmpeg生成m3u8流媒体文件。</p>
 <span id="more"></span>
 
-<p>ffmpeg的安装和基本介绍，可移步这篇文章：</p>
+<p>ffmpeg的安装和基本介绍，可移步这篇文章：<br><a href="https://chenzuoli.github.io/2024/05/05/ffmpeg%E7%9A%84%E5%AE%89%E8%A3%85%E4%B8%8E%E4%BD%BF%E7%94%A8/">ffmpeg安装</a></p>
 <p>命令：</p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">ffmpeg -i video_subclip.mp4 -vcodec copy -acodec copy -bsf:v h264_mp4toannexb -hls_time 10 -hls_list_size 0 -f hls m3u8/video.m3u8</span><br></pre></td></tr></table></figure>
 <p>输出的结果文件：<br><img src="/2024/05/03/%E5%A6%82%E4%BD%95%E5%88%B6%E4%BD%9Cm3u8%E8%A7%86%E9%A2%91%E6%B5%81%E5%AA%92%E4%BD%93%E6%96%87%E4%BB%B6/image.png" alt="ts"></p>
@@ -16825,7 +16851,9 @@ API
 <li>m3u8&#x2F;video.m3u8：指定输出文件的基本路径和文件名。video.m3u8是播放列表文件，它将包含指向实际媒体数据分块的引用。</li>
 </ol>
 <p>总结来说，这个命令会创建一个HLS流，其中视频和音频码流不做任何转换，直接复制原始MP4文件中的流，并将H.264视频码流转换为AnnexB格式以兼容HLS标准。生成的HLS流将由一个播放列表文件（video.m3u8）和多个媒体数据分块组成，每个分块时长为10秒。</p>
+<p>运行结果如下：<br><img src="/2024/05/03/%E5%A6%82%E4%BD%95%E5%88%B6%E4%BD%9Cm3u8%E8%A7%86%E9%A2%91%E6%B5%81%E5%AA%92%E4%BD%93%E6%96%87%E4%BB%B6/image.png" alt="result"></p>
 <hr>
+<p>好记性不如烂笔头。</p>
 <p>欢迎关注微信公众号，你的资源可变现：【乐知付加密平台】<br><img src="/images/wechat_account.png" alt="乐知付加密平台"></p>
 <p>一起学习，一起进步。<br></p>
 ]]></content>
@@ -16953,6 +16981,61 @@ API
         <tag>ffmpeg</tag>
         <tag>音频</tag>
         <tag>视频</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>magic怎么处理图片</title>
+    <url>/2024/05/05/magic%E6%80%8E%E4%B9%88%E5%A4%84%E7%90%86%E5%9B%BE%E7%89%87/</url>
+    <content><![CDATA[<p>在Linux系统中，<code>magick</code>通常与ImageMagick软件包相关，这是一个非常强大的图像处理工具集，能够进行图像格式转换、编辑、合成、以及创建和修改图片。ImageMagick支持多种图像格式，并且提供了命令行工具以及API供开发者使用。</p>
+<span id="more"></span>
+
+<p>以下是一些基本的ImageMagick（通常在命令行中以<code>magick</code>命令出现）使用示例：</p>
+<h3 id="安装ImageMagick"><a href="#安装ImageMagick" class="headerlink" title="安装ImageMagick"></a>安装ImageMagick</h3><p>在大多数Linux发行版中，可以使用包管理器安装ImageMagick：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo apt-get install imagemagick   <span class="comment"># Debian/Ubuntu</span></span><br><span class="line">sudo yum install imagemagick      <span class="comment"># CentOS/RedHat</span></span><br><span class="line">sudo pacman -S imagemagick        <span class="comment"># Arch Linux</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="转换图像格式"><a href="#转换图像格式" class="headerlink" title="转换图像格式"></a>转换图像格式</h3><p>将一个图像文件从JPG格式转换为PNG格式：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">magick convert input.jpg output.png</span><br></pre></td></tr></table></figure>
+
+<h3 id="调整图像大小"><a href="#调整图像大小" class="headerlink" title="调整图像大小"></a>调整图像大小</h3><p>改变图像的尺寸：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">magick convert input.png -resize 800x600 output.png</span><br></pre></td></tr></table></figure>
+
+<h3 id="裁剪图像"><a href="#裁剪图像" class="headerlink" title="裁剪图像"></a>裁剪图像</h3><p>裁剪图像到指定的尺寸：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">magick convert input.png -crop 300x300+0+0 output.png</span><br></pre></td></tr></table></figure>
+
+<h3 id="旋转图像"><a href="#旋转图像" class="headerlink" title="旋转图像"></a>旋转图像</h3><p>旋转图像90度：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">magick convert input.png -rotate 90 output.png</span><br></pre></td></tr></table></figure>
+
+<h3 id="应用特效"><a href="#应用特效" class="headerlink" title="应用特效"></a>应用特效</h3><p>对图像应用模糊效果：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">magick convert input.png -blur 0x8 output.png</span><br></pre></td></tr></table></figure>
+
+<h3 id="添加文字"><a href="#添加文字" class="headerlink" title="添加文字"></a>添加文字</h3><p>在图像上添加文字：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">magick convert input.png -gravity south -pointsize 24 -annotate 0 <span class="string">&quot;Sample Text&quot;</span> output.png</span><br></pre></td></tr></table></figure>
+
+<h3 id="创建GIF动画"><a href="#创建GIF动画" class="headerlink" title="创建GIF动画"></a>创建GIF动画</h3><p>将多张图片合成为GIF动画：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">magick convert frame_*.png output.gif</span><br></pre></td></tr></table></figure>
+
+<h3 id="读取图像信息"><a href="#读取图像信息" class="headerlink" title="读取图像信息"></a>读取图像信息</h3><p>显示图像的属性和元数据：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">magick identify input.png</span><br></pre></td></tr></table></figure>
+
+<h3 id="批量处理图像"><a href="#批量处理图像" class="headerlink" title="批量处理图像"></a>批量处理图像</h3><p>对一个目录下的所有图像执行相同的操作：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">magick mogrify -resize 50% *.png</span><br></pre></td></tr></table></figure>
+
+<h3 id="水印"><a href="#水印" class="headerlink" title="水印"></a>水印</h3><p>给图像添加水印：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">magick composite -gravity center -geometry +10+10 watermark.png input.png output.png</span><br></pre></td></tr></table></figure>
+
+<p>ImageMagick的功能非常丰富，上述示例仅展示了一小部分功能。ImageMagick还包括对PDF、视频文件以及一些3D格式的支持。此外，ImageMagick的命令行接口（CLI）提供了极大的灵活性，允许用户执行复杂的图像处理任务，但这也意味着命令可能会变得相当复杂。对于更高级的图像处理，ImageMagick还提供了编程接口，支持多种编程语言。</p>
+<hr>
+<p>欢迎关注微信公众号，您的资源可变现：【乐知付加密平台】<br><br><br><img src="/images/wechat_account.png" alt="乐知付加密平台"></p>
+<p>一起学习，一起进步。<br></p>
+]]></content>
+      <categories>
+        <category>工具</category>
+        <category>图片处理</category>
+      </categories>
+      <tags>
+        <tag>linux</tag>
+        <tag>magick</tag>
+        <tag>图片</tag>
       </tags>
   </entry>
 </search>

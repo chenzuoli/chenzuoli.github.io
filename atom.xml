@@ -6,7 +6,7 @@
   <link href="https://chenzuoli.github.io/atom.xml" rel="self"/>
   
   <link href="https://chenzuoli.github.io/"/>
-  <updated>2024-05-05T12:26:16.153Z</updated>
+  <updated>2024-05-05T12:45:26.267Z</updated>
   <id>https://chenzuoli.github.io/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>magic怎么处理图片</title>
+    <link href="https://chenzuoli.github.io/2024/05/05/magic%E6%80%8E%E4%B9%88%E5%A4%84%E7%90%86%E5%9B%BE%E7%89%87/"/>
+    <id>https://chenzuoli.github.io/2024/05/05/magic%E6%80%8E%E4%B9%88%E5%A4%84%E7%90%86%E5%9B%BE%E7%89%87/</id>
+    <published>2024-05-05T12:44:01.000Z</published>
+    <updated>2024-05-05T12:45:26.267Z</updated>
+    
+    <content type="html"><![CDATA[<p>在Linux系统中，<code>magick</code>通常与ImageMagick软件包相关，这是一个非常强大的图像处理工具集，能够进行图像格式转换、编辑、合成、以及创建和修改图片。ImageMagick支持多种图像格式，并且提供了命令行工具以及API供开发者使用。</p><span id="more"></span><p>以下是一些基本的ImageMagick（通常在命令行中以<code>magick</code>命令出现）使用示例：</p><h3 id="安装ImageMagick"><a href="#安装ImageMagick" class="headerlink" title="安装ImageMagick"></a>安装ImageMagick</h3><p>在大多数Linux发行版中，可以使用包管理器安装ImageMagick：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install imagemagick   <span class="comment"># Debian/Ubuntu</span></span><br><span class="line">sudo yum install imagemagick      <span class="comment"># CentOS/RedHat</span></span><br><span class="line">sudo pacman -S imagemagick        <span class="comment"># Arch Linux</span></span><br></pre></td></tr></table></figure><h3 id="转换图像格式"><a href="#转换图像格式" class="headerlink" title="转换图像格式"></a>转换图像格式</h3><p>将一个图像文件从JPG格式转换为PNG格式：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">magick convert input.jpg output.png</span><br></pre></td></tr></table></figure><h3 id="调整图像大小"><a href="#调整图像大小" class="headerlink" title="调整图像大小"></a>调整图像大小</h3><p>改变图像的尺寸：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">magick convert input.png -resize 800x600 output.png</span><br></pre></td></tr></table></figure><h3 id="裁剪图像"><a href="#裁剪图像" class="headerlink" title="裁剪图像"></a>裁剪图像</h3><p>裁剪图像到指定的尺寸：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">magick convert input.png -crop 300x300+0+0 output.png</span><br></pre></td></tr></table></figure><h3 id="旋转图像"><a href="#旋转图像" class="headerlink" title="旋转图像"></a>旋转图像</h3><p>旋转图像90度：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">magick convert input.png -rotate 90 output.png</span><br></pre></td></tr></table></figure><h3 id="应用特效"><a href="#应用特效" class="headerlink" title="应用特效"></a>应用特效</h3><p>对图像应用模糊效果：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">magick convert input.png -blur 0x8 output.png</span><br></pre></td></tr></table></figure><h3 id="添加文字"><a href="#添加文字" class="headerlink" title="添加文字"></a>添加文字</h3><p>在图像上添加文字：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">magick convert input.png -gravity south -pointsize 24 -annotate 0 <span class="string">&quot;Sample Text&quot;</span> output.png</span><br></pre></td></tr></table></figure><h3 id="创建GIF动画"><a href="#创建GIF动画" class="headerlink" title="创建GIF动画"></a>创建GIF动画</h3><p>将多张图片合成为GIF动画：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">magick convert frame_*.png output.gif</span><br></pre></td></tr></table></figure><h3 id="读取图像信息"><a href="#读取图像信息" class="headerlink" title="读取图像信息"></a>读取图像信息</h3><p>显示图像的属性和元数据：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">magick identify input.png</span><br></pre></td></tr></table></figure><h3 id="批量处理图像"><a href="#批量处理图像" class="headerlink" title="批量处理图像"></a>批量处理图像</h3><p>对一个目录下的所有图像执行相同的操作：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">magick mogrify -resize 50% *.png</span><br></pre></td></tr></table></figure><h3 id="水印"><a href="#水印" class="headerlink" title="水印"></a>水印</h3><p>给图像添加水印：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">magick composite -gravity center -geometry +10+10 watermark.png input.png output.png</span><br></pre></td></tr></table></figure><p>ImageMagick的功能非常丰富，上述示例仅展示了一小部分功能。ImageMagick还包括对PDF、视频文件以及一些3D格式的支持。此外，ImageMagick的命令行接口（CLI）提供了极大的灵活性，允许用户执行复杂的图像处理任务，但这也意味着命令可能会变得相当复杂。对于更高级的图像处理，ImageMagick还提供了编程接口，支持多种编程语言。</p><hr><p>欢迎关注微信公众号，您的资源可变现：【乐知付加密平台】<br><br><br><img src="/images/wechat_account.png" alt="乐知付加密平台"></p><p>一起学习，一起进步。<br></p>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;在Linux系统中，&lt;code&gt;magick&lt;/code&gt;通常与ImageMagick软件包相关，这是一个非常强大的图像处理工具集，能够进行图像格式转换、编辑、合成、以及创建和修改图片。ImageMagick支持多种图像格式，并且提供了命令行工具以及API供开发者使用。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="工具" scheme="https://chenzuoli.github.io/categories/%E5%B7%A5%E5%85%B7/"/>
+    
+    <category term="图片处理" scheme="https://chenzuoli.github.io/categories/%E5%B7%A5%E5%85%B7/%E5%9B%BE%E7%89%87%E5%A4%84%E7%90%86/"/>
+    
+    
+    <category term="linux" scheme="https://chenzuoli.github.io/tags/linux/"/>
+    
+    <category term="magick" scheme="https://chenzuoli.github.io/tags/magick/"/>
+    
+    <category term="图片" scheme="https://chenzuoli.github.io/tags/%E5%9B%BE%E7%89%87/"/>
+    
+  </entry>
   
   <entry>
     <title>ffmpeg的安装与使用</title>
@@ -107,18 +134,30 @@
     <link href="https://chenzuoli.github.io/2024/05/05/mac%E6%96%87%E4%BB%B6%E7%B3%BB%E7%BB%9F%E4%B8%AD%E4%B8%BA%E5%95%A5%E5%87%BA%E7%8E%B0%E4%BA%86-%E7%AC%A6%E5%8F%B7%E5%AF%BC%E8%87%B4%E4%BA%86%E6%9D%83%E9%99%90%E9%97%AE%E9%A2%98/"/>
     <id>https://chenzuoli.github.io/2024/05/05/mac%E6%96%87%E4%BB%B6%E7%B3%BB%E7%BB%9F%E4%B8%AD%E4%B8%BA%E5%95%A5%E5%87%BA%E7%8E%B0%E4%BA%86-%E7%AC%A6%E5%8F%B7%E5%AF%BC%E8%87%B4%E4%BA%86%E6%9D%83%E9%99%90%E9%97%AE%E9%A2%98/</id>
     <published>2024-05-05T06:12:11.000Z</published>
-    <updated>2024-05-05T06:14:34.158Z</updated>
+    <updated>2024-05-05T12:49:34.867Z</updated>
     
-    <content type="html"><![CDATA[<p><img src="/2024/05/05/mac%E6%96%87%E4%BB%B6%E7%B3%BB%E7%BB%9F%E4%B8%AD%E4%B8%BA%E5%95%A5%E5%87%BA%E7%8E%B0%E4%BA%86-%E7%AC%A6%E5%8F%B7%E5%AF%BC%E8%87%B4%E4%BA%86%E6%9D%83%E9%99%90%E9%97%AE%E9%A2%98/image-1.png" alt="error"></p><p><img src="/2024/05/05/mac%E6%96%87%E4%BB%B6%E7%B3%BB%E7%BB%9F%E4%B8%AD%E4%B8%BA%E5%95%A5%E5%87%BA%E7%8E%B0%E4%BA%86-%E7%AC%A6%E5%8F%B7%E5%AF%BC%E8%87%B4%E4%BA%86%E6%9D%83%E9%99%90%E9%97%AE%E9%A2%98/image-2.png" alt="@"></p><hr><p>欢迎关注微信公众号，你的资源可变现：【乐知付加密平台】<br><img src="/images/wechat_account.png" alt="乐知付加密平台"></p><p>一起学习，一起进步。<br></p>]]></content>
+    <content type="html"><![CDATA[<span id="more"></span><p><img src="/2024/05/05/mac%E6%96%87%E4%BB%B6%E7%B3%BB%E7%BB%9F%E4%B8%AD%E4%B8%BA%E5%95%A5%E5%87%BA%E7%8E%B0%E4%BA%86-%E7%AC%A6%E5%8F%B7%E5%AF%BC%E8%87%B4%E4%BA%86%E6%9D%83%E9%99%90%E9%97%AE%E9%A2%98/image-1.png" alt="error"><br><img src="/2024/05/05/mac%E6%96%87%E4%BB%B6%E7%B3%BB%E7%BB%9F%E4%B8%AD%E4%B8%BA%E5%95%A5%E5%87%BA%E7%8E%B0%E4%BA%86-%E7%AC%A6%E5%8F%B7%E5%AF%BC%E8%87%B4%E4%BA%86%E6%9D%83%E9%99%90%E9%97%AE%E9%A2%98/image-2.png" alt="@"></p><p>大家知道如何解决吗？</p><hr><p>欢迎关注微信公众号，你的资源可变现：【乐知付加密平台】<br><img src="/images/wechat_account.png" alt="乐知付加密平台"></p><p>一起学习，一起进步。<br></p>]]></content>
     
     
       
       
-    <summary type="html">&lt;p&gt;&lt;img src=&quot;/2024/05/05/mac%E6%96%87%E4%BB%B6%E7%B3%BB%E7%BB%9F%E4%B8%AD%E4%B8%BA%E5%95%A5%E5%87%BA%E7%8E%B0%E4%BA%86-%E7%AC%A6%E5%8F%B7%E5</summary>
+    <summary type="html">&lt;span id=&quot;more&quot;&gt;&lt;/span&gt;
+
+&lt;p&gt;&lt;img src=&quot;/2024/05/05/mac%E6%96%87%E4%BB%B6%E7%B3%BB%E7%BB%9F%E4%B8%AD%E4%B8%BA%E5%95%A5%E5%87%BA%E7%8E%B0%E4%BA</summary>
       
     
     
     
+    <category term="其他" scheme="https://chenzuoli.github.io/categories/%E5%85%B6%E4%BB%96/"/>
+    
+    <category term="电脑" scheme="https://chenzuoli.github.io/categories/%E5%85%B6%E4%BB%96/%E7%94%B5%E8%84%91/"/>
+    
+    <category term="mac" scheme="https://chenzuoli.github.io/categories/%E5%85%B6%E4%BB%96/%E7%94%B5%E8%84%91/mac/"/>
+    
+    
+    <category term="macos" scheme="https://chenzuoli.github.io/tags/macos/"/>
+    
+    <category term="文件系统" scheme="https://chenzuoli.github.io/tags/%E6%96%87%E4%BB%B6%E7%B3%BB%E7%BB%9F/"/>
     
   </entry>
   
@@ -179,9 +218,9 @@
     <link href="https://chenzuoli.github.io/2024/05/03/%E5%A6%82%E4%BD%95%E5%88%B6%E4%BD%9Cm3u8%E8%A7%86%E9%A2%91%E6%B5%81%E5%AA%92%E4%BD%93%E6%96%87%E4%BB%B6/"/>
     <id>https://chenzuoli.github.io/2024/05/03/%E5%A6%82%E4%BD%95%E5%88%B6%E4%BD%9Cm3u8%E8%A7%86%E9%A2%91%E6%B5%81%E5%AA%92%E4%BD%93%E6%96%87%E4%BB%B6/</id>
     <published>2024-05-03T04:08:32.000Z</published>
-    <updated>2024-05-05T12:26:39.962Z</updated>
+    <updated>2024-05-05T12:37:48.547Z</updated>
     
-    <content type="html"><![CDATA[<p>利用ffmpeg生成m3u8流媒体文件。</p><span id="more"></span><p>ffmpeg的安装和基本介绍，可移步这篇文章：</p><p>命令：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ffmpeg -i video_subclip.mp4 -vcodec copy -acodec copy -bsf:v h264_mp4toannexb -hls_time 10 -hls_list_size 0 -f hls m3u8/video.m3u8</span><br></pre></td></tr></table></figure><p>输出的结果文件：<br><img src="/2024/05/03/%E5%A6%82%E4%BD%95%E5%88%B6%E4%BD%9Cm3u8%E8%A7%86%E9%A2%91%E6%B5%81%E5%AA%92%E4%BD%93%E6%96%87%E4%BB%B6/image.png" alt="ts"></p><p>参数释义：<br>ffmpeg命令是用来将一个名为video_subclip.mp4的MP4视频文件转换成HLS（HTTP Live Streaming）流媒体格式的。下面是命令中每个参数的含义：</p><ol><li>-i video_subclip.mp4：指定输入文件是video_subclip.mp4。</li><li>-vcodec copy：指定视频编解码器使用复制模式，即不转换视频，直接使用原始视频流。</li><li>-acodec copy：指定音频编解码器使用复制模式，即不转换音频，直接使用原始音频流。</li><li>-bsf:v h264_mp4toannexb：使用比特流过滤器（bitstream filter）将H.264视频码流从MP4格式转换为AnnexB格式。这是因为HLS通常使用AnnexB格式的H.264码流。</li><li>-hls_time 10：设置每个HLS视频分块（segment）的时间长度为10秒。</li><li>-hls_list_size 0：设置HLS播放列表（m3u8文件）中包含的分块数量。如果设置为0，表示不限制列表中的分块数量，将包含所有生成的分块。</li><li>-f hls：指定输出格式为HLS。</li><li>m3u8&#x2F;video.m3u8：指定输出文件的基本路径和文件名。video.m3u8是播放列表文件，它将包含指向实际媒体数据分块的引用。</li></ol><p>总结来说，这个命令会创建一个HLS流，其中视频和音频码流不做任何转换，直接复制原始MP4文件中的流，并将H.264视频码流转换为AnnexB格式以兼容HLS标准。生成的HLS流将由一个播放列表文件（video.m3u8）和多个媒体数据分块组成，每个分块时长为10秒。</p><hr><p>欢迎关注微信公众号，你的资源可变现：【乐知付加密平台】<br><img src="/images/wechat_account.png" alt="乐知付加密平台"></p><p>一起学习，一起进步。<br></p>]]></content>
+    <content type="html"><![CDATA[<p>利用ffmpeg生成m3u8流媒体文件。</p><span id="more"></span><p>ffmpeg的安装和基本介绍，可移步这篇文章：<br><a href="https://chenzuoli.github.io/2024/05/05/ffmpeg%E7%9A%84%E5%AE%89%E8%A3%85%E4%B8%8E%E4%BD%BF%E7%94%A8/">ffmpeg安装</a></p><p>命令：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ffmpeg -i video_subclip.mp4 -vcodec copy -acodec copy -bsf:v h264_mp4toannexb -hls_time 10 -hls_list_size 0 -f hls m3u8/video.m3u8</span><br></pre></td></tr></table></figure><p>输出的结果文件：<br><img src="/2024/05/03/%E5%A6%82%E4%BD%95%E5%88%B6%E4%BD%9Cm3u8%E8%A7%86%E9%A2%91%E6%B5%81%E5%AA%92%E4%BD%93%E6%96%87%E4%BB%B6/image.png" alt="ts"></p><p>参数释义：<br>ffmpeg命令是用来将一个名为video_subclip.mp4的MP4视频文件转换成HLS（HTTP Live Streaming）流媒体格式的。下面是命令中每个参数的含义：</p><ol><li>-i video_subclip.mp4：指定输入文件是video_subclip.mp4。</li><li>-vcodec copy：指定视频编解码器使用复制模式，即不转换视频，直接使用原始视频流。</li><li>-acodec copy：指定音频编解码器使用复制模式，即不转换音频，直接使用原始音频流。</li><li>-bsf:v h264_mp4toannexb：使用比特流过滤器（bitstream filter）将H.264视频码流从MP4格式转换为AnnexB格式。这是因为HLS通常使用AnnexB格式的H.264码流。</li><li>-hls_time 10：设置每个HLS视频分块（segment）的时间长度为10秒。</li><li>-hls_list_size 0：设置HLS播放列表（m3u8文件）中包含的分块数量。如果设置为0，表示不限制列表中的分块数量，将包含所有生成的分块。</li><li>-f hls：指定输出格式为HLS。</li><li>m3u8&#x2F;video.m3u8：指定输出文件的基本路径和文件名。video.m3u8是播放列表文件，它将包含指向实际媒体数据分块的引用。</li></ol><p>总结来说，这个命令会创建一个HLS流，其中视频和音频码流不做任何转换，直接复制原始MP4文件中的流，并将H.264视频码流转换为AnnexB格式以兼容HLS标准。生成的HLS流将由一个播放列表文件（video.m3u8）和多个媒体数据分块组成，每个分块时长为10秒。</p><p>运行结果如下：<br><img src="/2024/05/03/%E5%A6%82%E4%BD%95%E5%88%B6%E4%BD%9Cm3u8%E8%A7%86%E9%A2%91%E6%B5%81%E5%AA%92%E4%BD%93%E6%96%87%E4%BB%B6/image.png" alt="result"></p><hr><p>好记性不如烂笔头。</p><p>欢迎关注微信公众号，你的资源可变现：【乐知付加密平台】<br><img src="/images/wechat_account.png" alt="乐知付加密平台"></p><p>一起学习，一起进步。<br></p>]]></content>
     
     
     <summary type="html">&lt;p&gt;利用ffmpeg生成m3u8流媒体文件。&lt;/p&gt;</summary>
@@ -299,19 +338,25 @@
     <link href="https://chenzuoli.github.io/2024/04/21/linux%E5%AE%89%E8%A3%85magick/"/>
     <id>https://chenzuoli.github.io/2024/04/21/linux%E5%AE%89%E8%A3%85magick/</id>
     <published>2024-04-21T08:16:24.000Z</published>
-    <updated>2024-04-21T12:21:23.096Z</updated>
+    <updated>2024-05-05T12:45:43.986Z</updated>
     
-    <content type="html"><![CDATA[<p>docker pull centos:7<br>docker run –name python3_test -it centos:7 bash</p><h1 id="安装python"><a href="#安装python" class="headerlink" title="安装python"></a>安装python</h1><p>yum install python3</p><h1 id="安装magick"><a href="#安装magick" class="headerlink" title="安装magick"></a>安装magick</h1><p>yum install ImageMagick -y</p><p>convert -version</p><p>identify -version</p><h1 id="安装pip"><a href="#安装pip" class="headerlink" title="安装pip"></a>安装pip</h1><h1 id="安装ffmpeg："><a href="#安装ffmpeg：" class="headerlink" title="安装ffmpeg："></a>安装ffmpeg：</h1><p>下载：<a href="https://download1.rpmfusion.org/free/el/rpmfusion-free-release-7.noarch.rpm">https://download1.rpmfusion.org/free/el/rpmfusion-free-release-7.noarch.rpm</a><br>yum localinstall –nogpgcheck rpmfusion-free-release-7.noarch.rpm<br>yum install ffmpeg ffmpeg-devel -y</p><h1 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h1><ol><li>The headers or library files could not be found for zlib,<br>yum install zlib-devel -y</li><li><pre><code>The headers or library files could not be found for jpeg,</code></pre></li></ol><p>yum install libjpeg* zlib libtiff -y</p><ol start="3"><li><pre><code>unable to execute &#39;gcc&#39;: No such file or directory</code></pre><p>yum -y install gcc</p></li><li><pre><code>src/_imagingmath.c:16:20: fatal error: Python.h: No such file or directory</code></pre><p>yum install python3-devel -y</p></li><li><p>ModuleNotFoundError: No module named ‘numpy.typing’</p></li><li><p>ModuleNotFoundError: No module named ‘ffmpy’<br>pip3 install ffmpy</p></li><li><p>Could not import runpy module</p></li></ol>]]></content>
+    <content type="html"><![CDATA[<p>linux安装magick。</p><span id="more"></span><p>docker pull centos:7<br>docker run –name python3_test -it centos:7 bash</p><h1 id="安装python"><a href="#安装python" class="headerlink" title="安装python"></a>安装python</h1><p>yum install python3</p><h1 id="安装magick"><a href="#安装magick" class="headerlink" title="安装magick"></a>安装magick</h1><p>yum install ImageMagick -y</p><p>convert -version</p><p>identify -version</p><h1 id="安装pip"><a href="#安装pip" class="headerlink" title="安装pip"></a>安装pip</h1><h1 id="安装ffmpeg："><a href="#安装ffmpeg：" class="headerlink" title="安装ffmpeg："></a>安装ffmpeg：</h1><p>下载：<a href="https://download1.rpmfusion.org/free/el/rpmfusion-free-release-7.noarch.rpm">https://download1.rpmfusion.org/free/el/rpmfusion-free-release-7.noarch.rpm</a><br>yum localinstall –nogpgcheck rpmfusion-free-release-7.noarch.rpm<br>yum install ffmpeg ffmpeg-devel -y</p><h1 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h1><ol><li>The headers or library files could not be found for zlib,<br>yum install zlib-devel -y</li><li><pre><code>The headers or library files could not be found for jpeg,</code></pre></li></ol><p>yum install libjpeg* zlib libtiff -y</p><ol start="3"><li><pre><code>unable to execute &#39;gcc&#39;: No such file or directory</code></pre><p>yum -y install gcc</p></li><li><pre><code>src/_imagingmath.c:16:20: fatal error: Python.h: No such file or directory</code></pre><p>yum install python3-devel -y</p></li><li><p>ModuleNotFoundError: No module named ‘numpy.typing’</p></li><li><p>ModuleNotFoundError: No module named ‘ffmpy’<br>pip3 install ffmpy</p></li><li><p>Could not import runpy module</p></li></ol><hr><p>欢迎关注微信公众号，您的资源可变现：【乐知付加密平台】<br><br><br><img src="/images/wechat_account.png" alt="乐知付加密平台"></p><p>一起学习，一起进步。<br></p>]]></content>
     
     
-      
-      
-    <summary type="html">&lt;p&gt;docker pull centos:7&lt;br&gt;docker run –name python3_test -it centos:7 bash&lt;/p&gt;
-&lt;h1 id=&quot;安装python&quot;&gt;&lt;a href=&quot;#安装python&quot; class=&quot;headerlink&quot; titl</summary>
-      
+    <summary type="html">&lt;p&gt;linux安装magick。&lt;/p&gt;</summary>
     
     
     
+    <category term="工具" scheme="https://chenzuoli.github.io/categories/%E5%B7%A5%E5%85%B7/"/>
+    
+    <category term="图片处理" scheme="https://chenzuoli.github.io/categories/%E5%B7%A5%E5%85%B7/%E5%9B%BE%E7%89%87%E5%A4%84%E7%90%86/"/>
+    
+    
+    <category term="linux" scheme="https://chenzuoli.github.io/tags/linux/"/>
+    
+    <category term="magick" scheme="https://chenzuoli.github.io/tags/magick/"/>
+    
+    <category term="图片" scheme="https://chenzuoli.github.io/tags/%E5%9B%BE%E7%89%87/"/>
     
   </entry>
   
@@ -516,31 +561,6 @@
     <category term="html" scheme="https://chenzuoli.github.io/tags/html/"/>
     
     <category term="css" scheme="https://chenzuoli.github.io/tags/css/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>html加载后端数据较慢问题</title>
-    <link href="https://chenzuoli.github.io/2024/04/06/html%E5%8A%A0%E8%BD%BD%E5%90%8E%E7%AB%AF%E6%95%B0%E6%8D%AE%E8%BE%83%E6%85%A2%E9%97%AE%E9%A2%98/"/>
-    <id>https://chenzuoli.github.io/2024/04/06/html%E5%8A%A0%E8%BD%BD%E5%90%8E%E7%AB%AF%E6%95%B0%E6%8D%AE%E8%BE%83%E6%85%A2%E9%97%AE%E9%A2%98/</id>
-    <published>2024-04-06T14:29:00.000Z</published>
-    <updated>2024-04-14T03:16:50.228Z</updated>
-    
-    <content type="html"><![CDATA[<p>网站页面最近加载很慢，不知道为什么，这里记录一下，一步一步查问题的思路。</p><span id="more"></span><h1 id="说下环境"><a href="#说下环境" class="headerlink" title="说下环境"></a>说下环境</h1><p>python3.8<br>flask2.3.3<br>mysql5.7</p><h1 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h1><p>刷新网页<a href="https://lezhifu.cc/admin/qrcode_list_op">https://lezhifu.cc/admin/qrcode_list_op</a>时，需要7s多的时间</p><h1 id="F12查哪里慢"><a href="#F12查哪里慢" class="headerlink" title="F12查哪里慢"></a>F12查哪里慢</h1><p>F12查看了浏览器的Network，看看到底加载什么内容时很慢：<br><img src="/2024/04/06/html%E5%8A%A0%E8%BD%BD%E5%90%8E%E7%AB%AF%E6%95%B0%E6%8D%AE%E8%BE%83%E6%85%A2%E9%97%AE%E9%A2%98/slow.png" alt="timing"><br>点进去，看到<code>waiting for server response</code>这里花了7s多，为啥呢？<br><img src="/2024/04/06/html%E5%8A%A0%E8%BD%BD%E5%90%8E%E7%AB%AF%E6%95%B0%E6%8D%AE%E8%BE%83%E6%85%A2%E9%97%AE%E9%A2%98/timeline.png" alt="timeline"></p><h1 id="查接口为什么慢"><a href="#查接口为什么慢" class="headerlink" title="查接口为什么慢"></a>查接口为什么慢</h1><p><img src="/2024/04/06/html%E5%8A%A0%E8%BD%BD%E5%90%8E%E7%AB%AF%E6%95%B0%E6%8D%AE%E8%BE%83%E6%85%A2%E9%97%AE%E9%A2%98/flask_interface.png" alt="interface"><br>第1步分页查询，每次查10条，这里应该不慢</p><p>第2步根据分页查询结果进行循环，然后根据id查询payment表，这里可能比较慢，是不是可以改成两表关联形式呢，直接一次性查出来。</p><p>那改吧，改成join，这里的需求是join、查询指定字段、分页，如下是flask的查询语句：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"># 使用join方法根据payment_id连接QRCode和Payment表</span><br><span class="line">joined_query_pagination = db.session.query(</span><br><span class="line">    QRCode.user_id,</span><br><span class="line">    QRCode.content_id,</span><br><span class="line">    QRCode.header,</span><br><span class="line">    QRCode.payment_id,</span><br><span class="line">    QRCode.create_time,</span><br><span class="line">    Payment.payment_amount,</span><br><span class="line">    QRCode.status</span><br><span class="line">).join(Payment, QRCode.payment_id == Payment.payment_id) \</span><br><span class="line">    .paginate(page=page, per_page=per_page, error_out=False)</span><br></pre></td></tr></table></figure><p>ok，性能提高了好多，116ms就查出来了。<br><img src="/2024/04/06/html%E5%8A%A0%E8%BD%BD%E5%90%8E%E7%AB%AF%E6%95%B0%E6%8D%AE%E8%BE%83%E6%85%A2%E9%97%AE%E9%A2%98/after.png" alt="优化后"></p><p>完美。</p><hr><p>欢迎关注微信公众号，您的资源可变现：【乐知付加密平台】<br><img src="/images/wechat_account.png" alt="乐知付加密平台"></p><p>一起学习，一起进步。<br></p>]]></content>
-    
-    
-    <summary type="html">&lt;p&gt;网站页面最近加载很慢，不知道为什么，这里记录一下，一步一步查问题的思路。&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="Python" scheme="https://chenzuoli.github.io/categories/Python/"/>
-    
-    <category term="Flask" scheme="https://chenzuoli.github.io/categories/Python/Flask/"/>
-    
-    
-    <category term="html" scheme="https://chenzuoli.github.io/tags/html/"/>
-    
-    <category term="flask" scheme="https://chenzuoli.github.io/tags/flask/"/>
     
   </entry>
   
