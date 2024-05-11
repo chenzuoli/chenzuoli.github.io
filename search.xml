@@ -3990,6 +3990,7 @@
 <p>一起学习，一起进步。<br></p>
 ]]></content>
       <categories>
+        <category>其他</category>
         <category>宠物</category>
       </categories>
       <tags>
@@ -5102,6 +5103,7 @@
 <p><b>好记性不如烂笔头。</b></p>
 ]]></content>
       <categories>
+        <category>HTTP</category>
         <category>网络安全</category>
       </categories>
       <tags>
@@ -6256,6 +6258,7 @@
 <p>我是chenzuoli，欢迎交流。</p>
 ]]></content>
       <categories>
+        <category>HTTP</category>
         <category>网络</category>
       </categories>
       <tags>
@@ -9575,6 +9578,8 @@
 <p>一起学习，一起进步。<br></p>
 ]]></content>
       <categories>
+        <category>其他</category>
+        <category>电脑</category>
         <category>计算机系统</category>
       </categories>
       <tags>
@@ -10188,6 +10193,7 @@
 <p>一起学习，一起进步。<br></p>
 ]]></content>
       <categories>
+        <category>其他</category>
         <category>宠物</category>
       </categories>
       <tags>
@@ -11180,6 +11186,7 @@ API
 <p>[]: # (</p>
 ]]></content>
       <categories>
+        <category>其他</category>
         <category>服务器</category>
       </categories>
       <tags>
@@ -11303,7 +11310,9 @@ API
 <p>一起学习，一起进步。<br></p>
 ]]></content>
       <categories>
+        <category>大数据</category>
         <category>调度系统</category>
+        <category>Airflow</category>
       </categories>
       <tags>
         <tag>airflow</tag>
@@ -11412,6 +11421,7 @@ API
 <p>一起学习，一起进步。<br></p>
 ]]></content>
       <categories>
+        <category>其他</category>
         <category>宠物</category>
       </categories>
       <tags>
@@ -11462,6 +11472,7 @@ API
 <p>一起学习，一起进步。<br></p>
 ]]></content>
       <categories>
+        <category>其他</category>
         <category>宠物</category>
       </categories>
       <tags>
@@ -11830,6 +11841,7 @@ API
 </ol>
 ]]></content>
       <categories>
+        <category>其他</category>
         <category>技术</category>
       </categories>
       <tags>
@@ -11975,6 +11987,7 @@ API
 <p>一起学习，一起进步。<br></p>
 ]]></content>
       <categories>
+        <category>其他</category>
         <category>宠物</category>
       </categories>
       <tags>
@@ -13478,6 +13491,7 @@ API
 <p>一起学习，一起进步。<br></p>
 ]]></content>
       <categories>
+        <category>其他</category>
         <category>宠物</category>
       </categories>
       <tags>
@@ -14375,6 +14389,8 @@ API
 <p>一起学习，一起进步。<br></p>
 ]]></content>
       <categories>
+        <category>其他</category>
+        <category>电脑</category>
         <category>计算机系统</category>
       </categories>
       <tags>
@@ -14714,6 +14730,7 @@ API
 <p>一起学习，一起进步。<br></p>
 ]]></content>
       <categories>
+        <category>其他</category>
         <category>移动互联网</category>
       </categories>
       <tags>
@@ -15436,7 +15453,7 @@ API
 <p>一起学习，一起进步。<br></p>
 ]]></content>
       <categories>
-        <category>Http</category>
+        <category>HTTP</category>
         <category>域名恶意解析</category>
       </categories>
       <tags>
@@ -15517,7 +15534,9 @@ API
 <p>一起学习，一起进步。<br></p>
 ]]></content>
       <categories>
+        <category>大数据</category>
         <category>调度系统</category>
+        <category>Airflow</category>
       </categories>
       <tags>
         <tag>airflow</tag>
@@ -17059,9 +17078,9 @@ API
 <p>官方网站：<a href="https://splash-cn-doc.readthedocs.io/zh-cn/latest/Installation.html">https://splash-cn-doc.readthedocs.io/zh-cn/latest/Installation.html</a></p>
 <p>splash的作用：<br>scrapy-splash能够模拟浏览器加载js，并返回js运行后的数据</p>
 <h1 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h1><p>linux + docker</p>
-<h2 id="下载-docker"><a href="#下载-docker" class="headerlink" title="下载 docker"></a>下载 docker</h2><h2 id="拉取镜像"><a href="#拉取镜像" class="headerlink" title="拉取镜像"></a>拉取镜像</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">$ sudo docker pull scrapinghub/splash</span><br></pre></td></tr></table></figure>
+<h2 id="下载-docker"><a href="#下载-docker" class="headerlink" title="下载 docker"></a>下载 docker</h2><h2 id="拉取镜像"><a href="#拉取镜像" class="headerlink" title="拉取镜像"></a>拉取镜像</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">docker pull scrapinghub/splash</span><br></pre></td></tr></table></figure>
 
-<h2 id="启动容器"><a href="#启动容器" class="headerlink" title="启动容器"></a>启动容器</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">$ sudo docker run -p 8050:8050 -p 5023:5023 scrapinghub/splash</span><br></pre></td></tr></table></figure>
+<h2 id="启动容器"><a href="#启动容器" class="headerlink" title="启动容器"></a>启动容器</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">docker run -p 8050:8050 -p 5023:5023 scrapinghub/splash</span><br></pre></td></tr></table></figure>
 
 <p>现在splash在0.0.0.0这个ip上监听并绑定了端口8050(http) 和5023 (telnet)</p>
 <p>启动完splash后，可以访问它的web页面，看是否启动成功：<br><a href="http://127.0.0.1:8050/">http://127.0.0.1:8050</a> </p>
