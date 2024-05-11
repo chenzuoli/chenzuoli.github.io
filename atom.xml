@@ -63,9 +63,9 @@
     
     <category term="linux" scheme="https://chenzuoli.github.io/tags/linux/"/>
     
-    <category term="magick" scheme="https://chenzuoli.github.io/tags/magick/"/>
-    
     <category term="图片" scheme="https://chenzuoli.github.io/tags/%E5%9B%BE%E7%89%87/"/>
+    
+    <category term="magick" scheme="https://chenzuoli.github.io/tags/magick/"/>
     
   </entry>
   
@@ -89,17 +89,17 @@
     <category term="ffmpeg" scheme="https://chenzuoli.github.io/categories/%E5%B7%A5%E5%85%B7/ffmpeg/"/>
     
     
-    <category term="图片" scheme="https://chenzuoli.github.io/tags/%E5%9B%BE%E7%89%87/"/>
-    
-    <category term="工具" scheme="https://chenzuoli.github.io/tags/%E5%B7%A5%E5%85%B7/"/>
-    
-    <category term="流媒体" scheme="https://chenzuoli.github.io/tags/%E6%B5%81%E5%AA%92%E4%BD%93/"/>
-    
     <category term="ffmpeg" scheme="https://chenzuoli.github.io/tags/ffmpeg/"/>
+    
+    <category term="图片" scheme="https://chenzuoli.github.io/tags/%E5%9B%BE%E7%89%87/"/>
     
     <category term="音频" scheme="https://chenzuoli.github.io/tags/%E9%9F%B3%E9%A2%91/"/>
     
     <category term="视频" scheme="https://chenzuoli.github.io/tags/%E8%A7%86%E9%A2%91/"/>
+    
+    <category term="工具" scheme="https://chenzuoli.github.io/tags/%E5%B7%A5%E5%85%B7/"/>
+    
+    <category term="流媒体" scheme="https://chenzuoli.github.io/tags/%E6%B5%81%E5%AA%92%E4%BD%93/"/>
     
   </entry>
   
@@ -253,17 +253,17 @@
     <category term="ffmpeg" scheme="https://chenzuoli.github.io/categories/%E5%B7%A5%E5%85%B7/ffmpeg/"/>
     
     
-    <category term="图片" scheme="https://chenzuoli.github.io/tags/%E5%9B%BE%E7%89%87/"/>
-    
-    <category term="工具" scheme="https://chenzuoli.github.io/tags/%E5%B7%A5%E5%85%B7/"/>
-    
-    <category term="流媒体" scheme="https://chenzuoli.github.io/tags/%E6%B5%81%E5%AA%92%E4%BD%93/"/>
-    
     <category term="ffmpeg" scheme="https://chenzuoli.github.io/tags/ffmpeg/"/>
+    
+    <category term="图片" scheme="https://chenzuoli.github.io/tags/%E5%9B%BE%E7%89%87/"/>
     
     <category term="音频" scheme="https://chenzuoli.github.io/tags/%E9%9F%B3%E9%A2%91/"/>
     
     <category term="视频" scheme="https://chenzuoli.github.io/tags/%E8%A7%86%E9%A2%91/"/>
+    
+    <category term="工具" scheme="https://chenzuoli.github.io/tags/%E5%B7%A5%E5%85%B7/"/>
+    
+    <category term="流媒体" scheme="https://chenzuoli.github.io/tags/%E6%B5%81%E5%AA%92%E4%BD%93/"/>
     
   </entry>
   
@@ -288,11 +288,11 @@
     <category term="视频" scheme="https://chenzuoli.github.io/categories/%E5%89%8D%E7%AB%AF/HTML/%E8%A7%86%E9%A2%91/"/>
     
     
+    <category term="流媒体" scheme="https://chenzuoli.github.io/tags/%E6%B5%81%E5%AA%92%E4%BD%93/"/>
+    
     <category term="m4u8" scheme="https://chenzuoli.github.io/tags/m4u8/"/>
     
     <category term="视频格式" scheme="https://chenzuoli.github.io/tags/%E8%A7%86%E9%A2%91%E6%A0%BC%E5%BC%8F/"/>
-    
-    <category term="流媒体" scheme="https://chenzuoli.github.io/tags/%E6%B5%81%E5%AA%92%E4%BD%93/"/>
     
   </entry>
   
@@ -375,9 +375,9 @@
     
     <category term="linux" scheme="https://chenzuoli.github.io/tags/linux/"/>
     
-    <category term="magick" scheme="https://chenzuoli.github.io/tags/magick/"/>
-    
     <category term="图片" scheme="https://chenzuoli.github.io/tags/%E5%9B%BE%E7%89%87/"/>
+    
+    <category term="magick" scheme="https://chenzuoli.github.io/tags/magick/"/>
     
   </entry>
   
@@ -493,11 +493,11 @@
     <category term="图片编辑" scheme="https://chenzuoli.github.io/categories/%E5%B7%A5%E5%85%B7/%E5%9B%BE%E7%89%87%E7%BC%96%E8%BE%91/"/>
     
     
-    <category term="magick" scheme="https://chenzuoli.github.io/tags/magick/"/>
-    
     <category term="图片" scheme="https://chenzuoli.github.io/tags/%E5%9B%BE%E7%89%87/"/>
     
     <category term="工具" scheme="https://chenzuoli.github.io/tags/%E5%B7%A5%E5%85%B7/"/>
+    
+    <category term="magick" scheme="https://chenzuoli.github.io/tags/magick/"/>
     
   </entry>
   
