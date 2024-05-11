@@ -11949,6 +11949,24 @@ API
 </ol>
 <p>官方网站：<a href="https://splash-cn-doc.readthedocs.io/zh-cn/latest/Installation.html">https://splash-cn-doc.readthedocs.io/zh-cn/latest/Installation.html</a></p>
 <p>splash的作用：<br>scrapy-splash能够模拟浏览器加载js，并返回js运行后的数据</p>
+<h1 id="功能"><a href="#功能" class="headerlink" title="功能"></a>功能</h1><p>来看看官网的介绍，他能干啥：</p>
+<ol>
+<li>Take screenshots of multiple pages</li>
+<li>Wait for element</li>
+<li>Scroll page</li>
+<li>Preload jQuery</li>
+<li>Preload functions</li>
+<li>Load multiple pages</li>
+<li>Count DIV tags</li>
+<li>Call Later</li>
+<li>Render PNG</li>
+<li>Take a screenshot of a single element</li>
+<li>Log requested URLs</li>
+<li>Block CSS</li>
+<li>Execute function with timeout</li>
+<li>Submit a search input</li>
+</ol>
+<p>对于我们普通使用用户来说，加载js，滚动页面，等待js加载，截图应该比较有用。<br>需要的大家自己去搜索用法吧。</p>
 <h1 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h1><p>linux + docker</p>
 <h2 id="下载-docker"><a href="#下载-docker" class="headerlink" title="下载 docker"></a>下载 docker</h2><h2 id="拉取镜像"><a href="#拉取镜像" class="headerlink" title="拉取镜像"></a>拉取镜像</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">docker pull scrapinghub/splash</span><br></pre></td></tr></table></figure>
 
