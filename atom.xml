@@ -6,7 +6,7 @@
   <link href="https://chenzuoli.github.io/atom.xml" rel="self"/>
   
   <link href="https://chenzuoli.github.io/"/>
-  <updated>2024-05-11T13:45:39.376Z</updated>
+  <updated>2024-05-11T15:08:05.230Z</updated>
   <id>https://chenzuoli.github.io/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>opencv处理视频</title>
+    <link href="https://chenzuoli.github.io/2024/05/11/opencv%E5%A4%84%E7%90%86%E8%A7%86%E9%A2%91/"/>
+    <id>https://chenzuoli.github.io/2024/05/11/opencv%E5%A4%84%E7%90%86%E8%A7%86%E9%A2%91/</id>
+    <published>2024-05-11T14:44:03.000Z</published>
+    <updated>2024-05-11T15:08:05.230Z</updated>
+    
+    <content type="html"><![CDATA[<p>处理视频的python包有这些: opencv  moviepy，今天来看下opencv怎么处理视频。</p><span id="more"></span><p>通过opencv库进行视频的剪切。</p><h1 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h1><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install opencv-python==4.8.1.78</span><br></pre></td></tr></table></figure><h1 id="例子"><a href="#例子" class="headerlink" title="例子"></a>例子</h1><p>从视频中获取图片：<a href="https://github.com/chenzuoli/pythonTest/blob/main/media_test/opencv/get_pic.py">https://github.com/chenzuoli/pythonTest/blob/main/media_test/opencv/get_pic.py</a></p><p>视频剪切：<a href="https://github.com/chenzuoli/pythonTest/blob/main/media_test/opencv/video_cut.py">https://github.com/chenzuoli/pythonTest/blob/main/media_test/opencv/video_cut.py</a></p><h1 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h1><ol><li>问题如下<br>ImportError: dlopen(&#x2F;Users&#x2F;zuolichen&#x2F;PycharmProjects&#x2F;pythonProject&#x2F;venv&#x2F;lib&#x2F;python3.8&#x2F;site-packages&#x2F;cv2&#x2F;cv2.abi3.so, 2): Symbol not found: _CGLGetCurrentContext<br>  Referenced from: &#x2F;System&#x2F;Library&#x2F;Frameworks&#x2F;OpenCL.framework&#x2F;Versions&#x2F;A&#x2F;OpenCL<br>  Expected in: &#x2F;System&#x2F;Library&#x2F;Frameworks&#x2F;OpenGL.framework&#x2F;Versions&#x2F;A&#x2F;OpenGL<br> in &#x2F;System&#x2F;Library&#x2F;Frameworks&#x2F;OpenCL.framework&#x2F;Versions&#x2F;A&#x2F;OpenCL</li></ol><p>我的本机环境：<br>macos bigsur 11<br>python 3.8.9</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">echo $DYLD_LIBRARY_PATH</span><br><span class="line">/opt/X11/lib:/Users/zuolichen/opt/software/ImageMagick-7.0.10/lib/</span><br></pre></td></tr></table></figure><p>solation:</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">unset DYLD_LIBRARY_PATH</span><br></pre></td></tr></table></figure><hr><p>欢迎关注微信公众号，你的资源可变现：【乐知付加密平台】<br><img src="/images/wechat_account.png" alt="乐知付加密平台"></p><p>一起学习，一起进步。<br></p>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;处理视频的python包有这些: opencv  moviepy，今天来看下opencv怎么处理视频。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="Python" scheme="https://chenzuoli.github.io/categories/Python/"/>
+    
+    <category term="视频" scheme="https://chenzuoli.github.io/categories/Python/%E8%A7%86%E9%A2%91/"/>
+    
+    <category term="OpenCV" scheme="https://chenzuoli.github.io/categories/Python/%E8%A7%86%E9%A2%91/OpenCV/"/>
+    
+    
+    <category term="视频" scheme="https://chenzuoli.github.io/tags/%E8%A7%86%E9%A2%91/"/>
+    
+    <category term="opencv" scheme="https://chenzuoli.github.io/tags/opencv/"/>
+    
+  </entry>
   
   <entry>
     <title>如何通过scrapy抓取js加载的动态html内容</title>
@@ -135,7 +162,7 @@
     <link href="https://chenzuoli.github.io/2024/05/05/python%E8%BD%AC%E6%8D%A2%E8%A7%86%E9%A2%91%E6%A0%BC%E5%BC%8F/"/>
     <id>https://chenzuoli.github.io/2024/05/05/python%E8%BD%AC%E6%8D%A2%E8%A7%86%E9%A2%91%E6%A0%BC%E5%BC%8F/</id>
     <published>2024-05-05T06:19:19.000Z</published>
-    <updated>2024-05-05T06:25:05.692Z</updated>
+    <updated>2024-05-11T14:48:09.058Z</updated>
     
     <content type="html"><![CDATA[<p>展示wmv转avi视频代码示例。</p><span id="more"></span><p>python代码示例：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">&quot;&quot;&quot;</span><br><span class="line">pip install moviepy</span><br><span class="line">&quot;&quot;&quot;</span><br><span class="line"></span><br><span class="line">from moviepy.editor import VideoFileClip</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">def convert_video_format(input_video_path, output_video_path):</span><br><span class="line">    video_clip = VideoFileClip(input_video_path)</span><br><span class="line">    video_clip.write_videofile(output_video_path, codec=&#x27;libx264&#x27;, audio_codec=&#x27;aac&#x27;)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"># 使用函数转换视频格式</span><br><span class="line">convert_video_format(&#x27;Italian.wmv&#x27;, &#x27;Italian.avi&#x27;)</span><br></pre></td></tr></table></figure><p>运行示例：<br><img src="/2024/05/05/python%E8%BD%AC%E6%8D%A2%E8%A7%86%E9%A2%91%E6%A0%BC%E5%BC%8F/image-3.png" alt="example"></p><hr><p>欢迎关注微信公众号，你的资源可变现：【乐知付加密平台】<br><img src="/images/wechat_account.png" alt="乐知付加密平台"></p><p>一起学习，一起进步。<br></p>]]></content>
     
@@ -147,6 +174,8 @@
     <category term="Python" scheme="https://chenzuoli.github.io/categories/Python/"/>
     
     <category term="视频" scheme="https://chenzuoli.github.io/categories/Python/%E8%A7%86%E9%A2%91/"/>
+    
+    <category term="MoviePY" scheme="https://chenzuoli.github.io/categories/Python/%E8%A7%86%E9%A2%91/MoviePY/"/>
     
     
     <category term="python" scheme="https://chenzuoli.github.io/tags/python/"/>
@@ -527,34 +556,6 @@
     <category term="建站" scheme="https://chenzuoli.github.io/tags/%E5%BB%BA%E7%AB%99/"/>
     
     <category term="内容管理" scheme="https://chenzuoli.github.io/tags/%E5%86%85%E5%AE%B9%E7%AE%A1%E7%90%86/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>建站可以通用的内容管理系统推荐</title>
-    <link href="https://chenzuoli.github.io/2024/04/14/%E5%BB%BA%E7%AB%99%E5%8F%AF%E4%BB%A5%E9%80%9A%E7%94%A8%E7%9A%84%E5%86%85%E5%AE%B9%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F%E6%8E%A8%E8%8D%90/"/>
-    <id>https://chenzuoli.github.io/2024/04/14/%E5%BB%BA%E7%AB%99%E5%8F%AF%E4%BB%A5%E9%80%9A%E7%94%A8%E7%9A%84%E5%86%85%E5%AE%B9%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F%E6%8E%A8%E8%8D%90/</id>
-    <published>2024-04-14T02:37:05.000Z</published>
-    <updated>2024-04-14T03:19:41.588Z</updated>
-    
-    <content type="html"><![CDATA[<p>如果我们不是专业的全栈软件工程师，那么你可能只会前端、或后端、或UI、或测试，对于建立网站需要这些综合技能时，怎么办呢？</p><p>这里推荐一些开源的CMS内容管理系统，你只需要关注内容即可，其他的交给软件系统。</p><span id="more"></span><h1 id="一、传统-CMS"><a href="#一、传统-CMS" class="headerlink" title="一、传统 CMS"></a>一、传统 CMS</h1><p>CMS 是内容管理系统的英文简称，它是用来管理和发布包括文章、图片、商品等内容的系统。最常见的 CMS 就是博客系统，作者登录管理后台写文章，点击发布后读者就可以访问指定网址，看到作者发布的内容啦。</p><p>不管你是不是程序员，如果你想快速构建一个网站，那么下面这些开源 CMS 一定能助你一臂之力。</p><h2 id="1-1-halo"><a href="#1-1-halo" class="headerlink" title="1.1 halo"></a>1.1 halo</h2><p>Star 数：24.4k｜编程语言：Java（99.5%）<br>一款由国人开发的现代化开源 CMS，采用 Spring Boot+Vue.js 编写而成，代码开源完全免费，截止到本文发表时已经迭代了 80 多个版本。国人开发的好处是可轻松接入国内的云存储服务，而且文档、社区和操作界面全部是中文的。</p><p>安装步骤，如下：</p><h3 id="本地有-Java"><a href="#本地有-Java" class="headerlink" title="本地有 Java"></a>本地有 Java</h3><ol><li>下载最新的 jar 包：<a href="https://dl.halo.run/release/halo-1.5.4.jar">https://dl.halo.run/release/halo-1.5.4.jar</a></li><li>运行：java -jar halo-1.5.4.jar</li></ol><h3 id="Docker-运行"><a href="#Docker-运行" class="headerlink" title="Docker 运行"></a>Docker 运行</h3><p>docker run -it -d –name halo-next -p 8090:8090 -v ~&#x2F;halo-next:&#x2F;root&#x2F;halo-next –restart&#x3D;unless-stopped halohub&#x2F;halo-dev:2.0.0-beta.1<br>地址：<a href="https://github.com/halo-dev/halo">https://github.com/halo-dev/halo</a></p><h2 id="1-2-django-cms"><a href="#1-2-django-cms" class="headerlink" title="1.2 django-cms"></a>1.2 django-cms</h2><p>Star 数：9k｜编程语言：Python（59.7%）<br>由 Django 编写的企业级 CMS，它功能实用、安全可靠，支持拖拽上传图片、轮播图、Docker 部署等功能，可轻松进行二次开发，多用于构建企业官网，比如：国家地理等网站就是基于它开发而成。</p><p>安装步骤，如下：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">$ git clone git@github.com:django-cms/django-cms-quickstart.git</span><br><span class="line">$ cd django-cms-quickstart</span><br><span class="line">$ docker compose build web &amp;&amp; docker compose up -d database_default</span><br><span class="line">$ docker compose run web python manage.py migrate &amp;&amp; docker compose run web python manage.py createsuperuser</span><br><span class="line">$ docker compose up -d</span><br><span class="line">$ open http://127.0.0.1:8000</span><br></pre></td></tr></table></figure><p>地址：<a href="https://github.com/django-cms/django-cms">https://github.com/django-cms/django-cms</a></p><h2 id="1-3-WordPress"><a href="#1-3-WordPress" class="headerlink" title="1.3 WordPress"></a>1.3 WordPress</h2><p>Star 数：16.8k｜编程语言：PHP（62.5%）<br>作为全球最流行的 CMS，它的市场占有率一直处于独占鳌头那一档(64.2%)。我认为这些得益于它：傻瓜式的安装方式、丰富的主题和插件、十年如一日的更新迭代，以及优秀的商业模式。<br>有多少人的第一个博客是用它搞起来的？算我一个</p><p>地址：<a href="https://github.com/WordPress/WordPress">https://github.com/WordPress/WordPress</a></p><h2 id="1-4-joomla-cms"><a href="#1-4-joomla-cms" class="headerlink" title="1.4 joomla-cms"></a>1.4 joomla-cms</h2><p>Star 数：4.3k｜编程语言：PHP（92.2%）<br>它是和 WordPress 同时期开源的 PHP CMS 项目，与 WordPress 不同的是Joomla! 更加灵活，但学习曲线也更陡峭。它具有较强的通用性，再加上丰富多元的扩展，可用来搭建商业网站、个人博客、信息管理系统、Web 服务等。作为开源至今已有 18 年历史的 CMS，肯定还是有点东西的。<br>地址：<a href="https://github.com/joomla/joomla-cms">https://github.com/joomla/joomla-cms</a></p><p>这里顺带提一嘴：Drupal 也同样是 PHP 写的以复杂著称的 CMS，如果你需要一个处理大量请求、高度自定义的网站，可以考虑它。</p><h1 id="二、现代CMS"><a href="#二、现代CMS" class="headerlink" title="二、现代CMS"></a>二、现代CMS</h1><p>无头 CMS 就是指：仅包含内容管理的后台，没有现成的前台展示，前台需要自己实现。</p><p>好处是内容和展示完全分离，不依赖或不需要特定的前端框架，可以根据自己喜好选择前端框架、接入静态站点生成器或 APP，创建丰富的展示体验。<br>缺点是需要懂技术的开发人员，开发周期大概需要一周左右。</p><h2 id="2-1-wagtail"><a href="#2-1-wagtail" class="headerlink" title="2.1 wagtail"></a>2.1 wagtail</h2><p>Star 数：13.4k｜编程语言：Python（79.3%）<br>基于 Python 知名 Web 框架 Django 实现的无头内容管理系统，拥有清爽的 UI 和简洁易用的编辑器。独特的 StreamField 技术，可以让内容排版灵活又不失结构，再加上强大的多语言系统，让它在众多开源 CMS 中脱颖而出。</p><p>安装步骤，如下：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">pip install wagtail</span><br><span class="line">wagtail start mysite</span><br><span class="line">cd mysite</span><br><span class="line">pip install -r requirements.txt</span><br><span class="line">python manage.py migrate</span><br><span class="line">python manage.py createsuperuser</span><br><span class="line">python manage.py runserver</span><br></pre></td></tr></table></figure><p>地址：<a href="https://github.com/wagtail/wagtail">https://github.com/wagtail/wagtail</a></p><h2 id="2-2-ghost"><a href="#2-2-ghost" class="headerlink" title="2.2 ghost"></a>2.2 ghost</h2><p>Star 数：41.7k｜编程语言：JavaScript（79.4%）<br>一款用 Node.js 编写，功能强大的无头 CMS。它的强大之处在于提供了丰富、免费、可自定义的主题，用户可以自由搭配轻松建站。专业的会员订阅和数据可视化功能，让内容创作者可以围绕内容，尝试发展商业化业务。除此之外，它还拥有先进的所见即所得编辑器。</p><p>安装步骤，如下：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm install ghost-cli -g</span><br><span class="line">ghost install local</span><br></pre></td></tr></table></figure><p>地址：<a href="https://github.com/TryGhost/Ghost">https://github.com/TryGhost/Ghost</a></p><h2 id="2-3-strapi"><a href="#2-3-strapi" class="headerlink" title="2.3 strapi"></a>2.3 strapi</h2><p>Star 数：49.5k｜编程语言：JavaScript（99.6%）<br>一款完全免费、基于 JavaScript 构建的无头内容管理系统，它拥有开箱即用的 API 和友好的管理面板，自带权限管理、默认安全、SEO 友好等特点。该项目做为 GitHub 上 Star 数最多的开源内容管理系统，目前已成为多家世界 500 公司的首选 CMS。</p><p>安装步骤，如下：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">yarn create strapi-app my-project --quickstart</span><br><span class="line">或者</span><br><span class="line">npx create-strapi-app my-project --quickstart</span><br></pre></td></tr></table></figure><p>地址：<a href="https://github.com/strapi/strapi">https://github.com/strapi/strapi</a></p><h2 id="2-4-Fortressa"><a href="#2-4-Fortressa" class="headerlink" title="2.4 Fortressa"></a>2.4 Fortressa</h2><p>Fortressa 网站是一个旨在为开源软件提供一个应用商店的平台。它的核心理念是为团队提供最佳的工具，而不采用许多软件公司常用的按用户计费模式。这种模式可能会很快变得昂贵，特别是对于大型团队或未来可能扩展的组织。<br><a href="https://fortressa.com/">https://fortressa.com/</a></p><h2 id="2-5-CodeIgniter"><a href="#2-5-CodeIgniter" class="headerlink" title="2.5 CodeIgniter"></a>2.5 CodeIgniter</h2><p>Star 数：5.1k｜编程语言：Php（99.6%）<br>CodeIgniter 4 是一个开源的 PHP 全栈 Web 框架，由一个志愿者社区维护和开发。这个框架以其轻量级、快速、灵活和安全性而闻名。它最初由 EllisLab 公司开发，但现在已经成为社区驱动的项目。</p><p>CodeIgniter4： <a href="https://github.com/codeigniter4/CodeIgniter4">https://github.com/codeigniter4/CodeIgniter4</a></p><h1 id="三、最后"><a href="#三、最后" class="headerlink" title="三、最后"></a>三、最后</h1><p>如果，你要挑一个开源 CMS：<br>• 不会编程：首选 WordPress 因为它成熟简单，编程相关的东西都被藏在了背后。<br>• 会 Python：django-cms 容易接受，wagtail 则更新、势头更猛。<br>• 会前端：推荐 strapi 它背后有商业化公司支持，吃透了可以谋个远程全职。<br>• 不会前端，但懂后端：推荐 Ghost，它玩法多、社区活跃、有免费主题。</p><hr><p>欢迎关注微信公众号，你的资源可变现：【乐知付加密平台】<br><img src="/images/wechat_account.png" alt="乐知付加密平台"></p><p>一起学习，一起进步。<br></p>]]></content>
-    
-    
-    <summary type="html">&lt;p&gt;如果我们不是专业的全栈软件工程师，那么你可能只会前端、或后端、或UI、或测试，对于建立网站需要这些综合技能时，怎么办呢？&lt;/p&gt;
-&lt;p&gt;这里推荐一些开源的CMS内容管理系统，你只需要关注内容即可，其他的交给软件系统。&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="网站" scheme="https://chenzuoli.github.io/categories/%E7%BD%91%E7%AB%99/"/>
-    
-    <category term="CMS" scheme="https://chenzuoli.github.io/categories/%E7%BD%91%E7%AB%99/CMS/"/>
-    
-    <category term="建站" scheme="https://chenzuoli.github.io/categories/%E7%BD%91%E7%AB%99/CMS/%E5%BB%BA%E7%AB%99/"/>
-    
-    
-    <category term="cms" scheme="https://chenzuoli.github.io/tags/cms/"/>
-    
-    <category term="建站" scheme="https://chenzuoli.github.io/tags/%E5%BB%BA%E7%AB%99/"/>
     
   </entry>
   

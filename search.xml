@@ -8480,6 +8480,7 @@
       <categories>
         <category>Python</category>
         <category>视频</category>
+        <category>MoviePY</category>
       </categories>
       <tags>
         <tag>python</tag>
@@ -17136,6 +17137,45 @@ API
         <tag>linux</tag>
         <tag>shell</tag>
         <tag>command</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>opencv处理视频</title>
+    <url>/2024/05/11/opencv%E5%A4%84%E7%90%86%E8%A7%86%E9%A2%91/</url>
+    <content><![CDATA[<p>处理视频的python包有这些: opencv  moviepy，今天来看下opencv怎么处理视频。</p>
+<span id="more"></span>
+
+
+<p>通过opencv库进行视频的剪切。</p>
+<h1 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h1><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">pip install opencv-python==4.8.1.78</span><br></pre></td></tr></table></figure>
+
+<h1 id="例子"><a href="#例子" class="headerlink" title="例子"></a>例子</h1><p>从视频中获取图片：<a href="https://github.com/chenzuoli/pythonTest/blob/main/media_test/opencv/get_pic.py">https://github.com/chenzuoli/pythonTest/blob/main/media_test/opencv/get_pic.py</a></p>
+<p>视频剪切：<a href="https://github.com/chenzuoli/pythonTest/blob/main/media_test/opencv/video_cut.py">https://github.com/chenzuoli/pythonTest/blob/main/media_test/opencv/video_cut.py</a></p>
+<h1 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h1><ol>
+<li>问题如下<br>ImportError: dlopen(&#x2F;Users&#x2F;zuolichen&#x2F;PycharmProjects&#x2F;pythonProject&#x2F;venv&#x2F;lib&#x2F;python3.8&#x2F;site-packages&#x2F;cv2&#x2F;cv2.abi3.so, 2): Symbol not found: _CGLGetCurrentContext<br>  Referenced from: &#x2F;System&#x2F;Library&#x2F;Frameworks&#x2F;OpenCL.framework&#x2F;Versions&#x2F;A&#x2F;OpenCL<br>  Expected in: &#x2F;System&#x2F;Library&#x2F;Frameworks&#x2F;OpenGL.framework&#x2F;Versions&#x2F;A&#x2F;OpenGL<br> in &#x2F;System&#x2F;Library&#x2F;Frameworks&#x2F;OpenCL.framework&#x2F;Versions&#x2F;A&#x2F;OpenCL</li>
+</ol>
+<p>我的本机环境：<br>macos bigsur 11<br>python 3.8.9</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">echo $DYLD_LIBRARY_PATH</span><br><span class="line">/opt/X11/lib:/Users/zuolichen/opt/software/ImageMagick-7.0.10/lib/</span><br></pre></td></tr></table></figure>
+
+<p>solation:</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">unset DYLD_LIBRARY_PATH</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+<hr>
+<p>欢迎关注微信公众号，你的资源可变现：【乐知付加密平台】<br><img src="/images/wechat_account.png" alt="乐知付加密平台"></p>
+<p>一起学习，一起进步。<br></p>
+]]></content>
+      <categories>
+        <category>Python</category>
+        <category>视频</category>
+        <category>OpenCV</category>
+      </categories>
+      <tags>
+        <tag>视频</tag>
+        <tag>opencv</tag>
       </tags>
   </entry>
 </search>
