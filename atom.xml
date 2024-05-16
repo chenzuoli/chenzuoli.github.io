@@ -6,7 +6,7 @@
   <link href="https://chenzuoli.github.io/atom.xml" rel="self"/>
   
   <link href="https://chenzuoli.github.io/"/>
-  <updated>2024-05-13T14:23:48.133Z</updated>
+  <updated>2024-05-15T15:03:14.139Z</updated>
   <id>https://chenzuoli.github.io/</id>
   
   <author>
@@ -15,6 +15,63 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>tesseract图片中文字识别优化</title>
+    <link href="https://chenzuoli.github.io/2024/05/14/tesseract%E5%9B%BE%E7%89%87%E4%B8%AD%E6%96%87%E5%AD%97%E8%AF%86%E5%88%AB%E4%BC%98%E5%8C%96/"/>
+    <id>https://chenzuoli.github.io/2024/05/14/tesseract%E5%9B%BE%E7%89%87%E4%B8%AD%E6%96%87%E5%AD%97%E8%AF%86%E5%88%AB%E4%BC%98%E5%8C%96/</id>
+    <published>2024-05-14T13:53:33.000Z</published>
+    <updated>2024-05-15T15:03:14.139Z</updated>
+    
+    <content type="html"><![CDATA[<p>优化的思路大概有2种，1是优化语言模型，2是优化图片。</p><span id="more"></span><h1 id="优化语言模型"><a href="#优化语言模型" class="headerlink" title="优化语言模型"></a>优化语言模型</h1><h1 id="优化图片"><a href="#优化图片" class="headerlink" title="优化图片"></a>优化图片</h1><p>图片增强对比对</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">from PIL import ImageEnhance</span><br><span class="line"></span><br><span class="line"># 增强图片对比度</span><br><span class="line">enhancer = ImageEnhance.Contrast(img)</span><br><span class="line">img_contrast = enhancer.enhance(2.0)</span><br><span class="line"></span><br><span class="line"># 进行文字识别</span><br><span class="line">text_contrast = pytesseract.image_to_string(img_contrast)</span><br><span class="line"></span><br><span class="line"># 打印识别结果</span><br><span class="line">print(&quot;增强对比度后的识别结果：&quot;, text_contrast)</span><br><span class="line"></span><br></pre></td></tr></table></figure><hr><p>欢迎关注微信公众号，你的资源可变现：【乐知付加密平台】<br><img src="/images/wechat_account.png" alt="乐知付加密平台"></p><p>一起学习，一起进步。<br></p>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;优化的思路大概有2种，1是优化语言模型，2是优化图片。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="Python" scheme="https://chenzuoli.github.io/categories/Python/"/>
+    
+    <category term="图片" scheme="https://chenzuoli.github.io/categories/Python/%E5%9B%BE%E7%89%87/"/>
+    
+    <category term="Tesseract" scheme="https://chenzuoli.github.io/categories/Python/%E5%9B%BE%E7%89%87/Tesseract/"/>
+    
+    
+    <category term="tesseract" scheme="https://chenzuoli.github.io/tags/tesseract/"/>
+    
+    <category term="PIL" scheme="https://chenzuoli.github.io/tags/PIL/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>爬虫框架</title>
+    <link href="https://chenzuoli.github.io/2024/05/14/%E7%88%AC%E8%99%AB%E6%A1%86%E6%9E%B6/"/>
+    <id>https://chenzuoli.github.io/2024/05/14/%E7%88%AC%E8%99%AB%E6%A1%86%E6%9E%B6/</id>
+    <published>2024-05-14T13:38:40.000Z</published>
+    <updated>2024-05-14T13:44:11.104Z</updated>
+    
+    <content type="html"><![CDATA[<ol><li>pyspider</li><li>scrapy</li></ol><span id="more"></span><p>想知道怎么用，自行查看官方文档：<br><a href="https://docs.scrapy.org/en/latest/">https://docs.scrapy.org/en/latest/</a><br><a href="https://docs.pyspider.org/en/latest/">https://docs.pyspider.org/en/latest/</a></p><hr><p>欢迎关注微信公众号，你的资源可变现：【乐知付加密平台】<br><img src="/images/wechat_account.png" alt="乐知付加密平台"></p><p>一起学习，一起进步。<br></p>]]></content>
+    
+    
+    <summary type="html">&lt;ol&gt;
+&lt;li&gt;pyspider&lt;/li&gt;
+&lt;li&gt;scrapy&lt;/li&gt;
+&lt;/ol&gt;</summary>
+    
+    
+    
+    <category term="Python" scheme="https://chenzuoli.github.io/categories/Python/"/>
+    
+    <category term="爬虫" scheme="https://chenzuoli.github.io/categories/Python/%E7%88%AC%E8%99%AB/"/>
+    
+    
+    <category term="python" scheme="https://chenzuoli.github.io/tags/python/"/>
+    
+    <category term="scrapy" scheme="https://chenzuoli.github.io/tags/scrapy/"/>
+    
+    <category term="爬虫" scheme="https://chenzuoli.github.io/tags/%E7%88%AC%E8%99%AB/"/>
+    
+  </entry>
   
   <entry>
     <title>tesseract识别图片中的文字</title>
@@ -77,7 +134,7 @@
     <link href="https://chenzuoli.github.io/2024/05/09/%E5%A6%82%E4%BD%95%E9%80%9A%E8%BF%87scrapy%E6%8A%93%E5%8F%96js%E5%8A%A0%E8%BD%BD%E7%9A%84%E5%8A%A8%E6%80%81html%E5%86%85%E5%AE%B9/"/>
     <id>https://chenzuoli.github.io/2024/05/09/%E5%A6%82%E4%BD%95%E9%80%9A%E8%BF%87scrapy%E6%8A%93%E5%8F%96js%E5%8A%A0%E8%BD%BD%E7%9A%84%E5%8A%A8%E6%80%81html%E5%86%85%E5%AE%B9/</id>
     <published>2024-05-09T13:56:15.000Z</published>
-    <updated>2024-05-11T13:45:39.376Z</updated>
+    <updated>2024-05-14T13:40:29.787Z</updated>
     
     <content type="html"><![CDATA[<p>爬虫某个网站时，如果网站是通过js动态请求后台加载的html页面时，通过传统的scrapy进行爬取时，是获取不到js加载后的内容的。</p><p>如何解决爬取这类动态网站呢？且看详情。</p><span id="more"></span><h1 id="工具：scrapy-splash"><a href="#工具：scrapy-splash" class="headerlink" title="工具：scrapy_splash"></a>工具：scrapy_splash</h1><p>什么是scrapy_splash?</p><ol><li>scrapy-splash加载js数据是基于Splash来实现的。</li><li>Splash是一个Javascript渲染服务。它是一个实现了HTTP API的轻量级浏览器，Splash是用Python和Lua语言实现的，基于Twisted和QT等模块构建。</li><li>使用scrapy-splash最终拿到的response相当于是在浏览器全部渲染完成以后的网页源代码。</li></ol><p>官方网站：<a href="https://splash-cn-doc.readthedocs.io/zh-cn/latest/Installation.html">https://splash-cn-doc.readthedocs.io/zh-cn/latest/Installation.html</a></p><p>splash的作用：<br>scrapy-splash能够模拟浏览器加载js，并返回js运行后的数据</p><h1 id="功能"><a href="#功能" class="headerlink" title="功能"></a>功能</h1><p>来看看官网的介绍，他能干啥：</p><ol><li>Take screenshots of multiple pages</li><li>Wait for element</li><li>Scroll page</li><li>Preload jQuery</li><li>Preload functions</li><li>Load multiple pages</li><li>Count DIV tags</li><li>Call Later</li><li>Render PNG</li><li>Take a screenshot of a single element</li><li>Log requested URLs</li><li>Block CSS</li><li>Execute function with timeout</li><li>Submit a search input</li></ol><p>对于我们普通使用用户来说，加载js，滚动页面，等待js加载，截图应该比较有用。<br>需要的大家自己去搜索用法吧。</p><h1 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h1><p>linux + docker</p><h2 id="下载-docker"><a href="#下载-docker" class="headerlink" title="下载 docker"></a>下载 docker</h2><h2 id="拉取镜像"><a href="#拉取镜像" class="headerlink" title="拉取镜像"></a>拉取镜像</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker pull scrapinghub/splash</span><br></pre></td></tr></table></figure><h2 id="启动容器"><a href="#启动容器" class="headerlink" title="启动容器"></a>启动容器</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker run -p 8050:8050 -p 5023:5023 scrapinghub/splash</span><br></pre></td></tr></table></figure><p>现在splash在0.0.0.0这个ip上监听并绑定了端口8050(http) 和5023 (telnet)</p><p>启动完splash后，可以访问它的web页面，看是否启动成功：<br><a href="http://127.0.0.1:8050/">http://127.0.0.1:8050</a> </p><h1 id="scrapy使用splash"><a href="#scrapy使用splash" class="headerlink" title="scrapy使用splash"></a>scrapy使用splash</h1><h2 id="安装-1"><a href="#安装-1" class="headerlink" title="安装"></a>安装</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install scrapy-splash</span><br></pre></td></tr></table></figure><h2 id="新建爬虫项目："><a href="#新建爬虫项目：" class="headerlink" title="新建爬虫项目："></a>新建爬虫项目：</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">scrapy startproject test_splash</span><br><span class="line">cd test_splash</span><br><span class="line">scrapy genspider splash_test https://www.baidu.com/s?wd=13161933309</span><br><span class="line"></span><br></pre></td></tr></table></figure><h2 id="修改settings-py"><a href="#修改settings-py" class="headerlink" title="修改settings.py"></a>修改settings.py</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"># 在settings.py文件中添加splash的配置以及修改robots协议</span><br><span class="line"></span><br><span class="line"># 渲染服务的url</span><br><span class="line">SPLASH_URL = &#x27;http://127.0.0.1:8050&#x27;</span><br><span class="line"># 下载器中间件</span><br><span class="line">DOWNLOADER_MIDDLEWARES = &#123;</span><br><span class="line">    &#x27;scrapy_splash.SplashCookiesMiddleware&#x27;: 723,</span><br><span class="line">    &#x27;scrapy_splash.SplashMiddleware&#x27;: 725,</span><br><span class="line">    &#x27;scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware&#x27;: 810,</span><br><span class="line">&#125;</span><br><span class="line"># 去重过滤器</span><br><span class="line">DUPEFILTER_CLASS = &#x27;scrapy_splash.SplashAwareDupeFilter&#x27;</span><br><span class="line"># 使用Splash的Http缓存</span><br><span class="line">HTTPCACHE_STORAGE = &#x27;scrapy_splash.SplashAwareFSCacheStorage&#x27;</span><br><span class="line"></span><br><span class="line"># Obey robots.txt rules</span><br><span class="line">ROBOTSTXT_OBEY = False</span><br><span class="line"></span><br></pre></td></tr></table></figure><h2 id="修改爬虫代码"><a href="#修改爬虫代码" class="headerlink" title="修改爬虫代码"></a>修改爬虫代码</h2><p>spiders&#x2F;splash_test.py</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"># spiders/with_splash.py</span><br><span class="line">import scrapy</span><br><span class="line">from scrapy_splash import SplashRequest # 使用scrapy_splash包提供的request对象</span><br><span class="line"></span><br><span class="line">class SplashTestSpider(scrapy.Spider):</span><br><span class="line">    name = &#x27;splash_test&#x27;</span><br><span class="line">    allowed_domains = [&#x27;baidu.com&#x27;]</span><br><span class="line">    start_urls = [&#x27;https://www.baidu.com/s?wd=13161933309&#x27;]</span><br><span class="line"></span><br><span class="line">    def start_requests(self):</span><br><span class="line">        yield SplashRequest(self.start_urls[0],</span><br><span class="line">                            callback=self.parse_splash,</span><br><span class="line">                            args=&#123;&#x27;wait&#x27;: 10&#125;, # 最大超时时间，单位：秒</span><br><span class="line">                            endpoint=&#x27;render.html&#x27;) # 使用splash服务的固定参数</span><br><span class="line"></span><br><span class="line">    def parse_splash(self, response):</span><br><span class="line">        with open(&#x27;with_splash.html&#x27;, &#x27;w&#x27;) as f:</span><br><span class="line">            f.write(response.body.decode())</span><br><span class="line"></span><br></pre></td></tr></table></figure><p>js加载后的html文件内容就保存在with_splash.html文件中了。</p><p>如果你想通过scrapy解析加载后的html内容，那直接操作response即可。</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">def parse_splash(self, response):</span><br><span class="line">    title = response.css(&quot;title&quot;).get()</span><br><span class="line">    yield title</span><br></pre></td></tr></table></figure><p>好了，记录到这里。</p><hr><p>好记性不如烂笔头。</p><p>欢迎关注微信公众号，你的资源可变现：【乐知付加密平台】<br><img src="/images/wechat_account.png" alt="乐知付加密平台"></p><p>一起学习，一起进步。<br></p>]]></content>
     
@@ -89,7 +146,9 @@
     
     <category term="Python" scheme="https://chenzuoli.github.io/categories/Python/"/>
     
-    <category term="Scrapy" scheme="https://chenzuoli.github.io/categories/Python/Scrapy/"/>
+    <category term="爬虫" scheme="https://chenzuoli.github.io/categories/Python/%E7%88%AC%E8%99%AB/"/>
+    
+    <category term="Scrapy" scheme="https://chenzuoli.github.io/categories/Python/%E7%88%AC%E8%99%AB/Scrapy/"/>
     
     
     <category term="scrapy" scheme="https://chenzuoli.github.io/tags/scrapy/"/>
@@ -392,7 +451,7 @@
     <link href="https://chenzuoli.github.io/2024/04/25/%E7%88%AC%E8%99%AB%E7%9B%B8%E5%85%B3%E9%97%AE%E9%A2%98/"/>
     <id>https://chenzuoli.github.io/2024/04/25/%E7%88%AC%E8%99%AB%E7%9B%B8%E5%85%B3%E9%97%AE%E9%A2%98/</id>
     <published>2024-04-25T12:57:16.000Z</published>
-    <updated>2024-04-28T06:15:00.670Z</updated>
+    <updated>2024-05-14T13:40:20.112Z</updated>
     
     <content type="html"><![CDATA[<p>记录一下爬虫网站的时候的一些问题。</p><span id="more"></span><ol><li>scrapy shell报错：twisted.python.failure.Failure twisted.internet.error.ConnectionLost: Connection to the other side was lost in a non-clean fashion: Connection lost</li></ol><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">scrapy shell  https://www.xxx.com/</span><br></pre></td></tr></table></figure><pre><code>解决方法一：尝试把www去掉就可以了解决方法二：尝试模仿浏览器访问，修改请求的user-agent，编辑settings.py    <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">DEFAULT_REQUEST_HEADERS = &#123;</span><br><span class="line">    &#x27;Accept&#x27;: &#x27;text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8&#x27;,</span><br><span class="line">    &#x27;Accept-Language&#x27;: &#x27;en&#x27;,</span><br><span class="line">    &#x27;User-Agent&#x27;: &#x27;Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.77 Safari/537.36&#x27;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></code></pre><ol start="2"><li><p>输出爬取结果时，中文乱码，显示的是unicode码</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">scrapy crawl kanping99 -O kanping99.jsonl</span><br></pre></td></tr></table></figure><p><img src="/2024/04/25/%E7%88%AC%E8%99%AB%E7%9B%B8%E5%85%B3%E9%97%AE%E9%A2%98/image_unicode.png" alt="unicode"><br>-s设置输出的编码：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">scrapy crawl kanping99 -O kanping99.jsonl -s FEED_EXPORT_ENCODING=utf-8</span><br></pre></td></tr></table></figure></li><li><p>connection refused</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">2024-04-28 14:07:36 [scrapy.extensions.telnet] INFO: Telnet console listening on 127.0.0.1:6023</span><br><span class="line">2024-04-28 14:07:36 [scrapy.core.engine] INFO: Spider opened</span><br><span class="line">2024-04-28 14:07:36 [scrapy.downloadermiddlewares.retry] DEBUG: Retrying &lt;GET https://www.xxx.com/3-1.html&gt; (failed 1 times): Connection was refused by other side: 61: Connection refused.</span><br><span class="line">2024-04-28 14:07:37 [scrapy.downloadermiddlewares.retry] DEBUG: Retrying &lt;GET https://www.xxx.com/3-1.html&gt; (failed 2 times): Connection was refused by other side: 61: Connection refused.</span><br><span class="line">2024-04-28 14:07:37 [scrapy.downloadermiddlewares.retry] ERROR: Gave up retrying &lt;GET https://www.xxx.com/3-1.html&gt; (failed 3 times): Connection was refused by other side: 61: Connection refused.</span><br><span class="line"></span><br></pre></td></tr></table></figure></li></ol><p>https换成http，www去掉试试。<br>我把https换成http后ok了。</p><hr><p>欢迎关注微信公众号，你的资源可变现：【乐知付加密平台】<br><img src="/images/wechat_account.png" alt="乐知付加密平台"></p><p>一起学习，一起进步。<br></p>]]></content>
     
@@ -403,7 +462,9 @@
     
     <category term="Python" scheme="https://chenzuoli.github.io/categories/Python/"/>
     
-    <category term="Scrapy" scheme="https://chenzuoli.github.io/categories/Python/Scrapy/"/>
+    <category term="爬虫" scheme="https://chenzuoli.github.io/categories/Python/%E7%88%AC%E8%99%AB/"/>
+    
+    <category term="Scrapy" scheme="https://chenzuoli.github.io/categories/Python/%E7%88%AC%E8%99%AB/Scrapy/"/>
     
     
     <category term="scrapy" scheme="https://chenzuoli.github.io/tags/scrapy/"/>
@@ -502,60 +563,6 @@
     <category term="macos" scheme="https://chenzuoli.github.io/tags/macos/"/>
     
     <category term="github" scheme="https://chenzuoli.github.io/tags/github/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>macos的homebrew更换国内清华源</title>
-    <link href="https://chenzuoli.github.io/2024/04/21/macos%E7%9A%84homebrew%E6%9B%B4%E6%8D%A2%E5%9B%BD%E5%86%85%E6%B8%85%E5%8D%8E%E6%BA%90/"/>
-    <id>https://chenzuoli.github.io/2024/04/21/macos%E7%9A%84homebrew%E6%9B%B4%E6%8D%A2%E5%9B%BD%E5%86%85%E6%B8%85%E5%8D%8E%E6%BA%90/</id>
-    <published>2024-04-20T16:14:45.000Z</published>
-    <updated>2024-04-20T16:16:22.349Z</updated>
-    
-    <content type="html"><![CDATA[<p>更新下这部分环境变量就行。</p><span id="more"></span><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">export HOMEBREW_API_DOMAIN=&quot;https://mirrors.tuna.tsinghua.edu.cn/homebrew-bottles/api&quot;</span><br><span class="line">export HOMEBREW_BOTTLE_DOMAIN=&quot;https://mirrors.tuna.tsinghua.edu.cn/homebrew-bottles&quot;</span><br><span class="line">export HOMEBREW_BREW_GIT_REMOTE=&quot;https://mirrors.tuna.tsinghua.edu.cn/git/homebrew/brew.git&quot;</span><br><span class="line">export HOMEBREW_CORE_GIT_REMOTE=&quot;https://mirrors.tuna.tsinghua.edu.cn/git/homebrew/homebrew-core.git&quot;</span><br><span class="line">export HOMEBREW_PIP_INDEX_URL=&quot;https://pypi.tuna.tsinghua.edu.cn/simple&quot;</span><br><span class="line"></span><br></pre></td></tr></table></figure><hr><p>欢迎关注微信公众号，您的资源可变现：【乐知付加密平台】<br><br><br><img src="/images/wechat_account.png" alt="乐知付加密平台"></p><p>一起学习，一起进步。<br></p>]]></content>
-    
-    
-    <summary type="html">&lt;p&gt;更新下这部分环境变量就行。&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="其他" scheme="https://chenzuoli.github.io/categories/%E5%85%B6%E4%BB%96/"/>
-    
-    <category term="电脑" scheme="https://chenzuoli.github.io/categories/%E5%85%B6%E4%BB%96/%E7%94%B5%E8%84%91/"/>
-    
-    <category term="mac" scheme="https://chenzuoli.github.io/categories/%E5%85%B6%E4%BB%96/%E7%94%B5%E8%84%91/mac/"/>
-    
-    
-    <category term="mac" scheme="https://chenzuoli.github.io/tags/mac/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>magick的安装与使用</title>
-    <link href="https://chenzuoli.github.io/2024/04/20/magick%E7%9A%84%E5%AE%89%E8%A3%85%E4%B8%8E%E4%BD%BF%E7%94%A8/"/>
-    <id>https://chenzuoli.github.io/2024/04/20/magick%E7%9A%84%E5%AE%89%E8%A3%85%E4%B8%8E%E4%BD%BF%E7%94%A8/</id>
-    <published>2024-04-20T10:36:12.000Z</published>
-    <updated>2024-04-20T11:19:06.598Z</updated>
-    
-    <content type="html"><![CDATA[<p>ImageMagick是一款免费开源的图片编辑软件。既可以通过命令行使用，也可以通过C&#x2F;C++、Perl、Java、PHP、Python或Ruby调用库编程来完成。ImageMagic的主要精力集中在性能，减少bug以及提供稳定的API和ABI上。</p><p>下面看下怎么安装使用。</p><p>macos安装magick有点麻烦，我用brew安装未成功，下面尝试通过tar包安装试试。</p><span id="more"></span><ol><li><p>安装x11<br>下载xquartz：<a href="https://www.xquartz.org/">https://www.xquartz.org/</a><br>官网下载XQuartz-2.8.5.pkg，点击安装即可，会默认安装x11，目录位置：&#x2F;opt&#x2F;X11&#x2F;lib<br>这个工具magick会使用到，具体干啥的，咱暂时还没时间研究。</p></li><li><p>安装image magick<br>下载tar安装包：<a href="http://www.imagemagick.org/script/index.php">http://www.imagemagick.org/script/index.php</a></p></li></ol><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">tar zxvf ImageMagick-x86_64-apple-darwin20.1.0.tar.gz</span><br><span class="line">cd ImageMagick-7.0.10</span><br><span class="line">vim ~/.zprofile</span><br><span class="line">export MAGICK_HOME=/Users/zuolichen/opt/software/ImageMagick-7.0.10</span><br><span class="line">export DYLD_LIBRARY_PATH=/opt/X11/lib</span><br><span class="line">export PATH=&quot;$MAGICK_HOME/bin:$PATH&quot;</span><br><span class="line">export DYLD_LIBRARY_PATH=$DYLD_LIBRARY_PATH:&quot;$MAGICK_HOME/lib/&quot;</span><br><span class="line"></span><br><span class="line"># 环境变量生效</span><br><span class="line">source ~/.zprofile</span><br></pre></td></tr></table></figure><p>查看是否安装成功：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">magick --version</span><br></pre></td></tr></table></figure><ol start="3"><li>安装ffmpeg：<br>地址：<a href="https://ffmpeg.org/download.html">https://ffmpeg.org/download.html</a><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">tar zxvf ffmpeg-7.0.tar.gz</span><br><span class="line">cd ffmpeg-7.0</span><br><span class="line">./configure --disable-x86asm</span><br><span class="line">make &amp;&amp; make install</span><br></pre></td></tr></table></figure></li></ol><p>环境变量：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">export IMAGEIO_FFMPEG_EXE=/Users/zuolichen/opt/software/ffmpeg-7.0</span><br><span class="line">vim ~/.zprofile</span><br><span class="line">export PATH=/Users/zuolichen/opt/software/ffmpeg-7.0/bin:$PATH</span><br><span class="line"></span><br></pre></td></tr></table></figure><h1 id="编辑图片"><a href="#编辑图片" class="headerlink" title="编辑图片"></a>编辑图片</h1><ol><li><p>转换格式</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">magick test.jpg test.png</span><br></pre></td></tr></table></figure><p>表示把test.jpg这个图片另存一份为test.png，同时修改了图片名称和格式</p></li><li><p>合成gif</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">magick a.jpg b.jpg c.jpg test.gif</span><br><span class="line">magick *.jpg images.gif</span><br></pre></td></tr></table></figure><p>将指定的图片合成一个gif（好像以第一张图的大小为准）</p></li><li><p>调整图片大小</p></li></ol><p>按比例改变</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">magick b.png -resize 200%  b1.png</span><br><span class="line">magick convert b.png -resize 200%  b1.png</span><br><span class="line">magick convert -resize 200% b.png b1.png</span><br></pre></td></tr></table></figure><p>图片宽扩展为原来的2倍，高缩小为原来的一半</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">magick convert b.png -resize 200x50%  b7.png</span><br><span class="line">magick convert b.png -resize 200%x50%  b8.png</span><br></pre></td></tr></table></figure><p>宽调整为100，高按原来图片宽高比例跟着调整</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">convert -resize 100 b.png  b15.png</span><br></pre></td></tr></table></figure><p>高调整为200，宽按原来图片宽高比例跟着调整</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">convert -resize x200 b.png  b16.png</span><br></pre></td></tr></table></figure><ol start="4"><li><p>移除图片内嵌的所有配置文件</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">magick convert -strip 1.jpg</span><br></pre></td></tr></table></figure></li><li><p>裁剪图片</p></li></ol><p>crop参数可以把一副图像分成若干块大小一样的图片</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">magick img1.jpg -crop 500x500 dest.jpg</span><br></pre></td></tr></table></figure><p>例如，原图片尺寸为1920x1200，所以可以分割出12块图片，注意如果尺寸不是目标图片的整数倍，那么右边缘和下边缘的一部分图片就用实际尺寸</p><p>在原始图像上裁剪一张指定尺寸的小图</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">magick img1.jpg -crop 600x450+300+600 dest.jpg</span><br></pre></td></tr></table></figure><p>600x450是宽乘高，+300+600是横纵坐标</p><ol start="6"><li><p>图片取反</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">magick convert a.jpg -negate canny.jpg</span><br></pre></td></tr></table></figure></li><li><p>压缩图片</p></li></ol><p>将图片质量降为原来的10%（即压缩掉了90%），取值范围1 ( 最低的图像质量和最高压缩率) 到100 ( 最高的图像质量和最低压缩率)，默认值根据输出格式有75、92、100，选项适用于JPEG &#x2F; MIFF &#x2F; PNG.</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">magick convert -quality 80 1.jpg 2.jpg</span><br></pre></td></tr></table></figure><p>实例：生成缩略图:</p><p>-resize，定义输出的缩略图尺寸；-quality 70，降低缩略图的质量为70%；-strip：让缩略图移除图片内嵌的所有配置文件，注释等信息，以减小文件大小。</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">magick convert  -resize 100x200 -quality 70 -strip  1.jpg 2.jpg</span><br></pre></td></tr></table></figure><ol start="8"><li>给图片加边框</li></ol><p>设置边框颜色为蓝色（也可以用rgb(0,0,255)或者rgb(0%,0%,100%)代替），宽的边框和高的边框分别为宽的5%、高的5%，也就是说，图片的高和宽都增大了10%</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">magick 1.jpg -bordercolor blue -border 5% 2.jpg</span><br></pre></td></tr></table></figure><ol start="9"><li>滤镜<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">magick convert monochrome .jpg -monochrome monochrome_example.jpg</span><br><span class="line">magick convert charcoal .jpg -charcoal 1.2 charcoal _example.jpg</span><br><span class="line">-monochrome没有相关的配置选项；但是-charcoal需要设置一个相关因子，1左右能实现类似炭笔绘画的效果。</span><br><span class="line"></span><br><span class="line">magick convert a.jpg -edge 3 edge.jpg</span><br><span class="line">magick convert a.jpg -colors 2 color.jpg </span><br></pre></td></tr></table></figure></li></ol><p>减少为2种颜色，这些选项也可以一起使用。</p><ol start="10"><li>边缘检测<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">magick convert a.jpg -canny 1 canny.jpg</span><br></pre></td></tr></table></figure></li></ol><p>使用canny算法，带粗粒度参数。</p><p>图像取反的话就很好看了：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">magick convert a.jpg -canny 1 -negate canny.jpg</span><br></pre></td></tr></table></figure><p>这个工具是不是很强大，后面看下如何结合python，通过代码调用magick库实现图片的编辑。</p><hr><p>欢迎关注微信公众号，您的资源可变现：【乐知付加密平台】<br><br><br><img src="/images/wechat_account.png" alt="乐知付加密平台"></p><p>一起学习，一起进步。<br></p>]]></content>
-    
-    
-    <summary type="html">&lt;p&gt;ImageMagick是一款免费开源的图片编辑软件。既可以通过命令行使用，也可以通过C&amp;#x2F;C++、Perl、Java、PHP、Python或Ruby调用库编程来完成。ImageMagic的主要精力集中在性能，减少bug以及提供稳定的API和ABI上。&lt;/p&gt;
-&lt;p&gt;下面看下怎么安装使用。&lt;/p&gt;
-&lt;p&gt;macos安装magick有点麻烦，我用brew安装未成功，下面尝试通过tar包安装试试。&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="工具" scheme="https://chenzuoli.github.io/categories/%E5%B7%A5%E5%85%B7/"/>
-    
-    <category term="图片编辑" scheme="https://chenzuoli.github.io/categories/%E5%B7%A5%E5%85%B7/%E5%9B%BE%E7%89%87%E7%BC%96%E8%BE%91/"/>
-    
-    
-    <category term="图片" scheme="https://chenzuoli.github.io/tags/%E5%9B%BE%E7%89%87/"/>
-    
-    <category term="工具" scheme="https://chenzuoli.github.io/tags/%E5%B7%A5%E5%85%B7/"/>
-    
-    <category term="magick" scheme="https://chenzuoli.github.io/tags/magick/"/>
     
   </entry>
   

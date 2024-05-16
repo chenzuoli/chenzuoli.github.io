@@ -3855,6 +3855,7 @@
 ]]></content>
       <categories>
         <category>其他</category>
+        <category>英文简称</category>
       </categories>
       <tags>
         <tag>OA</tag>
@@ -7234,7 +7235,7 @@
 ]]></content>
       <categories>
         <category>前端</category>
-        <category>html</category>
+        <category>HTML</category>
       </categories>
       <tags>
         <tag>html</tag>
@@ -10290,6 +10291,7 @@
 ]]></content>
       <categories>
         <category>其他</category>
+        <category>志愿者</category>
       </categories>
       <tags>
         <tag>志愿者</tag>
@@ -10319,6 +10321,7 @@
 ]]></content>
       <categories>
         <category>其他</category>
+        <category>志愿者</category>
       </categories>
       <tags>
         <tag>志愿者</tag>
@@ -11727,6 +11730,7 @@ API
 <p>一起学习，一起进步。<br></p>
 ]]></content>
       <categories>
+        <category>其他</category>
         <category>汽车</category>
       </categories>
       <tags>
@@ -11996,6 +12000,7 @@ API
 ]]></content>
       <categories>
         <category>Python</category>
+        <category>爬虫</category>
         <category>Scrapy</category>
       </categories>
       <tags>
@@ -12711,7 +12716,8 @@ API
 <p>一起学习，一起进步。<br></p>
 ]]></content>
       <categories>
-        <category>科学上网</category>
+        <category>其他</category>
+        <category>VPN</category>
       </categories>
       <tags>
         <tag>vpn</tag>
@@ -12756,6 +12762,7 @@ API
 ]]></content>
       <categories>
         <category>其他</category>
+        <category>VPN</category>
       </categories>
       <tags>
         <tag>vpn</tag>
@@ -14435,6 +14442,7 @@ API
 <p>好了，加油，先准备充足的现金。</p>
 ]]></content>
       <categories>
+        <category>投资</category>
         <category>100万资产计划</category>
       </categories>
       <tags>
@@ -14473,6 +14481,7 @@ API
 <p>ok，我是Lee，偶尔学习一点投资知识，让自己早日完成100万资产计划。</p>
 ]]></content>
       <categories>
+        <category>投资</category>
         <category>100万资产计划</category>
       </categories>
       <tags>
@@ -14625,7 +14634,8 @@ API
 <p>一起学习，一起进步。<br></p>
 ]]></content>
       <categories>
-        <category>理论</category>
+        <category>其他</category>
+        <category>木桶装水</category>
       </categories>
       <tags>
         <tag>理论</tag>
@@ -15228,6 +15238,7 @@ API
 ]]></content>
       <categories>
         <category>Python</category>
+        <category>爬虫</category>
         <category>Scrapy</category>
       </categories>
       <tags>
@@ -15481,7 +15492,7 @@ API
 ]]></content>
       <categories>
         <category>投资</category>
-        <category>理财</category>
+        <category>私募基金</category>
       </categories>
       <tags>
         <tag>投资</tag>
@@ -16101,7 +16112,8 @@ API
 <p>一起学习，一起进步。<br></p>
 ]]></content>
       <categories>
-        <category>科普</category>
+        <category>其他</category>
+        <category>荷兰病</category>
       </categories>
       <tags>
         <tag>荷兰病</tag>
@@ -17249,6 +17261,55 @@ API
         <tag>tesseract</tag>
         <tag>ocr</tag>
         <tag>文字识别</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>tesseract图片中文字识别优化</title>
+    <url>/2024/05/14/tesseract%E5%9B%BE%E7%89%87%E4%B8%AD%E6%96%87%E5%AD%97%E8%AF%86%E5%88%AB%E4%BC%98%E5%8C%96/</url>
+    <content><![CDATA[<p>优化的思路大概有2种，1是优化语言模型，2是优化图片。</p>
+<span id="more"></span>
+
+<h1 id="优化语言模型"><a href="#优化语言模型" class="headerlink" title="优化语言模型"></a>优化语言模型</h1><h1 id="优化图片"><a href="#优化图片" class="headerlink" title="优化图片"></a>优化图片</h1><p>图片增强对比对</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">from PIL import ImageEnhance</span><br><span class="line"></span><br><span class="line"># 增强图片对比度</span><br><span class="line">enhancer = ImageEnhance.Contrast(img)</span><br><span class="line">img_contrast = enhancer.enhance(2.0)</span><br><span class="line"></span><br><span class="line"># 进行文字识别</span><br><span class="line">text_contrast = pytesseract.image_to_string(img_contrast)</span><br><span class="line"></span><br><span class="line"># 打印识别结果</span><br><span class="line">print(&quot;增强对比度后的识别结果：&quot;, text_contrast)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+
+<hr>
+<p>欢迎关注微信公众号，你的资源可变现：【乐知付加密平台】<br><img src="/images/wechat_account.png" alt="乐知付加密平台"></p>
+<p>一起学习，一起进步。<br></p>
+]]></content>
+      <categories>
+        <category>Python</category>
+        <category>图片</category>
+        <category>Tesseract</category>
+      </categories>
+      <tags>
+        <tag>tesseract</tag>
+        <tag>PIL</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>爬虫框架</title>
+    <url>/2024/05/14/%E7%88%AC%E8%99%AB%E6%A1%86%E6%9E%B6/</url>
+    <content><![CDATA[<ol>
+<li>pyspider</li>
+<li>scrapy</li>
+</ol>
+<span id="more"></span>
+
+<p>想知道怎么用，自行查看官方文档：<br><a href="https://docs.scrapy.org/en/latest/">https://docs.scrapy.org/en/latest/</a><br><a href="https://docs.pyspider.org/en/latest/">https://docs.pyspider.org/en/latest/</a></p>
+<hr>
+<p>欢迎关注微信公众号，你的资源可变现：【乐知付加密平台】<br><img src="/images/wechat_account.png" alt="乐知付加密平台"></p>
+<p>一起学习，一起进步。<br></p>
+]]></content>
+      <categories>
+        <category>Python</category>
+        <category>爬虫</category>
+      </categories>
+      <tags>
+        <tag>python</tag>
+        <tag>scrapy</tag>
+        <tag>爬虫</tag>
       </tags>
   </entry>
 </search>
