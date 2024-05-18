@@ -4227,6 +4227,7 @@
 <p>一起学习，一起进步。<br></p>
 ]]></content>
       <categories>
+        <category>HTTP</category>
         <category>SSL证书</category>
       </categories>
       <tags>
@@ -6288,7 +6289,9 @@
 <p><strong>Keep Learning.</strong></p>
 ]]></content>
       <categories>
-        <category>csharp</category>
+        <category>语言</category>
+        <category>计算机语言</category>
+        <category>CSharp</category>
       </categories>
       <tags>
         <tag>csharp</tag>
@@ -8539,7 +8542,8 @@
 <p>一起学习，一起进步。<br></p>
 ]]></content>
       <categories>
-        <category>shell</category>
+        <category>Linux</category>
+        <category>Shell</category>
       </categories>
       <tags>
         <tag>shell</tag>
@@ -8982,7 +8986,9 @@
 <p>一起学习，一起进步。<br></p>
 ]]></content>
       <categories>
-        <category>windows</category>
+        <category>其他</category>
+        <category>电脑</category>
+        <category>Windows</category>
       </categories>
       <tags>
         <tag>windows</tag>
