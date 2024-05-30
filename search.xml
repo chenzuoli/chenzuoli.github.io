@@ -1075,8 +1075,15 @@
     <url>/2022/01/02/Docker%E5%AE%B9%E5%99%A8%E5%86%85%E8%AE%BF%E9%97%AE%E5%AE%BF%E4%B8%BB%E6%9C%BAMacOS%E7%9A%84mysql/</url>
     <content><![CDATA[<p>容器内通过localhost是不能访问到mac主机里的mysql的，需要进行桥接，指定ip：</p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">host.docker.internal</span><br></pre></td></tr></table></figure>
+
+
+
+<hr>
+<p>欢迎关注微信公众号，你的资源可变现：【乐知付加密平台】<br><img src="/images/wechat_account.png" alt="乐知付加密平台"></p>
+<p>一起学习，一起进步。<br></p>
 ]]></content>
       <categories>
+        <category>运维</category>
         <category>docker</category>
       </categories>
       <tags>
@@ -3477,7 +3484,9 @@
 <p>一起学习，一起进步。<br></p>
 ]]></content>
       <categories>
-        <category>操作系统</category>
+        <category>其他</category>
+        <category>电脑</category>
+        <category>mac</category>
       </categories>
       <tags>
         <tag>MacOS</tag>
@@ -3887,7 +3896,9 @@
 <p>一起学习，一起进步。<br></p>
 ]]></content>
       <categories>
-        <category>OCR</category>
+        <category>Python</category>
+        <category>图片</category>
+        <category>Tesseract</category>
       </categories>
       <tags>
         <tag>OCR</tag>
@@ -4796,7 +4807,9 @@
 <p>一起学习，一起进步。<br></p>
 ]]></content>
       <categories>
-        <category>操作系统</category>
+        <category>其他</category>
+        <category>电脑</category>
+        <category>windows</category>
       </categories>
       <tags>
         <tag>linux</tag>
@@ -7371,7 +7384,9 @@
 <p>一起学习，一起进步。<br></p>
 ]]></content>
       <categories>
-        <category>idea</category>
+        <category>其他</category>
+        <category>开发工具</category>
+        <category>IDEA</category>
       </categories>
       <tags>
         <tag>idea</tag>
@@ -7850,7 +7865,9 @@
 <p>一起学习，一起进步。<br></p>
 ]]></content>
       <categories>
-        <category>apache</category>
+        <category>HTTP</category>
+        <category>服务</category>
+        <category>APACHE2</category>
       </categories>
       <tags>
         <tag>mac</tag>
@@ -8227,7 +8244,9 @@
 <p>欢迎关注我的AI社区：<a href="http://www.biubiuai.com/">http://www.biubiuai.com</a></p>
 ]]></content>
       <categories>
-        <category>maven</category>
+        <category>后端</category>
+        <category>JAVA</category>
+        <category>MAVEN</category>
       </categories>
       <tags>
         <tag>maven</tag>
@@ -9019,7 +9038,9 @@
 <p>一起学习，一起进步。<br></p>
 ]]></content>
       <categories>
-        <category>操作系统</category>
+        <category>其他</category>
+        <category>电脑</category>
+        <category>windows</category>
       </categories>
       <tags>
         <tag>windows</tag>
@@ -9934,7 +9955,7 @@
 </ol>
 <h1 id="minikube"><a href="#minikube" class="headerlink" title="minikube"></a>minikube</h1><p>brew install minikube</p>
 <h1 id="kind"><a href="#kind" class="headerlink" title="kind"></a>kind</h1><ol>
-<li><p>go install sigs.k8s.io&#x2F;<a href="mailto:&#107;&#105;&#x6e;&#100;&#x40;&#x76;&#x30;&#x2e;&#x31;&#x37;&#46;&#48;">&#107;&#105;&#x6e;&#100;&#x40;&#x76;&#x30;&#x2e;&#x31;&#x37;&#46;&#48;</a> &amp;&amp; kind create cluster</p>
+<li><p>go install sigs.k8s.io&#x2F;<a href="mailto:&#107;&#x69;&#110;&#x64;&#64;&#118;&#x30;&#46;&#x31;&#55;&#46;&#48;">&#107;&#x69;&#110;&#x64;&#64;&#118;&#x30;&#46;&#x31;&#55;&#46;&#48;</a> &amp;&amp; kind create cluster</p>
 </li>
 <li><p>brew install kind &amp;&amp; kind create cluster<br> 安装成功：kubectl cluster-info –context kind-kind</p>
 <p> kind create cluster –name kind-2<br> kind get clusters</p>
@@ -9963,6 +9984,7 @@
 <p>一起学习，一起进步。<br></p>
 ]]></content>
       <categories>
+        <category>运维</category>
         <category>k8s</category>
       </categories>
       <tags>
@@ -11311,12 +11333,13 @@
 </ul>
 <h2 id="统计数据"><a href="#统计数据" class="headerlink" title="统计数据"></a>统计数据</h2><p><img src="/2019/04/27/%E5%8C%BA%E5%9D%97%E9%93%BE%E4%B8%89%E5%A4%A7%E5%85%AC%E9%93%BEDapp%E5%B9%B3%E5%8F%B0ETH%E3%80%81EOS%E3%80%81TRON%E5%AF%B9%E6%AF%94/platform_state.png" alt="平台至今2019年4月29日情况"><br>尴尬，这个网站：<a href="https://www.stateofthedapps.com/stats#new">State of Dapps</a> 没有统计TRON平台的数据。</p>
 <h1 id="转账交易速度TPS"><a href="#转账交易速度TPS" class="headerlink" title="转账交易速度TPS"></a>转账交易速度TPS</h1><p>由于平台共识机制不同，导致去中心化程度、运行速度也不同，下面是几大平台交易速度：<br><img src="/2019/04/27/%E5%8C%BA%E5%9D%97%E9%93%BE%E4%B8%89%E5%A4%A7%E5%85%AC%E9%93%BEDapp%E5%B9%B3%E5%8F%B0ETH%E3%80%81EOS%E3%80%81TRON%E5%AF%B9%E6%AF%94/platform_tps.png" alt="三大平台转账交易速度对比"><br>其中EOS，TPS可达3500.比其他几大平台都快。</p>
-<h2 id="这些是目前公共区块链平台的一些基本信息，希望对大家有用，如有错误的地方还请指正，联系方式：-x63-x68-x65-110-122-x75-111-108-105-x37-x30-57-64-x31-x36-51-46-x63-x6f-x6d-，一起交流学习。"><a href="#这些是目前公共区块链平台的一些基本信息，希望对大家有用，如有错误的地方还请指正，联系方式：-x63-x68-x65-110-122-x75-111-108-105-x37-x30-57-64-x31-x36-51-46-x63-x6f-x6d-，一起交流学习。" class="headerlink" title="这些是目前公共区块链平台的一些基本信息，希望对大家有用，如有错误的地方还请指正，联系方式：&#x63;&#x68;&#x65;&#110;&#122;&#x75;&#111;&#108;&#105;&#x37;&#x30;&#57;&#64;&#x31;&#x36;&#51;&#46;&#x63;&#x6f;&#x6d;，一起交流学习。"></a>这些是目前公共区块链平台的一些基本信息，希望对大家有用，如有错误的地方还请指正，联系方式：<a href="mailto:&#x63;&#x68;&#x65;&#110;&#122;&#x75;&#111;&#108;&#105;&#x37;&#x30;&#57;&#64;&#x31;&#x36;&#51;&#46;&#x63;&#x6f;&#x6d;">&#x63;&#x68;&#x65;&#110;&#122;&#x75;&#111;&#108;&#105;&#x37;&#x30;&#57;&#64;&#x31;&#x36;&#51;&#46;&#x63;&#x6f;&#x6d;</a>，一起交流学习。</h2><p><b>书山有路勤为径，学海无涯苦作舟。</b></p>
+<h2 id="这些是目前公共区块链平台的一些基本信息，希望对大家有用，如有错误的地方还请指正，联系方式：-99-104-101-x6e-122-117-111-108-105-x37-48-57-64-x31-x36-x33-x2e-x63-111-109-，一起交流学习。"><a href="#这些是目前公共区块链平台的一些基本信息，希望对大家有用，如有错误的地方还请指正，联系方式：-99-104-101-x6e-122-117-111-108-105-x37-48-57-64-x31-x36-x33-x2e-x63-111-109-，一起交流学习。" class="headerlink" title="这些是目前公共区块链平台的一些基本信息，希望对大家有用，如有错误的地方还请指正，联系方式：&#99;&#104;&#101;&#x6e;&#122;&#117;&#111;&#108;&#105;&#x37;&#48;&#57;&#64;&#x31;&#x36;&#x33;&#x2e;&#x63;&#111;&#109;，一起交流学习。"></a>这些是目前公共区块链平台的一些基本信息，希望对大家有用，如有错误的地方还请指正，联系方式：<a href="mailto:&#99;&#104;&#101;&#x6e;&#122;&#117;&#111;&#108;&#105;&#x37;&#48;&#57;&#64;&#x31;&#x36;&#x33;&#x2e;&#x63;&#111;&#109;">&#99;&#104;&#101;&#x6e;&#122;&#117;&#111;&#108;&#105;&#x37;&#48;&#57;&#64;&#x31;&#x36;&#x33;&#x2e;&#x63;&#111;&#109;</a>，一起交流学习。</h2><p><b>书山有路勤为径，学海无涯苦作舟。</b></p>
 <p>欢迎关注微信公众号：【程序员写书】<br><img src="/images/%E7%A8%8B%E5%BA%8F%E5%91%98%E5%86%99%E4%B9%A6%E5%85%AC%E4%BC%97%E5%8F%B7%E4%BA%8C%E7%BB%B4%E7%A0%81.jpg" alt="程序员写书"></p>
 <p>喜欢宠物的朋友可以关注：【电巴克宠物Pets】<br><img src="/images/%E7%94%B5%E5%B7%B4%E5%85%8B%E5%AE%A0%E7%89%A9Pets%E5%85%AC%E4%BC%97%E5%8F%B7%E4%BA%8C%E7%BB%B4%E7%A0%81.png" alt="电巴克宠物"></p>
 <p>一起学习，一起进步。<br></p>
 ]]></content>
       <categories>
+        <category>区块链</category>
         <category>数字货币</category>
       </categories>
       <tags>
@@ -12872,7 +12895,9 @@ API
 <p>一起学习，一起进步。<br></p>
 ]]></content>
       <categories>
-        <category>maven</category>
+        <category>后端</category>
+        <category>JAVA</category>
+        <category>MAVEN</category>
       </categories>
       <tags>
         <tag>maven</tag>
@@ -14235,7 +14260,7 @@ API
 <p>一起学习，一起进步。<br></p>
 ]]></content>
       <categories>
-        <category>数据结构</category>
+        <category>数据结构与算法</category>
       </categories>
       <tags>
         <tag>数据结构</tag>
@@ -14723,6 +14748,7 @@ API
 <p>一起学习，一起进步。<br></p>
 ]]></content>
       <categories>
+        <category>运维</category>
         <category>docker</category>
       </categories>
       <tags>
@@ -16368,7 +16394,9 @@ API
 <p>一起学习，一起进步。<br></p>
 ]]></content>
       <categories>
-        <category>数据</category>
+        <category>大数据</category>
+        <category>数据仓库</category>
+        <category>调度系统</category>
       </categories>
       <tags>
         <tag>数据仓库</tag>
@@ -16948,8 +16976,11 @@ API
   <entry>
     <title>阿里巴巴mysql数据库binlog的增量订阅与消费组件canal</title>
     <url>/2018/09/05/%E9%98%BF%E9%87%8C%E5%B7%B4%E5%B7%B4mysql%E6%95%B0%E6%8D%AE%E5%BA%93binlog%E7%9A%84%E5%A2%9E%E9%87%8F%E8%AE%A2%E9%98%85%E4%B8%8E%E6%B6%88%E8%B4%B9%E7%BB%84%E4%BB%B6canal/</url>
-    <content><![CDATA[<p>首先介绍下canal他可以做什么，基于日志增量订阅&amp;消费支持的业务, 监控mysql数据，将mysql增量数据从binlog中获取过来实现数据库的镜像、数据库实时备份、多级索引、业务cache刷新等，具体参考阿里开源项目代码：<br><a href="https://github.com/alibaba/canal">canal github</a></p>
+    <content><![CDATA[<p>首先介绍下canal他可以做什么，基于日志增量订阅&amp;消费支持的业务, 监控mysql数据，将mysql增量数据从binlog中获取过来实现数据库的镜像、数据库实时备份、多级索引、业务cache刷新等，具体参考阿里开源项目代码：</p>
+<p><a href="https://github.com/alibaba/canal">canal github</a></p>
 <span id="more"></span>
+
+
 <h1 id="canaldbkafka"><a href="#canaldbkafka" class="headerlink" title="canaldbkafka"></a>canaldbkafka</h1><h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p>canaldbkafka是连接canal和kafka的一个中间件。目的是实现数据库某个表格数据变更转变成消息流的形式，以便后续业务消费kafka的消息流。 canal wiki:<a href="https://github.com/alibaba/canal/wiki">https://github.com/alibaba/canal/wiki</a></p>
 <h2 id="消息的类型"><a href="#消息的类型" class="headerlink" title="消息的类型"></a>消息的类型</h2><p>canal的binlog 会被解析成以下3中类型的消息。其他的类型被过滤掉了。</p>
 <h3 id="insert"><a href="#insert" class="headerlink" title="insert"></a>insert</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    &quot;data&quot;: &#123;</span><br><span class="line">        &quot;need_sub&quot;: &#123;</span><br><span class="line">            &quot;type&quot;: &quot;int(11)&quot;,</span><br><span class="line">            &quot;updated&quot;: true,</span><br><span class="line">            &quot;value&quot;: &quot;0&quot;</span><br><span class="line">        &#125;,</span><br><span class="line">        &quot;order_description&quot;: &#123;</span><br><span class="line">            &quot;type&quot;: &quot;varchar(1024)&quot;,</span><br><span class="line">            &quot;updated&quot;: true,</span><br><span class="line">            &quot;value&quot;: &quot;&quot;</span><br><span class="line">        &#125;,</span><br><span class="line">        &quot;pay_amount&quot;: &#123;</span><br><span class="line">            &quot;type&quot;: &quot;int(11)&quot;,</span><br><span class="line">            &quot;updated&quot;: true,</span><br><span class="line">            &quot;value&quot;: &quot;0&quot;</span><br><span class="line">        &#125;,</span><br><span class="line">        &quot;pay_order&quot;: &#123;</span><br><span class="line">            &quot;type&quot;: &quot;varchar(30)&quot;,</span><br><span class="line">            &quot;updated&quot;: true,</span><br><span class="line">            &quot;value&quot;: &quot;&quot;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;,</span><br><span class="line">    &quot;type&quot;: &quot;insert&quot;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
@@ -16984,13 +17015,15 @@ API
 <p>其中监控mysql的哪个库哪个表编写格式如下：</p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">.*\\..*  --表示监控mysql所有库所有表</span><br><span class="line">test\..*  --表示监控mysql test库下的所有表</span><br><span class="line">test\.test  --表示监控mysql test库下的test表</span><br></pre></td></tr></table></figure>
 
-<h2 id="阿里巴巴，我们程序员的梦想，开源的canal还是不错的，希望大家借助这篇文章能够熟练掌握canal的简单使用，如果遇到什么问题，欢迎一起讨论，在下方留言或者mail我：-x63-x68-101-x6e-122-x75-111-x6c-105-x40-x67-x6d-97-x69-x6c-x2e-99-111-109"><a href="#阿里巴巴，我们程序员的梦想，开源的canal还是不错的，希望大家借助这篇文章能够熟练掌握canal的简单使用，如果遇到什么问题，欢迎一起讨论，在下方留言或者mail我：-x63-x68-101-x6e-122-x75-111-x6c-105-x40-x67-x6d-97-x69-x6c-x2e-99-111-109" class="headerlink" title="阿里巴巴，我们程序员的梦想，开源的canal还是不错的，希望大家借助这篇文章能够熟练掌握canal的简单使用，如果遇到什么问题，欢迎一起讨论，在下方留言或者mail我：&#x63;&#x68;&#101;&#x6e;&#122;&#x75;&#111;&#x6c;&#105;&#x40;&#x67;&#x6d;&#97;&#x69;&#x6c;&#x2e;&#99;&#111;&#109;"></a>阿里巴巴，我们程序员的梦想，开源的canal还是不错的，希望大家借助这篇文章能够熟练掌握canal的简单使用，如果遇到什么问题，欢迎一起讨论，在下方留言或者mail我：<a href="mailto:&#x63;&#x68;&#101;&#x6e;&#122;&#x75;&#111;&#x6c;&#105;&#x40;&#x67;&#x6d;&#97;&#x69;&#x6c;&#x2e;&#99;&#111;&#109;">&#x63;&#x68;&#101;&#x6e;&#122;&#x75;&#111;&#x6c;&#105;&#x40;&#x67;&#x6d;&#97;&#x69;&#x6c;&#x2e;&#99;&#111;&#109;</a></h2><p><b>书山有路勤为径，学海无涯苦作舟。</b></p>
+<h2 id="阿里巴巴，我们程序员的梦想，开源的canal还是不错的，希望大家借助这篇文章能够熟练掌握canal的简单使用，如果遇到什么问题，欢迎一起讨论，在下方留言或者mail我：-99-x68-101-x6e-x7a-x75-x6f-x6c-x69-64-103-109-x61-x69-108-x2e-x63-111-109"><a href="#阿里巴巴，我们程序员的梦想，开源的canal还是不错的，希望大家借助这篇文章能够熟练掌握canal的简单使用，如果遇到什么问题，欢迎一起讨论，在下方留言或者mail我：-99-x68-101-x6e-x7a-x75-x6f-x6c-x69-64-103-109-x61-x69-108-x2e-x63-111-109" class="headerlink" title="阿里巴巴，我们程序员的梦想，开源的canal还是不错的，希望大家借助这篇文章能够熟练掌握canal的简单使用，如果遇到什么问题，欢迎一起讨论，在下方留言或者mail我：&#99;&#x68;&#101;&#x6e;&#x7a;&#x75;&#x6f;&#x6c;&#x69;&#64;&#103;&#109;&#x61;&#x69;&#108;&#x2e;&#x63;&#111;&#109;"></a>阿里巴巴，我们程序员的梦想，开源的canal还是不错的，希望大家借助这篇文章能够熟练掌握canal的简单使用，如果遇到什么问题，欢迎一起讨论，在下方留言或者mail我：<a href="mailto:&#99;&#x68;&#101;&#x6e;&#x7a;&#x75;&#x6f;&#x6c;&#x69;&#64;&#103;&#109;&#x61;&#x69;&#108;&#x2e;&#x63;&#111;&#109;">&#99;&#x68;&#101;&#x6e;&#x7a;&#x75;&#x6f;&#x6c;&#x69;&#64;&#103;&#109;&#x61;&#x69;&#108;&#x2e;&#x63;&#111;&#109;</a></h2><p><b>书山有路勤为径，学海无涯苦作舟。</b></p>
 <p>欢迎关注微信公众号：【程序员写书】<br><img src="/images/%E7%A8%8B%E5%BA%8F%E5%91%98%E5%86%99%E4%B9%A6%E5%85%AC%E4%BC%97%E5%8F%B7%E4%BA%8C%E7%BB%B4%E7%A0%81.jpg" alt="程序员写书"></p>
 <p>喜欢宠物的朋友可以关注：【电巴克宠物Pets】<br><img src="/images/%E7%94%B5%E5%B7%B4%E5%85%8B%E5%AE%A0%E7%89%A9Pets%E5%85%AC%E4%BC%97%E5%8F%B7%E4%BA%8C%E7%BB%B4%E7%A0%81.png" alt="电巴克宠物"></p>
 <p>一起学习，一起进步。<br></p>
 ]]></content>
       <categories>
-        <category>监控组件</category>
+        <category>大数据</category>
+        <category>数据仓库</category>
+        <category>实时数仓</category>
       </categories>
       <tags>
         <tag>mysql</tag>
@@ -17360,6 +17393,9 @@ API
     <title>分享几个短视频创作者视频和音效工具</title>
     <url>/2024/05/18/%E5%88%86%E4%BA%AB%E5%87%A0%E4%B8%AA%E7%9F%AD%E8%A7%86%E9%A2%91%E5%88%9B%E4%BD%9C%E8%80%85%E8%A7%86%E9%A2%91%E5%92%8C%E9%9F%B3%E6%95%88%E5%B7%A5%E5%85%B7/</url>
     <content><![CDATA[<p>短视频创作者的福音，影视剧台词、音效、视频片段的搜索及下载。</p>
+<p>这里说一下，这些网站部分功能收费，或者内容不够完整，或者你想要的内容找不到。</p>
+<p>我也不是为他们打广告的哈，单纯的归纳总结记录一下。</p>
+<p>如果你有什么问题和需求，可以提出来，看我能不能满足你。</p>
 <span id="more"></span>
 
 
@@ -17399,6 +17435,78 @@ API
         <tag>视频</tag>
         <tag>音效</tag>
         <tag>短视频</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>网站接入支付宝流程</title>
+    <url>/2024/05/25/%E7%BD%91%E7%AB%99%E6%8E%A5%E5%85%A5%E6%94%AF%E4%BB%98%E5%AE%9D%E6%B5%81%E7%A8%8B/</url>
+    <content><![CDATA[<p>作为一个支付宝新手，这里记录下网站接入支付宝收款的流程。</p>
+<span id="more"></span>
+
+<p>多看看支付宝官方文档，了解整个支付流程，看不懂的没关系，跳过。</p>
+<p>步骤如下：</p>
+<ol>
+<li>在支付宝开放平台创建网站应用<br><a href="https://openhome.alipay.com/develop/manage">https://openhome.alipay.com/develop/manage</a><br>创建完，就有appid了，进入应用详情，做下一步密钥的设置</li>
+<li>设置接口加签方式</li>
+</ol>
+<ul>
+<li>密钥</li>
+<li>证书<br>两种方式二选其一，这里我选密钥方式</li>
+</ul>
+<ol start="3">
+<li>开发代码</li>
+</ol>
+<ul>
+<li>下载沙箱版支付宝app<br>  <a href="https://open.alipay.com/develop/sandbox/tool/alipayclint">https://open.alipay.com/develop/sandbox/tool/alipayclint</a></li>
+<li>沙箱版支付宝应用详情、买家和卖家信息<br>  <a href="https://open.alipay.com/develop/sandbox/app">https://open.alipay.com/develop/sandbox/app</a></li>
+</ul>
+<p>沙箱示例代码</p>
+<ul>
+<li>python版：<a href="https://opendocs.alipay.com/common/02np8q?pathHash=7847ca4f">https://opendocs.alipay.com/common/02np8q?pathHash=7847ca4f</a></li>
+<li>nodejs版：<a href="https://opendocs.alipay.com/common/02np8r?pathHash=14716568">https://opendocs.alipay.com/common/02np8r?pathHash=14716568</a></li>
+<li>.net版：<a href="https://opendocs.alipay.com/common/02nk11?pathHash=62b67e79">https://opendocs.alipay.com/common/02nk11?pathHash=62b67e79</a></li>
+<li>php版：<a href="https://opendocs.alipay.com/common/02nk10?pathHash=a7475006">https://opendocs.alipay.com/common/02nk10?pathHash=a7475006</a></li>
+<li>java版：<a href="https://opendocs.alipay.com/common/02kkv2?pathHash=358ff034">https://opendocs.alipay.com/common/02kkv2?pathHash=358ff034</a></li>
+</ul>
+<p>支付宝也提供了对应的demo代码：<br><a href="https://opendocs.alipay.com/open/54/106682">https://opendocs.alipay.com/open/54/106682</a></p>
+<ol start="4">
+<li><p>调试<br>开发环境启动，访问开发环境页面，用沙箱版支付宝app扫描，确认支付，跳转到return_url</p>
+</li>
+<li><p>解释</p>
+</li>
+</ol>
+<ul>
+<li>notify_url，异步通知，即支付宝服务器主动通知商户网站里指定页面路径，返回订单信息。</li>
+<li>return_url，买家支付成功后的同步通知页面，即支付宝处理完成后，浏览器当前页面自动跳转回商户网站中指定页面的http路径，同时返回订单信息。</li>
+</ul>
+<p>区别：<br>return_url用于接收同步通知，notify_url用于接收异步通知。<br>主要区别如下：<br>1、接收方法不同<br>同步通知是在<code>同步返回的页面使用get方式</code>来获取的，异步通知是使用<code>post方式发送到异步地址上的，只能使用post</code>方式来接收；</p>
+<p>2、返回的参数不同<br>同步通知返回的参数比异步通知返回的参数是要少一些的，最明显的就是异步返回参数会返回trade_status（交易状态）参数 但是同步返回的参数是没有的，所以建议使用异步返回的参数来确认交易是否成功 如果trade_status&#x3D;TRADE_SUCCESS 表示就是交易成功了；</p>
+<p>3、发送的时间不同<br>一般情况下，异步通知比同步通知稍慢（几乎无感知）。同步和异步通知的发送和网络环境、服务器处理速度等因素关系较大，具体是先接收到同步通知还是异步通知，建议以实际接收到的为准。</p>
+<p>4、参数返回的逻辑不一样<br>（1）同步通知是在支付成功后的页面跳转，一般是用于展示给用户的；<br>付款成功后会跳转到商户请求参数中传入的return_url地址页面。<br>（2）异步通知参数是直接由支付宝服务器发送到商户的异步地址上的，不存在页面跳转是直接的服务器交互。</p>
+<p>注：同步验签和异步验签方式相同。</p>
+<p>注意：</p>
+<ul>
+<li>return_url 必须是 http 或 https 开头的完整的 url 地址。</li>
+<li>return_url 地址后不可带自定义参数。</li>
+<li>设置 return_url 时不要进行转义、urlencode 等数据处理。</li>
+<li>当面付和APP支付不支持 return_url 参数，即使设置了也没有任何效果。</li>
+<li>同步通知参数只可参考，不能作为判断是否支付成功的依据。</li>
+</ul>
+<p>特别注意：<br>同步通知只有支付宝才会发送给你，所以基本不用验证。<br>异步通知，记得验证签名，这里有支付宝提供的验签方式：<a href="https://opendocs.alipay.com/open/04ij9t">https://opendocs.alipay.com/open/04ij9t</a></p>
+<p>还没写完，后面继续写。</p>
+<hr>
+<p>欢迎关注微信公众号，你的资源可变现：【乐知付加密平台】<br><img src="/images/wechat_account.png" alt="乐知付加密平台"></p>
+<p>一起学习，一起进步。<br></p>
+]]></content>
+      <categories>
+        <category>网站</category>
+        <category>网页支付</category>
+        <category>支付宝</category>
+      </categories>
+      <tags>
+        <tag>网站</tag>
+        <tag>电脑</tag>
+        <tag>支付宝</tag>
       </tags>
   </entry>
 </search>

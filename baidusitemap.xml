@@ -1,6 +1,74 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://chenzuoli.github.io/2022/01/02/Docker%E5%AE%B9%E5%99%A8%E5%86%85%E8%AE%BF%E9%97%AE%E5%AE%BF%E4%B8%BB%E6%9C%BAMacOS%E7%9A%84mysql/</loc>
+    <lastmod>2024-05-30</lastmod>
+  </url>
+  <url>
+    <loc>https://chenzuoli.github.io/2018/09/05/%E9%98%BF%E9%87%8C%E5%B7%B4%E5%B7%B4mysql%E6%95%B0%E6%8D%AE%E5%BA%93binlog%E7%9A%84%E5%A2%9E%E9%87%8F%E8%AE%A2%E9%98%85%E4%B8%8E%E6%B6%88%E8%B4%B9%E7%BB%84%E4%BB%B6canal/</loc>
+    <lastmod>2024-05-30</lastmod>
+  </url>
+  <url>
+    <loc>https://chenzuoli.github.io/2019/09/11/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/</loc>
+    <lastmod>2024-05-30</lastmod>
+  </url>
+  <url>
+    <loc>https://chenzuoli.github.io/2022/03/05/%E8%AF%B4%E4%B8%8B%E6%9C%80%E8%BF%91%E8%A7%A3%E5%86%B3%E7%9A%84%E5%87%A0%E4%B8%AA%E5%A4%A7%E7%9A%84%E9%97%AE%E9%A2%98/</loc>
+    <lastmod>2024-05-30</lastmod>
+  </url>
+  <url>
+    <loc>https://chenzuoli.github.io/2020/03/23/MacOS%E8%A7%A3%E5%8E%8B%E6%96%87%E4%BB%B6/</loc>
+    <lastmod>2024-05-30</lastmod>
+  </url>
+  <url>
+    <loc>https://chenzuoli.github.io/2018/02/08/windows%E4%B8%8Bvim%E6%89%93%E5%BC%80%E6%96%87%E4%BB%B6%E4%B8%AD%E6%96%87%E4%B9%B1%E7%A0%81/</loc>
+    <lastmod>2024-05-30</lastmod>
+  </url>
+  <url>
+    <loc>https://chenzuoli.github.io/2017/12/28/Windows%E8%BF%9C%E7%A8%8B%E8%BF%9E%E6%8E%A5linux%E5%9B%BE%E5%BD%A2%E7%95%8C%E9%9D%A2%E9%85%8D%E7%BD%AE%E8%AF%A6%E8%A7%A3/</loc>
+    <lastmod>2024-05-30</lastmod>
+  </url>
+  <url>
+    <loc>https://chenzuoli.github.io/2019/04/27/%E5%8C%BA%E5%9D%97%E9%93%BE%E4%B8%89%E5%A4%A7%E5%85%AC%E9%93%BEDapp%E5%B9%B3%E5%8F%B0ETH%E3%80%81EOS%E3%80%81TRON%E5%AF%B9%E6%AF%94/</loc>
+    <lastmod>2024-05-30</lastmod>
+  </url>
+  <url>
+    <loc>https://chenzuoli.github.io/2023/01/01/mac%E5%90%AF%E5%8A%A8apache2%E6%9C%8D%E5%8A%A1/</loc>
+    <lastmod>2024-05-30</lastmod>
+  </url>
+  <url>
+    <loc>https://chenzuoli.github.io/2023/04/22/mvn%E6%89%93%E5%8C%85%E5%B0%86%E6%89%80%E6%9C%89%E4%BE%9D%E8%B5%96%E5%8C%85%E6%8B%B7%E8%B4%9D%E5%88%B0lib%E4%B8%8B/</loc>
+    <lastmod>2024-05-30</lastmod>
+  </url>
+  <url>
+    <loc>https://chenzuoli.github.io/2017/12/26/%E6%90%AD%E5%BB%BAmaven%E7%A7%81%E6%9C%8Dnexus/</loc>
+    <lastmod>2024-05-30</lastmod>
+  </url>
+  <url>
+    <loc>https://chenzuoli.github.io/2022/04/05/idea%E5%BF%AB%E6%8D%B7%E9%94%AE/</loc>
+    <lastmod>2024-05-30</lastmod>
+  </url>
+  <url>
+    <loc>https://chenzuoli.github.io/2023/01/30/%E4%BA%91%E5%8E%9F%E7%94%9F%E5%8C%85%E7%AE%A1%E7%90%86%E5%99%A8Helm/</loc>
+    <lastmod>2024-05-30</lastmod>
+  </url>
+  <url>
+    <loc>https://chenzuoli.github.io/2023/02/01/%E6%A0%B9%E6%8D%AE%E6%9C%AC%E5%9C%B0Dockerfile%E6%9E%84%E5%BB%BA%E9%95%9C%E5%83%8F%E5%B9%B6%E4%B8%8A%E4%BC%A0DockerHub/</loc>
+    <lastmod>2024-05-30</lastmod>
+  </url>
+  <url>
+    <loc>https://chenzuoli.github.io/2019/11/16/OCR%E8%AF%86%E5%88%AB%E6%98%AF%E4%BB%80%E4%B9%88%EF%BC%9F/</loc>
+    <lastmod>2024-05-30</lastmod>
+  </url>
+  <url>
+    <loc>https://chenzuoli.github.io/2024/05/25/%E7%BD%91%E7%AB%99%E6%8E%A5%E5%85%A5%E6%94%AF%E4%BB%98%E5%AE%9D%E6%B5%81%E7%A8%8B/</loc>
+    <lastmod>2024-05-30</lastmod>
+  </url>
+  <url>
+    <loc>https://chenzuoli.github.io/2024/05/18/%E5%88%86%E4%BA%AB%E5%87%A0%E4%B8%AA%E7%9F%AD%E8%A7%86%E9%A2%91%E5%88%9B%E4%BD%9C%E8%80%85%E8%A7%86%E9%A2%91%E5%92%8C%E9%9F%B3%E6%95%88%E5%B7%A5%E5%85%B7/</loc>
+    <lastmod>2024-05-19</lastmod>
+  </url>
+  <url>
     <loc>https://chenzuoli.github.io/2022/12/25/mac%E5%AE%89%E8%A3%85php/</loc>
     <lastmod>2024-05-18</lastmod>
   </url>
@@ -30,10 +98,6 @@
   </url>
   <url>
     <loc>https://chenzuoli.github.io/2020/03/29/SSL%E8%AF%81%E4%B9%A6%E6%93%8D%E4%BD%9C/</loc>
-    <lastmod>2024-05-18</lastmod>
-  </url>
-  <url>
-    <loc>https://chenzuoli.github.io/2024/05/18/%E5%88%86%E4%BA%AB%E5%87%A0%E4%B8%AA%E7%9F%AD%E8%A7%86%E9%A2%91%E5%88%9B%E4%BD%9C%E8%80%85%E8%A7%86%E9%A2%91%E5%92%8C%E9%9F%B3%E6%95%88%E5%B7%A5%E5%85%B7/</loc>
     <lastmod>2024-05-18</lastmod>
   </url>
   <url>
@@ -745,10 +809,6 @@
     <lastmod>2023-06-22</lastmod>
   </url>
   <url>
-    <loc>https://chenzuoli.github.io/2023/04/22/mvn%E6%89%93%E5%8C%85%E5%B0%86%E6%89%80%E6%9C%89%E4%BE%9D%E8%B5%96%E5%8C%85%E6%8B%B7%E8%B4%9D%E5%88%B0lib%E4%B8%8B/</loc>
-    <lastmod>2023-06-10</lastmod>
-  </url>
-  <url>
     <loc>https://chenzuoli.github.io/2023/04/16/%E8%AF%B4%E8%AF%B4%E8%BF%99%E5%87%A0%E5%91%A8%E7%8E%A9AI%E7%9A%84%E4%B8%80%E4%BA%9B%E4%B8%9C%E8%A5%BF/</loc>
     <lastmod>2023-06-10</lastmod>
   </url>
@@ -801,20 +861,8 @@
     <lastmod>2023-03-05</lastmod>
   </url>
   <url>
-    <loc>https://chenzuoli.github.io/2023/01/30/%E4%BA%91%E5%8E%9F%E7%94%9F%E5%8C%85%E7%AE%A1%E7%90%86%E5%99%A8Helm/</loc>
-    <lastmod>2023-02-06</lastmod>
-  </url>
-  <url>
-    <loc>https://chenzuoli.github.io/2023/02/01/%E6%A0%B9%E6%8D%AE%E6%9C%AC%E5%9C%B0Dockerfile%E6%9E%84%E5%BB%BA%E9%95%9C%E5%83%8F%E5%B9%B6%E4%B8%8A%E4%BC%A0DockerHub/</loc>
-    <lastmod>2023-02-03</lastmod>
-  </url>
-  <url>
     <loc>https://chenzuoli.github.io/2023/01/20/debian%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85vim%E9%97%AE%E9%A2%98/</loc>
     <lastmod>2023-01-20</lastmod>
-  </url>
-  <url>
-    <loc>https://chenzuoli.github.io/2023/01/01/mac%E5%90%AF%E5%8A%A8apache2%E6%9C%8D%E5%8A%A1/</loc>
-    <lastmod>2023-01-17</lastmod>
   </url>
   <url>
     <loc>https://chenzuoli.github.io/2023/01/11/nginx%E6%96%B0%E5%A2%9E%E8%AE%BF%E9%97%AE%E8%B7%AF%E5%BE%84location/</loc>
@@ -865,19 +913,11 @@
     <lastmod>2022-08-27</lastmod>
   </url>
   <url>
-    <loc>https://chenzuoli.github.io/2018/09/05/%E9%98%BF%E9%87%8C%E5%B7%B4%E5%B7%B4mysql%E6%95%B0%E6%8D%AE%E5%BA%93binlog%E7%9A%84%E5%A2%9E%E9%87%8F%E8%AE%A2%E9%98%85%E4%B8%8E%E6%B6%88%E8%B4%B9%E7%BB%84%E4%BB%B6canal/</loc>
-    <lastmod>2022-08-27</lastmod>
-  </url>
-  <url>
     <loc>https://chenzuoli.github.io/2019/01/10/%E9%81%93%E8%B7%AF%E8%B4%A8%E9%87%8F%E6%8E%92%E8%A1%8C/</loc>
     <lastmod>2022-08-27</lastmod>
   </url>
   <url>
     <loc>https://chenzuoli.github.io/2019/08/19/%E9%87%8D%E6%B8%A9%E3%80%8A%E5%A4%B4%E5%8F%B7%E7%8E%A9%E5%AE%B6%E3%80%8BVR%E6%B8%B8%E6%88%8F%E4%B8%AD%E7%9A%84%E5%8C%BA%E5%9D%97%E9%93%BE%E4%B8%96%E7%95%8C/</loc>
-    <lastmod>2022-08-27</lastmod>
-  </url>
-  <url>
-    <loc>https://chenzuoli.github.io/2022/03/05/%E8%AF%B4%E4%B8%8B%E6%9C%80%E8%BF%91%E8%A7%A3%E5%86%B3%E7%9A%84%E5%87%A0%E4%B8%AA%E5%A4%A7%E7%9A%84%E9%97%AE%E9%A2%98/</loc>
     <lastmod>2022-08-27</lastmod>
   </url>
   <url>
@@ -937,14 +977,6 @@
     <lastmod>2022-08-27</lastmod>
   </url>
   <url>
-    <loc>https://chenzuoli.github.io/2019/09/11/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/</loc>
-    <lastmod>2022-08-27</lastmod>
-  </url>
-  <url>
-    <loc>https://chenzuoli.github.io/2017/12/26/%E6%90%AD%E5%BB%BAmaven%E7%A7%81%E6%9C%8Dnexus/</loc>
-    <lastmod>2022-08-27</lastmod>
-  </url>
-  <url>
     <loc>https://chenzuoli.github.io/2019/08/18/%E6%8B%9C%E5%8D%A0%E5%BA%AD%E9%97%AE%E9%A2%98/</loc>
     <lastmod>2022-08-27</lastmod>
   </url>
@@ -994,10 +1026,6 @@
   </url>
   <url>
     <loc>https://chenzuoli.github.io/2019/09/03/%E5%8C%BA%E5%9D%97%E9%93%BE%E4%B8%89%E5%A4%A7%E5%85%B1%E8%AF%86%E6%9C%BA%E5%88%B6/</loc>
-    <lastmod>2022-08-27</lastmod>
-  </url>
-  <url>
-    <loc>https://chenzuoli.github.io/2019/04/27/%E5%8C%BA%E5%9D%97%E9%93%BE%E4%B8%89%E5%A4%A7%E5%85%AC%E9%93%BEDapp%E5%B9%B3%E5%8F%B0ETH%E3%80%81EOS%E3%80%81TRON%E5%AF%B9%E6%AF%94/</loc>
     <lastmod>2022-08-27</lastmod>
   </url>
   <url>
@@ -1053,15 +1081,7 @@
     <lastmod>2022-08-27</lastmod>
   </url>
   <url>
-    <loc>https://chenzuoli.github.io/2018/02/08/windows%E4%B8%8Bvim%E6%89%93%E5%BC%80%E6%96%87%E4%BB%B6%E4%B8%AD%E6%96%87%E4%B9%B1%E7%A0%81/</loc>
-    <lastmod>2022-08-27</lastmod>
-  </url>
-  <url>
     <loc>https://chenzuoli.github.io/2022/01/15/npm%E5%88%87%E6%8D%A2%E5%9B%BD%E5%86%85%E6%BA%90/</loc>
-    <lastmod>2022-08-27</lastmod>
-  </url>
-  <url>
-    <loc>https://chenzuoli.github.io/2022/04/05/idea%E5%BF%AB%E6%8D%B7%E9%94%AE/</loc>
     <lastmod>2022-08-27</lastmod>
   </url>
   <url>
@@ -1070,10 +1090,6 @@
   </url>
   <url>
     <loc>https://chenzuoli.github.io/2018/12/29/World's%20most%20expensive%20cities,%202019.%20(cost%20of%20livi/</loc>
-    <lastmod>2022-08-27</lastmod>
-  </url>
-  <url>
-    <loc>https://chenzuoli.github.io/2017/12/28/Windows%E8%BF%9C%E7%A8%8B%E8%BF%9E%E6%8E%A5linux%E5%9B%BE%E5%BD%A2%E7%95%8C%E9%9D%A2%E9%85%8D%E7%BD%AE%E8%AF%A6%E8%A7%A3/</loc>
     <lastmod>2022-08-27</lastmod>
   </url>
   <url>
@@ -1101,14 +1117,6 @@
     <lastmod>2022-08-27</lastmod>
   </url>
   <url>
-    <loc>https://chenzuoli.github.io/2019/11/16/OCR%E8%AF%86%E5%88%AB%E6%98%AF%E4%BB%80%E4%B9%88%EF%BC%9F/</loc>
-    <lastmod>2022-08-27</lastmod>
-  </url>
-  <url>
-    <loc>https://chenzuoli.github.io/2020/03/23/MacOS%E8%A7%A3%E5%8E%8B%E6%96%87%E4%BB%B6/</loc>
-    <lastmod>2022-08-27</lastmod>
-  </url>
-  <url>
     <loc>https://chenzuoli.github.io/2018/12/26/Highest%20Divorce%20Rate%20by%20Country/</loc>
     <lastmod>2022-08-27</lastmod>
   </url>
@@ -1118,10 +1126,6 @@
   </url>
   <url>
     <loc>https://chenzuoli.github.io/2021/06/06/Flutter%E6%89%93%E5%8C%85android/</loc>
-    <lastmod>2022-08-27</lastmod>
-  </url>
-  <url>
-    <loc>https://chenzuoli.github.io/2022/01/02/Docker%E5%AE%B9%E5%99%A8%E5%86%85%E8%AE%BF%E9%97%AE%E5%AE%BF%E4%B8%BB%E6%9C%BAMacOS%E7%9A%84mysql/</loc>
     <lastmod>2022-08-27</lastmod>
   </url>
   <url>
