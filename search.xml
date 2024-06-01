@@ -1705,7 +1705,9 @@
 <p>一起学习，一起进步。<br></p>
 ]]></content>
       <categories>
+        <category>移动端</category>
         <category>android</category>
+        <category>flutter</category>
       </categories>
       <tags>
         <tag>flutter</tag>
@@ -1752,7 +1754,8 @@
 <p>一起学习，一起进步。<br></p>
 ]]></content>
       <categories>
-        <category>git</category>
+        <category>其他</category>
+        <category>Github</category>
       </categories>
       <tags>
         <tag>git</tag>
@@ -10985,6 +10988,7 @@
 <p>一起学习，一起进步。<br></p>
 ]]></content>
       <categories>
+        <category>移动端</category>
         <category>微信小程序</category>
       </categories>
       <tags>
@@ -12535,7 +12539,7 @@ API
       </tags>
   </entry>
   <entry>
-    <title>微信小程序</title>
+    <title>微信小程序开发</title>
     <url>/2020/03/24/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F/</url>
     <content><![CDATA[<p>&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;介绍下微信小程序开发。<br><img src="/2020/03/24/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F/weixin.jpg" width="500" height="300"></p>
 <span id="more"></span>
@@ -12551,6 +12555,7 @@ API
 <p>一起学习，一起进步。<br></p>
 ]]></content>
       <categories>
+        <category>移动端</category>
         <category>微信小程序</category>
       </categories>
       <tags>
@@ -12576,6 +12581,7 @@ API
 </ol>
 ]]></content>
       <categories>
+        <category>移动端</category>
         <category>微信小程序</category>
       </categories>
       <tags>
@@ -12600,6 +12606,7 @@ API
 <p>一起学习，一起进步。<br></p>
 ]]></content>
       <categories>
+        <category>移动端</category>
         <category>微信小程序</category>
       </categories>
       <tags>
@@ -15992,7 +15999,9 @@ API
 <p>一起学习，一起进步。<br></p>
 ]]></content>
       <categories>
+        <category>投资</category>
         <category>公司</category>
+        <category>Oracle</category>
       </categories>
       <tags>
         <tag>软件</tag>
