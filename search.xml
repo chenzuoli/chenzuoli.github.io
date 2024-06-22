@@ -17709,4 +17709,38 @@ API
         <tag>异步回调</tag>
       </tags>
   </entry>
+  <entry>
+    <title>支付宝电脑网页支付上线生产问题</title>
+    <url>/2024/06/22/%E6%94%AF%E4%BB%98%E5%AE%9D%E7%94%B5%E8%84%91%E7%BD%91%E9%A1%B5%E6%94%AF%E4%BB%98%E4%B8%8A%E7%BA%BF%E7%94%9F%E4%BA%A7%E9%97%AE%E9%A2%98/</url>
+    <content><![CDATA[<p>支付宝沙箱环境测试ok了，上线生产还是碰到一些问题，这里记录一下。</p>
+<span id="more"></span>
+
+<ol>
+<li>订单信息无法识别<br><img src="/2024/06/22/%E6%94%AF%E4%BB%98%E5%AE%9D%E7%94%B5%E8%84%91%E7%BD%91%E9%A1%B5%E6%94%AF%E4%BB%98%E4%B8%8A%E7%BA%BF%E7%94%9F%E4%BA%A7%E9%97%AE%E9%A2%98/image.png" alt="error_order_info"></li>
+</ol>
+<p>订单信息无法识别，建议联系卖家。错误码：INVALID_PARAMETER</p>
+<p>这里是我发送支付请求的参数，沙箱环境里设置了buyer_id，上生产时，我把这个buyer_id设置为随机id了，导致了这个错误：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">    // 发送支付请求</span><br><span class="line">    let payment_amount = $(&quot;#payment_amount&quot;).val();</span><br><span class="line">    let subject = $(&quot;#subject&quot;).val();</span><br><span class="line">    post_params = &#123;</span><br><span class="line">        &quot;trade_no&quot;: order_id,</span><br><span class="line">        &quot;total_amount&quot;: payment_amount,</span><br><span class="line">        &quot;subject&quot;: subject,</span><br><span class="line">//        &quot;buyer_id&quot;: &quot;2088722036238535&quot;, // 沙箱版支付宝买家id</span><br><span class="line">        &quot;buyer_id&quot;: guid(),</span><br><span class="line">        &quot;product_code&quot;: &#x27;FAST_INSTANT_TRADE_PAY&#x27;,</span><br><span class="line">        &quot;content_id&quot;: content_id</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+
+<p>解决办法就是不需要穿buyer_id，拿掉就行。</p>
+<ol start="2">
+<li>这里记录一下从沙箱环境切换到正式生产环境需要的步骤<br>三个密钥文件为生产参数<br>a. 支付宝公钥<br>b. 应用公钥<br>c. 应用私钥</li>
+</ol>
+<p>修改app_id和支付网关<br>a. ALIPAY_APP_ID<br>b. ALIPAY_SERVER_URL</p>
+<hr>
+<p>欢迎关注微信公众号，你的资源可变现：【乐知付加密平台】<br><img src="/images/wechat_account.png" alt="乐知付加密平台"></p>
+<p>欢迎关注微信公众号，这里记录博主的创业之旅：【程序员写书】<br><img src="/images/coder_and_writer.png" alt="程序员写书"></p>
+<p>一起学习，一起进步。<br></p>
+]]></content>
+      <categories>
+        <category>网站</category>
+        <category>网页支付</category>
+        <category>支付宝</category>
+      </categories>
+      <tags>
+        <tag>乐知付</tag>
+        <tag>支付宝</tag>
+        <tag>网页支付</tag>
+      </tags>
+  </entry>
 </search>

@@ -6,7 +6,7 @@
   <link href="https://chenzuoli.github.io/atom.xml" rel="self"/>
   
   <link href="https://chenzuoli.github.io/"/>
-  <updated>2024-06-22T01:53:33.901Z</updated>
+  <updated>2024-06-22T12:14:39.967Z</updated>
   <id>https://chenzuoli.github.io/</id>
   
   <author>
@@ -15,6 +15,35 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>支付宝电脑网页支付上线生产问题</title>
+    <link href="https://chenzuoli.github.io/2024/06/22/%E6%94%AF%E4%BB%98%E5%AE%9D%E7%94%B5%E8%84%91%E7%BD%91%E9%A1%B5%E6%94%AF%E4%BB%98%E4%B8%8A%E7%BA%BF%E7%94%9F%E4%BA%A7%E9%97%AE%E9%A2%98/"/>
+    <id>https://chenzuoli.github.io/2024/06/22/%E6%94%AF%E4%BB%98%E5%AE%9D%E7%94%B5%E8%84%91%E7%BD%91%E9%A1%B5%E6%94%AF%E4%BB%98%E4%B8%8A%E7%BA%BF%E7%94%9F%E4%BA%A7%E9%97%AE%E9%A2%98/</id>
+    <published>2024-06-22T11:58:15.000Z</published>
+    <updated>2024-06-22T12:14:39.967Z</updated>
+    
+    <content type="html"><![CDATA[<p>支付宝沙箱环境测试ok了，上线生产还是碰到一些问题，这里记录一下。</p><span id="more"></span><ol><li>订单信息无法识别<br><img src="/2024/06/22/%E6%94%AF%E4%BB%98%E5%AE%9D%E7%94%B5%E8%84%91%E7%BD%91%E9%A1%B5%E6%94%AF%E4%BB%98%E4%B8%8A%E7%BA%BF%E7%94%9F%E4%BA%A7%E9%97%AE%E9%A2%98/image.png" alt="error_order_info"></li></ol><p>订单信息无法识别，建议联系卖家。错误码：INVALID_PARAMETER</p><p>这里是我发送支付请求的参数，沙箱环境里设置了buyer_id，上生产时，我把这个buyer_id设置为随机id了，导致了这个错误：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">    // 发送支付请求</span><br><span class="line">    let payment_amount = $(&quot;#payment_amount&quot;).val();</span><br><span class="line">    let subject = $(&quot;#subject&quot;).val();</span><br><span class="line">    post_params = &#123;</span><br><span class="line">        &quot;trade_no&quot;: order_id,</span><br><span class="line">        &quot;total_amount&quot;: payment_amount,</span><br><span class="line">        &quot;subject&quot;: subject,</span><br><span class="line">//        &quot;buyer_id&quot;: &quot;2088722036238535&quot;, // 沙箱版支付宝买家id</span><br><span class="line">        &quot;buyer_id&quot;: guid(),</span><br><span class="line">        &quot;product_code&quot;: &#x27;FAST_INSTANT_TRADE_PAY&#x27;,</span><br><span class="line">        &quot;content_id&quot;: content_id</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure><p>解决办法就是不需要穿buyer_id，拿掉就行。</p><ol start="2"><li>这里记录一下从沙箱环境切换到正式生产环境需要的步骤<br>三个密钥文件为生产参数<br>a. 支付宝公钥<br>b. 应用公钥<br>c. 应用私钥</li></ol><p>修改app_id和支付网关<br>a. ALIPAY_APP_ID<br>b. ALIPAY_SERVER_URL</p><hr><p>欢迎关注微信公众号，你的资源可变现：【乐知付加密平台】<br><img src="/images/wechat_account.png" alt="乐知付加密平台"></p><p>欢迎关注微信公众号，这里记录博主的创业之旅：【程序员写书】<br><img src="/images/coder_and_writer.png" alt="程序员写书"></p><p>一起学习，一起进步。<br></p>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;支付宝沙箱环境测试ok了，上线生产还是碰到一些问题，这里记录一下。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="网站" scheme="https://chenzuoli.github.io/categories/%E7%BD%91%E7%AB%99/"/>
+    
+    <category term="网页支付" scheme="https://chenzuoli.github.io/categories/%E7%BD%91%E7%AB%99/%E7%BD%91%E9%A1%B5%E6%94%AF%E4%BB%98/"/>
+    
+    <category term="支付宝" scheme="https://chenzuoli.github.io/categories/%E7%BD%91%E7%AB%99/%E7%BD%91%E9%A1%B5%E6%94%AF%E4%BB%98/%E6%94%AF%E4%BB%98%E5%AE%9D/"/>
+    
+    
+    <category term="乐知付" scheme="https://chenzuoli.github.io/tags/%E4%B9%90%E7%9F%A5%E4%BB%98/"/>
+    
+    <category term="支付宝" scheme="https://chenzuoli.github.io/tags/%E6%94%AF%E4%BB%98%E5%AE%9D/"/>
+    
+    <category term="网页支付" scheme="https://chenzuoli.github.io/tags/%E7%BD%91%E9%A1%B5%E6%94%AF%E4%BB%98/"/>
+    
+  </entry>
   
   <entry>
     <title>支付宝支付成功异步回调问题</title>
@@ -537,39 +566,6 @@
     <category term="乐知付" scheme="https://chenzuoli.github.io/tags/%E4%B9%90%E7%9F%A5%E4%BB%98/"/>
     
     <category term="资源分享" scheme="https://chenzuoli.github.io/tags/%E8%B5%84%E6%BA%90%E5%88%86%E4%BA%AB/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>如何制作m3u8视频流媒体文件</title>
-    <link href="https://chenzuoli.github.io/2024/05/03/%E5%A6%82%E4%BD%95%E5%88%B6%E4%BD%9Cm3u8%E8%A7%86%E9%A2%91%E6%B5%81%E5%AA%92%E4%BD%93%E6%96%87%E4%BB%B6/"/>
-    <id>https://chenzuoli.github.io/2024/05/03/%E5%A6%82%E4%BD%95%E5%88%B6%E4%BD%9Cm3u8%E8%A7%86%E9%A2%91%E6%B5%81%E5%AA%92%E4%BD%93%E6%96%87%E4%BB%B6/</id>
-    <published>2024-05-03T04:08:32.000Z</published>
-    <updated>2024-05-05T12:51:28.679Z</updated>
-    
-    <content type="html"><![CDATA[<p>利用ffmpeg生成m3u8流媒体文件。</p><span id="more"></span><p>ffmpeg的安装和基本介绍，可移步这篇文章：<br><a href="https://chenzuoli.github.io/2024/05/05/ffmpeg%E7%9A%84%E5%AE%89%E8%A3%85%E4%B8%8E%E4%BD%BF%E7%94%A8/">ffmpeg安装</a></p><h1 id="生成m3u8流媒体文件"><a href="#生成m3u8流媒体文件" class="headerlink" title="生成m3u8流媒体文件"></a>生成m3u8流媒体文件</h1><p>命令：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ffmpeg -i video_subclip.mp4 -vcodec copy -acodec copy -bsf:v h264_mp4toannexb -hls_time 10 -hls_list_size 0 -f hls m3u8/video.m3u8</span><br></pre></td></tr></table></figure><p>输出的结果文件：<br><img src="/2024/05/03/%E5%A6%82%E4%BD%95%E5%88%B6%E4%BD%9Cm3u8%E8%A7%86%E9%A2%91%E6%B5%81%E5%AA%92%E4%BD%93%E6%96%87%E4%BB%B6/image.png" alt="ts"></p><p>参数释义：<br>ffmpeg命令是用来将一个名为video_subclip.mp4的MP4视频文件转换成HLS（HTTP Live Streaming）流媒体格式的。下面是命令中每个参数的含义：</p><ol><li>-i video_subclip.mp4：指定输入文件是video_subclip.mp4。</li><li>-vcodec copy：指定视频编解码器使用复制模式，即不转换视频，直接使用原始视频流。</li><li>-acodec copy：指定音频编解码器使用复制模式，即不转换音频，直接使用原始音频流。</li><li>-bsf:v h264_mp4toannexb：使用比特流过滤器（bitstream filter）将H.264视频码流从MP4格式转换为AnnexB格式。这是因为HLS通常使用AnnexB格式的H.264码流。</li><li>-hls_time 10：设置每个HLS视频分块（segment）的时间长度为10秒。</li><li>-hls_list_size 0：设置HLS播放列表（m3u8文件）中包含的分块数量。如果设置为0，表示不限制列表中的分块数量，将包含所有生成的分块。</li><li>-f hls：指定输出格式为HLS。</li><li>m3u8&#x2F;video.m3u8：指定输出文件的基本路径和文件名。video.m3u8是播放列表文件，它将包含指向实际媒体数据分块的引用。</li></ol><p>总结来说，这个命令会创建一个HLS流，其中视频和音频码流不做任何转换，直接复制原始MP4文件中的流，并将H.264视频码流转换为AnnexB格式以兼容HLS标准。生成的HLS流将由一个播放列表文件（video.m3u8）和多个媒体数据分块组成，每个分块时长为10秒。</p><p>运行结果如下：<br><img src="/2024/05/03/%E5%A6%82%E4%BD%95%E5%88%B6%E4%BD%9Cm3u8%E8%A7%86%E9%A2%91%E6%B5%81%E5%AA%92%E4%BD%93%E6%96%87%E4%BB%B6/image.png" alt="result"></p><h1 id="html加载m3u8流媒体文件"><a href="#html加载m3u8流媒体文件" class="headerlink" title="html加载m3u8流媒体文件"></a>html加载m3u8流媒体文件</h1><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html lang=&quot;zh-CN&quot;&gt;</span><br><span class="line">&lt;head&gt;</span><br><span class="line">    &lt;meta charset=&quot;UTF-8&quot;&gt;</span><br><span class="line">    &lt;title&gt;视频流媒体播放&lt;/title&gt;</span><br><span class="line">&lt;/head&gt;</span><br><span class="line"></span><br><span class="line">&lt;body&gt;</span><br><span class="line">&lt;script src=&quot;https://cdn.jsdelivr.net/npm/hls.js@latest&quot;&gt;&lt;/script&gt;</span><br><span class="line"></span><br><span class="line">&lt;video id=&quot;video&quot; controls&gt;&lt;/video&gt;</span><br><span class="line">&lt;script&gt;</span><br><span class="line">  if (Hls.isSupported()) &#123;</span><br><span class="line">    var video = document.getElementById(&#x27;video&#x27;);</span><br><span class="line">    var hls = new Hls();</span><br><span class="line">    hls.loadSource(&#x27;m3u8/video.m3u8&#x27;);</span><br><span class="line">    hls.attachMedia(video);</span><br><span class="line">    hls.on(Hls.Events.MANIFEST_PARSED, function() &#123;</span><br><span class="line">      video.play();</span><br><span class="line">    &#125;);</span><br><span class="line">  &#125;</span><br><span class="line">&lt;/script&gt;</span><br><span class="line">&lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure><hr><p>好记性不如烂笔头。</p><p>欢迎关注微信公众号，你的资源可变现：【乐知付加密平台】<br><img src="/images/wechat_account.png" alt="乐知付加密平台"></p><p>一起学习，一起进步。<br></p>]]></content>
-    
-    
-    <summary type="html">&lt;p&gt;利用ffmpeg生成m3u8流媒体文件。&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="工具" scheme="https://chenzuoli.github.io/categories/%E5%B7%A5%E5%85%B7/"/>
-    
-    <category term="ffmpeg" scheme="https://chenzuoli.github.io/categories/%E5%B7%A5%E5%85%B7/ffmpeg/"/>
-    
-    
-    <category term="ffmpeg" scheme="https://chenzuoli.github.io/tags/ffmpeg/"/>
-    
-    <category term="图片" scheme="https://chenzuoli.github.io/tags/%E5%9B%BE%E7%89%87/"/>
-    
-    <category term="音频" scheme="https://chenzuoli.github.io/tags/%E9%9F%B3%E9%A2%91/"/>
-    
-    <category term="视频" scheme="https://chenzuoli.github.io/tags/%E8%A7%86%E9%A2%91/"/>
-    
-    <category term="工具" scheme="https://chenzuoli.github.io/tags/%E5%B7%A5%E5%85%B7/"/>
-    
-    <category term="流媒体" scheme="https://chenzuoli.github.io/tags/%E6%B5%81%E5%AA%92%E4%BD%93/"/>
     
   </entry>
   
