@@ -17677,4 +17677,36 @@ API
         <tag>菜单栏</tag>
       </tags>
   </entry>
+  <entry>
+    <title>支付宝支付成功异步回调问题</title>
+    <url>/2024/06/13/%E6%94%AF%E4%BB%98%E5%AE%9D%E6%94%AF%E4%BB%98%E6%88%90%E5%8A%9F%E5%BC%82%E6%AD%A5%E5%9B%9E%E8%B0%83%E9%97%AE%E9%A2%98/</url>
+    <content><![CDATA[<p>接过支付宝支付接口的朋友应该知道，支付代码中设置的有两个回调url。<br>一个是同步回调url，支付成功后，自动跳转到此url，<br>另一个是异步回调url，支付成功后，支付宝后台异步通过post方式调用此url，此异步通知才能真正来判断是否支付成功。</p>
+<p>但是我在开发过程中，使用支付宝沙箱环境（测试环境）时，没收到异步通知，相信大家应该也会碰到这个问题，这里记录下这个问题。</p>
+<span id="more"></span>
+
+<p>问题分类 : [“支付转账类问题”]</p>
+<p>请选择产品 : [“电脑网站支付”]</p>
+<p>问题描述 : 沙箱环境异步回调没有接收到<br>应用网关地址：<a href="https://xxxx.com/">https://xxxx.com</a><br>授权回调地址：<a href="https://xxxx.com/notify_url">https://xxxx.com/notify_url</a></p>
+<p>已经通过postman post方式调用过此地址：<a href="https://xxxx.com/notify_url">https://xxxx.com/notify_url</a><br>后台能够接受到postman的访问请求</p>
+<p>但是沙箱环境支付成功后，没有收到支付宝的异步请求通知，问下咋回事。</p>
+<p>咨询了支付宝技术支持，发给他trade_no，他后台能够查到已经发送了异步通知，但是返回415状态码，(Unsupported Media Type) 不支持的类型异常。</p>
+<p>原来他们使用的是默认的x-www-form-urlencoded Content-Type发送post请求，而我的异步通知后台是通过application&#x2F;json方式接收的参数，所以报错415。</p>
+<p>原来不是我notify_url设置的不对、不是我密钥配置的不对、不是我appid设置的不对、不是我验证签名不对，而是接收参数的方式不对。</p>
+<p>好了，已经能够接收到异步通知了。</p>
+<p>记录一下。</p>
+<hr>
+<p>欢迎关注微信公众号，你的资源可变现：【乐知付加密平台】<br><img src="/images/wechat_account.png" alt="乐知付加密平台"></p>
+<p>一起学习，一起进步。<br></p>
+]]></content>
+      <categories>
+        <category>网站</category>
+        <category>网页支付</category>
+        <category>支付宝</category>
+      </categories>
+      <tags>
+        <tag>支付宝</tag>
+        <tag>网站支付</tag>
+        <tag>异步回调</tag>
+      </tags>
+  </entry>
 </search>

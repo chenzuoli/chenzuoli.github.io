@@ -6,7 +6,7 @@
   <link href="https://chenzuoli.github.io/atom.xml" rel="self"/>
   
   <link href="https://chenzuoli.github.io/"/>
-  <updated>2024-06-10T04:05:19.066Z</updated>
+  <updated>2024-06-22T01:53:33.901Z</updated>
   <id>https://chenzuoli.github.io/</id>
   
   <author>
@@ -15,6 +15,36 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>支付宝支付成功异步回调问题</title>
+    <link href="https://chenzuoli.github.io/2024/06/13/%E6%94%AF%E4%BB%98%E5%AE%9D%E6%94%AF%E4%BB%98%E6%88%90%E5%8A%9F%E5%BC%82%E6%AD%A5%E5%9B%9E%E8%B0%83%E9%97%AE%E9%A2%98/"/>
+    <id>https://chenzuoli.github.io/2024/06/13/%E6%94%AF%E4%BB%98%E5%AE%9D%E6%94%AF%E4%BB%98%E6%88%90%E5%8A%9F%E5%BC%82%E6%AD%A5%E5%9B%9E%E8%B0%83%E9%97%AE%E9%A2%98/</id>
+    <published>2024-06-13T14:35:27.000Z</published>
+    <updated>2024-06-22T01:53:33.901Z</updated>
+    
+    <content type="html"><![CDATA[<p>接过支付宝支付接口的朋友应该知道，支付代码中设置的有两个回调url。<br>一个是同步回调url，支付成功后，自动跳转到此url，<br>另一个是异步回调url，支付成功后，支付宝后台异步通过post方式调用此url，此异步通知才能真正来判断是否支付成功。</p><p>但是我在开发过程中，使用支付宝沙箱环境（测试环境）时，没收到异步通知，相信大家应该也会碰到这个问题，这里记录下这个问题。</p><span id="more"></span><p>问题分类 : [“支付转账类问题”]</p><p>请选择产品 : [“电脑网站支付”]</p><p>问题描述 : 沙箱环境异步回调没有接收到<br>应用网关地址：<a href="https://xxxx.com/">https://xxxx.com</a><br>授权回调地址：<a href="https://xxxx.com/notify_url">https://xxxx.com/notify_url</a></p><p>已经通过postman post方式调用过此地址：<a href="https://xxxx.com/notify_url">https://xxxx.com/notify_url</a><br>后台能够接受到postman的访问请求</p><p>但是沙箱环境支付成功后，没有收到支付宝的异步请求通知，问下咋回事。</p><p>咨询了支付宝技术支持，发给他trade_no，他后台能够查到已经发送了异步通知，但是返回415状态码，(Unsupported Media Type) 不支持的类型异常。</p><p>原来他们使用的是默认的x-www-form-urlencoded Content-Type发送post请求，而我的异步通知后台是通过application&#x2F;json方式接收的参数，所以报错415。</p><p>原来不是我notify_url设置的不对、不是我密钥配置的不对、不是我appid设置的不对、不是我验证签名不对，而是接收参数的方式不对。</p><p>好了，已经能够接收到异步通知了。</p><p>记录一下。</p><hr><p>欢迎关注微信公众号，你的资源可变现：【乐知付加密平台】<br><img src="/images/wechat_account.png" alt="乐知付加密平台"></p><p>一起学习，一起进步。<br></p>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;接过支付宝支付接口的朋友应该知道，支付代码中设置的有两个回调url。&lt;br&gt;一个是同步回调url，支付成功后，自动跳转到此url，&lt;br&gt;另一个是异步回调url，支付成功后，支付宝后台异步通过post方式调用此url，此异步通知才能真正来判断是否支付成功。&lt;/p&gt;
+&lt;p&gt;但是我在开发过程中，使用支付宝沙箱环境（测试环境）时，没收到异步通知，相信大家应该也会碰到这个问题，这里记录下这个问题。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="网站" scheme="https://chenzuoli.github.io/categories/%E7%BD%91%E7%AB%99/"/>
+    
+    <category term="网页支付" scheme="https://chenzuoli.github.io/categories/%E7%BD%91%E7%AB%99/%E7%BD%91%E9%A1%B5%E6%94%AF%E4%BB%98/"/>
+    
+    <category term="支付宝" scheme="https://chenzuoli.github.io/categories/%E7%BD%91%E7%AB%99/%E7%BD%91%E9%A1%B5%E6%94%AF%E4%BB%98/%E6%94%AF%E4%BB%98%E5%AE%9D/"/>
+    
+    
+    <category term="支付宝" scheme="https://chenzuoli.github.io/tags/%E6%94%AF%E4%BB%98%E5%AE%9D/"/>
+    
+    <category term="网站支付" scheme="https://chenzuoli.github.io/tags/%E7%BD%91%E7%AB%99%E6%94%AF%E4%BB%98/"/>
+    
+    <category term="异步回调" scheme="https://chenzuoli.github.io/tags/%E5%BC%82%E6%AD%A5%E5%9B%9E%E8%B0%83/"/>
+    
+  </entry>
   
   <entry>
     <title>饺子这个生意怎么样</title>
@@ -540,35 +570,6 @@
     <category term="工具" scheme="https://chenzuoli.github.io/tags/%E5%B7%A5%E5%85%B7/"/>
     
     <category term="流媒体" scheme="https://chenzuoli.github.io/tags/%E6%B5%81%E5%AA%92%E4%BD%93/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>html视频流媒体m3u8文件解析</title>
-    <link href="https://chenzuoli.github.io/2024/05/02/html%E8%A7%86%E9%A2%91%E6%B5%81%E5%AA%92%E4%BD%93m3u8%E6%96%87%E4%BB%B6%E8%A7%A3%E6%9E%90/"/>
-    <id>https://chenzuoli.github.io/2024/05/02/html%E8%A7%86%E9%A2%91%E6%B5%81%E5%AA%92%E4%BD%93m3u8%E6%96%87%E4%BB%B6%E8%A7%A3%E6%9E%90/</id>
-    <published>2024-05-02T05:18:53.000Z</published>
-    <updated>2024-05-03T02:29:58.877Z</updated>
-    
-    <content type="html"><![CDATA[<p>最近下载解析某视频网站上的视频，想下载下来，一顿操作猛如虎，发现获取到的视频文件不是mp4，不是flv，不是mav，而是m3u8格式的，只有几十B大小。<br>那这个m3u8格式的视频文件是怎么加载到视频的呢？<br>且看下文。</p><span id="more"></span><h1 id="流媒体文件格式"><a href="#流媒体文件格式" class="headerlink" title="流媒体文件格式"></a>流媒体文件格式</h1><p>M3U8视频是一种流媒体文件格式。</p><p>M3U8文件是UTF-8编码格式的M3U文件，主要用于描述多段音频和视频数据的URL地址。它不是传统的下载后播放格式，而是直接在浏览器或移动设备上播放。M3U8文件通常用于存储和管理多个视频、音频和字幕流的播放列表。它基于HTTP Live Streaming（HLS）协议，支持直播和点播，并且可以实现多码率视频的适配，根据用户的网络带宽情况自动匹配合适的码率文件进行播放，从而保证视频的流畅度。</p><p>M3U8是一种常见的流媒体格式，主要以文件列表的形式存在，既支持直播又支持点播，尤其在Android、iOS等平台最为常用。</p><h1 id="M3U8的优点"><a href="#M3U8的优点" class="headerlink" title="M3U8的优点"></a>M3U8的优点</h1><p>1、可以做多码率的适配。根据网络带宽，客户端会自动选择一个适合自己码率的文件进行播放，保证视频流的流畅，代表是苹果的HLS(HTTP Live Streaming)。HLS有一个特点：自适应码率流播(adaptive streaming)，客户端可以根据网络状况自动选择不同码率的视频流，条件允许的情况下使用高码率，网络繁忙的时候使用低码率，并且自动在二者间随意切换。这对移动设备网络状况不稳定的情况下保障流畅播放非常有帮助。</p><p>2、降低源服务器的负载压力。M3U的特点是将流媒体切分为若干 TS 片段，然后通过一个扩展的 m3u 列表文件将这些 TS 片段集中起来供客户端播放器接收。这样做相比使用 RTSP 协议的好处在于，一旦切分完成，之后的分发过程完全不需要额外使用任何专门软件，普通的网络服务器即可，大大降低了 CDN 边缘服务器的配置要求，可以使用任何现成的CDN。分发使用的协议是最常见 HTTP，代理服务器对这个协议的缓存优化相当成熟，而很少有代理服务器对 RTSP 的进行缓存优化。</p><p>3、对于非实时视频，好处同样存在：播放使用HTTP协议的单个 MP4 格式的视频文件时，需要代理服务器支持 HTTP range request 以获取大文件中的一部分，但不是所有的代理服务器都对此有良好的支持。而 M3U 则只需要根据列表文件中的时间轴找出对应的 TS 片段下载即可，不需要 range request，对代理服务器的要求小很多。所有代理服务器都支持小文件的高效缓存。</p><p>4、为什么要用 TS 而不是 MP4，这是因为两个 TS 片段可以无缝拼接，播放器能连续播放，而 MP4 文件由于编码方式的原因，两段 MP4 不能无缝拼接，播放器连续播放两个 MP4 文件会出现破音和画面间断，影响用户体验。</p><h1 id="下载"><a href="#下载" class="headerlink" title="下载"></a>下载</h1><p>这里是python的代码演示：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">&quot;&quot;&quot;</span><br><span class="line">pip install m3u8-To-MP4==0.1.11</span><br><span class="line">&quot;&quot;&quot;</span><br><span class="line"></span><br><span class="line">import m3u8_To_MP4</span><br><span class="line"></span><br><span class="line">if __name__ == &#x27;__main__&#x27;:</span><br><span class="line">    # 1. Download videos from uri.</span><br><span class="line">    m3u8_To_MP4.multithread_download(&#x27;https://svipsvip.ffzyread1.com/20240424/26411_4538b0e5/index.m3u8&#x27;)</span><br><span class="line"></span><br><span class="line">    # 2. Download videos from existing m3u8 files.</span><br><span class="line">    # m3u8_file_path = &#x27;/Users/zuolichen/Downloads/index.m3u8&#x27;</span><br><span class="line">    # m3u8_To_MP4.multithread_file_download(&#x27;https://svipsvip.ffzyread1.com/20240424/26411_4538b0e5/index.m3u8&#x27;, m3u8_file_path)</span><br><span class="line"></span><br><span class="line">    # For compatibility, i reserve this api, but i do not recommend to you again.</span><br><span class="line">    # m3u8_To_MP4.download(&#x27;http://videoserver.com/playlist.m3u8&#x27;)</span><br><span class="line"></span><br></pre></td></tr></table></figure><p>后面再记录下如何分段下载这类视频流媒体文件吧。</p><p>一起学习，一起进步。</p><hr><p>欢迎关注微信公众号，你的资源可变现：【乐知付加密平台】<br><img src="/images/wechat_account.png" alt="乐知付加密平台"></p><p>一起学习，一起进步。<br></p>]]></content>
-    
-    
-    <summary type="html">&lt;p&gt;最近下载解析某视频网站上的视频，想下载下来，一顿操作猛如虎，发现获取到的视频文件不是mp4，不是flv，不是mav，而是m3u8格式的，只有几十B大小。&lt;br&gt;那这个m3u8格式的视频文件是怎么加载到视频的呢？&lt;br&gt;且看下文。&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="前端" scheme="https://chenzuoli.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
-    
-    <category term="HTML" scheme="https://chenzuoli.github.io/categories/%E5%89%8D%E7%AB%AF/HTML/"/>
-    
-    <category term="视频" scheme="https://chenzuoli.github.io/categories/%E5%89%8D%E7%AB%AF/HTML/%E8%A7%86%E9%A2%91/"/>
-    
-    
-    <category term="流媒体" scheme="https://chenzuoli.github.io/tags/%E6%B5%81%E5%AA%92%E4%BD%93/"/>
-    
-    <category term="m4u8" scheme="https://chenzuoli.github.io/tags/m4u8/"/>
-    
-    <category term="视频格式" scheme="https://chenzuoli.github.io/tags/%E8%A7%86%E9%A2%91%E6%A0%BC%E5%BC%8F/"/>
     
   </entry>
   
