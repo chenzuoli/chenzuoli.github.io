@@ -6,7 +6,7 @@
   <link href="https://chenzuoli.github.io/atom.xml" rel="self"/>
   
   <link href="https://chenzuoli.github.io/"/>
-  <updated>2024-07-06T01:30:55.282Z</updated>
+  <updated>2024-07-06T08:34:53.184Z</updated>
   <id>https://chenzuoli.github.io/</id>
   
   <author>
@@ -15,6 +15,37 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>软件分享-Navicat数据库查询工具</title>
+    <link href="https://chenzuoli.github.io/2024/07/06/%E8%BD%AF%E4%BB%B6%E5%88%86%E4%BA%AB-Navicat%E6%95%B0%E6%8D%AE%E5%BA%93%E6%9F%A5%E8%AF%A2%E5%B7%A5%E5%85%B7/"/>
+    <id>https://chenzuoli.github.io/2024/07/06/%E8%BD%AF%E4%BB%B6%E5%88%86%E4%BA%AB-Navicat%E6%95%B0%E6%8D%AE%E5%BA%93%E6%9F%A5%E8%AF%A2%E5%B7%A5%E5%85%B7/</id>
+    <published>2024-07-06T08:10:03.000Z</published>
+    <updated>2024-07-06T08:34:53.184Z</updated>
+    
+    <content type="html"><![CDATA[<p>这里分享下免费软件，不需要激活，可破解Navicat Premium，支持mysql pg oracle 等数据库。</p><span id="more"></span><p>关注公众号【乐知付加密平台】，回复消息：<b>navicat</b>，获取下载链接。</p><p>安装教程，看这里：<br><img src="/2024/07/06/%E8%BD%AF%E4%BB%B6%E5%88%86%E4%BA%AB-Navicat%E6%95%B0%E6%8D%AE%E5%BA%93%E6%9F%A5%E8%AF%A2%E5%B7%A5%E5%85%B7/image.png" alt="1"><br><img src="/2024/07/06/%E8%BD%AF%E4%BB%B6%E5%88%86%E4%BA%AB-Navicat%E6%95%B0%E6%8D%AE%E5%BA%93%E6%9F%A5%E8%AF%A2%E5%B7%A5%E5%85%B7/image-1.png" alt="2"></p><p>链接永久有效。</p><hr><p>欢迎关注微信公众号，你的资源可变现：【乐知付加密平台】<br><img src="/images/wechat_account.png" alt="乐知付加密平台"></p><p>一起学习，一起进步。<br></p>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;这里分享下免费软件，不需要激活，可破解Navicat Premium，支持mysql pg oracle 等数据库。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="其他" scheme="https://chenzuoli.github.io/categories/%E5%85%B6%E4%BB%96/"/>
+    
+    <category term="开发工具" scheme="https://chenzuoli.github.io/categories/%E5%85%B6%E4%BB%96/%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/"/>
+    
+    <category term="Navicat" scheme="https://chenzuoli.github.io/categories/%E5%85%B6%E4%BB%96/%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/Navicat/"/>
+    
+    
+    <category term="oracle" scheme="https://chenzuoli.github.io/tags/oracle/"/>
+    
+    <category term="postgresql" scheme="https://chenzuoli.github.io/tags/postgresql/"/>
+    
+    <category term="mysql" scheme="https://chenzuoli.github.io/tags/mysql/"/>
+    
+    <category term="navicat" scheme="https://chenzuoli.github.io/tags/navicat/"/>
+    
+  </entry>
   
   <entry>
     <title>2024组装一台能跑AI大模型的电脑</title>
@@ -542,33 +573,6 @@
     <category term="python" scheme="https://chenzuoli.github.io/tags/python/"/>
     
     <category term="视频转换" scheme="https://chenzuoli.github.io/tags/%E8%A7%86%E9%A2%91%E8%BD%AC%E6%8D%A2/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>mac文件系统中为啥出现了@符号导致了权限问题</title>
-    <link href="https://chenzuoli.github.io/2024/05/05/mac%E6%96%87%E4%BB%B6%E7%B3%BB%E7%BB%9F%E4%B8%AD%E4%B8%BA%E5%95%A5%E5%87%BA%E7%8E%B0%E4%BA%86-%E7%AC%A6%E5%8F%B7%E5%AF%BC%E8%87%B4%E4%BA%86%E6%9D%83%E9%99%90%E9%97%AE%E9%A2%98/"/>
-    <id>https://chenzuoli.github.io/2024/05/05/mac%E6%96%87%E4%BB%B6%E7%B3%BB%E7%BB%9F%E4%B8%AD%E4%B8%BA%E5%95%A5%E5%87%BA%E7%8E%B0%E4%BA%86-%E7%AC%A6%E5%8F%B7%E5%AF%BC%E8%87%B4%E4%BA%86%E6%9D%83%E9%99%90%E9%97%AE%E9%A2%98/</id>
-    <published>2024-05-05T06:12:11.000Z</published>
-    <updated>2024-05-09T13:55:00.663Z</updated>
-    
-    <content type="html"><![CDATA[<p>具体如下查看详情。</p><span id="more"></span><p><img src="/2024/05/05/mac%E6%96%87%E4%BB%B6%E7%B3%BB%E7%BB%9F%E4%B8%AD%E4%B8%BA%E5%95%A5%E5%87%BA%E7%8E%B0%E4%BA%86-%E7%AC%A6%E5%8F%B7%E5%AF%BC%E8%87%B4%E4%BA%86%E6%9D%83%E9%99%90%E9%97%AE%E9%A2%98/image-1.png" alt="error"><br><img src="/2024/05/05/mac%E6%96%87%E4%BB%B6%E7%B3%BB%E7%BB%9F%E4%B8%AD%E4%B8%BA%E5%95%A5%E5%87%BA%E7%8E%B0%E4%BA%86-%E7%AC%A6%E5%8F%B7%E5%AF%BC%E8%87%B4%E4%BA%86%E6%9D%83%E9%99%90%E9%97%AE%E9%A2%98/image-2.png" alt="@"></p><p>大家知道如何解决吗？</p><hr><p>欢迎关注微信公众号，你的资源可变现：【乐知付加密平台】<br><img src="/images/wechat_account.png" alt="乐知付加密平台"></p><p>一起学习，一起进步。<br></p>]]></content>
-    
-    
-    <summary type="html">&lt;p&gt;具体如下查看详情。&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="其他" scheme="https://chenzuoli.github.io/categories/%E5%85%B6%E4%BB%96/"/>
-    
-    <category term="电脑" scheme="https://chenzuoli.github.io/categories/%E5%85%B6%E4%BB%96/%E7%94%B5%E8%84%91/"/>
-    
-    <category term="mac" scheme="https://chenzuoli.github.io/categories/%E5%85%B6%E4%BB%96/%E7%94%B5%E8%84%91/mac/"/>
-    
-    
-    <category term="macos" scheme="https://chenzuoli.github.io/tags/macos/"/>
-    
-    <category term="文件系统" scheme="https://chenzuoli.github.io/tags/%E6%96%87%E4%BB%B6%E7%B3%BB%E7%BB%9F/"/>
     
   </entry>
   

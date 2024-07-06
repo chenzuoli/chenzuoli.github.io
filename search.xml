@@ -8672,8 +8672,14 @@
     <url>/2018/11/03/windows-C%E7%9B%98%E5%9E%83%E5%9C%BE%E6%B8%85%E7%90%86/</url>
     <content><![CDATA[<p>windows c盘垃圾清理程序，清理各类软件的缓存文件、日志文件等，长时间未清洗，可以空出10多G的空间出来，具体程序如下，创建一个abc.bat可执行文件（名字随便取），点击运行即可：</p>
 <span id="more"></span>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">@echo off </span><br><span class="line">echo 正在清除系统垃圾文件，请稍等...... </span><br><span class="line">del /f /s /q %systemdrive%\*.tmp </span><br><span class="line">del /f /s /q %systemdrive%\*._mp </span><br><span class="line">del /f /s /q %systemdrive%\*.log </span><br><span class="line">del /f /s /q %systemdrive%\*.gid </span><br><span class="line">del /f /s /q %systemdrive%\*.chk </span><br><span class="line">del /f /s /q %systemdrive%\*.old </span><br><span class="line">del /f /s /q %systemdrive%\recycled\*.* </span><br><span class="line">del /f /s /q %windir%\*.bak </span><br><span class="line">del /f /s /q %windir%\prefetch\*.* </span><br><span class="line">rd /s /q %windir%\temp &amp; md %windir%\temp </span><br><span class="line">del /f /q %userprofile%\小甜饼s\*.* </span><br><span class="line">del /f /q %userprofile%\recent\*.* </span><br><span class="line">del /f /s /q &quot;%userprofile%\Local Settings\Temporary Internet Files\*.*&quot; </span><br><span class="line">del /f /s /q &quot;%userprofile%\Local Settings\Temp\*.*&quot; </span><br><span class="line">del /f /s /q &quot;%userprofile%\recent\*.*&quot; </span><br><span class="line">echo 清除系统LJ完成！ </span><br><span class="line">echo. &amp; pause  </span><br></pre></td></tr></table></figure>
-<h2 id="随便放在电脑的一个位置，点击运行即可。"><a href="#随便放在电脑的一个位置，点击运行即可。" class="headerlink" title="随便放在电脑的一个位置，点击运行即可。"></a>随便放在电脑的一个位置，点击运行即可。</h2><p><b>书山有路勤为径，学海无涯苦作舟。</b></p>
+
+
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">@echo off </span><br><span class="line">echo 正在清除系统垃圾文件，请稍等...... </span><br><span class="line">del /f /s /q %systemdrive%\*.tmp </span><br><span class="line">del /f /s /q %systemdrive%\*._mp </span><br><span class="line">del /f /s /q %systemdrive%\*.log </span><br><span class="line">del /f /s /q %systemdrive%\*.gid </span><br><span class="line">del /f /s /q %systemdrive%\*.chk </span><br><span class="line">del /f /s /q %systemdrive%\*.old </span><br><span class="line">del /f /s /q %systemdrive%\recycled\*.* </span><br><span class="line">del /f /s /q %windir%\*.bak </span><br><span class="line">del /f /s /q %windir%\prefetch\*.* </span><br><span class="line">rd /s /q %windir%\temp &amp; md %windir%\temp </span><br><span class="line">del /f /q %userprofile%\小甜饼s\*.* </span><br><span class="line">del /f /q %userprofile%\recent\*.* </span><br><span class="line">del /f /s /q &quot;%userprofile%\Local Settings\Temporary Internet Files\*.*&quot; </span><br><span class="line">del /f /s /q &quot;%userprofile%\Local Settings\Temp\*.*&quot; </span><br><span class="line">del /f /s /q &quot;%userprofile%\recent\*.*&quot; </span><br><span class="line">echo 清除系统LJ完成！ </span><br><span class="line">echo. &amp; pause</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+<p>随便放在电脑的一个位置，点击运行即可。</p>
+<hr>
+<p><b>书山有路勤为径，学海无涯苦作舟。</b></p>
 <p>欢迎关注微信公众号：【程序员写书】<br><img src="/images/%E7%A8%8B%E5%BA%8F%E5%91%98%E5%86%99%E4%B9%A6%E5%85%AC%E4%BC%97%E5%8F%B7%E4%BA%8C%E7%BB%B4%E7%A0%81.jpg" alt="程序员写书"></p>
 <p>喜欢宠物的朋友可以关注：【电巴克宠物Pets】<br><img src="/images/%E7%94%B5%E5%B7%B4%E5%85%8B%E5%AE%A0%E7%89%A9Pets%E5%85%AC%E4%BC%97%E5%8F%B7%E4%BA%8C%E7%BB%B4%E7%A0%81.png" alt="电巴克宠物"></p>
 <p>一起学习，一起进步。<br></p>
@@ -17838,6 +17844,32 @@ API
       <tags>
         <tag>linux</tag>
         <tag>programming</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>软件分享-Navicat数据库查询工具</title>
+    <url>/2024/07/06/%E8%BD%AF%E4%BB%B6%E5%88%86%E4%BA%AB-Navicat%E6%95%B0%E6%8D%AE%E5%BA%93%E6%9F%A5%E8%AF%A2%E5%B7%A5%E5%85%B7/</url>
+    <content><![CDATA[<p>这里分享下免费软件，不需要激活，可破解Navicat Premium，支持mysql pg oracle 等数据库。</p>
+<span id="more"></span>
+
+
+<p>关注公众号【乐知付加密平台】，回复消息：<b>navicat</b>，获取下载链接。</p>
+<p>安装教程，看这里：<br><img src="/2024/07/06/%E8%BD%AF%E4%BB%B6%E5%88%86%E4%BA%AB-Navicat%E6%95%B0%E6%8D%AE%E5%BA%93%E6%9F%A5%E8%AF%A2%E5%B7%A5%E5%85%B7/image.png" alt="1"><br><img src="/2024/07/06/%E8%BD%AF%E4%BB%B6%E5%88%86%E4%BA%AB-Navicat%E6%95%B0%E6%8D%AE%E5%BA%93%E6%9F%A5%E8%AF%A2%E5%B7%A5%E5%85%B7/image-1.png" alt="2"></p>
+<p>链接永久有效。</p>
+<hr>
+<p>欢迎关注微信公众号，你的资源可变现：【乐知付加密平台】<br><img src="/images/wechat_account.png" alt="乐知付加密平台"></p>
+<p>一起学习，一起进步。<br></p>
+]]></content>
+      <categories>
+        <category>其他</category>
+        <category>开发工具</category>
+        <category>Navicat</category>
+      </categories>
+      <tags>
+        <tag>oracle</tag>
+        <tag>postgresql</tag>
+        <tag>mysql</tag>
+        <tag>navicat</tag>
       </tags>
   </entry>
 </search>

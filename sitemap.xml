@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://chenzuoli.github.io/2024/07/06/2024%E7%BB%84%E8%A3%85%E4%B8%80%E5%8F%B0%E8%83%BD%E8%B7%91AI%E5%A4%A7%E6%A8%A1%E5%9E%8B%E7%9A%84%E7%94%B5%E8%84%91/</loc>
+    <loc>https://chenzuoli.github.io/2024/07/06/%E8%BD%AF%E4%BB%B6%E5%88%86%E4%BA%AB-Navicat%E6%95%B0%E6%8D%AE%E5%BA%93%E6%9F%A5%E8%AF%A2%E5%B7%A5%E5%85%B7/</loc>
     
     <lastmod>2024-07-06</lastmod>
     
@@ -12,6 +12,15 @@
   
   <url>
     <loc>https://chenzuoli.github.io/2018/11/03/windows-C%E7%9B%98%E5%9E%83%E5%9C%BE%E6%B8%85%E7%90%86/</loc>
+    
+    <lastmod>2024-07-06</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://chenzuoli.github.io/2024/07/06/2024%E7%BB%84%E8%A3%85%E4%B8%80%E5%8F%B0%E8%83%BD%E8%B7%91AI%E5%A4%A7%E6%A8%A1%E5%9E%8B%E7%9A%84%E7%94%B5%E8%84%91/</loc>
     
     <lastmod>2024-07-06</lastmod>
     
@@ -7358,6 +7367,13 @@
     <priority>0.2</priority>
   </url>
   
+  <url>
+    <loc>https://chenzuoli.github.io/tags/navicat/</loc>
+    <lastmod>2024-07-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
 
   
   <url>
@@ -8783,6 +8799,13 @@
   
   <url>
     <loc>https://chenzuoli.github.io/categories/%E7%BD%91%E7%AB%99/%E4%B9%90%E7%9F%A5%E4%BB%98/%E5%B9%B3%E5%8F%B0%E6%94%B6%E6%AC%BE/</loc>
+    <lastmod>2024-07-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://chenzuoli.github.io/categories/%E5%85%B6%E4%BB%96/%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/Navicat/</loc>
     <lastmod>2024-07-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
