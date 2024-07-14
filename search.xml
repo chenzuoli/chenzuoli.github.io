@@ -17496,6 +17496,18 @@ API
 <p>再加100W冗余功率即可。</p>
 <h2 id="cpu散热器"><a href="#cpu散热器" class="headerlink" title="cpu散热器"></a>cpu散热器</h2><p>可选风冷水冷，保证cpu散热正常即可</p>
 <h2 id="显示器"><a href="#显示器" class="headerlink" title="显示器"></a>显示器</h2><p>根据自己需求，选择大小、分辨率和刷新率</p>
+<h1 id="安装驱动"><a href="#安装驱动" class="headerlink" title="安装驱动"></a>安装驱动</h1><p>电脑安装好之后，需要安装许多驱动程序，你可以下载一个可以安装各种驱动的软件，也可以直接去主板、显卡官网下载驱动，<br>大概需要安装的驱动有以下这些：</p>
+<ol>
+<li>网络驱动，有线网络使用</li>
+<li>无线网络驱动，wifi网络使用</li>
+<li>芯片组驱动，cpu使用</li>
+<li>声卡驱动，音响使用</li>
+<li>显示驱动，显示器使用</li>
+<li>蓝牙驱动，支持蓝牙的主板可安装</li>
+<li>sata驱动，机械硬盘使用</li>
+</ol>
+<p>这里列一下下载链接：<br>主板驱动：<a href="https://www.asus.com.cn/motherboards-components/motherboards/tuf-gaming/tuf-gaming-b760m-plus-wifi-ii/helpdesk_download?model2Name=TUF-GAMING-B760M-PLUS-WIFI-II">https://www.asus.com.cn/motherboards-components/motherboards/tuf-gaming/tuf-gaming-b760m-plus-wifi-ii/helpdesk_download?model2Name=TUF-GAMING-B760M-PLUS-WIFI-II</a></p>
+<p>显卡驱动：<a href="https://www.nvidia.cn/geforce/drivers/">https://www.nvidia.cn/geforce/drivers/</a></p>
 <p>就这，再见。</p>
 <hr>
 <p><b>书山有路勤为径，学海无涯苦作舟。</b></p>
