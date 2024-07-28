@@ -6,7 +6,7 @@
   <link href="https://chenzuoli.github.io/atom.xml" rel="self"/>
   
   <link href="https://chenzuoli.github.io/"/>
-  <updated>2024-07-07T08:13:04.311Z</updated>
+  <updated>2024-07-28T01:38:00.464Z</updated>
   <id>https://chenzuoli.github.io/</id>
   
   <author>
@@ -15,6 +15,83 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>多进程环境同时操作时如何互斥操作</title>
+    <link href="https://chenzuoli.github.io/2024/07/28/%E5%A4%9A%E8%BF%9B%E7%A8%8B%E7%8E%AF%E5%A2%83%E5%90%8C%E6%97%B6%E6%93%8D%E4%BD%9C%E6%97%B6%E5%A6%82%E4%BD%95%E4%BA%92%E6%96%A5%E6%93%8D%E4%BD%9C/"/>
+    <id>https://chenzuoli.github.io/2024/07/28/%E5%A4%9A%E8%BF%9B%E7%A8%8B%E7%8E%AF%E5%A2%83%E5%90%8C%E6%97%B6%E6%93%8D%E4%BD%9C%E6%97%B6%E5%A6%82%E4%BD%95%E4%BA%92%E6%96%A5%E6%93%8D%E4%BD%9C/</id>
+    <published>2024-07-28T01:38:00.000Z</published>
+    <updated>2024-07-28T01:38:00.464Z</updated>
+    
+    <content type="html"><![CDATA[<p>在 Python 中，<code>fcntl</code> 模块提供了对文件控制操作的接口，包括文件锁定。<code>fcntl.flock()</code> 函数用于对文件进行锁定，以确保在多进程环境中对文件的访问是互斥的。</p><span id="more"></span><p>函数 <code>fcntl.flock(f, operation)</code> 中的参数解释如下：</p><ul><li><code>f</code> 是一个文件描述符，即打开文件后返回的文件对象的 <code>fileno()</code> 方法的结果。</li><li><code>operation</code> 是锁定操作的类型，可以是以下几种组合：<ul><li><code>fcntl.LOCK_EX</code>：表示排他锁定（exclusive lock），同一时间只能有一个进程可以对文件进行写操作。</li><li><code>fcntl.LOCK_SH</code>：表示共享锁定（shared lock），多个进程可以同时对文件进行读操作。</li><li><code>fcntl.LOCK_NB</code>：表示非阻塞模式，如果锁定不能立即获得，函数会立即返回而不是等待。</li></ul></li></ul><p>在你提供的代码片段 <code>fcntl.flock(f, fcntl.LOCK_EX | fcntl.LOCK_NB)</code> 中，<code>fcntl.LOCK_EX</code> 表示尝试获取一个排他锁定，<code>fcntl.LOCK_NB</code> 表示如果锁定不能立即获得，则不会阻塞当前进程，函数会立即返回。</p><p>如果该调用成功，表示当前进程已经获得了排他锁定，可以安全地对文件进行写操作。如果调用失败（例如因为文件已经被其他进程锁定），则表示当前进程未能获得锁定，可以进行错误处理或重试逻辑。</p><p>请注意，使用文件锁定时，需要确保在完成文件操作后释放锁定，即使在发生异常的情况下也应该如此。可以通过调用 <code>fcntl.flock(f, fcntl.LOCK_UN)</code> 来释放锁定，其中 <code>fcntl.LOCK_UN</code> 表示解锁操作。</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">import fcntl</span><br><span class="line">import atexit</span><br><span class="line"></span><br><span class="line">f = open(&quot;scheduler.lock&quot;, &quot;wb&quot;)</span><br><span class="line"># noinspection PyBroadException</span><br><span class="line">try:</span><br><span class="line">    fcntl.flock(f, fcntl.LOCK_EX | fcntl.LOCK_NB)</span><br><span class="line">    # 这里是对文件或者其他资源的写操作，不用担心其他进程会有写操作</span><br><span class="line">except:</span><br><span class="line">    pass</span><br><span class="line"></span><br><span class="line">def unlock():</span><br><span class="line">    fcntl.flock(f, fcntl.LOCK_UN)</span><br><span class="line">    f.close()</span><br><span class="line"></span><br><span class="line">atexit.register(unlock)</span><br></pre></td></tr></table></figure><p>我的使用场景就是，使用flask启动apscheduler调度器时，wsgi指定了多个worker，导致定时任务运行多次，这里限制了单个worker启动scheduler，可以解决这个问题。</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">gunicorn --workers 3 --bind 0.0.0.0:5000  --access-logfile access.log --error-logfile error.log --access-logformat  &quot;&#123;&#x27;remote_ip&#x27;:&#x27;%(h)s&#x27;,&#x27;request_id&#x27;:&#x27;%(&#123;X-Request-Id&#125;i)s&#x27;,&#x27;response_code&#x27;:&#x27;%(s)s&#x27;,&#x27;request_method&#x27;:&#x27;%(m)s&#x27;,&#x27;request_path&#x27;:&#x27;%(U)s&#x27;,&#x27;request_querystring&#x27;:&#x27;%(q)s&#x27;,&#x27;request_timetaken&#x27;:&#x27;%(D)s&#x27;,&#x27;response_length&#x27;:&#x27;%(B)s&#x27;&#125;&quot; --log-level info   --daemon   wsgi:app</span><br><span class="line"></span><br></pre></td></tr></table></figure><hr><p><b>书山有路勤为径，学海无涯苦作舟。</b></p><p>欢迎关注微信公众号：【程序员写书】<br><img src="/images/%E7%A8%8B%E5%BA%8F%E5%91%98%E5%86%99%E4%B9%A6%E5%85%AC%E4%BC%97%E5%8F%B7%E4%BA%8C%E7%BB%B4%E7%A0%81.jpg" alt="程序员写书"></p><p>一起学习，一起进步。<br></p>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;在 Python 中，&lt;code&gt;fcntl&lt;/code&gt; 模块提供了对文件控制操作的接口，包括文件锁定。&lt;code&gt;fcntl.flock()&lt;/code&gt; 函数用于对文件进行锁定，以确保在多进程环境中对文件的访问是互斥的。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="Python" scheme="https://chenzuoli.github.io/categories/Python/"/>
+    
+    <category term="多进程" scheme="https://chenzuoli.github.io/categories/Python/%E5%A4%9A%E8%BF%9B%E7%A8%8B/"/>
+    
+    
+    <category term="python" scheme="https://chenzuoli.github.io/tags/python/"/>
+    
+    <category term="互斥" scheme="https://chenzuoli.github.io/tags/%E4%BA%92%E6%96%A5/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>单机环境下解决wsgiserver启动apscheduler运行多次问题</title>
+    <link href="https://chenzuoli.github.io/2024/07/22/%E5%8D%95%E6%9C%BA%E7%8E%AF%E5%A2%83%E4%B8%8B%E8%A7%A3%E5%86%B3wsgiserver%E5%90%AF%E5%8A%A8apscheduler%E8%BF%90%E8%A1%8C%E5%A4%9A%E6%AC%A1%E9%97%AE%E9%A2%98/"/>
+    <id>https://chenzuoli.github.io/2024/07/22/%E5%8D%95%E6%9C%BA%E7%8E%AF%E5%A2%83%E4%B8%8B%E8%A7%A3%E5%86%B3wsgiserver%E5%90%AF%E5%8A%A8apscheduler%E8%BF%90%E8%A1%8C%E5%A4%9A%E6%AC%A1%E9%97%AE%E9%A2%98/</id>
+    <published>2024-07-22T13:35:34.000Z</published>
+    <updated>2024-07-22T14:31:42.640Z</updated>
+    
+    <content type="html"><![CDATA[<p>启动脚本中这样设置，多个worker启动apscheduler调度器的时候，去判断lock文件是否存在，存在则不启动，保证了多worker之间只启动了一个调度器。</p><span id="more"></span><p>fcntl  atexit 这俩包只在类unix系统中存在，如果你想在windows中运行，则不行。</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">import fcntl</span><br><span class="line">import atexit</span><br><span class="line"></span><br><span class="line">def register_scheduler():</span><br><span class="line">    &quot;&quot;&quot;</span><br><span class="line">    注册定时任务</span><br><span class="line">    &quot;&quot;&quot;</span><br><span class="line">    f = open(&quot;scheduler.lock&quot;, &quot;wb&quot;)</span><br><span class="line">    # noinspection PyBroadException</span><br><span class="line">    try:</span><br><span class="line">        fcntl.flock(f, fcntl.LOCK_EX | fcntl.LOCK_NB)</span><br><span class="line">        scheduler.start()</span><br><span class="line">    except:</span><br><span class="line">        pass</span><br><span class="line"></span><br><span class="line">    def unlock():</span><br><span class="line">        fcntl.flock(f, fcntl.LOCK_UN)</span><br><span class="line">        f.close()</span><br><span class="line"></span><br><span class="line">    atexit.register(unlock)</span><br><span class="line"></span><br><span class="line">register_scheduler()</span><br></pre></td></tr></table></figure><hr><p><b>书山有路勤为径，学海无涯苦作舟。</b></p><p>欢迎关注微信公众号：【程序员写书】<br><img src="/images/%E7%A8%8B%E5%BA%8F%E5%91%98%E5%86%99%E4%B9%A6%E5%85%AC%E4%BC%97%E5%8F%B7%E4%BA%8C%E7%BB%B4%E7%A0%81.jpg" alt="程序员写书"></p><p>一起学习，一起进步。<br></p>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;启动脚本中这样设置，多个worker启动apscheduler调度器的时候，去判断lock文件是否存在，存在则不启动，保证了多worker之间只启动了一个调度器。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="Python" scheme="https://chenzuoli.github.io/categories/Python/"/>
+    
+    <category term="Flask" scheme="https://chenzuoli.github.io/categories/Python/Flask/"/>
+    
+    <category term="Apscheduler" scheme="https://chenzuoli.github.io/categories/Python/Flask/Apscheduler/"/>
+    
+    
+    <category term="flask" scheme="https://chenzuoli.github.io/tags/flask/"/>
+    
+    <category term="apscheduler" scheme="https://chenzuoli.github.io/tags/apscheduler/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>jinja2基本使用</title>
+    <link href="https://chenzuoli.github.io/2024/07/20/jinja2%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8/"/>
+    <id>https://chenzuoli.github.io/2024/07/20/jinja2%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8/</id>
+    <published>2024-07-20T03:58:57.000Z</published>
+    <updated>2024-07-20T12:42:01.369Z</updated>
+    
+    <content type="html"><![CDATA[<p>这里记录一些jinja2的用法。</p><span id="more"></span><p>格式化数字到2位小数：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;&#123; &#x27;&#123;0:0.2f&#125;&#x27;.format(amount) &#125;&#125;</span><br></pre></td></tr></table></figure><p>或</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;&#123; &quot;%.2f&quot; | format(amount) &#125;&#125;</span><br></pre></td></tr></table></figure><p>格式化日期：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;&#123; somedate.strftime(&#x27;%Y-%m-%d&#x27;) &#125;&#125;</span><br></pre></td></tr></table></figure><hr><p><b>书山有路勤为径，学海无涯苦作舟。</b></p><p>欢迎关注微信公众号：【程序员写书】<br><img src="/images/%E7%A8%8B%E5%BA%8F%E5%91%98%E5%86%99%E4%B9%A6%E5%85%AC%E4%BC%97%E5%8F%B7%E4%BA%8C%E7%BB%B4%E7%A0%81.jpg" alt="程序员写书"></p><p>一起学习，一起进步。<br></p>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;这里记录一些jinja2的用法。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="Python" scheme="https://chenzuoli.github.io/categories/Python/"/>
+    
+    <category term="Jinja2" scheme="https://chenzuoli.github.io/categories/Python/Jinja2/"/>
+    
+    
+    <category term="python" scheme="https://chenzuoli.github.io/tags/python/"/>
+    
+    <category term="jinja2" scheme="https://chenzuoli.github.io/tags/jinja2/"/>
+    
+  </entry>
   
   <entry>
     <title>相机怎么选</title>
@@ -483,94 +560,6 @@
     <category term="scrapy" scheme="https://chenzuoli.github.io/tags/scrapy/"/>
     
     <category term="爬虫" scheme="https://chenzuoli.github.io/tags/%E7%88%AC%E8%99%AB/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>magic怎么处理图片</title>
-    <link href="https://chenzuoli.github.io/2024/05/05/magic%E6%80%8E%E4%B9%88%E5%A4%84%E7%90%86%E5%9B%BE%E7%89%87/"/>
-    <id>https://chenzuoli.github.io/2024/05/05/magic%E6%80%8E%E4%B9%88%E5%A4%84%E7%90%86%E5%9B%BE%E7%89%87/</id>
-    <published>2024-05-05T12:44:01.000Z</published>
-    <updated>2024-05-18T03:53:49.877Z</updated>
-    
-    <content type="html"><![CDATA[<p>在Linux系统中，<code>magick</code>通常与ImageMagick软件包相关，这是一个非常强大的图像处理工具集，能够进行图像格式转换、编辑、合成、以及创建和修改图片。ImageMagick支持多种图像格式，并且提供了命令行工具以及API供开发者使用。</p><span id="more"></span><p>以下是一些基本的ImageMagick（通常在命令行中以<code>magick</code>命令出现）使用示例：</p><h3 id="安装ImageMagick"><a href="#安装ImageMagick" class="headerlink" title="安装ImageMagick"></a>安装ImageMagick</h3><p>在大多数Linux发行版中，可以使用包管理器安装ImageMagick：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install imagemagick   <span class="comment"># Debian/Ubuntu</span></span><br><span class="line">sudo yum install imagemagick      <span class="comment"># CentOS/RedHat</span></span><br><span class="line">sudo pacman -S imagemagick        <span class="comment"># Arch Linux</span></span><br></pre></td></tr></table></figure><h3 id="转换图像格式"><a href="#转换图像格式" class="headerlink" title="转换图像格式"></a>转换图像格式</h3><p>将一个图像文件从JPG格式转换为PNG格式：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">magick convert input.jpg output.png</span><br></pre></td></tr></table></figure><h3 id="调整图像大小"><a href="#调整图像大小" class="headerlink" title="调整图像大小"></a>调整图像大小</h3><p>改变图像的尺寸：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">magick convert input.png -resize 800x600 output.png</span><br></pre></td></tr></table></figure><h3 id="裁剪图像"><a href="#裁剪图像" class="headerlink" title="裁剪图像"></a>裁剪图像</h3><p>裁剪图像到指定的尺寸：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">magick convert input.png -crop 300x300+0+0 output.png</span><br></pre></td></tr></table></figure><h3 id="旋转图像"><a href="#旋转图像" class="headerlink" title="旋转图像"></a>旋转图像</h3><p>旋转图像90度：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">magick convert input.png -rotate 90 output.png</span><br></pre></td></tr></table></figure><h3 id="应用特效"><a href="#应用特效" class="headerlink" title="应用特效"></a>应用特效</h3><p>对图像应用模糊效果：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">magick convert input.png -blur 0x8 output.png</span><br></pre></td></tr></table></figure><h3 id="添加文字"><a href="#添加文字" class="headerlink" title="添加文字"></a>添加文字</h3><p>在图像上添加文字：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">magick convert input.png -gravity south -pointsize 24 -annotate 0 <span class="string">&quot;Sample Text&quot;</span> output.png</span><br></pre></td></tr></table></figure><h3 id="创建GIF动画"><a href="#创建GIF动画" class="headerlink" title="创建GIF动画"></a>创建GIF动画</h3><p>将多张图片合成为GIF动画：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">magick convert frame_*.png output.gif</span><br></pre></td></tr></table></figure><h3 id="读取图像信息"><a href="#读取图像信息" class="headerlink" title="读取图像信息"></a>读取图像信息</h3><p>显示图像的属性和元数据：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">magick identify input.png</span><br></pre></td></tr></table></figure><h3 id="批量处理图像"><a href="#批量处理图像" class="headerlink" title="批量处理图像"></a>批量处理图像</h3><p>对一个目录下的所有图像执行相同的操作：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">magick mogrify -resize 50% *.png</span><br></pre></td></tr></table></figure><h3 id="水印"><a href="#水印" class="headerlink" title="水印"></a>水印</h3><p>给图像添加水印：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">magick composite -gravity center -geometry +10+10 watermark.png input.png output.png</span><br></pre></td></tr></table></figure><p>ImageMagick的功能非常丰富，上述示例仅展示了一小部分功能。ImageMagick还包括对PDF、视频文件以及一些3D格式的支持。此外，ImageMagick的命令行接口（CLI）提供了极大的灵活性，允许用户执行复杂的图像处理任务，但这也意味着命令可能会变得相当复杂。对于更高级的图像处理，ImageMagick还提供了编程接口，支持多种编程语言。</p><hr><p>欢迎关注微信公众号，您的资源可变现：【乐知付加密平台】<br><br><br><img src="/images/wechat_account.png" alt="乐知付加密平台"></p><p>一起学习，一起进步。<br></p>]]></content>
-    
-    
-    <summary type="html">&lt;p&gt;在Linux系统中，&lt;code&gt;magick&lt;/code&gt;通常与ImageMagick软件包相关，这是一个非常强大的图像处理工具集，能够进行图像格式转换、编辑、合成、以及创建和修改图片。ImageMagick支持多种图像格式，并且提供了命令行工具以及API供开发者使用。&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="工具" scheme="https://chenzuoli.github.io/categories/%E5%B7%A5%E5%85%B7/"/>
-    
-    <category term="图片编辑" scheme="https://chenzuoli.github.io/categories/%E5%B7%A5%E5%85%B7/%E5%9B%BE%E7%89%87%E7%BC%96%E8%BE%91/"/>
-    
-    
-    <category term="linux" scheme="https://chenzuoli.github.io/tags/linux/"/>
-    
-    <category term="图片" scheme="https://chenzuoli.github.io/tags/%E5%9B%BE%E7%89%87/"/>
-    
-    <category term="magick" scheme="https://chenzuoli.github.io/tags/magick/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>ffmpeg的安装与使用</title>
-    <link href="https://chenzuoli.github.io/2024/05/05/ffmpeg%E7%9A%84%E5%AE%89%E8%A3%85%E4%B8%8E%E4%BD%BF%E7%94%A8/"/>
-    <id>https://chenzuoli.github.io/2024/05/05/ffmpeg%E7%9A%84%E5%AE%89%E8%A3%85%E4%B8%8E%E4%BD%BF%E7%94%A8/</id>
-    <published>2024-05-05T12:15:56.000Z</published>
-    <updated>2024-05-05T12:26:16.153Z</updated>
-    
-    <content type="html"><![CDATA[<p>FFmpeg是一个开源的命令行工具，广泛用于处理视频和音频文件，包括转换格式、剪辑、混流、解码、编码等。以下是一些基本的FFmpeg使用示例和它们的含义：</p><p>linux与类unix系统中的ffmepg安装教程。</p><span id="more"></span><h1 id="安装ffmpeg："><a href="#安装ffmpeg：" class="headerlink" title="安装ffmpeg："></a>安装ffmpeg：</h1><h2 id="直接安装"><a href="#直接安装" class="headerlink" title="直接安装"></a>直接安装</h2><p>在大多数Linux发行版中，可以使用包管理器安装FFmpeg：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install ffmpeg   <span class="comment"># Debian/Ubuntu</span></span><br><span class="line">sudo yum install ffmpeg      <span class="comment"># CentOS/RedHat</span></span><br><span class="line">sudo pacman -S ffmpeg        <span class="comment"># Arch Linux</span></span><br></pre></td></tr></table></figure><h2 id="源码安装"><a href="#源码安装" class="headerlink" title="源码安装"></a>源码安装</h2><p>地址：<a href="https://ffmpeg.org/download.html">https://ffmpeg.org/download.html</a></p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">tar zxvf ffmpeg-7.0.tar.gz</span><br><span class="line">cd ffmpeg-7.0</span><br><span class="line">./configure --disable-x86asm</span><br><span class="line">make &amp;&amp; make install</span><br></pre></td></tr></table></figure><h2 id="环境变量："><a href="#环境变量：" class="headerlink" title="环境变量："></a>环境变量：</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">export IMAGEIO_FFMPEG_EXE=/Users/zuolichen/opt/software/ffmpeg-7.0</span><br><span class="line">vim ~/.zprofile</span><br><span class="line">export PATH=/Users/zuolichen/opt/software/ffmpeg-7.0/bin:$PATH</span><br><span class="line"></span><br></pre></td></tr></table></figure><h1 id="ffmpeg基本使用"><a href="#ffmpeg基本使用" class="headerlink" title="ffmpeg基本使用"></a>ffmpeg基本使用</h1><h2 id="转换视频格式"><a href="#转换视频格式" class="headerlink" title="转换视频格式"></a>转换视频格式</h2><p>将一个视频文件从一种格式转换到另一种格式，例如将<code>.mp4</code>转换为<code>.avi</code>：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ffmpeg -i input.mp4 -c:v libxvid -q:v 2 -c:a libmp3lame -q:a 2 output.avi</span><br></pre></td></tr></table></figure><h2 id="视频裁剪"><a href="#视频裁剪" class="headerlink" title="视频裁剪"></a>视频裁剪</h2><p>裁剪视频的指定部分：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ffmpeg -i input.mp4 -ss 00:00:10 -t 00:01:00 -c copy output.mp4</span><br></pre></td></tr></table></figure><h2 id="提取音频"><a href="#提取音频" class="headerlink" title="提取音频"></a>提取音频</h2><p>从视频文件中提取音频到单独的文件：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ffmpeg -i video.mp4 -q:a 0 -map a audio.mp3</span><br></pre></td></tr></table></figure><h2 id="视频转GIF"><a href="#视频转GIF" class="headerlink" title="视频转GIF"></a>视频转GIF</h2><p>将视频的一部分转换成GIF动图：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ffmpeg -i video.mp4 -ss 00:00:10 -t 10 -s 320x240 -r 15 -f image2pipe -vcodec ppm - | gifsicle --optimize=3 --delay=2 &gt; output.gif</span><br></pre></td></tr></table></figure><h2 id="视频直播"><a href="#视频直播" class="headerlink" title="视频直播"></a>视频直播</h2><p>使用RTMP协议进行视频直播：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ffmpeg -re -i input.mp4 -c:v libx264 -preset veryfast -maxrate 2000k -bufsize 4000k -pix_fmt yuv420p -g 50 -c:a aac -b:a 128k -ac 2 -ar 44100 -f flv rtmp://live.twitch.tv/app/stream_key</span><br></pre></td></tr></table></figure><h2 id="视频编码"><a href="#视频编码" class="headerlink" title="视频编码"></a>视频编码</h2><p>使用H.264编码器对视频进行编码：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ffmpeg -i input.avi -c:v libx264 -crf 23 -c:a aac -b:a 128k output.mp4</span><br></pre></td></tr></table></figure><h2 id="调整视频分辨率"><a href="#调整视频分辨率" class="headerlink" title="调整视频分辨率"></a>调整视频分辨率</h2><p>改变视频的分辨率：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ffmpeg -i input.mp4 -s 1280x720 output.mp4</span><br></pre></td></tr></table></figure><h2 id="视频合并"><a href="#视频合并" class="headerlink" title="视频合并"></a>视频合并</h2><p>将多个视频文件合并为一个文件：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ffmpeg -i <span class="string">&quot;concat:part1.mp4|part2.mp4|part3.mp4&quot;</span> -c copy -map 0 output.mp4</span><br></pre></td></tr></table></figure><h2 id="视频帧提取"><a href="#视频帧提取" class="headerlink" title="视频帧提取"></a>视频帧提取</h2><p>从视频中提取单独的帧作为图片：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ffmpeg -i input.mp4 -r 1 -f image2 output_%03d.png</span><br></pre></td></tr></table></figure><h2 id="音频视频同步"><a href="#音频视频同步" class="headerlink" title="音频视频同步"></a>音频视频同步</h2><p>如果视频和音频不同步，尝试重新同步：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ffmpeg -i out_of_sync.mp4 -af <span class="string">&quot;arealtime,asetnsamples=1000&quot;</span> sync.mp4</span><br></pre></td></tr></table></figure><h2 id="查看文件信息"><a href="#查看文件信息" class="headerlink" title="查看文件信息"></a>查看文件信息</h2><p>查看视频文件的信息，包括格式、持续时间、码率、编解码器等：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ffmpeg -i input.mp4</span><br></pre></td></tr></table></figure><p>FFmpeg的选项非常多，以上只是一些基本的用法。FFmpeg的强大之处在于其灵活性和模块化，可以用于各种复杂的音视频处理任务。在实际使用中，你可能需要根据具体需求调整命令和参数。</p><hr><p>欢迎关注微信公众号，您的资源可变现：【乐知付加密平台】<br><br><br><img src="/images/wechat_account.png" alt="乐知付加密平台"></p><p>一起学习，一起进步。<br></p>]]></content>
-    
-    
-    <summary type="html">&lt;p&gt;FFmpeg是一个开源的命令行工具，广泛用于处理视频和音频文件，包括转换格式、剪辑、混流、解码、编码等。以下是一些基本的FFmpeg使用示例和它们的含义：&lt;/p&gt;
-&lt;p&gt;linux与类unix系统中的ffmepg安装教程。&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="工具" scheme="https://chenzuoli.github.io/categories/%E5%B7%A5%E5%85%B7/"/>
-    
-    <category term="ffmpeg" scheme="https://chenzuoli.github.io/categories/%E5%B7%A5%E5%85%B7/ffmpeg/"/>
-    
-    
-    <category term="ffmpeg" scheme="https://chenzuoli.github.io/tags/ffmpeg/"/>
-    
-    <category term="图片" scheme="https://chenzuoli.github.io/tags/%E5%9B%BE%E7%89%87/"/>
-    
-    <category term="音频" scheme="https://chenzuoli.github.io/tags/%E9%9F%B3%E9%A2%91/"/>
-    
-    <category term="视频" scheme="https://chenzuoli.github.io/tags/%E8%A7%86%E9%A2%91/"/>
-    
-    <category term="工具" scheme="https://chenzuoli.github.io/tags/%E5%B7%A5%E5%85%B7/"/>
-    
-    <category term="流媒体" scheme="https://chenzuoli.github.io/tags/%E6%B5%81%E5%AA%92%E4%BD%93/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>资源分享-轮滑教程</title>
-    <link href="https://chenzuoli.github.io/2024/05/05/%E8%B5%84%E6%BA%90%E5%88%86%E4%BA%AB-%E8%BD%AE%E6%BB%91%E6%95%99%E7%A8%8B/"/>
-    <id>https://chenzuoli.github.io/2024/05/05/%E8%B5%84%E6%BA%90%E5%88%86%E4%BA%AB-%E8%BD%AE%E6%BB%91%E6%95%99%E7%A8%8B/</id>
-    <published>2024-05-05T06:34:32.000Z</published>
-    <updated>2024-05-05T06:39:22.519Z</updated>
-    
-    <content type="html"><![CDATA[<p>这次分享轮滑教程，感兴趣的同学拿走。</p><span id="more"></span><p>关注公众号【乐知付加密平台】，回复关键字：轮滑</p><p><img src="/2024/05/05/%E8%B5%84%E6%BA%90%E5%88%86%E4%BA%AB-%E8%BD%AE%E6%BB%91%E6%95%99%E7%A8%8B/image.png" alt="tiance"></p><hr><p>欢迎关注微信公众号，你的资源可变现：【乐知付加密平台】<br><img src="/images/wechat_account.png" alt="乐知付加密平台"></p><p>一起学习，一起进步。<br></p>]]></content>
-    
-    
-    <summary type="html">&lt;p&gt;这次分享轮滑教程，感兴趣的同学拿走。&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="网站" scheme="https://chenzuoli.github.io/categories/%E7%BD%91%E7%AB%99/"/>
-    
-    <category term="乐知付" scheme="https://chenzuoli.github.io/categories/%E7%BD%91%E7%AB%99/%E4%B9%90%E7%9F%A5%E4%BB%98/"/>
-    
-    <category term="资源分享" scheme="https://chenzuoli.github.io/categories/%E7%BD%91%E7%AB%99/%E4%B9%90%E7%9F%A5%E4%BB%98/%E8%B5%84%E6%BA%90%E5%88%86%E4%BA%AB/"/>
-    
-    
-    <category term="乐知付" scheme="https://chenzuoli.github.io/tags/%E4%B9%90%E7%9F%A5%E4%BB%98/"/>
-    
-    <category term="资源分享" scheme="https://chenzuoli.github.io/tags/%E8%B5%84%E6%BA%90%E5%88%86%E4%BA%AB/"/>
     
   </entry>
   
