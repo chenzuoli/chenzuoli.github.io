@@ -6,7 +6,7 @@
   <link href="https://chenzuoli.github.io/atom.xml" rel="self"/>
   
   <link href="https://chenzuoli.github.io/"/>
-  <updated>2024-09-23T13:37:32.650Z</updated>
+  <updated>2024-09-24T14:16:23.072Z</updated>
   <id>https://chenzuoli.github.io/</id>
   
   <author>
@@ -15,6 +15,83 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>windows开发打开文件夹</title>
+    <link href="https://chenzuoli.github.io/2024/09/24/windows%E5%BC%80%E5%8F%91%E6%89%93%E5%BC%80%E6%96%87%E4%BB%B6%E5%A4%B9/"/>
+    <id>https://chenzuoli.github.io/2024/09/24/windows%E5%BC%80%E5%8F%91%E6%89%93%E5%BC%80%E6%96%87%E4%BB%B6%E5%A4%B9/</id>
+    <published>2024-09-24T14:09:16.000Z</published>
+    <updated>2024-09-24T14:16:23.072Z</updated>
+    
+    <content type="html"><![CDATA[<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">FolderPicker folder = new FolderPicker();</span><br><span class="line">folder.SuggestedStartLocation = PickerLocationId.Desktop;</span><br><span class="line">folder.FileTypeFilter.Add(&quot;*&quot;);</span><br><span class="line"></span><br><span class="line">StorageFolder selectedFolder = await folder.PickSingleFolderAsync();</span><br></pre></td></tr></table></figure><p>报错：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">System.Runtime.InteropServices.COMException</span><br><span class="line">  HResult=0x80070578</span><br><span class="line">  Message=Invalid window handle. (0x80070578)</span><br><span class="line">Consider WindowNative, InitializeWithWindow</span><br><span class="line">See https://aka.ms/cswinrt/interop#windows-sdk</span><br><span class="line">  Source=HelloWorld</span><br><span class="line">  StackTrace:</span><br><span class="line">   at HelloWorld.MainWindow.&lt;SelectFolderButton_Click&gt;d__2.MoveNext() in E:\VisualStudioProjects\HelloWorld\HelloWorld\HelloWorld\MainWindow.xaml.cs:line 55</span><br><span class="line"></span><br></pre></td></tr></table></figure><p>解决办法，初始化windows，具体原因不知道为啥，还需慢慢来了解：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">var window = new Microsoft.UI.Xaml.Window();</span><br><span class="line">var hwnd = WinRT.Interop.WindowNative.GetWindowHandle(window);</span><br><span class="line">FolderPicker folder = new FolderPicker();</span><br><span class="line">folder.SuggestedStartLocation = PickerLocationId.Desktop;</span><br><span class="line">folder.FileTypeFilter.Add(&quot;*&quot;);</span><br><span class="line">WinRT.Interop.InitializeWithWindow.Initialize(folder, hwnd);</span><br><span class="line"></span><br><span class="line">StorageFolder selectedFolder = await folder.PickSingleFolderAsync();</span><br></pre></td></tr></table></figure><p>微软官方提供的解决方案：<br><a href="https://github.com/microsoft/CsWinRT/blob/master/docs/interop.md#windows-sdk">https://github.com/microsoft/CsWinRT/blob/master/docs/interop.md#windows-sdk</a></p><p>好了，记录到这里，持续更新中。</p><p>记录问题也是一种修行。</p><p><img src="/images/%E4%BF%AE%E8%A1%8C.png" alt="修行"></p><hr><p><b>书山有路勤为径，学海无涯苦作舟。</b></p><p>欢迎关注微信公众号：【乐知付加密平台】，您的网络资源可变现<br><img src="/images/wechat_account.png" alt="乐知付加密平台"></p><p>一起学习，一起进步。<br></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;figure class=&quot;highlight plaintext&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span c</summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>VisualStudio开发工具快捷键</title>
+    <link href="https://chenzuoli.github.io/2024/09/24/VisualStudio%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7%E5%BF%AB%E6%8D%B7%E9%94%AE/"/>
+    <id>https://chenzuoli.github.io/2024/09/24/VisualStudio%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7%E5%BF%AB%E6%8D%B7%E9%94%AE/</id>
+    <published>2024-09-24T13:35:17.000Z</published>
+    <updated>2024-09-24T14:34:23.855Z</updated>
+    
+    <content type="html"><![CDATA[<p>快捷键记录。</p><span id="more"></span><ol><li><p>格式化代码：<br>快捷键Ctrl+K, Ctrl+D可以格式化整个文档，而Ctrl+K, Ctrl+F可以格式化选中的代码。</p></li><li><p>重复选择下一个单词：Ctrl+D，前提条件是你的键盘快捷键映射方案选择的是visual studio code方式，因为平时我使用vscode比较多，对它比较熟悉<br><img src="/2024/09/24/VisualStudio%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7%E5%BF%AB%E6%8D%B7%E9%94%AE/image.png" alt="key"></p></li><li><p>xaml注释<br>XaML注释：Ctrl+K;Ctrl+C</p></li></ol><p>好了，记录到这里，持续更新中。</p><p>记录问题也是一种修行。</p><p><img src="/images/%E4%BF%AE%E8%A1%8C.png" alt="修行"></p><hr><p><b>书山有路勤为径，学海无涯苦作舟。</b></p><p>欢迎关注微信公众号：【乐知付加密平台】，您的网络资源可变现<br><img src="/images/wechat_account.png" alt="乐知付加密平台"></p><p>一起学习，一起进步。<br></p>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;快捷键记录。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="客户端" scheme="https://chenzuoli.github.io/categories/%E5%AE%A2%E6%88%B7%E7%AB%AF/"/>
+    
+    <category term="windows" scheme="https://chenzuoli.github.io/categories/%E5%AE%A2%E6%88%B7%E7%AB%AF/windows/"/>
+    
+    <category term="visualstudio" scheme="https://chenzuoli.github.io/categories/%E5%AE%A2%E6%88%B7%E7%AB%AF/windows/visualstudio/"/>
+    
+    
+    <category term="windows" scheme="https://chenzuoli.github.io/tags/windows/"/>
+    
+    <category term="格式化" scheme="https://chenzuoli.github.io/tags/%E6%A0%BC%E5%BC%8F%E5%8C%96/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>博客园文章后缀</title>
+    <link href="https://chenzuoli.github.io/2024/09/23/%E5%8D%9A%E5%AE%A2%E5%9B%AD%E6%96%87%E7%AB%A0%E5%90%8E%E7%BC%80/"/>
+    <id>https://chenzuoli.github.io/2024/09/23/%E5%8D%9A%E5%AE%A2%E5%9B%AD%E6%96%87%E7%AB%A0%E5%90%8E%E7%BC%80/</id>
+    <published>2024-09-23T13:46:49.000Z</published>
+    <updated>2024-09-23T13:47:15.841Z</updated>
+    
+    <content type="html"><![CDATA[<span id="more"></span><hr><p>欢迎关注微信公众号，你的资源可变现：【乐知付加密平台】</p><img src="https://img2024.cnblogs.com/blog/1455070/202409/1455070-20240919212128860-1944218544.png" alt="乐知付加密平台" width="500" height="180"><p>欢迎关注微信公众号，这里记录博主的创业之旅：【程序员写书】</p><img src="https://img2024.cnblogs.com/blog/1455070/202409/1455070-20240919212147497-157482784.png" alt="程序员写书" width="500" height="180"><p>一起学习，一起进步。<br></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;span id=&quot;more&quot;&gt;&lt;/span&gt;
+
+&lt;hr&gt;
+&lt;p&gt;欢迎关注微信公众号，你的资源可变现：【乐知付加密平台】&lt;/p&gt;
+&lt;img src=&quot;https://img2024.cnblogs.com/blog/1455070/202409/1455070-202409192</summary>
+      
+    
+    
+    
+    <category term="其他" scheme="https://chenzuoli.github.io/categories/%E5%85%B6%E4%BB%96/"/>
+    
+    <category term="博客园" scheme="https://chenzuoli.github.io/categories/%E5%85%B6%E4%BB%96/%E5%8D%9A%E5%AE%A2%E5%9B%AD/"/>
+    
+    
+    <category term="博客园" scheme="https://chenzuoli.github.io/tags/%E5%8D%9A%E5%AE%A2%E5%9B%AD/"/>
+    
+  </entry>
   
   <entry>
     <title>记录第一次使用WinUI3运行HelloWorld的错误</title>
@@ -477,92 +554,6 @@
     <category term="tesseract" scheme="https://chenzuoli.github.io/tags/tesseract/"/>
     
     <category term="PIL" scheme="https://chenzuoli.github.io/tags/PIL/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>爬虫框架</title>
-    <link href="https://chenzuoli.github.io/2024/05/14/%E7%88%AC%E8%99%AB%E6%A1%86%E6%9E%B6/"/>
-    <id>https://chenzuoli.github.io/2024/05/14/%E7%88%AC%E8%99%AB%E6%A1%86%E6%9E%B6/</id>
-    <published>2024-05-14T13:38:40.000Z</published>
-    <updated>2024-05-14T13:44:11.104Z</updated>
-    
-    <content type="html"><![CDATA[<ol><li>pyspider</li><li>scrapy</li></ol><span id="more"></span><p>想知道怎么用，自行查看官方文档：<br><a href="https://docs.scrapy.org/en/latest/">https://docs.scrapy.org/en/latest/</a><br><a href="https://docs.pyspider.org/en/latest/">https://docs.pyspider.org/en/latest/</a></p><hr><p>欢迎关注微信公众号，你的资源可变现：【乐知付加密平台】<br><img src="/images/wechat_account.png" alt="乐知付加密平台"></p><p>一起学习，一起进步。<br></p>]]></content>
-    
-    
-    <summary type="html">&lt;ol&gt;
-&lt;li&gt;pyspider&lt;/li&gt;
-&lt;li&gt;scrapy&lt;/li&gt;
-&lt;/ol&gt;</summary>
-    
-    
-    
-    <category term="Python" scheme="https://chenzuoli.github.io/categories/Python/"/>
-    
-    <category term="爬虫" scheme="https://chenzuoli.github.io/categories/Python/%E7%88%AC%E8%99%AB/"/>
-    
-    
-    <category term="python" scheme="https://chenzuoli.github.io/tags/python/"/>
-    
-    <category term="scrapy" scheme="https://chenzuoli.github.io/tags/scrapy/"/>
-    
-    <category term="爬虫" scheme="https://chenzuoli.github.io/tags/%E7%88%AC%E8%99%AB/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>tesseract识别图片中的文字</title>
-    <link href="https://chenzuoli.github.io/2024/05/12/tesseract%E8%AF%86%E5%88%AB%E5%9B%BE%E7%89%87%E4%B8%AD%E7%9A%84%E6%96%87%E5%AD%97/"/>
-    <id>https://chenzuoli.github.io/2024/05/12/tesseract%E8%AF%86%E5%88%AB%E5%9B%BE%E7%89%87%E4%B8%AD%E7%9A%84%E6%96%87%E5%AD%97/</id>
-    <published>2024-05-12T06:49:17.000Z</published>
-    <updated>2024-05-13T14:23:48.133Z</updated>
-    
-    <content type="html"><![CDATA[<p>记录下用python处理图片中的文字字幕。</p><span id="more"></span><h1 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h1><p>Tesseract 是一个非常流行的OCR（光学字符识别）引擎，由Google支持。Tesseract能够从图像文件中识别和提取纯文本。它主要用于处理PDF文件和各种图像格式，如PNG、JPG、TIFF等，识别多种语言的文字。</p><p>以下是Tesseract的一些关键特点：</p><ol><li><p><strong>多语言支持</strong>：Tesseract支持超过100种语言，包括中文，并且社区还提供了额外的语言训练数据。</p></li><li><p><strong>命令行工具</strong>：Tesseract主要通过命令行界面使用，这使得它可以很容易地集成到其他应用程序中。</p></li><li><p><strong>开源</strong>：Tesseract是开源软件，可以在Apache 2.0许可下免费使用。</p></li><li><p><strong>可定制的PSM（页面分割模式）</strong>：Tesseract允许用户指定页面布局的假设，例如，是否为单栏或双栏文本，是否包含标题等。</p></li><li><p><strong>支持多种图像格式</strong>：可以处理多种图像格式，包括但不限于PNG、JPG、TIFF等。</p></li><li><p><strong>配置选项</strong>：Tesseract提供了丰富的配置选项，允许用户调整识别精度，如调整阈值、进行去噪处理等。</p></li><li><p><strong>与Leptonica结合使用</strong>：Tesseract经常与Leptonica图像处理库一起使用，Leptonica提供了大量的图像处理功能，可以用来提高OCR前的图像质量。</p></li><li><p><strong>开发者社区</strong>：有一个活跃的开发者社区，不断有新的贡献和改进。</p></li></ol><h1 id="环境"><a href="#环境" class="headerlink" title="环境"></a>环境</h1><p>macos bigsur 11<br>python 3.8.9<br>pytesseract-0.3.10<br>系统tesseract版本 5.3.3</p><h1 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h1><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">pip install pytesseract==0.3.10</span><br><span class="line">brew install tesseract 或  sudo port install tesseract-eng  &amp;&amp; sudo port install tesseract</span><br><span class="line"></span><br><span class="line">unset DYLD_LIBRARY_PATH</span><br><span class="line"></span><br><span class="line">tesseract --version</span><br></pre></td></tr></table></figure><p>tesseract-eng这个是英语语言模型，只能识别图片中的英文，如果需要支持中文，我按照文档安装了中文模型，但是不起作用：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"># 简体中文</span><br><span class="line">sudo port install tesseract-chi-sim</span><br><span class="line"># 繁体</span><br><span class="line">sudo port install tesseract-chi-tra</span><br></pre></td></tr></table></figure><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tesseract 1_DPI1000.jpg chi -l chi_sim</span><br></pre></td></tr></table></figure><p>无法识别图片中的中文</p><p>寻找到另一个中文模型，需要自己下载中文模型：<br><a href="https://github.com/tesseract-ocr/tessdata_best/blob/main/chi_sim.traineddata">https://github.com/tesseract-ocr/tessdata_best/blob/main/chi_sim.traineddata</a><br><img src="/2024/05/12/tesseract%E8%AF%86%E5%88%AB%E5%9B%BE%E7%89%87%E4%B8%AD%E7%9A%84%E6%96%87%E5%AD%97/image-2.png" alt="下载中文模型"></p><p>查看已安装的语言模型：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tesseract --list-langs</span><br></pre></td></tr></table></figure><p><img src="/2024/05/12/tesseract%E8%AF%86%E5%88%AB%E5%9B%BE%E7%89%87%E4%B8%AD%E7%9A%84%E6%96%87%E5%AD%97/image-3.png" alt="langs"><br>这里可以看到语言模型安装的位置。</p><p>将下载的中文模型文件，放到这个目录位置。<br>&#x2F;opt&#x2F;local&#x2F;share&#x2F;tessdata&#x2F;</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wget https://github.com/tesseract-ocr/tessdata_best/blob/main/chi_sim.traineddata</span><br></pre></td></tr></table></figure><p>这里是支持的所有语言列表：<br><a href="https://ports.macports.org/search/?q=tesseract-&amp;name=on">https://ports.macports.org/search/?q=tesseract-&amp;name=on</a></p><h1 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h1><p>安装完tesseract后，运行tesseract –version报错<br><img src="/2024/05/12/tesseract%E8%AF%86%E5%88%AB%E5%9B%BE%E7%89%87%E4%B8%AD%E7%9A%84%E6%96%87%E5%AD%97/image-1.png" alt="error"><br>显示libpng16版本较低，显示libpng16 没有被加载：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">dyld: Library not loaded: /opt/local/lib/libpng16.16.dylib</span><br></pre></td></tr></table></figure><p>后面发现问题了：<br><img src="/2024/05/12/tesseract%E8%AF%86%E5%88%AB%E5%9B%BE%E7%89%87%E4%B8%AD%E7%9A%84%E6%96%87%E5%AD%97/image.png" alt="question"><br>我不知道为什么设置了 <code>DYLD_LIBRARY_PATH</code> 变量，这个变量里包含了libpng16.16.dylib，导致了libpng16版本加载问题。</p><p>解决办法：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">unset DYLD_LIBRARY_PATH</span><br></pre></td></tr></table></figure><p>就ok了。</p><h1 id="识别图片中文字"><a href="#识别图片中文字" class="headerlink" title="识别图片中文字"></a>识别图片中文字</h1><p>基本的Tesseract使用示例如下：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tesseract image.png output.txt</span><br></pre></td></tr></table></figure><p>这条命令会处理名为<code>image.png</code>的图像文件，并把识别出的文本保存到<code>output.txt</code>文件中。</p><p>Tesseract也支持通过配置文件来调整识别参数，例如：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tesseract image.png output -l chi_sim+eng --oem 2 --psm 6</span><br></pre></td></tr></table></figure><p>在这个例子中，<code>-l</code> 指定了使用的语言模型（这里是简体中文加英文），<code>--oem</code> 指定了OCR引擎模式（这里是精确识别），<code>--psm</code> 指定了页面分割模式（这里是假设页面是统一的文本块）。</p><p>Tesseract非常适合需要将扫描文档或图片转换成可编辑文本的情况，是许多开发者和数据科学家在进行自动化文档处理时的首选工具。</p><hr><p>欢迎关注微信公众号，你的资源可变现：【乐知付加密平台】<br><img src="/images/wechat_account.png" alt="乐知付加密平台"></p><p>一起学习，一起进步。<br></p>]]></content>
-    
-    
-    <summary type="html">&lt;p&gt;记录下用python处理图片中的文字字幕。&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="Python" scheme="https://chenzuoli.github.io/categories/Python/"/>
-    
-    <category term="图片" scheme="https://chenzuoli.github.io/categories/Python/%E5%9B%BE%E7%89%87/"/>
-    
-    <category term="Tesseract" scheme="https://chenzuoli.github.io/categories/Python/%E5%9B%BE%E7%89%87/Tesseract/"/>
-    
-    
-    <category term="tesseract" scheme="https://chenzuoli.github.io/tags/tesseract/"/>
-    
-    <category term="ocr" scheme="https://chenzuoli.github.io/tags/ocr/"/>
-    
-    <category term="文字识别" scheme="https://chenzuoli.github.io/tags/%E6%96%87%E5%AD%97%E8%AF%86%E5%88%AB/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>opencv处理视频</title>
-    <link href="https://chenzuoli.github.io/2024/05/11/opencv%E5%A4%84%E7%90%86%E8%A7%86%E9%A2%91/"/>
-    <id>https://chenzuoli.github.io/2024/05/11/opencv%E5%A4%84%E7%90%86%E8%A7%86%E9%A2%91/</id>
-    <published>2024-05-11T14:44:03.000Z</published>
-    <updated>2024-05-11T15:08:05.230Z</updated>
-    
-    <content type="html"><![CDATA[<p>处理视频的python包有这些: opencv  moviepy，今天来看下opencv怎么处理视频。</p><span id="more"></span><p>通过opencv库进行视频的剪切。</p><h1 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h1><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install opencv-python==4.8.1.78</span><br></pre></td></tr></table></figure><h1 id="例子"><a href="#例子" class="headerlink" title="例子"></a>例子</h1><p>从视频中获取图片：<a href="https://github.com/chenzuoli/pythonTest/blob/main/media_test/opencv/get_pic.py">https://github.com/chenzuoli/pythonTest/blob/main/media_test/opencv/get_pic.py</a></p><p>视频剪切：<a href="https://github.com/chenzuoli/pythonTest/blob/main/media_test/opencv/video_cut.py">https://github.com/chenzuoli/pythonTest/blob/main/media_test/opencv/video_cut.py</a></p><h1 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h1><ol><li>问题如下<br>ImportError: dlopen(&#x2F;Users&#x2F;zuolichen&#x2F;PycharmProjects&#x2F;pythonProject&#x2F;venv&#x2F;lib&#x2F;python3.8&#x2F;site-packages&#x2F;cv2&#x2F;cv2.abi3.so, 2): Symbol not found: _CGLGetCurrentContext<br>  Referenced from: &#x2F;System&#x2F;Library&#x2F;Frameworks&#x2F;OpenCL.framework&#x2F;Versions&#x2F;A&#x2F;OpenCL<br>  Expected in: &#x2F;System&#x2F;Library&#x2F;Frameworks&#x2F;OpenGL.framework&#x2F;Versions&#x2F;A&#x2F;OpenGL<br> in &#x2F;System&#x2F;Library&#x2F;Frameworks&#x2F;OpenCL.framework&#x2F;Versions&#x2F;A&#x2F;OpenCL</li></ol><p>我的本机环境：<br>macos bigsur 11<br>python 3.8.9</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">echo $DYLD_LIBRARY_PATH</span><br><span class="line">/opt/X11/lib:/Users/zuolichen/opt/software/ImageMagick-7.0.10/lib/</span><br></pre></td></tr></table></figure><p>solation:</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">unset DYLD_LIBRARY_PATH</span><br></pre></td></tr></table></figure><hr><p>欢迎关注微信公众号，你的资源可变现：【乐知付加密平台】<br><img src="/images/wechat_account.png" alt="乐知付加密平台"></p><p>一起学习，一起进步。<br></p>]]></content>
-    
-    
-    <summary type="html">&lt;p&gt;处理视频的python包有这些: opencv  moviepy，今天来看下opencv怎么处理视频。&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="Python" scheme="https://chenzuoli.github.io/categories/Python/"/>
-    
-    <category term="视频" scheme="https://chenzuoli.github.io/categories/Python/%E8%A7%86%E9%A2%91/"/>
-    
-    <category term="OpenCV" scheme="https://chenzuoli.github.io/categories/Python/%E8%A7%86%E9%A2%91/OpenCV/"/>
-    
-    
-    <category term="视频" scheme="https://chenzuoli.github.io/tags/%E8%A7%86%E9%A2%91/"/>
-    
-    <category term="opencv" scheme="https://chenzuoli.github.io/tags/opencv/"/>
     
   </entry>
   

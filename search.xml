@@ -18211,4 +18211,84 @@ API
         <tag>winui</tag>
       </tags>
   </entry>
+  <entry>
+    <title>博客园文章后缀</title>
+    <url>/2024/09/23/%E5%8D%9A%E5%AE%A2%E5%9B%AD%E6%96%87%E7%AB%A0%E5%90%8E%E7%BC%80/</url>
+    <content><![CDATA[<span id="more"></span>
+
+<hr>
+<p>欢迎关注微信公众号，你的资源可变现：【乐知付加密平台】</p>
+<img src="https://img2024.cnblogs.com/blog/1455070/202409/1455070-20240919212128860-1944218544.png" alt="乐知付加密平台" width="500" height="180">
+
+
+<p>欢迎关注微信公众号，这里记录博主的创业之旅：【程序员写书】</p>
+<img src="https://img2024.cnblogs.com/blog/1455070/202409/1455070-20240919212147497-157482784.png" alt="程序员写书" width="500" height="180">
+
+
+
+
+<p>一起学习，一起进步。<br></p>
+]]></content>
+      <categories>
+        <category>其他</category>
+        <category>博客园</category>
+      </categories>
+      <tags>
+        <tag>博客园</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>VisualStudio开发工具快捷键</title>
+    <url>/2024/09/24/VisualStudio%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7%E5%BF%AB%E6%8D%B7%E9%94%AE/</url>
+    <content><![CDATA[<p>快捷键记录。</p>
+<span id="more"></span>
+
+<ol>
+<li><p>格式化代码：<br>快捷键Ctrl+K, Ctrl+D可以格式化整个文档，而Ctrl+K, Ctrl+F可以格式化选中的代码。</p>
+</li>
+<li><p>重复选择下一个单词：Ctrl+D，前提条件是你的键盘快捷键映射方案选择的是visual studio code方式，因为平时我使用vscode比较多，对它比较熟悉<br><img src="/2024/09/24/VisualStudio%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7%E5%BF%AB%E6%8D%B7%E9%94%AE/image.png" alt="key"></p>
+</li>
+<li><p>xaml注释<br>XaML注释：Ctrl+K;Ctrl+C</p>
+</li>
+</ol>
+<p>好了，记录到这里，持续更新中。</p>
+<p>记录问题也是一种修行。</p>
+<p><img src="/images/%E4%BF%AE%E8%A1%8C.png" alt="修行"></p>
+<hr>
+<p><b>书山有路勤为径，学海无涯苦作舟。</b></p>
+<p>欢迎关注微信公众号：【乐知付加密平台】，您的网络资源可变现<br><img src="/images/wechat_account.png" alt="乐知付加密平台"></p>
+<p>一起学习，一起进步。<br></p>
+]]></content>
+      <categories>
+        <category>客户端</category>
+        <category>windows</category>
+        <category>visualstudio</category>
+      </categories>
+      <tags>
+        <tag>windows</tag>
+        <tag>格式化</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>windows开发打开文件夹</title>
+    <url>/2024/09/24/windows%E5%BC%80%E5%8F%91%E6%89%93%E5%BC%80%E6%96%87%E4%BB%B6%E5%A4%B9/</url>
+    <content><![CDATA[<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">FolderPicker folder = new FolderPicker();</span><br><span class="line">folder.SuggestedStartLocation = PickerLocationId.Desktop;</span><br><span class="line">folder.FileTypeFilter.Add(&quot;*&quot;);</span><br><span class="line"></span><br><span class="line">StorageFolder selectedFolder = await folder.PickSingleFolderAsync();</span><br></pre></td></tr></table></figure>
+
+<p>报错：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">System.Runtime.InteropServices.COMException</span><br><span class="line">  HResult=0x80070578</span><br><span class="line">  Message=Invalid window handle. (0x80070578)</span><br><span class="line">Consider WindowNative, InitializeWithWindow</span><br><span class="line">See https://aka.ms/cswinrt/interop#windows-sdk</span><br><span class="line">  Source=HelloWorld</span><br><span class="line">  StackTrace:</span><br><span class="line">   at HelloWorld.MainWindow.&lt;SelectFolderButton_Click&gt;d__2.MoveNext() in E:\VisualStudioProjects\HelloWorld\HelloWorld\HelloWorld\MainWindow.xaml.cs:line 55</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+<p>解决办法，初始化windows，具体原因不知道为啥，还需慢慢来了解：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">var window = new Microsoft.UI.Xaml.Window();</span><br><span class="line">var hwnd = WinRT.Interop.WindowNative.GetWindowHandle(window);</span><br><span class="line">FolderPicker folder = new FolderPicker();</span><br><span class="line">folder.SuggestedStartLocation = PickerLocationId.Desktop;</span><br><span class="line">folder.FileTypeFilter.Add(&quot;*&quot;);</span><br><span class="line">WinRT.Interop.InitializeWithWindow.Initialize(folder, hwnd);</span><br><span class="line"></span><br><span class="line">StorageFolder selectedFolder = await folder.PickSingleFolderAsync();</span><br></pre></td></tr></table></figure>
+
+<p>微软官方提供的解决方案：<br><a href="https://github.com/microsoft/CsWinRT/blob/master/docs/interop.md#windows-sdk">https://github.com/microsoft/CsWinRT/blob/master/docs/interop.md#windows-sdk</a></p>
+<p>好了，记录到这里，持续更新中。</p>
+<p>记录问题也是一种修行。</p>
+<p><img src="/images/%E4%BF%AE%E8%A1%8C.png" alt="修行"></p>
+<hr>
+<p><b>书山有路勤为径，学海无涯苦作舟。</b></p>
+<p>欢迎关注微信公众号：【乐知付加密平台】，您的网络资源可变现<br><img src="/images/wechat_account.png" alt="乐知付加密平台"></p>
+<p>一起学习，一起进步。<br></p>
+]]></content>
+  </entry>
 </search>
