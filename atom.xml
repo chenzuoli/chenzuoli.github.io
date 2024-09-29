@@ -6,7 +6,7 @@
   <link href="https://chenzuoli.github.io/atom.xml" rel="self"/>
   
   <link href="https://chenzuoli.github.io/"/>
-  <updated>2024-09-24T14:53:21.603Z</updated>
+  <updated>2024-09-29T14:13:53.423Z</updated>
   <id>https://chenzuoli.github.io/</id>
   
   <author>
@@ -15,6 +15,35 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>windows客户端框架选择</title>
+    <link href="https://chenzuoli.github.io/2024/09/29/windows%E5%AE%A2%E6%88%B7%E7%AB%AF%E6%A1%86%E6%9E%B6%E9%80%89%E6%8B%A9/"/>
+    <id>https://chenzuoli.github.io/2024/09/29/windows%E5%AE%A2%E6%88%B7%E7%AB%AF%E6%A1%86%E6%9E%B6%E9%80%89%E6%8B%A9/</id>
+    <published>2024-09-29T14:01:54.000Z</published>
+    <updated>2024-09-29T14:13:53.423Z</updated>
+    
+    <content type="html"><![CDATA[<p>开发windows客户端软件三大框架介绍，如何选择。</p><span id="more"></span><ol><li><p>winforms（Windows Forms）<br>最早的.net框架之一，用于构建windows桌面程序，简单易用，适合快速开发和小型项目。<br>传统的用户界面：<br><img src="/2024/09/29/windows%E5%AE%A2%E6%88%B7%E7%AB%AF%E6%A1%86%E6%9E%B6%E9%80%89%E6%8B%A9/image.png" alt="winform"></p></li><li><p>wpf（Windows Presentation Foundation）<br>提供强大的图形处理能力和数据绑定功能，适合构建复杂的桌面应用程序。它使用xaml进行界面设计，支持2D和3D图形。<br>它提供拖拉拽方式设计界面，还有与数据库交互的基础功能，适用于大型项目。</p></li></ol><p><img src="/2024/09/29/windows%E5%AE%A2%E6%88%B7%E7%AB%AF%E6%A1%86%E6%9E%B6%E9%80%89%E6%8B%A9/image-2.png" alt="wpf"></p><ol start="3"><li>winui（Windows UI Library）<br>microsoft最新的UI框架，基于UWP和win32，提供现代化的用户界面设计，它使用Fluent Design System，适合构建现代化的Windows应用。<br>最新的UI框架，界面美观，但是开发目前还比较繁琐。</li></ol><p><img src="/2024/09/29/windows%E5%AE%A2%E6%88%B7%E7%AB%AF%E6%A1%86%E6%9E%B6%E9%80%89%E6%8B%A9/image-1.png" alt="winui"></p><p>好了，记录到这里，如有问题，欢迎大家联系我讨论。</p><p><img src="/images/%E4%BF%AE%E8%A1%8C.png" alt="修行"></p><hr><p><b>书山有路勤为径，学海无涯苦作舟。</b></p><p>欢迎关注微信公众号：【乐知付加密平台】，您的网络资源可变现<br><img src="/images/wechat_account.png" alt="乐知付加密平台"></p><p>一起学习，一起进步。<br></p>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;开发windows客户端软件三大框架介绍，如何选择。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="客户端" scheme="https://chenzuoli.github.io/categories/%E5%AE%A2%E6%88%B7%E7%AB%AF/"/>
+    
+    <category term="windows" scheme="https://chenzuoli.github.io/categories/%E5%AE%A2%E6%88%B7%E7%AB%AF/windows/"/>
+    
+    
+    <category term="windows" scheme="https://chenzuoli.github.io/tags/windows/"/>
+    
+    <category term="winui" scheme="https://chenzuoli.github.io/tags/winui/"/>
+    
+    <category term="winforms" scheme="https://chenzuoli.github.io/tags/winforms/"/>
+    
+    <category term="wpf" scheme="https://chenzuoli.github.io/tags/wpf/"/>
+    
+  </entry>
   
   <entry>
     <title>windows开发打开文件夹</title>
@@ -533,33 +562,6 @@
     <category term="图片编辑" scheme="https://chenzuoli.github.io/tags/%E5%9B%BE%E7%89%87%E7%BC%96%E8%BE%91/"/>
     
     <category term="image" scheme="https://chenzuoli.github.io/tags/image/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>tesseract图片中文字识别优化</title>
-    <link href="https://chenzuoli.github.io/2024/05/14/tesseract%E5%9B%BE%E7%89%87%E4%B8%AD%E6%96%87%E5%AD%97%E8%AF%86%E5%88%AB%E4%BC%98%E5%8C%96/"/>
-    <id>https://chenzuoli.github.io/2024/05/14/tesseract%E5%9B%BE%E7%89%87%E4%B8%AD%E6%96%87%E5%AD%97%E8%AF%86%E5%88%AB%E4%BC%98%E5%8C%96/</id>
-    <published>2024-05-14T13:53:33.000Z</published>
-    <updated>2024-05-15T15:03:14.139Z</updated>
-    
-    <content type="html"><![CDATA[<p>优化的思路大概有2种，1是优化语言模型，2是优化图片。</p><span id="more"></span><h1 id="优化语言模型"><a href="#优化语言模型" class="headerlink" title="优化语言模型"></a>优化语言模型</h1><h1 id="优化图片"><a href="#优化图片" class="headerlink" title="优化图片"></a>优化图片</h1><p>图片增强对比对</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">from PIL import ImageEnhance</span><br><span class="line"></span><br><span class="line"># 增强图片对比度</span><br><span class="line">enhancer = ImageEnhance.Contrast(img)</span><br><span class="line">img_contrast = enhancer.enhance(2.0)</span><br><span class="line"></span><br><span class="line"># 进行文字识别</span><br><span class="line">text_contrast = pytesseract.image_to_string(img_contrast)</span><br><span class="line"></span><br><span class="line"># 打印识别结果</span><br><span class="line">print(&quot;增强对比度后的识别结果：&quot;, text_contrast)</span><br><span class="line"></span><br></pre></td></tr></table></figure><hr><p>欢迎关注微信公众号，你的资源可变现：【乐知付加密平台】<br><img src="/images/wechat_account.png" alt="乐知付加密平台"></p><p>一起学习，一起进步。<br></p>]]></content>
-    
-    
-    <summary type="html">&lt;p&gt;优化的思路大概有2种，1是优化语言模型，2是优化图片。&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="Python" scheme="https://chenzuoli.github.io/categories/Python/"/>
-    
-    <category term="图片" scheme="https://chenzuoli.github.io/categories/Python/%E5%9B%BE%E7%89%87/"/>
-    
-    <category term="Tesseract" scheme="https://chenzuoli.github.io/categories/Python/%E5%9B%BE%E7%89%87/Tesseract/"/>
-    
-    
-    <category term="tesseract" scheme="https://chenzuoli.github.io/tags/tesseract/"/>
-    
-    <category term="PIL" scheme="https://chenzuoli.github.io/tags/PIL/"/>
     
   </entry>
   

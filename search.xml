@@ -18306,4 +18306,39 @@ API
         <tag>文件夹</tag>
       </tags>
   </entry>
+  <entry>
+    <title>windows客户端框架选择</title>
+    <url>/2024/09/29/windows%E5%AE%A2%E6%88%B7%E7%AB%AF%E6%A1%86%E6%9E%B6%E9%80%89%E6%8B%A9/</url>
+    <content><![CDATA[<p>开发windows客户端软件三大框架介绍，如何选择。</p>
+<span id="more"></span>
+
+<ol>
+<li><p>winforms（Windows Forms）<br>最早的.net框架之一，用于构建windows桌面程序，简单易用，适合快速开发和小型项目。<br>传统的用户界面：<br><img src="/2024/09/29/windows%E5%AE%A2%E6%88%B7%E7%AB%AF%E6%A1%86%E6%9E%B6%E9%80%89%E6%8B%A9/image.png" alt="winform"></p>
+</li>
+<li><p>wpf（Windows Presentation Foundation）<br>提供强大的图形处理能力和数据绑定功能，适合构建复杂的桌面应用程序。它使用xaml进行界面设计，支持2D和3D图形。<br>它提供拖拉拽方式设计界面，还有与数据库交互的基础功能，适用于大型项目。</p>
+</li>
+</ol>
+<p><img src="/2024/09/29/windows%E5%AE%A2%E6%88%B7%E7%AB%AF%E6%A1%86%E6%9E%B6%E9%80%89%E6%8B%A9/image-2.png" alt="wpf"></p>
+<ol start="3">
+<li>winui（Windows UI Library）<br>microsoft最新的UI框架，基于UWP和win32，提供现代化的用户界面设计，它使用Fluent Design System，适合构建现代化的Windows应用。<br>最新的UI框架，界面美观，但是开发目前还比较繁琐。</li>
+</ol>
+<p><img src="/2024/09/29/windows%E5%AE%A2%E6%88%B7%E7%AB%AF%E6%A1%86%E6%9E%B6%E9%80%89%E6%8B%A9/image-1.png" alt="winui"></p>
+<p>好了，记录到这里，如有问题，欢迎大家联系我讨论。</p>
+<p><img src="/images/%E4%BF%AE%E8%A1%8C.png" alt="修行"></p>
+<hr>
+<p><b>书山有路勤为径，学海无涯苦作舟。</b></p>
+<p>欢迎关注微信公众号：【乐知付加密平台】，您的网络资源可变现<br><img src="/images/wechat_account.png" alt="乐知付加密平台"></p>
+<p>一起学习，一起进步。<br></p>
+]]></content>
+      <categories>
+        <category>客户端</category>
+        <category>windows</category>
+      </categories>
+      <tags>
+        <tag>windows</tag>
+        <tag>winui</tag>
+        <tag>winforms</tag>
+        <tag>wpf</tag>
+      </tags>
+  </entry>
 </search>
