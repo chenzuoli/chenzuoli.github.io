@@ -18214,7 +18214,8 @@ API
   <entry>
     <title>博客园文章后缀</title>
     <url>/2024/09/23/%E5%8D%9A%E5%AE%A2%E5%9B%AD%E6%96%87%E7%AB%A0%E5%90%8E%E7%BC%80/</url>
-    <content><![CDATA[<span id="more"></span>
+    <content><![CDATA[<p>1</p>
+<span id="more"></span>
 
 <p>记录问题也是一种修行。</p>
 <p><img src="https://img2024.cnblogs.com/blog/1455070/202409/1455070-20240924224811849-2134953503.png" alt="修行"></p>
@@ -18336,6 +18337,68 @@ API
         <tag>winui</tag>
         <tag>winforms</tag>
         <tag>wpf</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>winforms基本操作-表格内容添加序号列</title>
+    <url>/2024/10/05/winforms%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C-%E8%A1%A8%E6%A0%BC%E5%86%85%E5%AE%B9%E6%B7%BB%E5%8A%A0%E5%BA%8F%E5%8F%B7%E5%88%97/</url>
+    <content><![CDATA[<p>添加序号列，需要给DataGridView对象添加【显示】事件。</p>
+<p><img src="/2024/10/05/winforms%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C-%E8%A1%A8%E6%A0%BC%E5%86%85%E5%AE%B9%E6%B7%BB%E5%8A%A0%E5%BA%8F%E5%8F%B7%E5%88%97/image-1.png" alt="jing"></p>
+<span id="more"></span>
+
+<p>表格对象属性【显示】中的CellPainting，添加事件dataGridView1_CellPainting，然后编辑cs文件，给事件添加序号逻辑，代码如下：<br><img src="/2024/10/05/winforms%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C-%E8%A1%A8%E6%A0%BC%E5%86%85%E5%AE%B9%E6%B7%BB%E5%8A%A0%E5%BA%8F%E5%8F%B7%E5%88%97/image.png" alt="attr"></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">//注册事件 this.dataGridView1.CellPainting += new System.Windows.Forms.DataGridViewCellPaintingEventHandler(this.dataGridView1_CellPainting);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">private void dataGridView1_CellPainting(Object sender, DataGridViewCellPaintingEventArgs e)</span><br><span class="line">&#123;</span><br><span class="line"></span><br><span class="line">    if (e.RowIndex &gt;= 0 &amp;&amp; e.ColumnIndex == -1)</span><br><span class="line">    &#123;</span><br><span class="line">        e.Paint(e.CellBounds, DataGridViewPaintParts.All &amp; ~DataGridViewPaintParts.ContentForeground);</span><br><span class="line">        using (Brush brush  = new SolidBrush(e.CellStyle.ForeColor))</span><br><span class="line">        &#123;</span><br><span class="line">            e.Graphics.DrawString((e.RowIndex + 1).ToString(), e.CellStyle.Font, brush, e.CellBounds.Location.X + 14, e.CellBounds.Location.Y + 8);</span><br><span class="line">        &#125;</span><br><span class="line">        e.Handled = true;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+
+<p>好了，记录到这里，如有问题，欢迎大家联系我讨论。</p>
+<p><img src="/images/%E4%BF%AE%E8%A1%8C.png" alt="修行"></p>
+<hr>
+<p><b>书山有路勤为径，学海无涯苦作舟。</b></p>
+<p>欢迎关注微信公众号：【乐知付加密平台】，您的网络资源可变现<br><img src="/images/wechat_account.png" alt="乐知付加密平台"></p>
+<p>一起学习，一起进步。<br></p>
+]]></content>
+      <categories>
+        <category>客户端</category>
+        <category>windows</category>
+        <category>winforms</category>
+      </categories>
+      <tags>
+        <tag>windows</tag>
+        <tag>winforms</tag>
+        <tag>datagridview</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>winforms基本操作-将datagridview内容保存为excel文件</title>
+    <url>/2024/10/06/winforms%E5%B0%86datagridview%E5%86%85%E5%AE%B9%E4%BF%9D%E5%AD%98%E4%B8%BAexcel%E6%96%87%E4%BB%B6/</url>
+    <content><![CDATA[<p>这里记录一下将winforms展示的datagridview，导出或保存为excel文件。</p>
+<span id="more"></span>
+
+
+<p>这里说一下环境、版本信息：<br>win系统：win11<br>框架：winforms<br>依赖：Microsoft.Office.Interop.Excel<br>.net：8.0.401<br>.net framework: 4.8</p>
+<p>DataGridView对象为dataGridView1，然后添加一个按钮，绑定事件btnConfirm即可。</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">private void btnConfirm(object sender, EventArgs e)</span><br><span class="line">&#123;</span><br><span class="line">    Microsoft.Office.Interop.Excel.Application excelApp = new Microsoft.Office.Interop.Excel.Application();</span><br><span class="line">    if (excelApp == null)</span><br><span class="line">    &#123;</span><br><span class="line">        MessageBox.Show(&quot;无法创建Excel，您可能需要安装Excel&quot;);</span><br><span class="line">        return;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    // 创建excel工作薄</span><br><span class="line">    Workbook workBook = excelApp.Workbooks.Add(Type.Missing);</span><br><span class="line">    Worksheet workSheet = null;</span><br><span class="line"></span><br><span class="line">    // 创建工作表</span><br><span class="line">    workSheet = workBook.Sheets[&quot;Sheet1&quot;];</span><br><span class="line">    workSheet = workBook.ActiveSheet;</span><br><span class="line"></span><br><span class="line">    // 表头</span><br><span class="line">    Range headerRow = workSheet.Rows[1];</span><br><span class="line">    headerRow.Cells[1, 1] = &quot;文件路径&quot;;</span><br><span class="line">    headerRow.Cells[1, 2] = &quot;文件名&quot;;</span><br><span class="line">    // 表头格式</span><br><span class="line">    headerRow.Font.Bold = true;</span><br><span class="line">    headerRow.Interior.Color = ColorTranslator.ToOle(Color.LightBlue);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    // 将DataGridView表格内数据复制到excel工作表</span><br><span class="line">    for (int i = 0; i &lt; dataGridView1.Rows.Count; i++)</span><br><span class="line">    &#123;</span><br><span class="line">        for (int j = 0; j &lt; dataGridView1.Columns.Count; j++)</span><br><span class="line">        &#123;</span><br><span class="line">            workSheet.Cells[i + 2, j + 1] = dataGridView1.Rows[i].Cells[j].Value;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    // 导出到excel文件</span><br><span class="line">    SaveFileDialog saveFileDialog = new SaveFileDialog();</span><br><span class="line">    saveFileDialog.Filter = &quot;Excel Workbook (*.xlsx)|*.xlsx|Excel 97-2003 Workbook (*.xls)|*.xls&quot;;</span><br><span class="line">    saveFileDialog.Title = &quot;保存文件名称到Excel&quot;;</span><br><span class="line">    saveFileDialog.ShowDialog();</span><br><span class="line"></span><br><span class="line">    if (saveFileDialog.FileName != &quot;&quot;)</span><br><span class="line">    &#123;</span><br><span class="line">        try</span><br><span class="line">        &#123;</span><br><span class="line">            workBook.SaveAs(saveFileDialog.FileName);</span><br><span class="line">            workBook.Close(false);</span><br><span class="line">            excelApp.Quit();</span><br><span class="line"></span><br><span class="line">            System.Runtime.InteropServices.Marshal.ReleaseComObject(workSheet);</span><br><span class="line">            System.Runtime.InteropServices.Marshal.ReleaseComObject(workBook);</span><br><span class="line">            System.Runtime.InteropServices.Marshal.ReleaseComObject(excelApp);</span><br><span class="line"></span><br><span class="line">            workSheet = null;</span><br><span class="line">            workBook = null;</span><br><span class="line">            excelApp = null;</span><br><span class="line"></span><br><span class="line">            MessageBox.Show(&quot;Excel文件已保存到：&quot; + saveFileDialog.FileName);</span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line">        catch (Exception ex)</span><br><span class="line">        &#123;</span><br><span class="line">            MessageBox.Show(&quot;保存文件名称到Excel失败，请稍后重试。&quot; + ex.Message);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+
+<p>好了，记录到这里，如有问题，欢迎大家联系我讨论。</p>
+<p><img src="/images/%E4%BF%AE%E8%A1%8C.png" alt="修行"></p>
+<hr>
+<p><b>书山有路勤为径，学海无涯苦作舟。</b></p>
+<p>欢迎关注微信公众号：【乐知付加密平台】，您的网络资源可变现<br><img src="/images/wechat_account.png" alt="乐知付加密平台"></p>
+<p>一起学习，一起进步。<br></p>
+]]></content>
+      <categories>
+        <category>客户端</category>
+        <category>windows</category>
+        <category>winforms</category>
+      </categories>
+      <tags>
+        <tag>windows</tag>
+        <tag>winforms</tag>
+        <tag>datagridview</tag>
       </tags>
   </entry>
 </search>
