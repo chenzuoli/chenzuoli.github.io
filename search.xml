@@ -18401,4 +18401,108 @@ API
         <tag>datagridview</tag>
       </tags>
   </entry>
+  <entry>
+    <title>flask设置session过期时间</title>
+    <url>/2024/10/11/flask%E8%AE%BE%E7%BD%AEsession%E8%BF%87%E6%9C%9F%E6%97%B6%E9%97%B4/</url>
+    <content><![CDATA[<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">app.permanent_session_lifetime = 60</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<span id="more"></span>
+
+
+<p>好了，记录到这里，持续更新中。</p>
+<p>记录问题也是一种修行。</p>
+<p><img src="/images/%E4%BF%AE%E8%A1%8C.png" alt="修行"></p>
+<hr>
+<p><b>书山有路勤为径，学海无涯苦作舟。</b></p>
+<p>欢迎关注微信公众号：【乐知付加密平台】，您的网络资源可变现<br><img src="/images/wechat_account.png" alt="乐知付加密平台"></p>
+<p>一起学习，一起进步。<br></p>
+]]></content>
+      <categories>
+        <category>Python</category>
+        <category>Flask</category>
+        <category>Session</category>
+      </categories>
+      <tags>
+        <tag>http</tag>
+        <tag>flask</tag>
+        <tag>session</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>http请求头参数解析</title>
+    <url>/2024/10/11/http%E8%AF%B7%E6%B1%82%E5%A4%B4%E5%8F%82%E6%95%B0%E8%A7%A3%E6%9E%90/</url>
+    <content><![CDATA[<p>记录请求头的一些释义。</p>
+<span id="more"></span>
+
+<ol>
+<li>X-Expire-In<br>访问令牌过期时间</li>
+<li>User-Agent：用于指示客户端的信息，例如浏览器类型、操作系统等。</li>
+<li>Accept：用于指示客户端可以接受的MIME类型，例如text&#x2F;html, application&#x2F;json表示接受HTML和JSON格式的数据。</li>
+<li>Cookie：用于发送客户端的cookie信息。</li>
+<li>Authorization：用于包含客户端提供的身份验证信息，例如Basic dXNlcm5hbWU6cGFzc3dvcmQ&#x3D;表示使用基本身份验证</li>
+<li>Cache-Control：用于控制缓存行为，例如max-age&#x3D;3600表示缓存有效期为1小时。<br> a. private<br> b. no-cache<br> c. max-age<br> d. must-revalidate<br> private no-cache must-revalidate时，打开新窗口访问时都会重新连接服务器<br> max-age时间内，重新请求，不会重新连接服务器<br> Cache-Control: max-age&#x3D;5(5s内再次访问不会去连接服务器)</li>
+<li>Connection：用于控制连接行为，例如keep-alive表示使用持久连接。<br> Connection 头（header） 决定当前的事务完成后，是否会关闭网络连接。如果该值是“keep-alive”，网络连接就是持久的，不会关闭，使得对同一个服务器的请求可以继续在该连接上完成。</li>
+</ol>
+<!-- more -->
+
+
+<p>好了，记录到这里，持续更新中。</p>
+<p>记录问题也是一种修行。</p>
+<p><img src="/images/%E4%BF%AE%E8%A1%8C.png" alt="修行"></p>
+<hr>
+<p><b>书山有路勤为径，学海无涯苦作舟。</b></p>
+<p>欢迎关注微信公众号：【乐知付加密平台】，您的网络资源可变现<br><img src="/images/wechat_account.png" alt="乐知付加密平台"></p>
+<p>一起学习，一起进步。<br></p>
+]]></content>
+      <categories>
+        <category>HTTP</category>
+        <category>Headers</category>
+      </categories>
+      <tags>
+        <tag>http</tag>
+        <tag>headers</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>winforms基本操作-发送http请求</title>
+    <url>/2024/10/07/winforms%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C-%E5%8F%91%E9%80%81http%E8%AF%B7%E6%B1%82/</url>
+    <content><![CDATA[<span id="more"></span>
+
+<p>发送post请求：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">using (var client = new HttpClient())</span><br><span class="line">&#123;</span><br><span class="line">    var url = &quot;http://www.example.com/api/post&quot;;</span><br><span class="line">    var content = new StringContent(&quot;&#123; \&quot;key\&quot;: \&quot;value\&quot; &#125;&quot;, Encoding.UTF8, &quot;application/json&quot;);</span><br><span class="line"></span><br><span class="line">    //HttpResponseMessage response = await client.PostAsync(url, content);</span><br><span class="line">    HttpResponseMessage response = await client.GetAsync(url, content);</span><br><span class="line"></span><br><span class="line">    if (response.IsSuccessStatusCode)</span><br><span class="line">    &#123;</span><br><span class="line">        string responseBody = await response.Content.ReadAsStringAsync();</span><br><span class="line">        Console.WriteLine(responseBody);</span><br><span class="line">    &#125;</span><br><span class="line">    else</span><br><span class="line">    &#123;</span><br><span class="line">        Console.WriteLine(&quot;Error: &quot; + response.StatusCode);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>发送get请求：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">string url = &quot;https://www.example.com&quot;; // 替换为你要请求的URL</span><br><span class="line">using (HttpClient client = new HttpClient())</span><br><span class="line">&#123;</span><br><span class="line">    HttpResponseMessage response = await client.GetAsync(url);</span><br><span class="line">    if (response.IsSuccessStatusCode)</span><br><span class="line">    &#123;</span><br><span class="line">        string content = await response.Content.ReadAsStringAsync();</span><br><span class="line">        Console.WriteLine(content);</span><br><span class="line">    &#125;</span><br><span class="line">    else</span><br><span class="line">    &#123;</span><br><span class="line">        Console.WriteLine($&quot;Error: &#123;response.StatusCode&#125;&quot;);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+  </entry>
+  <entry>
+    <title>记录git文件被删如何找回问题</title>
+    <url>/2024/10/12/%E8%AE%B0%E5%BD%95git%E6%96%87%E4%BB%B6%E8%A2%AB%E5%88%A0%E5%A6%82%E4%BD%95%E6%89%BE%E5%9B%9E%E9%97%AE%E9%A2%98/</url>
+    <content><![CDATA[<p>说下我的场景，git commit后，发现有些不需要的文件被commit了，要回退，结果误操作回滚了此次commit（git reset head操作）导致新增和修改的文件全部丢失。</p>
+<p>这个问题如何恢复文件？</p>
+<span id="more"></span>
+
+<p>当然，你可以通过sourcetree或者TortoiseGit工具来查看commit的内容，并一一重新修改和创建文件，但是文件太多，非常麻烦。</p>
+<p>去网上找到了解决方案：</p>
+<ol>
+<li>git log -g查看commit id<br><img src="/2024/10/12/%E8%AE%B0%E5%BD%95git%E6%96%87%E4%BB%B6%E8%A2%AB%E5%88%A0%E5%A6%82%E4%BD%95%E6%89%BE%E5%9B%9E%E9%97%AE%E9%A2%98/image.png" alt="commitId"></li>
+<li>git checkout <commitId> &lt;文件&gt;<br><img src="/2024/10/12/%E8%AE%B0%E5%BD%95git%E6%96%87%E4%BB%B6%E8%A2%AB%E5%88%A0%E5%A6%82%E4%BD%95%E6%89%BE%E5%9B%9E%E9%97%AE%E9%A2%98/image-1.png" alt="restore"></commitId></li>
+</ol>
+<p>即可恢复文件。</p>
+<p>好了，记录到这里，持续更新中。</p>
+<p>记录问题也是一种修行。</p>
+<p><img src="/images/%E4%BF%AE%E8%A1%8C.png" alt="修行"></p>
+<hr>
+<p><b>书山有路勤为径，学海无涯苦作舟。</b></p>
+<p>欢迎关注微信公众号：【乐知付加密平台】，您的网络资源可变现<br><img src="/images/wechat_account.png" alt="乐知付加密平台"></p>
+<p>一起学习，一起进步。<br></p>
+]]></content>
+      <categories>
+        <category>其他</category>
+        <category>Github</category>
+        <category>git</category>
+      </categories>
+      <tags>
+        <tag>git</tag>
+      </tags>
+  </entry>
 </search>
