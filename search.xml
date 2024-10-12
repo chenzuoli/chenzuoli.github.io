@@ -18505,4 +18505,35 @@ API
         <tag>git</tag>
       </tags>
   </entry>
+  <entry>
+    <title>windows的cmd和powershell命令不一样</title>
+    <url>/2024/10/12/windows%E7%9A%84cmd%E5%92%8Cpowershell%E5%91%BD%E4%BB%A4%E4%B8%8D%E4%B8%80%E6%A0%B7/</url>
+    <content><![CDATA[<p>预知哪些命令不一样，且点击详情查看。</p>
+<span id="more"></span>
+
+
+<ol>
+<li><p>查看环境变量<br>cmd: echo %PATH%<br>powershell: $env:PATH</p>
+</li>
+<li><p>执行多条命令<br>cmd: command1 &amp;&amp; command2<br>powershell: command1;command2</p>
+</li>
+</ol>
+<p>记录问题也是一种修行。</p>
+<p><img src="/images/%E4%BF%AE%E8%A1%8C.png" alt="修行"></p>
+<hr>
+<p><b>书山有路勤为径，学海无涯苦作舟。</b></p>
+<p>欢迎关注微信公众号：【乐知付加密平台】，您的网络资源可变现<br><img src="/images/wechat_account.png" alt="乐知付加密平台"></p>
+<p>一起学习，一起进步。<br></p>
+]]></content>
+      <categories>
+        <category>客户端</category>
+        <category>windows</category>
+        <category>命令</category>
+      </categories>
+      <tags>
+        <tag>windows</tag>
+        <tag>cmd</tag>
+        <tag>powershell</tag>
+      </tags>
+  </entry>
 </search>

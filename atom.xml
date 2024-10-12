@@ -6,7 +6,7 @@
   <link href="https://chenzuoli.github.io/atom.xml" rel="self"/>
   
   <link href="https://chenzuoli.github.io/"/>
-  <updated>2024-10-12T12:51:13.270Z</updated>
+  <updated>2024-10-12T13:06:33.380Z</updated>
   <id>https://chenzuoli.github.io/</id>
   
   <author>
@@ -15,6 +15,35 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>windows的cmd和powershell命令不一样</title>
+    <link href="https://chenzuoli.github.io/2024/10/12/windows%E7%9A%84cmd%E5%92%8Cpowershell%E5%91%BD%E4%BB%A4%E4%B8%8D%E4%B8%80%E6%A0%B7/"/>
+    <id>https://chenzuoli.github.io/2024/10/12/windows%E7%9A%84cmd%E5%92%8Cpowershell%E5%91%BD%E4%BB%A4%E4%B8%8D%E4%B8%80%E6%A0%B7/</id>
+    <published>2024-10-12T13:00:05.000Z</published>
+    <updated>2024-10-12T13:06:33.380Z</updated>
+    
+    <content type="html"><![CDATA[<p>预知哪些命令不一样，且点击详情查看。</p><span id="more"></span><ol><li><p>查看环境变量<br>cmd: echo %PATH%<br>powershell: $env:PATH</p></li><li><p>执行多条命令<br>cmd: command1 &amp;&amp; command2<br>powershell: command1;command2</p></li></ol><p>记录问题也是一种修行。</p><p><img src="/images/%E4%BF%AE%E8%A1%8C.png" alt="修行"></p><hr><p><b>书山有路勤为径，学海无涯苦作舟。</b></p><p>欢迎关注微信公众号：【乐知付加密平台】，您的网络资源可变现<br><img src="/images/wechat_account.png" alt="乐知付加密平台"></p><p>一起学习，一起进步。<br></p>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;预知哪些命令不一样，且点击详情查看。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="客户端" scheme="https://chenzuoli.github.io/categories/%E5%AE%A2%E6%88%B7%E7%AB%AF/"/>
+    
+    <category term="windows" scheme="https://chenzuoli.github.io/categories/%E5%AE%A2%E6%88%B7%E7%AB%AF/windows/"/>
+    
+    <category term="命令" scheme="https://chenzuoli.github.io/categories/%E5%AE%A2%E6%88%B7%E7%AB%AF/windows/%E5%91%BD%E4%BB%A4/"/>
+    
+    
+    <category term="windows" scheme="https://chenzuoli.github.io/tags/windows/"/>
+    
+    <category term="cmd" scheme="https://chenzuoli.github.io/tags/cmd/"/>
+    
+    <category term="powershell" scheme="https://chenzuoli.github.io/tags/powershell/"/>
+    
+  </entry>
   
   <entry>
     <title>记录git文件被删如何找回问题</title>
@@ -529,36 +558,6 @@
     <category term="支付宝" scheme="https://chenzuoli.github.io/tags/%E6%94%AF%E4%BB%98%E5%AE%9D/"/>
     
     <category term="网页支付" scheme="https://chenzuoli.github.io/tags/%E7%BD%91%E9%A1%B5%E6%94%AF%E4%BB%98/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>支付宝支付成功异步回调问题</title>
-    <link href="https://chenzuoli.github.io/2024/06/13/%E6%94%AF%E4%BB%98%E5%AE%9D%E6%94%AF%E4%BB%98%E6%88%90%E5%8A%9F%E5%BC%82%E6%AD%A5%E5%9B%9E%E8%B0%83%E9%97%AE%E9%A2%98/"/>
-    <id>https://chenzuoli.github.io/2024/06/13/%E6%94%AF%E4%BB%98%E5%AE%9D%E6%94%AF%E4%BB%98%E6%88%90%E5%8A%9F%E5%BC%82%E6%AD%A5%E5%9B%9E%E8%B0%83%E9%97%AE%E9%A2%98/</id>
-    <published>2024-06-13T14:35:27.000Z</published>
-    <updated>2024-06-22T01:53:33.901Z</updated>
-    
-    <content type="html"><![CDATA[<p>接过支付宝支付接口的朋友应该知道，支付代码中设置的有两个回调url。<br>一个是同步回调url，支付成功后，自动跳转到此url，<br>另一个是异步回调url，支付成功后，支付宝后台异步通过post方式调用此url，此异步通知才能真正来判断是否支付成功。</p><p>但是我在开发过程中，使用支付宝沙箱环境（测试环境）时，没收到异步通知，相信大家应该也会碰到这个问题，这里记录下这个问题。</p><span id="more"></span><p>问题分类 : [“支付转账类问题”]</p><p>请选择产品 : [“电脑网站支付”]</p><p>问题描述 : 沙箱环境异步回调没有接收到<br>应用网关地址：<a href="https://xxxx.com/">https://xxxx.com</a><br>授权回调地址：<a href="https://xxxx.com/notify_url">https://xxxx.com/notify_url</a></p><p>已经通过postman post方式调用过此地址：<a href="https://xxxx.com/notify_url">https://xxxx.com/notify_url</a><br>后台能够接受到postman的访问请求</p><p>但是沙箱环境支付成功后，没有收到支付宝的异步请求通知，问下咋回事。</p><p>咨询了支付宝技术支持，发给他trade_no，他后台能够查到已经发送了异步通知，但是返回415状态码，(Unsupported Media Type) 不支持的类型异常。</p><p>原来他们使用的是默认的x-www-form-urlencoded Content-Type发送post请求，而我的异步通知后台是通过application&#x2F;json方式接收的参数，所以报错415。</p><p>原来不是我notify_url设置的不对、不是我密钥配置的不对、不是我appid设置的不对、不是我验证签名不对，而是接收参数的方式不对。</p><p>好了，已经能够接收到异步通知了。</p><p>记录一下。</p><hr><p>欢迎关注微信公众号，你的资源可变现：【乐知付加密平台】<br><img src="/images/wechat_account.png" alt="乐知付加密平台"></p><p>一起学习，一起进步。<br></p>]]></content>
-    
-    
-    <summary type="html">&lt;p&gt;接过支付宝支付接口的朋友应该知道，支付代码中设置的有两个回调url。&lt;br&gt;一个是同步回调url，支付成功后，自动跳转到此url，&lt;br&gt;另一个是异步回调url，支付成功后，支付宝后台异步通过post方式调用此url，此异步通知才能真正来判断是否支付成功。&lt;/p&gt;
-&lt;p&gt;但是我在开发过程中，使用支付宝沙箱环境（测试环境）时，没收到异步通知，相信大家应该也会碰到这个问题，这里记录下这个问题。&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="网站" scheme="https://chenzuoli.github.io/categories/%E7%BD%91%E7%AB%99/"/>
-    
-    <category term="网页支付" scheme="https://chenzuoli.github.io/categories/%E7%BD%91%E7%AB%99/%E7%BD%91%E9%A1%B5%E6%94%AF%E4%BB%98/"/>
-    
-    <category term="支付宝" scheme="https://chenzuoli.github.io/categories/%E7%BD%91%E7%AB%99/%E7%BD%91%E9%A1%B5%E6%94%AF%E4%BB%98/%E6%94%AF%E4%BB%98%E5%AE%9D/"/>
-    
-    
-    <category term="支付宝" scheme="https://chenzuoli.github.io/tags/%E6%94%AF%E4%BB%98%E5%AE%9D/"/>
-    
-    <category term="网站支付" scheme="https://chenzuoli.github.io/tags/%E7%BD%91%E7%AB%99%E6%94%AF%E4%BB%98/"/>
-    
-    <category term="异步回调" scheme="https://chenzuoli.github.io/tags/%E5%BC%82%E6%AD%A5%E5%9B%9E%E8%B0%83/"/>
     
   </entry>
   

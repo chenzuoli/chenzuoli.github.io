@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://chenzuoli.github.io/2024/10/12/windows%E7%9A%84cmd%E5%92%8Cpowershell%E5%91%BD%E4%BB%A4%E4%B8%8D%E4%B8%80%E6%A0%B7/</loc>
+    
+    <lastmod>2024-10-12</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://chenzuoli.github.io/2024/10/11/flask%E8%AE%BE%E7%BD%AEsession%E8%BF%87%E6%9C%9F%E6%97%B6%E9%97%B4/</loc>
     
     <lastmod>2024-10-12</lastmod>
@@ -7614,6 +7623,20 @@
     <priority>0.2</priority>
   </url>
   
+  <url>
+    <loc>https://chenzuoli.github.io/tags/cmd/</loc>
+    <lastmod>2024-10-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://chenzuoli.github.io/tags/powershell/</loc>
+    <lastmod>2024-10-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
 
   
   <url>
@@ -9137,6 +9160,13 @@
   
   <url>
     <loc>https://chenzuoli.github.io/categories/%E5%85%B6%E4%BB%96/Github/git/</loc>
+    <lastmod>2024-10-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://chenzuoli.github.io/categories/%E5%AE%A2%E6%88%B7%E7%AB%AF/windows/%E5%91%BD%E4%BB%A4/</loc>
     <lastmod>2024-10-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
