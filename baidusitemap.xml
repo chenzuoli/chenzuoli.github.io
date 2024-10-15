@@ -1,15 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://chenzuoli.github.io/2024/10/14/chromedriver%E4%B8%8B%E8%BD%BD/</loc>
+    <lastmod>2024-10-15</lastmod>
+  </url>
+  <url>
+    <loc>https://chenzuoli.github.io/2024/10/13/selenium%E4%BD%BF%E7%94%A8%E9%97%AE%E9%A2%98/</loc>
+    <lastmod>2024-10-15</lastmod>
+  </url>
+  <url>
+    <loc>https://chenzuoli.github.io/2024/10/11/http%E8%AF%B7%E6%B1%82%E5%A4%B4%E5%8F%82%E6%95%B0%E8%A7%A3%E6%9E%90/</loc>
+    <lastmod>2024-10-15</lastmod>
+  </url>
+  <url>
     <loc>https://chenzuoli.github.io/2024/10/12/windows%E7%9A%84cmd%E5%92%8Cpowershell%E5%91%BD%E4%BB%A4%E4%B8%8D%E4%B8%80%E6%A0%B7/</loc>
     <lastmod>2024-10-12</lastmod>
   </url>
   <url>
     <loc>https://chenzuoli.github.io/2024/10/11/flask%E8%AE%BE%E7%BD%AEsession%E8%BF%87%E6%9C%9F%E6%97%B6%E9%97%B4/</loc>
-    <lastmod>2024-10-12</lastmod>
-  </url>
-  <url>
-    <loc>https://chenzuoli.github.io/2024/10/11/http%E8%AF%B7%E6%B1%82%E5%A4%B4%E5%8F%82%E6%95%B0%E8%A7%A3%E6%9E%90/</loc>
     <lastmod>2024-10-12</lastmod>
   </url>
   <url>

@@ -18443,9 +18443,6 @@ API
 <li>Cache-Control：用于控制缓存行为，例如max-age&#x3D;3600表示缓存有效期为1小时。<br> a. private<br> b. no-cache<br> c. max-age<br> d. must-revalidate<br> private no-cache must-revalidate时，打开新窗口访问时都会重新连接服务器<br> max-age时间内，重新请求，不会重新连接服务器<br> Cache-Control: max-age&#x3D;5(5s内再次访问不会去连接服务器)</li>
 <li>Connection：用于控制连接行为，例如keep-alive表示使用持久连接。<br> Connection 头（header） 决定当前的事务完成后，是否会关闭网络连接。如果该值是“keep-alive”，网络连接就是持久的，不会关闭，使得对同一个服务器的请求可以继续在该连接上完成。</li>
 </ol>
-<!-- more -->
-
-
 <p>好了，记录到这里，持续更新中。</p>
 <p>记录问题也是一种修行。</p>
 <p><img src="/images/%E4%BF%AE%E8%A1%8C.png" alt="修行"></p>
@@ -18534,6 +18531,70 @@ API
         <tag>windows</tag>
         <tag>cmd</tag>
         <tag>powershell</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>chromedriver下载</title>
+    <url>/2024/10/14/chromedriver%E4%B8%8B%E8%BD%BD/</url>
+    <content><![CDATA[<p>这里记录通过selenium进行模拟浏览器加载页面获取页面数据时使用的浏览器驱动信息下载连接，具体请看详情。</p>
+<span id="more"></span>
+
+
+<p>114版本 及 以下 chromedriver驱动: </p>
+<p>下载地址 : <a href="https://registry.npmmirror.com/binary.html?path=chromedriver/">https://registry.npmmirror.com/binary.html?path=chromedriver/</a></p>
+<pre><code>             http://chromedriver.storage.googleapis.com/index.html
+</code></pre>
+<p>官方下载网站：<a href="https://developer.chrome.com/docs/chromedriver/downloads">https://developer.chrome.com/docs/chromedriver/downloads</a></p>
+<p>chromedriver 淘宝npm镜像，地址：<a href="https://npm.taobao.org/mirrors/chromedriver/">https://npm.taobao.org/mirrors/chromedriver/</a></p>
+<p>Firefox的驱动geckodriver，地址：<a href="https://github.com/mozilla/geckodriver/releases/">https://github.com/mozilla/geckodriver/releases/</a></p>
+<p>查看firefox、selenium、python版本之间的依赖关系：<br><a href="https://firefox-source-docs.mozilla.org/testing/geckodriver/Support.html">https://firefox-source-docs.mozilla.org/testing/geckodriver/Support.html</a></p>
+<p>firefox浏览器其他版本下载：<a href="https://ftp.mozilla.org/pub/firefox/releases/">https://ftp.mozilla.org/pub/firefox/releases/</a></p>
+<p>好了，记录到这里，持续更新中。</p>
+<p>记录问题也是一种修行。</p>
+<p><img src="/images/%E4%BF%AE%E8%A1%8C.png" alt="修行"></p>
+<hr>
+<p><b>书山有路勤为径，学海无涯苦作舟。</b></p>
+<p>欢迎关注微信公众号：【乐知付加密平台】，您的网络资源可变现<br><img src="/images/wechat_account.png" alt="乐知付加密平台"></p>
+<p>一起学习，一起进步。<br></p>
+]]></content>
+      <categories>
+        <category>Python</category>
+        <category>爬虫</category>
+        <category>Selenium</category>
+      </categories>
+      <tags>
+        <tag>selenium</tag>
+        <tag>chromedriver</tag>
+        <tag>geckodriver</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>selenium使用问题</title>
+    <url>/2024/10/13/selenium%E4%BD%BF%E7%94%A8%E9%97%AE%E9%A2%98/</url>
+    <content><![CDATA[<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">from selenium import webdriver</span><br><span class="line">chrome = webdriver.Chrome(options=options)</span><br><span class="line">chrome.get(url=web_url)</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">selenium.common.exceptions.NoSuchDriverException: Message: Unable to obtain driver for chrome</span><br></pre></td></tr></table></figure>
+
+<p>解决办法：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">pip install webdriver-manager</span><br></pre></td></tr></table></figure>
+
+
+
+<p>好了，记录到这里，持续更新中。</p>
+<p>记录问题也是一种修行。</p>
+<p><img src="/images/%E4%BF%AE%E8%A1%8C.png" alt="修行"></p>
+<hr>
+<p><b>书山有路勤为径，学海无涯苦作舟。</b></p>
+<p>欢迎关注微信公众号：【乐知付加密平台】，您的网络资源可变现<br><img src="/images/wechat_account.png" alt="乐知付加密平台"></p>
+<p>一起学习，一起进步。<br></p>
+]]></content>
+      <categories>
+        <category>Python</category>
+        <category>爬虫</category>
+        <category>Selenium</category>
+      </categories>
+      <tags>
+        <tag>selenium</tag>
       </tags>
   </entry>
 </search>
