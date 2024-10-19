@@ -18463,13 +18463,35 @@ API
   <entry>
     <title>winforms基本操作-发送http请求</title>
     <url>/2024/10/07/winforms%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C-%E5%8F%91%E9%80%81http%E8%AF%B7%E6%B1%82/</url>
-    <content><![CDATA[<span id="more"></span>
+    <content><![CDATA[<p>请见详情。</p>
+<span id="more"></span>
 
 <p>发送post请求：</p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">using (var client = new HttpClient())</span><br><span class="line">&#123;</span><br><span class="line">    var url = &quot;http://www.example.com/api/post&quot;;</span><br><span class="line">    var content = new StringContent(&quot;&#123; \&quot;key\&quot;: \&quot;value\&quot; &#125;&quot;, Encoding.UTF8, &quot;application/json&quot;);</span><br><span class="line"></span><br><span class="line">    //HttpResponseMessage response = await client.PostAsync(url, content);</span><br><span class="line">    HttpResponseMessage response = await client.GetAsync(url, content);</span><br><span class="line"></span><br><span class="line">    if (response.IsSuccessStatusCode)</span><br><span class="line">    &#123;</span><br><span class="line">        string responseBody = await response.Content.ReadAsStringAsync();</span><br><span class="line">        Console.WriteLine(responseBody);</span><br><span class="line">    &#125;</span><br><span class="line">    else</span><br><span class="line">    &#123;</span><br><span class="line">        Console.WriteLine(&quot;Error: &quot; + response.StatusCode);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <p>发送get请求：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">string url = &quot;https://www.example.com&quot;; // 替换为你要请求的URL</span><br><span class="line">using (HttpClient client = new HttpClient())</span><br><span class="line">&#123;</span><br><span class="line">    HttpResponseMessage response = await client.GetAsync(url);</span><br><span class="line">    if (response.IsSuccessStatusCode)</span><br><span class="line">    &#123;</span><br><span class="line">        string content = await response.Content.ReadAsStringAsync();</span><br><span class="line">        Console.WriteLine(content);</span><br><span class="line">    &#125;</span><br><span class="line">    else</span><br><span class="line">    &#123;</span><br><span class="line">        Console.WriteLine($&quot;Error: &#123;response.StatusCode&#125;&quot;);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">string url = &quot;https://www.example.com&quot;; // 替换为你要请求的URL</span><br><span class="line">using (HttpClient client = new HttpClient())</span><br><span class="line">&#123;</span><br><span class="line">    HttpResponseMessage response = await client.GetAsync(url);</span><br><span class="line">    if (response.IsSuccessStatusCode)</span><br><span class="line">    &#123;</span><br><span class="line">        string content = await response.Content.ReadAsStringAsync();</span><br><span class="line">        Console.WriteLine(content);</span><br><span class="line">    &#125;</span><br><span class="line">    else</span><br><span class="line">    &#123;</span><br><span class="line">        Console.WriteLine($&quot;Error: &#123;response.StatusCode&#125;&quot;);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+
+<p>好了，记录到这里，持续更新中。</p>
+<p>记录问题也是一种修行。</p>
+<p><img src="/images/%E4%BF%AE%E8%A1%8C.png" alt="修行"></p>
+<hr>
+<p><b>书山有路勤为径，学海无涯苦作舟。</b></p>
+<p>欢迎关注微信公众号：【乐知付加密平台】，您的网络资源可变现<br><img src="/images/wechat_account.png" alt="乐知付加密平台"></p>
+<p>一起学习，一起进步。<br></p>
+]]></content>
+      <categories>
+        <category>客户端</category>
+        <category>windows</category>
+        <category>winforms</category>
+      </categories>
+      <tags>
+        <tag>windows</tag>
+        <tag>winforms</tag>
+      </tags>
   </entry>
   <entry>
     <title>记录git文件被删如何找回问题</title>
@@ -18571,7 +18593,10 @@ API
   <entry>
     <title>selenium使用问题</title>
     <url>/2024/10/13/selenium%E4%BD%BF%E7%94%A8%E9%97%AE%E9%A2%98/</url>
-    <content><![CDATA[<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">from selenium import webdriver</span><br><span class="line">chrome = webdriver.Chrome(options=options)</span><br><span class="line">chrome.get(url=web_url)</span><br></pre></td></tr></table></figure>
+    <content><![CDATA[<p>selenium使用时，获取不到浏览器驱动driver问题。</p>
+<span id="more"></span>
+
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">from selenium import webdriver</span><br><span class="line">chrome = webdriver.Chrome(options=options)</span><br><span class="line">chrome.get(url=web_url)</span><br></pre></td></tr></table></figure>
 
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">selenium.common.exceptions.NoSuchDriverException: Message: Unable to obtain driver for chrome</span><br></pre></td></tr></table></figure>
 
@@ -18580,6 +18605,49 @@ API
 
 
 
+<p>好了，记录到这里，持续更新中。</p>
+<p>记录问题也是一种修行。</p>
+<p><img src="/images/%E4%BF%AE%E8%A1%8C.png" alt="修行"></p>
+<hr>
+<p><b>书山有路勤为径，学海无涯苦作舟。</b></p>
+<p>欢迎关注微信公众号：【乐知付加密平台】，您的网络资源可变现<br><img src="/images/wechat_account.png" alt="乐知付加密平台"></p>
+<p>一起学习，一起进步。<br></p>
+]]></content>
+      <categories>
+        <category>Python</category>
+        <category>爬虫</category>
+        <category>Selenium</category>
+      </categories>
+      <tags>
+        <tag>selenium</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>selenium基本使用</title>
+    <url>/2024/10/19/selenium%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8/</url>
+    <content><![CDATA[<p>selenium的基本使用操作，如键盘鼠标按键、模拟人工操作等等，且看详情。</p>
+<span id="more"></span>
+
+<ol>
+<li><p>是否打开浏览器</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">chrome_options = Options()</span><br><span class="line"># chrome_options.add_argument(&quot;--headless&quot;)  # 不需要显示浏览器界面</span><br><span class="line">chrome = webdriver.Chrome(options=chrome_options)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>打开目标网页</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">chrome.get(csdn_url)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>模拟滑动到页面底部(这个操作我试了，好像不起作用)</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">执行 JavaScript 脚本滑动到页面底部</span><br><span class="line"># chrome.execute_script(&quot;window.scrollTo(0, document.body.scrollHeight);&quot;)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>模拟滑动到页面底部(可用)<br>通过模拟按鼠标滚轮方式</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">from selenium import webdriver</span><br><span class="line">from selenium.webdriver.common.keys import Keys</span><br><span class="line">chains = webdriver.ActionChains(chrome)</span><br><span class="line">chains.send_keys(Keys.PAGE_DOWN).perform()</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>最大化窗口</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">options.add_argument(&quot;--start-maximized&quot;)</span><br><span class="line">或</span><br><span class="line">chrome.maximize_window()</span><br></pre></td></tr></table></figure></li>
+</ol>
+<p>待解决问题：</p>
+<ol>
+<li>打开浏览器页面后，如何消除页面自动弹出的登录、提示框等等，这些弹出框可能会影响selenium的一些基本操作。</li>
+</ol>
 <p>好了，记录到这里，持续更新中。</p>
 <p>记录问题也是一种修行。</p>
 <p><img src="/images/%E4%BF%AE%E8%A1%8C.png" alt="修行"></p>
