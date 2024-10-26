@@ -6,7 +6,7 @@
   <link href="https://chenzuoli.github.io/atom.xml" rel="self"/>
   
   <link href="https://chenzuoli.github.io/"/>
-  <updated>2024-10-21T14:53:00.418Z</updated>
+  <updated>2024-10-26T01:46:39.542Z</updated>
   <id>https://chenzuoli.github.io/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>linux使用google-chrome</title>
+    <link href="https://chenzuoli.github.io/2024/10/26/linux%E4%BD%BF%E7%94%A8google-chrome/"/>
+    <id>https://chenzuoli.github.io/2024/10/26/linux%E4%BD%BF%E7%94%A8google-chrome/</id>
+    <published>2024-10-26T01:41:37.000Z</published>
+    <updated>2024-10-26T01:46:39.542Z</updated>
+    
+    <content type="html"><![CDATA[<p>这里记录centos安装google-chrome、使用selenium的一些记录，且看详情。</p><span id="more"></span><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">wget https://dl.google.com/linux/direct/google-chrome-stable_current_x86_64.rpm</span><br><span class="line">yum -y install liberation-fonts</span><br><span class="line">yum -y install chromium-common-111.0.5563.64-1.el7.x86_64</span><br><span class="line">yum install google-chrome-stable_current_x86_64.rpm</span><br><span class="line"></span><br><span class="line">google-chrome --headless --disable-gpu --dump-dom --no-sandbox https://www.baidu.com</span><br></pre></td></tr></table></figure><p>报错：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[949618:949618:1026/094330.059409:ERROR:ozone_platform_x11.cc(244)] Missing X server or $DISPLAY</span><br><span class="line">[949618:949618:1026/094330.059456:ERROR:env.cc(258)] The platform failed to initialize.  Exiting.</span><br></pre></td></tr></table></figure><p>因为linux系统无界面，所以在chrome展示的时候，找不到Display设备。</p><p>修改启动脚本：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">#查看命令</span><br><span class="line">whereis google-chrome</span><br><span class="line">输出：</span><br><span class="line">google-chrome: /usr/bin/google-chrome /usr/share/man/man1/google-chrome.1.gz</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">#修改/usr/bin/google-chrome，应该在最后一行</span><br><span class="line">vim /usr/bin/google-chrome</span><br><span class="line"></span><br><span class="line">将 exec -a &quot;$0&quot; &quot;$HERE/chrome&quot; &quot;$@&quot; 改为：</span><br><span class="line">exec -a &quot;$0&quot; &quot;$HERE/chrome&quot; &quot;$@&quot; --user-data-dir --no-sandbox</span><br></pre></td></tr></table></figure><p>尝试访问baidu：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">google-chrome --headless --disable-gpu --dump-dom --no-sandbox https://www.baidu.com</span><br><span class="line"></span><br></pre></td></tr></table></figure><p>ok.</p><p>好了，记录到这里，持续更新中。</p><p>记录问题也是一种修行。</p><p><img src="/images/%E4%BF%AE%E8%A1%8C.png" alt="修行"></p><hr><p><b>书山有路勤为径，学海无涯苦作舟。</b></p><p>欢迎关注微信公众号：【乐知付加密平台】，您的网络资源可变现<br><img src="/images/wechat_account.png" alt="乐知付加密平台"></p><p>一起学习，一起进步。<br></p>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;这里记录centos安装google-chrome、使用selenium的一些记录，且看详情。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="Linux" scheme="https://chenzuoli.github.io/categories/Linux/"/>
+    
+    <category term="Centos" scheme="https://chenzuoli.github.io/categories/Linux/Centos/"/>
+    
+    <category term="Chrome" scheme="https://chenzuoli.github.io/categories/Linux/Centos/Chrome/"/>
+    
+    
+    <category term="linux" scheme="https://chenzuoli.github.io/tags/linux/"/>
+    
+    <category term="chrome" scheme="https://chenzuoli.github.io/tags/chrome/"/>
+    
+  </entry>
   
   <entry>
     <title>winforms基本操作-在表格内添加多选框列</title>
@@ -129,9 +156,9 @@
     <link href="https://chenzuoli.github.io/2024/10/19/selenium%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8/"/>
     <id>https://chenzuoli.github.io/2024/10/19/selenium%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8/</id>
     <published>2024-10-19T08:58:29.000Z</published>
-    <updated>2024-10-19T09:19:31.801Z</updated>
+    <updated>2024-10-22T15:19:36.120Z</updated>
     
-    <content type="html"><![CDATA[<p>selenium的基本使用操作，如键盘鼠标按键、模拟人工操作等等，且看详情。</p><span id="more"></span><ol><li><p>是否打开浏览器</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">chrome_options = Options()</span><br><span class="line"># chrome_options.add_argument(&quot;--headless&quot;)  # 不需要显示浏览器界面</span><br><span class="line">chrome = webdriver.Chrome(options=chrome_options)</span><br></pre></td></tr></table></figure></li><li><p>打开目标网页</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">chrome.get(csdn_url)</span><br></pre></td></tr></table></figure></li><li><p>模拟滑动到页面底部(这个操作我试了，好像不起作用)</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">执行 JavaScript 脚本滑动到页面底部</span><br><span class="line"># chrome.execute_script(&quot;window.scrollTo(0, document.body.scrollHeight);&quot;)</span><br></pre></td></tr></table></figure></li><li><p>模拟滑动到页面底部(可用)<br>通过模拟按鼠标滚轮方式</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">from selenium import webdriver</span><br><span class="line">from selenium.webdriver.common.keys import Keys</span><br><span class="line">chains = webdriver.ActionChains(chrome)</span><br><span class="line">chains.send_keys(Keys.PAGE_DOWN).perform()</span><br></pre></td></tr></table></figure></li><li><p>最大化窗口</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">options.add_argument(&quot;--start-maximized&quot;)</span><br><span class="line">或</span><br><span class="line">chrome.maximize_window()</span><br></pre></td></tr></table></figure></li></ol><p>待解决问题：</p><ol><li>打开浏览器页面后，如何消除页面自动弹出的登录、提示框等等，这些弹出框可能会影响selenium的一些基本操作。</li></ol><p>好了，记录到这里，持续更新中。</p><p>记录问题也是一种修行。</p><p><img src="/images/%E4%BF%AE%E8%A1%8C.png" alt="修行"></p><hr><p><b>书山有路勤为径，学海无涯苦作舟。</b></p><p>欢迎关注微信公众号：【乐知付加密平台】，您的网络资源可变现<br><img src="/images/wechat_account.png" alt="乐知付加密平台"></p><p>一起学习，一起进步。<br></p>]]></content>
+    <content type="html"><![CDATA[<p>selenium的基本使用操作，如键盘鼠标按键、模拟人工操作等等，且看详情。</p><span id="more"></span><ol><li><p>是否打开浏览器</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">chrome_options = Options()</span><br><span class="line"># chrome_options.add_argument(&quot;--headless&quot;)  # 不需要显示浏览器界面</span><br><span class="line">chrome = webdriver.Chrome(options=chrome_options)</span><br></pre></td></tr></table></figure></li><li><p>打开目标网页</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">chrome.get(csdn_url)</span><br></pre></td></tr></table></figure></li><li><p>模拟滑动到页面底部(这个操作我试了，好像不起作用)</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">执行 JavaScript 脚本滑动到页面底部</span><br><span class="line"># chrome.execute_script(&quot;window.scrollTo(0, document.body.scrollHeight);&quot;)</span><br></pre></td></tr></table></figure></li><li><p>模拟滑动到页面底部(可用)<br>通过模拟按鼠标滚轮方式</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">from selenium import webdriver</span><br><span class="line">from selenium.webdriver.common.keys import Keys</span><br><span class="line">chains = webdriver.ActionChains(chrome)</span><br><span class="line">chains.send_keys(Keys.PAGE_DOWN).perform()</span><br></pre></td></tr></table></figure></li><li><p>最大化窗口</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">options.add_argument(&quot;--start-maximized&quot;)</span><br><span class="line">或</span><br><span class="line">chrome.maximize_window()</span><br></pre></td></tr></table></figure></li></ol><p>待解决问题：</p><ol><li>打开浏览器页面后，如何消除页面自动弹出的登录、提示框等等，这些弹出框可能会影响selenium的一些基本操作。</li><li>selenium打开的页面，迟迟加载不结束，但是可以看到页面的内容已加载完成，导致迟迟无法运行程序下一步。</li></ol><p>好了，记录到这里，持续更新中。</p><p>记录问题也是一种修行。</p><p><img src="/images/%E4%BF%AE%E8%A1%8C.png" alt="修行"></p><hr><p><b>书山有路勤为径，学海无涯苦作舟。</b></p><p>欢迎关注微信公众号：【乐知付加密平台】，您的网络资源可变现<br><img src="/images/wechat_account.png" alt="乐知付加密平台"></p><p>一起学习，一起进步。<br></p>]]></content>
     
     
     <summary type="html">&lt;p&gt;selenium的基本使用操作，如键盘鼠标按键、模拟人工操作等等，且看详情。&lt;/p&gt;</summary>
@@ -532,31 +559,6 @@
     <category term="c#" scheme="https://chenzuoli.github.io/tags/c/"/>
     
     <category term="winui" scheme="https://chenzuoli.github.io/tags/winui/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>多进程环境同时操作时如何互斥操作</title>
-    <link href="https://chenzuoli.github.io/2024/07/28/%E5%A4%9A%E8%BF%9B%E7%A8%8B%E7%8E%AF%E5%A2%83%E5%90%8C%E6%97%B6%E6%93%8D%E4%BD%9C%E6%97%B6%E5%A6%82%E4%BD%95%E4%BA%92%E6%96%A5%E6%93%8D%E4%BD%9C/"/>
-    <id>https://chenzuoli.github.io/2024/07/28/%E5%A4%9A%E8%BF%9B%E7%A8%8B%E7%8E%AF%E5%A2%83%E5%90%8C%E6%97%B6%E6%93%8D%E4%BD%9C%E6%97%B6%E5%A6%82%E4%BD%95%E4%BA%92%E6%96%A5%E6%93%8D%E4%BD%9C/</id>
-    <published>2024-07-28T01:38:00.000Z</published>
-    <updated>2024-07-28T01:44:37.477Z</updated>
-    
-    <content type="html"><![CDATA[<p>在 Python 中，<code>fcntl</code> 模块提供了对文件控制操作的接口，包括文件锁定。<code>fcntl.flock()</code> 函数用于对文件进行锁定，以确保在多进程环境中对文件的访问是互斥的。</p><span id="more"></span><p>函数 <code>fcntl.flock(f, operation)</code> 中的参数解释如下：</p><ul><li><code>f</code> 是一个文件描述符，即打开文件后返回的文件对象的 <code>fileno()</code> 方法的结果。</li><li><code>operation</code> 是锁定操作的类型，可以是以下几种组合：<ul><li><code>fcntl.LOCK_EX</code>：表示排他锁定（exclusive lock），同一时间只能有一个进程可以对文件进行写操作。</li><li><code>fcntl.LOCK_SH</code>：表示共享锁定（shared lock），多个进程可以同时对文件进行读操作。</li><li><code>fcntl.LOCK_NB</code>：表示非阻塞模式，如果锁定不能立即获得，函数会立即返回而不是等待。</li></ul></li></ul><p>在你提供的代码片段 <code>fcntl.flock(f, fcntl.LOCK_EX | fcntl.LOCK_NB)</code> 中，<code>fcntl.LOCK_EX</code> 表示尝试获取一个排他锁定，<code>fcntl.LOCK_NB</code> 表示如果锁定不能立即获得，则不会阻塞当前进程，函数会立即返回。</p><p>如果该调用成功，表示当前进程已经获得了排他锁定，可以安全地对文件进行写操作。如果调用失败（例如因为文件已经被其他进程锁定），则表示当前进程未能获得锁定，可以进行错误处理或重试逻辑。</p><p>请注意，使用文件锁定时，需要确保在完成文件操作后释放锁定，即使在发生异常的情况下也应该如此。可以通过调用 <code>fcntl.flock(f, fcntl.LOCK_UN)</code> 来释放锁定，其中 <code>fcntl.LOCK_UN</code> 表示解锁操作。</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">import fcntl</span><br><span class="line">import atexit</span><br><span class="line"></span><br><span class="line">f = open(&quot;scheduler.lock&quot;, &quot;wb&quot;)</span><br><span class="line"># noinspection PyBroadException</span><br><span class="line">try:</span><br><span class="line">    fcntl.flock(f, fcntl.LOCK_EX | fcntl.LOCK_NB)</span><br><span class="line">    # 这里是对文件或者其他资源的写操作，不用担心其他进程会有写操作</span><br><span class="line">except:</span><br><span class="line">    pass</span><br><span class="line"></span><br><span class="line">def unlock():</span><br><span class="line">    fcntl.flock(f, fcntl.LOCK_UN)</span><br><span class="line">    f.close()</span><br><span class="line"></span><br><span class="line">atexit.register(unlock)</span><br></pre></td></tr></table></figure><p>我的使用场景就是，使用flask启动apscheduler调度器时，wsgi指定了多个worker，导致定时任务运行多次，这里限制了单个worker启动scheduler，可以解决这个问题。</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">gunicorn --workers 3 --bind 0.0.0.0:5000  --access-logfile access.log --error-logfile error.log --access-logformat  &quot;&#123;&#x27;remote_ip&#x27;:&#x27;%(h)s&#x27;,&#x27;request_id&#x27;:&#x27;%(&#123;X-Request-Id&#125;i)s&#x27;,&#x27;response_code&#x27;:&#x27;%(s)s&#x27;,&#x27;request_method&#x27;:&#x27;%(m)s&#x27;,&#x27;request_path&#x27;:&#x27;%(U)s&#x27;,&#x27;request_querystring&#x27;:&#x27;%(q)s&#x27;,&#x27;request_timetaken&#x27;:&#x27;%(D)s&#x27;,&#x27;response_length&#x27;:&#x27;%(B)s&#x27;&#125;&quot; --log-level info   --daemon   wsgi:app</span><br><span class="line"></span><br></pre></td></tr></table></figure><hr><p><b>书山有路勤为径，学海无涯苦作舟。</b></p><p>欢迎关注微信公众号：【程序员写书】<br><img src="/images/%E7%A8%8B%E5%BA%8F%E5%91%98%E5%86%99%E4%B9%A6%E5%85%AC%E4%BC%97%E5%8F%B7%E4%BA%8C%E7%BB%B4%E7%A0%81.jpg" alt="程序员写书"></p><p>一起学习，一起进步。<br></p>]]></content>
-    
-    
-    <summary type="html">&lt;p&gt;在 Python 中，&lt;code&gt;fcntl&lt;/code&gt; 模块提供了对文件控制操作的接口，包括文件锁定。&lt;code&gt;fcntl.flock()&lt;/code&gt; 函数用于对文件进行锁定，以确保在多进程环境中对文件的访问是互斥的。&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="Python" scheme="https://chenzuoli.github.io/categories/Python/"/>
-    
-    <category term="多进程" scheme="https://chenzuoli.github.io/categories/Python/%E5%A4%9A%E8%BF%9B%E7%A8%8B/"/>
-    
-    
-    <category term="python" scheme="https://chenzuoli.github.io/tags/python/"/>
-    
-    <category term="互斥" scheme="https://chenzuoli.github.io/tags/%E4%BA%92%E6%96%A5/"/>
     
   </entry>
   
