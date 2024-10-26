@@ -18828,4 +18828,33 @@ API
         <tag>chrome</tag>
       </tags>
   </entry>
+  <entry>
+    <title>linux使用firefox</title>
+    <url>/2024/10/26/linux%E4%BD%BF%E7%94%A8firefox/</url>
+    <content><![CDATA[<p>这里记录centos安装firefox、使用selenium的一些记录，且看详情。</p>
+<span id="more"></span>
+
+
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">yum install snapd</span><br><span class="line">systemctl enable --now snapd.socket</span><br><span class="line">ln -s /var/lib/snapd/snap /snap</span><br><span class="line">snap install firefox</span><br><span class="line"># 等待安装完成</span><br><span class="line"></span><br><span class="line">firefox -headless -screenshot https://developer.mozilla.com</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+<p>ok.</p>
+<p>好了，记录到这里，持续更新中。</p>
+<p>记录问题也是一种修行。</p>
+<p><img src="/images/%E4%BF%AE%E8%A1%8C.png" alt="修行"></p>
+<hr>
+<p><b>书山有路勤为径，学海无涯苦作舟。</b></p>
+<p>欢迎关注微信公众号：【乐知付加密平台】，您的网络资源可变现<br><img src="/images/wechat_account.png" alt="乐知付加密平台"></p>
+<p>一起学习，一起进步。<br></p>
+]]></content>
+      <categories>
+        <category>Linux</category>
+        <category>Centos</category>
+        <category>Firefox</category>
+      </categories>
+      <tags>
+        <tag>linux</tag>
+        <tag>firefox</tag>
+      </tags>
+  </entry>
 </search>
