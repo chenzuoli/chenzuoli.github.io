@@ -18838,6 +18838,7 @@ API
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">yum install snapd</span><br><span class="line">systemctl enable --now snapd.socket</span><br><span class="line">ln -s /var/lib/snapd/snap /snap</span><br><span class="line">snap install firefox</span><br><span class="line"># 等待安装完成</span><br><span class="line"></span><br><span class="line">firefox -headless -screenshot https://developer.mozilla.com</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
 
+<p>或者手动下载，配置环境变量：<br><a href="https://ftp.mozilla.org/pub/firefox/releases/">https://ftp.mozilla.org/pub/firefox/releases/</a><br>bzip2 -d firefox-112.0.1.tar.bz2<br>tar xvf firefox-112.0.1.tar<br>.&#x2F;firefox&#x2F;firefox –version</p>
 <p>ok.</p>
 <p>好了，记录到这里，持续更新中。</p>
 <p>记录问题也是一种修行。</p>
@@ -18855,6 +18856,35 @@ API
       <tags>
         <tag>linux</tag>
         <tag>firefox</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>winforms开发-弹出短暂提示消息</title>
+    <url>/2024/10/29/winforms%E5%BC%80%E5%8F%91-%E5%BC%B9%E5%87%BA%E7%9F%AD%E6%9A%82%E6%8F%90%E7%A4%BA%E6%B6%88%E6%81%AF/</url>
+    <content><![CDATA[<p>不多说，且看代码即可，</p>
+<span id="more"></span>
+
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">private void ShowMessageBoxWithTimeout(string message, int timeout)</span><br><span class="line">&#123;</span><br><span class="line">    // 创建提示框</span><br><span class="line">    Form messageBoxForm = new Form()</span><br><span class="line">    &#123;</span><br><span class="line">        Width = 300,</span><br><span class="line">        Height = 150,</span><br><span class="line">        FormBorderStyle = FormBorderStyle.FixedDialog,</span><br><span class="line">        Text = &quot;提示&quot;,</span><br><span class="line">        StartPosition = FormStartPosition.CenterScreen</span><br><span class="line">    &#125;;</span><br><span class="line"></span><br><span class="line">    Label messageLabel = new Label()</span><br><span class="line">    &#123;</span><br><span class="line">        TextAlign = ContentAlignment.MiddleCenter,</span><br><span class="line">        AutoSize = true,</span><br><span class="line">        Text = message,</span><br><span class="line">        Left = 50,</span><br><span class="line">        Top = 50</span><br><span class="line">    &#125;;</span><br><span class="line">    messageBoxForm.Controls.Add(messageLabel);</span><br><span class="line"></span><br><span class="line">    // 显示提示框</span><br><span class="line">    messageBoxForm.Show();</span><br><span class="line"></span><br><span class="line">    // 设置定时器关闭提示框</span><br><span class="line">    System.Windows.Forms.Timer timer = new System.Windows.Forms.Timer()</span><br><span class="line">    &#123;</span><br><span class="line">        Interval = timeout</span><br><span class="line">    &#125;;</span><br><span class="line">    timer.Tick += (sender, e) =&gt;</span><br><span class="line">    &#123;</span><br><span class="line">        timer.Stop();</span><br><span class="line">        messageBoxForm.Close();</span><br><span class="line">    &#125;;</span><br><span class="line">    timer.Start();</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">// 添加一个btn绑定此事件</span><br><span class="line">private void button1_Click(object sender, EventArgs e)</span><br><span class="line">&#123;</span><br><span class="line">    ShowMessageBoxWithTimeout(&quot;这是一个提示消息！&quot;, 3000);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+
+<p>好了，记录到这里，持续更新中。</p>
+<p>记录问题也是一种修行。</p>
+<p><img src="/images/%E4%BF%AE%E8%A1%8C.png" alt="修行"></p>
+<hr>
+<p><b>书山有路勤为径，学海无涯苦作舟。</b></p>
+<p>欢迎关注微信公众号：【乐知付加密平台】，您的网络资源可变现<br><img src="/images/wechat_account.png" alt="乐知付加密平台"></p>
+<p>一起学习，一起进步。<br></p>
+]]></content>
+      <categories>
+        <category>客户端</category>
+        <category>windows</category>
+        <category>winforms</category>
+      </categories>
+      <tags>
+        <tag>windows</tag>
+        <tag>winforms</tag>
       </tags>
   </entry>
 </search>

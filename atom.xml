@@ -6,7 +6,7 @@
   <link href="https://chenzuoli.github.io/atom.xml" rel="self"/>
   
   <link href="https://chenzuoli.github.io/"/>
-  <updated>2024-10-26T02:34:58.733Z</updated>
+  <updated>2024-10-29T14:48:06.554Z</updated>
   <id>https://chenzuoli.github.io/</id>
   
   <author>
@@ -17,13 +17,40 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>winforms开发-弹出短暂提示消息</title>
+    <link href="https://chenzuoli.github.io/2024/10/29/winforms%E5%BC%80%E5%8F%91-%E5%BC%B9%E5%87%BA%E7%9F%AD%E6%9A%82%E6%8F%90%E7%A4%BA%E6%B6%88%E6%81%AF/"/>
+    <id>https://chenzuoli.github.io/2024/10/29/winforms%E5%BC%80%E5%8F%91-%E5%BC%B9%E5%87%BA%E7%9F%AD%E6%9A%82%E6%8F%90%E7%A4%BA%E6%B6%88%E6%81%AF/</id>
+    <published>2024-10-29T14:41:59.000Z</published>
+    <updated>2024-10-29T14:48:06.554Z</updated>
+    
+    <content type="html"><![CDATA[<p>不多说，且看代码即可，</p><span id="more"></span><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">private void ShowMessageBoxWithTimeout(string message, int timeout)</span><br><span class="line">&#123;</span><br><span class="line">    // 创建提示框</span><br><span class="line">    Form messageBoxForm = new Form()</span><br><span class="line">    &#123;</span><br><span class="line">        Width = 300,</span><br><span class="line">        Height = 150,</span><br><span class="line">        FormBorderStyle = FormBorderStyle.FixedDialog,</span><br><span class="line">        Text = &quot;提示&quot;,</span><br><span class="line">        StartPosition = FormStartPosition.CenterScreen</span><br><span class="line">    &#125;;</span><br><span class="line"></span><br><span class="line">    Label messageLabel = new Label()</span><br><span class="line">    &#123;</span><br><span class="line">        TextAlign = ContentAlignment.MiddleCenter,</span><br><span class="line">        AutoSize = true,</span><br><span class="line">        Text = message,</span><br><span class="line">        Left = 50,</span><br><span class="line">        Top = 50</span><br><span class="line">    &#125;;</span><br><span class="line">    messageBoxForm.Controls.Add(messageLabel);</span><br><span class="line"></span><br><span class="line">    // 显示提示框</span><br><span class="line">    messageBoxForm.Show();</span><br><span class="line"></span><br><span class="line">    // 设置定时器关闭提示框</span><br><span class="line">    System.Windows.Forms.Timer timer = new System.Windows.Forms.Timer()</span><br><span class="line">    &#123;</span><br><span class="line">        Interval = timeout</span><br><span class="line">    &#125;;</span><br><span class="line">    timer.Tick += (sender, e) =&gt;</span><br><span class="line">    &#123;</span><br><span class="line">        timer.Stop();</span><br><span class="line">        messageBoxForm.Close();</span><br><span class="line">    &#125;;</span><br><span class="line">    timer.Start();</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">// 添加一个btn绑定此事件</span><br><span class="line">private void button1_Click(object sender, EventArgs e)</span><br><span class="line">&#123;</span><br><span class="line">    ShowMessageBoxWithTimeout(&quot;这是一个提示消息！&quot;, 3000);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>好了，记录到这里，持续更新中。</p><p>记录问题也是一种修行。</p><p><img src="/images/%E4%BF%AE%E8%A1%8C.png" alt="修行"></p><hr><p><b>书山有路勤为径，学海无涯苦作舟。</b></p><p>欢迎关注微信公众号：【乐知付加密平台】，您的网络资源可变现<br><img src="/images/wechat_account.png" alt="乐知付加密平台"></p><p>一起学习，一起进步。<br></p>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;不多说，且看代码即可，&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="客户端" scheme="https://chenzuoli.github.io/categories/%E5%AE%A2%E6%88%B7%E7%AB%AF/"/>
+    
+    <category term="windows" scheme="https://chenzuoli.github.io/categories/%E5%AE%A2%E6%88%B7%E7%AB%AF/windows/"/>
+    
+    <category term="winforms" scheme="https://chenzuoli.github.io/categories/%E5%AE%A2%E6%88%B7%E7%AB%AF/windows/winforms/"/>
+    
+    
+    <category term="windows" scheme="https://chenzuoli.github.io/tags/windows/"/>
+    
+    <category term="winforms" scheme="https://chenzuoli.github.io/tags/winforms/"/>
+    
+  </entry>
+  
+  <entry>
     <title>linux使用firefox</title>
     <link href="https://chenzuoli.github.io/2024/10/26/linux%E4%BD%BF%E7%94%A8firefox/"/>
     <id>https://chenzuoli.github.io/2024/10/26/linux%E4%BD%BF%E7%94%A8firefox/</id>
     <published>2024-10-26T02:33:14.000Z</published>
-    <updated>2024-10-26T02:34:58.733Z</updated>
+    <updated>2024-10-26T16:46:58.318Z</updated>
     
-    <content type="html"><![CDATA[<p>这里记录centos安装firefox、使用selenium的一些记录，且看详情。</p><span id="more"></span><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">yum install snapd</span><br><span class="line">systemctl enable --now snapd.socket</span><br><span class="line">ln -s /var/lib/snapd/snap /snap</span><br><span class="line">snap install firefox</span><br><span class="line"># 等待安装完成</span><br><span class="line"></span><br><span class="line">firefox -headless -screenshot https://developer.mozilla.com</span><br><span class="line"></span><br></pre></td></tr></table></figure><p>ok.</p><p>好了，记录到这里，持续更新中。</p><p>记录问题也是一种修行。</p><p><img src="/images/%E4%BF%AE%E8%A1%8C.png" alt="修行"></p><hr><p><b>书山有路勤为径，学海无涯苦作舟。</b></p><p>欢迎关注微信公众号：【乐知付加密平台】，您的网络资源可变现<br><img src="/images/wechat_account.png" alt="乐知付加密平台"></p><p>一起学习，一起进步。<br></p>]]></content>
+    <content type="html"><![CDATA[<p>这里记录centos安装firefox、使用selenium的一些记录，且看详情。</p><span id="more"></span><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">yum install snapd</span><br><span class="line">systemctl enable --now snapd.socket</span><br><span class="line">ln -s /var/lib/snapd/snap /snap</span><br><span class="line">snap install firefox</span><br><span class="line"># 等待安装完成</span><br><span class="line"></span><br><span class="line">firefox -headless -screenshot https://developer.mozilla.com</span><br><span class="line"></span><br></pre></td></tr></table></figure><p>或者手动下载，配置环境变量：<br><a href="https://ftp.mozilla.org/pub/firefox/releases/">https://ftp.mozilla.org/pub/firefox/releases/</a><br>bzip2 -d firefox-112.0.1.tar.bz2<br>tar xvf firefox-112.0.1.tar<br>.&#x2F;firefox&#x2F;firefox –version</p><p>ok.</p><p>好了，记录到这里，持续更新中。</p><p>记录问题也是一种修行。</p><p><img src="/images/%E4%BF%AE%E8%A1%8C.png" alt="修行"></p><hr><p><b>书山有路勤为径，学海无涯苦作舟。</b></p><p>欢迎关注微信公众号：【乐知付加密平台】，您的网络资源可变现<br><img src="/images/wechat_account.png" alt="乐知付加密平台"></p><p>一起学习，一起进步。<br></p>]]></content>
     
     
     <summary type="html">&lt;p&gt;这里记录centos安装firefox、使用selenium的一些记录，且看详情。&lt;/p&gt;</summary>
@@ -532,29 +559,6 @@
     <category term="windows" scheme="https://chenzuoli.github.io/tags/windows/"/>
     
     <category term="格式化" scheme="https://chenzuoli.github.io/tags/%E6%A0%BC%E5%BC%8F%E5%8C%96/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>博客园文章后缀</title>
-    <link href="https://chenzuoli.github.io/2024/09/23/%E5%8D%9A%E5%AE%A2%E5%9B%AD%E6%96%87%E7%AB%A0%E5%90%8E%E7%BC%80/"/>
-    <id>https://chenzuoli.github.io/2024/09/23/%E5%8D%9A%E5%AE%A2%E5%9B%AD%E6%96%87%E7%AB%A0%E5%90%8E%E7%BC%80/</id>
-    <published>2024-09-23T13:46:49.000Z</published>
-    <updated>2024-10-06T02:27:51.521Z</updated>
-    
-    <content type="html"><![CDATA[<p>1</p><span id="more"></span><p>记录问题也是一种修行。</p><p><img src="https://img2024.cnblogs.com/blog/1455070/202409/1455070-20240924224811849-2134953503.png" alt="修行"></p><hr><p>欢迎关注微信公众号，你的资源可变现：【乐知付加密平台】</p><img src="https://img2024.cnblogs.com/blog/1455070/202409/1455070-20240919212128860-1944218544.png" alt="乐知付加密平台" width="500" height="180"><p>欢迎关注微信公众号，这里记录博主的创业之旅：【程序员写书】</p><img src="https://img2024.cnblogs.com/blog/1455070/202409/1455070-20240919212147497-157482784.png" alt="程序员写书" width="500" height="180"><p>一起学习，一起进步。<br></p>]]></content>
-    
-    
-    <summary type="html">&lt;p&gt;1&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="其他" scheme="https://chenzuoli.github.io/categories/%E5%85%B6%E4%BB%96/"/>
-    
-    <category term="博客园" scheme="https://chenzuoli.github.io/categories/%E5%85%B6%E4%BB%96/%E5%8D%9A%E5%AE%A2%E5%9B%AD/"/>
-    
-    
-    <category term="博客园" scheme="https://chenzuoli.github.io/tags/%E5%8D%9A%E5%AE%A2%E5%9B%AD/"/>
     
   </entry>
   
