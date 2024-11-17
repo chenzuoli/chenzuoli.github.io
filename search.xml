@@ -19006,4 +19006,33 @@ API
         <tag>winforms</tag>
       </tags>
   </entry>
+  <entry>
+    <title>html-二维码下方添加任意文字导出为图片</title>
+    <url>/2024/11/17/html-%E4%BA%8C%E7%BB%B4%E7%A0%81%E4%B8%8B%E6%96%B9%E6%B7%BB%E5%8A%A0%E4%BB%BB%E6%84%8F%E6%96%87%E5%AD%97%E5%AF%BC%E5%87%BA%E4%B8%BA%E5%9B%BE%E7%89%87/</url>
+    <content><![CDATA[<p>话不多说，直接上代码。</p>
+<span id="more"></span>
+
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html&gt;</span><br><span class="line">  &lt;head&gt;</span><br><span class="line">    &lt;base href=&quot;http://demos.telerik.com/kendo-ui/qrcode/index&quot;&gt;</span><br><span class="line">    &lt;style&gt;html &#123; font-size: 14px; font-family: Arial, Helvetica, sans-serif; &#125;&lt;/style&gt;</span><br><span class="line">    &lt;title&gt;&lt;/title&gt;</span><br><span class="line"></span><br><span class="line">    &lt;script src=&quot;https://code.jquery.com/jquery-3.4.1.min.js&quot;&gt;&lt;/script&gt;</span><br><span class="line">    &lt;script src=&quot;https://kendo.cdn.telerik.com/2023.3.1114/js/kendo.all.min.js&quot;&gt;&lt;/script&gt;</span><br><span class="line"></span><br><span class="line">    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://kendo.cdn.telerik.com/themes/7.0.2/default/default-ocean-blue.css&quot;&gt;</span><br><span class="line">    &lt;script src=&quot;https://unpkg.com/jszip/dist/jszip.min.js&quot;&gt;&lt;/script&gt;</span><br><span class="line">  &lt;/head&gt;</span><br><span class="line">  &lt;body&gt;</span><br><span class="line"></span><br><span class="line">    &lt;button id=&quot;export&quot; class=&quot;k-button k-button-md k-rounded-md k-button-solid k-button-solid-base&quot;&gt;Export&lt;/button&gt;</span><br><span class="line">    &lt;br&gt;&lt;br/&gt;</span><br><span class="line"></span><br><span class="line">    &lt;div id=&quot;wrapper&quot;&gt;</span><br><span class="line">      &lt;div id=&quot;qrcode&quot;&gt;&lt;/div&gt;</span><br><span class="line">      &lt;h3&gt;QRCode with text&lt;/h3&gt;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line"></span><br><span class="line">    &lt;script type=&quot;text/javascript&quot;&gt;</span><br><span class="line"></span><br><span class="line">      $(document).ready(function () &#123;</span><br><span class="line">        </span><br><span class="line">        $(&quot;#qrcode&quot;).kendoQRCode(&#123;</span><br><span class="line">          value: &quot;https://demos.telerik.com/kendo-ui/qrcode/index&quot;,</span><br><span class="line">          size: 120,</span><br><span class="line">          border: &#123;</span><br><span class="line">            color: &quot;#000000&quot;,</span><br><span class="line">            width: 3</span><br><span class="line">          &#125;</span><br><span class="line">        &#125;);</span><br><span class="line">        </span><br><span class="line">        $(&quot;#export&quot;).click(function() &#123;</span><br><span class="line">          kendo.drawing.drawDOM($(&quot;#wrapper&quot;))</span><br><span class="line">            .then(function(group) &#123;</span><br><span class="line">            return kendo.drawing.exportImage(group, &#123; width: &quot;250px&quot;, height: &quot;250px&quot; &#125;);</span><br><span class="line">          &#125;)</span><br><span class="line">            .done(function(data) &#123;</span><br><span class="line">            kendo.saveAs(&#123;</span><br><span class="line">              dataURI: data,</span><br><span class="line">              fileName: &quot;QRCode.png&quot;</span><br><span class="line">            &#125;);</span><br><span class="line">          &#125;);</span><br><span class="line">        &#125;);</span><br><span class="line"></span><br><span class="line">      &#125;);</span><br><span class="line"></span><br><span class="line">    &lt;/script&gt;</span><br><span class="line">  &lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure>
+
+
+
+
+<p>好了，记录到这里，持续更新中。</p>
+<p>记录问题也是一种修行。</p>
+<p><img src="/images/%E4%BF%AE%E8%A1%8C.png" alt="修行"></p>
+<hr>
+<p><b>书山有路勤为径，学海无涯苦作舟。</b></p>
+<p>欢迎关注微信公众号：【乐知付加密平台】，您的网络资源可变现<br><img src="/images/wechat_account.png" alt="乐知付加密平台"></p>
+<p>一起学习，一起进步。<br></p>
+]]></content>
+      <categories>
+        <category>前端</category>
+        <category>HTML</category>
+      </categories>
+      <tags>
+        <tag>html</tag>
+        <tag>qrcode</tag>
+        <tag>text</tag>
+      </tags>
+  </entry>
 </search>

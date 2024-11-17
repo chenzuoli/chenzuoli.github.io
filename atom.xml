@@ -6,7 +6,7 @@
   <link href="https://chenzuoli.github.io/atom.xml" rel="self"/>
   
   <link href="https://chenzuoli.github.io/"/>
-  <updated>2024-11-17T02:03:17.029Z</updated>
+  <updated>2024-11-17T03:41:06.568Z</updated>
   <id>https://chenzuoli.github.io/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>html-二维码下方添加任意文字导出为图片</title>
+    <link href="https://chenzuoli.github.io/2024/11/17/html-%E4%BA%8C%E7%BB%B4%E7%A0%81%E4%B8%8B%E6%96%B9%E6%B7%BB%E5%8A%A0%E4%BB%BB%E6%84%8F%E6%96%87%E5%AD%97%E5%AF%BC%E5%87%BA%E4%B8%BA%E5%9B%BE%E7%89%87/"/>
+    <id>https://chenzuoli.github.io/2024/11/17/html-%E4%BA%8C%E7%BB%B4%E7%A0%81%E4%B8%8B%E6%96%B9%E6%B7%BB%E5%8A%A0%E4%BB%BB%E6%84%8F%E6%96%87%E5%AD%97%E5%AF%BC%E5%87%BA%E4%B8%BA%E5%9B%BE%E7%89%87/</id>
+    <published>2024-11-17T03:39:18.000Z</published>
+    <updated>2024-11-17T03:41:06.568Z</updated>
+    
+    <content type="html"><![CDATA[<p>话不多说，直接上代码。</p><span id="more"></span><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br></pre></td><td class="code"><pre><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html&gt;</span><br><span class="line">  &lt;head&gt;</span><br><span class="line">    &lt;base href=&quot;http://demos.telerik.com/kendo-ui/qrcode/index&quot;&gt;</span><br><span class="line">    &lt;style&gt;html &#123; font-size: 14px; font-family: Arial, Helvetica, sans-serif; &#125;&lt;/style&gt;</span><br><span class="line">    &lt;title&gt;&lt;/title&gt;</span><br><span class="line"></span><br><span class="line">    &lt;script src=&quot;https://code.jquery.com/jquery-3.4.1.min.js&quot;&gt;&lt;/script&gt;</span><br><span class="line">    &lt;script src=&quot;https://kendo.cdn.telerik.com/2023.3.1114/js/kendo.all.min.js&quot;&gt;&lt;/script&gt;</span><br><span class="line"></span><br><span class="line">    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://kendo.cdn.telerik.com/themes/7.0.2/default/default-ocean-blue.css&quot;&gt;</span><br><span class="line">    &lt;script src=&quot;https://unpkg.com/jszip/dist/jszip.min.js&quot;&gt;&lt;/script&gt;</span><br><span class="line">  &lt;/head&gt;</span><br><span class="line">  &lt;body&gt;</span><br><span class="line"></span><br><span class="line">    &lt;button id=&quot;export&quot; class=&quot;k-button k-button-md k-rounded-md k-button-solid k-button-solid-base&quot;&gt;Export&lt;/button&gt;</span><br><span class="line">    &lt;br&gt;&lt;br/&gt;</span><br><span class="line"></span><br><span class="line">    &lt;div id=&quot;wrapper&quot;&gt;</span><br><span class="line">      &lt;div id=&quot;qrcode&quot;&gt;&lt;/div&gt;</span><br><span class="line">      &lt;h3&gt;QRCode with text&lt;/h3&gt;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line"></span><br><span class="line">    &lt;script type=&quot;text/javascript&quot;&gt;</span><br><span class="line"></span><br><span class="line">      $(document).ready(function () &#123;</span><br><span class="line">        </span><br><span class="line">        $(&quot;#qrcode&quot;).kendoQRCode(&#123;</span><br><span class="line">          value: &quot;https://demos.telerik.com/kendo-ui/qrcode/index&quot;,</span><br><span class="line">          size: 120,</span><br><span class="line">          border: &#123;</span><br><span class="line">            color: &quot;#000000&quot;,</span><br><span class="line">            width: 3</span><br><span class="line">          &#125;</span><br><span class="line">        &#125;);</span><br><span class="line">        </span><br><span class="line">        $(&quot;#export&quot;).click(function() &#123;</span><br><span class="line">          kendo.drawing.drawDOM($(&quot;#wrapper&quot;))</span><br><span class="line">            .then(function(group) &#123;</span><br><span class="line">            return kendo.drawing.exportImage(group, &#123; width: &quot;250px&quot;, height: &quot;250px&quot; &#125;);</span><br><span class="line">          &#125;)</span><br><span class="line">            .done(function(data) &#123;</span><br><span class="line">            kendo.saveAs(&#123;</span><br><span class="line">              dataURI: data,</span><br><span class="line">              fileName: &quot;QRCode.png&quot;</span><br><span class="line">            &#125;);</span><br><span class="line">          &#125;);</span><br><span class="line">        &#125;);</span><br><span class="line"></span><br><span class="line">      &#125;);</span><br><span class="line"></span><br><span class="line">    &lt;/script&gt;</span><br><span class="line">  &lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure><p>好了，记录到这里，持续更新中。</p><p>记录问题也是一种修行。</p><p><img src="/images/%E4%BF%AE%E8%A1%8C.png" alt="修行"></p><hr><p><b>书山有路勤为径，学海无涯苦作舟。</b></p><p>欢迎关注微信公众号：【乐知付加密平台】，您的网络资源可变现<br><img src="/images/wechat_account.png" alt="乐知付加密平台"></p><p>一起学习，一起进步。<br></p>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;话不多说，直接上代码。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="前端" scheme="https://chenzuoli.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
+    
+    <category term="HTML" scheme="https://chenzuoli.github.io/categories/%E5%89%8D%E7%AB%AF/HTML/"/>
+    
+    
+    <category term="html" scheme="https://chenzuoli.github.io/tags/html/"/>
+    
+    <category term="qrcode" scheme="https://chenzuoli.github.io/tags/qrcode/"/>
+    
+    <category term="text" scheme="https://chenzuoli.github.io/tags/text/"/>
+    
+  </entry>
   
   <entry>
     <title>html-在二维码的任意位置添加文字</title>
@@ -525,35 +552,6 @@
     <category term="windows" scheme="https://chenzuoli.github.io/tags/windows/"/>
     
     <category term="winforms" scheme="https://chenzuoli.github.io/tags/winforms/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>winforms基本操作-将datagridview内容保存为excel文件</title>
-    <link href="https://chenzuoli.github.io/2024/10/06/winforms%E5%B0%86datagridview%E5%86%85%E5%AE%B9%E4%BF%9D%E5%AD%98%E4%B8%BAexcel%E6%96%87%E4%BB%B6/"/>
-    <id>https://chenzuoli.github.io/2024/10/06/winforms%E5%B0%86datagridview%E5%86%85%E5%AE%B9%E4%BF%9D%E5%AD%98%E4%B8%BAexcel%E6%96%87%E4%BB%B6/</id>
-    <published>2024-10-06T02:29:08.000Z</published>
-    <updated>2024-10-06T02:33:10.654Z</updated>
-    
-    <content type="html"><![CDATA[<p>这里记录一下将winforms展示的datagridview，导出或保存为excel文件。</p><span id="more"></span><p>这里说一下环境、版本信息：<br>win系统：win11<br>框架：winforms<br>依赖：Microsoft.Office.Interop.Excel<br>.net：8.0.401<br>.net framework: 4.8</p><p>DataGridView对象为dataGridView1，然后添加一个按钮，绑定事件btnConfirm即可。</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br></pre></td><td class="code"><pre><span class="line">private void btnConfirm(object sender, EventArgs e)</span><br><span class="line">&#123;</span><br><span class="line">    Microsoft.Office.Interop.Excel.Application excelApp = new Microsoft.Office.Interop.Excel.Application();</span><br><span class="line">    if (excelApp == null)</span><br><span class="line">    &#123;</span><br><span class="line">        MessageBox.Show(&quot;无法创建Excel，您可能需要安装Excel&quot;);</span><br><span class="line">        return;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    // 创建excel工作薄</span><br><span class="line">    Workbook workBook = excelApp.Workbooks.Add(Type.Missing);</span><br><span class="line">    Worksheet workSheet = null;</span><br><span class="line"></span><br><span class="line">    // 创建工作表</span><br><span class="line">    workSheet = workBook.Sheets[&quot;Sheet1&quot;];</span><br><span class="line">    workSheet = workBook.ActiveSheet;</span><br><span class="line"></span><br><span class="line">    // 表头</span><br><span class="line">    Range headerRow = workSheet.Rows[1];</span><br><span class="line">    headerRow.Cells[1, 1] = &quot;文件路径&quot;;</span><br><span class="line">    headerRow.Cells[1, 2] = &quot;文件名&quot;;</span><br><span class="line">    // 表头格式</span><br><span class="line">    headerRow.Font.Bold = true;</span><br><span class="line">    headerRow.Interior.Color = ColorTranslator.ToOle(Color.LightBlue);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    // 将DataGridView表格内数据复制到excel工作表</span><br><span class="line">    for (int i = 0; i &lt; dataGridView1.Rows.Count; i++)</span><br><span class="line">    &#123;</span><br><span class="line">        for (int j = 0; j &lt; dataGridView1.Columns.Count; j++)</span><br><span class="line">        &#123;</span><br><span class="line">            workSheet.Cells[i + 2, j + 1] = dataGridView1.Rows[i].Cells[j].Value;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    // 导出到excel文件</span><br><span class="line">    SaveFileDialog saveFileDialog = new SaveFileDialog();</span><br><span class="line">    saveFileDialog.Filter = &quot;Excel Workbook (*.xlsx)|*.xlsx|Excel 97-2003 Workbook (*.xls)|*.xls&quot;;</span><br><span class="line">    saveFileDialog.Title = &quot;保存文件名称到Excel&quot;;</span><br><span class="line">    saveFileDialog.ShowDialog();</span><br><span class="line"></span><br><span class="line">    if (saveFileDialog.FileName != &quot;&quot;)</span><br><span class="line">    &#123;</span><br><span class="line">        try</span><br><span class="line">        &#123;</span><br><span class="line">            workBook.SaveAs(saveFileDialog.FileName);</span><br><span class="line">            workBook.Close(false);</span><br><span class="line">            excelApp.Quit();</span><br><span class="line"></span><br><span class="line">            System.Runtime.InteropServices.Marshal.ReleaseComObject(workSheet);</span><br><span class="line">            System.Runtime.InteropServices.Marshal.ReleaseComObject(workBook);</span><br><span class="line">            System.Runtime.InteropServices.Marshal.ReleaseComObject(excelApp);</span><br><span class="line"></span><br><span class="line">            workSheet = null;</span><br><span class="line">            workBook = null;</span><br><span class="line">            excelApp = null;</span><br><span class="line"></span><br><span class="line">            MessageBox.Show(&quot;Excel文件已保存到：&quot; + saveFileDialog.FileName);</span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line">        catch (Exception ex)</span><br><span class="line">        &#123;</span><br><span class="line">            MessageBox.Show(&quot;保存文件名称到Excel失败，请稍后重试。&quot; + ex.Message);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>好了，记录到这里，如有问题，欢迎大家联系我讨论。</p><p><img src="/images/%E4%BF%AE%E8%A1%8C.png" alt="修行"></p><hr><p><b>书山有路勤为径，学海无涯苦作舟。</b></p><p>欢迎关注微信公众号：【乐知付加密平台】，您的网络资源可变现<br><img src="/images/wechat_account.png" alt="乐知付加密平台"></p><p>一起学习，一起进步。<br></p>]]></content>
-    
-    
-    <summary type="html">&lt;p&gt;这里记录一下将winforms展示的datagridview，导出或保存为excel文件。&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="客户端" scheme="https://chenzuoli.github.io/categories/%E5%AE%A2%E6%88%B7%E7%AB%AF/"/>
-    
-    <category term="windows" scheme="https://chenzuoli.github.io/categories/%E5%AE%A2%E6%88%B7%E7%AB%AF/windows/"/>
-    
-    <category term="winforms" scheme="https://chenzuoli.github.io/categories/%E5%AE%A2%E6%88%B7%E7%AB%AF/windows/winforms/"/>
-    
-    
-    <category term="windows" scheme="https://chenzuoli.github.io/tags/windows/"/>
-    
-    <category term="winforms" scheme="https://chenzuoli.github.io/tags/winforms/"/>
-    
-    <category term="datagridview" scheme="https://chenzuoli.github.io/tags/datagridview/"/>
     
   </entry>
   
