@@ -19035,4 +19035,48 @@ API
         <tag>text</tag>
       </tags>
   </entry>
+  <entry>
+    <title>小工具-markdown文件导入博客园cnblogs</title>
+    <url>/2024/11/20/%E5%B0%8F%E5%B7%A5%E5%85%B7-markdown%E6%96%87%E4%BB%B6%E5%AF%BC%E5%85%A5%E5%8D%9A%E5%AE%A2%E5%9B%ADcnblogs/</url>
+    <content><![CDATA[<p>开源一个批量导出csdn博客，导入博客园cnblogs工具，供大家备份博客、迁移博客使用，windows客户端工具，操作简便易用。</p>
+<p>这篇文章介绍如何批量导入博客园网站。</p>
+<span id="more"></span>
+
+
+<ol>
+<li><p>软件界面，选择【博客园导入】<br><img src="/2024/11/20/%E5%B0%8F%E5%B7%A5%E5%85%B7-markdown%E6%96%87%E4%BB%B6%E5%AF%BC%E5%85%A5%E5%8D%9A%E5%AE%A2%E5%9B%ADcnblogs/12e171f9bb9958b685a15487447fef8.png" alt="1"></p>
+</li>
+<li><p>获取博客园登录cookie<br><img src="/2024/11/20/%E5%B0%8F%E5%B7%A5%E5%85%B7-markdown%E6%96%87%E4%BB%B6%E5%AF%BC%E5%85%A5%E5%8D%9A%E5%AE%A2%E5%9B%ADcnblogs/fa7e408ee247ca23787ed9f5e63324d.png" alt="2"></p>
+</li>
+<li><p>获取博客园导入xsrf-token，需要先手动导入一篇markdown文章，获取token<br><img src="/2024/11/20/%E5%B0%8F%E5%B7%A5%E5%85%B7-markdown%E6%96%87%E4%BB%B6%E5%AF%BC%E5%85%A5%E5%8D%9A%E5%AE%A2%E5%9B%ADcnblogs/3656be6f8239a021b1b62ea4814a215.png" alt="3"></p>
+</li>
+<li><p>分类、标签、描述<br>这三个输入框可选，标注文章分类、标签和对应的描述信息的</p>
+</li>
+<li><p>是否草稿<br><img src="/2024/11/20/%E5%B0%8F%E5%B7%A5%E5%85%B7-markdown%E6%96%87%E4%BB%B6%E5%AF%BC%E5%85%A5%E5%8D%9A%E5%AE%A2%E5%9B%ADcnblogs/image-3.png" alt="4"></p>
+</li>
+<li><p>导入结果<br><img src="/2024/11/20/%E5%B0%8F%E5%B7%A5%E5%85%B7-markdown%E6%96%87%E4%BB%B6%E5%AF%BC%E5%85%A5%E5%8D%9A%E5%AE%A2%E5%9B%ADcnblogs/image-4.png" alt="5"></p>
+</li>
+</ol>
+<p>ok，导入完成。</p>
+<p>如果有什么问题，请大家提出，我即刻改正修复。</p>
+<p>我是chenzuoli，一个喜欢写代码的程序员。</p>
+<p>好了，记录到这里，持续更新中。</p>
+<p>记录问题也是一种修行。</p>
+<p><img src="/images/%E4%BF%AE%E8%A1%8C.png" alt="修行"></p>
+<hr>
+<p><b>书山有路勤为径，学海无涯苦作舟。</b></p>
+<p>欢迎关注微信公众号：【乐知付加密平台】，您的网络资源可变现<br><img src="/images/wechat_account.png" alt="乐知付加密平台"></p>
+<p>一起学习，一起进步。<br></p>
+]]></content>
+      <categories>
+        <category>客户端</category>
+        <category>windows</category>
+        <category>winforms</category>
+      </categories>
+      <tags>
+        <tag>windows</tag>
+        <tag>winforms</tag>
+        <tag>cnblogs</tag>
+      </tags>
+  </entry>
 </search>

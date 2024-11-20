@@ -6,7 +6,7 @@
   <link href="https://chenzuoli.github.io/atom.xml" rel="self"/>
   
   <link href="https://chenzuoli.github.io/"/>
-  <updated>2024-11-17T03:41:06.568Z</updated>
+  <updated>2024-11-20T14:57:15.329Z</updated>
   <id>https://chenzuoli.github.io/</id>
   
   <author>
@@ -15,6 +15,36 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>小工具-markdown文件导入博客园cnblogs</title>
+    <link href="https://chenzuoli.github.io/2024/11/20/%E5%B0%8F%E5%B7%A5%E5%85%B7-markdown%E6%96%87%E4%BB%B6%E5%AF%BC%E5%85%A5%E5%8D%9A%E5%AE%A2%E5%9B%ADcnblogs/"/>
+    <id>https://chenzuoli.github.io/2024/11/20/%E5%B0%8F%E5%B7%A5%E5%85%B7-markdown%E6%96%87%E4%BB%B6%E5%AF%BC%E5%85%A5%E5%8D%9A%E5%AE%A2%E5%9B%ADcnblogs/</id>
+    <published>2024-11-20T14:03:17.000Z</published>
+    <updated>2024-11-20T14:57:15.329Z</updated>
+    
+    <content type="html"><![CDATA[<p>开源一个批量导出csdn博客，导入博客园cnblogs工具，供大家备份博客、迁移博客使用，windows客户端工具，操作简便易用。</p><p>这篇文章介绍如何批量导入博客园网站。</p><span id="more"></span><ol><li><p>软件界面，选择【博客园导入】<br><img src="/2024/11/20/%E5%B0%8F%E5%B7%A5%E5%85%B7-markdown%E6%96%87%E4%BB%B6%E5%AF%BC%E5%85%A5%E5%8D%9A%E5%AE%A2%E5%9B%ADcnblogs/12e171f9bb9958b685a15487447fef8.png" alt="1"></p></li><li><p>获取博客园登录cookie<br><img src="/2024/11/20/%E5%B0%8F%E5%B7%A5%E5%85%B7-markdown%E6%96%87%E4%BB%B6%E5%AF%BC%E5%85%A5%E5%8D%9A%E5%AE%A2%E5%9B%ADcnblogs/fa7e408ee247ca23787ed9f5e63324d.png" alt="2"></p></li><li><p>获取博客园导入xsrf-token，需要先手动导入一篇markdown文章，获取token<br><img src="/2024/11/20/%E5%B0%8F%E5%B7%A5%E5%85%B7-markdown%E6%96%87%E4%BB%B6%E5%AF%BC%E5%85%A5%E5%8D%9A%E5%AE%A2%E5%9B%ADcnblogs/3656be6f8239a021b1b62ea4814a215.png" alt="3"></p></li><li><p>分类、标签、描述<br>这三个输入框可选，标注文章分类、标签和对应的描述信息的</p></li><li><p>是否草稿<br><img src="/2024/11/20/%E5%B0%8F%E5%B7%A5%E5%85%B7-markdown%E6%96%87%E4%BB%B6%E5%AF%BC%E5%85%A5%E5%8D%9A%E5%AE%A2%E5%9B%ADcnblogs/image-3.png" alt="4"></p></li><li><p>导入结果<br><img src="/2024/11/20/%E5%B0%8F%E5%B7%A5%E5%85%B7-markdown%E6%96%87%E4%BB%B6%E5%AF%BC%E5%85%A5%E5%8D%9A%E5%AE%A2%E5%9B%ADcnblogs/image-4.png" alt="5"></p></li></ol><p>ok，导入完成。</p><p>如果有什么问题，请大家提出，我即刻改正修复。</p><p>我是chenzuoli，一个喜欢写代码的程序员。</p><p>好了，记录到这里，持续更新中。</p><p>记录问题也是一种修行。</p><p><img src="/images/%E4%BF%AE%E8%A1%8C.png" alt="修行"></p><hr><p><b>书山有路勤为径，学海无涯苦作舟。</b></p><p>欢迎关注微信公众号：【乐知付加密平台】，您的网络资源可变现<br><img src="/images/wechat_account.png" alt="乐知付加密平台"></p><p>一起学习，一起进步。<br></p>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;开源一个批量导出csdn博客，导入博客园cnblogs工具，供大家备份博客、迁移博客使用，windows客户端工具，操作简便易用。&lt;/p&gt;
+&lt;p&gt;这篇文章介绍如何批量导入博客园网站。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="客户端" scheme="https://chenzuoli.github.io/categories/%E5%AE%A2%E6%88%B7%E7%AB%AF/"/>
+    
+    <category term="windows" scheme="https://chenzuoli.github.io/categories/%E5%AE%A2%E6%88%B7%E7%AB%AF/windows/"/>
+    
+    <category term="winforms" scheme="https://chenzuoli.github.io/categories/%E5%AE%A2%E6%88%B7%E7%AB%AF/windows/winforms/"/>
+    
+    
+    <category term="windows" scheme="https://chenzuoli.github.io/tags/windows/"/>
+    
+    <category term="winforms" scheme="https://chenzuoli.github.io/tags/winforms/"/>
+    
+    <category term="cnblogs" scheme="https://chenzuoli.github.io/tags/cnblogs/"/>
+    
+  </entry>
   
   <entry>
     <title>html-二维码下方添加任意文字导出为图片</title>
@@ -525,33 +555,6 @@
     <category term="http" scheme="https://chenzuoli.github.io/tags/http/"/>
     
     <category term="headers" scheme="https://chenzuoli.github.io/tags/headers/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>winforms基本操作-发送http请求</title>
-    <link href="https://chenzuoli.github.io/2024/10/07/winforms%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C-%E5%8F%91%E9%80%81http%E8%AF%B7%E6%B1%82/"/>
-    <id>https://chenzuoli.github.io/2024/10/07/winforms%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C-%E5%8F%91%E9%80%81http%E8%AF%B7%E6%B1%82/</id>
-    <published>2024-10-07T11:25:57.000Z</published>
-    <updated>2024-10-19T09:45:27.514Z</updated>
-    
-    <content type="html"><![CDATA[<p>请见详情。</p><span id="more"></span><p>发送post请求：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">using (var client = new HttpClient())</span><br><span class="line">&#123;</span><br><span class="line">    var url = &quot;http://www.example.com/api/post&quot;;</span><br><span class="line">    var content = new StringContent(&quot;&#123; \&quot;key\&quot;: \&quot;value\&quot; &#125;&quot;, Encoding.UTF8, &quot;application/json&quot;);</span><br><span class="line"></span><br><span class="line">    //HttpResponseMessage response = await client.PostAsync(url, content);</span><br><span class="line">    HttpResponseMessage response = await client.GetAsync(url, content);</span><br><span class="line"></span><br><span class="line">    if (response.IsSuccessStatusCode)</span><br><span class="line">    &#123;</span><br><span class="line">        string responseBody = await response.Content.ReadAsStringAsync();</span><br><span class="line">        Console.WriteLine(responseBody);</span><br><span class="line">    &#125;</span><br><span class="line">    else</span><br><span class="line">    &#123;</span><br><span class="line">        Console.WriteLine(&quot;Error: &quot; + response.StatusCode);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>发送get请求：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">string url = &quot;https://www.example.com&quot;; // 替换为你要请求的URL</span><br><span class="line">using (HttpClient client = new HttpClient())</span><br><span class="line">&#123;</span><br><span class="line">    HttpResponseMessage response = await client.GetAsync(url);</span><br><span class="line">    if (response.IsSuccessStatusCode)</span><br><span class="line">    &#123;</span><br><span class="line">        string content = await response.Content.ReadAsStringAsync();</span><br><span class="line">        Console.WriteLine(content);</span><br><span class="line">    &#125;</span><br><span class="line">    else</span><br><span class="line">    &#123;</span><br><span class="line">        Console.WriteLine($&quot;Error: &#123;response.StatusCode&#125;&quot;);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>好了，记录到这里，持续更新中。</p><p>记录问题也是一种修行。</p><p><img src="/images/%E4%BF%AE%E8%A1%8C.png" alt="修行"></p><hr><p><b>书山有路勤为径，学海无涯苦作舟。</b></p><p>欢迎关注微信公众号：【乐知付加密平台】，您的网络资源可变现<br><img src="/images/wechat_account.png" alt="乐知付加密平台"></p><p>一起学习，一起进步。<br></p>]]></content>
-    
-    
-    <summary type="html">&lt;p&gt;请见详情。&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="客户端" scheme="https://chenzuoli.github.io/categories/%E5%AE%A2%E6%88%B7%E7%AB%AF/"/>
-    
-    <category term="windows" scheme="https://chenzuoli.github.io/categories/%E5%AE%A2%E6%88%B7%E7%AB%AF/windows/"/>
-    
-    <category term="winforms" scheme="https://chenzuoli.github.io/categories/%E5%AE%A2%E6%88%B7%E7%AB%AF/windows/winforms/"/>
-    
-    
-    <category term="windows" scheme="https://chenzuoli.github.io/tags/windows/"/>
-    
-    <category term="winforms" scheme="https://chenzuoli.github.io/tags/winforms/"/>
     
   </entry>
   
