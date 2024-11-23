@@ -19079,4 +19079,36 @@ API
         <tag>cnblogs</tag>
       </tags>
   </entry>
+  <entry>
+    <title>winform图片去水印</title>
+    <url>/2024/11/23/winform%E5%9B%BE%E7%89%87%E5%8E%BB%E6%B0%B4%E5%8D%B0/</url>
+    <content><![CDATA[<p>且看代码。</p>
+<span id="more"></span>
+
+<p>依赖package：<br>OpenCvSharp4<br>OpenCvSharp4.runtime.<os>，如果是win则安装OpenCvSharp4.runtime.win，如果是ubuntu，则安装OpenCvSharp4.runtime.ubuntu或OpenCvSharp4.runtime.linux</os></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">private static void removeWatermark(string filePath)</span><br><span class="line">&#123;</span><br><span class="line">    try</span><br><span class="line">    &#123;</span><br><span class="line">        Mat src = new Mat(filePath, ImreadModes.Color);</span><br><span class="line">        var dst = new Mat(filePath);</span><br><span class="line">        var mask = new Mat(src.Size(), MatType.CV_8UC1, Scalar.All(0));</span><br><span class="line"></span><br><span class="line">        // 第一二个参数是需要去水印的区域开始位置（左上角）</span><br><span class="line">        // 第三四个参数是水印区域的长度和宽度</span><br><span class="line">        mask.Rectangle(new Rect(src.Width-250, src.Height-50, 250, 50), Scalar.All(255), -1);</span><br><span class="line"></span><br><span class="line">        Cv2.Inpaint(src, mask, dst, 2, InpaintMethod.Telea);</span><br><span class="line"></span><br><span class="line">        // debug时展示图片是否是我们想要的</span><br><span class="line">        //  if (Debugger.IsAttached)</span><br><span class="line">        //      Window.ShowImages(src, mask, dst);</span><br><span class="line"></span><br><span class="line">        // 覆盖原img文件</span><br><span class="line">        Cv2.ImWrite(filePath, dst);</span><br><span class="line">        Console.WriteLine(&quot;inpainted new image.&quot;);</span><br><span class="line">    &#125;</span><br><span class="line">    catch (Exception ex)</span><br><span class="line">    &#123;</span><br><span class="line">        Console.WriteLine(ex.ToString());</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+
+<p>好了，记录到这里，持续更新中。</p>
+<p>记录问题也是一种修行。</p>
+<p><img src="/images/%E4%BF%AE%E8%A1%8C.png" alt="修行"></p>
+<hr>
+<p><b>书山有路勤为径，学海无涯苦作舟。</b></p>
+<p>欢迎关注微信公众号：【乐知付加密平台】，您的网络资源可变现<br><img src="/images/wechat_account.png" alt="乐知付加密平台"></p>
+<p>一起学习，一起进步。<br></p>
+]]></content>
+      <categories>
+        <category>客户端</category>
+        <category>windows</category>
+        <category>winforms</category>
+      </categories>
+      <tags>
+        <tag>winform</tag>
+        <tag>opencvsharp4</tag>
+      </tags>
+  </entry>
 </search>
