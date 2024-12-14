@@ -6,7 +6,7 @@
   <link href="https://chenzuoli.github.io/atom.xml" rel="self"/>
   
   <link href="https://chenzuoli.github.io/"/>
-  <updated>2024-11-23T13:13:30.007Z</updated>
+  <updated>2024-12-14T10:25:46.536Z</updated>
   <id>https://chenzuoli.github.io/</id>
   
   <author>
@@ -15,6 +15,61 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>随机中文字符生成-python包工具</title>
+    <link href="https://chenzuoli.github.io/2024/12/14/%E9%9A%8F%E6%9C%BA%E4%B8%AD%E6%96%87%E5%AD%97%E7%AC%A6%E7%94%9F%E6%88%90-python%E5%8C%85%E5%B7%A5%E5%85%B7/"/>
+    <id>https://chenzuoli.github.io/2024/12/14/%E9%9A%8F%E6%9C%BA%E4%B8%AD%E6%96%87%E5%AD%97%E7%AC%A6%E7%94%9F%E6%88%90-python%E5%8C%85%E5%B7%A5%E5%85%B7/</id>
+    <published>2024-12-14T10:24:11.000Z</published>
+    <updated>2024-12-14T10:25:46.536Z</updated>
+    
+    <content type="html"><![CDATA[<p>这里介绍一个python工具包，随机生成中文文字，方便中文模型训练及随机中文字符串填充场景。</p><span id="more"></span><p>操作如下：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install chineserand</span><br></pre></td></tr></table></figure><p>代码示例：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">from chineserand import raw</span><br><span class="line">chinese_words = raw(10)</span><br><span class="line">print(chinese_words)</span><br><span class="line">    </span><br></pre></td></tr></table></figure><p>项目开源地址：</p><p><a href="https://github.com/chenzuoli/chineserand">https://github.com/chenzuoli/chineserand</a></p><p>如果有任何问题，欢迎提issue。</p><p>后期规划：</p><ol><li><p>随机生成中文词语、语句、段落</p></li><li><p>根据操作系统字符集，生成所有中文字体对应的图片（用于字体模型训练）</p></li></ol><p>本项目由【乐知付加密平台】开源，乐知付加密平台，是一个以用户为中心的内容变现平台，无论是专业创作者还是个人爱好者，都可以通过我们平台实现变现梦想。</p><p>您无需亲自搭建知识付费服务平台，将知识资源放在网盘中，通过加密平台，进行压缩包密码管理，买家支付后展示网盘中压缩包密码，轻松资源变现。</p><p>官网地址：</p><p><a href="https://lezhifu.cc/">www.lezhifu.cc</a></p><hr><p><b>书山有路勤为径，学海无涯苦作舟。</b></p><p>欢迎关注微信公众号：【乐知付加密平台】，您的网络资源可变现<br><img src="/images/wechat_account.png" alt="乐知付加密平台"></p><p>一起学习，一起进步。<br></p>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;这里介绍一个python工具包，随机生成中文文字，方便中文模型训练及随机中文字符串填充场景。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="Python" scheme="https://chenzuoli.github.io/categories/Python/"/>
+    
+    <category term="模型" scheme="https://chenzuoli.github.io/categories/Python/%E6%A8%A1%E5%9E%8B/"/>
+    
+    <category term="chinese" scheme="https://chenzuoli.github.io/categories/Python/%E6%A8%A1%E5%9E%8B/chinese/"/>
+    
+    
+    <category term="python" scheme="https://chenzuoli.github.io/tags/python/"/>
+    
+    <category term="chineserand" scheme="https://chenzuoli.github.io/tags/chineserand/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>字体图片生成</title>
+    <link href="https://chenzuoli.github.io/2024/12/09/%E5%AD%97%E4%BD%93%E5%9B%BE%E7%89%87%E7%94%9F%E6%88%90/"/>
+    <id>https://chenzuoli.github.io/2024/12/09/%E5%AD%97%E4%BD%93%E5%9B%BE%E7%89%87%E7%94%9F%E6%88%90/</id>
+    <published>2024-12-09T14:37:53.000Z</published>
+    <updated>2024-12-09T15:49:11.689Z</updated>
+    
+    <content type="html"><![CDATA[<p>众所周知，我们的文字有各种字体，字体通过字体文件方式供操作系统使用，在需要使用字体图片的场景，我们如何快速生成呢？</p><p>这篇文章介绍下，如何通过操作系统自带的字体文件，利用python的pillow包快速生成字体图片。</p><span id="more"></span><ol><li><p>各操作系统字体文件路径<br>windows\linux\macos：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line">dirs = []</span><br><span class="line">if sys.platform == &quot;win32&quot;:</span><br><span class="line">    # check the windows font repository</span><br><span class="line">    # NOTE: must use uppercase WINDIR, to work around bugs in</span><br><span class="line">    # 1.5.2&#x27;s os.environ.get()</span><br><span class="line">    windir = os.environ.get(&quot;WINDIR&quot;)</span><br><span class="line">    if windir:</span><br><span class="line">        dirs.append(os.path.join(windir, &quot;fonts&quot;))</span><br><span class="line">elif sys.platform in (&quot;linux&quot;, &quot;linux2&quot;):</span><br><span class="line">    data_home = os.environ.get(&quot;XDG_DATA_HOME&quot;)</span><br><span class="line">    if not data_home:</span><br><span class="line">        # The freedesktop spec defines the following default directory for</span><br><span class="line">        # when XDG_DATA_HOME is unset or empty. This user-level directory</span><br><span class="line">        # takes precedence over system-level directories.</span><br><span class="line">        data_home = os.path.expanduser(&quot;~/.local/share&quot;)</span><br><span class="line">    xdg_dirs = [data_home]</span><br><span class="line"></span><br><span class="line">    data_dirs = os.environ.get(&quot;XDG_DATA_DIRS&quot;)</span><br><span class="line">    if not data_dirs:</span><br><span class="line">        # Similarly, defaults are defined for the system-level directories</span><br><span class="line">        data_dirs = &quot;/usr/local/share:/usr/share&quot;</span><br><span class="line">    xdg_dirs += data_dirs.split(&quot;:&quot;)</span><br><span class="line"></span><br><span class="line">    dirs += [os.path.join(xdg_dir, &quot;fonts&quot;) for xdg_dir in xdg_dirs]</span><br><span class="line">elif sys.platform == &quot;darwin&quot;:</span><br><span class="line">    dirs += [</span><br><span class="line">        &quot;/Library/Fonts&quot;,</span><br><span class="line">        &quot;/System/Library/Fonts&quot;,</span><br><span class="line">        os.path.expanduser(&quot;~/Library/Fonts&quot;),</span><br><span class="line">    ]</span><br></pre></td></tr></table></figure></li><li><p>pillow生成图片</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">import os</span><br><span class="line">import random</span><br><span class="line"></span><br><span class="line">import nltk</span><br><span class="line">from PIL import Image, ImageDraw, ImageFont</span><br><span class="line"></span><br><span class="line"># Download the necessary data from nltk</span><br><span class="line">nltk.download(&#x27;inaugural&#x27;)</span><br><span class="line"></span><br><span class="line">def wrap_text(text, line_length=4):</span><br><span class="line">    &quot;&quot;&quot;Wraps the provided text every &#x27;line_length&#x27; words.&quot;&quot;&quot;</span><br><span class="line">    words = text.split()</span><br><span class="line">    return &quot;\n&quot;.join([&quot; &quot;.join(words[i:i + line_length]) for i in range(0, len(words), line_length)])</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">def random_prose_text(line_length=4):</span><br><span class="line">    &quot;&quot;&quot;Returns a random snippet from the Gutenberg corpus.&quot;&quot;&quot;</span><br><span class="line">    corpus = nltk.corpus.inaugural.raw()</span><br><span class="line">    start = random.randint(0, len(corpus) - 800)</span><br><span class="line">    end = start + 800</span><br><span class="line">    return wrap_text(corpus[start:end], line_length=line_length)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">def gen_images():</span><br><span class="line">    # get font name and font files</span><br><span class="line">    font_files = []</span><br><span class="line">    for font_dir in dirs:</span><br><span class="line">        for font_file in os.listdir(font_dir):</span><br><span class="line">            if font_file.endswith(&#x27;.ttf&#x27;) or font_file.endswith(&#x27;.ttc&#x27;):</span><br><span class="line">                font_path = os.path.join(font_dir, font_file)</span><br><span class="line">                font_name = font_file.split(&#x27;.&#x27;)[0]</span><br><span class="line">                font_files.append((font_path, font_name))</span><br><span class="line"></span><br><span class="line">    # Generate images for each font file</span><br><span class="line">    for font_path, font_name in font_files:</span><br><span class="line">        # Output the font name so we can see the progress</span><br><span class="line">        print(font_path, font_name)</span><br><span class="line"></span><br><span class="line">        # Counter for the image filename</span><br><span class="line">        j = 0</span><br><span class="line">        for i in range(IMAGES_PER_FONT):  # Generate 50 images per font - reduced to 10 for now to make things faster</span><br><span class="line">            # Random font size</span><br><span class="line">            font_size = random.choice(range(18, 72))</span><br><span class="line"></span><br><span class="line">            if font_path.endswith(&#x27;.ttc&#x27;):</span><br><span class="line">                # ttc fonts have multiple fonts in one file, so we need to specify which one we want</span><br><span class="line">                font = ImageFont.truetype(font_path, font_size, index=0)</span><br><span class="line">            elif font_name in FONT_EXCEPTS:</span><br><span class="line">                continue</span><br><span class="line">            else:</span><br><span class="line">                # ttf fonts have only one font in the file</span><br><span class="line">                font = ImageFont.truetype(font_path, font_size)</span><br><span class="line"></span><br><span class="line">            # Determine the number of words that will fit on a line</span><br><span class="line">            font_avg_char_width = font.getbbox(&#x27;x&#x27;)[2]</span><br><span class="line">            words_per_line = int(800 / (font_avg_char_width * 5))</span><br><span class="line">            prose_sample = random_prose_text(line_length=words_per_line)</span><br><span class="line"></span><br><span class="line">            # print(&quot;generate font image: &quot; + str(prose_sample))</span><br><span class="line">            for text in [prose_sample]:</span><br><span class="line">                img = Image.new(&#x27;RGB&#x27;, (800, 400), color=&quot;white&quot;)  # Canvas size</span><br><span class="line">                draw = ImageDraw.Draw(img)</span><br><span class="line"></span><br><span class="line">                # Random offsets, but ensuring that text isn&#x27;t too far off the canvas</span><br><span class="line">                offset_x = random.randint(-20, 10)</span><br><span class="line">                offset_y = random.randint(-20, 10)</span><br><span class="line"></span><br><span class="line">                # vary the line height</span><br><span class="line">                line_height = random.uniform(0, 1.25) * font_size</span><br><span class="line">                draw.text((offset_x, offset_y), text, fill=&quot;black&quot;, font=font, spacing=line_height)</span><br><span class="line"></span><br><span class="line">                j += 1</span><br><span class="line">                output_file = os.path.join(GEN_IMAGES_DIR, f&quot;&#123;font_name&#125;_&#123;j&#125;.png&quot;)</span><br><span class="line">                img.save(output_file)</span><br><span class="line"></span><br></pre></td></tr></table></figure></li></ol><p>源代码都记录在这里了：<br><a href="https://github.com/chenzuoli/font-identifier">https://github.com/chenzuoli/font-identifier</a></p><p>本代码参考开源项目：<a href="https://huggingface.co/gaborcselle/font-identifier">https://huggingface.co/gaborcselle/font-identifier</a></p><p>好了，记录到这里，持续更新中。</p><p>记录问题也是一种修行。</p><p><img src="/images/%E4%BF%AE%E8%A1%8C.png" alt="修行"></p><hr><p><b>书山有路勤为径，学海无涯苦作舟。</b></p><p>欢迎关注微信公众号：【乐知付加密平台】，您的网络资源可变现<br><img src="/images/wechat_account.png" alt="乐知付加密平台"></p><p>一起学习，一起进步。<br></p>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;众所周知，我们的文字有各种字体，字体通过字体文件方式供操作系统使用，在需要使用字体图片的场景，我们如何快速生成呢？&lt;/p&gt;
+&lt;p&gt;这篇文章介绍下，如何通过操作系统自带的字体文件，利用python的pillow包快速生成字体图片。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="工具" scheme="https://chenzuoli.github.io/categories/%E5%B7%A5%E5%85%B7/"/>
+    
+    <category term="图片" scheme="https://chenzuoli.github.io/categories/%E5%B7%A5%E5%85%B7/%E5%9B%BE%E7%89%87/"/>
+    
+    <category term="字体" scheme="https://chenzuoli.github.io/categories/%E5%B7%A5%E5%85%B7/%E5%9B%BE%E7%89%87/%E5%AD%97%E4%BD%93/"/>
+    
+    
+    <category term="图片" scheme="https://chenzuoli.github.io/tags/%E5%9B%BE%E7%89%87/"/>
+    
+    <category term="字体" scheme="https://chenzuoli.github.io/tags/%E5%AD%97%E4%BD%93/"/>
+    
+  </entry>
   
   <entry>
     <title>winform图片去水印</title>
@@ -502,61 +557,6 @@
     <category term="cmd" scheme="https://chenzuoli.github.io/tags/cmd/"/>
     
     <category term="powershell" scheme="https://chenzuoli.github.io/tags/powershell/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>记录git文件被删如何找回问题</title>
-    <link href="https://chenzuoli.github.io/2024/10/12/%E8%AE%B0%E5%BD%95git%E6%96%87%E4%BB%B6%E8%A2%AB%E5%88%A0%E5%A6%82%E4%BD%95%E6%89%BE%E5%9B%9E%E9%97%AE%E9%A2%98/"/>
-    <id>https://chenzuoli.github.io/2024/10/12/%E8%AE%B0%E5%BD%95git%E6%96%87%E4%BB%B6%E8%A2%AB%E5%88%A0%E5%A6%82%E4%BD%95%E6%89%BE%E5%9B%9E%E9%97%AE%E9%A2%98/</id>
-    <published>2024-10-12T12:42:04.000Z</published>
-    <updated>2024-10-12T12:51:13.270Z</updated>
-    
-    <content type="html"><![CDATA[<p>说下我的场景，git commit后，发现有些不需要的文件被commit了，要回退，结果误操作回滚了此次commit（git reset head操作）导致新增和修改的文件全部丢失。</p><p>这个问题如何恢复文件？</p><span id="more"></span><p>当然，你可以通过sourcetree或者TortoiseGit工具来查看commit的内容，并一一重新修改和创建文件，但是文件太多，非常麻烦。</p><p>去网上找到了解决方案：</p><ol><li>git log -g查看commit id<br><img src="/2024/10/12/%E8%AE%B0%E5%BD%95git%E6%96%87%E4%BB%B6%E8%A2%AB%E5%88%A0%E5%A6%82%E4%BD%95%E6%89%BE%E5%9B%9E%E9%97%AE%E9%A2%98/image.png" alt="commitId"></li><li>git checkout <commitId> &lt;文件&gt;<br><img src="/2024/10/12/%E8%AE%B0%E5%BD%95git%E6%96%87%E4%BB%B6%E8%A2%AB%E5%88%A0%E5%A6%82%E4%BD%95%E6%89%BE%E5%9B%9E%E9%97%AE%E9%A2%98/image-1.png" alt="restore"></commitId></li></ol><p>即可恢复文件。</p><p>好了，记录到这里，持续更新中。</p><p>记录问题也是一种修行。</p><p><img src="/images/%E4%BF%AE%E8%A1%8C.png" alt="修行"></p><hr><p><b>书山有路勤为径，学海无涯苦作舟。</b></p><p>欢迎关注微信公众号：【乐知付加密平台】，您的网络资源可变现<br><img src="/images/wechat_account.png" alt="乐知付加密平台"></p><p>一起学习，一起进步。<br></p>]]></content>
-    
-    
-    <summary type="html">&lt;p&gt;说下我的场景，git commit后，发现有些不需要的文件被commit了，要回退，结果误操作回滚了此次commit（git reset head操作）导致新增和修改的文件全部丢失。&lt;/p&gt;
-&lt;p&gt;这个问题如何恢复文件？&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="其他" scheme="https://chenzuoli.github.io/categories/%E5%85%B6%E4%BB%96/"/>
-    
-    <category term="Github" scheme="https://chenzuoli.github.io/categories/%E5%85%B6%E4%BB%96/Github/"/>
-    
-    <category term="git" scheme="https://chenzuoli.github.io/categories/%E5%85%B6%E4%BB%96/Github/git/"/>
-    
-    
-    <category term="git" scheme="https://chenzuoli.github.io/tags/git/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>flask设置session过期时间</title>
-    <link href="https://chenzuoli.github.io/2024/10/11/flask%E8%AE%BE%E7%BD%AEsession%E8%BF%87%E6%9C%9F%E6%97%B6%E9%97%B4/"/>
-    <id>https://chenzuoli.github.io/2024/10/11/flask%E8%AE%BE%E7%BD%AEsession%E8%BF%87%E6%9C%9F%E6%97%B6%E9%97%B4/</id>
-    <published>2024-10-11T14:18:22.000Z</published>
-    <updated>2024-10-12T12:52:30.931Z</updated>
-    
-    <content type="html"><![CDATA[<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">app.permanent_session_lifetime = 60</span><br><span class="line"></span><br></pre></td></tr></table></figure><span id="more"></span><p>好了，记录到这里，持续更新中。</p><p>记录问题也是一种修行。</p><p><img src="/images/%E4%BF%AE%E8%A1%8C.png" alt="修行"></p><hr><p><b>书山有路勤为径，学海无涯苦作舟。</b></p><p>欢迎关注微信公众号：【乐知付加密平台】，您的网络资源可变现<br><img src="/images/wechat_account.png" alt="乐知付加密平台"></p><p>一起学习，一起进步。<br></p>]]></content>
-    
-    
-    <summary type="html">&lt;figure class=&quot;highlight plaintext&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;app.permanent_session_lifetime = 60&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;</summary>
-    
-    
-    
-    <category term="Python" scheme="https://chenzuoli.github.io/categories/Python/"/>
-    
-    <category term="Flask" scheme="https://chenzuoli.github.io/categories/Python/Flask/"/>
-    
-    <category term="Session" scheme="https://chenzuoli.github.io/categories/Python/Flask/Session/"/>
-    
-    
-    <category term="http" scheme="https://chenzuoli.github.io/tags/http/"/>
-    
-    <category term="flask" scheme="https://chenzuoli.github.io/tags/flask/"/>
-    
-    <category term="session" scheme="https://chenzuoli.github.io/tags/session/"/>
     
   </entry>
   
