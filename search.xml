@@ -19189,4 +19189,55 @@ API
         <tag>chineserand</tag>
       </tags>
   </entry>
+  <entry>
+    <title>发布你的第一个python包</title>
+    <url>/2024/12/14/%E5%8F%91%E5%B8%83%E4%BD%A0%E7%9A%84%E7%AC%AC%E4%B8%80%E4%B8%AApython%E5%8C%85/</url>
+    <content><![CDATA[<p>这里介绍如何将你写的python工具包，打包成whl，并发布到pypi.org网站，使用pip进行安装使用。</p>
+<span id="more"></span>
+
+<p>大致步骤如下：</p>
+<ol>
+<li>注册测试testpypi.org网站，生成上传的token</li>
+<li>注册正式pypi.org网站，生成上传的token</li>
+<li>编写代码</li>
+<li>规划项目代码目录布局</li>
+<li>编写打包文件pyproject.toml</li>
+<li>upload上传测试testpypi</li>
+<li>upload上传正式pypi</li>
+</ol>
+<p>参考链接：<br><a href="https://packaging.python.org/en/latest/tutorials/packaging-projects/">https://packaging.python.org/en/latest/tutorials/packaging-projects/</a></p>
+<p>命令如下：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">python3 -m pip install --upgrade pip   # 安装升级pip</span><br><span class="line">python3 -m pip install --upgrade build  # 安装build工具包</span><br><span class="line">python3 -m build  # 编译打包</span><br><span class="line">python3 -m pip install --upgrade twine  # 安装上传工具包twine</span><br><span class="line">python3 -m twine upload --repository testpypi dist/*  # 发布测试testpypi</span><br><span class="line">python3 -m twine upload --repository pypi dist/*  # 发布正式pypi</span><br></pre></td></tr></table></figure>
+
+<p>项目结构大概如下：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">packaging_tutorial/</span><br><span class="line">├── LICENSE    开源协议</span><br><span class="line">├── pyproject.toml   打包的配置文件</span><br><span class="line">├── README.md   项目描述</span><br><span class="line">├── src/   源代码</span><br><span class="line">│   └── example_package_YOUR_USERNAME_HERE/</span><br><span class="line">│       ├── __init__.py</span><br><span class="line">│       └── example.py</span><br><span class="line">└── tests/</span><br></pre></td></tr></table></figure>
+
+<p>这里再具体介绍下打包的配置文件如何编写：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">[project]</span><br><span class="line">name = &quot;chineserand&quot;</span><br><span class="line">version = &quot;0.0.3&quot;</span><br><span class="line">authors = [</span><br><span class="line">  &#123; name=&quot;chenzuoli&quot;, email=&quot;chenzuoli709@163.com&quot; &#125;,</span><br><span class="line">]</span><br><span class="line">description = &quot;随机生成中文字符工具包&quot;</span><br><span class="line">readme = &quot;README.md&quot;</span><br><span class="line">requires-python = &quot;&gt;=3.0&quot;</span><br><span class="line">classifiers = [</span><br><span class="line">    &quot;Programming Language :: Python :: 3&quot;,</span><br><span class="line">    &quot;License :: OSI Approved :: MIT License&quot;,</span><br><span class="line">    &quot;Operating System :: OS Independent&quot;,</span><br><span class="line">]</span><br><span class="line"></span><br><span class="line">[project.urls]</span><br><span class="line">Homepage = &quot;https://github.com/chenzuoli/chineserand&quot;</span><br><span class="line">Issues = &quot;https://github.com/chenzuoli/chineserand/issues&quot;</span><br><span class="line"></span><br><span class="line"># 这里是配置打包时，是否包含txt rst数据文件，与根目录下的MANIFEST.in 文件配合使用</span><br><span class="line">[tool.setuptools.packages.find]</span><br><span class="line">where = [&quot;src&quot;]</span><br><span class="line">[tool.setuptools.package-data]</span><br><span class="line">mypkg = [&quot;*.txt&quot;, &quot;*.rst&quot;]</span><br></pre></td></tr></table></figure>
+
+
+<p>这里是配置打包时，是否包含txt rst数据文件，与根目录下的MANIFEST.in 文件配合使用</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">[tool.setuptools.packages.find]</span><br><span class="line">where = [&quot;src&quot;]</span><br><span class="line">[tool.setuptools.package-data]</span><br><span class="line">mypkg = [&quot;*.txt&quot;, &quot;*.rst&quot;]</span><br></pre></td></tr></table></figure>
+
+<p>MANIFEST.in 文件内容的写法，参考：<a href="https://setuptools.pypa.io/en/latest/userguide/miscellaneous.html#using-manifest-in">https://setuptools.pypa.io/en/latest/userguide/miscellaneous.html#using-manifest-in</a><br>包含某个文件，就这样写：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">include src/chineserand/*.rst</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>不需要某个文件，就这样写：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">exclude src/chineserand/*.py</span><br></pre></td></tr></table></figure>
+
+<p>好了，大家慢慢琢磨。</p>
+<hr>
+<p><b>书山有路勤为径，学海无涯苦作舟。</b></p>
+<p>欢迎关注微信公众号：【乐知付加密平台】，您的网络资源可变现<br><img src="/images/wechat_account.png" alt="乐知付加密平台"></p>
+<p>一起学习，一起进步。<br></p>
+]]></content>
+      <categories>
+        <category>Python</category>
+        <category>pypi</category>
+        <category>打包</category>
+      </categories>
+      <tags>
+        <tag>python</tag>
+        <tag>pypi</tag>
+      </tags>
+  </entry>
 </search>
