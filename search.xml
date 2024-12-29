@@ -19240,4 +19240,84 @@ API
         <tag>pypi</tag>
       </tags>
   </entry>
+  <entry>
+    <title>配置二级域名与nginx代理</title>
+    <url>/2024/12/16/%E9%85%8D%E7%BD%AE%E4%BA%8C%E7%BA%A7%E5%9F%9F%E5%90%8D/</url>
+    <content><![CDATA[<p>看这里。</p>
+<span id="more"></span>
+
+
+<p>你在哪里买的域名，就去域名管理控制台，</p>
+<ol>
+<li><p>查看域名详情</p>
+</li>
+<li><p>添加解析记录<br><img src="/2024/12/16/%E9%85%8D%E7%BD%AE%E4%BA%8C%E7%BA%A7%E5%9F%9F%E5%90%8D/image-2.png" alt="add"></p>
+</li>
+<li><p>填写你想要解析的二级域名，和对应的ip地址</p>
+</li>
+</ol>
+<p>nginx已经代理了顶级域名，再增加一个二级域名代理，配置看这里：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># 顶级域名nginx代理配置</span><br><span class="line">server &#123;</span><br><span class="line">    listen       443 ssl;</span><br><span class="line">    server_name  lezhifu.cc www.lezhifu.cc;</span><br><span class="line"></span><br><span class="line">    ssl_certificate      /xxx/key.pem;</span><br><span class="line">    ssl_certificate_key  /xxx/key.key;</span><br><span class="line"></span><br><span class="line">    ssl_session_cache    shared:SSL:1m;</span><br><span class="line">    ssl_session_timeout  5m;</span><br><span class="line"></span><br><span class="line">    location / &#123;</span><br><span class="line">        root   /opt/;</span><br><span class="line">        index  index.html index.htm;</span><br><span class="line">    &#125;</span><br><span class="line">    location /admin/ &#123;</span><br><span class="line">        proxy_set_header Host $http_host;</span><br><span class="line">        proxy_set_header X-Real-IP $remote_addr;</span><br><span class="line">        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;</span><br><span class="line">        proxy_set_header X-Forwarded-Proto $scheme;</span><br><span class="line">        proxy_pass http://127.0.0.1:5000;</span><br><span class="line">    &#125;</span><br><span class="line">    location /static/ &#123;</span><br><span class="line">        root /opt/;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"># 二级域名代理配置</span><br><span class="line">server &#123;</span><br><span class="line">    listen       443 ssl;</span><br><span class="line">    server_name  software.lezhifu.cc;</span><br><span class="line"></span><br><span class="line">    ssl_certificate      /xxx/key.pem;</span><br><span class="line">    ssl_certificate_key  /xxx/key.key;</span><br><span class="line"></span><br><span class="line">    ssl_session_cache    shared:SSL:1m;</span><br><span class="line">    ssl_session_timeout  5m;</span><br><span class="line"></span><br><span class="line">    location / &#123;</span><br><span class="line">        root   /opt/software;</span><br><span class="line">        index  index.html index.htm;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>顶级域名的代码在&#x2F;opt下<br>二级域名的代码放在&#x2F;opt&#x2F;software目录下</p>
+<p>重启nginx：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">/usr/local/nginx/sbin/nginx -s reload</span><br></pre></td></tr></table></figure>
+
+
+
+<p>好了，大家试试吧。</p>
+<hr>
+<p><b>书山有路勤为径，学海无涯苦作舟。</b></p>
+<p>欢迎关注微信公众号：【乐知付加密平台】，您的网络资源可变现<br><img src="/images/wechat_account.png" alt="乐知付加密平台"></p>
+<p>一起学习，一起进步。<br></p>
+]]></content>
+      <categories>
+        <category>网站</category>
+        <category>nginx</category>
+        <category>二级域名代理</category>
+      </categories>
+      <tags>
+        <tag>nginx</tag>
+        <tag>二级域名</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>安装ReactNative环境</title>
+    <url>/2024/12/29/%E5%AE%89%E8%A3%85ReactNative%E7%8E%AF%E5%A2%83/</url>
+    <content><![CDATA[<p>这里记录下如何在windows上安装React Native环境。</p>
+<span id="more"></span>
+
+
+
+<hr>
+<ol>
+<li><p>安装chocolatey，windows上的包管理工具</p>
+</li>
+<li><p>安装node、jdk：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">choco install -y nodejs-lts microsoft-openjdk17</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>安装android studio<br> android sdk<br> android sdk platform<br> android virtual device</p>
+</li>
+<li><p>初始化项目<br>expo-cli:</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">npm install -g expo-cli</span><br><span class="line">npx create-expo-app YourProjectName</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>运行项目<br>进入项目根目录</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">npx expo install react-native-web react-dom @expo/webpack-config</span><br><span class="line">npx expo start</span><br></pre></td></tr></table></figure></li>
+</ol>
+<hr>
+<p>欢迎关注微信公众号：【乐知付加密平台】<br><img src="/images/wechat_account.png" alt="乐知付加密平台"></p>
+<p>一起学习，一起进步。<br></p>
+]]></content>
+      <categories>
+        <category>前端</category>
+        <category>react native</category>
+        <category>android</category>
+      </categories>
+      <tags>
+        <tag>android</tag>
+        <tag>react native</tag>
+        <tag>ios</tag>
+        <tag>web</tag>
+      </tags>
+  </entry>
 </search>

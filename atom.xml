@@ -6,7 +6,7 @@
   <link href="https://chenzuoli.github.io/atom.xml" rel="self"/>
   
   <link href="https://chenzuoli.github.io/"/>
-  <updated>2024-12-14T10:48:40.760Z</updated>
+  <updated>2024-12-29T02:53:35.406Z</updated>
   <id>https://chenzuoli.github.io/</id>
   
   <author>
@@ -15,6 +15,64 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>安装ReactNative环境</title>
+    <link href="https://chenzuoli.github.io/2024/12/29/%E5%AE%89%E8%A3%85ReactNative%E7%8E%AF%E5%A2%83/"/>
+    <id>https://chenzuoli.github.io/2024/12/29/%E5%AE%89%E8%A3%85ReactNative%E7%8E%AF%E5%A2%83/</id>
+    <published>2024-12-29T02:19:19.000Z</published>
+    <updated>2024-12-29T02:53:35.406Z</updated>
+    
+    <content type="html"><![CDATA[<p>这里记录下如何在windows上安装React Native环境。</p><span id="more"></span><hr><ol><li><p>安装chocolatey，windows上的包管理工具</p></li><li><p>安装node、jdk：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">choco install -y nodejs-lts microsoft-openjdk17</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure></li><li><p>安装android studio<br> android sdk<br> android sdk platform<br> android virtual device</p></li><li><p>初始化项目<br>expo-cli:</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm install -g expo-cli</span><br><span class="line">npx create-expo-app YourProjectName</span><br></pre></td></tr></table></figure></li><li><p>运行项目<br>进入项目根目录</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npx expo install react-native-web react-dom @expo/webpack-config</span><br><span class="line">npx expo start</span><br></pre></td></tr></table></figure></li></ol><hr><p>欢迎关注微信公众号：【乐知付加密平台】<br><img src="/images/wechat_account.png" alt="乐知付加密平台"></p><p>一起学习，一起进步。<br></p>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;这里记录下如何在windows上安装React Native环境。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="前端" scheme="https://chenzuoli.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
+    
+    <category term="react native" scheme="https://chenzuoli.github.io/categories/%E5%89%8D%E7%AB%AF/react-native/"/>
+    
+    <category term="android" scheme="https://chenzuoli.github.io/categories/%E5%89%8D%E7%AB%AF/react-native/android/"/>
+    
+    
+    <category term="android" scheme="https://chenzuoli.github.io/tags/android/"/>
+    
+    <category term="react native" scheme="https://chenzuoli.github.io/tags/react-native/"/>
+    
+    <category term="ios" scheme="https://chenzuoli.github.io/tags/ios/"/>
+    
+    <category term="web" scheme="https://chenzuoli.github.io/tags/web/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>配置二级域名与nginx代理</title>
+    <link href="https://chenzuoli.github.io/2024/12/16/%E9%85%8D%E7%BD%AE%E4%BA%8C%E7%BA%A7%E5%9F%9F%E5%90%8D/"/>
+    <id>https://chenzuoli.github.io/2024/12/16/%E9%85%8D%E7%BD%AE%E4%BA%8C%E7%BA%A7%E5%9F%9F%E5%90%8D/</id>
+    <published>2024-12-16T14:56:10.000Z</published>
+    <updated>2024-12-16T15:07:15.465Z</updated>
+    
+    <content type="html"><![CDATA[<p>看这里。</p><span id="more"></span><p>你在哪里买的域名，就去域名管理控制台，</p><ol><li><p>查看域名详情</p></li><li><p>添加解析记录<br><img src="/2024/12/16/%E9%85%8D%E7%BD%AE%E4%BA%8C%E7%BA%A7%E5%9F%9F%E5%90%8D/image-2.png" alt="add"></p></li><li><p>填写你想要解析的二级域名，和对应的ip地址</p></li></ol><p>nginx已经代理了顶级域名，再增加一个二级域名代理，配置看这里：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br></pre></td><td class="code"><pre><span class="line"># 顶级域名nginx代理配置</span><br><span class="line">server &#123;</span><br><span class="line">    listen       443 ssl;</span><br><span class="line">    server_name  lezhifu.cc www.lezhifu.cc;</span><br><span class="line"></span><br><span class="line">    ssl_certificate      /xxx/key.pem;</span><br><span class="line">    ssl_certificate_key  /xxx/key.key;</span><br><span class="line"></span><br><span class="line">    ssl_session_cache    shared:SSL:1m;</span><br><span class="line">    ssl_session_timeout  5m;</span><br><span class="line"></span><br><span class="line">    location / &#123;</span><br><span class="line">        root   /opt/;</span><br><span class="line">        index  index.html index.htm;</span><br><span class="line">    &#125;</span><br><span class="line">    location /admin/ &#123;</span><br><span class="line">        proxy_set_header Host $http_host;</span><br><span class="line">        proxy_set_header X-Real-IP $remote_addr;</span><br><span class="line">        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;</span><br><span class="line">        proxy_set_header X-Forwarded-Proto $scheme;</span><br><span class="line">        proxy_pass http://127.0.0.1:5000;</span><br><span class="line">    &#125;</span><br><span class="line">    location /static/ &#123;</span><br><span class="line">        root /opt/;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"># 二级域名代理配置</span><br><span class="line">server &#123;</span><br><span class="line">    listen       443 ssl;</span><br><span class="line">    server_name  software.lezhifu.cc;</span><br><span class="line"></span><br><span class="line">    ssl_certificate      /xxx/key.pem;</span><br><span class="line">    ssl_certificate_key  /xxx/key.key;</span><br><span class="line"></span><br><span class="line">    ssl_session_cache    shared:SSL:1m;</span><br><span class="line">    ssl_session_timeout  5m;</span><br><span class="line"></span><br><span class="line">    location / &#123;</span><br><span class="line">        root   /opt/software;</span><br><span class="line">        index  index.html index.htm;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure><p>顶级域名的代码在&#x2F;opt下<br>二级域名的代码放在&#x2F;opt&#x2F;software目录下</p><p>重启nginx：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/usr/local/nginx/sbin/nginx -s reload</span><br></pre></td></tr></table></figure><p>好了，大家试试吧。</p><hr><p><b>书山有路勤为径，学海无涯苦作舟。</b></p><p>欢迎关注微信公众号：【乐知付加密平台】，您的网络资源可变现<br><img src="/images/wechat_account.png" alt="乐知付加密平台"></p><p>一起学习，一起进步。<br></p>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;看这里。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="网站" scheme="https://chenzuoli.github.io/categories/%E7%BD%91%E7%AB%99/"/>
+    
+    <category term="nginx" scheme="https://chenzuoli.github.io/categories/%E7%BD%91%E7%AB%99/nginx/"/>
+    
+    <category term="二级域名代理" scheme="https://chenzuoli.github.io/categories/%E7%BD%91%E7%AB%99/nginx/%E4%BA%8C%E7%BA%A7%E5%9F%9F%E5%90%8D%E4%BB%A3%E7%90%86/"/>
+    
+    
+    <category term="nginx" scheme="https://chenzuoli.github.io/tags/nginx/"/>
+    
+    <category term="二级域名" scheme="https://chenzuoli.github.io/tags/%E4%BA%8C%E7%BA%A7%E5%9F%9F%E5%90%8D/"/>
+    
+  </entry>
   
   <entry>
     <title>发布你的第一个python包</title>
@@ -490,60 +548,6 @@
     
     
     <summary type="html">&lt;p&gt;selenium的基本使用操作，如键盘鼠标按键、模拟人工操作等等，且看详情。&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="Python" scheme="https://chenzuoli.github.io/categories/Python/"/>
-    
-    <category term="爬虫" scheme="https://chenzuoli.github.io/categories/Python/%E7%88%AC%E8%99%AB/"/>
-    
-    <category term="Selenium" scheme="https://chenzuoli.github.io/categories/Python/%E7%88%AC%E8%99%AB/Selenium/"/>
-    
-    
-    <category term="selenium" scheme="https://chenzuoli.github.io/tags/selenium/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>chromedriver下载</title>
-    <link href="https://chenzuoli.github.io/2024/10/14/chromedriver%E4%B8%8B%E8%BD%BD/"/>
-    <id>https://chenzuoli.github.io/2024/10/14/chromedriver%E4%B8%8B%E8%BD%BD/</id>
-    <published>2024-10-14T14:36:10.000Z</published>
-    <updated>2024-10-15T15:26:47.804Z</updated>
-    
-    <content type="html"><![CDATA[<p>这里记录通过selenium进行模拟浏览器加载页面获取页面数据时使用的浏览器驱动信息下载连接，具体请看详情。</p><span id="more"></span><p>114版本 及 以下 chromedriver驱动: </p><p>下载地址 : <a href="https://registry.npmmirror.com/binary.html?path=chromedriver/">https://registry.npmmirror.com/binary.html?path=chromedriver/</a></p><pre><code>             http://chromedriver.storage.googleapis.com/index.html</code></pre><p>官方下载网站：<a href="https://developer.chrome.com/docs/chromedriver/downloads">https://developer.chrome.com/docs/chromedriver/downloads</a></p><p>chromedriver 淘宝npm镜像，地址：<a href="https://npm.taobao.org/mirrors/chromedriver/">https://npm.taobao.org/mirrors/chromedriver/</a></p><p>Firefox的驱动geckodriver，地址：<a href="https://github.com/mozilla/geckodriver/releases/">https://github.com/mozilla/geckodriver/releases/</a></p><p>查看firefox、selenium、python版本之间的依赖关系：<br><a href="https://firefox-source-docs.mozilla.org/testing/geckodriver/Support.html">https://firefox-source-docs.mozilla.org/testing/geckodriver/Support.html</a></p><p>firefox浏览器其他版本下载：<a href="https://ftp.mozilla.org/pub/firefox/releases/">https://ftp.mozilla.org/pub/firefox/releases/</a></p><p>好了，记录到这里，持续更新中。</p><p>记录问题也是一种修行。</p><p><img src="/images/%E4%BF%AE%E8%A1%8C.png" alt="修行"></p><hr><p><b>书山有路勤为径，学海无涯苦作舟。</b></p><p>欢迎关注微信公众号：【乐知付加密平台】，您的网络资源可变现<br><img src="/images/wechat_account.png" alt="乐知付加密平台"></p><p>一起学习，一起进步。<br></p>]]></content>
-    
-    
-    <summary type="html">&lt;p&gt;这里记录通过selenium进行模拟浏览器加载页面获取页面数据时使用的浏览器驱动信息下载连接，具体请看详情。&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="Python" scheme="https://chenzuoli.github.io/categories/Python/"/>
-    
-    <category term="爬虫" scheme="https://chenzuoli.github.io/categories/Python/%E7%88%AC%E8%99%AB/"/>
-    
-    <category term="Selenium" scheme="https://chenzuoli.github.io/categories/Python/%E7%88%AC%E8%99%AB/Selenium/"/>
-    
-    
-    <category term="selenium" scheme="https://chenzuoli.github.io/tags/selenium/"/>
-    
-    <category term="chromedriver" scheme="https://chenzuoli.github.io/tags/chromedriver/"/>
-    
-    <category term="geckodriver" scheme="https://chenzuoli.github.io/tags/geckodriver/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>selenium使用问题</title>
-    <link href="https://chenzuoli.github.io/2024/10/13/selenium%E4%BD%BF%E7%94%A8%E9%97%AE%E9%A2%98/"/>
-    <id>https://chenzuoli.github.io/2024/10/13/selenium%E4%BD%BF%E7%94%A8%E9%97%AE%E9%A2%98/</id>
-    <published>2024-10-13T09:28:42.000Z</published>
-    <updated>2024-10-19T08:59:12.117Z</updated>
-    
-    <content type="html"><![CDATA[<p>selenium使用时，获取不到浏览器驱动driver问题。</p><span id="more"></span><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">from selenium import webdriver</span><br><span class="line">chrome = webdriver.Chrome(options=options)</span><br><span class="line">chrome.get(url=web_url)</span><br></pre></td></tr></table></figure><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">selenium.common.exceptions.NoSuchDriverException: Message: Unable to obtain driver for chrome</span><br></pre></td></tr></table></figure><p>解决办法：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install webdriver-manager</span><br></pre></td></tr></table></figure><p>好了，记录到这里，持续更新中。</p><p>记录问题也是一种修行。</p><p><img src="/images/%E4%BF%AE%E8%A1%8C.png" alt="修行"></p><hr><p><b>书山有路勤为径，学海无涯苦作舟。</b></p><p>欢迎关注微信公众号：【乐知付加密平台】，您的网络资源可变现<br><img src="/images/wechat_account.png" alt="乐知付加密平台"></p><p>一起学习，一起进步。<br></p>]]></content>
-    
-    
-    <summary type="html">&lt;p&gt;selenium使用时，获取不到浏览器驱动driver问题。&lt;/p&gt;</summary>
     
     
     
