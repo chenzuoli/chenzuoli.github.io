@@ -19206,8 +19206,13 @@ API
 <li>upload上传正式pypi</li>
 </ol>
 <p>参考链接：<br><a href="https://packaging.python.org/en/latest/tutorials/packaging-projects/">https://packaging.python.org/en/latest/tutorials/packaging-projects/</a></p>
-<p>命令如下：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">python3 -m pip install --upgrade pip   # 安装升级pip</span><br><span class="line">python3 -m pip install --upgrade build  # 安装build工具包</span><br><span class="line">python3 -m build  # 编译打包</span><br><span class="line">python3 -m pip install --upgrade twine  # 安装上传工具包twine</span><br><span class="line">python3 -m twine upload --repository testpypi dist/*  # 发布测试testpypi</span><br><span class="line">python3 -m twine upload --repository pypi dist/*  # 发布正式pypi</span><br></pre></td></tr></table></figure>
+<p>第一次打包命令如下：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># mac/linux</span><br><span class="line">python3 -m pip install --upgrade pip   # 安装升级pip</span><br><span class="line">python3 -m pip install --upgrade build  # 安装build工具包</span><br><span class="line">python3 -m build  # 编译打包</span><br><span class="line">python3 -m pip install --upgrade twine  # 安装上传工具包twine</span><br><span class="line">python3 -m twine upload --repository testpypi dist/*  # 发布测试testpypi</span><br><span class="line">python3 -m twine upload --repository pypi dist/*  # 发布正式pypi</span><br></pre></td></tr></table></figure>
+
+<p>升级包：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># windows</span><br><span class="line">py -m build</span><br><span class="line">py -m twine upload --repository testpypi dist/* # 发布测试</span><br><span class="line">py -m twine upload --repository pypi dist/* # 发布生产</span><br><span class="line"></span><br><span class="line"># mac/linux</span><br><span class="line">python3 -m build</span><br><span class="line">python3 -m twine upload --repository testpypi dist/*</span><br><span class="line">python3 -m twine upload --repository pypi dist/*</span><br></pre></td></tr></table></figure>
+
+
 
 <p>项目结构大概如下：</p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">packaging_tutorial/</span><br><span class="line">├── LICENSE    开源协议</span><br><span class="line">├── pyproject.toml   打包的配置文件</span><br><span class="line">├── README.md   项目描述</span><br><span class="line">├── src/   源代码</span><br><span class="line">│   └── example_package_YOUR_USERNAME_HERE/</span><br><span class="line">│       ├── __init__.py</span><br><span class="line">│       └── example.py</span><br><span class="line">└── tests/</span><br></pre></td></tr></table></figure>
@@ -19302,7 +19307,7 @@ API
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">npm install -g expo-cli</span><br><span class="line">npx create-expo-app YourProjectName</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>运行项目<br>进入项目根目录</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">npx expo install react-native-web react-dom @expo/webpack-config</span><br><span class="line">npx expo start</span><br></pre></td></tr></table></figure></li>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">npx expo start</span><br></pre></td></tr></table></figure></li>
 </ol>
 <hr>
 <p>欢迎关注微信公众号：【乐知付加密平台】<br><img src="/images/wechat_account.png" alt="乐知付加密平台"></p>
