@@ -19325,4 +19325,46 @@ API
         <tag>web</tag>
       </tags>
   </entry>
+  <entry>
+    <title>chrome扩展程序开发-扩展程序与内容脚本之间的消息传递</title>
+    <url>/2025/01/12/chrome%E6%89%A9%E5%B1%95%E7%A8%8B%E5%BA%8F%E5%BC%80%E5%8F%91-%E6%89%A9%E5%B1%95%E7%A8%8B%E5%BA%8F%E4%B8%8E%E5%86%85%E5%AE%B9%E8%84%9A%E6%9C%AC%E4%B9%8B%E9%97%B4%E7%9A%84%E6%B6%88%E6%81%AF%E4%BC%A0%E9%80%92/</url>
+    <content><![CDATA[<p>chrome扩展程序的开发中，有两块程序代码，一是扩展程序代码，二是嵌入到网页的内容脚本代码。他们之间如何进行消息传递呢？</p>
+<span id="more"></span>
+
+<ol>
+<li><p>内容脚本向扩展程序中的事件监听器发送一条消息:</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">chrome.runtime.sendMessage(</span><br><span class="line">  extensionId?: string,</span><br><span class="line">  message: any,</span><br><span class="line">  options?: object,</span><br><span class="line">  callback?: function,</span><br><span class="line">)</span><br><span class="line">参考：https://developer.chrome.google.cn/docs/extensions/reference/api/runtime?hl=zh-cn&amp;authuser=0#method-sendMessage</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>扩展程序监听消息：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">chrome.runtime.onMessage.addListener(</span><br><span class="line">  callback: function,</span><br><span class="line">)</span><br></pre></td></tr></table></figure>
+<p>参考：<a href="https://developer.chrome.google.cn/docs/extensions/reference/api/runtime?hl=zh-cn&amp;authuser=0#event-onMessage">https://developer.chrome.google.cn/docs/extensions/reference/api/runtime?hl=zh-cn&amp;authuser=0#event-onMessage</a></p>
+</li>
+<li><p>扩展程序向内容脚本发送消息：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">chrome.tabs.sendMessage(</span><br><span class="line">  tabId: number,</span><br><span class="line">  message: any,</span><br><span class="line">  options?: object,</span><br><span class="line">  callback?: function,</span><br><span class="line">)</span><br><span class="line">// tabId即指定的标签页ID，向指定标签页中的 content 脚本发送一条消息，并在发回响应时运行一个可选回调。在当前扩展程序的指定标签页中运行的每个内容脚本都会触发 runtime.onMessage 事件。</span><br></pre></td></tr></table></figure>
+<p>参考：<a href="https://developer.chrome.google.cn/docs/extensions/reference/api/tabs?authuser=0&amp;hl=zh-cn#method-sendMessage">https://developer.chrome.google.cn/docs/extensions/reference/api/tabs?authuser=0&amp;hl=zh-cn#method-sendMessage</a></p>
+</li>
+</ol>
+<p>内容脚本监听消息：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">chrome.runtime.onMessage.addListener(</span><br><span class="line">  callback: function,</span><br><span class="line">)</span><br></pre></td></tr></table></figure>
+<p><a href="https://developer.chrome.google.cn/docs/extensions/reference/api/runtime?authuser=0&amp;hl=zh-cn#event-onMessage">https://developer.chrome.google.cn/docs/extensions/reference/api/runtime?authuser=0&amp;hl=zh-cn#event-onMessage</a></p>
+<hr>
+<p><b>书山有路勤为径，学海无涯苦作舟。</b></p>
+<p>欢迎关注微信公众号：【乐知付加密平台】，您的网络资源可变现<br><img src="/images/wechat_account.png" alt="乐知付加密平台"></p>
+<p>一起学习，一起进步。<br></p>
+]]></content>
+      <categories>
+        <category>扩展程序</category>
+        <category>开发</category>
+        <category>chrome</category>
+      </categories>
+      <tags>
+        <tag>chrome</tag>
+        <tag>扩展程序</tag>
+        <tag>内容脚本</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>chrome扩展程序开发-ServiceWorker服务工件问题</title>
+    <url>/2025/01/12/chrome%E6%89%A9%E5%B1%95%E7%A8%8B%E5%BA%8F%E5%BC%80%E5%8F%91-ServiceWorker%E6%9C%8D%E5%8A%A1%E5%B7%A5%E4%BB%B6%E9%97%AE%E9%A2%98/</url>
+    <content><![CDATA[]]></content>
+  </entry>
 </search>

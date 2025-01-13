@@ -6,7 +6,7 @@
   <link href="https://chenzuoli.github.io/atom.xml" rel="self"/>
   
   <link href="https://chenzuoli.github.io/"/>
-  <updated>2024-12-29T03:50:43.459Z</updated>
+  <updated>2025-01-12T03:33:15.057Z</updated>
   <id>https://chenzuoli.github.io/</id>
   
   <author>
@@ -15,6 +15,48 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>chrome扩展程序开发-ServiceWorker服务工件问题</title>
+    <link href="https://chenzuoli.github.io/2025/01/12/chrome%E6%89%A9%E5%B1%95%E7%A8%8B%E5%BA%8F%E5%BC%80%E5%8F%91-ServiceWorker%E6%9C%8D%E5%8A%A1%E5%B7%A5%E4%BB%B6%E9%97%AE%E9%A2%98/"/>
+    <id>https://chenzuoli.github.io/2025/01/12/chrome%E6%89%A9%E5%B1%95%E7%A8%8B%E5%BA%8F%E5%BC%80%E5%8F%91-ServiceWorker%E6%9C%8D%E5%8A%A1%E5%B7%A5%E4%BB%B6%E9%97%AE%E9%A2%98/</id>
+    <published>2025-01-12T03:33:15.000Z</published>
+    <updated>2025-01-12T03:33:15.057Z</updated>
+    
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>chrome扩展程序开发-扩展程序与内容脚本之间的消息传递</title>
+    <link href="https://chenzuoli.github.io/2025/01/12/chrome%E6%89%A9%E5%B1%95%E7%A8%8B%E5%BA%8F%E5%BC%80%E5%8F%91-%E6%89%A9%E5%B1%95%E7%A8%8B%E5%BA%8F%E4%B8%8E%E5%86%85%E5%AE%B9%E8%84%9A%E6%9C%AC%E4%B9%8B%E9%97%B4%E7%9A%84%E6%B6%88%E6%81%AF%E4%BC%A0%E9%80%92/"/>
+    <id>https://chenzuoli.github.io/2025/01/12/chrome%E6%89%A9%E5%B1%95%E7%A8%8B%E5%BA%8F%E5%BC%80%E5%8F%91-%E6%89%A9%E5%B1%95%E7%A8%8B%E5%BA%8F%E4%B8%8E%E5%86%85%E5%AE%B9%E8%84%9A%E6%9C%AC%E4%B9%8B%E9%97%B4%E7%9A%84%E6%B6%88%E6%81%AF%E4%BC%A0%E9%80%92/</id>
+    <published>2025-01-12T02:02:09.000Z</published>
+    <updated>2025-01-12T03:01:19.261Z</updated>
+    
+    <content type="html"><![CDATA[<p>chrome扩展程序的开发中，有两块程序代码，一是扩展程序代码，二是嵌入到网页的内容脚本代码。他们之间如何进行消息传递呢？</p><span id="more"></span><ol><li><p>内容脚本向扩展程序中的事件监听器发送一条消息:</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">chrome.runtime.sendMessage(</span><br><span class="line">  extensionId?: string,</span><br><span class="line">  message: any,</span><br><span class="line">  options?: object,</span><br><span class="line">  callback?: function,</span><br><span class="line">)</span><br><span class="line">参考：https://developer.chrome.google.cn/docs/extensions/reference/api/runtime?hl=zh-cn&amp;authuser=0#method-sendMessage</span><br><span class="line"></span><br></pre></td></tr></table></figure><p>扩展程序监听消息：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">chrome.runtime.onMessage.addListener(</span><br><span class="line">  callback: function,</span><br><span class="line">)</span><br></pre></td></tr></table></figure><p>参考：<a href="https://developer.chrome.google.cn/docs/extensions/reference/api/runtime?hl=zh-cn&amp;authuser=0#event-onMessage">https://developer.chrome.google.cn/docs/extensions/reference/api/runtime?hl=zh-cn&amp;authuser=0#event-onMessage</a></p></li><li><p>扩展程序向内容脚本发送消息：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">chrome.tabs.sendMessage(</span><br><span class="line">  tabId: number,</span><br><span class="line">  message: any,</span><br><span class="line">  options?: object,</span><br><span class="line">  callback?: function,</span><br><span class="line">)</span><br><span class="line">// tabId即指定的标签页ID，向指定标签页中的 content 脚本发送一条消息，并在发回响应时运行一个可选回调。在当前扩展程序的指定标签页中运行的每个内容脚本都会触发 runtime.onMessage 事件。</span><br></pre></td></tr></table></figure><p>参考：<a href="https://developer.chrome.google.cn/docs/extensions/reference/api/tabs?authuser=0&amp;hl=zh-cn#method-sendMessage">https://developer.chrome.google.cn/docs/extensions/reference/api/tabs?authuser=0&amp;hl=zh-cn#method-sendMessage</a></p></li></ol><p>内容脚本监听消息：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">chrome.runtime.onMessage.addListener(</span><br><span class="line">  callback: function,</span><br><span class="line">)</span><br></pre></td></tr></table></figure><p><a href="https://developer.chrome.google.cn/docs/extensions/reference/api/runtime?authuser=0&amp;hl=zh-cn#event-onMessage">https://developer.chrome.google.cn/docs/extensions/reference/api/runtime?authuser=0&amp;hl=zh-cn#event-onMessage</a></p><hr><p><b>书山有路勤为径，学海无涯苦作舟。</b></p><p>欢迎关注微信公众号：【乐知付加密平台】，您的网络资源可变现<br><img src="/images/wechat_account.png" alt="乐知付加密平台"></p><p>一起学习，一起进步。<br></p>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;chrome扩展程序的开发中，有两块程序代码，一是扩展程序代码，二是嵌入到网页的内容脚本代码。他们之间如何进行消息传递呢？&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="扩展程序" scheme="https://chenzuoli.github.io/categories/%E6%89%A9%E5%B1%95%E7%A8%8B%E5%BA%8F/"/>
+    
+    <category term="开发" scheme="https://chenzuoli.github.io/categories/%E6%89%A9%E5%B1%95%E7%A8%8B%E5%BA%8F/%E5%BC%80%E5%8F%91/"/>
+    
+    <category term="chrome" scheme="https://chenzuoli.github.io/categories/%E6%89%A9%E5%B1%95%E7%A8%8B%E5%BA%8F/%E5%BC%80%E5%8F%91/chrome/"/>
+    
+    
+    <category term="chrome" scheme="https://chenzuoli.github.io/tags/chrome/"/>
+    
+    <category term="扩展程序" scheme="https://chenzuoli.github.io/tags/%E6%89%A9%E5%B1%95%E7%A8%8B%E5%BA%8F/"/>
+    
+    <category term="内容脚本" scheme="https://chenzuoli.github.io/tags/%E5%86%85%E5%AE%B9%E8%84%9A%E6%9C%AC/"/>
+    
+  </entry>
   
   <entry>
     <title>安装ReactNative环境</title>
@@ -507,58 +549,6 @@
     <category term="windows" scheme="https://chenzuoli.github.io/tags/windows/"/>
     
     <category term="winforms" scheme="https://chenzuoli.github.io/tags/winforms/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>winforms开发-让鼠标箭头变为圆圈繁忙状态</title>
-    <link href="https://chenzuoli.github.io/2024/10/20/winforms%E5%BC%80%E5%8F%91-%E8%AE%A9%E9%BC%A0%E6%A0%87%E7%AE%AD%E5%A4%B4%E5%8F%98%E4%B8%BA%E5%9C%86%E5%9C%88%E7%B9%81%E5%BF%99%E7%8A%B6%E6%80%81/"/>
-    <id>https://chenzuoli.github.io/2024/10/20/winforms%E5%BC%80%E5%8F%91-%E8%AE%A9%E9%BC%A0%E6%A0%87%E7%AE%AD%E5%A4%B4%E5%8F%98%E4%B8%BA%E5%9C%86%E5%9C%88%E7%B9%81%E5%BF%99%E7%8A%B6%E6%80%81/</id>
-    <published>2024-10-20T08:28:35.000Z</published>
-    <updated>2024-10-21T14:35:47.503Z</updated>
-    
-    <content type="html"><![CDATA[<p>winforms开发，让鼠标箭头处于繁忙状态。且看详情。</p><span id="more"></span><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">private async void button_Click(object sender, RoutedEventArgs e)</span><br><span class="line">&#123;</span><br><span class="line">    Cursor = Cursors.WaitCursor; // change cursor to hourglass type</span><br><span class="line">    ThatProcessThatTookVeryLongTime();</span><br><span class="line">    Cursor = Cursors.Arrow; // change cursor to normal type</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>好了，记录到这里，持续更新中。</p><p>记录问题也是一种修行。</p><p><img src="/images/%E4%BF%AE%E8%A1%8C.png" alt="修行"></p><hr><p><b>书山有路勤为径，学海无涯苦作舟。</b></p><p>欢迎关注微信公众号：【乐知付加密平台】，您的网络资源可变现<br><img src="/images/wechat_account.png" alt="乐知付加密平台"></p><p>一起学习，一起进步。<br></p>]]></content>
-    
-    
-    <summary type="html">&lt;p&gt;winforms开发，让鼠标箭头处于繁忙状态。且看详情。&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="客户端" scheme="https://chenzuoli.github.io/categories/%E5%AE%A2%E6%88%B7%E7%AB%AF/"/>
-    
-    <category term="windows" scheme="https://chenzuoli.github.io/categories/%E5%AE%A2%E6%88%B7%E7%AB%AF/windows/"/>
-    
-    <category term="winforms" scheme="https://chenzuoli.github.io/categories/%E5%AE%A2%E6%88%B7%E7%AB%AF/windows/winforms/"/>
-    
-    
-    <category term="windows" scheme="https://chenzuoli.github.io/tags/windows/"/>
-    
-    <category term="winforms" scheme="https://chenzuoli.github.io/tags/winforms/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>selenium基本使用</title>
-    <link href="https://chenzuoli.github.io/2024/10/19/selenium%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8/"/>
-    <id>https://chenzuoli.github.io/2024/10/19/selenium%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8/</id>
-    <published>2024-10-19T08:58:29.000Z</published>
-    <updated>2024-10-22T15:19:36.120Z</updated>
-    
-    <content type="html"><![CDATA[<p>selenium的基本使用操作，如键盘鼠标按键、模拟人工操作等等，且看详情。</p><span id="more"></span><ol><li><p>是否打开浏览器</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">chrome_options = Options()</span><br><span class="line"># chrome_options.add_argument(&quot;--headless&quot;)  # 不需要显示浏览器界面</span><br><span class="line">chrome = webdriver.Chrome(options=chrome_options)</span><br></pre></td></tr></table></figure></li><li><p>打开目标网页</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">chrome.get(csdn_url)</span><br></pre></td></tr></table></figure></li><li><p>模拟滑动到页面底部(这个操作我试了，好像不起作用)</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">执行 JavaScript 脚本滑动到页面底部</span><br><span class="line"># chrome.execute_script(&quot;window.scrollTo(0, document.body.scrollHeight);&quot;)</span><br></pre></td></tr></table></figure></li><li><p>模拟滑动到页面底部(可用)<br>通过模拟按鼠标滚轮方式</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">from selenium import webdriver</span><br><span class="line">from selenium.webdriver.common.keys import Keys</span><br><span class="line">chains = webdriver.ActionChains(chrome)</span><br><span class="line">chains.send_keys(Keys.PAGE_DOWN).perform()</span><br></pre></td></tr></table></figure></li><li><p>最大化窗口</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">options.add_argument(&quot;--start-maximized&quot;)</span><br><span class="line">或</span><br><span class="line">chrome.maximize_window()</span><br></pre></td></tr></table></figure></li></ol><p>待解决问题：</p><ol><li>打开浏览器页面后，如何消除页面自动弹出的登录、提示框等等，这些弹出框可能会影响selenium的一些基本操作。</li><li>selenium打开的页面，迟迟加载不结束，但是可以看到页面的内容已加载完成，导致迟迟无法运行程序下一步。</li></ol><p>好了，记录到这里，持续更新中。</p><p>记录问题也是一种修行。</p><p><img src="/images/%E4%BF%AE%E8%A1%8C.png" alt="修行"></p><hr><p><b>书山有路勤为径，学海无涯苦作舟。</b></p><p>欢迎关注微信公众号：【乐知付加密平台】，您的网络资源可变现<br><img src="/images/wechat_account.png" alt="乐知付加密平台"></p><p>一起学习，一起进步。<br></p>]]></content>
-    
-    
-    <summary type="html">&lt;p&gt;selenium的基本使用操作，如键盘鼠标按键、模拟人工操作等等，且看详情。&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="Python" scheme="https://chenzuoli.github.io/categories/Python/"/>
-    
-    <category term="爬虫" scheme="https://chenzuoli.github.io/categories/Python/%E7%88%AC%E8%99%AB/"/>
-    
-    <category term="Selenium" scheme="https://chenzuoli.github.io/categories/Python/%E7%88%AC%E8%99%AB/Selenium/"/>
-    
-    
-    <category term="selenium" scheme="https://chenzuoli.github.io/tags/selenium/"/>
     
   </entry>
   
