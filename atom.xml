@@ -6,7 +6,7 @@
   <link href="https://chenzuoli.github.io/atom.xml" rel="self"/>
   
   <link href="https://chenzuoli.github.io/"/>
-  <updated>2025-02-15T06:35:49.168Z</updated>
+  <updated>2025-03-23T07:54:40.862Z</updated>
   <id>https://chenzuoli.github.io/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>上海线下英语角邀请函</title>
+    <link href="https://chenzuoli.github.io/2025/03/23/%E4%B8%8A%E6%B5%B7%E7%BA%BF%E4%B8%8B%E8%8B%B1%E8%AF%AD%E8%A7%92%E9%82%80%E8%AF%B7%E5%87%BD/"/>
+    <id>https://chenzuoli.github.io/2025/03/23/%E4%B8%8A%E6%B5%B7%E7%BA%BF%E4%B8%8B%E8%8B%B1%E8%AF%AD%E8%A7%92%E9%82%80%E8%AF%B7%E5%87%BD/</id>
+    <published>2025-03-23T07:50:22.000Z</published>
+    <updated>2025-03-23T07:54:40.862Z</updated>
+    
+    <content type="html"><![CDATA[<p>上海青浦、松江线下英语角邀请函。</p><span id="more"></span><p><img src="/2025/03/23/%E4%B8%8A%E6%B5%B7%E7%BA%BF%E4%B8%8B%E8%8B%B1%E8%AF%AD%E8%A7%92%E9%82%80%E8%AF%B7%E5%87%BD/image.png" alt="spoken-english"></p><p>亲爱的英语爱好者朋友们：</p><p>你是否希望在周末放松的同时提升英语口语？是否觉得市区的英语角太远，不方便参加？我们为你提供了一个轻松、自由的英语交流机会！</p><p>我是一个英语学习爱好者，市区徐汇、浦东、人民广场英语角较远，路程需要一个多小时，对于一个工作日每天单程通勤也需要一小时的我来说，就有些犹豫要不要去了，于是我准备组织一个在青浦、松江附近的英语角，方便大家，也方便自己。</p><p>我的英语能力，口语能力一般，希望口语流利者参与前考虑：</p><ol><li>单词量4000左右，可通过各大英语学习app进行测试（多邻国、欧陆词典、英语流利说等）</li><li>英语四级</li></ol><p>活动详情：</p><p>时间：每周末（周六或周日，具体时间灵活安排）</p><p>地点：徐泾、虹桥、九亭、泗泾、佘山等附近的公园（具体地点每次提前沟通）</p><p>对象：普通职场打工人，非专业英语学习者或母语者</p><p>内容：随意聊天，练习英语口语，话题不限（出国旅游、学习、工作、生活等）</p><p>费用：完全免费，无任何消费</p><p>目的：为附近的朋友提供一个轻松、方便的英语交流环境，帮助大家在休息日提升口语能力</p><p>无论你是为了出国旅游、学习还是工作，这里都是一个轻松学习、结交朋友的好地方！快来加入我们，一起在周末的阳光下畅聊英语吧！</p><p>报名方式：<br>请扫描下方二维码或添加微信（微信号：PAIN_7771），邀请加入我们的活动群，获取最新活动信息。</p><p>图片</p><p>期待与你相遇！<br>——陈作立</p><p>（联系方式：15313621879）</p><hr>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;上海青浦、松江线下英语角邀请函。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="其他" scheme="https://chenzuoli.github.io/categories/%E5%85%B6%E4%BB%96/"/>
+    
+    <category term="英语" scheme="https://chenzuoli.github.io/categories/%E5%85%B6%E4%BB%96/%E8%8B%B1%E8%AF%AD/"/>
+    
+    
+    <category term="英语角" scheme="https://chenzuoli.github.io/tags/%E8%8B%B1%E8%AF%AD%E8%A7%92/"/>
+    
+    <category term="英语" scheme="https://chenzuoli.github.io/tags/%E8%8B%B1%E8%AF%AD/"/>
+    
+    <category term="上海" scheme="https://chenzuoli.github.io/tags/%E4%B8%8A%E6%B5%B7/"/>
+    
+  </entry>
   
   <entry>
     <title>谁在抛售美债？</title>
@@ -510,33 +537,6 @@
     
     
     <summary type="html">&lt;p&gt;且看代码，一看就懂。&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="客户端" scheme="https://chenzuoli.github.io/categories/%E5%AE%A2%E6%88%B7%E7%AB%AF/"/>
-    
-    <category term="windows" scheme="https://chenzuoli.github.io/categories/%E5%AE%A2%E6%88%B7%E7%AB%AF/windows/"/>
-    
-    <category term="winforms" scheme="https://chenzuoli.github.io/categories/%E5%AE%A2%E6%88%B7%E7%AB%AF/windows/winforms/"/>
-    
-    
-    <category term="windows" scheme="https://chenzuoli.github.io/tags/windows/"/>
-    
-    <category term="winforms" scheme="https://chenzuoli.github.io/tags/winforms/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>winforms基本操作-设置httpclient请求超时时间</title>
-    <link href="https://chenzuoli.github.io/2024/10/21/winforms%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C-%E8%AE%BE%E7%BD%AEhttpclient%E8%AF%B7%E6%B1%82%E8%B6%85%E6%97%B6%E6%97%B6%E9%97%B4/"/>
-    <id>https://chenzuoli.github.io/2024/10/21/winforms%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C-%E8%AE%BE%E7%BD%AEhttpclient%E8%AF%B7%E6%B1%82%E8%B6%85%E6%97%B6%E6%97%B6%E9%97%B4/</id>
-    <published>2024-10-21T14:32:19.000Z</published>
-    <updated>2024-10-21T14:37:06.846Z</updated>
-    
-    <content type="html"><![CDATA[<p>winforms开发，当你的httpclient请求需要很长时间几分甚至几十分钟时，默认的1分半是不够的，这时候需要我们自己设置对应的超时事件，且看详情。</p><span id="more"></span><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line">using System.Diagnostics;</span><br><span class="line"></span><br><span class="line">HttpClient client = new HttpClient();</span><br><span class="line">client.Timeout = TimeSpan.FromMinutes(15);</span><br><span class="line"></span><br><span class="line">// http请求超时时间10min</span><br><span class="line">var watch= Stopwatch.StartNew();</span><br><span class="line">try</span><br><span class="line">&#123;</span><br><span class="line">    using (var tokenSource = new CancellationTokenSource(TimeSpan.FromMinutes(10)))</span><br><span class="line">    &#123;</span><br><span class="line">        HttpResponseMessage response = await client.GetAsync(csdn_url, tokenSource.Token);</span><br><span class="line">        if (response.IsSuccessStatusCode)</span><br><span class="line">        &#123;</span><br><span class="line">            string content = await response.Content.ReadAsStringAsync();</span><br><span class="line">            Console.WriteLine(content);</span><br><span class="line">        &#125;</span><br><span class="line">        else</span><br><span class="line">        &#123;</span><br><span class="line">            Console.WriteLine($&quot;Error: &#123;response.StatusCode&#125;&quot;);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">catch (TaskCanceledException ex)</span><br><span class="line">&#123;</span><br><span class="line">    MessageBox.Show($&quot;&#123;watch.Elapsed&#125; s 任务超时&quot;);</span><br><span class="line">&#125;</span><br><span class="line">catch (Exception ex)</span><br><span class="line">&#123;</span><br><span class="line">    MessageBox.Show($&quot;请求错误：&#123;ex.ToString()&#125;&quot;);</span><br><span class="line">&#125;</span><br><span class="line">finally</span><br><span class="line">&#123;</span><br><span class="line">    </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>好了，记录到这里，持续更新中。</p><p>记录问题也是一种修行。</p><p><img src="/images/%E4%BF%AE%E8%A1%8C.png" alt="修行"></p><hr><p><b>书山有路勤为径，学海无涯苦作舟。</b></p><p>欢迎关注微信公众号：【乐知付加密平台】，您的网络资源可变现<br><img src="/images/wechat_account.png" alt="乐知付加密平台"></p><p>一起学习，一起进步。<br></p>]]></content>
-    
-    
-    <summary type="html">&lt;p&gt;winforms开发，当你的httpclient请求需要很长时间几分甚至几十分钟时，默认的1分半是不够的，这时候需要我们自己设置对应的超时事件，且看详情。&lt;/p&gt;</summary>
     
     
     
