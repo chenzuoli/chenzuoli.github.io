@@ -6,7 +6,7 @@
   <link href="https://chenzuoli.github.io/atom.xml" rel="self"/>
   
   <link href="https://chenzuoli.github.io/"/>
-  <updated>2025-03-23T08:41:13.065Z</updated>
+  <updated>2025-04-06T14:24:57.616Z</updated>
   <id>https://chenzuoli.github.io/</id>
   
   <author>
@@ -15,6 +15,23 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>4.2对等关税来了</title>
+    <link href="https://chenzuoli.github.io/2025/04/06/4-2%E5%AF%B9%E7%AD%89%E5%85%B3%E7%A8%8E%E6%9D%A5%E4%BA%86/"/>
+    <id>https://chenzuoli.github.io/2025/04/06/4-2%E5%AF%B9%E7%AD%89%E5%85%B3%E7%A8%8E%E6%9D%A5%E4%BA%86/</id>
+    <published>2025-04-06T14:22:38.000Z</published>
+    <updated>2025-04-06T14:24:57.616Z</updated>
+    
+    <content type="html"><![CDATA[<p>之前的贸易税率是不对等的，现在对等起来了。那应该变得正常了才对，为什么大家如此恐慌？</p><span id="more"></span><p><img src="/2025/04/06/4-2%E5%AF%B9%E7%AD%89%E5%85%B3%E7%A8%8E%E6%9D%A5%E4%BA%86/Image.png" alt="对等关税"></p><p>需求还在那儿，关税增加到正常值而已，买国货贵了50%而已，人的需求一旦达到了一定高度，再想让他降低需求，会很难受的。</p><p>所以，全球的总需求会减弱吗？短时期减弱，长时间会恢复到正常水平。</p><p>漂亮国买东西会变贵，我们基本没影响，顶多丢失一些订单，从其他贸易伙伴中可以补充。国内再降低下利率，贬值人民币，也可以对冲掉一些关税带来的冲击。</p><p>美联储会勒紧利率，同时降低能源价格，防止通胀。</p><p>以上，不用太担心。过好自己的日子，该吃吃该喝喝，别搞什么杞人忧天？</p><hr><p>欢迎关注微信公众号，你的资源可变现：【乐知付加密平台】</p><img src="https://img2024.cnblogs.com/blog/1455070/202409/1455070-20240919212128860-1944218544.png" alt="乐知付加密平台" width="500" height="180"><p>欢迎关注微信公众号，这里记录博主的创业之旅：【程序员写书】</p><img src="https://img2024.cnblogs.com/blog/1455070/202409/1455070-20240919212147497-157482784.png" alt="程序员写书" width="500" height="180"><p>一起学习，一起进步。<br></p>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;之前的贸易税率是不对等的，现在对等起来了。那应该变得正常了才对，为什么大家如此恐慌？&lt;/p&gt;</summary>
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>上海线下英语角邀请函</title>
@@ -523,33 +540,6 @@
     <category term="linux" scheme="https://chenzuoli.github.io/tags/linux/"/>
     
     <category term="chrome" scheme="https://chenzuoli.github.io/tags/chrome/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>winforms基本操作-在表格内添加多选框列</title>
-    <link href="https://chenzuoli.github.io/2024/10/21/winforms%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C-%E5%9C%A8%E8%A1%A8%E6%A0%BC%E5%86%85%E6%B7%BB%E5%8A%A0%E5%A4%9A%E9%80%89%E6%A1%86%E5%88%97/"/>
-    <id>https://chenzuoli.github.io/2024/10/21/winforms%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C-%E5%9C%A8%E8%A1%A8%E6%A0%BC%E5%86%85%E6%B7%BB%E5%8A%A0%E5%A4%9A%E9%80%89%E6%A1%86%E5%88%97/</id>
-    <published>2024-10-21T14:52:24.000Z</published>
-    <updated>2024-10-21T14:53:00.418Z</updated>
-    
-    <content type="html"><![CDATA[<p>且看代码，一看就懂。</p><span id="more"></span><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">// 在每行的第一列添加复选框</span><br><span class="line">DataGridViewCheckBoxColumn checkboxColumn = new DataGridViewCheckBoxColumn();</span><br><span class="line">checkboxColumn.HeaderText = &quot;&quot;;</span><br><span class="line">checkboxColumn.Width = 10;</span><br><span class="line">checkboxColumn.Name = &quot;checkBoxColumn&quot;;</span><br><span class="line">dataGridView1.Columns.Insert(0, checkboxColumn);</span><br></pre></td></tr></table></figure><p>好了，记录到这里，持续更新中。</p><p>记录问题也是一种修行。</p><p><img src="/images/%E4%BF%AE%E8%A1%8C.png" alt="修行"></p><hr><p><b>书山有路勤为径，学海无涯苦作舟。</b></p><p>欢迎关注微信公众号：【乐知付加密平台】，您的网络资源可变现<br><img src="/images/wechat_account.png" alt="乐知付加密平台"></p><p>一起学习，一起进步。<br></p>]]></content>
-    
-    
-    <summary type="html">&lt;p&gt;且看代码，一看就懂。&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="客户端" scheme="https://chenzuoli.github.io/categories/%E5%AE%A2%E6%88%B7%E7%AB%AF/"/>
-    
-    <category term="windows" scheme="https://chenzuoli.github.io/categories/%E5%AE%A2%E6%88%B7%E7%AB%AF/windows/"/>
-    
-    <category term="winforms" scheme="https://chenzuoli.github.io/categories/%E5%AE%A2%E6%88%B7%E7%AB%AF/windows/winforms/"/>
-    
-    
-    <category term="windows" scheme="https://chenzuoli.github.io/tags/windows/"/>
-    
-    <category term="winforms" scheme="https://chenzuoli.github.io/tags/winforms/"/>
     
   </entry>
   
