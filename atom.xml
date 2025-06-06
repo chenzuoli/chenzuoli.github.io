@@ -6,7 +6,7 @@
   <link href="https://chenzuoli.github.io/atom.xml" rel="self"/>
   
   <link href="https://chenzuoli.github.io/"/>
-  <updated>2025-04-06T14:24:57.616Z</updated>
+  <updated>2025-06-06T15:03:13.547Z</updated>
   <id>https://chenzuoli.github.io/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>dify1.2.0版本的一个小bug</title>
+    <link href="https://chenzuoli.github.io/2025/06/06/dify1-2-0%E7%89%88%E6%9C%AC%E7%9A%84%E4%B8%80%E4%B8%AA%E5%B0%8Fbug/"/>
+    <id>https://chenzuoli.github.io/2025/06/06/dify1-2-0%E7%89%88%E6%9C%AC%E7%9A%84%E4%B8%80%E4%B8%AA%E5%B0%8Fbug/</id>
+    <published>2025-06-06T14:32:43.000Z</published>
+    <updated>2025-06-06T15:03:13.547Z</updated>
+    
+    <content type="html"><![CDATA[<p>查看api容器，发现了一个报错：</p><span id="more"></span><p>问题：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line">2025-06-06 14:11:56.115 ERROR [Dummy-2] [completion.py:137] - internal server error.</span><br><span class="line">Traceback (most recent call last):</span><br><span class="line">  File &quot;/app/api/controllers/web/completion.py&quot;, line 112, in post</span><br><span class="line">    response = AppGenerateService.generate(</span><br><span class="line">               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^</span><br><span class="line">  File &quot;/app/api/services/app_generate_service.py&quot;, line 73, in generate</span><br><span class="line">    AgentChatAppGenerator().generate(</span><br><span class="line">  File &quot;/app/api/core/app/apps/agent_chat/app_generator.py&quot;, line 170, in generate</span><br><span class="line">    (conversation, message) = self._init_generate_records(application_generate_entity, conversation)</span><br><span class="line">                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^</span><br><span class="line">  File &quot;/app/api/core/app/apps/message_based_app_generator.py&quot;, line 156, in _init_generate_records</span><br><span class="line">    conversation_name = (query[:20] + &quot;…&quot;) if len(query) &gt; 20 else query</span><br><span class="line">                                              ^^^^^^^^^^</span><br><span class="line">TypeError: object of type &#x27;NoneType&#x27; has no len()</span><br><span class="line">2025-06-06 14:11:56.125 ERROR [Dummy-2] [app.py:875] - Exception on /api/chat-messages [POST]</span><br><span class="line">Traceback (most recent call last):</span><br><span class="line">  File &quot;/app/api/controllers/web/completion.py&quot;, line 112, in post</span><br><span class="line">    response = AppGenerateService.generate(</span><br><span class="line">               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^</span><br><span class="line">  File &quot;/app/api/services/app_generate_service.py&quot;, line 73, in generate</span><br><span class="line">    AgentChatAppGenerator().generate(</span><br><span class="line">  File &quot;/app/api/core/app/apps/agent_chat/app_generator.py&quot;, line 170, in generate</span><br><span class="line">    (conversation, message) = self._init_generate_records(application_generate_entity, conversation)</span><br><span class="line">                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^</span><br><span class="line">  File &quot;/app/api/core/app/apps/message_based_app_generator.py&quot;, line 156, in _init_generate_records</span><br><span class="line">    conversation_name = (query[:20] + &quot;…&quot;) if len(query) &gt; 20 else query</span><br><span class="line">                                              ^^^^^^^^^^</span><br><span class="line">TypeError: object of type &#x27;NoneType&#x27; has no len()</span><br><span class="line"></span><br><span class="line">During handling of the above exception, another exception occurred:</span><br><span class="line"></span><br></pre></td></tr></table></figure><p>进入容器：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">docker exec -it dify_api_1 bash</span><br><span class="line"></span><br><span class="line"># 找到文件</span><br><span class="line">vim /app/api/core/app/apps/message_based_app_generator.py</span><br><span class="line"># 在156行前面加一句</span><br><span class="line">query = query or &quot;New conversation&quot;</span><br><span class="line">conversation_name = (query[:20] + &quot;…&quot;) if len(query) &gt; 20 else query</span><br><span class="line"></span><br></pre></td></tr></table></figure><p>停止容器：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker compose stop</span><br></pre></td></tr></table></figure><p>启动容器：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker compose start</span><br></pre></td></tr></table></figure><hr><p>欢迎关注微信公众号，你的资源可变现：【乐知付加密平台】</p><img src="https://img2024.cnblogs.com/blog/1455070/202409/1455070-20240919212128860-1944218544.png" alt="乐知付加密平台" width="500" height="180"><p>欢迎关注微信公众号，这里记录博主的创业之旅：【程序员写书】</p><img src="https://img2024.cnblogs.com/blog/1455070/202409/1455070-20240919212147497-157482784.png" alt="程序员写书" width="500" height="180"><p>一起学习，一起进步。<br></p>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;查看api容器，发现了一个报错：&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="AI" scheme="https://chenzuoli.github.io/categories/AI/"/>
+    
+    <category term="Dify" scheme="https://chenzuoli.github.io/categories/AI/Dify/"/>
+    
+    
+    <category term="ai" scheme="https://chenzuoli.github.io/tags/ai/"/>
+    
+    <category term="dify" scheme="https://chenzuoli.github.io/tags/dify/"/>
+    
+    <category term="chat" scheme="https://chenzuoli.github.io/tags/chat/"/>
+    
+  </entry>
   
   <entry>
     <title>4.2对等关税来了</title>
@@ -513,33 +540,6 @@
     <category term="linux" scheme="https://chenzuoli.github.io/tags/linux/"/>
     
     <category term="firefox" scheme="https://chenzuoli.github.io/tags/firefox/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>linux使用google-chrome</title>
-    <link href="https://chenzuoli.github.io/2024/10/26/linux%E4%BD%BF%E7%94%A8google-chrome/"/>
-    <id>https://chenzuoli.github.io/2024/10/26/linux%E4%BD%BF%E7%94%A8google-chrome/</id>
-    <published>2024-10-26T01:41:37.000Z</published>
-    <updated>2024-10-26T01:46:39.542Z</updated>
-    
-    <content type="html"><![CDATA[<p>这里记录centos安装google-chrome、使用selenium的一些记录，且看详情。</p><span id="more"></span><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">wget https://dl.google.com/linux/direct/google-chrome-stable_current_x86_64.rpm</span><br><span class="line">yum -y install liberation-fonts</span><br><span class="line">yum -y install chromium-common-111.0.5563.64-1.el7.x86_64</span><br><span class="line">yum install google-chrome-stable_current_x86_64.rpm</span><br><span class="line"></span><br><span class="line">google-chrome --headless --disable-gpu --dump-dom --no-sandbox https://www.baidu.com</span><br></pre></td></tr></table></figure><p>报错：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[949618:949618:1026/094330.059409:ERROR:ozone_platform_x11.cc(244)] Missing X server or $DISPLAY</span><br><span class="line">[949618:949618:1026/094330.059456:ERROR:env.cc(258)] The platform failed to initialize.  Exiting.</span><br></pre></td></tr></table></figure><p>因为linux系统无界面，所以在chrome展示的时候，找不到Display设备。</p><p>修改启动脚本：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">#查看命令</span><br><span class="line">whereis google-chrome</span><br><span class="line">输出：</span><br><span class="line">google-chrome: /usr/bin/google-chrome /usr/share/man/man1/google-chrome.1.gz</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">#修改/usr/bin/google-chrome，应该在最后一行</span><br><span class="line">vim /usr/bin/google-chrome</span><br><span class="line"></span><br><span class="line">将 exec -a &quot;$0&quot; &quot;$HERE/chrome&quot; &quot;$@&quot; 改为：</span><br><span class="line">exec -a &quot;$0&quot; &quot;$HERE/chrome&quot; &quot;$@&quot; --user-data-dir --no-sandbox</span><br></pre></td></tr></table></figure><p>尝试访问baidu：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">google-chrome --headless --disable-gpu --dump-dom --no-sandbox https://www.baidu.com</span><br><span class="line"></span><br></pre></td></tr></table></figure><p>ok.</p><p>好了，记录到这里，持续更新中。</p><p>记录问题也是一种修行。</p><p><img src="/images/%E4%BF%AE%E8%A1%8C.png" alt="修行"></p><hr><p><b>书山有路勤为径，学海无涯苦作舟。</b></p><p>欢迎关注微信公众号：【乐知付加密平台】，您的网络资源可变现<br><img src="/images/wechat_account.png" alt="乐知付加密平台"></p><p>一起学习，一起进步。<br></p>]]></content>
-    
-    
-    <summary type="html">&lt;p&gt;这里记录centos安装google-chrome、使用selenium的一些记录，且看详情。&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="Linux" scheme="https://chenzuoli.github.io/categories/Linux/"/>
-    
-    <category term="Centos" scheme="https://chenzuoli.github.io/categories/Linux/Centos/"/>
-    
-    <category term="Chrome" scheme="https://chenzuoli.github.io/categories/Linux/Centos/Chrome/"/>
-    
-    
-    <category term="linux" scheme="https://chenzuoli.github.io/tags/linux/"/>
-    
-    <category term="chrome" scheme="https://chenzuoli.github.io/tags/chrome/"/>
     
   </entry>
   

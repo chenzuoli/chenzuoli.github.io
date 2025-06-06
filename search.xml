@@ -19471,4 +19471,45 @@ API
 <p>一起学习，一起进步。<br></p>
 ]]></content>
   </entry>
+  <entry>
+    <title>dify1.2.0版本的一个小bug</title>
+    <url>/2025/06/06/dify1-2-0%E7%89%88%E6%9C%AC%E7%9A%84%E4%B8%80%E4%B8%AA%E5%B0%8Fbug/</url>
+    <content><![CDATA[<p>查看api容器，发现了一个报错：</p>
+<span id="more"></span>
+
+<p>问题：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">2025-06-06 14:11:56.115 ERROR [Dummy-2] [completion.py:137] - internal server error.</span><br><span class="line">Traceback (most recent call last):</span><br><span class="line">  File &quot;/app/api/controllers/web/completion.py&quot;, line 112, in post</span><br><span class="line">    response = AppGenerateService.generate(</span><br><span class="line">               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^</span><br><span class="line">  File &quot;/app/api/services/app_generate_service.py&quot;, line 73, in generate</span><br><span class="line">    AgentChatAppGenerator().generate(</span><br><span class="line">  File &quot;/app/api/core/app/apps/agent_chat/app_generator.py&quot;, line 170, in generate</span><br><span class="line">    (conversation, message) = self._init_generate_records(application_generate_entity, conversation)</span><br><span class="line">                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^</span><br><span class="line">  File &quot;/app/api/core/app/apps/message_based_app_generator.py&quot;, line 156, in _init_generate_records</span><br><span class="line">    conversation_name = (query[:20] + &quot;…&quot;) if len(query) &gt; 20 else query</span><br><span class="line">                                              ^^^^^^^^^^</span><br><span class="line">TypeError: object of type &#x27;NoneType&#x27; has no len()</span><br><span class="line">2025-06-06 14:11:56.125 ERROR [Dummy-2] [app.py:875] - Exception on /api/chat-messages [POST]</span><br><span class="line">Traceback (most recent call last):</span><br><span class="line">  File &quot;/app/api/controllers/web/completion.py&quot;, line 112, in post</span><br><span class="line">    response = AppGenerateService.generate(</span><br><span class="line">               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^</span><br><span class="line">  File &quot;/app/api/services/app_generate_service.py&quot;, line 73, in generate</span><br><span class="line">    AgentChatAppGenerator().generate(</span><br><span class="line">  File &quot;/app/api/core/app/apps/agent_chat/app_generator.py&quot;, line 170, in generate</span><br><span class="line">    (conversation, message) = self._init_generate_records(application_generate_entity, conversation)</span><br><span class="line">                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^</span><br><span class="line">  File &quot;/app/api/core/app/apps/message_based_app_generator.py&quot;, line 156, in _init_generate_records</span><br><span class="line">    conversation_name = (query[:20] + &quot;…&quot;) if len(query) &gt; 20 else query</span><br><span class="line">                                              ^^^^^^^^^^</span><br><span class="line">TypeError: object of type &#x27;NoneType&#x27; has no len()</span><br><span class="line"></span><br><span class="line">During handling of the above exception, another exception occurred:</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>进入容器：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">docker exec -it dify_api_1 bash</span><br><span class="line"></span><br><span class="line"># 找到文件</span><br><span class="line">vim /app/api/core/app/apps/message_based_app_generator.py</span><br><span class="line"># 在156行前面加一句</span><br><span class="line">query = query or &quot;New conversation&quot;</span><br><span class="line">conversation_name = (query[:20] + &quot;…&quot;) if len(query) &gt; 20 else query</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>停止容器：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">docker compose stop</span><br></pre></td></tr></table></figure>
+
+<p>启动容器：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">docker compose start</span><br></pre></td></tr></table></figure>
+
+
+
+<hr>
+<p>欢迎关注微信公众号，你的资源可变现：【乐知付加密平台】</p>
+<img src="https://img2024.cnblogs.com/blog/1455070/202409/1455070-20240919212128860-1944218544.png" alt="乐知付加密平台" width="500" height="180">
+
+
+<p>欢迎关注微信公众号，这里记录博主的创业之旅：【程序员写书】</p>
+<img src="https://img2024.cnblogs.com/blog/1455070/202409/1455070-20240919212147497-157482784.png" alt="程序员写书" width="500" height="180">
+
+
+<p>一起学习，一起进步。<br></p>
+]]></content>
+      <categories>
+        <category>AI</category>
+        <category>Dify</category>
+      </categories>
+      <tags>
+        <tag>ai</tag>
+        <tag>dify</tag>
+        <tag>chat</tag>
+      </tags>
+  </entry>
 </search>
