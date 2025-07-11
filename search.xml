@@ -17182,7 +17182,7 @@ API
 ]]></content>
       <categories>
         <category>网站</category>
-        <category>网页支付</category>
+        <category>支付</category>
         <category>支付宝</category>
       </categories>
       <tags>
@@ -17372,7 +17372,7 @@ API
 ]]></content>
       <categories>
         <category>网站</category>
-        <category>网页支付</category>
+        <category>支付</category>
         <category>支付宝</category>
       </categories>
       <tags>
@@ -17406,7 +17406,7 @@ API
 ]]></content>
       <categories>
         <category>网站</category>
-        <category>网页支付</category>
+        <category>支付</category>
         <category>支付宝</category>
       </categories>
       <tags>
@@ -19510,6 +19510,49 @@ API
         <tag>ai</tag>
         <tag>dify</tag>
         <tag>chat</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>微信支付接入1</title>
+    <url>/2025/07/11/%E5%BE%AE%E4%BF%A1%E6%94%AF%E4%BB%98%E6%8E%A5%E5%85%A51/</url>
+    <content><![CDATA[<p>微信接入第一步，看来一天的文档，了解了微信支付的一些概念。</p>
+<span id="more"></span>
+
+<h1 id="常用的5种支付产品"><a href="#常用的5种支付产品" class="headerlink" title="常用的5种支付产品"></a>常用的5种支付产品</h1><ol>
+<li>JSAPI支付<br>适用场景：适用于已接入微信公众平台的网页应用，用户在微信内置浏览器中打开商户网页时使用。</li>
+<li>APP支付<br>适用场景：适用于移动端应用（如Android、iOS App），用户通过App内调用微信支付SDK完成支付。</li>
+<li>H5支付<br>适用场景：适用于在非微信浏览器中打开的移动网页支付场景，例如通过短信链接或扫码在手机浏览器中打开的支付页面。</li>
+<li>Native支付<br>适用场景：适用于线下实体场景，例如商户系统生成二维码供用户扫码支付（如超市、便利店等）。</li>
+<li>小程序支付<br>适用场景：适用于微信小程序内的支付流程，用户在小程序内选购商品或服务后完成支付。</li>
+</ol>
+<p>接入文档：<a href="https://pay.weixin.qq.com/doc/v3/partner/4012069852">https://pay.weixin.qq.com/doc/v3/partner/4012069852</a></p>
+<h1 id="两种验签方式"><a href="#两种验签方式" class="headerlink" title="两种验签方式"></a>两种验签方式</h1><ol>
+<li>验签方式一：平台证书方式</li>
+<li>验签方式二：微信支付公钥方式</li>
+</ol>
+<p>因为每张平台证书有效期为5年，如果未及时更换会影响业务，建议使用微信支付公钥模式对接，可以按需更新公钥。</p>
+<p>如果你是第一次对接微信支付，此前从未使用过平台证书，请参考微信支付公钥指引 完成对接。</p>
+<p>不同：<br><a href="https://pay.weixin.qq.com/doc/v3/partner/4012925323">https://pay.weixin.qq.com/doc/v3/partner/4012925323</a></p>
+<h1 id="申请"><a href="#申请" class="headerlink" title="申请"></a>申请</h1><p><a href="https://pay.weixin.qq.com/index.php/core/cert/api_cert#/">https://pay.weixin.qq.com/index.php/core/cert/api_cert#/</a></p>
+<hr>
+<p>欢迎关注微信公众号，你的资源可变现：【乐知付加密平台】</p>
+<img src="https://img2024.cnblogs.com/blog/1455070/202409/1455070-20240919212128860-1944218544.png" alt="乐知付加密平台" width="500" height="180">
+
+
+<p>欢迎关注微信公众号，这里记录博主的创业之旅：【程序员写书】</p>
+<img src="https://img2024.cnblogs.com/blog/1455070/202409/1455070-20240919212147497-157482784.png" alt="程序员写书" width="500" height="180">
+
+
+<p>一起学习，一起进步。<br></p>
+]]></content>
+      <categories>
+        <category>网站</category>
+        <category>支付</category>
+        <category>微信支付</category>
+      </categories>
+      <tags>
+        <tag>微信支付</tag>
+        <tag>wechat</tag>
       </tags>
   </entry>
 </search>
